@@ -1,0 +1,112 @@
+"""
+safety.py
+---------
+A simple safety check that runs on every user message BEFORE we give any
+wellness advice.
+
+If the message contains "red-flag" words that could mean a serious or
+emergency situation, we stop the normal flow and tell the user to seek
+medical help immediately. It is better to be over-cautious here.
+"""
+
+# These are simple keyword groups. In a bigger product this would also use the
+# LLM to catch phrasing that keywords miss, but keywords are a solid, fast start.
+RED_FLAG_KEYWORDS = [
+    # heart / breathing
+    "chest pain", "can't breathe", "cannot breathe", "shortness of breath",
+    "difficulty breathing", "heart attack",
+    # stroke / neuro
+    "stroke", "face drooping", "slurred speech", "sudden numbness",
+    "severe headache", "loss of consciousness", "fainted", "unconscious",
+    # bleeding / injury
+    "severe bleeding", "bleeding heavily", "coughing blood", "vomiting blood",
+    "blood in stool", "accident", "deep wound",
+    # severe / other
+    "severe pain", "suicidal", "suicide", "self harm", "self-harm",
+    "seizure", "high fever", "not breathing", "poison", "overdose",
+    # Pregnancy: only escalate on genuine warning signs. A bare "pregnant" used
+    # to fire here, which meant every PCOS, fertility or prenatal-yoga question
+    # was refused outright — and the intake planner will legitimately generate
+    # pregnancy chips for those conditions.
+    "pregnancy bleeding", "bleeding while pregnant", "pregnant and bleeding",
+    "labour pain", "labor pain", "water broke",
+]
+
+# Diagnosed conditions that are treated by a doctor, not managed with a food
+# chart. These are NOT emergencies — someone living with cancer for a year does
+# not need "go to hospital now" — but building them a lifestyle plan as if it
+# were acidity would be both useless and insulting.
+#
+# Kept separate from RED_FLAG_KEYWORDS for exactly that reason: different
+# situation, different answer.
+SERIOUS_CONDITIONS = [
+    "cancer", "tumour", "tumor", "chemo", "chemotherapy", "radiation",
+    "leukemia", "lymphoma", "carcinoma", "kainsar",
+    # "tv" and "tibi" are how TB is normally written in Hinglish ("mujhe tv hai").
+    # Without them a TB disclosure fell through to the ordinary symptom router and
+    # opened a bloating questionnaire.
+    "tb", "tuberculosis", "tv disease", "tv hai", "tv ha", "tibi", "t.b",
+    "hiv", "aids",
+    "kidney failure", "kidney fail", "renal failure", "dialysis",
+    "liver failure", "cirrhosis", "hepatitis",
+    "heart failure", "bypass", "angioplasty", "pacemaker",
+    "epilepsy", "seizures", "paralysis", "stroke ke baad",
+    "thalassemia", "sickle cell", "transplant", "autoimmune",
+    "lupus", "multiple sclerosis", "parkinson", "alzheimer",
+]
+
+# What to say instead. It acknowledges what they said, does not pretend Ayurveda
+# treats it, and offers the one thing this assistant honestly can offer.
+SERIOUS_CONDITION_MESSAGE = (
+    "Aapne jo bataya wo bahut badi baat hai, aur aapka isse guzarna aasan nahi "
+    "raha hoga. Shukriya ki aapne share kiya. 🌿\n\n"
+    "Main saaf-saaf batana chahta hoon: **iska ilaaj sirf aapke doctor ke paas "
+    "hai**, aur Ayurveda uski jagah nahi le sakta. Jo treatment chal raha hai use "
+    "kabhi band ya kam mat kijiye.\n\n"
+    "Haan, main iske **saath-saath** in cheezon mein madad kar sakta hoon — "
+    "taakat aur bhookh banaye rakhna, halka aur asaani se pachne wala khana, "
+    "neend behtar karna, aur bahut halki saans ki practice jo thakan aur tanav "
+    "mein aaram de. Yeh sab aapke doctor ki salah ke andar rehkar hi.\n\n"
+    "**Ek zaroori baat:** koi bhi jadi buti ya supplement shuru karne se pehle "
+    "apne doctor ko zaroor batayein — kai cheezein chal rahi dawa ka asar badha "
+    "ya ghata deti hain.\n\n"
+    "Bataiye, abhi sabse zyada kya pareshan kar raha hai — kamzori, bhookh na "
+    "lagna, neend, ya kuch aur? Main usi par dhyan deta hoon."
+)
+
+
+def is_serious_condition(text: str) -> bool:
+    """A diagnosed condition this assistant must not build a wellness plan for."""
+    lowered = f" {(text or '').lower()} "
+    return any(f" {word} " in lowered or word in lowered for word in SERIOUS_CONDITIONS)
+
+
+# The message we show when a red flag is found.
+ESCALATION_MESSAGE = (
+    "⚠️ **Please seek medical help right away.**\n\n"
+    "What you described may be serious. Please contact a doctor immediately or "
+    "call your local emergency number / go to the nearest hospital.\n\n"
+    "For your safety, I am not giving wellness advice for this. Your health "
+    "comes first — please get medical care now."
+)
+
+
+def is_emergency(text: str) -> bool:
+    """Return True if the message looks like a serious/emergency situation."""
+    lowered = (text or "").lower()
+    return any(keyword in lowered for keyword in RED_FLAG_KEYWORDS)
+
+
+def scan(*fragments: str) -> bool:
+    """Emergency check across several pieces of text at once.
+
+    The card-based intake made this necessary. The model writes the chip labels,
+    so a red flag can appear in an option the user tapped ("Blood in stool")
+    while the original problem statement ("I have acidity") looks harmless. Every
+    turn therefore scans the resolved labels the user actually selected, not just
+    what they typed.
+
+    Keyword matching over model-written text is best-effort, so it is the backstop
+    for the planner's explicit `red_flag` markers rather than the only defence.
+    """
+    return any(is_emergency(fragment) for fragment in fragments if fragment)

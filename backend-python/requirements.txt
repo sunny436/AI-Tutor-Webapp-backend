@@ -1,0 +1,40 @@
+# ============================================================
+#  Python AI backend - all free / open-source libraries.
+#  Install with:  pip install -r requirements.txt
+# ============================================================
+
+# ---- Web server (this backend is a small web API) ----
+fastapi>=0.115.0        # builds the web API endpoints (/jobs/run, /extract, ...)
+uvicorn[standard]>=0.30.0  # runs the FastAPI app
+httpx>=0.27.0           # used to send the webhook back to Convex
+python-multipart>=0.0.9 # lets FastAPI accept uploaded form data
+
+# ---- Verifying Convex login tokens (the "direct" path) ----
+pyjwt[crypto]>=2.9.0    # checks the Convex JWT using public keys (JWKS)
+
+# ---- The flow controller + LLM toolbox ----
+langgraph>=0.2.28       # builds our step-by-step Ayurveda/Yoga flow
+langchain>=0.3.0        # core building blocks
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0  # splits knowledge files into small chunks
+
+# ---- Talking to the free AI models ----
+langchain-groq>=0.2.0   # free CLOUD models (our default, needs a free key)
+langchain-ollama>=0.2.0 # free LOCAL models (optional)
+
+# ---- Ayurveda / Yoga knowledge search (RAG) ----
+langchain-huggingface>=0.1.0
+sentence-transformers>=3.0.0
+langchain-chroma>=0.1.4
+chromadb>=0.5.5
+
+# ---- Reading uploaded medical documents ----
+pypdf>=5.0.0
+pdfplumber>=0.11.0
+pytesseract>=0.3.13     # OCR for images (needs the free Tesseract program)
+pillow>=10.4.0
+
+# ---- Helpers ----
+python-dotenv>=1.0.1
+pydantic>=2.9.0

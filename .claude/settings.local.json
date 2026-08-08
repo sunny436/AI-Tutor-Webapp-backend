@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Select-String -Path 'c:\\\\ayurveda\\\\node_modules\\\\@convex-dev\\\\auth\\\\dist\\\\server\\\\implementation\\\\sessions.js' -Pattern 'export async function getAuthSessionId' -Context 0,14 | ForEach-Object { $_.Line; $_.Context.PostContext })"
+    ]
+  }
+}
