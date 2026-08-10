@@ -35,11 +35,29 @@ FRONTEND_FILE = BASE_DIR / "frontend" / "index.html"
 
 app = FastAPI(title="Ayurveda & Yoga AI Backend")
 
+# Only the app's own origin may call this API from a browser.
+#
+# This was `allow_origins=["*"]` with `allow_methods`/`allow_headers` equally open.
+# That is not merely untidy: the browser sends the Convex JWT on the DIRECT path
+# (src/lib/backend.config.ts), so any page the user happened to be visiting could
+# script authenticated calls against this backend and read the replies. Wildcard
+# origins also cannot be combined with credentials, so nothing is lost by naming
+# the origins explicitly.
+#
+# `allow_credentials` stays False on purpose: auth travels in the Authorization
+# header, never in a cookie, so cookies have no reason to cross origins here.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=config.ALLOWED_ORIGINS,
+    allow_credentials=False,
+# DELETE is in the list because the browser really does use it —
+# `DELETE /documents/{filename}` backs the report-removal button. Omitting it
+# would have broken that silently, visible only as a CORS error in the console.
+# X-Service-Key is deliberately NOT allowed: those routes are called server-to-
+# server by Convex, where CORS does not apply, so a browser has no business
+# sending that header.
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 
@@ -67,6 +85,73 @@ def _bearer(authorization: str) -> str:
     return authorization[7:] if authorization.startswith("Bearer ") else ""
 
 
+def require_user(authorization: str, service_key: str = "") -> str:
+    """Verified user id, or 401 when `config.REQUIRE_AUTH` is on.
+
+    Guards the endpoints that spend money or CPU. `verify_token` deliberately
+    returns "" rather than raising, so that private-data lookups degrade to
+    "nothing found" instead of erroring; that is right for retrieval but wrong
+    for admission, hence this second, stricter gate on top of it.
+
+    A valid service key is accepted as an alternative credential. It identifies
+    no user — the return value stays "" — so it unlocks admission without
+    unlocking anybody's private data. `/jobs/run` already performs the same
+    consultation on that credential, so trusting it here grants nothing new, and
+    it gives the test suite a way to exercise /consult without minting a login.
+    """
+    user_id = verify_token(_bearer(authorization))
+    if user_id:
+        return user_id
+    if service_key and config.SERVICE_KEY and service_key == config.SERVICE_KEY:
+        return ""
+    if config.REQUIRE_AUTH:
+        raise HTTPException(status_code=401, detail="login required")
+    return ""
+
+
+_jwk_client = None
+
+
+def _signing_key(token: str):
+    """The public key Convex signed `token` with.
+
+    Convex issues JWTs whose header is just `{"alg":"RS256"}` — there is no
+    `kid` — and publishes a JWKS whose single key has no `kid` either. PyJWT's
+    `get_signing_key_from_jwt()` matches on `kid`, so it never found the key and
+    raised, and `verify_token` swallowed that into "" — the value it also returns
+    for genuinely anonymous callers.
+
+    The effect was silent and long-lived: every request was treated as anonymous,
+    so conversation memory and uploaded reports were never actually retrieved for
+    the person who owned them. Nothing looked broken, because the consultation
+    still answered — just without any of the caller's own context. Requiring auth
+    on /consult is what finally turned it into a visible 401.
+
+    So: use `kid` when a token has one (a future Convex release may add it), and
+    otherwise fall back to the sole signing key in the set.
+
+    The client is cached because `PyJWKClient` fetches the JWKS over the network;
+    building a new one per request re-fetched it on every single call.
+    """
+    global _jwk_client
+    import jwt  # PyJWT
+
+    if _jwk_client is None:
+        _jwk_client = jwt.PyJWKClient(
+            f"{config.CONVEX_SITE_URL}/.well-known/jwks.json",
+            cache_keys=True,
+        )
+
+    if jwt.get_unverified_header(token).get("kid"):
+        return _jwk_client.get_signing_key_from_jwt(token).key
+
+    signing_keys = [k for k in _jwk_client.get_jwk_set().keys if k.key_type == "RSA"]
+    if len(signing_keys) != 1:
+        # Ambiguous without a `kid`; refuse rather than guess which key to trust.
+        raise ValueError(f"expected exactly one RSA signing key, found {len(signing_keys)}")
+    return signing_keys[0].key
+
+
 def verify_token(token: str) -> str:
     """Return the Convex user id for a login token, or "" if it is not valid.
 
@@ -84,11 +169,9 @@ def verify_token(token: str) -> str:
     try:
         import jwt  # PyJWT
 
-        jwks_url = f"{config.CONVEX_SITE_URL}/.well-known/jwks.json"
-        signing_key = jwt.PyJWKClient(jwks_url).get_signing_key_from_jwt(token)
         payload = jwt.decode(
             token,
-            signing_key.key,
+            _signing_key(token),
             algorithms=["RS256"],
             audience=config.CONVEX_AUDIENCE,
         )
@@ -145,7 +228,11 @@ async def chat(request: Request):
 
 
 @app.post("/consult")
-async def consult(request: Request, authorization: str = Header(default="")):
+async def consult(
+    request: Request,
+    authorization: str = Header(default=""),
+    x_service_key: str = Header(default=""),
+):
     """
     Card-driven consultation — one turn.
 
@@ -175,7 +262,7 @@ async def consult(request: Request, authorization: str = Header(default="")):
     # forged principal buys nothing.
     token = _bearer(authorization)
     principal = {**(data.get("principal") or {}), "token": token}
-    principal["user_id"] = verify_token(token)
+    principal["user_id"] = require_user(authorization, x_service_key)
 
     result = await run_consult_turn(
         problem=data.get("problem", ""),
@@ -202,10 +289,13 @@ async def upload(
     mean the browser holds extracted medical text in memory between them for no
     benefit.
 
-    Logged out, this still extracts and returns the text but indexes nothing -
-    there is no verified user to store it against. `indexed: 0` in the response
-    is how the UI knows to say so rather than claiming success.
+    Requires a signed-in caller (see `config.REQUIRE_AUTH`). It previously
+    accepted anonymous uploads and simply indexed nothing, which was reasonable
+    on localhost; published to the internet it is an open door to 20 MB of OCR
+    per request. The check runs BEFORE the body is read so a rejected caller
+    never gets to spend that.
     """
+    user_id = require_user(authorization)
     filename = file.filename or "upload.bin"
     raw = await file.read()
     if len(raw) > MAX_UPLOAD_BYTES:
@@ -222,7 +312,6 @@ async def upload(
     finally:
         Path(tmp_path).unlink(missing_ok=True)
 
-    user_id = verify_token(_bearer(authorization))
     indexed = 0
     if user_id and text:
         from src import user_documents
@@ -278,7 +367,11 @@ async def transcribe_audio(
     Returns the detected language alongside the transcript so the caller can set
     the conversation language from it - somebody who speaks Hindi should not have
     to also ask for a Hindi reply.
+
+    Signed-in callers only: speech-to-text runs against the model chain, so an
+    open endpoint here spends the same free-tier quota the consultations need.
     """
+    require_user(authorization)
     raw = await file.read()
     if len(raw) > MAX_UPLOAD_BYTES:
         raise HTTPException(status_code=413, detail="clip too large")
@@ -296,8 +389,9 @@ async def transcribe_audio(
 
 
 @app.post("/speak")
-async def speak_text(request: Request):
+async def speak_text(request: Request, authorization: str = Header(default="")):
     """Read an answer aloud. Called only when the user presses the speaker icon."""
+    require_user(authorization)
     if not config.TTS_ENABLED:
         # No free model on OpenRouter emits speech, so this is off by default
         # rather than quietly billing a key that is meant to cost nothing.
@@ -357,10 +451,16 @@ async def debug_retrieve(
 
     Returns 404 rather than 403 when disabled: a disabled debug route should not
     advertise that it exists.
+
+    The DEBUG_RAG gate is checked FIRST, deliberately. With the key check first,
+    an anonymous request got 401 while a nonexistent path got 404 — so anyone
+    could tell the route was there, on a public hostname, just by the status
+    code. Checking the flag first makes a disabled route indistinguishable from
+    one that was never built.
     """
-    _check_service_key(x_service_key)
     if not config.DEBUG_RAG:
         raise HTTPException(status_code=404, detail="not found")
+    _check_service_key(x_service_key)
     if not q.strip():
         raise HTTPException(status_code=400, detail="q is required")
 
@@ -424,4 +524,6 @@ async def jobs_run(request: Request, x_service_key: str = Header(default="")):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("server:app", host="0.0.0.0", port=config.PORT, reload=True)
+    # host comes from config (default 127.0.0.1). It used to be a hard-coded
+    # "0.0.0.0", which published this API to the whole LAN.
+    uvicorn.run("server:app", host=config.HOST, port=config.PORT, reload=True)

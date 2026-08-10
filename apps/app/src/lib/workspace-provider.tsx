@@ -2,7 +2,7 @@
 
 import { api } from "@v1/backend/convex/_generated/api";
 import type { Id } from "@v1/backend/convex/_generated/dataModel";
-import { useMutation, useQuery } from "convex/react";
+import { useConvexAuth, useMutation, useQuery } from "convex/react";
 import { createContext, useContext, useEffect, useState } from "react";
 
 type WS = { _id: Id<"workspaces">; name: string; role: string };
@@ -20,12 +20,25 @@ export const useWorkspace = () => useContext(WorkspaceCtx);
  * switcher and every page share it reactively — switching updates all consumers at once.
  */
 export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
-  const workspaces = useQuery(api.orgs.myWorkspaces) as WS[] | undefined;
+  // Gate both calls on the auth state rather than firing them and hoping.
+  //
+  // `ensureWorkspace` throws "Not authenticated" by design, and this provider
+  // mounts on every dashboard page — including the moments around sign-up and
+  // sign-out when the Convex client has no token yet. The query would resolve to
+  // an empty list, the effect below read that as "this user has no workspace",
+  // and the mutation threw. It was harmless to the user but it put a Convex
+  // server error in the browser console on every sign-out, which is exactly the
+  // noise that hides a real fault later.
+  const { isAuthenticated } = useConvexAuth();
+  const workspaces = useQuery(api.orgs.myWorkspaces, isAuthenticated ? {} : "skip") as
+    | WS[]
+    | undefined;
   const ensure = useMutation(api.orgs.ensureWorkspace);
   const [current, setCurrent] = useState<Id<"workspaces"> | null>(null);
   const [ensuring, setEnsuring] = useState(false);
 
   useEffect(() => {
+    if (!isAuthenticated) return;
     if (workspaces === undefined) return;
     if (workspaces.length === 0) {
       if (!ensuring) {
@@ -40,7 +53,7 @@ export function WorkspaceProvider({ children }: { children: React.ReactNode }) {
       const match = workspaces.find((w) => w._id === saved);
       return match?._id ?? workspaces[0]?._id ?? prev;
     });
-  }, [workspaces, ensure, ensuring]);
+  }, [isAuthenticated, workspaces, ensure, ensuring]);
 
   const select = (id: Id<"workspaces">) => {
     if (typeof window !== "undefined") window.localStorage.setItem("ws", id);

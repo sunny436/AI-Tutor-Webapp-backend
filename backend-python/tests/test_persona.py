@@ -28,6 +28,8 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+import config  # noqa: E402  (needs the sys.path line above)
+
 BASE = "http://localhost:4000"
 results: list[tuple[str, bool, str]] = []
 
@@ -39,10 +41,15 @@ def check(name: str, ok: bool, detail: str = "") -> None:
 
 def consult(problem: str, context=None) -> dict:
     payload = {"problem": problem, "context": context, "answers": {}, "freeText": ""}
+    # /consult now refuses anonymous callers, so that a published backend cannot
+    # have its LLM quota spent by strangers. The service key is the server-to-
+    # server credential for exactly this: it admits the request without claiming
+    # to be any particular user, so these tests still exercise the real HTTP path
+    # rather than reaching past it.
     request = urllib.request.Request(
         f"{BASE}/consult",
         data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
+        headers={"Content-Type": "application/json", "x-service-key": config.SERVICE_KEY},
     )
     with urllib.request.urlopen(request, timeout=180) as response:
         return json.loads(response.read())

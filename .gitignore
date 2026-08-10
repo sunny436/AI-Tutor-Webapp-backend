@@ -52,3 +52,5 @@ packages/email/public
 # Storybook
 storybook-static
 tailwind.css
+# runtime logs from scripts/production/start-all.ps1
+logs/

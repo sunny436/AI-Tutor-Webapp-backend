@@ -168,6 +168,14 @@ cd backend-python
 cd e2e
 node consult-local.js
 node auth-local.js
+
+# Against the LIVE site, in a real browser. Codes are read from a real inbox,
+# so these prove mail actually leaves the building.
+$env:E2E_BASE_URL = "https://ayur.namahos.com"
+$env:E2E_API_URL  = "https://ayur-api.namahos.com"
+$env:E2E_IMAP_USER = "…"; $env:E2E_IMAP_PASS = "…"   # Gmail app password
+node auth-live.js      # all five sign-in paths
+node prod-full.js      # chat, languages, isolation, headers, CORS, refresh
 ```
 
 After editing anything in `backend-python/data/knowledge/`, rebuild the index:
@@ -177,6 +185,98 @@ After editing anything in `backend-python/data/knowledge/`, rebuild the index:
 ```
 
 Re-running it is safe — it does not create duplicates.
+
+The latest run against the live site is written up in
+[tests/TEST_REPORT.md](tests/TEST_REPORT.md), including what failed and why.
+
+---
+
+## Production
+
+The application runs on the **company machine**. Cloudflare hosts nothing — it
+supplies DNS, TLS, a firewall and a tunnel, so the machine can serve the internet
+without opening a single inbound port.
+
+```
+User → Cloudflare (DNS · SSL · WAF) → Tunnel → this machine
+                                                 ├── Next.js  127.0.0.1:3000
+                                                 └── FastAPI  127.0.0.1:4000
+                                                        ↓            ↓
+                                                 Convex Cloud   Groq → OpenRouter
+```
+
+| Public hostname | Serves |
+|---|---|
+| `ayur.namahos.com` | the dashboard |
+| `ayur-api.namahos.com` | the AI backend, which the browser calls directly |
+
+Both processes bind **loopback only**, so nothing on the LAN can reach them. See
+[cloudflare/README.md](cloudflare/README.md) for the tunnel setup and the token
+permissions it needs.
+
+### Starting and stopping
+
+```powershell
+# start everything (safe to re-run: it only starts what is not already up)
+powershell -ExecutionPolicy Bypass -File .\scripts\production\start-all.ps1
+
+# the same script runs at logon and every 5 minutes as a watchdog
+Get-ScheduledTask -TaskName AyurvedaSite
+Start-ScheduledTask -TaskName AyurvedaSite
+```
+
+Logs land in `logs/` (git-ignored): `backend-*.log`, `frontend-*.log`,
+`tunnel-*.log`, and `supervisor.log` for the watchdog's own decisions.
+
+### Deploying a change
+
+```powershell
+cd apps\app
+bun run build          # REQUIRED after touching any NEXT_PUBLIC_* value —
+                       # those are compiled into the bundle, not read at runtime
+cd ..\..
+Start-ScheduledTask -TaskName AyurvedaSite   # restarts whatever is down
+```
+
+Convex functions deploy separately:
+
+```powershell
+cd packages\backend
+$env:CONVEX_DEPLOY_KEY = "…"
+node ..\..\node_modules\convex\bin\main.js deploy -y
+```
+
+`npx convex dev --once` ignores `CONVEX_DEPLOY_KEY` and demands an interactive
+login, so it cannot be used headlessly. Use `deploy -y`.
+
+### Environment variables
+
+Never committed. Each area keeps its own file, and every one has a committed
+`.example` twin listing the keys with empty values:
+
+| File | Purpose |
+|---|---|
+| `apps/app/.env.local` | dashboard. Everything `NEXT_PUBLIC_*` is **public** — visible in the browser bundle |
+| `backend-python/.env` | AI backend, model keys, `HOST`, `ALLOWED_ORIGINS`, `REQUIRE_AUTH` |
+| `cloudflare/.env` | `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, zone and tunnel ids |
+| Convex | not a file — set with `convex env set`; see `packages/backend/.env.example` |
+
+`.gitignore` matches `.env` at any depth, so a new `<area>/.env` is protected the
+moment it is created. Worth verifying anyway before a commit:
+
+```powershell
+git check-ignore -v cloudflare\.env
+git status --short --untracked-files=all
+```
+
+### Uptime, honestly
+
+Sleep and hibernate are disabled, and the watchdog restarts crashed processes —
+verified by killing the tunnel and watching the site recover on its own. But the
+scheduled task is triggered **at logon**, because registering a real Windows
+service needs administrator rights this account does not have. After a reboot the
+site stays down until someone logs in. Running
+`cloudflared service install` once, elevated, would remove that gap.
 
 ---
 

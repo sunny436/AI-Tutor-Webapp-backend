@@ -200,6 +200,40 @@ MAX_CONTEXT_MESSAGES = int(_get("MAX_CONTEXT_MESSAGES", "12"))
 # service-key-guarded debug route. Never enable on a public deployment.
 DEBUG_RAG = _get("DEBUG_RAG", "0") == "1"
 
+# ---- Network exposure ----
+# Which interface uvicorn binds to. `127.0.0.1` means ONLY this machine can
+# connect, which is what we want in production: Cloudflare Tunnel's `cloudflared`
+# runs on this same machine and reaches us over loopback, so binding wider buys
+# nothing and costs everything — `0.0.0.0` (the old hard-coded value) made the AI
+# backend reachable from any device on the LAN, bypassing Cloudflare entirely.
+# Override only if the backend must genuinely serve another host.
+HOST = _get("HOST", "127.0.0.1")
+
+# Require a valid Convex login token on the endpoints that cost money or CPU
+# (/consult, /upload, /transcribe, /speak).
+#
+# These used to accept anonymous callers on purpose — the reasoning was that a
+# logged-out tab should still be able to ask about turmeric. That was harmless
+# while the backend only listened on localhost. Once it is published through
+# Cloudflare, the same openness means anybody on the internet can spend the
+# free-tier LLM quota, and when that quota is gone the product is down for the
+# people who actually signed up. The app's own UI requires sign-in before the
+# consult screen is reachable, so requiring it here costs no real user anything.
+#
+# Set to 0 to restore anonymous access (e.g. for a public demo behind a rate
+# limiter).
+REQUIRE_AUTH = _get("REQUIRE_AUTH", "1") == "1"
+
+# Browser origins allowed to call this API. The old value was `["*"]`, which let
+# ANY website on the internet issue authenticated requests from a victim's browser.
+# Comma-separated; the dev default matches the Next.js dev server. In production
+# this is set to the real app hostname and nothing else.
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in _get("ALLOWED_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",")
+    if origin.strip()
+]
+
 # ---- How this backend connects to the Convex template ----
 PORT = int(_get("PORT", "4000"))                       # port this backend runs on
 SERVICE_KEY = _get("SERVICE_KEY", "")                  # must match Convex BACKEND_SERVICE_KEY
