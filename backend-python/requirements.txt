@@ -22,6 +22,11 @@ langchain-text-splitters>=0.3.0  # splits knowledge files into small chunks
 # ---- Talking to the free AI models ----
 langchain-groq>=0.2.0   # free CLOUD models (our default, needs a free key)
 langchain-ollama>=0.2.0 # free LOCAL models (optional)
+# OpenRouter speaks the OpenAI wire format, so it uses the OpenAI client with a
+# different base_url (see src/llm.py `_build`). This was MISSING from this file
+# while config.py already defaulted LLM_PROVIDER to "openrouter" — a fresh
+# install could therefore not run the documented default provider at all.
+langchain-openai>=0.2.0 # OpenRouter (second provider = separate daily budget)
 
 # ---- Ayurveda / Yoga knowledge search (RAG) ----
 langchain-huggingface>=0.1.0

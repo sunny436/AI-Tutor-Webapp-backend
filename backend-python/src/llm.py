@@ -79,8 +79,33 @@ COOLDOWN_SECONDS = 900.0
 _cooldown: dict[str, float] = {}
 
 
+KNOWN_PROVIDERS = ("groq", "openrouter", "ollama")
+
+
+def split_provider(name: str) -> tuple[str, str]:
+    """`"groq:llama-3.3-70b"` -> `("groq", "llama-3.3-70b")`.
+
+    Lets ONE chain span providers, which is the whole point: Groq meters tokens
+    per day per model, so once its two capable models are spent the assistant is
+    down for the day no matter how the Groq-side chain is ordered. A second
+    provider is separate capacity, not just another model.
+
+    Splits on the first colon ONLY when what precedes it names a known provider.
+    OpenRouter ids legitimately contain colons — `nvidia/nemotron-3-nano-30b-a3b:free`
+    — and a naive `split(":")` would mangle every one of them into a bogus
+    provider and a truncated model.
+
+    An unprefixed name keeps working exactly as before, taking LLM_PROVIDER, so
+    existing configs and the Ollama path are untouched.
+    """
+    head, separator, rest = name.partition(":")
+    if separator and rest and head.lower() in KNOWN_PROVIDERS:
+        return head.lower(), rest
+    return config.LLM_PROVIDER, name
+
+
 def _build(model: str, temperature: float, json_mode: bool, max_tokens: int = 0):
-    provider = config.LLM_PROVIDER
+    provider, model = split_provider(model)
     if provider == "openrouter":
         from langchain_openai import ChatOpenAI
 
@@ -171,14 +196,38 @@ def _retry_delay(detail: str, attempt: int) -> float | None:
 
 
 def _available_models(pinned: str) -> list[str]:
-    """The chain to try, skipping anything still cooling down."""
-    if pinned:
-        return [pinned]
+    """The chain to try, skipping anything still cooling down.
+
+    A pinned model is a PREFERENCE, not a restriction. It used to return
+    `[pinned]` and nothing else, which turned the caller into a single point of
+    failure: the router pins its model, so when that one model hit its daily
+    token limit every consultation failed with the red daily-limit banner —
+    while another model in the chain was healthy, idle, and carrying its own
+    separate daily budget.
+
+    That defeats the entire reason MODEL_CHAIN exists (see the module docstring:
+    chaining multiplies the usable free budget instead of dying when the first
+    model runs dry). Measured case: llama-3.3-70b at TPD 99338/100000 while
+    gpt-oss-120b answered the same router prompt correctly and instantly.
+
+    The original intent — don't spend the good model's budget on classification —
+    is preserved, because the pinned model is still tried FIRST every time.
+    """
     now = time.monotonic()
-    chain = [name for name in MODEL_CHAIN if _cooldown.get(name, 0.0) <= now]
+    healthy = [name for name in MODEL_CHAIN if _cooldown.get(name, 0.0) <= now]
+
+    if pinned:
+        others = [name for name in healthy if name != pinned]
+        # Known-exhausted: skip it rather than burning a doomed request per turn.
+        # It comes back the moment its cooldown lapses, and it is still the
+        # last resort if nothing else is left.
+        if _cooldown.get(pinned, 0.0) > now:
+            return others or [pinned]
+        return [pinned, *others]
+
     # Everything is cooling down. Try them all anyway rather than fail without
     # making a single request — a cooldown is a guess, not a fact.
-    return chain or list(MODEL_CHAIN)
+    return healthy or list(MODEL_CHAIN)
 
 
 def invoke(
@@ -216,8 +265,31 @@ def invoke(
                 kind = _classify(detail)
 
                 if kind == "exhausted":
-                    _cooldown[name] = time.monotonic() + COOLDOWN_SECONDS
-                    print(f"[llm] {name} is out of quota; trying the next model")
+                    # Trust the provider's OWN retry figure when it gives one.
+                    #
+                    # A flat 900s was badly wrong for Groq: its tokens-per-day
+                    # bucket refills continuously (~1000/min), so it reports
+                    # "try again in 4m32s" and is genuinely usable again by then
+                    # — but the model stayed frozen for a further ten minutes,
+                    # during which the chain fell through to providers that were
+                    # actually dead and the user saw "AI service unavailable"
+                    # while a working model sat idle in cooldown.
+                    #
+                    # Clamped at both ends: never below 30s (or a hard daily cap
+                    # would be retried in a hot loop), never above the 900s
+                    # backstop (for providers that state no figure at all).
+                    match = _RETRY_AFTER.search(detail)
+                    stated = (
+                        int(match.group(1) or 0) * 60 + float(match.group(2))
+                        if match
+                        else COOLDOWN_SECONDS
+                    )
+                    wait = min(max(stated, 30.0), COOLDOWN_SECONDS)
+                    _cooldown[name] = time.monotonic() + wait
+                    print(
+                        f"[llm] {name} is out of quota; retrying in {wait:.0f}s, "
+                        "trying the next model meanwhile"
+                    )
                     break
 
                 if kind == "fatal":

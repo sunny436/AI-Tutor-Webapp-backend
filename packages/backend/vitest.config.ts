@@ -23,7 +23,11 @@ export default defineConfig({
   root: fileURLToPath(new URL(".", import.meta.url)),
   test: {
     environment: "edge-runtime",
-    server: { deps: { inline: ["convex-test"] } },
+    // `@convex-dev/polar` is inlined so Vite resolves it rather than Node's ESM
+    // loader: its client entry does `import "./polyfill"` with no file extension,
+    // which is illegal in Node ESM and fails as "Cannot find module …/polyfill"
+    // even though polyfill.js is right there. Vite's resolver adds the extension.
+    server: { deps: { inline: ["convex-test", "@convex-dev/polar"] } },
     include: ["convex/**/*.test.ts"],
   },
 });

@@ -5,12 +5,22 @@ Deferred work, captured so it isn't lost. Ordered roughly by priority.
 ## ✅ Done (current state)
 Self-hosted Convex (Docker) · multi-tenant platform (workspaces/RBAC/invites) · hybrid backend adapter (proxy / JWKS-direct / webhook) · jobs · usage · API keys · audit · events · files · **full auth** (email+password, mandatory email verification, password reset, magic OTP, Google provider [creds pending], password policy, brute-force lockout 5/hr) · real HTTPS via Cloudflare tunnel · **left sidebar shell** + reactive workspace switcher + responsive drawer · **toasts + confirm dialogs** · CI (typecheck+lint) + branch protection · nightly backup.
 
-## 1. Dashboard UX (remaining increments)
-- **Home overview** — replace placeholder home with stat cards (open jobs, members, files, usage) + recent activity feed.
-- **Settings restructure + account security** — sectioned settings (Profile · Security · Notifications · Team · Billing · API keys · Danger zone); **change password**; **delete account** (`deleteCurrentUserAccount` exists, needs UI); **active sessions** / "sign out everywhere".
-- **Command palette (⌘K)** (cmdk) + **notifications center** (needs a `notifications` table + functions + bell UI).
-- **Pagination / load-more** on jobs / files / audit / events (closes audit **BUG-8**; queries currently `take(50)` / unbounded `.collect()`).
-- **Polish** — loading skeletons, consistent empty states, 404 page + error boundary, footer/version, help/docs link, keyboard shortcuts. Remove dead `_components/navigation.tsx` (old top-nav, no longer imported).
+## 1. Dashboard UX
+- ✅ **Home overview** — real stat cards (consultations, open jobs, files, members), 7-day
+  consultations chart, recent-activity feed, quick actions.
+- ✅ **Command palette (⌘K)** + **notifications center** (`notifications` table with
+  `by_user` / `by_user_read` indexes, functions, bell UI).
+- ✅ **Pagination / load-more** on jobs · files · audit · events — closes **BUG-8**.
+  All four use `paginate(paginationOpts)` + `usePaginatedQuery` (20/page). The unpaginated
+  `audit.recent` / `backend.listEvents` (`take(50)`) are kept for the home activity feed.
+- ✅ **Account security** — change password, active sessions / sign-out-everywhere,
+  delete account UI (all on the General settings page).
+- ✅ **Polish** — 404 page, error boundary, empty states; dead `_components/navigation.tsx` removed.
+- **Remaining: settings restructure** — settings has only two sections (General · Billing).
+  Split into Profile · Security · Notifications · Team · Billing · API keys · Danger zone,
+  moving the security cards out of General and the team/API-key surfaces off `/platform`.
+- **Remaining: polish tail** — loading skeletons, footer/version, help/docs link,
+  keyboard-shortcut hints.
 
 ## 2. Production-readiness
 - **Named Cloudflare tunnel + real domain** — replaces the ephemeral `*.trycloudflare.com` URLs (which change on `cloudflared` restart and require an app rebuild). Gives stable URLs, real Let's Encrypt certs, and **activates Google OAuth** (stable redirect URI).
@@ -31,8 +41,10 @@ Self-hosted Convex (Docker) · multi-tenant platform (workspaces/RBAC/invites) �
 - **Verify `deploy/setup.sh` on a clean VM** — the one-command clone install is written but never run end-to-end.
 
 ## 3. Audit backlog (low severity)
-- **BUG-6** — strip/gate internal seed/test functions (`createInternal`, `*ForUser`, `firstUserId`, `record`, `inviteForUser`) behind a `DEV_SEED` flag, and treat `backend-echo` as reference-only, for real deployments. (They're `internal*`, not publicly callable — cleanup, not a vuln.)
-- **BUG-8** — pagination (see Dashboard UX above).
+- ✅ **BUG-6** — internal seed/test functions are gated behind `DEV_SEED=1` via
+  `convex/devGuard.ts` (`requireDevSeed()`), applied across `seed`, `orgs`, `jobs`,
+  `apiKeys`, `audit`, `counters`. `backend-echo` remains reference-only.
+- ✅ **BUG-8** — pagination done on jobs · files · audit · events (see Dashboard UX above).
 
 ## Performance (from the read-amplification audit)
 Profiled with `convex/seed.ts` (DEV_SEED-gated load generators + profilers) on a

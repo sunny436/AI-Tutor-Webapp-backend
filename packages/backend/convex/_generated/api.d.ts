@@ -29,6 +29,7 @@ import type * as files from "../files.js";
 import type * as http from "../http.js";
 import type * as init from "../init.js";
 import type * as jobs from "../jobs.js";
+import type * as memory from "../memory.js";
 import type * as notifications from "../notifications.js";
 import type * as orgs from "../orgs.js";
 import type * as seed from "../seed.js";
@@ -75,6 +76,7 @@ declare const fullApi: ApiFromModules<{
   http: typeof http;
   init: typeof init;
   jobs: typeof jobs;
+  memory: typeof memory;
   notifications: typeof notifications;
   orgs: typeof orgs;
   seed: typeof seed;

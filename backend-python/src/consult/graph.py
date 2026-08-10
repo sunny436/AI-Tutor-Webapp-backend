@@ -386,6 +386,10 @@ async def run_turn(
                 problem=context.problem,
                 collected=ctx_state.intake_summary(context),
                 round_number=context.round + 1,
+                # The conversation's sticky language, detected above from what the
+                # user actually typed. `context.problem` is the router's Latin
+                # restatement, so the planner must not re-detect from it.
+                language=context.language,
             )
             if plan.questions:
                 context = ctx_state.record_plan(context, plan)

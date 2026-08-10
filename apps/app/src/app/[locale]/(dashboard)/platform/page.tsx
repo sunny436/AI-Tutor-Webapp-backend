@@ -5,7 +5,12 @@ import { useWorkspace } from "@/lib/useWorkspace";
 import { api } from "@v1/backend/convex/_generated/api";
 import type { Id } from "@v1/backend/convex/_generated/dataModel";
 import { Button } from "@v1/ui/button";
-import { useAction, useMutation, useQuery } from "convex/react";
+import {
+  useAction,
+  useMutation,
+  usePaginatedQuery,
+  useQuery,
+} from "convex/react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -39,6 +44,32 @@ function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode })
 function Empty({ children }: { children: React.ReactNode }) {
   return <div className="px-4 py-4 text-sm text-primary/40">{children}</div>;
 }
+type PageStatus =
+  | "LoadingFirstPage"
+  | "LoadingMore"
+  | "CanLoadMore"
+  | "Exhausted";
+
+/** Footer row for a paginated Card: "Load more" / loading / nothing when done. */
+function LoadMore({
+  status,
+  onLoadMore,
+}: {
+  status: PageStatus;
+  onLoadMore: () => void;
+}) {
+  if (status === "LoadingMore") {
+    return <div className="px-4 py-2.5 text-sm text-primary/40">Loading…</div>;
+  }
+  if (status !== "CanLoadMore") return null;
+  return (
+    <div className="px-4 py-2.5">
+      <Button variant="outline" size="sm" onClick={onLoadMore}>
+        Load more
+      </Button>
+    </div>
+  );
+}
 
 export default function PlatformPage() {
   const { workspaces, current, select } = useWorkspace();
@@ -57,8 +88,18 @@ export default function PlatformPage() {
   const members = useQuery(api.orgs.members, scoped);
   const keys = useQuery(api.apiKeys.listMine, scoped);
   const usage = useQuery(api.usage.mine, scoped);
-  const audit = useQuery(api.audit.recent, scoped);
-  const events = useQuery(api.backend.listEvents, scoped);
+  const {
+    results: audit,
+    status: auditStatus,
+    loadMore: loadMoreAudit,
+  } = usePaginatedQuery(api.audit.listPaged, scoped, { initialNumItems: 20 });
+  const {
+    results: events,
+    status: eventsStatus,
+    loadMore: loadMoreEvents,
+  } = usePaginatedQuery(api.backend.listEventsPaged, scoped, {
+    initialNumItems: 20,
+  });
   const pending = useQuery(api.orgs.pendingInvites, scoped);
   const myInvites = useQuery(api.orgs.myInvites);
   const myRole = workspaces.find((w) => w._id === current)?.role;
@@ -284,7 +325,9 @@ export default function PlatformPage() {
           </Card>
 
           <Card title="Audit log">
-            {audit?.length ? (
+            {auditStatus === "LoadingFirstPage" ? (
+              <Empty>Loading…</Empty>
+            ) : audit.length ? (
               audit.map((a) => (
                 <Row
                   key={a._id}
@@ -295,10 +338,16 @@ export default function PlatformPage() {
             ) : (
               <Empty>No activity</Empty>
             )}
+            <LoadMore
+              status={auditStatus}
+              onLoadMore={() => loadMoreAudit(20)}
+            />
           </Card>
 
           <Card title="Events (from backend)">
-            {events?.length ? (
+            {eventsStatus === "LoadingFirstPage" ? (
+              <Empty>Loading…</Empty>
+            ) : events.length ? (
               events.map((ev) => (
                 <Row
                   key={ev._id}
@@ -309,6 +358,10 @@ export default function PlatformPage() {
             ) : (
               <Empty>No events yet</Empty>
             )}
+            <LoadMore
+              status={eventsStatus}
+              onLoadMore={() => loadMoreEvents(20)}
+            />
           </Card>
         </div>
       </div>

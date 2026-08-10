@@ -22,6 +22,14 @@ import json
 import re
 import sys
 import urllib.request
+from pathlib import Path
+
+# Running this as `python tests/test_language.py` puts `tests/` on sys.path, not
+# the repo root, so the `from src.consult.router import ...` block at the bottom
+# died with ModuleNotFoundError — meaning that whole set of deterministic
+# `requested_language` regression checks never actually executed. Same line every
+# other suite here already carries (see tests/test_retrieval.py).
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 BASE = "http://localhost:4000"
 results: list[tuple[str, bool, str]] = []

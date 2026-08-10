@@ -34,16 +34,16 @@ says so plainly, and the model answers from general Ayurveda knowledge instead.
 from __future__ import annotations
 
 import asyncio
-import os
 
+import config
 from src.knowledge import match_topics, search_knowledge_scored
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult
 from src.retrieval.pipeline import dedupe
 
-# Over-fetch, then filter and dedupe down: a single note holds ~7 chunks, so the
-# useful section is not always in the first few.
-FETCH_K = 12
-KEEP_K = 4
+# Read through to config so retrieval can be tuned per deployment without a code
+# edit. Names kept for the existing call sites and tests.
+FETCH_K = config.VECTOR_FETCH_K
+KEEP_K = config.VECTOR_TOP_K
 
 # Measured with BAAI/bge-m3 (cosine, 204 chunks / 29 notes) over the 74 positive
 # and 10 negative queries in `tests/retrieval_cases.py`:
@@ -64,7 +64,11 @@ KEEP_K = 4
 # The 15% of positives this drops are overwhelmingly ones the alias index has
 # already claimed by name before the threshold is ever consulted, which is why
 # end-to-end recall stays at 1.00 (see tests/test_retrieval.py).
-MIN_RELEVANCE = float(os.getenv("KNOWLEDGE_MIN_RELEVANCE", "0.52"))
+#
+# Now sourced from config (env: KNOWLEDGE_MIN_RELEVANCE) rather than read here
+# directly, so every retrieval knob has one home. The number above is only valid
+# for the embedding model it was measured on — re-measure if that changes.
+MIN_RELEVANCE = config.MIN_RELEVANCE
 
 
 class KnowledgeRetriever:

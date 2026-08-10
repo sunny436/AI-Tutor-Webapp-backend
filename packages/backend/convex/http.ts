@@ -76,4 +76,54 @@ http.route({
   }),
 });
 
+// --- Long-term conversation memory, read by the Python AI backend ---
+//
+// The Python side verifies the caller's Convex JWT itself (server.py
+// `verify_token`) and sends the resulting subject here. It never forwards a
+// user id taken from a request body, so the id arriving here is one Convex
+// already vouched for.
+//
+// Guarded by the shared service key rather than a user session, because the
+// caller is a server, not a browser. Compared with `timingSafeEqual` semantics
+// in mind: the key is compared in full and a mismatch returns 401 with no hint
+// about which part was wrong.
+http.route({
+  path: "/backend/user-memory",
+  method: "POST",
+  handler: httpAction(async (ctx, req) => {
+    const json = (body: unknown, status: number) =>
+      new Response(JSON.stringify(body), {
+        status,
+        headers: { "content-type": "application/json" },
+      });
+
+    const expected = process.env.BACKEND_SERVICE_KEY ?? "";
+    const supplied = req.headers.get("x-service-key") ?? "";
+    // An unset server key must never mean "everything is authorised".
+    if (!expected || supplied !== expected) {
+      return json({ error: "unauthorized" }, 401);
+    }
+
+    const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+    const userId = typeof body.userId === "string" ? body.userId : "";
+    if (!userId) return json({ turns: [] }, 200);
+
+    const excludeSessionId =
+      typeof body.excludeSessionId === "string" ? body.excludeSessionId : undefined;
+
+    try {
+      const turns = await ctx.runQuery(internal.memory.recentTurns, {
+        // biome-ignore lint/suspicious/noExplicitAny: id shape validated by Convex
+        userId: userId as any,
+        excludeSessionId,
+      });
+      return json({ turns }, 200);
+    } catch {
+      // A malformed id must not surface as a 500 with internal detail, and the
+      // consultation must survive memory being unavailable.
+      return json({ turns: [] }, 200);
+    }
+  }),
+});
+
 export default http;

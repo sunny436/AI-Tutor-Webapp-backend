@@ -20,6 +20,7 @@ this data from the request body.
 
 from __future__ import annotations
 
+import config
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult
 
 
@@ -50,17 +51,9 @@ class UserHistoryRetriever(_Stub):
     order = 10
 
 
-class PreviousConversationsRetriever(_Stub):
-    """Stage 2 — what this user discussed in earlier consultations.
-
-    TODO: query the Convex `consults` table by `ctx.user_id`, most recent first,
-    and summarise. Note transcripts are already stored there by `chats.save`, so
-    this is the cheapest stage to enable next.
-    """
-
-    name = "previous_conversations"
-    section = "Earlier consultations with this user"
-    order = 20
+# Stage 2 (previous conversations) is IMPLEMENTED and has moved to
+# `src/retrieval/memory.py` — a working retriever does not belong in a file
+# called stubs.py. `registry.py` imports it from there.
 
 
 class MedicalProfileRetriever(_Stub):
@@ -96,8 +89,9 @@ class UploadedReportsRetriever(_Stub):
     # creatinine" against "kamzori lag rahi hai" - so demanding the same
     # similarity as the curated notes would return nothing useful. Lower, but
     # not zero: an unrelated report should still stay out of the prompt.
-    MIN_RELEVANCE = 0.30
-    TOP_K = 4
+    # Tunable via REPORT_MIN_RELEVANCE / REPORT_TOP_K.
+    MIN_RELEVANCE = config.REPORT_MIN_RELEVANCE
+    TOP_K = config.REPORT_TOP_K
 
     async def retrieve(self, ctx: RetrievalContext) -> RetrievalResult:
         # No verified user, no private data. `user_documents.search` refuses an

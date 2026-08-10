@@ -341,6 +341,36 @@ def whoami(authorization: str = Header(default="")):
     return {"verified": True, "sub": sub}
 
 
+@app.get("/debug/retrieve")
+async def debug_retrieve(
+    q: str = "",
+    user_id: str = "",
+    x_service_key: str = Header(default=""),
+):
+    """Why did THIS query retrieve THAT note? Developers and admins only.
+
+    Two gates, because the blast radius of getting this wrong is the corpus and
+    another person's report text:
+
+      1. the service key — the same guard as /extract, so no browser can reach it
+      2. config.DEBUG_RAG — off unless a deployment deliberately turns it on
+
+    Returns 404 rather than 403 when disabled: a disabled debug route should not
+    advertise that it exists.
+    """
+    _check_service_key(x_service_key)
+    if not config.DEBUG_RAG:
+        raise HTTPException(status_code=404, detail="not found")
+    if not q.strip():
+        raise HTTPException(status_code=400, detail="q is required")
+
+    from src.debug import pipeline_trace
+
+    # user_id is honoured only because the caller already proved it holds the
+    # service key; it is never taken from an end user.
+    return await pipeline_trace(q, user_id or None)
+
+
 @app.post("/extract")
 async def extract(request: Request, x_service_key: str = Header(default="")):
     _check_service_key(x_service_key)

@@ -21,17 +21,20 @@ from __future__ import annotations
 
 from src.retrieval.base import Retriever
 from src.retrieval.knowledge import KnowledgeRetriever
+from src.retrieval.memory import PreviousConversationsRetriever
 from src.retrieval.pipeline import RetrievalPipeline
 from src.retrieval.stubs import (
     MedicalProfileRetriever,
-    PreviousConversationsRetriever,
     UploadedReportsRetriever,
     UserHistoryRetriever,
 )
 
 RETRIEVERS: list[Retriever] = [
     UserHistoryRetriever(enabled=False),
-    PreviousConversationsRetriever(enabled=False),
+    # LIVE. Reads earlier consultations from Convex via the service-key-guarded
+    # /backend/user-memory route. Lives in its own module rather than stubs.py
+    # now that it does real work.
+    PreviousConversationsRetriever(enabled=True),
     MedicalProfileRetriever(enabled=False),
     UploadedReportsRetriever(enabled=True),
     KnowledgeRetriever(enabled=True),

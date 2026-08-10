@@ -387,10 +387,15 @@ ROUTER_TEMPERATURE = 0.7
 MAX_REPLY_CHARS = 700
 
 # The router runs on every single message but only emits a small JSON
-# classification, so it is pinned to a cheap fast model rather than the best one.
-# Spending the answer model's budget on classification would buy nothing the user
-# can see. Pinned (not chained) on purpose: if the router is unreachable the turn
-# should surface that, not silently reclassify on a different model.
+# classification, so it names its own model rather than always taking the best
+# one. Spending the answer model's budget on classification buys nothing the user
+# can see.
+#
+# This is a PREFERENCE, not a hard pin. It used to be absolute, and that made the
+# router a single point of failure: when its one model hit the daily token limit,
+# every consultation returned the red banner even though another model in the
+# chain was healthy with a separate budget. `llm._available_models` now tries
+# this one first and falls through to the rest of the chain.
 ROUTER_MODEL = config.ROUTER_MODEL
 
 

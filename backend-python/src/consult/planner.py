@@ -39,15 +39,25 @@ def _invoke(prompt: str) -> str:
     )
 
 
-def _plan_sync(problem: str, collected: str) -> IntakePlan:
-    # Language is decided here, not by the model. This call gets no system prompt
-    # and its JSON schema example is written in English, so "mujhe acidity hai"
-    # kept producing "How often do you experience acidity?" with English options
-    # — while the plan built from those same answers came back in Hinglish.
+def _plan_sync(problem: str, collected: str, language: str = "") -> IntakePlan:
+    # Language is decided in code, not by the model. This call gets no system
+    # prompt and its JSON schema example is written in English, so "mujhe acidity
+    # hai" kept producing "How often do you experience acidity?" with English
+    # options — while the plan built from those same answers came back in Hinglish.
+    #
+    # `language` is passed IN by the caller rather than detected from `problem`,
+    # because `problem` is the ROUTER'S RESTATEMENT, not the user's words. The
+    # router rewrites "मुझे खाना खाने के बाद गैस होती है" to a short Latin summary
+    # ("gais"), so detecting here saw Latin text and planned an entire Hinglish
+    # questionnaire for someone who wrote in Devanagari. The caller already holds
+    # the language detected from what the user actually typed.
+    #
+    # Falling back to detection keeps the old behaviour for any caller that has
+    # no context to offer.
     prompt = prompts.INTAKE_PLAN_PROMPT.format(
         problem=problem or "(not described)",
         collected=collected or "(nothing yet)",
-        language=detect_language(problem),
+        language=language or detect_language(problem),
     )
 
     plan = parse_plan(_invoke(prompt))
@@ -63,15 +73,21 @@ def _plan_sync(problem: str, collected: str) -> IntakePlan:
     return parse_plan(_invoke(retry))
 
 
-async def plan_intake(problem: str, collected: str, round_number: int) -> IntakePlan:
+async def plan_intake(
+    problem: str, collected: str, round_number: int, language: str = ""
+) -> IntakePlan:
     """Design the next set of question cards.
+
+    `language` is the conversation's sticky language, detected from what the USER
+    typed. Pass it — see `_plan_sync` for why detecting it from `problem` here
+    produces a Hinglish questionnaire for a Devanagari speaker.
 
     Returns a plan with `questions == []` only when round >= 2 planning failed,
     which the caller reads as "stop asking and answer".
     """
     try:
         # LangChain's invoke is blocking; keep it off the event loop.
-        plan = await asyncio.to_thread(_plan_sync, problem, collected)
+        plan = await asyncio.to_thread(_plan_sync, problem, collected, language)
     except Exception as error:  # noqa: BLE001
         print(f"[consult] planner call failed: {error}")
         plan = IntakePlan()

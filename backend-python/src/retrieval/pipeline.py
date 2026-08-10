@@ -20,12 +20,14 @@ from __future__ import annotations
 import asyncio
 from typing import Sequence
 
+import config
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult, Retriever
 
-# Per-retriever budget. Chroma answers in ~50ms warm; the future Convex-backed
-# retrievers will be network calls, so this is the cap that keeps a slow or
+# Per-retriever budget. Chroma answers in ~50ms warm; the Convex-backed
+# retrievers are network calls, so this is the cap that keeps a slow or
 # wedged source from holding up the whole consultation.
-DEFAULT_TIMEOUT_S = 3.0
+# Tunable via RETRIEVAL_TIMEOUT_S.
+DEFAULT_TIMEOUT_S = config.RETRIEVAL_TIMEOUT_S
 
 
 class RetrievalPipeline:

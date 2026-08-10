@@ -68,9 +68,18 @@ OLLAMA_BASE_URL = _get("OLLAMA_BASE_URL", "http://localhost:11434")
 # character for character, an English question answered in English despite
 # Hinglish notes, and never naming a medicine.
 #
-#   nvidia/nemotron-3-nano-30b-a3b:free      4/4   4.6s   <- chosen for both roles
+#   nvidia/nemotron-3-nano-30b-a3b:free      4/4   4.6s   <- STALE, see below
 #   google/gemma-4-26b-a4b-it:free           4/4  16.0s   <- fallback 1
 #   nvidia/nemotron-3-super-120b-a12b:free   4/4  18.7s   <- fallback 2
+#
+# RE-MEASURED 2026-08-10 (scripts/eval_chain_models.py) — the table above no
+# longer holds, so do not pick from it without re-running the script:
+#   nemotron-3-nano-30b-a3b:free   now FAILS. It spends the router's token cap on
+#                                  reasoning and returns no parseable JSON at all.
+#   gemma-4-26b-a4b-it:free        passes, 5 intake questions, but 58.7s not 16s
+#   nemotron-3-super-120b:free     passes, 4 intake questions, 58.3s
+# Free-tier models change under you; the script is the source of truth, not this
+# comment. The live chain lives in MODEL_CHAIN in .env.
 #   nvidia/nemotron-nano-9b-v2:free          3/4  10.8s   - returned empty JSON
 #   openrouter/free                          3/4  15.1s   - 0/4 headings, unusable
 #   openai/gpt-oss-20b:free                  3/4  20.2s   - rate-limited mid-run
@@ -143,9 +152,53 @@ MAX_TOKENS_ANSWER = int(_get("MAX_TOKENS_ANSWER", "1600"))
 LLM_TIMEOUT_SECONDS = float(_get("LLM_TIMEOUT_SECONDS", "60"))
 
 # ---- Ayurveda/Yoga knowledge search (RAG) ----
-EMBEDDING_MODEL = _get("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+# Multilingual on purpose. `all-MiniLM-L6-v2` was the old default and is
+# ENGLISH-ONLY, which contradicted the retrieval threshold: the MIN_RELEVANCE in
+# src/retrieval/knowledge.py documents itself as calibrated against bge-m3, and a
+# cosine threshold is only meaningful for the model it was measured on. Users
+# here type romanised Hindi, so the embedder has to cover it.
+EMBEDDING_MODEL = _get("EMBEDDING_MODEL", "BAAI/bge-m3")
 VECTOR_DB_DIR = _get("VECTOR_DB_DIR", "data/vector_store")
 KNOWLEDGE_DIR = _get("KNOWLEDGE_DIR", "data/knowledge")
+
+# ---- Retrieval knobs ----
+# These lived as module constants inside src/retrieval/*, which meant tuning
+# retrieval required a code edit and the values could not differ per deployment.
+# Defaults below are exactly the previously hard-coded values, so behaviour is
+# unchanged until something is set.
+
+# Over-fetch, then filter and dedupe down: one note is ~7 chunks, so the useful
+# section is not always in the first few.
+VECTOR_FETCH_K = int(_get("VECTOR_FETCH_K", "12"))
+VECTOR_TOP_K = int(_get("VECTOR_TOP_K", "4"))
+
+# Cosine relevance floor for the curated notes. CALIBRATED PER EMBEDDING MODEL —
+# different models put cosine similarity on different scales, so this must be
+# re-measured with scripts/eval_embeddings.py whenever EMBEDDING_MODEL changes.
+# See src/retrieval/knowledge.py for the measured score distribution behind 0.52.
+MIN_RELEVANCE = float(_get("KNOWLEDGE_MIN_RELEVANCE", "0.52"))
+
+# Uploaded reports use different vocabulary from a symptom description ("serum
+# creatinine" vs "kamzori lag rahi hai"), so they need a lower floor than the
+# curated notes — but not zero, or an unrelated report reaches the prompt.
+REPORT_TOP_K = int(_get("REPORT_TOP_K", "4"))
+REPORT_MIN_RELEVANCE = float(_get("REPORT_MIN_RELEVANCE", "0.30"))
+
+# Per-retriever budget. Chroma answers in ~50ms warm; network-backed retrievers
+# need a cap so a wedged source cannot hold up the whole consultation.
+RETRIEVAL_TIMEOUT_S = float(_get("RETRIEVAL_TIMEOUT_S", "3.0"))
+
+# No reranker ships today. Declared so the pipeline has a documented switch
+# rather than the capability being invisible; a cross-encoder on a CPU-only host
+# costs more latency than the relevance it buys on a corpus this size.
+RERANKER_ENABLED = _get("RERANKER_ENABLED", "0") == "1"
+
+# How many earlier turns of THIS conversation may be replayed to the model.
+MAX_CONTEXT_MESSAGES = int(_get("MAX_CONTEXT_MESSAGES", "12"))
+
+# Exposes retrieval internals (scores, chunk sources, assembled context) on the
+# service-key-guarded debug route. Never enable on a public deployment.
+DEBUG_RAG = _get("DEBUG_RAG", "0") == "1"
 
 # ---- How this backend connects to the Convex template ----
 PORT = int(_get("PORT", "4000"))                       # port this backend runs on
@@ -170,8 +223,30 @@ def is_llm_ready() -> bool:
 
     Ollama is the genuine exception; it runs locally with no credential.
     """
-    if LLM_PROVIDER == "groq":
-        return bool(GROQ_API_KEY) and GROQ_API_KEY != "your_free_groq_key_here"
-    if LLM_PROVIDER == "openrouter":
-        return bool(OPENROUTER_API_KEY)
-    return True
+    def _usable(provider: str) -> bool:
+        if provider == "groq":
+            return bool(GROQ_API_KEY) and GROQ_API_KEY != "your_free_groq_key_here"
+        if provider == "openrouter":
+            return bool(OPENROUTER_API_KEY)
+        # Ollama runs locally with no credential — the genuine exception.
+        return provider == "ollama"
+
+    # MODEL_CHAIN may now name providers per entry ("openrouter:nvidia/...:free"),
+    # so readiness is "can ANY model in the chain actually run", not "is the
+    # default provider configured". Reporting not-ready because the *default*
+    # provider lacks a key, while a second provider in the chain is fully usable,
+    # would take a working assistant offline.
+    for entry in (m.strip() for m in MODEL_CHAIN.split(",")):
+        if not entry:
+            continue
+        head, separator, rest = entry.partition(":")
+        provider = (
+            head.lower()
+            if separator and rest and head.lower() in ("groq", "openrouter", "ollama")
+            else LLM_PROVIDER
+        )
+        if _usable(provider):
+            return True
+
+    # Empty or fully unusable chain — fall back to judging the default provider.
+    return _usable(LLM_PROVIDER)
