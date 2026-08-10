@@ -1,11 +1,12 @@
 <#
 .SYNOPSIS
-    Start (or repair) the three processes that make the site public.
+    Start (or repair) the three processes that make the site public, and keep
+    them responsive.
 
 .DESCRIPTION
     Idempotent by design: it starts only what is not already listening, so the
-    same script can run at logon AND every few minutes as a watchdog without
-    ever launching a duplicate.
+    same script can run at logon AND every minute as a watchdog without ever
+    launching a duplicate.
 
         Next.js     127.0.0.1:3000   the dashboard
         FastAPI     127.0.0.1:4000   the AI backend
@@ -13,6 +14,9 @@
 
     Both servers bind loopback ONLY. cloudflared reaches them over 127.0.0.1, so
     nothing is lost, and the machine exposes no port to the LAN or the internet.
+
+    Beyond starting things, this also does two things that matter for speed on a
+    machine with 8 GB of RAM — see "Keeping it warm" below.
 
 .NOTES
     Runs without administrator rights, which is why this exists at all: without
@@ -50,12 +54,75 @@ function Test-TunnelRunning {
     return $false
 }
 
+<#
+Keeping it warm.
+
+Windows trims the working set of an idle process, and this box has 8 GB shared
+between Next.js, Python and a 1.9 GB embedding model. Measured on the live site:
+the Python worker had peaked at 1940 MB and was holding 40 MB — the rest had been
+pushed to the page file. The next visitor paid to fault it all back, which showed
+up as a 2.5 second first response against 134 ms once warm.
+
+SetProcessWorkingSetSize with QUOTA_LIMITS_HARDWS_MIN_ENABLE asks Windows to stop
+evicting a minimum. A process may set this on itself without administrator
+rights. It is a request, not a guarantee — a hypervisor balloon driver can still
+reclaim the pages — so the effect is measured after deploying rather than assumed.
+#>
+$pinSource = @"
+using System;
+using System.Runtime.InteropServices;
+public static class WorkingSet {
+    [DllImport("kernel32.dll", SetLastError = true)]
+    static extern bool SetProcessWorkingSetSizeEx(IntPtr h, IntPtr min, IntPtr max, uint flags);
+    // QUOTA_LIMITS_HARDWS_MIN_ENABLE (0x1) | QUOTA_LIMITS_HARDWS_MAX_DISABLE (0x8)
+    public static bool Pin(IntPtr handle, long minBytes, long maxBytes) {
+        return SetProcessWorkingSetSizeEx(handle, (IntPtr)minBytes, (IntPtr)maxBytes, 0x9);
+    }
+}
+"@
+if (-not ("WorkingSet" -as [type])) {
+    try { Add-Type -TypeDefinition $pinSource -ErrorAction Stop } catch { }
+}
+
+function Set-MinimumWorkingSet([int]$ProcessId, [int]$MinMB, [int]$MaxMB) {
+    if (-not ("WorkingSet" -as [type])) { return "unavailable" }
+    try {
+        $p = Get-Process -Id $ProcessId -ErrorAction Stop
+        $ok = [WorkingSet]::Pin($p.Handle, ($MinMB * 1MB), ($MaxMB * 1MB))
+        if ($ok) { return "pinned ${MinMB}-${MaxMB} MB" }
+        return "refused (win32 error $([Runtime.InteropServices.Marshal]::GetLastWin32Error()))"
+    } catch {
+        return "failed: $($_.Exception.Message.Split([char]10)[0])"
+    }
+}
+
 # ---- Python AI backend ------------------------------------------------------
-# Started first: it loads the bge-m3 embedding model (~1.3 GB) and takes the
+# Started first: it loads the bge-m3 embedding model (~1.9 GB) and takes the
 # longest to become useful, so giving it a head start shortens total downtime.
+#
+# Leftover server.py processes are cleared ONLY when nothing is serving port
+# 4000. Never while the site is up.
+#
+# The first version of this check compared each process's command line against
+# the venv interpreter and killed anything else. That killed the live backend
+# every minute. On Windows `.venv\Scripts\python.exe` is a small launcher: it
+# starts the base interpreter as a CHILD, and it is the child that loads the
+# model, binds the port and reports the base interpreter's path on its command
+# line. The real server therefore looks exactly like a "stray" from the outside.
+#
+# Judging by the port instead of by the path removes the guesswork: if something
+# is answering on 4000 it is the server, whatever its argv says.
 if (Test-Listening 4000) {
     Write-Log "backend  already listening on 4000"
 } else {
+    $leftovers = Get-CimInstance Win32_Process -Filter "Name='python.exe'" -ErrorAction SilentlyContinue |
+        Where-Object { $_.CommandLine -match "server\.py" }
+    foreach ($leftover in $leftovers) {
+        Write-Log "backend  clearing leftover pid=$($leftover.ProcessId) (nothing was serving 4000)"
+        Stop-Process -Id $leftover.ProcessId -Force -ErrorAction SilentlyContinue
+    }
+    if ($leftovers) { Start-Sleep -Seconds 3 }
+
     Write-Log "backend  starting"
     Start-Process -FilePath $Python -ArgumentList "server.py" `
         -WorkingDirectory "$Repo\backend-python" `
@@ -93,6 +160,37 @@ if (Test-TunnelRunning) {
         -RedirectStandardOutput "$LogDir\tunnel-out.log" `
         -RedirectStandardError  "$LogDir\tunnel-err.log" `
         -WindowStyle Hidden
+}
+
+# ---- Keep the pages resident ------------------------------------------------
+# Ceilings are generous rather than tuned: the point is to stop eviction, not to
+# cap growth, and MAX_DISABLE above means the maximum is advisory anyway.
+foreach ($target in @(
+    @{ Port = 4000; Name = "backend "; Min = 1600; Max = 2600 },
+    @{ Port = 3000; Name = "frontend"; Min = 220;  Max = 700  }
+)) {
+    $conn = Get-NetTCPConnection -State Listen -LocalPort $target.Port -ErrorAction SilentlyContinue | Select-Object -First 1
+    if ($conn) {
+        $result = Set-MinimumWorkingSet -ProcessId $conn.OwningProcess -MinMB $target.Min -MaxMB $target.Max
+        # Log what is actually resident, not just that the call returned true.
+        # On this VM the call succeeds and the pages are reclaimed anyway — the
+        # Python worker drops from ~1.9 GB back to tens of MB between requests —
+        # so a log line saying "pinned" on its own would be quietly untrue.
+        $proc = Get-Process -Id $conn.OwningProcess -ErrorAction SilentlyContinue
+        $resident = if ($proc) { [Math]::Round($proc.WorkingSet64 / 1MB) } else { "?" }
+        $peak = if ($proc) { [Math]::Round($proc.PeakWorkingSet64 / 1MB) } else { "?" }
+        Write-Log "$($target.Name) working set: $result | resident now ${resident} MB, peak ${peak} MB"
+    }
+}
+
+# A request costs almost nothing and keeps the hot code paths faulted in, which
+# also covers the case where the memory pin above was refused.
+foreach ($probe in @("http://127.0.0.1:4000/health", "http://127.0.0.1:3000/en/login")) {
+    try {
+        Invoke-WebRequest -Uri $probe -TimeoutSec 20 -UseBasicParsing | Out-Null
+    } catch {
+        Write-Log "warm     $probe -> $($_.Exception.Message.Split([char]10)[0])"
+    }
 }
 
 Write-Log "check complete"

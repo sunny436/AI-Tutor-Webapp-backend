@@ -209,6 +209,17 @@ DEBUG_RAG = _get("DEBUG_RAG", "0") == "1"
 # Override only if the backend must genuinely serve another host.
 HOST = _get("HOST", "127.0.0.1")
 
+# Auto-restart the server when a source file changes. Development only.
+#
+# This used to be hard-coded on, which cost real money in production: uvicorn's
+# reloader runs a second process and hands the directory to WatchFiles, and that
+# directory contains `.venv` (1.5 GB, tens of thousands of files) and the vector
+# store. It burns memory on a machine that is already short of it — which is what
+# makes Windows evict the 1.9 GB embedding model between requests, so the next
+# visitor waits for it to be paged back in. It also lets any stray file write
+# restart the server underneath a live request.
+RELOAD = _get("RELOAD", "0") == "1"
+
 # Require a valid Convex login token on the endpoints that cost money or CPU
 # (/consult, /upload, /transcribe, /speak).
 #

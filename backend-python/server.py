@@ -526,4 +526,8 @@ if __name__ == "__main__":
     import uvicorn
     # host comes from config (default 127.0.0.1). It used to be a hard-coded
     # "0.0.0.0", which published this API to the whole LAN.
-    uvicorn.run("server:app", host=config.HOST, port=config.PORT, reload=True)
+    #
+    # reload is off unless RELOAD=1. It was hard-coded on, so production paid for
+    # a file watcher over `.venv` and a second process it never needed. Set
+    # RELOAD=1 in backend-python/.env while developing.
+    uvicorn.run("server:app", host=config.HOST, port=config.PORT, reload=config.RELOAD)

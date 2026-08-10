@@ -117,6 +117,18 @@ async function signOut(page) {
   }).catch(() => {});
 }
 
+/** Begin a clean consultation, the way a user does: the sidebar's "New Chat". */
+async function startNewChat(page) {
+  const button = page.locator('a:has-text("New Chat")').first();
+  if (await button.count()) {
+    await button.click().catch(() => {});
+  } else {
+    await page.goto(`${BASE}/consult`, { waitUntil: "domcontentloaded" });
+  }
+  await page.waitForSelector("textarea", { timeout: 30000 }).catch(() => {});
+  await page.waitForTimeout(2500);
+}
+
 /**
  * Send one message and wait for the assistant to actually produce something.
  *
@@ -136,8 +148,18 @@ async function ask(page, message) {
   while (Date.now() < deadline) {
     await page.waitForTimeout(2500);
     const now = (await page.locator("main").innerText().catch(() => "")) || "";
-    if (/rate limit|quota|try again in|temporarily unavailable/i.test(now)) {
-      return { ok: false, reason: "quota", text: now.slice(-300) };
+    // Match the wording the app ACTUALLY uses when the model chain is out of
+    // free-tier tokens. The first version of this list was written in English
+    // only, so the real message — "Aaj ki daily AI limit khatam ho gayi hai" —
+    // slipped past it and the run was reported as a FAILURE. It is not one: the
+    // app degraded exactly as designed and said so.
+    if (
+      /daily AI limit|limit khatam|credit limit reached|rate limit|quota|try again in|temporarily unavailable/i.test(
+        now,
+      )
+    ) {
+      const line = now.match(/[^\n]*(daily AI limit|credit limit reached|rate limit)[^\n]*/i);
+      return { ok: false, reason: "quota", text: (line ? line[0] : now.slice(-200)).trim().slice(0, 160) };
     }
     // An error banner is a reply of sorts, so the length check below would have
     // called it a pass. Fail on it explicitly instead — this is how the 401 from
@@ -225,6 +247,14 @@ async function ask(page, message) {
         ["Hinglish", "mujhe raat ko neend nahi aati aur din bhar thakan rehti hai"],
       ];
       for (const [label, text] of prompts) {
+        // Start each language in a FRESH conversation.
+        //
+        // The first answer puts the consultation into its intake phase, where
+        // the composer means "add anything else" rather than "ask something
+        // new" — so the next two prompts were being folded into the first
+        // conversation instead of starting their own. The suite then waited for
+        // a reply that was never going to come and blamed the app.
+        await startNewChat(page);
         const reply = await ask(page, text);
         if (reply.ok) {
           pass(`AI replies - ${label}`, reply.text.replace(/\s+/g, " ").slice(0, 110));
