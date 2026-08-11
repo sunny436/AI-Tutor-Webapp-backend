@@ -215,6 +215,7 @@ def evaluate(model: str, role: str) -> dict:
                     profile="No profile provided.",
                     history="Problem: mujhe acidity hai\nSince: 2 weeks",
                     sections=render_section_spec(list(SECTION_LIBRARY)),
+                    language="hinglish",
                 ))],
                 max_tokens=config.MAX_TOKENS_ANSWER,
             )

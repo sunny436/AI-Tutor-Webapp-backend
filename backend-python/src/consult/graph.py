@@ -472,6 +472,7 @@ async def run_turn(
         profile=profile,
         details=details,
         sections=sections,
+        language=context.language,
     )
 
     context.phase = "completed"

@@ -73,7 +73,9 @@ def _invoke(prompt: str, on_token: Callable[[str], None] | None = None) -> str:
     return "".join(pieces)
 
 
-def _write_plan_sync(knowledge: str, profile: str, details: str, sections: list[str]) -> str:
+def _write_plan_sync(
+    knowledge: str, profile: str, details: str, sections: list[str], language: str
+) -> str:
     return _invoke(
         prompts.PLAN_PROMPT.format(
             system_rules=prompts.SYSTEM_RULES,
@@ -81,17 +83,27 @@ def _write_plan_sync(knowledge: str, profile: str, details: str, sections: list[
             profile=profile or "No profile provided.",
             history=details,
             sections=render_section_spec(sections),
+            # Empty would leave the prompt naming no language at all, which is
+            # the state that produced the bug. Say "the user's own language" so
+            # the instruction still reads as an instruction.
+            language=language or "the user's own language and script",
         )
     )
 
 
 async def write_plan(
-    knowledge: str, profile: str, details: str, sections: list[str]
+    knowledge: str, profile: str, details: str, sections: list[str], language: str = ""
 ) -> str:
-    """Generate the consultation plan, limited to the requested sections."""
+    """Generate the consultation plan, limited to the requested sections.
+
+    `language` is the conversation's resolved language. It was missing here while
+    every other writing path already took it, and this is the path that produces
+    the thing the user actually asked for - so the plan was the one reply that
+    could come back in the wrong language after a flawless English intake.
+    """
     try:
         return await asyncio.to_thread(
-            _write_plan_sync, knowledge, profile, details, sections
+            _write_plan_sync, knowledge, profile, details, sections, language
         )
     except Exception as error:  # noqa: BLE001
         print(f"[consult] plan generation failed: {error}")

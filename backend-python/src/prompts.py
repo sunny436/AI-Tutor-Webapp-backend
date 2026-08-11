@@ -450,12 +450,21 @@ SOURCE PRIORITY  -  follow this order strictly:
 (If the section below says no relevant notes were found, that is expected  -  answer
 from general Ayurveda and Yoga knowledge, and keep the advice conservative.)
 
-LANGUAGE: the trusted notes are written in Hinglish. That is how they are STORED,
-not how you must reply. Take the language and script from what the USER wrote in
-the details below, and translate the notes into it  -  English question, English
-answer; Devanagari question, Devanagari answer. Copying the notes' language just
-because it is in front of you is the mistake to avoid. The section HEADINGS stay
-in English exactly as given, whatever language the body is in.
+LANGUAGE  -  WRITE THE WHOLE PLAN IN: {language}
+That was resolved from the entire conversation, not guessed from the details
+below, and it overrides everything else. Do not infer the language from anything
+in front of you.
+
+Inferring is exactly what went wrong before: this prompt used to say "take the
+language from what the USER wrote in the details below". Those details are intake
+chip labels, and the trusted notes are STORED in Hinglish, so an English
+conversation - correct English questions, English answers - still produced a
+Hinglish plan roughly two times in three. The user asked in English and got the
+finished plan in Hinglish.
+
+The notes being Hinglish is a storage fact, not an instruction: translate them
+into the language named above. The section HEADINGS stay in English exactly as
+given, whatever language the body is in.
 
 --- TRUSTED AYURVEDA / YOGA KNOWLEDGE ---
 {knowledge}
