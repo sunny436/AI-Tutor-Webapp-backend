@@ -88,12 +88,25 @@ export default function Home() {
         </div>
 
         {/* Chart + AI insight */}
-        <div className="grid gap-4 lg:grid-cols-[1.6fr_1fr]">
+        <div className="grid items-start gap-4 lg:grid-cols-[1.6fr_1fr]">
           <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
             <div className="mb-4 flex items-center justify-between">
               <h2 className="text-sm font-semibold text-primary">Consultations · last 7 days</h2>
               <span className="rounded-full border border-border px-2.5 py-0.5 text-[11px] text-primary/50">This week</span>
             </div>
+            {/* With no consultations yet every bar renders at 2px and 25%
+                opacity, which reads as a broken chart rather than an empty one.
+                Say so instead. */}
+            {/* Not `maxBar === 0`: maxBar is Math.max(1, …) so it never reaches
+                zero. Ask the bars themselves. */}
+            {bars.every((b) => b.count === 0) ? (
+              <div className="flex h-32 flex-col items-center justify-center gap-1 text-center">
+                <p className="text-sm text-primary/50">No consultations yet</p>
+                <p className="text-xs text-primary/35">
+                  Your weekly activity will appear here.
+                </p>
+              </div>
+            ) : (
             <div className="flex h-32 items-end gap-3">
               {bars.map((b, i) => (
                 <div key={i} className="flex flex-1 flex-col items-center gap-1.5">
@@ -105,6 +118,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            )}
           </div>
 
           <div className="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/5 p-5 shadow-sm">
@@ -121,7 +135,7 @@ export default function Home() {
         </div>
 
         {/* Activity + Quick actions */}
-        <div className="grid gap-4 lg:grid-cols-[1.6fr_1fr]">
+        <div className="grid items-start gap-4 lg:grid-cols-[1.6fr_1fr]">
           <div className="rounded-2xl border border-border bg-card shadow-sm">
             <div className="flex items-center gap-2 border-b border-border px-5 py-3.5">
               <Activity className="h-4 w-4 text-primary/50" />
