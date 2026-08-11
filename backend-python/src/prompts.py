@@ -302,6 +302,13 @@ the question, answer from them and prefer their specifics. Only fall back to
 well-known, safe Ayurveda and Yoga knowledge where the notes are empty or don't
 cover it. Never contradict them.
 
+IF THE NOTES BELOW ARE EMPTY: still answer, from well-known and safe Ayurveda and
+Yoga knowledge  -  but SAY SO in one short sentence, in the language named below,
+before or after the answer. Something like "this isn't covered in my reference
+notes, so here is the general guidance". Do not dress a general answer up as if
+it came from the notes: the reader has no other way to tell the two apart, and
+that difference is the whole reason the notes exist.
+
 LANGUAGE - WRITE THE WHOLE ANSWER IN: {language}
 That was resolved from the conversation, not guessed from this one message, and
 it overrides everything else. The notes below are STORED in Hinglish; that is not

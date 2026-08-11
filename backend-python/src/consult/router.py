@@ -240,13 +240,34 @@ _QUESTION_MARKERS = re.compile(
 
 
 _DEVANAGARI = re.compile(r"[ऀ-ॿ]")
+
 # Hindi function words that survive romanisation. Content words ("acidity",
 # "migraine") are borrowed into Hinglish unchanged, so they prove nothing —
 # only the grammar words tell the two apart.
-_HINGLISH_MARKERS = re.compile(
-    r"\b(mujhe|mujha|mera|meri|mere|hai|hain|ha|raha|rahi|rahe|hota|hoti|nahi|"
-    r"kya|kaise|kar|karna|karta|ko|ka|ki|ke|se|me|mein|par|liye|aur|bhi|"
-    r"jyada|zyada|bahut|thoda|roz|subah|raat|din|khana|pet|sir|sar)\b",
+#
+# Split into two tiers because some romanised Hindi words ARE English words, and
+# treating every marker as proof made the detector call ordinary English
+# "hinglish". `me` was the worst offender: "Tell me more", "Give me a diet plan",
+# "Can you help me with my digestion?" all matched on that one word. `sir` did
+# the same to "Sir, what should I do?". Seven of nine plain English sentences
+# came back hinglish.
+#
+# That mattered far more than a mislabelled turn. The conversation language is
+# sticky by design (graph.py only detects when it is unset), so one bad read of
+# the FIRST message locked the whole conversation into Hinglish — which is the
+# "English answers keep turning into Hinglish" report.
+_HINGLISH_STRONG = re.compile(
+    r"\b(mujhe|mujha|mera|meri|mere|hai|hain|raha|rahi|rahe|hota|hoti|nahi|"
+    r"kya|kaise|karna|karta|mein|liye|aur|bhi|jyada|zyada|bahut|thoda|roz|"
+    r"subah|raat|khana|pet|sar)\b",
+    re.IGNORECASE,
+)
+
+# Each of these is either a real English word or a fragment short enough to
+# appear by accident. One on its own means nothing; two together are Hindi
+# grammar showing through.
+_HINGLISH_WEAK = re.compile(
+    r"\b(ha|kar|ko|ka|ki|ke|se|me|par|din|sir)\b",
     re.IGNORECASE,
 )
 
@@ -259,11 +280,18 @@ def detect_language(text: str) -> str:
     acidity hai" still produced "How often do you experience acidity?" with
     English options, while the plan built from those answers came back in
     Hinglish. Naming the language outright removes the inference.
+
+    Hinglish needs either one unambiguous marker or two ambiguous ones. A single
+    weak marker is not evidence: `me` and `sir` are English words, and accepting
+    one of them was enough to misread most English sentences.
     """
     body = text or ""
     if _DEVANAGARI.search(body):
         return "devanagari"
-    return "hinglish" if _HINGLISH_MARKERS.search(body) else "english"
+    if _HINGLISH_STRONG.search(body):
+        return "hinglish"
+    weak = {match.group(0).lower() for match in _HINGLISH_WEAK.finditer(body)}
+    return "hinglish" if len(weak) >= 2 else "english"
 
 
 # People put an adjective between the preposition and the language far more often

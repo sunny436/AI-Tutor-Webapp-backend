@@ -309,6 +309,63 @@ def invoke(
     raise last_error or RuntimeError("no LLM available")
 
 
+def stream(
+    messages,
+    *,
+    temperature: float = 0.4,
+    model: str = "",
+    max_tokens: int = 0,
+):
+    """Yield the reply in pieces, falling back to `invoke` if streaming fails.
+
+    A generator counterpart to `invoke`, not a replacement: `invoke` still backs
+    every caller that needs the whole answer before deciding anything (the
+    router, the intake planner, the JSON paths). Only prose shown directly to a
+    reader benefits from arriving early.
+
+    Deliberately does NOT duplicate the retry ladder. Once the first token has
+    been handed to the caller the reply is already on somebody's screen, so
+    silently restarting on a different model would rewrite text they have read.
+    Instead: try to stream the preferred model, and if it fails BEFORE emitting
+    anything, hand the whole request to `invoke` — which has the full chain,
+    cooldown and fallback behaviour — and yield its answer as one piece. The
+    reader cannot tell the difference beyond it appearing all at once.
+
+    `json_mode` is absent on purpose. A half-streamed JSON object is not
+    parseable, so nothing that needs structure should come through here.
+    """
+    emitted = False
+    try:
+        client = get_llm(temperature, False, model=model, max_tokens=max_tokens)
+        for piece in client.stream(messages):
+            text = getattr(piece, "content", "") or ""
+            if not text:
+                continue
+            emitted = True
+            yield text
+        if emitted:
+            _cooldown.pop(model, None) if model else None
+            return
+    except Exception as error:  # noqa: BLE001 - fall back below
+        if emitted:
+            # Mid-stream failure. The caller already has part of the answer;
+            # re-running would duplicate it, so stop and let them keep what
+            # arrived rather than contradicting the screen.
+            print(f"[llm] stream broke after output began: {error}")
+            return
+        print(f"[llm] streaming unavailable ({error}); falling back to a single call")
+
+    # Either the model streamed nothing at all, or it failed before the first
+    # token. Both are safe to retry through the normal path.
+    yield invoke(
+        messages,
+        temperature=temperature,
+        json_mode=False,
+        model=model,
+        max_tokens=max_tokens,
+    )
+
+
 # ======================================================================
 #  VOICE
 # ======================================================================

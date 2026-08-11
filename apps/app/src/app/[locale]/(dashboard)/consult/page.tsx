@@ -250,6 +250,21 @@ function ConsultInner() {
     let sid = sessionId;
     if (!sid) {
       sid = newId();
+      // Claim the id BEFORE it reaches the URL.
+      //
+      // Putting `?c=<sid>` in the address bar changes `urlSession` (Next 14
+      // keeps useSearchParams in step with replaceState), which starts a
+      // getMessages query for a session Convex has not been told about yet. The
+      // rehydrate effect below then saw a brand-new key, got back an empty list,
+      // and called setTurns([]) — wiping the greeting and the message the user
+      // had just typed. The reply arrived afterwards and was appended to the
+      // empty transcript, which is exactly what the bug report showed.
+      //
+      // `saveMsg` is deliberately not awaited (the turn should not wait on a
+      // write), so the race is real rather than theoretical. Marking the id as
+      // already loaded is what closes it: this tab is the authority on a session
+      // it just created, and there is nothing on the server to restore.
+      loadedRef.current = sid;
       setSessionId(sid);
       // Put the session in the URL so a refresh keeps the chat and the sidebar
       // can highlight it.
@@ -284,7 +299,12 @@ function ConsultInner() {
   const submitIntake = async (selection: Selection) => {
     if (busy || !context) return;
     const sid = sessionId ?? newId();
-    if (!sessionId) setSessionId(sid);
+    if (!sessionId) {
+      // Same claim as in `send` — a session this tab just minted must not be
+      // rehydrated out from under itself.
+      loadedRef.current = sid;
+      setSessionId(sid);
+    }
 
     setBusy(true);
     try {

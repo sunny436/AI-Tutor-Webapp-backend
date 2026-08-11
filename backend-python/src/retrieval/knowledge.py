@@ -71,6 +71,58 @@ KEEP_K = config.VECTOR_TOP_K
 MIN_RELEVANCE = config.MIN_RELEVANCE
 
 
+# How far behind the leader a chunk from a DIFFERENT note may sit before the
+# result is treated as "no clear topic". Measured on the failing cases: the
+# runner-up from an unrelated file trailed by 0.008-0.010, well inside this.
+_TOPIC_MARGIN = 0.03
+
+
+def _one_topic_only(query: str, kept: list) -> list:
+    """Keep the leading note's chunks, or nothing.
+
+    Only for the path where the alias index claimed nothing. That search has no
+    source filter, so a general question pulls whatever scores highest anywhere
+    in the corpus — and with bge-m3 everything health-shaped lands in a narrow
+    band. Measured, under the heading "TRUSTED AYURVEDA / YOGA KNOWLEDGE":
+
+        "is coffee bad for me"  -> constipation, insomnia, pcos, fatigue
+        "yoga for beginners"    -> fatigue, weight-gain, weight-loss, dry-skin
+
+    Four unrelated notes, every score between 0.53 and 0.59, handed over as
+    though they answered the question. That is the inaccuracy being reported.
+
+    Raising the floor cannot fix it: "what is ashwagandha" (in the corpus) scores
+    0.489 while "how do I fix my car engine" (not in it) scores 0.491. The scores
+    are already inverted, so coherence has to be judged by agreement instead —
+    do the top results concentrate on ONE note, or are they scattered?
+
+    If the best chunk from another note is within `_TOPIC_MARGIN` of the leader,
+    nothing is winning and the honest answer is no context at all. The prompt
+    then says the notes did not cover it, which beats citing PCOS at somebody
+    asking about coffee.
+    """
+    ranked = sorted(
+        (pair for pair in kept if pair[1] is not None),
+        key=lambda pair: pair[1],
+        reverse=True,
+    )
+    unscored = [pair for pair in kept if pair[1] is None]
+    if not ranked:
+        return kept
+
+    leader = ranked[0][0].metadata.get("source")
+    rival = next((s for doc, s in ranked if doc.metadata.get("source") != leader), None)
+    if rival is not None and rival >= ranked[0][1] - _TOPIC_MARGIN:
+        print(
+            f"[knowledge] no clear topic for {query[:60]!r} "
+            f"(leader {leader} {ranked[0][1]:.4f} vs rival {rival:.4f}); "
+            "returning nothing rather than mixing notes"
+        )
+        return []
+
+    return [pair for pair in ranked if pair[0].metadata.get("source") == leader] + unscored
+
+
 class KnowledgeRetriever:
     name = "knowledge"
     section = "Trusted Ayurveda / Yoga knowledge"
@@ -99,6 +151,7 @@ class KnowledgeRetriever:
 
         scored = search_knowledge_scored(query, FETCH_K)
         kept = [(doc, score) for doc, score in scored if score is None or score >= MIN_RELEVANCE]
+        kept = _one_topic_only(query, kept)
         if scored and not kept:
             best = max((s for _, s in scored if s is not None), default=None)
             print(

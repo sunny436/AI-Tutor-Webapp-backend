@@ -31,6 +31,8 @@ from pathlib import Path
 # other suite here already carries (see tests/test_retrieval.py).
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+import config  # noqa: E402  (needs the sys.path line above)
+
 BASE = "http://localhost:4000"
 results: list[tuple[str, bool, str]] = []
 
@@ -41,10 +43,14 @@ def check(name: str, ok: bool, detail: str = "") -> None:
 
 
 def post(payload: dict) -> dict:
+    # /consult refuses anonymous callers so a published backend cannot have its
+    # LLM quota spent by strangers. The service key is the server-to-server
+    # credential for exactly this: it admits the request without claiming to be
+    # any particular user, so these tests still exercise the real HTTP path.
     request = urllib.request.Request(
         f"{BASE}/consult",
         data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
+        headers={"Content-Type": "application/json", "x-service-key": config.SERVICE_KEY},
     )
     with urllib.request.urlopen(request, timeout=180) as response:
         return json.loads(response.read())
@@ -278,6 +284,47 @@ for phrase, want in [
         f"10. REGRESSION: is_small_talk({phrase!r}) is {want}",
         is_small_talk(phrase) == want,
         f"got {is_small_talk(phrase)}",
+    )
+
+# ---------------------------------------------------------------------------
+# 11. The detector must not read ordinary English as Hinglish.
+#
+# `_HINGLISH_MARKERS` used to treat every romanised Hindi word as proof, and some
+# of those words are English: `me` matched "Tell me more", "Give me a diet plan"
+# and "Can you help me with my digestion?"; `sir` matched "Sir, what should I
+# do?". Seven of nine plain English sentences came back hinglish.
+#
+# The damage was not one mislabelled turn. Conversation language is sticky — it
+# is detected only when unset — so a misread FIRST message locked the whole
+# conversation into Hinglish, which is what users reported as "English answers
+# keep turning into Hinglish".
+from src.consult.router import detect_language  # noqa: E402
+
+for phrase, want in [
+    # English that contains a weak marker and must stay English.
+    ("Can you help me with my digestion?", "english"),
+    ("Tell me more about ashwagandha", "english"),
+    ("Give me a diet plan", "english"),
+    ("What can you do for me?", "english"),
+    ("Please guide me on yoga", "english"),
+    ("Sir, what should I do?", "english"),
+    ("tell me more", "english"),
+    ("What should I eat in the morning?", "english"),
+    ("I have trouble sleeping at night", "english"),
+    # Hinglish must still be recognised — one strong marker is enough.
+    ("mujhe acidity hai", "hinglish"),
+    ("kya main yoga kar sakta hoon", "hinglish"),
+    ("neend nahi aati", "hinglish"),
+    ("mera pet kharab hai", "hinglish"),
+    ("roz subah kya khana chahiye", "hinglish"),
+    # Two weak markers together are Hindi grammar showing through.
+    ("ye kar ke dekho", "hinglish"),
+    ("मुझे नींद नहीं आती", "devanagari"),
+]:
+    check(
+        f"11. detect_language({phrase!r}) is {want}",
+        detect_language(phrase) == want,
+        f"got {detect_language(phrase)}",
     )
 
 failed = [name for name, ok, _ in results if not ok]
