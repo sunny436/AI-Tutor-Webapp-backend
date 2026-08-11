@@ -38,6 +38,24 @@ $LogDir = "$Repo\logs"
 
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 
+<#
+Keep the previous run's logs.
+
+`Start-Process -RedirectStandardOutput` TRUNCATES, so every restart destroyed the
+evidence from the run before it. That cost a real diagnosis: a user reported a
+wrongly-triggered emergency warning, `_escalate` had already logged its reason,
+and by the time the report arrived the log had been overwritten by a restart.
+
+One generation back is enough — the question is always "what happened just before
+I restarted this".
+#>
+foreach ($name in @("backend-out", "backend-err", "frontend-out", "frontend-err", "tunnel-out", "tunnel-err")) {
+    $current = Join-Path $LogDir "$name.log"
+    if ((Test-Path $current) -and (Get-Item $current).Length -gt 0) {
+        Move-Item -Path $current -Destination (Join-Path $LogDir "$name.prev.log") -Force -ErrorAction SilentlyContinue
+    }
+}
+
 function Write-Log([string]$Message) {
     $line = "{0}  {1}" -f (Get-Date -Format "yyyy-MM-dd HH:mm:ss"), $Message
     Write-Output $line

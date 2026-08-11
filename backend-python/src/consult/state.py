@@ -86,10 +86,20 @@ def carry_conversation(context: ConsultContext) -> dict:
 
     A consultation resets the intake, but the chat that led to it still happened —
     forgetting it would make the assistant greet the user again mid-conversation.
+
+    `language` belongs here for the same reason, and its absence was a real bug.
+    `run_turn` resolves the language at the top of every turn and stores it on the
+    context, but starting a consultation builds a FRESH ConsultContext — so the
+    answer was computed and then immediately thrown away, and every consultation
+    ran with `language=""`. With no language named, the model chose one: an
+    English question came back in Hinglish, and changing the language of a later
+    message changed nothing, because nothing was ever being carried in the first
+    place.
     """
     return {
         "greeted": context.greeted,
         "chat_history": list(context.chat_history),
+        "language": context.language,
     }
 
 
