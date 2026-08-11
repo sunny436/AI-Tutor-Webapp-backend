@@ -227,8 +227,17 @@ _QUESTION_MARKERS = re.compile(
     # to `is_personal_complaint` and opened five cards instead of answering.
     # Deliberately NOT covering "kya karu" / "kya karun": that is someone asking
     # for help with their own problem, which is exactly what intake is for.
-    r"ke\s+liye\s+kya|kya\s+kha|kya\s+pina|kya\s+peena|"
-    r"ke\s+fayde|ke\s+nuksan|fayde\s+kya|benefits|kaun\s?sa|kaun\s?si|"
+    #
+    # The `\w*` endings are load-bearing. This whole alternation sits inside
+    # \b(...)\b, so an alternative that stops mid-word can never match: `kya\s+kha`
+    # requires a boundary straight after "kha", and in "kya khana" the next
+    # character is "n". So "acidity me kya khana chahiye" -- the commonest Hinglish
+    # diet question there is -- matched nothing and opened a questionnaire, while
+    # the English and Devanagari forms of the same question answered directly.
+    # The example in the comment above only passed because `ke\s+liye\s+kya`
+    # rescued it, which hid the fact that `kya\s+kha` had never once fired.
+    r"ke\s+liye\s+kya|kya\s+kha\w*|kya\s+p[ie]{1,2}n\w*|"
+    r"ke\s+fayde|ke\s+nuksan|fayde\s+kya|benefits|kaun\s?s[aei]\w*|"
     r"how\s+to|should\s+i|"
     # IMPERATIVE requests for information. Without these, "give me only a food
     # chart for acidity" matched no question marker and no personal marker, so
