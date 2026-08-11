@@ -627,10 +627,29 @@ def health():
     and must never be slower or less reliable than the thing it reports on, so a
     failed balance lookup is simply omitted rather than allowed to fail /health.
     """
+    # `provider` reported config.LLM_PROVIDER, which is only the DEFAULT for
+    # chain entries that carry no "provider:" prefix of their own. Every entry in
+    # the live chain names its provider, so the field said "groq" while every
+    # request in fact went to OpenRouter. Harmless until the one moment it
+    # matters -- reading /health during an outage and chasing the wrong provider.
+    #
+    # Report what the next request will actually use: the head of the healthy
+    # chain, which is also the thing that changes when a model falls into
+    # cooldown, so this doubles as a view of the fallback state.
+    from src.llm import _available_models, split_provider
+
+    chain = _available_models("")
+    head = chain[0] if chain else ""
+    provider, model = split_provider(head) if head else (config.LLM_PROVIDER, "")
+
     payload = {
         "ok": True,
         "llm_ready": config.is_llm_ready(),
-        "provider": config.LLM_PROVIDER,
+        "provider": provider,
+        "model": model,
+        # How many of the configured models are not currently cooling down. A
+        # drop here is the earliest visible sign of quota trouble.
+        "models_available": len(chain),
     }
     balance = _openrouter_balance()
     if balance is not None:

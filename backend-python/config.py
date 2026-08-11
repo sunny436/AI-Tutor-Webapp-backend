@@ -153,7 +153,24 @@ MAX_AUDIO_SECONDS = int(_get("MAX_AUDIO_SECONDS", "60"))
 # was a ceiling low enough to clip a model that writes any preamble at all.
 # 800 still stops a runaway and costs a fraction of a paisa when unused.
 MAX_TOKENS_ROUTER = int(_get("MAX_TOKENS_ROUTER", "800"))
-MAX_TOKENS_PLANNER = int(_get("MAX_TOKENS_PLANNER", "1200"))
+# The planner's cap was 1200, and Devanagari does not fit in it. Measured on
+# deepseek-v3.2, the same five-question form for the same complaint:
+#
+#     english      899 - 915 tokens
+#     hinglish     871 - 1000
+#     devanagari  1212 - 1248     <- over the cap on every attempt
+#
+# Devanagari costs far more tokens per character than Latin, so a ceiling that is
+# comfortable in English truncates the JSON mid-object for Hindi. The turn then
+# failed to parse and fell back to the generic English baseline form, which is
+# why Hindi-script users kept getting a plain English questionnaire: not a
+# language bug in the planner, a budget too small for their script.
+#
+# Raising it does not raise the bill. max_tokens is a ceiling, not a reservation,
+# so English still stops at ~900 and costs the same. It is strictly cheaper for
+# Devanagari, which currently pays for 1200 truncated tokens and then discards
+# them. 2000 leaves room for a longer form without being a runaway.
+MAX_TOKENS_PLANNER = int(_get("MAX_TOKENS_PLANNER", "2000"))
 MAX_TOKENS_ANSWER = int(_get("MAX_TOKENS_ANSWER", "1600"))
 LLM_TIMEOUT_SECONDS = float(_get("LLM_TIMEOUT_SECONDS", "60"))
 

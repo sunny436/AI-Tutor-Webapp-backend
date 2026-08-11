@@ -97,8 +97,8 @@ async def plan_intake(
 
     if round_number <= 1:
         # Fail closed: an empty first round would show the user nothing to click.
-        print("[consult] round 1 planning failed - using baseline plan")
-        return baseline_plan()
+        print(f"[consult] round 1 planning failed - using baseline plan ({language or 'english'})")
+        return baseline_plan(language=language)
 
     # Fail open: we already have answers, so an answer is better than a retry.
     print(f"[consult] round {round_number} planning failed - proceeding to answer")
