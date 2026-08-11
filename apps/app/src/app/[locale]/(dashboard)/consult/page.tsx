@@ -446,7 +446,14 @@ function ConsultInner() {
       <div className="relative mx-auto flex h-full w-full max-w-3xl flex-col px-3 sm:px-5">
         <div
           ref={scrollRef}
-          className="mt-4 min-h-0 flex-1 space-y-5 overflow-y-auto scroll-smooth pb-6 pr-1 sm:space-y-6"
+          // On an empty chat the greeting is centred rather than pinned to the
+          // top, which otherwise left a screen-height void between it and the
+          // composer and made the page look half-loaded. `justify-center` only
+          // applies while empty; once a conversation starts it goes back to
+          // normal top-down flow so messages do not jump around.
+          className={`mt-4 flex min-h-0 flex-1 flex-col space-y-5 overflow-y-auto scroll-smooth pb-6 pr-1 sm:space-y-6 ${
+            empty ? "justify-center" : ""
+          }`}
         >
           {/* The assistant speaks first, and asks nothing yet.
               Options only ever appear once the user has said what's wrong  -  the
@@ -651,10 +658,13 @@ function ConsultInner() {
                 }
               }}
               rows={1}
+              // Kept short deliberately. The longer wording wrapped onto a
+              // second line inside a one-row textarea at 390px and was clipped
+              // by the bottom edge, so on a phone the hint was unreadable.
               placeholder={
                 IN_CONSULTATION.has(context?.phase ?? "idle")
-                  ? "Add anything else (optional)..."
-                  : "Ask me anything, or describe what's troubling you..."
+                  ? "Add anything else (optional)…"
+                  : "Describe what's troubling you…"
               }
               // 16px on small screens is not a style choice: iOS Safari zooms
               // the whole page when a focused input is smaller than that, and

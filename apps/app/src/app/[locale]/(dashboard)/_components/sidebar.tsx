@@ -212,9 +212,12 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
               router.replace("/login");
               router.refresh();
             }}
-            className="flex items-center gap-1.5 rounded-md px-2 py-1 text-xs text-primary/60 hover:bg-primary/5 hover:text-primary"
+            // `shrink-0` and `whitespace-nowrap` because this sits beside the
+            // theme selector in a flex row: without them "Log out" wrapped onto
+            // two lines as soon as the selector claimed the space.
+            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2 py-1.5 text-xs text-primary/60 transition-colors hover:bg-primary/5 hover:text-primary"
           >
-            <LogOut className="h-4 w-4" /> Log out
+            <LogOut className="h-4 w-4 shrink-0" /> Log out
           </button>
         </div>
       </div>
