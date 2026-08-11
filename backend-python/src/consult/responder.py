@@ -20,6 +20,7 @@ better input than the free-text paragraphs the old flow collected.
 from __future__ import annotations
 
 import asyncio
+from typing import Callable
 
 from langchain_core.messages import HumanMessage, SystemMessage
 
@@ -27,6 +28,7 @@ import config
 from src import prompts
 from src.consult.sections import render_section_spec
 from src.llm import invoke as llm_invoke
+from src.llm import stream as llm_stream
 
 ANSWER_TEMPERATURE = 0.5
 
@@ -41,15 +43,34 @@ FAILURE_MESSAGE = (
 )
 
 
-def _invoke(prompt: str) -> str:
-    return llm_invoke(
-        [
-            SystemMessage(content=prompts.SYSTEM_RULES),
-            HumanMessage(content=prompt),
-        ],
+def _invoke(prompt: str, on_token: Callable[[str], None] | None = None) -> str:
+    """One answer. With `on_token`, pieces are handed over as they arrive.
+
+    The return value is identical either way — the whole text — so callers and
+    everything downstream (persistence, the ConsultResult contract, the
+    non-streaming endpoint) are unaffected by which path ran. `on_token` only
+    lets a reader start seeing the answer before it is finished.
+    """
+    messages = [
+        SystemMessage(content=prompts.SYSTEM_RULES),
+        HumanMessage(content=prompt),
+    ]
+    if on_token is None:
+        return llm_invoke(
+            messages,
+            temperature=ANSWER_TEMPERATURE,
+            max_tokens=config.MAX_TOKENS_ANSWER,
+        )
+
+    pieces: list[str] = []
+    for piece in llm_stream(
+        messages,
         temperature=ANSWER_TEMPERATURE,
         max_tokens=config.MAX_TOKENS_ANSWER,
-    )
+    ):
+        pieces.append(piece)
+        on_token(piece)
+    return "".join(pieces)
 
 
 def _write_plan_sync(knowledge: str, profile: str, details: str, sections: list[str]) -> str:
@@ -138,21 +159,40 @@ async def write_supportive_care(problem: str, language: str = "") -> str:
         return safety.SERIOUS_CONDITION_MESSAGE
 
 
-def _write_knowledge_sync(question: str, knowledge: str, language: str) -> str:
+def _write_knowledge_sync(
+    question: str,
+    knowledge: str,
+    language: str,
+    on_token: Callable[[str], None] | None = None,
+) -> str:
     return _invoke(
         prompts.KNOWLEDGE_ANSWER_PROMPT.format(
             system_rules=prompts.SYSTEM_RULES,
             knowledge=knowledge or NO_KNOWLEDGE,
             question=question,
             language=language or "the same language as the question",
-        )
+        ),
+        on_token,
     )
 
 
-async def write_knowledge(question: str, knowledge: str, language: str = "") -> str:
-    """Answer a general Ayurveda/Yoga question conversationally."""
+async def write_knowledge(
+    question: str,
+    knowledge: str,
+    language: str = "",
+    on_token: Callable[[str], None] | None = None,
+) -> str:
+    """Answer a general Ayurveda/Yoga question conversationally.
+
+    `on_token` is optional and changes nothing about the result: the full answer
+    is still returned and still persisted the same way. It exists so a caller
+    that wants to show the reply as it is written can, without this function
+    needing to know anything about transports or endpoints.
+    """
     try:
-        return await asyncio.to_thread(_write_knowledge_sync, question, knowledge, language)
+        return await asyncio.to_thread(
+            _write_knowledge_sync, question, knowledge, language, on_token
+        )
     except Exception as error:  # noqa: BLE001
         print(f"[consult] knowledge answer failed: {error}")
         return (

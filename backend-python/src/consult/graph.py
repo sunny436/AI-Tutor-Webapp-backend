@@ -29,6 +29,7 @@ still depend on it.
 from __future__ import annotations
 
 import re
+from typing import Callable
 
 import config
 from src import safety
@@ -121,8 +122,19 @@ async def run_turn(
     free_text: str | None,
     profile: str = "",
     principal: dict | None = None,
+    on_token: Callable[[str], None] | None = None,
 ) -> ConsultResult:
-    """Advance the consultation by one turn."""
+    """Advance the consultation by one turn.
+
+    `on_token` is optional and purely additive. When supplied, prose answers hand
+    their text over piece by piece as the model writes it; the ConsultResult that
+    comes back is byte-for-byte what it would have been without it, so every
+    caller, the stored transcript and the non-streaming endpoint are unaffected.
+
+    Only prose is streamed. Intake question cards are structured JSON that the UI
+    renders as a form — half of one is not a form — so those turns arrive whole
+    exactly as before.
+    """
     context = ctx_state.load_context(raw_context)
     message = (problem or "").strip()
 
@@ -224,7 +236,9 @@ async def run_turn(
         if route.intent == "knowledge":
             question_context = ConsultContext(problem=message)
             pipeline, results = await _retrieve(question_context, principal)
-            answer = await write_knowledge(message, pipeline.to_prompt_block(results), context.language)
+            answer = await write_knowledge(
+                message, pipeline.to_prompt_block(results), context.language, on_token
+            )
             context = ctx_state.remember_chat(context, message, answer)
             context.phase = "casual"
             return ConsultResult(

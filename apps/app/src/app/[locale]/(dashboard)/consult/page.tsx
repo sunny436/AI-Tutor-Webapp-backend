@@ -37,6 +37,7 @@ import { toast } from "sonner";
 import {
   ConsultUnavailableError,
   postConsult,
+  postConsultStream,
   transcribeAudio,
   uploadDocument,
 } from "@/lib/consult/client";
@@ -55,7 +56,13 @@ import { SpeakButton } from "./_components/speak-button";
 
 type Turn =
   | { who: "user"; text: string }
-  | { who: "bot"; kind: "chat" | "answer" | "escalation" | "error"; text: string }
+  | {
+      who: "bot";
+      kind: "chat" | "answer" | "escalation" | "error";
+      text: string;
+      /** True while tokens are still arriving, so the bubble can show it. */
+      streaming?: boolean;
+    }
   | { who: "bot"; kind: "intake"; plan: IntakePlan; selection?: Selection; locked: boolean };
 
 /** Phases where a typed message is extra detail rather than a new message. */
@@ -241,6 +248,35 @@ function ConsultInner() {
     setTurns((current) => [...current, { who: "bot", kind: "error", text: message }]);
   };
 
+  /**
+   * Grow ONE placeholder bubble as tokens arrive.
+   *
+   * Appending a turn per chunk would produce a hundred bubbles; replacing the
+   * transcript would lose the user's message. So the first token creates a
+   * single streaming turn and every token after it extends that same turn's
+   * text. `dropStreamingPlaceholder` removes it once the real result is in
+   * hand, so exactly one assistant turn ever reaches the transcript.
+   */
+  const streamToken = useCallback((piece: string) => {
+    setTurns((current) => {
+      const last = current[current.length - 1];
+      if (last && last.who === "bot" && "streaming" in last && last.streaming) {
+        return [...current.slice(0, -1), { ...last, text: last.text + piece }];
+      }
+      return [...current, { who: "bot", kind: "answer", text: piece, streaming: true }];
+    });
+  }, []);
+
+  const dropStreamingPlaceholder = useCallback(() => {
+    setTurns((current) => {
+      const last = current[current.length - 1];
+      if (last && last.who === "bot" && "streaming" in last && last.streaming) {
+        return current.slice(0, -1);
+      }
+      return current;
+    });
+  }, []);
+
   /** Start (or restart) a consultation from a typed sentence. */
   const send = async (raw: string) => {
     const text = raw.trim();
@@ -281,14 +317,21 @@ function ConsultInner() {
     const inConsultation = IN_CONSULTATION.has(context?.phase ?? "idle");
     setBusy(true);
     try {
-      const result = await postConsult(
+      const result = await postConsultStream(
         inConsultation ? { context, freeText: text } : { problem: text, context },
+        streamToken,
         undefined,
         token,
       );
+      // `apply` still runs, and still receives the authoritative result. The
+      // streamed text was only a preview: dropping the placeholder here and
+      // letting `apply` append the real turn keeps one code path responsible for
+      // what ends up in the transcript, whether or not any tokens arrived.
+      dropStreamingPlaceholder();
       apply(result);
       persist(sid, result);
     } catch (error) {
+      dropStreamingPlaceholder();
       failed(error);
     } finally {
       setBusy(false);
@@ -485,13 +528,26 @@ function ConsultInner() {
                     <p className="whitespace-pre-wrap text-sm leading-relaxed text-primary/80">
                       {turn.text}
                     </p>
+                  ) : "streaming" in turn && turn.streaming ? (
+                    // Still arriving. Rendered as plain prose with a caret
+                    // rather than through AnswerSections, because a half-written
+                    // answer has no complete section headings to split on yet
+                    // and would flicker between layouts as they appeared.
+                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-primary/80">
+                      {turn.text}
+                      <span
+                        aria-hidden
+                        className="ml-0.5 inline-block h-4 w-[2px] translate-y-0.5 animate-pulse bg-emerald-500/70"
+                      />
+                    </p>
                   ) : (
                     <AnswerSections text={turn.text} />
                   )}
                   {/* Error turns never reach here - they are filtered further
                       up - so there is no guard against reading "the backend is
-                      unreachable" aloud. */}
-                  <SpeakButton text={turn.text} />
+                      unreachable" aloud. Hidden while streaming: there is
+                      nothing complete to read out yet. */}
+                  {!("streaming" in turn && turn.streaming) && <SpeakButton text={turn.text} />}
                 </div>
               </BotBubble>
             ),

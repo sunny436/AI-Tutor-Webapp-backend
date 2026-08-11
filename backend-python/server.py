@@ -17,13 +17,14 @@ B) Talks to the Convex template (the "bring your own backend" paths):
 
 import asyncio
 import base64
+import json
 import tempfile
 from pathlib import Path
 
 import httpx
 from fastapi import FastAPI, Request, Header, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, StreamingResponse
 
 import config
 from src.consult import run_turn as run_consult_turn
@@ -273,6 +274,96 @@ async def consult(
         principal=principal,
     )
     return result.model_dump()
+
+
+@app.post("/consult/stream")
+async def consult_stream(
+    request: Request,
+    authorization: str = Header(default=""),
+    x_service_key: str = Header(default=""),
+):
+    """The same turn as POST /consult, delivered as Server-Sent Events.
+
+    A sibling of `/consult`, not a replacement. `/consult` is untouched, so every
+    existing caller keeps working and this can be turned off by simply not
+    calling it.
+
+    Two event types:
+      token: {"text": "..."}   a piece of a prose answer, as the model writes it
+      done:  <ConsultResult>   the identical JSON /consult would have returned
+
+    `done` always arrives, and it is what the client stores. The tokens are a
+    preview: a client that ignored them entirely would still end up with exactly
+    the right transcript. That is deliberate — the authoritative answer must not
+    depend on the reader having received every chunk.
+
+    Intake turns emit no tokens at all. They are question cards, and half a form
+    is not a form.
+    """
+    try:
+        data = await request.json()
+    except (UnicodeDecodeError, ValueError) as error:
+        raise HTTPException(status_code=400, detail=f"invalid JSON body: {error}")
+
+    token = _bearer(authorization)
+    principal = {**(data.get("principal") or {}), "token": token}
+    principal["user_id"] = require_user(authorization, x_service_key)
+
+    # The turn runs in a worker thread and pushes pieces onto this queue; the
+    # response generator drains it. A queue rather than a direct yield because
+    # `run_turn` calls the writer several frames deep and cannot itself be a
+    # generator without changing its contract for every other caller.
+    queue: asyncio.Queue = asyncio.Queue()
+    loop = asyncio.get_running_loop()
+
+    def on_token(piece: str) -> None:
+        loop.call_soon_threadsafe(queue.put_nowait, piece)
+
+    async def run() -> None:
+        try:
+            result = await run_consult_turn(
+                problem=data.get("problem", ""),
+                raw_context=data.get("context"),
+                answers=data.get("answers"),
+                free_text=data.get("freeText"),
+                profile=data.get("profile", ""),
+                principal=principal,
+                on_token=on_token,
+            )
+            await queue.put(("done", result.model_dump()))
+        except Exception as error:  # noqa: BLE001
+            print(f"[consult] stream turn failed: {error}")
+            await queue.put(("error", str(error)))
+        finally:
+            await queue.put(None)
+
+    async def events():
+        task = asyncio.create_task(run())
+        try:
+            while True:
+                item = await queue.get()
+                if item is None:
+                    break
+                if isinstance(item, str):
+                    yield f"event: token\ndata: {json.dumps({'text': item})}\n\n"
+                    continue
+                kind, payload = item
+                yield f"event: {kind}\ndata: {json.dumps(payload)}\n\n"
+        finally:
+            if not task.done():
+                task.cancel()
+
+    return StreamingResponse(
+        events(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            # Cloudflare and any intermediate proxy will happily buffer a
+            # response and deliver it in one piece, which would defeat the whole
+            # point. This is the header they honour.
+            "X-Accel-Buffering": "no",
+        },
+    )
 
 
 MAX_UPLOAD_BYTES = 20 * 1024 * 1024

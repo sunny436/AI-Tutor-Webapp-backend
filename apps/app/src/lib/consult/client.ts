@@ -65,6 +65,85 @@ export async function postConsult(
   return (await response.json()) as ConsultResult;
 }
 
+/**
+ * The same turn as `postConsult`, but the prose arrives as it is written.
+ *
+ * `onToken` is a preview and nothing more. The resolved `ConsultResult` is the
+ * authoritative answer and is what the caller should store — a caller that
+ * ignored every token would still end up with exactly the right transcript.
+ * That matters because tokens can stop arriving (a dropped connection, a model
+ * that cannot stream) and the stored conversation must not depend on them.
+ *
+ * Falls back to `postConsult` if the stream cannot be opened or ends without a
+ * result, so a backend without the endpoint, or a proxy that buffers the
+ * response into uselessness, degrades to the behaviour that already worked.
+ */
+export async function postConsultStream(
+  request: ConsultRequest,
+  onToken: (text: string) => void,
+  signal?: AbortSignal,
+  token?: string | null,
+): Promise<ConsultResult> {
+  let response: Response;
+  try {
+    response = await fetch(`${AI_BACKEND_URL}/consult/stream`, {
+      method: "POST",
+      headers: authHeaders(token, { "Content-Type": "application/json" }),
+      body: JSON.stringify(request),
+      signal,
+    });
+  } catch (error) {
+    if ((error as Error)?.name === "AbortError") throw error;
+    return postConsult(request, signal, token);
+  }
+
+  if (!response.ok || !response.body) {
+    return postConsult(request, signal, token);
+  }
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffered = "";
+  let result: ConsultResult | null = null;
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffered += decoder.decode(value, { stream: true });
+
+      // SSE frames are separated by a blank line. Anything after the last one is
+      // a partial frame and stays in the buffer until the rest arrives — parsing
+      // it early would drop characters mid-word.
+      const frames = buffered.split("\n\n");
+      buffered = frames.pop() ?? "";
+
+      for (const frame of frames) {
+        const event = frame.match(/^event:\s*(.+)$/m)?.[1]?.trim();
+        const data = frame.match(/^data:\s*(.+)$/m)?.[1];
+        if (!event || !data) continue;
+        if (event === "token") {
+          try {
+            onToken((JSON.parse(data) as { text: string }).text);
+          } catch {
+            // A malformed preview frame is not worth failing the turn over.
+          }
+        } else if (event === "done") {
+          result = JSON.parse(data) as ConsultResult;
+        } else if (event === "error") {
+          throw new ConsultUnavailableError("The AI backend could not finish that turn.");
+        }
+      }
+    }
+  } finally {
+    reader.releaseLock();
+  }
+
+  // No `done` frame means the stream died partway. The tokens already shown are
+  // not a result we can store, so ask again the ordinary way.
+  return result ?? (await postConsult(request, signal, token));
+}
+
 export type UploadResult = {
   filename: string;
   /** Characters of text recovered. 0 means the file could not be read. */

@@ -334,29 +334,37 @@ def stream(
     `json_mode` is absent on purpose. A half-streamed JSON object is not
     parseable, so nothing that needs structure should come through here.
     """
-    emitted = False
-    try:
-        client = get_llm(temperature, False, model=model, max_tokens=max_tokens)
-        for piece in client.stream(messages):
-            text = getattr(piece, "content", "") or ""
-            if not text:
-                continue
-            emitted = True
-            yield text
-        if emitted:
-            _cooldown.pop(model, None) if model else None
-            return
-    except Exception as error:  # noqa: BLE001 - fall back below
-        if emitted:
-            # Mid-stream failure. The caller already has part of the answer;
-            # re-running would duplicate it, so stop and let them keep what
-            # arrived rather than contradicting the screen.
-            print(f"[llm] stream broke after output began: {error}")
-            return
-        print(f"[llm] streaming unavailable ({error}); falling back to a single call")
+    # Walk the same healthy-model chain `invoke` uses. Trying only one model and
+    # giving up on streaming meant a rate-limited primary sent every reply back
+    # to the blocking path, even though a perfectly good second model was sitting
+    # right behind it and could have streamed.
+    for name in _available_models(model):
+        emitted = False
+        try:
+            client = get_llm(temperature, False, model=name, max_tokens=max_tokens)
+            for piece in client.stream(messages):
+                text = getattr(piece, "content", "") or ""
+                if not text:
+                    continue
+                emitted = True
+                yield text
+            if emitted:
+                _cooldown.pop(name, None)
+                return
+        except Exception as error:  # noqa: BLE001 - try the next model, then fall back
+            if emitted:
+                # Mid-stream failure. The caller already has part of the answer;
+                # starting again on another model would rewrite text the reader
+                # has seen, so stop and let them keep what arrived.
+                print(f"[llm] stream broke after output began: {error}")
+                return
+            print(f"[llm] {name} could not stream ({str(error)[:120]}); trying the next model")
 
-    # Either the model streamed nothing at all, or it failed before the first
-    # token. Both are safe to retry through the normal path.
+    # Nothing in the chain could start a stream. `invoke` has the retry ladder,
+    # the cooldown bookkeeping and the same fallback order, so hand the whole
+    # request to it and emit its answer as one piece — a reader sees the reply
+    # arrive at once instead of progressively, and nothing else differs.
+    print("[llm] no model could stream; falling back to a single blocking call")
     yield invoke(
         messages,
         temperature=temperature,
