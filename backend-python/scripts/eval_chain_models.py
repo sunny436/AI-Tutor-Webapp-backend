@@ -69,7 +69,7 @@ def score(model: str) -> dict:
     # --- router: JSON under the cap, correct intent -------------------------
     try:
         prompt = prompts.ROUTER_PROMPT.format(
-            message=ROUTER_PROBE, history="", greeted="no"
+            message=ROUTER_PROBE, history="", greeted="no", language="hinglish"
         )
         client = _build(model, 0.7, True, config.MAX_TOKENS_ROUTER)
         raw = str(client.invoke([HumanMessage(content=prompt)]).content)

@@ -212,6 +212,9 @@ async def run_turn(
                 message,
                 history=ctx_state.render_history(context),
                 greeted=context.greeted,
+                # Resolved just above, so an explicit "answer in Hindi from now
+                # on" takes effect on THIS reply rather than the next one.
+                language=context.language,
             )
 
         if route.intent == "unavailable":
@@ -329,6 +332,7 @@ async def run_turn(
             typed,
             history=f"{open_case}\n{ctx_state.render_history(context)}",
             greeted=context.greeted,
+            language=context.language,
         )
         if aside.intent == "unavailable":
             return ConsultResult(

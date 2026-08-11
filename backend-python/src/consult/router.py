@@ -229,7 +229,15 @@ _QUESTION_MARKERS = re.compile(
     # for help with their own problem, which is exactly what intake is for.
     r"ke\s+liye\s+kya|kya\s+kha|kya\s+pina|kya\s+peena|"
     r"ke\s+fayde|ke\s+nuksan|fayde\s+kya|benefits|kaun\s?sa|kaun\s?si|"
-    r"how\s+to|should\s+i)\b"
+    r"how\s+to|should\s+i|"
+    # IMPERATIVE requests for information. Without these, "give me only a food
+    # chart for acidity" matched no question marker and no personal marker, so
+    # `is_personal_complaint` fell through to its default of True and opened a
+    # five-card questionnaire — the user asked for one section and got the whole
+    # machine. An imperative is a request ABOUT a topic; "mujhe/my/I have" is
+    # still checked first, so "give me a plan for my acidity" stays a complaint.
+    r"give\s+me|show\s+me|tell\s+me|list|suggest|recommend|which|"
+    r"batao|bataiye|bata\s+do|batana|naam\s+batao)\b"
     # Devanagari has no \b word boundary that Python recognises around its
     # letters, so these are matched without one.
     r"|(क्या\s+है|क्या\s+होता|क्या\s+खाना|क्या\s+खाएं|के\s+लिए\s+क्या|"
@@ -434,7 +442,7 @@ class Route:
     problem: str = ""
 
 
-def _route_sync(message: str, history: str, greeted: bool) -> Route:
+def _route_sync(message: str, history: str, greeted: bool, language: str = "") -> Route:
     raw = llm_invoke(
         [
             HumanMessage(
@@ -442,6 +450,10 @@ def _route_sync(message: str, history: str, greeted: bool) -> Route:
                     message=message,
                     history=history,
                     greeted="yes" if greeted else "no",
+                    # Empty on the first short message, where there is nothing to
+                    # be faithful to yet - say so plainly rather than passing a
+                    # blank the model has to interpret.
+                    language=language or "not yet established",
                 )
             )
         ],
@@ -467,13 +479,21 @@ def _route_sync(message: str, history: str, greeted: bool) -> Route:
 
 
 async def route_message(
-    message: str, history: str = "", greeted: bool = False
+    message: str, history: str = "", greeted: bool = False, language: str = ""
 ) -> Route:
     """Classify one user message in context and, when it isn't a complaint, answer it.
 
     `history` and `greeted` are what stop the assistant repeating itself: without
     them every message looked like the first one, so "I don't need help, I was
     just texting" got the welcome message a second time.
+
+    `language` is the conversation's resolved language. It matters because this
+    function does not only classify - for every conversational intent it also
+    WRITES the reply the user reads, and that reply used to be produced with no
+    knowledge of the conversation's language at all. It simply mirrored the
+    message, so "Ab se Hindi mein answer karo" (Latin script) was answered in
+    Hinglish and the Hindi only began on the following turn. Every other writing
+    path already took the resolved language; this one was the gap.
     """
     text = (message or "").strip()
     if not text:
@@ -481,7 +501,7 @@ async def route_message(
         return Route(intent="casual", reply="")
 
     try:
-        route = await asyncio.to_thread(_route_sync, text, history, greeted)
+        route = await asyncio.to_thread(_route_sync, text, history, greeted, language)
     except Exception as error:  # noqa: BLE001
         detail = str(error)
         print(f"[consult] router failed: {detail}")
@@ -522,6 +542,21 @@ async def route_message(
         # holds for messages with no personal marker at all, which is what it was
         # built for ("bs kuch nahi kat rha ha time").
         if not has_health_signal(text) and not _PERSONAL_MARKERS.search(text):
+            # ...unless the CONVERSATION is already about health. A follow-up
+            # leans on what came before and carries no vocabulary of its own:
+            # "What should I avoid?" after two turns about acidity has no symptom
+            # word and no "I have", so the guard fired and answered it with the
+            # casual acknowledgement — "Theek hai! 😄 Main yahin hoon" in reply to
+            # a real question, mid-consultation. Observed live.
+            #
+            # `knowledge`, not `health`: this answers the question from the notes
+            # and cannot open a questionnaire, so honouring the verdict here
+            # stays within what the guard was protecting against. Inventing a
+            # consultation is still impossible; only the wrongly-dismissed
+            # question changes.
+            if has_health_signal(history):
+                print(f"[consult] health follow-up in an active conversation: {text[:60]!r}")
+                return Route(intent="knowledge")
             print(f"[consult] ignoring ungrounded health verdict for {text[:60]!r}")
             return Route(intent="casual", reply=_FALLBACK_REPLIES["casual"])
         # "Acidity kis par depend karta hai?" mentions a symptom but is a question

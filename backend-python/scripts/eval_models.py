@@ -159,7 +159,8 @@ def evaluate(model: str, role: str) -> dict:
             call(
                 model,
                 [HumanMessage(content=prompts.ROUTER_PROMPT.format(
-                    message="mujhe acidity hai", history="", greeted="no"))],
+                    message="mujhe acidity hai", history="", greeted="no",
+                    language="hinglish"))],
                 json_mode=True,
                 max_tokens=config.MAX_TOKENS_ROUTER,
             )

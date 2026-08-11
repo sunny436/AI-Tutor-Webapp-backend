@@ -18,6 +18,7 @@ B) Talks to the Convex template (the "bring your own backend" paths):
 import asyncio
 import base64
 import json
+import sys
 import tempfile
 import time
 from pathlib import Path
@@ -31,6 +32,30 @@ import config
 from src.consult import run_turn as run_consult_turn
 from src.graph import run_consult
 from src.documents import extract_text
+
+# Make the logs UTF-8 before anything can write to them.
+#
+# This is a crash fix, not tidiness. On Windows, Python picks stdout's encoding
+# from the ANSI codepage (cp1252 here) whenever stdout is NOT a console — which
+# is exactly what `Start-Process -RedirectStandardOutput` gives us in production.
+# Every `print()` in this codebase logs the text it is working on, so a single
+# Devanagari or emoji character raises UnicodeEncodeError. Raised inside a
+# request handler, that becomes an HTTP 500.
+#
+# Reproduced end to end: "मुझे गैस की समस्या है" then "सुबह क्या खाऊँ?" returned
+# 500 on the first attempt, every time. The traceback was in `print(...)` at
+# src/consult/router.py:525 — the log line, not the logic. It never showed up in
+# development because a terminal on this machine reports UTF-8, so the whole
+# class of failure only exists once the site is running for real.
+#
+# Fixed here rather than at each print site: there are dozens, they all handle
+# user text, and any one added later would reintroduce it. `errors="replace"`
+# guarantees logging can never again take a request down, whatever arrives.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):  # already wrapped, or not reconfigurable
+        pass
 
 BASE_DIR = Path(__file__).resolve().parent
 FRONTEND_FILE = BASE_DIR / "frontend" / "index.html"
@@ -235,23 +260,66 @@ async def _post_webhook(body: dict) -> None:
 # ======================================================================
 @app.get("/", response_class=HTMLResponse)
 def home():
-    """Serve the chat web page."""
-    if FRONTEND_FILE.exists():
-        return HTMLResponse(FRONTEND_FILE.read_text(encoding="utf-8"))
-    return HTMLResponse("<h1>Frontend not found.</h1>")
+    """Say what this host is. Deliberately NOT the legacy chat page any more.
+
+    This used to serve `frontend/index.html`, a complete working chat UI. That
+    was fine while the backend was a localhost development server; it stopped
+    being fine when the same process was published at ayur-api.namahos.com,
+    because the page and its `POST /chat` endpoint were then a fully functional
+    anonymous chatbot on the public internet, spending our AI balance.
+
+    `/chat` now requires a signed-in caller (see below), so this page could no
+    longer work regardless. Serving it anyway would put a product-branded chat
+    box on a public URL that errors on every message — worse than not serving it.
+
+    The file is left in the repo: it is still the quickest way to exercise the
+    legacy flow locally, and `python -m http.server` in that folder will open it.
+    """
+    return HTMLResponse(
+        "<!doctype html><meta charset='utf-8'>"
+        "<title>Ayurveda API</title>"
+        "<h1>Ayurveda &amp; Yoga API</h1>"
+        "<p>This host serves the API only. The app is at "
+        "<a href='https://ayur.namahos.com'>ayur.namahos.com</a>.</p>"
+    )
 
 
 @app.post("/chat")
-async def chat(request: Request):
+async def chat(
+    request: Request,
+    authorization: str = Header(default=""),
+    x_service_key: str = Header(default=""),
+):
     """
     Run ONE turn of the LEGACY Ayurveda/Yoga flow and return the result directly.
     Kept for `frontend/index.html`; the dashboard now uses POST /consult.
+
+    SIGNED-IN CALLERS ONLY — and that was missing, which made this the one hole
+    in an otherwise closed backend.
+
+    Every other AI route already called `require_user`. This one did not, and
+    the backend is published at ayur-api.namahos.com, so it was an open,
+    anonymous, internet-reachable endpoint onto the model chain. Verified from
+    the public hostname with no credentials at all:
+
+        POST https://ayur-api.namahos.com/chat {"problem":"...","followups":99}
+        -> 200, a full generated plan, billed to our OpenRouter balance
+
+    Anyone who found the URL could spend the AI budget, which is precisely the
+    "credit khatam" failure this project has been working to make impossible —
+    and no chain ordering or fallback can defend against it, because the
+    requests are legitimate as far as the model is concerned.
+
+    Nothing in the product calls this route (the dashboard uses /consult), so
+    requiring a caller to be signed in costs no working functionality.
 
     `run_consult` is fully synchronous (LangGraph -> LangChain -> blocking HTTP to
     Groq, plus blocking Chroma/sentence-transformers), so it must be pushed to a
     worker thread. Calling it inline froze the whole event loop for the duration
     of every consult, stalling all other requests.
     """
+    require_user(authorization, x_service_key)
+
     data = await request.json()
     problem = data.get("problem", "")
     profile = data.get("profile", "")
