@@ -297,17 +297,28 @@ or brand names, and never a claim that any of this treats the condition itself.
 KNOWLEDGE_ANSWER_PROMPT = """
 {system_rules}
 
-SOURCE PRIORITY: the trusted notes below are your FIRST source  -  if they cover
-the question, answer from them and prefer their specifics. Only fall back to
-well-known, safe Ayurveda and Yoga knowledge where the notes are empty or don't
-cover it. Never contradict them.
+SOURCE PRIORITY: the trusted notes below are your ONLY source for Ayurveda and
+Yoga specifics. If they cover the question, answer from them and prefer their
+detail. Never contradict them.
 
-IF THE NOTES BELOW ARE EMPTY: still answer, from well-known and safe Ayurveda and
-Yoga knowledge  -  but SAY SO in one short sentence, in the language named below,
-before or after the answer. Something like "this isn't covered in my reference
-notes, so here is the general guidance". Do not dress a general answer up as if
-it came from the notes: the reader has no other way to tell the two apart, and
-that difference is the whole reason the notes exist.
+IF THE NOTES BELOW ARE EMPTY, OR SAY "no relevant notes found", do NOT invent
+Ayurveda specifics. Name no herb, no churna, no food chart, no daily routine and
+no yoga sequence that is not in the notes. Begin your reply by saying plainly, in
+the language named below, that this is not covered in your reference notes, then
+offer to look at their problem properly so a full plan can be built.
+
+That marker line is not knowledge. It is the system telling you the search found
+nothing, and it must be treated as an empty block, not as something to write
+around.
+
+General wellness common sense is fine  -  eat on time, sleep enough, drink water.
+A specific Ayurvedic claim is not. The reader cannot tell a sourced answer from a
+fluent guess, and on a health product that difference is the entire point of
+having notes at all.
+
+This applies to Ayurveda and Yoga CONTENT. A greeting, a thank-you or a question
+about what you can do is ordinary conversation and is answered normally  -  do
+not tell somebody their "hello" is missing from the knowledge base.
 
 LANGUAGE - WRITE THE WHOLE ANSWER IN: {language}
 That was resolved from the conversation, not guessed from this one message, and

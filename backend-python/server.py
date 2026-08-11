@@ -19,6 +19,7 @@ import asyncio
 import base64
 import json
 import tempfile
+import time
 from pathlib import Path
 
 import httpx
@@ -84,6 +85,43 @@ def _check_service_key(x_service_key: str | None) -> None:
 
 def _bearer(authorization: str) -> str:
     return authorization[7:] if authorization.startswith("Bearer ") else ""
+
+
+_balance_cache: dict[str, float] = {}
+
+
+def _openrouter_balance() -> float | None:
+    """Remaining OpenRouter credit in USD, or None if it cannot be read.
+
+    Refreshed at most every five minutes. /health is polled once a minute by the
+    supervisor, and a billing lookup on every poll would be both wasteful and a
+    new way for the health check to hang.
+    """
+    if not config.OPENROUTER_API_KEY:
+        return None
+
+    now = time.monotonic()
+    if _balance_cache and now - _balance_cache.get("at", 0.0) < 300:
+        return _balance_cache.get("value")
+
+    try:
+        with httpx.Client(timeout=5.0) as client:
+            response = client.get(
+                "https://openrouter.ai/api/v1/credits",
+                headers={"Authorization": f"Bearer {config.OPENROUTER_API_KEY}"},
+            )
+            data = (response.json() or {}).get("data") or {}
+        value = round(
+            float(data.get("total_credits") or 0) - float(data.get("total_usage") or 0), 4
+        )
+    except Exception as error:  # noqa: BLE001
+        # Never let billing telemetry break liveness. The key is not in the
+        # message — only the exception type, which is all that is diagnostic.
+        print(f"[health] could not read OpenRouter balance: {type(error).__name__}")
+        return None
+
+    _balance_cache.update({"at": now, "value": value})
+    return value
 
 
 def require_user(authorization: str, service_key: str = "") -> str:
@@ -510,7 +548,29 @@ async def speak_text(request: Request, authorization: str = Header(default="")):
 # ======================================================================
 @app.get("/health")
 def health():
-    return {"ok": True, "llm_ready": config.is_llm_ready(), "provider": config.LLM_PROVIDER}
+    """Liveness, plus how much AI credit is left.
+
+    The balance is here because "the AI stopped working" was, every time, a
+    budget that had quietly run out — and the first warning was always a user
+    seeing an error. A number on the health check turns that into something
+    anyone can watch days ahead.
+
+    Cached and best-effort: this endpoint is hit every minute by the supervisor
+    and must never be slower or less reliable than the thing it reports on, so a
+    failed balance lookup is simply omitted rather than allowed to fail /health.
+    """
+    payload = {
+        "ok": True,
+        "llm_ready": config.is_llm_ready(),
+        "provider": config.LLM_PROVIDER,
+    }
+    balance = _openrouter_balance()
+    if balance is not None:
+        payload["ai_credit_usd"] = balance
+        # A threshold rather than a raw number alone, so it is actionable at a
+        # glance instead of needing arithmetic.
+        payload["ai_credit_low"] = balance < 1.0
+    return payload
 
 
 @app.get("/whoami")

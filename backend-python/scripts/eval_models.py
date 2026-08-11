@@ -175,8 +175,14 @@ def evaluate(model: str, role: str) -> dict:
         raw = record(
             call(
                 model,
+                # `language` is required. The planner gained that placeholder when
+                # the Devanagari mirroring was fixed, and this probe was never
+                # updated — so `.format()` raised KeyError('language') and EVERY
+                # model scored 0 on the hardest axis in the harness. A silent
+                # zero across the board is worse than a crash: it looks like a
+                # finding.
                 [HumanMessage(content=prompts.INTAKE_PLAN_PROMPT.format(
-                    problem="acidity", collected="(nothing yet)"))],
+                    problem="acidity", collected="(nothing yet)", language="hinglish"))],
                 json_mode=True,
                 max_tokens=config.MAX_TOKENS_PLANNER,
             )
@@ -232,7 +238,8 @@ def evaluate(model: str, role: str) -> dict:
         try:
             answer = record(
                 call(model, [system, HumanMessage(content=prompts.KNOWLEDGE_ANSWER_PROMPT.format(
-                    system_rules=prompts.SYSTEM_RULES, knowledge=NOTE, question=question))],
+                    system_rules=prompts.SYSTEM_RULES, knowledge=NOTE, question=question,
+                    language=axis))],
                     max_tokens=config.MAX_TOKENS_ANSWER)
             )
             scores[axis] = int(check(answer))
@@ -249,7 +256,8 @@ def evaluate(model: str, role: str) -> dict:
         try:
             answer = record(
                 call(model, [system, HumanMessage(content=prompts.FOLLOWUP_PROMPT.format(
-                    system_rules=prompts.SYSTEM_RULES, previous=PREVIOUS_ANSWER, request=request))],
+                    system_rules=prompts.SYSTEM_RULES, previous=PREVIOUS_ANSWER, request=request,
+                    language="hinglish"))],
                     max_tokens=config.MAX_TOKENS_ANSWER)
             )
             scores[axis] = int(check(answer))

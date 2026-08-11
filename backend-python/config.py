@@ -146,7 +146,13 @@ TTS_ENABLED = bool(TTS_MODEL)
 MAX_AUDIO_SECONDS = int(_get("MAX_AUDIO_SECONDS", "60"))
 
 # Spend guards. A model that fails to stop is billed for everything it emits.
-MAX_TOKENS_ROUTER = int(_get("MAX_TOKENS_ROUTER", "400"))
+#
+# The router's cap was 400 and gemini-2.5-flash-lite hit it exactly — the reply
+# was truncated mid-JSON and the turn fell through to the next model. The router
+# emits a few dozen tokens of JSON, so 400 was never the real cost control; it
+# was a ceiling low enough to clip a model that writes any preamble at all.
+# 800 still stops a runaway and costs a fraction of a paisa when unused.
+MAX_TOKENS_ROUTER = int(_get("MAX_TOKENS_ROUTER", "800"))
 MAX_TOKENS_PLANNER = int(_get("MAX_TOKENS_PLANNER", "1200"))
 MAX_TOKENS_ANSWER = int(_get("MAX_TOKENS_ANSWER", "1600"))
 LLM_TIMEOUT_SECONDS = float(_get("LLM_TIMEOUT_SECONDS", "60"))

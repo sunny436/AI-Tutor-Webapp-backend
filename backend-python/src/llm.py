@@ -142,18 +142,13 @@ def _build(model: str, temperature: float, json_mode: bool, max_tokens: int = 0)
             temperature=temperature,
             **kwargs,
         )
-    if provider == "ollama":
-        from langchain_ollama import ChatOllama
-
-        return ChatOllama(
-            model=config.OLLAMA_MODEL,
-            base_url=config.OLLAMA_BASE_URL,
-            temperature=temperature,
-            **({"format": "json"} if json_mode else {}),
-        )
+    # Ollama support was removed rather than left dormant. It ran on this CPU-only
+    # machine at ~167s per turn, which is not a usable fallback, and it had been
+    # out of the chain for a long time — so it was a provider branch, a dependency
+    # and two config knobs that nothing exercised. Dead paths in a fallback ladder
+    # are worse than absent ones: they look like safety that is not there.
     raise ValueError(
-        f"Unknown LLM_PROVIDER '{provider}'. Set it to 'openrouter', 'groq' or "
-        "'ollama' in .env."
+        f"Unknown LLM_PROVIDER '{provider}'. Set it to 'openrouter' or 'groq' in .env."
     )
 
 
