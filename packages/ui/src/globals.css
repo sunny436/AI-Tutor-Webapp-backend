@@ -2,60 +2,109 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * Design tokens.
+ *
+ * Every value below was retuned for this product; not one ROLE changed. That
+ * distinction matters more than it sounds: `--primary` is this codebase's main
+ * TEXT colour, used 160 times as `text-primary/80`, `text-primary/40` and so on.
+ * Turning it into a brand green — the obvious move when re-skinning — would have
+ * turned every paragraph in the app green. So it stays a near-black in light and
+ * a near-white in dark, and only gains warmth.
+ *
+ * The palette it moves to: the stock theme was cold slate (222° blue-grey) on
+ * pure white, with pure black for dark mode. Both read as "developer default".
+ * These are built on a warm, natural axis instead — unbleached paper in light,
+ * deep forest charcoal in dark, with sage-tinted borders — so the emerald the
+ * product already uses for its actions reads as a deliberate herbal accent
+ * rather than a stray colour on grey.
+ */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* Warm paper rather than #fff: pure white next to green reads clinical. */
+    --background: 40 30% 98%;
+    --foreground: 155 18% 11%;
+
+    /* Cards sit slightly ABOVE the page, so they are lighter than it. */
+    --card: 40 40% 99.5%;
+    --card-foreground: 155 18% 11%;
+    --popover: 40 40% 99.5%;
+    --popover-foreground: 155 18% 11%;
+
+    /* Text, not brand. See the note above. */
+    --primary: 155 20% 12%;
+    --primary-foreground: 40 30% 98%;
+
+    --secondary: 150 22% 95%;
+    --secondary-foreground: 155 20% 14%;
+    --muted: 150 20% 95.5%;
+    --muted-foreground: 155 10% 42%;
+    --accent: 150 24% 93%;
+    --accent-foreground: 155 20% 14%;
+
+    /* Warm, not fire-engine: this appears on medical safety notices. */
+    --destructive: 4 62% 47%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 150 16% 88%;
+    --input: 150 16% 88%;
+    --ring: 158 42% 38%;
+
+    /* The herbal accent the product acts with. Kept as a token so it can be
+       tuned in one place; the emerald utility classes already in the components
+       are the same family and are left alone rather than churned. */
+    --brand: 158 46% 32%;
+    --brand-foreground: 40 30% 98%;
+    --brand-soft: 152 40% 94%;
+
+    /* 0.75rem reads as considered; 0.5 reads as a default nobody chose. */
+    --radius: 0.75rem;
+
+    --chart-1: 158 45% 35%;
+    --chart-2: 28 62% 55%;
+    --chart-3: 190 40% 40%;
+    --chart-4: 42 60% 55%;
+    --chart-5: 340 35% 55%;
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 3%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 3%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 70%;
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 100% 30%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 80%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    /* Deep forest charcoal, not #000. Pure black crushes every shadow and makes
+       elevation impossible to express, which is most of why the dark theme
+       looked flat. */
+    --background: 158 16% 6.5%;
+    --foreground: 40 22% 94%;
+
+    --card: 158 14% 9%;
+    --card-foreground: 40 22% 94%;
+    --popover: 158 14% 9%;
+    --popover-foreground: 40 22% 94%;
+
+    --primary: 40 22% 96%;
+    --primary-foreground: 158 20% 8%;
+
+    --secondary: 158 12% 14%;
+    --secondary-foreground: 40 22% 94%;
+    --muted: 158 12% 14%;
+    --muted-foreground: 150 8% 62%;
+    --accent: 158 12% 17%;
+    --accent-foreground: 40 22% 94%;
+
+    --destructive: 4 55% 42%;
+    --destructive-foreground: 40 22% 96%;
+
+    --border: 158 10% 18%;
+    --input: 158 10% 18%;
+    --ring: 152 40% 46%;
+
+    --brand: 152 44% 56%;
+    --brand-foreground: 158 20% 8%;
+    --brand-soft: 158 22% 16%;
+
+    --chart-1: 152 44% 56%;
+    --chart-2: 28 58% 62%;
+    --chart-3: 190 38% 55%;
+    --chart-4: 42 55% 62%;
+    --chart-5: 340 35% 62%;
   }
 }
 
@@ -65,5 +114,106 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Kerning and ligatures on: small, and the difference between text that
+       looks typeset and text that looks rendered. */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  /**
+   * Elevation.
+   *
+   * Tailwind's stock shadows are neutral grey and read as dirt over a warm
+   * background. These are tinted with the same hue as the page so a raised
+   * surface looks lit rather than smudged, and they are deliberately soft —
+   * two layers, a tight contact shadow plus a wide ambient one.
+   */
+  .elev-1 {
+    box-shadow:
+      0 1px 2px -1px hsl(155 20% 12% / 0.06),
+      0 2px 8px -2px hsl(155 20% 12% / 0.05);
+  }
+  .elev-2 {
+    box-shadow:
+      0 1px 2px -1px hsl(155 20% 12% / 0.08),
+      0 8px 24px -6px hsl(155 20% 12% / 0.08);
+  }
+  .elev-3 {
+    box-shadow:
+      0 2px 4px -2px hsl(155 20% 12% / 0.10),
+      0 16px 40px -8px hsl(155 20% 12% / 0.12);
+  }
+  .dark .elev-1 {
+    box-shadow:
+      0 1px 2px -1px hsl(0 0% 0% / 0.4),
+      0 2px 8px -2px hsl(0 0% 0% / 0.3);
+  }
+  .dark .elev-2 {
+    box-shadow:
+      0 1px 2px -1px hsl(0 0% 0% / 0.5),
+      0 8px 24px -6px hsl(0 0% 0% / 0.45);
+  }
+  .dark .elev-3 {
+    box-shadow:
+      0 2px 4px -2px hsl(0 0% 0% / 0.55),
+      0 16px 40px -8px hsl(0 0% 0% / 0.5);
+  }
+
+  /**
+   * The page backdrop: two very wide, very faint colour washes.
+   *
+   * Fixed and pointer-events-none, so it never participates in layout or
+   * interaction. At this opacity it is not perceived as colour — it stops the
+   * background reading as flat paint, which is most of what separates a
+   * designed surface from a default one.
+   */
+  .backdrop-wash {
+    background-image:
+      radial-gradient(60rem 40rem at 12% -10%, hsl(158 45% 40% / 0.07), transparent 60%),
+      radial-gradient(50rem 34rem at 92% 8%, hsl(28 60% 55% / 0.05), transparent 60%);
+  }
+  .dark .backdrop-wash {
+    background-image:
+      radial-gradient(60rem 40rem at 12% -10%, hsl(152 50% 45% / 0.08), transparent 60%),
+      radial-gradient(50rem 34rem at 92% 8%, hsl(28 55% 50% / 0.045), transparent 60%);
+  }
+
+  /* One assistant message settling into place. Short and small on purpose —
+     anything longer reads as a transition rather than an arrival. */
+  @keyframes rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .animate-rise-in {
+    animation: rise-in 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* Skeletons and the streaming caret. A gentle breath, not a strobe. */
+  @keyframes soft-pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.45;
+    }
+  }
+  .animate-soft-pulse {
+    animation: soft-pulse 1.6s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-rise-in,
+    .animate-soft-pulse {
+      animation: none;
+    }
   }
 }

@@ -35,13 +35,18 @@ function Shell({
   children: React.ReactNode;
 }) {
   return (
-    <form className="flex w-72 flex-col gap-3" onSubmit={onSubmit}>
+    // The width classes (w-72 / w-64) are load-bearing: e2e/auth-live.js scopes
+    // its selectors to `form.w-72` and `form.w-64` to tell the password form
+    // from the magic-code one, since both contain an input[type=email].
+    <form className="flex w-72 max-w-full flex-col gap-3" onSubmit={onSubmit}>
       {children}
-      <Button type="submit" disabled={pending} className="font-mono">
+      {/* `font-mono` was hard-coded here, which is why every call to action in
+          the app rendered in a monospace face and read as a developer stub. */}
+      <Button type="submit" disabled={pending} className="w-full">
         {pending ? "…" : cta}
       </Button>
       {error && (
-        <p role="alert" className="text-xs text-red-500">
+        <p role="alert" className="text-xs font-medium text-destructive">
           {error}
         </p>
       )}

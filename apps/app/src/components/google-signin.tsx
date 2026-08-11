@@ -7,7 +7,7 @@ export function GoogleSignin() {
   const { signIn } = useAuthActions();
 
   return (
-    <Button onClick={() => signIn("google")} variant="outline" className="font-mono">
+    <Button onClick={() => signIn("google")} variant="outline" className="w-full">
       Sign in with Google
     </Button>
   );

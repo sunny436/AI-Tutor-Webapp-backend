@@ -78,8 +78,12 @@ function newId() {
 
 function BotBubble({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex max-w-[94%] gap-2.5">
-      <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-sm">
+    // No max-width here: the assistant's turn is the reading column and is
+    // constrained by the page, not by a bubble. Capping it at 94% left a ragged
+    // right edge that made long answers look like chat messages rather than
+    // written guidance.
+    <div className="flex animate-rise-in gap-3">
+      <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white elev-1 ring-1 ring-emerald-600/15">
         <Leaf className="h-4 w-4" />
       </span>
       <div className="min-w-0 flex-1">{children}</div>
@@ -433,9 +437,17 @@ function ConsultInner() {
   const empty = turns.length === 0;
 
   return (
-    <div className="h-[calc(100vh-3rem)] w-full overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-zinc-950 dark:via-black dark:to-emerald-950/30">
-      <div className="mx-auto flex h-full w-full max-w-3xl flex-col px-4">
-        <div ref={scrollRef} className="mt-4 flex-1 space-y-4 overflow-y-auto pb-4 pr-1">
+    // `dvh` rather than `vh`: on mobile browsers the toolbar collapses as you
+    // scroll and `vh` does not follow, which left the composer under the chrome.
+    // min-h-0 on the scroller is what actually lets a flex child scroll instead
+    // of growing the page — without it the composer is pushed off-screen.
+    <div className="relative h-[calc(100dvh-3.5rem)] w-full overflow-hidden bg-background">
+      <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
+      <div className="relative mx-auto flex h-full w-full max-w-3xl flex-col px-3 sm:px-5">
+        <div
+          ref={scrollRef}
+          className="mt-4 min-h-0 flex-1 space-y-5 overflow-y-auto scroll-smooth pb-6 pr-1 sm:space-y-6"
+        >
           {/* The assistant speaks first, and asks nothing yet.
               Options only ever appear once the user has said what's wrong  -  the
               whole point is that they're chosen for that specific problem, so
@@ -466,7 +478,10 @@ function ConsultInner() {
             turn.who === "user" ? (
               <div
                 key={i}
-                className="ml-auto max-w-[80%] rounded-2xl rounded-tr-md bg-gradient-to-br from-emerald-500 to-teal-600 px-4 py-2.5 text-sm font-medium text-white shadow-md shadow-emerald-500/20"
+                // `break-words` is not decoration: a pasted URL or a long
+                // unbroken word would otherwise widen the bubble past the
+                // viewport and give the whole page a horizontal scrollbar.
+                className="ml-auto max-w-[85%] animate-rise-in whitespace-pre-wrap break-words rounded-2xl rounded-br-md bg-gradient-to-br from-emerald-500 to-teal-600 px-4 py-2.5 text-sm font-medium leading-relaxed text-white elev-2 sm:max-w-[78%]"
               >
                 {turn.text}
               </div>
@@ -600,7 +615,11 @@ function ConsultInner() {
             </div>
           )}
 
-          <div className="flex items-end gap-2 rounded-2xl border border-border bg-white/80 p-2 shadow-lg shadow-emerald-500/5 backdrop-blur transition focus-within:border-emerald-500/50 focus-within:ring-2 focus-within:ring-emerald-500/15 dark:bg-white/[0.05]">
+          {/* The composer sits on the card surface rather than translucent
+              white, so it reads as one solid object over the page wash instead
+              of a pane of frosted glass. pb + safe-area keeps it clear of the
+              home indicator on modern phones. */}
+          <div className="mb-[max(0.75rem,env(safe-area-inset-bottom))] flex items-end gap-1.5 rounded-2xl border border-border bg-card/95 p-2 elev-2 backdrop-blur-sm transition-all duration-200 focus-within:border-emerald-500/60 focus-within:ring-4 focus-within:ring-emerald-500/10 sm:gap-2">
             <input
               ref={fileInput}
               type="file"
@@ -637,7 +656,10 @@ function ConsultInner() {
                   ? "Add anything else (optional)..."
                   : "Ask me anything, or describe what's troubling you..."
               }
-              className="max-h-32 flex-1 resize-none bg-transparent p-2 text-sm text-primary outline-none placeholder:text-primary/40"
+              // 16px on small screens is not a style choice: iOS Safari zooms
+              // the whole page when a focused input is smaller than that, and
+              // the zoom does not undo itself.
+              className="max-h-40 flex-1 resize-none bg-transparent p-2 text-base leading-relaxed text-primary outline-none placeholder:text-primary/40 sm:text-sm"
             />
             <button
               type="button"
@@ -666,7 +688,8 @@ function ConsultInner() {
               type="button"
               onClick={() => send(input)}
               disabled={busy || !input.trim()}
-              className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-500/25 transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-40"
+              // 44px minimum on touch: below that it is measurably harder to hit.
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white elev-2 transition-all duration-200 hover:brightness-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none sm:h-10 sm:w-10"
             >
               <SendHorizonal className="h-4 w-4" />
             </button>

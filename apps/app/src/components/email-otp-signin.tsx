@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const inputCls =
-  "w-full rounded-md border border-input bg-background px-3 py-2 text-sm font-mono outline-none focus:ring-2 focus:ring-ring";
+  "w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring";
 
 const RESEND_COOLDOWN_SECONDS = 30;
 
@@ -64,7 +64,7 @@ export function EmailOtpSignin() {
           placeholder="you@example.com"
           className={inputCls}
         />
-        <Button type="submit" variant="outline" className="font-mono" disabled={pending}>
+        <Button type="submit" variant="outline" className="w-full" disabled={pending}>
           {pending ? "Sending…" : "Send code"}
         </Button>
         {error && (
@@ -114,7 +114,7 @@ export function EmailOtpSignin() {
         placeholder="8-digit code"
         className={inputCls}
       />
-      <Button type="submit" className="font-mono" disabled={pending}>
+      <Button type="submit" className="w-full" disabled={pending}>
         {pending ? "Verifying…" : "Continue"}
       </Button>
       <div className="flex items-center justify-between">
