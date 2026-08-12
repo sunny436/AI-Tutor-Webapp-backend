@@ -468,7 +468,81 @@ class Route:
     problem: str = ""
 
 
-def _route_sync(message: str, history: str, greeted: bool, language: str = "") -> Route:
+# A second, hotter attempt used only when the first reply repeats the previous
+# one verbatim. Higher than ROUTER_TEMPERATURE on purpose: the point is to move
+# the model off an answer it has already settled on, and 0.7 demonstrably was not
+# enough to do that on its own.
+REPEAT_RETRY_TEMPERATURE = 1.0
+
+
+def _normalise(text: str) -> str:
+    """Lowercased, punctuation-free, for comparing two replies as sentences."""
+    return re.sub(r"[^a-z0-9ऀ-ॿ ]+", "", (text or "").lower()).strip()
+
+
+def _recent_assistant_lines(history: str, limit: int = 3) -> list[str]:
+    """The assistant's last few replies, newest first.
+
+    More than one, because repeating what you said THREE turns ago reads just as
+    mechanically as repeating the last thing. Observed: four "how are you"s in a
+    row where the fourth answer matched the second word for word, which a
+    previous-line-only check waves through.
+    """
+    lines = [
+        line[5:].strip()
+        for line in reversed((history or "").splitlines())
+        if line.startswith("You: ")
+    ]
+    return lines[:limit]
+
+
+def _repeats(reply: str, previous: str) -> bool:
+    """Is this the same sentence the assistant already said?
+
+    Compared normalised, and by PREFIX in both directions, because neither text
+    is necessarily whole: chat history stores 400 characters per turn, and one
+    reply is often the other plus a trailing clause ("Main theek hoon, aap kaise
+    hain?" versus the same sentence followed by an offer to help). Those are the
+    same reply as far as a reader is concerned.
+
+    20 characters is the floor for the prefix test — below that, two genuinely
+    different short replies ("Theek hai!" / "Theek hai bhai") would collide.
+    """
+    a, b = _normalise(reply), _normalise(previous)
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    shorter, longer = (a, b) if len(a) <= len(b) else (b, a)
+    return len(shorter) >= 20 and longer.startswith(shorter)
+
+
+def _repeats_any(reply: str, previous: list[str]) -> bool:
+    return any(_repeats(reply, line) for line in previous)
+
+
+def _route_sync(
+    message: str,
+    history: str,
+    greeted: bool,
+    language: str = "",
+    temperature: float = ROUTER_TEMPERATURE,
+    avoid: str = "",
+) -> Route:
+    # `avoid` quotes back the sentence the model just produced and forbids it.
+    #
+    # Raising the temperature alone did NOT work — measured, the model returned
+    # the identical sentence at 1.0 as at 0.7, five times out of five. A model
+    # settled on a canonical answer needs to be told which answer is off limits,
+    # not merely nudged.
+    instruction = (
+        f'\n\nYOU JUST SAID THIS, WORD FOR WORD: "{avoid}"\n'
+        "Do not say it again. Answer the same message with the same meaning, in "
+        "genuinely different words - a different opening, a different sentence "
+        "shape. Repeating yourself verbatim is the one thing you must not do here."
+        if avoid
+        else ""
+    )
     raw = llm_invoke(
         [
             HumanMessage(
@@ -481,9 +555,10 @@ def _route_sync(message: str, history: str, greeted: bool, language: str = "") -
                     # blank the model has to interpret.
                     language=language or "not yet established",
                 )
+                + instruction
             )
         ],
-        temperature=ROUTER_TEMPERATURE,
+        temperature=temperature,
         json_mode=True,
         model=ROUTER_MODEL,
         max_tokens=config.MAX_TOKENS_ROUTER,
@@ -538,6 +613,38 @@ async def route_message(
         if is_unavailable(detail):
             return Route(intent="unavailable", reply=describe_outage(detail))
         return Route(intent="health", problem=text)
+
+    # Ask again when the model has just repeated itself word for word.
+    #
+    # The prompt already forbids this, and the model does it anyway: asked "how
+    # are you" three times it returned "I am functioning well, thank you for
+    # asking. I hope you are doing well too." three times, character for
+    # character. Instructions alone were not enough, so this checks.
+    #
+    # One retry, at a higher temperature, and whatever comes back is accepted —
+    # a loop chasing novelty would spend the user's time and our budget on the
+    # least important sentence in the conversation. Costs an extra call only in
+    # the rare case that the first reply actually was a repeat.
+    if route.intent in CONVERSATIONAL and route.reply:
+        previous = _recent_assistant_lines(history)
+        if _repeats_any(route.reply, previous):
+            print(f"[consult] reply repeats an earlier one; asking again: {route.reply[:50]!r}")
+            try:
+                retried = await asyncio.to_thread(
+                    _route_sync,
+                    text,
+                    history,
+                    greeted,
+                    language,
+                    REPEAT_RETRY_TEMPERATURE,
+                    route.reply,
+                )
+                if retried.reply and not _repeats_any(retried.reply, previous):
+                    route = retried
+            except Exception as error:  # noqa: BLE001
+                # The first reply is still a usable answer; a repeat is far
+                # better than an error.
+                print(f"[consult] repeat retry failed, keeping the first reply: {error}")
 
     # Off-topic questions get a FIXED reply, never the model's own words.
     # Left to itself the model answers them — one test run produced "Arre, world
