@@ -36,6 +36,7 @@ import {
 // Helpers live outside this file: a route module may only export the handler
 // names Next.js recognises, and exporting anything else fails the build.
 import {
+  callerToken,
   LOCAL_BACKEND,
   resolvePrincipal,
   sessionToken,
@@ -46,9 +47,28 @@ import {
 export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest) {
-  const token = await sessionToken();
+  const cookieToken = await sessionToken();
+  const token = callerToken(request, cookieToken);
   if (!token) {
+    // Kept deliberately. A 401 here is indistinguishable from several causes —
+    // wrong cookie name, cookies cleared by the auth middleware, middleware not
+    // running — and guessing between them cost a day. These are the facts that
+    // separate them. NAMES only, never values: the token is a credential and
+    // must not reach a log file.
+    console.error(
+      "[consult] no token from cookie OR header. " +
+        `host=${request.headers.get("host")} ` +
+        `origin=${request.headers.get("origin")} ` +
+        `proto=${request.headers.get("x-forwarded-proto")} ` +
+        `cookies=[${request.cookies.getAll().map((c) => c.name).join(", ")}]`,
+    );
     return NextResponse.json({ error: "Please sign in." }, { status: 401 });
+  }
+  if (!cookieToken) {
+    // Worth knowing about: it means the middleware is not handing this route a
+    // refreshed cookie, so the fallback is carrying the session and a token can
+    // still go stale the way it used to.
+    console.warn("[consult] cookie token unavailable; using the Authorization header");
   }
 
   const incoming = (await request.json().catch(() => null)) as Record<

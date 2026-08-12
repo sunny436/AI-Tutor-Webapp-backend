@@ -39,6 +39,37 @@ export async function sessionToken(): Promise<string | null> {
 }
 
 /**
+ * The caller's token: the cookie first, the Authorization header as a fallback.
+ *
+ * The cookie is preferred because the middleware refreshes it, so it is the one
+ * that cannot go stale — the entire reason these calls moved server-side.
+ *
+ * The fallback exists because the cookie is not always readable here. Convex
+ * Auth clears BOTH auth cookies whenever either one is missing or the refresh
+ * call fails:
+ *
+ *     if (refreshToken === null || token === null) return null;   // -> cleared
+ *
+ * and it decides that inside the middleware, before this route ever runs. Behind
+ * the tunnel — where TLS terminates at cloudflared and the app is reached over
+ * plain HTTP on loopback — there are several ways to land in that branch. When
+ * it happens the route sees no cookie at all and refuses a perfectly valid
+ * session, which is exactly the 401 users reported.
+ *
+ * Falling back is not a weakening of auth. Nothing here trusts the token: the
+ * Python backend verifies its signature against Convex's JWKS, and the central
+ * path resolves identity by asking Convex with it. A forged one fails at both.
+ * It is the same credential the browser used to send directly to the backend
+ * before this route existed, verified in the same place.
+ */
+export function callerToken(request: Request, cookieToken: string | null): string | null {
+  if (cookieToken) return cookieToken;
+  const header = request.headers.get("authorization") ?? "";
+  const bearer = header.replace(/^Bearer\s+/i, "").trim();
+  return bearer || null;
+}
+
+/**
  * Who is calling, according to the session.
  *
  * Uses the existing `api.users.getUser` rather than a new Convex function, so

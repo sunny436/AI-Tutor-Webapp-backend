@@ -10,12 +10,12 @@
 
 import { type NextRequest, NextResponse } from "next/server";
 
-import { LOCAL_BACKEND, sessionToken, usingCentral } from "@/lib/consult/server-session";
+import { callerToken, LOCAL_BACKEND, sessionToken, usingCentral } from "@/lib/consult/server-session";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest) {
-  const token = await sessionToken();
+  const token = callerToken(request, await sessionToken());
   if (!token) {
     return NextResponse.json({ error: "Please sign in." }, { status: 401 });
   }
