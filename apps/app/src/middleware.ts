@@ -118,6 +118,26 @@ async function handler(
   request: NextRequest,
   { convexAuth }: { convexAuth: { isAuthenticated: () => Promise<boolean> } },
 ) {
+  // An API route is not a page: no locale, no redirect. Bail out before either.
+  //
+  // This function ends by handing the request to the i18n middleware, which
+  // rewrites "/consult" to "/en/consult". Applied to "/api/consult" that
+  // produces "/en/api/consult", which does not exist — a 404 on every chat
+  // message, reported live as "AI service unavailable (404)".
+  //
+  // It only bit SIGNED-IN callers, which is exactly why the first version of
+  // this shipped: an anonymous caller returned earlier, from the auth branch
+  // below, and never reached the rewrite. Testing the endpoint signed out
+  // therefore proved nothing about the path real users take.
+  //
+  // Returning here still leaves `convexAuthNextjsMiddleware` (which wraps this
+  // handler) to refresh the auth cookie — the whole reason these calls go
+  // through the server. Each route does its own auth check, and Convex Auth's
+  // own /api/auth endpoints must stay reachable while signed out anyway.
+  if (request.nextUrl.pathname.startsWith("/api/")) {
+    return;
+  }
+
   const isAuthenticated = await convexAuth.isAuthenticated();
   const isPublic = isPublicPage(request);
 
@@ -135,23 +155,11 @@ async function handler(
   }
 
   if (!isPublic && !isAuthenticated) {
-    // An API route must NEVER be redirected, only refused.
-    //
-    // `fetch` follows redirects by default, so a 307 to /login hands the caller
-    // 200 OK and a page of HTML. The consult client would then try to read that
-    // as JSON, and the user would see a parse failure instead of "please sign
-    // in" — a signed-out session reported as a broken app.
-    //
-    // Caught by asking for /api/consult with no cookie and getting
-    // `307 -> /login?redirect=%2Fapi%2Fconsult` rather than a 401.
-    //
-    // Returning nothing lets the request continue to the route, which does its
-    // own auth check and answers with a proper JSON 401. That also leaves
-    // Convex Auth's own /api/auth endpoints alone — signing in necessarily
-    // happens while unauthenticated, so redirecting those would be circular.
-    if (request.nextUrl.pathname.startsWith("/api/")) {
-      return;
-    }
+    // API routes never reach here — they returned at the top of this function —
+    // so this branch only ever redirects pages. That matters: `fetch` follows
+    // redirects, so a 307 to /login would hand the caller 200 OK and a page of
+    // HTML to parse as JSON, and a signed-out session would look like a broken
+    // app rather than "please sign in".
 
     // Preserve where they were heading so sign-in can return them there, instead
     // of dumping everyone on the dashboard.
