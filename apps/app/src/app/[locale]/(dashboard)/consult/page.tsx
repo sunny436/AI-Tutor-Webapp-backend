@@ -63,7 +63,7 @@ type Turn =
       /** True while tokens are still arriving, so the bubble can show it. */
       streaming?: boolean;
       /** An expired login is not an outage — see the banner below. */
-      reason?: "service" | "session";
+      reason?: "service" | "session" | "signed_out";
     }
   | { who: "bot"; kind: "intake"; plan: IntakePlan; selection?: Selection; locked: boolean };
 
@@ -541,12 +541,25 @@ function ConsultInner() {
                       waiting — the reasonable response to an outage — never
                       fixes it. */}
                   <p className="font-semibold">
-                    {turn.reason === "session"
-                      ? "Your session expired"
-                      : "AI service unavailable"}
+                    {turn.reason === "signed_out"
+                      ? "You have been signed out"
+                      : turn.reason === "session"
+                        ? "Your session expired"
+                        : "AI service unavailable"}
                   </p>
                   <p className="mt-0.5 leading-relaxed">{turn.text.replace(/^s️\s*/, "")}</p>
-                  {turn.reason === "session" ? (
+                  {/* Two different failures, two different remedies. A stale
+                      token is fixed by reloading; a session whose refresh has
+                      failed is over, and reloading only bounces the reader to
+                      the login page without telling them why. */}
+                  {turn.reason === "signed_out" ? (
+                    <a
+                      href={`/login?redirect=${encodeURIComponent("/consult")}`}
+                      className="mt-2 inline-block rounded-lg bg-rose-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-rose-700"
+                    >
+                      Sign in again
+                    </a>
+                  ) : turn.reason === "session" ? (
                     <button
                       type="button"
                       onClick={() => window.location.reload()}

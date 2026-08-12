@@ -59,9 +59,12 @@ export class ConsultUnavailableError extends Error {
    * while the backend log said plainly `token rejected: Signature has expired`,
    * which sent the reader looking at the AI instead of at their own session.
    */
-  readonly reason: "service" | "session";
+  readonly reason: "service" | "session" | "signed_out";
 
-  constructor(message: string, reason: "service" | "session" = "service") {
+  constructor(
+    message: string,
+    reason: "service" | "session" | "signed_out" = "service",
+  ) {
     super(message);
     this.name = "ConsultUnavailableError";
     this.reason = reason;
@@ -71,6 +74,30 @@ export class ConsultUnavailableError extends Error {
 /** A Convex token lives a limited time; a tab left open outlives it. */
 const SESSION_EXPIRED_MESSAGE =
   "Your session has expired. Please refresh the page to continue.";
+
+/**
+ * Read the server's 401 and decide which of the two it is.
+ *
+ * `signed_out` means both auth cookies are gone because a token refresh failed —
+ * the session is over and only signing in fixes it. Anything else is a token
+ * that has merely gone stale, where a reload is enough. The distinction matters
+ * because the wrong advice wastes the reader's time: reloading a dead session
+ * just lands them on the login page without explaining why.
+ */
+async function classify401(response: Response): Promise<ConsultUnavailableError> {
+  try {
+    const body = (await response.clone().json()) as { reason?: string; error?: string };
+    if (body?.reason === "signed_out") {
+      return new ConsultUnavailableError(
+        body.error || "Your session has ended. Please sign in again.",
+        "signed_out",
+      );
+    }
+  } catch {
+    // A 401 without a JSON body is still a 401; fall through.
+  }
+  return new ConsultUnavailableError(SESSION_EXPIRED_MESSAGE, "session");
+}
 
 /**
  * Advance the consultation by one turn.
@@ -104,7 +131,7 @@ export async function postConsult(
   }
 
   if (response.status === 401) {
-    throw new ConsultUnavailableError(SESSION_EXPIRED_MESSAGE, "session");
+    throw await classify401(response);
   }
   if (!response.ok) {
     throw new ConsultUnavailableError(
@@ -149,7 +176,7 @@ export async function postConsultStream(
   // An expired token will not become valid by being asked a second time, so
   // this one case skips the retry and reports what actually happened.
   if (response.status === 401) {
-    throw new ConsultUnavailableError(SESSION_EXPIRED_MESSAGE, "session");
+    throw await classify401(response);
   }
 
   if (!response.ok || !response.body) {

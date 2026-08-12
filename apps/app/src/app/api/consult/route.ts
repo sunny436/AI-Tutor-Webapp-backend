@@ -62,7 +62,24 @@ export async function POST(request: NextRequest) {
         `proto=${request.headers.get("x-forwarded-proto")} ` +
         `cookies=[${request.cookies.getAll().map((c) => c.name).join(", ")}]`,
     );
-    return NextResponse.json({ error: "Please sign in." }, { status: 401 });
+    // `signed_out`, not merely "unauthorised". Reaching here means BOTH auth
+    // cookies are gone, and Convex Auth only removes both when a token refresh
+    // has failed:
+    //
+    //     if (refreshToken === null || token === null) return null;  // -> cleared
+    //
+    // Reproduced exactly: an expired token plus a refresh token that cannot be
+    // redeemed produces this response, an empty cookie jar, and no call to the
+    // backend at all — which is why the reported failure left no trace in the
+    // backend log.
+    //
+    // The session is genuinely over, so telling the reader to "refresh" is
+    // wrong: a reload will bounce them to the login page anyway. Say what is
+    // true and send them there in one step.
+    return NextResponse.json(
+      { error: "Your session has ended. Please sign in again.", reason: "signed_out" },
+      { status: 401 },
+    );
   }
   if (!cookieToken) {
     // Worth knowing about: it means the middleware is not handing this route a
