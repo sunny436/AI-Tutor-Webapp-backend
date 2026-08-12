@@ -66,9 +66,94 @@ function Test-Listening([int]$Port) {
     $null -ne (Get-NetTCPConnection -State Listen -LocalPort $Port -ErrorAction SilentlyContinue)
 }
 
-function Test-TunnelRunning {
+<#
+Is the tunnel actually serving?
+
+The old check asked only whether a `cloudflared.exe` process existed with
+"tunnel" on its command line. That cannot tell a working tunnel from a hung one:
+a cloudflared that is alive but has lost every edge connection looks perfectly
+healthy, so the watchdog would never restart it and the site would stay dark
+indefinitely.
+
+This is the same mistake already fixed on the backend, which now judges by
+whether port 4000 answers rather than by what a command line says. The tunnel
+listens on no port, but `--metrics` gives it one: `/ready` returns 200 with a
+`readyConnections` count while at least one edge connection is live, and 503
+when none is.
+
+THREE outcomes, not two, and the third is the one that matters:
+
+    ready      -> leave it alone
+    not-ready  -> cloudflared itself said it has no connections. Real evidence
+                  of failure, so restart.
+    unknown    -> the check could not reach the endpoint. That is evidence about
+                  the CHECK, not about the tunnel, so do nothing.
+
+Collapsing "unknown" into "dead" is how this script once killed a perfectly
+healthy backend every single minute. A broken probe must never be able to take
+down a working service.
+#>
+$TunnelMetrics = "127.0.0.1:20241"
+
+function Get-TunnelProcess {
     $procs = Get-CimInstance Win32_Process -Filter "Name='cloudflared.exe'" -ErrorAction SilentlyContinue
-    foreach ($p in $procs) { if ($p.CommandLine -match "tunnel") { return $true } }
+    foreach ($p in $procs) { if ($p.CommandLine -match "tunnel") { return $p } }
+    return $null
+}
+
+function Get-TunnelReadiness {
+    <# Returns @{ State = "ready"|"not-ready"|"unknown"; Connections = <int>; Detail = "" } #>
+    try {
+        $response = Invoke-WebRequest -Uri "http://$TunnelMetrics/ready" `
+            -TimeoutSec 5 -UseBasicParsing -ErrorAction Stop
+        $count = 0
+        try { $count = [int](($response.Content | ConvertFrom-Json).readyConnections) } catch { }
+        if ($response.StatusCode -eq 200) {
+            return @{ State = "ready"; Connections = $count; Detail = "" }
+        }
+        return @{ State = "not-ready"; Connections = $count; Detail = "http $($response.StatusCode)" }
+    } catch {
+        # A 503 is cloudflared ANSWERING "I have no connections" — that is a real
+        # verdict and must be acted on. PowerShell raises it as an exception, so
+        # it has to be separated here from a genuine connection failure, which
+        # tells us nothing about the tunnel at all.
+        $status = $null
+        try { $status = [int]$_.Exception.Response.StatusCode } catch { }
+        if ($status -eq 503) {
+            return @{ State = "not-ready"; Connections = 0; Detail = "503 no ready connections" }
+        }
+        return @{
+            State       = "unknown"
+            Connections = 0
+            Detail      = $_.Exception.Message.Split([char]10)[0]
+        }
+    }
+}
+
+function Start-Tunnel {
+    # --metrics is what makes the readiness check above possible. Bound to
+    # loopback, so it adds no public surface.
+    Start-Process -FilePath $Cloudflared `
+        -ArgumentList "--config", $TunnelConfig, "--no-autoupdate", `
+                      "--metrics", $TunnelMetrics, "tunnel", "run" `
+        -RedirectStandardOutput "$LogDir\tunnel-out.log" `
+        -RedirectStandardError  "$LogDir\tunnel-err.log" `
+        -WindowStyle Hidden
+
+    # Say what actually happened rather than assuming the launch worked. The old
+    # script logged "tunnel starting" and moved on, so the log claimed success
+    # even when the start had failed.
+    $deadline = (Get-Date).AddSeconds(25)
+    while ((Get-Date) -lt $deadline) {
+        Start-Sleep -Seconds 2
+        $check = Get-TunnelReadiness
+        if ($check.State -eq "ready") {
+            Write-Log "tunnel   ready ($($check.Connections) connections)"
+            return $true
+        }
+    }
+    $final = Get-TunnelReadiness
+    Write-Log "tunnel   started but not ready after 25s (state=$($final.State) $($final.Detail))"
     return $false
 }
 
@@ -169,15 +254,33 @@ if (Test-Listening 3000) {
 # Detected by process, not by port: the tunnel listens on nothing. It makes an
 # OUTBOUND connection to Cloudflare, which is the whole reason no inbound port
 # needs to be open.
-if (Test-TunnelRunning) {
-    Write-Log "tunnel   already running"
+$tunnelProcess = Get-TunnelProcess
+if (-not $tunnelProcess) {
+    Write-Log "tunnel   starting (no cloudflared process)"
+    Start-Tunnel | Out-Null
 } else {
-    Write-Log "tunnel   starting"
-    Start-Process -FilePath $Cloudflared `
-        -ArgumentList "--config", $TunnelConfig, "--no-autoupdate", "tunnel", "run" `
-        -RedirectStandardOutput "$LogDir\tunnel-out.log" `
-        -RedirectStandardError  "$LogDir\tunnel-err.log" `
-        -WindowStyle Hidden
+    $readiness = Get-TunnelReadiness
+    switch ($readiness.State) {
+        "ready" {
+            Write-Log "tunnel   already running and ready ($($readiness.Connections) connections)"
+        }
+        "not-ready" {
+            # cloudflared is alive and says it is serving nothing. Before this
+            # check existed, this state was invisible and lasted forever.
+            Write-Log "tunnel   alive but NOT serving ($($readiness.Detail)) - restarting pid=$($tunnelProcess.ProcessId)"
+            Stop-Process -Id $tunnelProcess.ProcessId -Force -ErrorAction SilentlyContinue
+            Start-Sleep -Seconds 3
+            Start-Tunnel | Out-Null
+        }
+        default {
+            # Deliberately does nothing. Also the state every tunnel started
+            # before this change reports, since those have no metrics listener —
+            # so the first restart after deploying is what switches the real
+            # check on, and until then the old behaviour stands. Restarting on
+            # this would be killing a healthy tunnel on no evidence.
+            Write-Log "tunnel   running, readiness unknown ($($readiness.Detail)) - leaving it alone"
+        }
+    }
 }
 
 # ---- Keep the pages resident ------------------------------------------------
