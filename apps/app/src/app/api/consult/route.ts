@@ -46,9 +46,24 @@ import {
 // Reads a cookie, so it must never be prerendered.
 export const dynamic = "force-dynamic";
 
+/**
+ * One line per request, so a report can be matched to what actually happened.
+ *
+ * Without the timestamp and the client, my own curl probes and a real browser
+ * request were indistinguishable in the log — I spent a round trip unable to
+ * answer "did the user's request even arrive?". `curl/8.x` versus `Mozilla/...`
+ * settles it instantly, and so does the clock.
+ */
+function trace(request: NextRequest, outcome: string) {
+  const agent = request.headers.get("user-agent") ?? "";
+  const client = /^curl/i.test(agent) ? "curl" : /Mozilla/.test(agent) ? "browser" : "other";
+  console.log(`[consult] ${new Date().toISOString()} ${client} ${outcome}`);
+}
+
 export async function POST(request: NextRequest) {
   const cookieToken = await sessionToken();
   const token = callerToken(request, cookieToken);
+  trace(request, `token=${cookieToken ? "cookie" : token ? "header" : "NONE"}`);
   if (!token) {
     // Kept deliberately. A 401 here is indistinguishable from several causes —
     // wrong cookie name, cookies cleared by the auth middleware, middleware not
@@ -111,6 +126,20 @@ export async function POST(request: NextRequest) {
         signal: AbortSignal.timeout(180_000),
       });
       const text = await upstream.text();
+      trace(request, `backend=${upstream.status}`);
+      // A 401 from the backend means the token we forwarded was rejected — the
+      // session is alive but the token is stale. Say so in the same shape the
+      // no-token case uses, so the client does not have to guess from a body it
+      // did not write.
+      if (upstream.status === 401) {
+        return NextResponse.json(
+          {
+            error: "Your session has expired. Please refresh the page to continue.",
+            reason: "stale_token",
+          },
+          { status: 401 },
+        );
+      }
       return new NextResponse(text, {
         status: upstream.status,
         headers: { "Content-Type": "application/json" },
