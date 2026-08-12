@@ -276,15 +276,32 @@ _DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 _HINGLISH_STRONG = re.compile(
     r"\b(mujhe|mujha|mera|meri|mere|hai|hain|raha|rahi|rahe|hota|hoti|nahi|"
     r"kya|kaise|karna|karta|mein|liye|aur|bhi|jyada|zyada|bahut|thoda|roz|"
-    r"subah|raat|khana|pet|sar)\b",
+    r"subah|raat|khana|pet|sar|"
+    # How people actually type, as opposed to how the words are spelled.
+    # "kes ha ra tu" and "kesa ha tu" are real messages from a real user and
+    # both scored ENGLISH, because the list had `kaise` but none of the ways
+    # anyone writes it in a hurry. The conversation then locked to English and
+    # answered a Hinglish speaker in English for the rest of the session.
+    r"kesa|kese|kesi|kaisa|kaisi|"
+    r"tum|tumhe|tumhara|tumhari|tera|teri|tere|"
+    r"hoon|hun|kyun|kyu|kyon|kahan|kaha|kidhar|kab|"
+    r"nahin|nhi|batao|bataiye|bata|bolo|"
+    r"accha|acha|theek|thik|yaar|bhai|bhaiya|"
+    r"mujhko|humko|hume|humein|bohot|bhot|kuch|"
+    r"karu|karun|karo|kariye|chahiye|chaiye|chaiya)\b",
     re.IGNORECASE,
 )
 
 # Each of these is either a real English word or a fragment short enough to
 # appear by accident. One on its own means nothing; two together are Hindi
 # grammar showing through.
+# Two of these are needed, because each one alone is too short or too close to an
+# English word to be evidence. `tu` is the one that matters for the reported
+# case: with the existing `ha`, "kes ha ra tu" now has two and is read correctly.
+# Nothing that is ALSO an ordinary English word may be promoted to STRONG —
+# turning English conversations Hinglish would be a worse bug than this one.
 _HINGLISH_WEAK = re.compile(
-    r"\b(ha|kar|ko|ka|ki|ke|se|me|par|din|sir)\b",
+    r"\b(ha|kar|ko|ka|ki|ke|se|me|par|din|sir|tu|ho|ab|wo|na)\b",
     re.IGNORECASE,
 )
 

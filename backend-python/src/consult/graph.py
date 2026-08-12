@@ -230,7 +230,12 @@ async def run_turn(
             # Chit-chat, thanks, a goodbye, or "I don't actually need help".
             # Remember it, so the next reply follows on instead of restarting.
             context = ctx_state.remember_chat(context, message, route.reply)
-            context.greeted = context.greeted or route.intent == "greeting"
+            # `about` counts too. Both intents answer with "hello, here is what I
+            # am", and only `greeting` used to set this — so a conversation that
+            # opened with an introduction was still told "already greeted: no" on
+            # the next turn, and the model gave the SAME self-introduction again.
+            # Observed three times in a row, word for word, in one conversation.
+            context.greeted = context.greeted or route.intent in ("greeting", "about")
             context.phase = "greeted" if route.intent == "greeting" else "casual"
             return ConsultResult(
                 kind="chat", message=route.reply, answer=route.reply, context=context
