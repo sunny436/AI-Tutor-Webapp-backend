@@ -135,6 +135,24 @@ async function handler(
   }
 
   if (!isPublic && !isAuthenticated) {
+    // An API route must NEVER be redirected, only refused.
+    //
+    // `fetch` follows redirects by default, so a 307 to /login hands the caller
+    // 200 OK and a page of HTML. The consult client would then try to read that
+    // as JSON, and the user would see a parse failure instead of "please sign
+    // in" — a signed-out session reported as a broken app.
+    //
+    // Caught by asking for /api/consult with no cookie and getting
+    // `307 -> /login?redirect=%2Fapi%2Fconsult` rather than a 401.
+    //
+    // Returning nothing lets the request continue to the route, which does its
+    // own auth check and answers with a proper JSON 401. That also leaves
+    // Convex Auth's own /api/auth endpoints alone — signing in necessarily
+    // happens while unauthenticated, so redirecting those would be circular.
+    if (request.nextUrl.pathname.startsWith("/api/")) {
+      return;
+    }
+
     // Preserve where they were heading so sign-in can return them there, instead
     // of dumping everyone on the dashboard.
     const url = publicUrl(request);

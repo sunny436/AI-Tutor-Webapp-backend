@@ -26,18 +26,19 @@ export const CONSULT_PROVIDER =
   process.env.NEXT_PUBLIC_CONSULT_PROVIDER === "central" ? "central" : "local";
 
 /**
- * Where a turn is sent.
+ * Both providers go through OUR server. Same-origin, no token, no key.
  *
- * The central path goes to OUR server, not to the central API: the API key must
- * not reach the browser, and `user_id` is an email, so identity has to be taken
- * from the verified session rather than from anything the page can edit. See
- * `app/api/consult/route.ts`.
+ * The browser used to post straight to the Python backend carrying a Convex
+ * token, and that is what produced the reported "AI service unavailable (401)":
+ * `@convex-dev/auth` only refreshes a token when Convex's own client hits an
+ * auth error, and a hand-written fetch to another host is invisible to it — so
+ * `useAuthToken()` kept handing back one that had expired an hour earlier.
+ *
+ * The middleware refreshes the auth cookie on `/api/*`, so the server always
+ * reads a live token. A browser that holds no token cannot hold a stale one.
  */
-const CONSULT_ENDPOINT =
-  CONSULT_PROVIDER === "central" ? "/api/consult" : `${AI_BACKEND_URL}/consult`;
-
-const CONSULT_STREAM_ENDPOINT =
-  CONSULT_PROVIDER === "central" ? "/api/consult" : `${AI_BACKEND_URL}/consult/stream`;
+const CONSULT_ENDPOINT = "/api/consult";
+const CONSULT_STREAM_ENDPOINT = "/api/consult/stream";
 
 /** Add `Authorization` only when a token exists, so anonymous calls stay clean. */
 function authHeaders(
@@ -132,16 +133,6 @@ export async function postConsultStream(
   signal?: AbortSignal,
   token?: string | null,
 ): Promise<ConsultResult> {
-  // Until the central API is confirmed to stream, the central path goes
-  // straight to the ordinary request. That is not a degradation to paper over:
-  // the whole design of this function is that `onToken` is a preview and the
-  // resolved result is authoritative, so a caller that receives no tokens still
-  // ends up with exactly the right transcript. The reader sees the answer arrive
-  // at once instead of progressively, and nothing else differs.
-  if (CONSULT_PROVIDER === "central") {
-    return postConsult(request, signal, token);
-  }
-
   let response: Response;
   try {
     response = await fetch(CONSULT_STREAM_ENDPOINT, {

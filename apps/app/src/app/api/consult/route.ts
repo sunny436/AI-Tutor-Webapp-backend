@@ -1,28 +1,29 @@
 /**
- * The browser's only door to the central AI API.
+ * The browser's only door to whichever AI is answering.
  *
- * The Python backend it replaces was called DIRECTLY from the browser, which was
- * fine because that backend verified a Convex JWT itself. The central API
- * authenticates with an application-level key instead, and that changes two
- * things which together make a direct call unshippable:
+ * WHY THE BROWSER NO LONGER CARRIES THE TOKEN
  *
- *   1. A key the browser holds is public. It is in the bundle, in devtools, in
- *      every visitor's cache. Ours would be spendable by anyone who opened the
- *      page — the same class of hole as the anonymous /chat endpoint closed
- *      earlier today, just harder to notice.
+ * It used to. The page read `useAuthToken()` and posted straight to the Python
+ * backend. That produced a reported failure: after a while the banner read "AI
+ * service unavailable (401)" while the backend log said
+ * `token rejected: Signature has expired`.
  *
- *   2. `user_id` is an email address. If the browser composes the request, it
- *      chooses that value, so anyone could ask for anybody else's medical
- *      conversation by typing their address. Authentication has to happen where
- *      the user cannot edit it.
+ * It is not a one-off. `@convex-dev/auth`'s `fetchAccessToken` only refreshes
+ * when it is asked to with `forceRefreshToken`, and the only thing that asks is
+ * Convex's own client reacting to its own auth error. A hand-written fetch to a
+ * different host is invisible to that, so `useAuthToken()` can hand back a token
+ * that expired an hour ago and nothing ever corrects it.
  *
- * So the key stays here, and the identity is read from the VERIFIED Convex
- * session. Whatever the request body claims about who the user is, is ignored.
+ * Routing through here removes the whole class of problem. `middleware.ts` wraps
+ * `convexAuthNextjsMiddleware` and its matcher covers `/(api|trpc)(.*)`, so the
+ * auth cookie is refreshed on the way in and `convexAuthNextjsToken()` below
+ * reads a live one. The browser holds no token, so it cannot hold a stale one.
+ *
+ * It is also what the central API needs anyway: that one authenticates with an
+ * application key, which must never reach the browser, and takes `user_id` as an
+ * email, which must never be chosen by the browser. One door serves both.
  */
 
-import { api } from "@v1/backend/convex/_generated/api";
-import { convexAuthNextjsToken } from "@convex-dev/auth/nextjs/server";
-import { ConvexHttpClient } from "convex/browser";
 import { type NextRequest, NextResponse } from "next/server";
 
 import {
@@ -32,42 +33,63 @@ import {
   normalizeCentralResponse,
   type Principal,
 } from "@/lib/consult/central";
+// Helpers live outside this file: a route module may only export the handler
+// names Next.js recognises, and exporting anything else fails the build.
+import {
+  LOCAL_BACKEND,
+  resolvePrincipal,
+  sessionToken,
+  usingCentral,
+} from "@/lib/consult/server-session";
 
-// The Convex token is read from a cookie, so this must not be prerendered.
+// Reads a cookie, so it must never be prerendered.
 export const dynamic = "force-dynamic";
 
-/**
- * Who is calling, according to the session — never according to the body.
- *
- * Uses the existing `api.users.getUser` query rather than a new one, because
- * adding a Convex function needs a deploy and this needs none. It returns the
- * whole user record, which is more than required, but it is one round trip and
- * it is already the query the dashboard uses to identify the signed-in person.
- */
-async function resolvePrincipal(): Promise<Principal | null> {
-  const token = await convexAuthNextjsToken();
-  if (!token) return null;
-
-  const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
-  if (!convexUrl) throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
-
-  const client = new ConvexHttpClient(convexUrl);
-  client.setAuth(token);
-
-  const user = await client.query(api.users.getUser, {});
-  if (!user?._id) return null;
-
-  return {
-    userId: String(user._id),
-    email: typeof user.email === "string" ? user.email : "",
-    phone: typeof user.phone === "string" ? user.phone : "",
-  };
-}
-
 export async function POST(request: NextRequest) {
+  const token = await sessionToken();
+  if (!token) {
+    return NextResponse.json({ error: "Please sign in." }, { status: 401 });
+  }
+
+  const incoming = (await request.json().catch(() => null)) as Record<
+    string,
+    unknown
+  > | null;
+  if (!incoming) {
+    return NextResponse.json({ error: "Malformed request." }, { status: 400 });
+  }
+
+  // ---- local: forward to the Python backend, unchanged ---------------------
+  // Deliberately a pass-through. The backend already returns exactly the shape
+  // the UI expects, so translating here would only add a place to get it wrong.
+  if (!usingCentral) {
+    try {
+      const upstream = await fetch(`${LOCAL_BACKEND}/consult`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(incoming),
+        signal: AbortSignal.timeout(180_000),
+      });
+      const text = await upstream.text();
+      return new NextResponse(text, {
+        status: upstream.status,
+        headers: { "Content-Type": "application/json" },
+      });
+    } catch (error) {
+      console.error("[consult] local backend unreachable:", error);
+      return NextResponse.json(
+        { error: "Could not reach the AI backend. Please try again." },
+        { status: 502 },
+      );
+    }
+  }
+
+  // ---- central --------------------------------------------------------------
   const problem = centralConfigProblem();
   if (problem) {
-    // A misconfiguration must not read like the assistant refusing to answer.
     return NextResponse.json(
       { error: `The AI service is ${problem}.` },
       { status: 503 },
@@ -76,7 +98,7 @@ export async function POST(request: NextRequest) {
 
   let principal: Principal | null;
   try {
-    principal = await resolvePrincipal();
+    principal = await resolvePrincipal(token);
   } catch (error) {
     console.error("[consult] could not resolve the session:", error);
     return NextResponse.json({ error: "Could not verify your session." }, { status: 500 });
@@ -85,24 +107,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Please sign in." }, { status: 401 });
   }
 
-  const incoming = (await request.json().catch(() => null)) as {
-    problem?: string;
-    freeText?: string;
-    answers?: Record<string, never>;
-    conversationId?: string;
-    context?: never;
-  } | null;
-  if (!incoming) {
-    return NextResponse.json({ error: "Malformed request." }, { status: 400 });
-  }
-
   const payload = buildCentralRequest({
     principal,
-    message: incoming.problem ?? "",
-    freeText: incoming.freeText ?? "",
-    answers: incoming.answers ?? {},
-    conversationId: incoming.conversationId ?? "",
-    context: incoming.context ?? null,
+    message: (incoming.problem as string) ?? "",
+    freeText: (incoming.freeText as string) ?? "",
+    answers: (incoming.answers as Record<string, never>) ?? {},
+    conversationId: (incoming.conversationId as string) ?? "",
+    context: (incoming.context as never) ?? null,
   });
 
   let upstream: Response;
@@ -114,7 +125,6 @@ export async function POST(request: NextRequest) {
         Authorization: `Bearer ${centralConfig.apiKey}`,
       },
       body: JSON.stringify(payload),
-      // A full consultation can take a while; do not let a default cut it off.
       signal: AbortSignal.timeout(180_000),
     });
   } catch (error) {
@@ -127,8 +137,6 @@ export async function POST(request: NextRequest) {
 
   const bodyText = await upstream.text();
   if (!upstream.ok) {
-    // Log the upstream body, return a clean message. The response can carry
-    // provider detail the user has no use for and should not be shown.
     console.error(`[consult] central API ${upstream.status}: ${bodyText.slice(0, 500)}`);
     return NextResponse.json(
       { error: "The AI service returned an error. Please try again." },
@@ -137,16 +145,15 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const parsed = JSON.parse(bodyText);
     return NextResponse.json(
-      normalizeCentralResponse(parsed, incoming.context ?? null),
+      normalizeCentralResponse(
+        JSON.parse(bodyText),
+        (incoming.context as never) ?? null,
+      ),
     );
   } catch (error) {
-    // Includes the "reply not understood" case, whose message names the keys
-    // that actually arrived — the one thing needed to finish the mapping.
     console.error(
-      `[consult] could not read the reply: ${(error as Error).message}\n` +
-        `raw: ${bodyText.slice(0, 800)}`,
+      `[consult] could not read the reply: ${(error as Error).message}\nraw: ${bodyText.slice(0, 800)}`,
     );
     return NextResponse.json(
       { error: "The AI service sent something this app could not read." },
