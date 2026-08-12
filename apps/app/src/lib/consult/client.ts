@@ -10,6 +10,35 @@ import type { ConsultRequest, ConsultResult } from "./types";
 export const AI_BACKEND_URL =
   process.env.NEXT_PUBLIC_AI_BACKEND_URL ?? "http://localhost:4000";
 
+/**
+ * Which brain answers: the local Python backend, or the central API.
+ *
+ * "local" is the default deliberately. This is a whole-brain transplant on a
+ * live product, and the site not going down is a standing requirement — so the
+ * central path ships switched off, and one env var turns it on or back off
+ * without a code change or a rebuild of anything but the bundle.
+ *
+ * Delete this switch, and the `local` branch with it, once the central API has
+ * been proven on real traffic. A fallback nobody has flipped in months is dead
+ * code pretending to be safety.
+ */
+export const CONSULT_PROVIDER =
+  process.env.NEXT_PUBLIC_CONSULT_PROVIDER === "central" ? "central" : "local";
+
+/**
+ * Where a turn is sent.
+ *
+ * The central path goes to OUR server, not to the central API: the API key must
+ * not reach the browser, and `user_id` is an email, so identity has to be taken
+ * from the verified session rather than from anything the page can edit. See
+ * `app/api/consult/route.ts`.
+ */
+const CONSULT_ENDPOINT =
+  CONSULT_PROVIDER === "central" ? "/api/consult" : `${AI_BACKEND_URL}/consult`;
+
+const CONSULT_STREAM_ENDPOINT =
+  CONSULT_PROVIDER === "central" ? "/api/consult" : `${AI_BACKEND_URL}/consult/stream`;
+
 /** Add `Authorization` only when a token exists, so anonymous calls stay clean. */
 function authHeaders(
   token: string | null | undefined,
@@ -40,7 +69,7 @@ export async function postConsult(
 ): Promise<ConsultResult> {
   let response: Response;
   try {
-    response = await fetch(`${AI_BACKEND_URL}/consult`, {
+    response = await fetch(CONSULT_ENDPOINT, {
       method: "POST",
       // The Convex login token, when there is one. The backend verifies it and
       // uses the subject to decide whose uploaded reports may be searched -
@@ -84,9 +113,19 @@ export async function postConsultStream(
   signal?: AbortSignal,
   token?: string | null,
 ): Promise<ConsultResult> {
+  // Until the central API is confirmed to stream, the central path goes
+  // straight to the ordinary request. That is not a degradation to paper over:
+  // the whole design of this function is that `onToken` is a preview and the
+  // resolved result is authoritative, so a caller that receives no tokens still
+  // ends up with exactly the right transcript. The reader sees the answer arrive
+  // at once instead of progressively, and nothing else differs.
+  if (CONSULT_PROVIDER === "central") {
+    return postConsult(request, signal, token);
+  }
+
   let response: Response;
   try {
-    response = await fetch(`${AI_BACKEND_URL}/consult/stream`, {
+    response = await fetch(CONSULT_STREAM_ENDPOINT, {
       method: "POST",
       headers: authHeaders(token, { "Content-Type": "application/json" }),
       body: JSON.stringify(request),
