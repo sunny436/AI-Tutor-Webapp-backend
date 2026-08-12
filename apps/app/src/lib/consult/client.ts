@@ -49,11 +49,27 @@ function authHeaders(
 
 /** Thrown when the AI backend is unreachable or returns a non-2xx. */
 export class ConsultUnavailableError extends Error {
-  constructor(message: string) {
+  /**
+   * `session` means the login expired, not that the AI is down.
+   *
+   * Worth separating because the two need opposite reactions from the user. A
+   * real outage means wait; an expired token means reload, and waiting for it to
+   * fix itself never works. Reported live as "AI service unavailable (401)"
+   * while the backend log said plainly `token rejected: Signature has expired`,
+   * which sent the reader looking at the AI instead of at their own session.
+   */
+  readonly reason: "service" | "session";
+
+  constructor(message: string, reason: "service" | "session" = "service") {
     super(message);
     this.name = "ConsultUnavailableError";
+    this.reason = reason;
   }
 }
+
+/** A Convex token lives a limited time; a tab left open outlives it. */
+const SESSION_EXPIRED_MESSAGE =
+  "Your session has expired. Please refresh the page to continue.";
 
 /**
  * Advance the consultation by one turn.
@@ -86,6 +102,9 @@ export async function postConsult(
     );
   }
 
+  if (response.status === 401) {
+    throw new ConsultUnavailableError(SESSION_EXPIRED_MESSAGE, "session");
+  }
   if (!response.ok) {
     throw new ConsultUnavailableError(
       `The AI backend returned an error (${response.status}). Please try again.`,
@@ -134,6 +153,12 @@ export async function postConsultStream(
   } catch (error) {
     if ((error as Error)?.name === "AbortError") throw error;
     return postConsult(request, signal, token);
+  }
+
+  // An expired token will not become valid by being asked a second time, so
+  // this one case skips the retry and reports what actually happened.
+  if (response.status === 401) {
+    throw new ConsultUnavailableError(SESSION_EXPIRED_MESSAGE, "session");
   }
 
   if (!response.ok || !response.body) {

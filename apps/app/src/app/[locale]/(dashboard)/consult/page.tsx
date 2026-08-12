@@ -62,6 +62,8 @@ type Turn =
       text: string;
       /** True while tokens are still arriving, so the bubble can show it. */
       streaming?: boolean;
+      /** An expired login is not an outage — see the banner below. */
+      reason?: "service" | "session";
     }
   | { who: "bot"; kind: "intake"; plan: IntakePlan; selection?: Selection; locked: boolean };
 
@@ -242,14 +244,15 @@ function ConsultInner() {
   }, []);
 
   const failed = (error: unknown) => {
-    const message =
-      error instanceof ConsultUnavailableError
-        ? error.message
-        : "Something went wrong. Please try again.";
+    const known = error instanceof ConsultUnavailableError ? error : null;
+    const message = known ? known.message : "Something went wrong. Please try again.";
     toast.error(message);
     // Same reasoning as the server-reported outage above: this is a failure, not
     // a reply, so it gets the warning banner rather than a chat bubble.
-    setTurns((current) => [...current, { who: "bot", kind: "error", text: message }]);
+    setTurns((current) => [
+      ...current,
+      { who: "bot", kind: "error", text: message, reason: known?.reason ?? "service" },
+    ]);
   };
 
   /**
@@ -532,8 +535,26 @@ function ConsultInner() {
               >
                 <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
                 <div className="min-w-0">
-                  <p className="font-semibold">AI service unavailable</p>
+                  {/* An expired login used to be announced as "AI service
+                      unavailable (401)", which points the reader at the wrong
+                      thing entirely: the AI is fine, their session is not, and
+                      waiting — the reasonable response to an outage — never
+                      fixes it. */}
+                  <p className="font-semibold">
+                    {turn.reason === "session"
+                      ? "Your session expired"
+                      : "AI service unavailable"}
+                  </p>
                   <p className="mt-0.5 leading-relaxed">{turn.text.replace(/^s️\s*/, "")}</p>
+                  {turn.reason === "session" ? (
+                    <button
+                      type="button"
+                      onClick={() => window.location.reload()}
+                      className="mt-2 rounded-lg bg-rose-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-rose-700"
+                    >
+                      Refresh page
+                    </button>
+                  ) : null}
                 </div>
               </div>
             ) : (
