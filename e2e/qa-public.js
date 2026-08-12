@@ -20,6 +20,9 @@
 const { chromium } = require("playwright");
 
 const BASE = process.env.E2E_BASE_URL || "https://ayur.namahos.com";
+// Only the signup probe needs this, and it is skipped without it — see
+// `probeSignup`. Everything else in this suite runs credential-free.
+const IMAP_USER = process.env.E2E_IMAP_USER || "";
 
 const results = [];
 const record = (name, status, detail = "") => {
@@ -204,41 +207,29 @@ const VIEWPORTS = [
     }
     await page.setViewportSize({ width: 1440, height: 900 });
 
-    // ---- 7. how far does signup get without a mailbox? ---------------------
+    // ---- 7. how far does signup get? ---------------------------------------
     // Not an assertion about success: it establishes exactly where the
     // credential-free path ends, so the report can say so precisely.
-    drain();
-    await page.goto(`${BASE}/login`, { waitUntil: "domcontentloaded" });
-    await page.waitForSelector("form.w-72", { timeout: 30000 });
-    await page.waitForTimeout(1200);
-    await page.locator('button[type="button"]:has-text("Create account")').first().click().catch(() => {});
-    await page.waitForTimeout(1000);
-    const probeEmail = `qa-probe-${Date.now()}@example.com`;
-    await form.locator('input[type="email"]').fill(probeEmail);
-    await form.locator('input[type="password"]').fill("TestUser#2026");
-    await form.locator('button[type="submit"]').click().catch(() => {});
-    await page.waitForTimeout(9000);
-    const codeBox = await page.locator('input[placeholder="Verification code"]').count();
-    const signupText = (await page.locator("body").innerText().catch(() => "")) || "";
-    record(
-      "signup reaches the verification-code step",
-      codeBox > 0 ? "PASS" : "INFO",
-      codeBox > 0
-        ? "code step reached; completing it needs a readable mailbox"
-        : signupText.replace(/\s+/g, " ").slice(0, 120),
-    );
-
-    if (codeBox > 0) {
-      // A wrong code must be refused, and that IS testable without a mailbox.
-      await page.locator('input[placeholder="Verification code"]').fill("000000");
-      await form.locator('button[type="submit"]').click().catch(() => {});
-      await page.waitForTimeout(6000);
-      const blocked = page.url().includes("/login");
+    //
+    // OFF unless a real mailbox is configured, and that is not fastidiousness.
+    // Submitting this form makes the app genuinely SEND a verification email, so
+    // a made-up address is a real message to a real mail server. It used
+    // `qa-probe-<timestamp>@example.com`, example.com does not accept mail, and
+    // every run therefore bounced into the sending account's own inbox. Three
+    // runs, three bounces, in a person's actual mail.
+    //
+    // A test that quietly mails strangers — or its own owner — is not a cost the
+    // suite gets to impose by default. With E2E_IMAP_USER set it uses a
+    // plus-address on that same mailbox, which is deliverable, self-cleaning and
+    // the address the code has to be read from anyway.
+    if (!IMAP_USER) {
       record(
-        "an incorrect verification code is refused",
-        blocked ? "PASS" : "FAIL",
-        blocked ? "stayed on /login" : `let in at ${page.url()}`,
+        "signup reaches the verification-code step",
+        "SKIP",
+        "needs E2E_IMAP_USER; skipped so the run cannot send mail to a fake address",
       );
+    } else {
+      await probeSignup(page, form, drain);
     }
   } catch (error) {
     record("suite completed without crashing", "FAIL", String(error).split("\n")[0].slice(0, 180));
@@ -248,10 +239,56 @@ const VIEWPORTS = [
 
   const pass = results.filter((r) => r.status === "PASS").length;
   const fail = results.filter((r) => r.status === "FAIL").length;
-  const info = results.filter((r) => r.status === "INFO").length;
-  console.log(`\n===== qa-public: ${pass} passed, ${fail} failed, ${info} informational =====`);
+  const skipped = results.filter((r) => r.status === "SKIP").length;
+  console.log(`\n===== qa-public: ${pass} passed, ${fail} failed, ${skipped} skipped =====`);
   for (const r of results.filter((x) => x.status !== "PASS")) {
     console.log(`  ${r.status} ${r.name}: ${r.detail}`);
   }
   process.exit(fail === 0 ? 0 : 1);
 })();
+
+/**
+ * The signup probe. Runs ONLY when a real mailbox is configured.
+ *
+ * Submitting this form makes the app send a genuine verification email, so the
+ * address has to be one that can actually receive it. Plus-addressing gives a
+ * unique recipient per run while every message still lands in the one inbox the
+ * code would be read from anyway.
+ */
+async function probeSignup(page, form, drain) {
+  const [local, domain] = IMAP_USER.split("@");
+  const probeEmail = `${local}+qa${String(Date.now()).slice(-6)}@${domain}`;
+
+  drain();
+  await page.goto(`${BASE}/login`, { waitUntil: "domcontentloaded" });
+  await page.waitForSelector("form.w-72", { timeout: 30000 });
+  await page.waitForTimeout(1200);
+  await page.locator('button[type="button"]:has-text("Create account")').first().click().catch(() => {});
+  await page.waitForTimeout(1000);
+  await form.locator('input[type="email"]').fill(probeEmail);
+  await form.locator('input[type="password"]').fill("TestUser#2026");
+  await form.locator('button[type="submit"]').click().catch(() => {});
+  await page.waitForTimeout(9000);
+
+  const codeBox = await page.locator('input[placeholder="Verification code"]').count();
+  const signupText = (await page.locator("body").innerText().catch(() => "")) || "";
+  record(
+    "signup reaches the verification-code step",
+    codeBox > 0 ? "PASS" : "FAIL",
+    codeBox > 0 ? probeEmail : signupText.replace(/\s+/g, " ").slice(0, 120),
+  );
+
+  if (codeBox > 0) {
+    // A wrong code must be refused. Cheap, and the most security-relevant thing
+    // this probe can assert without reading the mailbox.
+    await page.locator('input[placeholder="Verification code"]').fill("000000");
+    await form.locator('button[type="submit"]').click().catch(() => {});
+    await page.waitForTimeout(6000);
+    const blocked = page.url().includes("/login");
+    record(
+      "an incorrect verification code is refused",
+      blocked ? "PASS" : "FAIL",
+      blocked ? "stayed on /login" : `let in at ${page.url()}`,
+    );
+  }
+}
