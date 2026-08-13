@@ -1,5 +1,6 @@
 import { AuthForm } from "@/components/auth-form";
 import { EmailOtpSignin } from "@/components/email-otp-signin";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export const metadata = {
   // Just the page name. The root layout's `title.template` appends "· Ayurveda",
@@ -19,6 +20,12 @@ export default function Page() {
     <div className="relative flex min-h-dvh w-full flex-col items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-teal-50 px-4 py-10 dark:from-zinc-950 dark:via-black dark:to-emerald-950/40">
       {/* soft glow */}
       <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-400/20 blur-3xl" />
+
+      {/* Someone who prefers dark mode meets this product here — the one screen
+          that could not honour a preference they had no way to set. */}
+      <div className="absolute right-4 top-4 z-10">
+        <ThemeSwitcher />
+      </div>
 
       <div className="relative z-10 w-full max-w-sm rounded-3xl border border-emerald-500/15 bg-white/70 p-8 shadow-xl backdrop-blur dark:bg-white/[0.04]">
         <div className="mb-6 flex flex-col items-center text-center">

@@ -1,16 +1,27 @@
 "use client";
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-} from "@v1/ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@v1/ui/select";
 import { cn } from "@v1/ui/utils";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
+/**
+ * The theme control.
+ *
+ * MOVED HERE from `(dashboard)/_components/`, because that is inside the
+ * authenticated route group and the component was mounted in exactly one place:
+ * the sidebar footer. So the theme could only be changed from a signed-in
+ * dashboard page — not on login, onboarding, the 404, or the error boundary.
+ *
+ * That is not a small gap. Someone who prefers dark mode meets this product on
+ * the login screen, which is the one page that could not honour the preference
+ * they had just been unable to set. And the error page is where a light flash at
+ * 2am is least welcome.
+ *
+ * `next-themes` handles the value itself; this is only the control, so mounting
+ * it on public pages costs nothing and changes no behaviour.
+ */
 export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
   const { theme: currentTheme, setTheme, themes } = useTheme();
   // Avoid hydration mismatch: the theme is unknown on the server, so only show
@@ -32,43 +43,36 @@ export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
       onValueChange={(theme) => setTheme(theme as (typeof themes)[number])}
     >
       <SelectTrigger
+        // The trigger has no visible label, so without this it announces as an
+        // unnamed combobox.
+        aria-label="Colour theme"
         className={cn(
-          "h-6 rounded border-primary/20 bg-secondary !px-2 hover:border-primary/40",
+          "h-7 rounded-md border-border bg-surface-2 !px-2 hover:border-brand/40",
           triggerClass,
         )}
       >
-        <div className="flex items-start gap-2">
+        <span className="flex items-center gap-2">
           {shown === "light" ? (
-            <Sun className="h-[14px] w-[14px]" />
+            <Sun aria-hidden className="h-[14px] w-[14px]" />
           ) : shown === "dark" ? (
-            <Moon className="h-[14px] w-[14px]" />
+            <Moon aria-hidden className="h-[14px] w-[14px]" />
           ) : (
-            <Monitor className="h-[14px] w-[14px]" />
+            <Monitor aria-hidden className="h-[14px] w-[14px]" />
           )}
           {shown && (
             <span className="text-xs font-medium">
               {shown.charAt(0).toUpperCase() + shown.slice(1)}
             </span>
           )}
-        </div>
+        </span>
       </SelectTrigger>
       <SelectContent>
         {themes.map((theme) => (
-          <SelectItem
-            key={theme}
-            value={theme}
-            className={`text-sm font-medium text-primary/60 ${theme === shown ? "text-primary" : ""}`}
-          >
-            {theme && theme.charAt(0).toUpperCase() + theme.slice(1)}
+          <SelectItem key={theme} value={theme} className="text-sm font-medium">
+            {theme.charAt(0).toUpperCase() + theme.slice(1)}
           </SelectItem>
         ))}
       </SelectContent>
     </Select>
   );
 }
-
-// `ThemeSwitcherHome` lived here — a row of three icon buttons, exported and
-// imported by nothing since the starter. It also had no accessible name on any
-// button, so it announced as "button, button, button". Removed rather than
-// fixed; the Select above is the one theme control, and Stage 2 gives it a home
-// on the screens that currently cannot reach it (login, onboarding, 404, error).
