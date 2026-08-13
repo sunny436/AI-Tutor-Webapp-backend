@@ -80,13 +80,17 @@ export default function Page() {
         </div>
 
         <div className="max-w-md">
+          {/* Deliberately NOT the landing page's headline. Both screens used
+              "Ancient practice, answered carefully." and the two became hard to
+              tell apart at a glance — reported as "this is the same page". The
+              hero line belongs to `/`; this panel speaks to someone who has
+              already decided and is signing in. */}
           <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-foreground">
-            Ancient practice, answered carefully.
+            Pick up where you left off.
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-text-secondary">
-            Describe what&apos;s troubling you in one line. Tap through a few questions.
-            Get a plan with its root cause, food chart, yoga and daily routine — and the
-            notes it was built from.
+            Your consultations, the questions you answered, and the plans built from
+            them — all saved to your account.
           </p>
 
           {/* A real answer with its citation, rendered the way the product
