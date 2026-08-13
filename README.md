@@ -61,8 +61,6 @@ docs/
   START.md             day-to-day run instructions
   TECH_STACK.md        what every technology is and why it is here
   MODELS.md            model evaluation notes
-  history/deploy/      one-time VM provisioning scripts, kept for reference.
-                       Hardcoded to a specific VM — not runnable as-is.
 ROADMAP.md             deferred work, ordered by priority
 ```
 
