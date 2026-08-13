@@ -48,7 +48,7 @@ export default function JobsPage() {
             </h1>
             <p className="mt-0.5 text-sm text-primary/60">Async tasks — created in Convex, processed by the backend, updated live.</p>
           </div>
-          <button onClick={runDemo} disabled={pending || !current}
+          <button type="button" onClick={runDemo} disabled={pending || !current}
             className="inline-flex h-10 items-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 px-4 text-sm font-semibold text-white shadow-md shadow-emerald-500/25 transition hover:brightness-105 disabled:opacity-50">
             {pending ? "Creating…" : "Run demo job"}
           </button>

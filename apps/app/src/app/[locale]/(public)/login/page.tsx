@@ -2,12 +2,21 @@ import { AuthForm } from "@/components/auth-form";
 import { EmailOtpSignin } from "@/components/email-otp-signin";
 
 export const metadata = {
-  title: "Sign in · Ayurveda by Ollasoftware",
+  // Just the page name. The root layout's `title.template` appends "· Ayurveda",
+  // so spelling the brand out here produced "Sign in · Ayurveda by Ollasoftware
+  // · Ayurveda" in the browser tab.
+  title: "Sign in",
 };
 
 export default function Page() {
   return (
-    <div className="relative flex h-screen w-screen flex-col items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-teal-50 px-4 dark:from-zinc-950 dark:via-black dark:to-emerald-950/40">
+    // `min-h-dvh`, not `h-screen`. On mobile browsers `vh` is the viewport with
+    // the toolbar HIDDEN, so a full-height centred card sat partly under the
+    // browser chrome and, being a fixed height rather than a minimum, could not
+    // be scrolled to. `w-screen` also ignores the scrollbar gutter and caused a
+    // horizontal scrollbar on desktop; the parent is already full width.
+    // This is the same bug already fixed on the chat screen.
+    <div className="relative flex min-h-dvh w-full flex-col items-center justify-center bg-gradient-to-br from-emerald-50 via-white to-teal-50 px-4 py-10 dark:from-zinc-950 dark:via-black dark:to-emerald-950/40">
       {/* soft glow */}
       <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-400/20 blur-3xl" />
 

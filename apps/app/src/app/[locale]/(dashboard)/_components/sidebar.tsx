@@ -26,7 +26,25 @@ import {
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { isActivePath, stripLocale } from "@/lib/locales";
 import { ThemeSwitcher } from "./theme-switcher";
+
+/**
+ * Which nav item is "here" — the LONGEST match, not every match.
+ *
+ * `/settings/billing` is inside `/settings`, so a plain prefix test lights up
+ * two items at once and the highlight stops meaning anything. Sorting by length
+ * and taking the first gives the deepest match, which is the one the user is
+ * actually looking at.
+ */
+function activeHrefFor(pathname: string, hrefs: string[]): string | undefined {
+  const path = stripLocale(pathname);
+  return hrefs
+    .filter((href) =>
+      href === "/" ? path === "/" : path === href || path.startsWith(`${href}/`),
+    )
+    .sort((a, b) => b.length - a.length)[0];
+}
 
 // One intelligent consultation replaces the old category list (General Health /
 // Ayurveda / Yoga / Diet / Lifestyle / Wellness). Those were six doors into the
@@ -64,11 +82,12 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
   }, [pathname]);
 
   const filtered = sessions.filter((s) => s.title.toLowerCase().includes(search.toLowerCase()));
+  const navActive = activeHrefFor(pathname, WORKSPACE_NAV.map((item) => item.href));
 
   const onRename = (e: React.MouseEvent, sessionId: string, title: string) => {
     e.preventDefault(); e.stopPropagation();
     const t = window.prompt("Rename chat", title);
-    if (t && t.trim()) rename({ sessionId, title: t.trim() });
+    if (t?.trim()) rename({ sessionId, title: t.trim() });
   };
   const onDelete = (e: React.MouseEvent, sessionId: string) => {
     e.preventDefault(); e.stopPropagation();
@@ -106,7 +125,9 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
             onClick={() => setChatOpen((open) => !open)}
             aria-expanded={chatOpen}
             className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm transition ${
-              pathname === "/consult"
+              // `pathname === "/consult"` could never be true: the URL is always
+              // `/en/consult`. See lib/locales.ts.
+              isActivePath(pathname, "/consult")
                 ? "bg-emerald-500/10 font-medium text-emerald-700 dark:text-emerald-300"
                 : "text-primary/70 hover:bg-primary/5"
             }`}
@@ -142,8 +163,12 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
                   <MessageSquare className="h-3.5 w-3.5 shrink-0 opacity-60" />
                   <span className="flex-1 truncate">{s.title}</span>
                   <span className="hidden shrink-0 items-center gap-1 group-hover:flex">
-                    <button onClick={(e) => onRename(e, s.sessionId, s.title)} className="rounded p-0.5 hover:bg-primary/10" title="Rename"><Pencil className="h-3 w-3" /></button>
-                    <button onClick={(e) => onDelete(e, s.sessionId)} className="rounded p-0.5 text-rose-500 hover:bg-rose-500/10" title="Delete"><Trash2 className="h-3 w-3" /></button>
+                    {/* `type="button"` is not cosmetic: without it these default
+                        to type="submit", so inside any form they submit it. The
+                        aria-labels name WHICH chat, since "Rename" alone is
+                        ambiguous when the list repeats it once per row. */}
+                    <button type="button" onClick={(e) => onRename(e, s.sessionId, s.title)} className="rounded p-0.5 hover:bg-primary/10" aria-label={`Rename “${s.title}”`}><Pencil aria-hidden className="h-3 w-3" /></button>
+                    <button type="button" onClick={(e) => onDelete(e, s.sessionId)} className="rounded p-0.5 text-rose-500 hover:bg-rose-500/10" aria-label={`Delete “${s.title}”`}><Trash2 aria-hidden className="h-3 w-3" /></button>
                   </span>
                 </Link>
               );
@@ -155,7 +180,7 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
 
         {/* Workspace (all original template features) */}
         <div>
-          <button onClick={() => setWsOpen((v) => !v)} className="flex w-full items-center justify-between px-2 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary/40 hover:text-primary/60">
+          <button type="button" aria-expanded={wsOpen} onClick={() => setWsOpen((v) => !v)} className="flex w-full items-center justify-between px-2 py-1 text-[11px] font-semibold uppercase tracking-wide text-primary/40 hover:text-primary/60">
             Workspace
             <ChevronDown className={`h-3.5 w-3.5 transition-transform ${wsOpen ? "" : "-rotate-90"}`} />
           </button>
@@ -172,12 +197,17 @@ function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
                 ))}
               </select>
               {WORKSPACE_NAV.map((item) => {
-                const active = pathname === item.href;
+                // Was `pathname === item.href`, which never matched a
+                // locale-prefixed URL — so no item in this list has ever shown
+                // as active. `aria-current` is what a screen reader uses to
+                // answer "where am I?", and it was missing entirely.
+                const active = item.href === navActive;
                 const Icon = item.icon;
                 return (
                   <Link key={item.href} href={item.href} prefetch={false} onClick={onNavigate}
+                    aria-current={active ? "page" : undefined}
                     className={`flex items-center gap-2.5 rounded-lg px-2.5 py-2 text-sm transition ${active ? "bg-emerald-500/10 font-medium text-emerald-700 dark:text-emerald-300" : "text-primary/70 hover:bg-primary/5"}`}>
-                    <Icon className="h-4 w-4 shrink-0" />
+                    <Icon aria-hidden className="h-4 w-4 shrink-0" />
                     {item.label}
                   </Link>
                 );

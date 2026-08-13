@@ -210,10 +210,45 @@
     animation: soft-pulse 1.6s ease-in-out infinite;
   }
 
+  /* REDUCED MOTION, APPLIED TO EVERYTHING — not just our two classes.
+
+     This block used to name `.animate-rise-in` and `.animate-soft-pulse` and
+     stop there, which left every other moving thing in the product running:
+     the three `animate-bounce` dots and the `animate-pulse` streaming caret in
+     the chat, every `animate-spin` loader, all of tailwindcss-animate's
+     `data-[state]` enter/exit transitions on Dialog / Select / Dropdown /
+     Tooltip, the accordion keyframes, and ~40 `transition-*` plus
+     `hover:-translate-y-*` lifts.
+
+     Someone who sets this preference frequently does so because motion makes
+     them ill. On a health product, honouring it for two hand-written classes
+     and ignoring it for the rest of the interface is not a partial win.
+
+     `!important` because the utilities this overrides are themselves single
+     declarations of equal specificity, and animation shorthand set later in the
+     cascade would otherwise win. `0.01ms` rather than `none` so animations still
+     FIRE and their `animationend` handlers still run — several Radix components
+     unmount on that event, and killing the animation outright can leave a dialog
+     on screen forever. Same reasoning for keeping transitions at a nonzero time.
+
+     `scroll-behavior: auto` matters too: `scroll-smooth` on the chat transcript
+     is motion the user did not ask for. */
   @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+
+    /* Transforms are the part that actually causes discomfort, so the hover
+       lifts and press-scales are removed outright rather than sped up. */
     .animate-rise-in,
     .animate-soft-pulse {
-      animation: none;
+      animation: none !important;
+      transform: none !important;
     }
   }
 }

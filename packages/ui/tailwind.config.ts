@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
@@ -18,8 +19,30 @@ const config = {
       },
     },
     extend: {
+      // THREE ROLES, AND WHY THE MAPPING HAS TO EXIST AT ALL
+      //
+      // `[locale]/layout.tsx` has always loaded Geist Sans and Geist Mono and
+      // put `.variable` on <body>. But `.variable` only DEFINES the custom
+      // properties — it does not set `font-family` on anything. Nothing here
+      // mapped them either, and `globals.css` sets no font on `body`. So two
+      // font files were downloaded and parsed on every page load, and the whole
+      // product rendered in Tailwind's fallback stack (Segoe UI on Windows).
+      // Every `font-mono` in the app resolved to the stock monospace stack too.
+      //
+      // The roles are deliberate, not decorative:
+      //   sans     everything the interface says
+      //   display  headings and the six plan section titles — a reading serif,
+      //            so a health answer looks like a reference work rather than a
+      //            chat log. Explicitly NOT Inter or Space Grotesk.
+      //   mono     provenance ONLY — note filename and relevance score — so a
+      //            citation reads as data rather than as marketing copy.
+      //
+      // `departure` was here before and pointed at `--font-departure-mono`,
+      // which is defined nowhere and used by no class. Starter leftover, gone.
       fontFamily: {
-        departure: ["var(--font-departure-mono)"],
+        sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-geist-mono)", ...defaultTheme.fontFamily.mono],
+        display: ["var(--font-display)", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -94,20 +117,11 @@ const config = {
         // text never runs the full width of a large monitor.
         prose: "68ch",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
+      // The accordion keyframes and their animations were removed with the rest
+      // of the starter's leftovers: `packages/ui` has no Accordion component, so
+      // they described a `--radix-accordion-content-height` variable that
+      // nothing ever set. They come back with the component, if it is ever
+      // needed.
     },
   },
   plugins: [require("tailwindcss-animate")],

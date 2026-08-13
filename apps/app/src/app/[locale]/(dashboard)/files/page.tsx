@@ -140,6 +140,7 @@ export default function FilesPage() {
         {status === "LoadingFirstPage" ? (
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
             {Array.from({ length: 8 }).map((_, i) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: fixed-length placeholder list, never reordered and holding no state
               <div key={i} className="h-28 animate-pulse rounded-2xl border border-border bg-card" />
             ))}
           </div>

@@ -1,41 +1,57 @@
 "use client";
 
-import { HelpCircle } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { stripLocale } from "@/lib/locales";
 import { NotificationsBell } from "./notifications-bell";
 
 const APP_VERSION = "0.1.0";
+
+// Keyed by the LOCALE-STRIPPED path. Keyed by the raw pathname it never matched
+// once, because the URL is always `/en/...` — so this breadcrumb read
+// "Dashboard" on every page of the app, chat included. See lib/locales.ts.
 const TITLES: Record<string, string> = {
-  "/": "Dashboard",
-  "/consult": "Chat",
+  "/": "Home",
+  "/consult": "Consultation",
   "/jobs": "Jobs",
   "/platform": "Platform",
-  "/files": "Files",
+  "/files": "Reports",
   "/settings": "Settings",
   "/settings/billing": "Billing",
 };
 
 export function Topbar() {
-  const pathname = usePathname();
-  const title = TITLES[pathname] ?? "Dashboard";
+  const path = stripLocale(usePathname());
+  const title = TITLES[path];
+
   return (
-    <header className="flex h-12 shrink-0 items-center justify-between border-b border-border bg-card px-6">
-      <nav className="flex items-center gap-1.5 text-sm">
-        <span className="text-primary/40">Ayurveda</span>
-        <span className="text-primary/30">/</span>
-        <span className="font-medium text-primary/80">{title}</span>
-      </nav>
-      <div className="flex items-center gap-3 text-xs text-primary/40">
-        <NotificationsBell />
-        <span className="hidden sm:inline">v{APP_VERSION}</span>
-        <a
-          href="https://github.com/get-convex/v1/tree/main/docs"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-1.5 hover:text-primary"
+    <header className="flex h-12 shrink-0 items-center justify-between border-b border-border bg-card px-4 sm:px-6">
+      {/* A breadcrumb whose first crumb is not a link is just decoration. */}
+      <nav aria-label="Breadcrumb" className="flex min-w-0 items-center gap-1.5 text-sm">
+        <Link
+          href="/"
+          className="shrink-0 text-muted-foreground transition-colors hover:text-foreground"
         >
-          <HelpCircle className="h-4 w-4" /> Help
-        </a>
+          Ayurveda
+        </Link>
+        {title && path !== "/" && (
+          <>
+            <span aria-hidden className="text-muted-foreground/50">
+              /
+            </span>
+            <span aria-current="page" className="truncate font-medium text-foreground">
+              {title}
+            </span>
+          </>
+        )}
+      </nav>
+      <div className="flex items-center gap-3 text-xs text-muted-foreground">
+        <NotificationsBell />
+        {/* The Help link pointed at github.com/get-convex/v1 — the starter
+            template's own documentation, which says nothing about this product.
+            Removed rather than repointed: there is no docs site to send anyone
+            to yet, and a link to someone else's README is worse than none. */}
+        <span className="hidden font-mono text-2xs sm:inline">v{APP_VERSION}</span>
       </div>
     </header>
   );

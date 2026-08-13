@@ -67,26 +67,8 @@ export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
   );
 }
 
-export function ThemeSwitcherHome() {
-  const { setTheme, themes } = useTheme();
-  return (
-    <div className="flex gap-3">
-      {themes.map((theme) => (
-        <button
-          key={theme}
-          name="theme"
-          onClick={() => setTheme(theme)}
-          type="button"
-        >
-          {theme === "light" ? (
-            <Sun className="h-4 w-4 text-primary/80 hover:text-primary" />
-          ) : theme === "dark" ? (
-            <Moon className="h-4 w-4 text-primary/80 hover:text-primary" />
-          ) : (
-            <Monitor className="h-4 w-4 text-primary/80 hover:text-primary" />
-          )}
-        </button>
-      ))}
-    </div>
-  );
-}
+// `ThemeSwitcherHome` lived here — a row of three icon buttons, exported and
+// imported by nothing since the starter. It also had no accessible name on any
+// button, so it announced as "button, button, button". Removed rather than
+// fixed; the Select above is the one theme control, and Stage 2 gives it a home
+// on the screens that currently cannot reach it (login, onboarding, 404, error).

@@ -82,9 +82,11 @@ cd backend-python
 
 Then open **http://localhost:3000** and go to **Consult**.
 
-> `http://localhost:4000` also serves a standalone chat page, but it posts to the
-> **legacy** `/chat` endpoint, which has no conversation memory and will repeat itself.
-> It is kept for quick backend-only checks. The real product is the dashboard.
+> `http://localhost:4000` serves a plain status page, not a chat UI. The standalone
+> page that used to live there was removed when the backend was published at
+> `ayur-api.namahos.com`: it was a fully working anonymous chatbot on the public
+> internet, spending the AI balance. `/chat` now requires a signed-in caller, so
+> the page could not have worked anyway.
 
 Convex needs nothing running locally — it lives in the cloud.
 
@@ -184,8 +186,9 @@ After editing anything in `backend-python/data/knowledge/`, rebuild the index:
 
 Re-running it is safe — it does not create duplicates.
 
-The latest run against the live site is written up in
-[tests/TEST_REPORT.md](tests/TEST_REPORT.md), including what failed and why.
+Browser suites need **`node`**, not `bun` — under bun on Windows Playwright's
+`--remote-debugging-pipe` handshake never completes and every launch hangs for the
+full timeout with an error that blames the browser. See [e2e/README.md](e2e/README.md).
 
 ---
 

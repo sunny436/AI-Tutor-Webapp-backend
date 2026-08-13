@@ -15,10 +15,23 @@ import {
   Activity, Apple, ArrowUpRight, FileText, ListChecks, MessageSquare,
   Sparkles, Upload, Users, Wind,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { useMemo } from "react";
 
-function KPI({ icon: Icon, tint, label, value, sub }: any) {
+function KPI({
+  icon: Icon,
+  tint,
+  label,
+  value,
+  sub,
+}: {
+  icon: LucideIcon;
+  tint: string;
+  label: string;
+  value: React.ReactNode;
+  sub?: string;
+}) {
   return (
     <div className="group rounded-2xl border border-border bg-card p-4 shadow-sm transition hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-lg">
       <div className={`mb-3 grid h-10 w-10 place-items-center rounded-xl ${tint}`}>
@@ -108,8 +121,10 @@ export default function Home() {
               </div>
             ) : (
             <div className="flex h-32 items-end gap-3">
-              {bars.map((b, i) => (
-                <div key={i} className="flex flex-1 flex-col items-center gap-1.5">
+              {/* Keyed by the day label, which is unique across a 7-day window
+                  and stable as the data updates — unlike the array index. */}
+              {bars.map((b) => (
+                <div key={b.label} className="flex flex-1 flex-col items-center gap-1.5">
                   <div className="flex w-full items-end justify-center" style={{ height: "100%" }}>
                     <div className="w-full rounded-t-lg bg-gradient-to-t from-emerald-500 to-teal-400 transition-all"
                       style={{ height: `${(b.count / maxBar) * 100}%`, minHeight: b.count ? "6px" : "2px", opacity: b.count ? 1 : 0.25 }} />

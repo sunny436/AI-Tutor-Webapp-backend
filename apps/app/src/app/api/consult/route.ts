@@ -70,12 +70,12 @@ export async function POST(request: NextRequest) {
     // running — and guessing between them cost a day. These are the facts that
     // separate them. NAMES only, never values: the token is a credential and
     // must not reach a log file.
+    const cookieNames = request.cookies
+      .getAll()
+      .map((c) => c.name)
+      .join(", ");
     console.error(
-      "[consult] no token from cookie OR header. " +
-        `host=${request.headers.get("host")} ` +
-        `origin=${request.headers.get("origin")} ` +
-        `proto=${request.headers.get("x-forwarded-proto")} ` +
-        `cookies=[${request.cookies.getAll().map((c) => c.name).join(", ")}]`,
+      `[consult] no token from cookie OR header. host=${request.headers.get("host")} origin=${request.headers.get("origin")} proto=${request.headers.get("x-forwarded-proto")} cookies=[${cookieNames}]`,
     );
     // `signed_out`, not merely "unauthorised". Reaching here means BOTH auth
     // cookies are gone, and Convex Auth only removes both when a token refresh
