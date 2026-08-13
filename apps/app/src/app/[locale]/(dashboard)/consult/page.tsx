@@ -444,7 +444,17 @@ function ConsultInner() {
     // scroll and `vh` does not follow, which left the composer under the chrome.
     // min-h-0 on the scroller is what actually lets a flex child scroll instead
     // of growing the page — without it the composer is pushed off-screen.
-    <div className="relative h-[calc(100dvh-3.5rem)] w-full overflow-hidden bg-background">
+    // The subtraction has to match the chrome ABOVE this screen, and there is a
+    // different amount of it on each breakpoint:
+    //
+    //   mobile   sidebar's own bar (h-14, md:hidden) + Topbar (h-12) = 6.5rem
+    //   md and up  the bar is hidden, so just the Topbar             = 3rem
+    //
+    // It subtracted a flat 3.5rem, which is neither. On mobile that made the
+    // screen 48px taller than the space it had, and since this container is
+    // overflow-hidden the composer went under the fold with no way to scroll to
+    // it — the message box was simply unreachable on a phone.
+    <div className="relative h-[calc(100dvh-6.5rem)] w-full overflow-hidden bg-background md:h-[calc(100dvh-3rem)]">
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
       <div className="relative mx-auto flex h-full w-full max-w-3xl flex-col px-3 sm:px-5">
         <div
