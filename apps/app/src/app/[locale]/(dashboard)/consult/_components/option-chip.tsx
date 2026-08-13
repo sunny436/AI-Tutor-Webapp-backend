@@ -13,11 +13,14 @@ import type { ConsultOption } from "@/lib/consult/types";
  */
 export function OptionChip({
   option,
+  single,
   selected,
   disabled,
   onToggle,
 }: {
   option: ConsultOption;
+  /** One-of question: announce a radio, not a checkbox. */
+  single?: boolean;
   selected: boolean;
   disabled?: boolean;
   onToggle: () => void;
@@ -25,7 +28,7 @@ export function OptionChip({
   return (
     <button
       type="button"
-      role="checkbox"
+      role={single ? "radio" : "checkbox"}
       aria-checked={selected}
       disabled={disabled}
       onClick={onToggle}
@@ -53,7 +56,7 @@ export function OptionChip({
           selected ? "bg-white/25" : "scale-0",
         )}
       >
-        {selected && <Check className="h-3 w-3" strokeWidth={3} />}
+        {selected && <Check aria-hidden className="h-3 w-3" strokeWidth={3} />}
       </span>
     </button>
   );

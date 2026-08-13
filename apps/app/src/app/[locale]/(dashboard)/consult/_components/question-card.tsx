@@ -30,6 +30,15 @@ export function QuestionCard({
   const answer = selection[question.id] ?? { options: [], text: null };
   const answered = isAnswered(question, selection);
 
+  // Question ids are written by the model, so they can contain anything. An id
+  // attribute may not contain whitespace, and `aria-labelledby` is a
+  // space-separated token list — one stray space would silently point at two
+  // elements that do not exist and leave the card unlabelled again.
+  const slug = question.id.replace(/\s+/g, "-");
+  const labelId = `q-${slug}-label`;
+  const hintId = `q-${slug}-hint`;
+  const hint = question.hint || (question.type === "multi" ? "Pick all that apply" : "");
+
   const toggle = (optionId: string) => {
     if (question.type === "single") {
       // Tapping the chosen option again clears it — everything is skippable.
@@ -50,6 +59,12 @@ export function QuestionCard({
 
   return (
     <div
+      // Without this the options were announced as a bare row of checkboxes with
+      // no indication of what they were answering — the question text sat in a
+      // <p> that nothing referred to.
+      role="group"
+      aria-labelledby={labelId}
+      aria-describedby={hint ? hintId : undefined}
       className={cn(
         "rounded-2xl border bg-white/70 p-4 shadow-sm backdrop-blur transition-colors dark:bg-white/[0.04]",
         "animate-in fade-in slide-in-from-bottom-2 fill-mode-both duration-500",
@@ -68,13 +83,24 @@ export function QuestionCard({
               : "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
           )}
         >
-          {answered ? <CheckCircle2 className="h-3.5 w-3.5" /> : index + 1}
+          {/* The number and the tick are decoration for the label beside them;
+              read aloud they would prefix every question with a digit. The
+              answered state is carried in words instead, in the label. */}
+          {answered ? (
+            <CheckCircle2 aria-hidden className="h-3.5 w-3.5" />
+          ) : (
+            <span aria-hidden>{index + 1}</span>
+          )}
         </span>
         <div className="min-w-0 flex-1">
-          <p className="text-sm font-semibold leading-snug text-primary">{question.label}</p>
-          {question.hint && <p className="mt-0.5 text-xs text-primary/45">{question.hint}</p>}
-          {!question.hint && question.type === "multi" && (
-            <p className="mt-0.5 text-xs text-primary/45">Pick all that apply</p>
+          <p id={labelId} className="text-sm font-semibold leading-snug text-primary">
+            {question.label}
+            {answered && <span className="sr-only"> — answered</span>}
+          </p>
+          {hint && (
+            <p id={hintId} className="mt-0.5 text-xs text-primary/45">
+              {hint}
+            </p>
           )}
         </div>
       </div>
@@ -82,6 +108,8 @@ export function QuestionCard({
       {question.type === "text" ? (
         <textarea
           rows={2}
+          aria-labelledby={labelId}
+          aria-describedby={hint ? hintId : undefined}
           disabled={disabled}
           value={answer.text ?? ""}
           onChange={(e) => onChange(question.id, { ...answer, text: e.target.value })}
@@ -90,6 +118,14 @@ export function QuestionCard({
         />
       ) : (
         <div
+          // "single" and "multi" are genuinely different controls and were both
+          // announced as checkboxes, which tells someone they may pick several
+          // when only one will register. Arrow-key roving is deliberately NOT
+          // added with it: every chip stays in the tab order, exactly as before,
+          // so no existing keyboard habit breaks.
+          role={question.type === "single" ? "radiogroup" : "group"}
+          aria-labelledby={labelId}
+          aria-describedby={hint ? hintId : undefined}
           className={cn(
             "flex gap-2",
             question.display === "scale" ? "flex-nowrap overflow-x-auto pb-1" : "flex-wrap",
@@ -99,6 +135,7 @@ export function QuestionCard({
             <OptionChip
               key={option.id}
               option={option}
+              single={question.type === "single"}
               selected={answer.options.includes(option.id)}
               disabled={disabled}
               onToggle={() => toggle(option.id)}

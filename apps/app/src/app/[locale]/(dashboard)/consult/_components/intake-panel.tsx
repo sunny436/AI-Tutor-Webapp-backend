@@ -45,14 +45,24 @@ export function IntakePanel({
         {plan.note && <p className="mt-1 text-sm leading-relaxed text-primary/70">{plan.note}</p>}
 
         <div className="mt-3 flex items-center gap-3">
-          <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-emerald-500/15">
+          {/* The bar is a picture of the count beside it, so it is described
+              once, in words, rather than twice. */}
+          <div
+            aria-hidden
+            className="h-1.5 flex-1 overflow-hidden rounded-full bg-emerald-500/15"
+          >
             <div
               className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
           <span className="shrink-0 text-[11px] font-medium tabular-nums text-primary/50">
-            {done}/{total}
+            <span aria-hidden>
+              {done}/{total}
+            </span>
+            <span className="sr-only">
+              {done} of {total} questions answered
+            </span>
           </span>
         </div>
       </div>

@@ -47,6 +47,7 @@ from src.consult.router import (
     Route,
     detect_language,
     has_health_signal,
+    is_continuation_request,
     is_followup_request,
     is_personal_complaint,
     is_small_talk,
@@ -81,6 +82,59 @@ _GREETING_WORDS = re.compile(
 def _looks_like_greeting(text: str) -> bool:
     """Greeting ("hii") versus a bare acknowledgement ("ok", "haan")."""
     return bool(_GREETING_WORDS.match(text or ""))
+
+
+# "Tell me more" with nothing yet to continue. Not off-topic — which is what the
+# classifier called it, so the reply was a refusal to discuss anything outside
+# Ayurveda — but a continuation of a conversation that has not started. A table,
+# not a model call: there is nothing to be creative about, and the language is
+# already resolved by the time this is read.
+_NOTHING_TO_CONTINUE = {
+    "english": "Happy to — what would you like to know more about? Name a topic, or tell me what's troubling you and I'll build you a full plan.",
+    "hinglish": "Zaroor — kis baare mein aur jaanna hai? Koi topic bataiye, ya apni problem likhiye aur main poora plan bana deta hoon.",
+    "devanagari": "ज़रूर — किस बारे में और जानना चाहेंगे? कोई विषय बताइए, या अपनी समस्या लिखिए और मैं पूरा प्लान बना देता हूँ।",
+}
+
+
+def _last_real_topic(context: ConsultContext) -> str:
+    """The most recent thing the user actually asked about.
+
+    A continuation carries no topic of its own, and the knowledge path never
+    writes `context.problem` — it builds a throwaway context for retrieval and
+    discards it — so the topic has to be recovered from the chat history: the
+    newest user line that is not itself a follow-up or a greeting.
+
+    Deliberately derived rather than stored. `ConsultContext` is versioned and
+    persisted in Convex on every assistant message, so a new field would strand
+    every conversation saved before this change.
+    """
+    for turn in reversed(context.chat_history):
+        if turn.role != "user":
+            continue
+        text = (turn.text or "").strip()
+        if text and not is_followup_request(text) and not is_small_talk(text):
+            return text
+    return context.problem or ""
+
+
+def _continuation_question(topic: str, already_said: str) -> str:
+    """What to ask the knowledge writer for when the user says "tell me more".
+
+    The "already covered" text is folded into the QUESTION rather than added as
+    a new prompt field on purpose: `KNOWLEDGE_ANSWER_PROMPT` is rendered with
+    `.format()`, and the two eval scripts render the same template by hand — a
+    new placeholder has broken them twice.
+    """
+    if not already_said:
+        return topic
+    return (
+        f"{topic}\n\n"
+        "The reader has ALREADY been told the following, so do not repeat it. "
+        "Add what it leaves out — further detail, causes, practical specifics, "
+        "or examples. Do not restate any sentence from it.\n"
+        "--- ALREADY COVERED ---\n"
+        f"{already_said}"
+    )
 
 
 def _escalate(context: ConsultContext, reason: str = "") -> ConsultResult:
@@ -173,7 +227,29 @@ async def run_turn(
         # question. Handled here, in code, because the phrasings are a small
         # closed set and getting it wrong is glaringly visible.
         if is_followup_request(message):
-            if context.last_answer:
+            topic = _last_real_topic(context)
+            continuing = is_continuation_request(message)
+
+            if continuing and not topic and not context.last_answer:
+                # "tell me more" as the very first message. There is nothing to
+                # continue, which is not the same as being off-topic — but the
+                # classifier had no way to tell the difference and refused.
+                reworked = _NOTHING_TO_CONTINUE.get(
+                    context.language or "hinglish", _NOTHING_TO_CONTINUE["hinglish"]
+                )
+            elif continuing and topic:
+                # A request to ADD. `rework_answer` is told to introduce no new
+                # facts, so it answered "tell me more" with the previous reply
+                # word for word. Go back to the notes for the same topic, and
+                # say what has already been covered so the model extends it.
+                question_context = ConsultContext(problem=topic)
+                pipeline, results = await _retrieve(question_context, principal)
+                reworked = await write_knowledge(
+                    _continuation_question(topic, context.last_answer),
+                    pipeline.to_prompt_block(results),
+                    context.language,
+                )
+            elif context.last_answer:
                 reworked = await rework_answer(
                     context.last_answer, message, context.language
                 )
@@ -284,7 +360,20 @@ async def run_turn(
         # client sends `freeText` instead of `problem` - so "explain this in
         # English" never reached the follow-up check, went to the classifier
         # instead, and came back as the OFF-TOPIC refusal.
-        if context.last_answer:
+        #
+        # The continuation split applies here too: with cards open, "aur batao"
+        # is still a request for more, and re-presenting the same answer is
+        # still the wrong reply to it. The topic is known here — it is the
+        # consultation's own problem — so there is no "nothing to continue" case.
+        if is_continuation_request(typed):
+            question_context = ConsultContext(problem=context.problem)
+            pipeline, results = await _retrieve(question_context, principal)
+            reworked = await write_knowledge(
+                _continuation_question(context.problem, context.last_answer),
+                pipeline.to_prompt_block(results),
+                context.language,
+            )
+        elif context.last_answer:
             reworked = await rework_answer(context.last_answer, typed, context.language)
         else:
             # Cards are open but nothing has been answered yet, so there is no

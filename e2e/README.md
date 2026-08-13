@@ -22,6 +22,24 @@ Every Playwright suite asserts **zero `console.error`** and captures failed netw
 responses — that assertion catches the class of bug types/units can't see.
 
 ## Running
+
+> **Run these with `node`, not `bun`.**
+> `bun install` is fine — it is only the *runner* that matters. Under `bun` on
+> Windows every suite dies the same way:
+>
+> ```
+> TimeoutError: launch: Timeout 180000ms exceeded.
+>   - <launched> pid=4568
+> ```
+>
+> The browser really does start (the pid is real, and the binary runs fine on its
+> own — `chrome-headless-shell.exe --version` answers instantly). What never
+> completes is Playwright's handshake: it talks to the browser over
+> `--remote-debugging-pipe`, which needs file descriptors 3 and 4 passed to the
+> child process, and bun does not deliver them. Nothing in the message points at
+> the runner, which is what makes it expensive — it reads as a broken browser, a
+> memory problem, or a hung machine. The same suite passes 36/36 under `node`.
+
 ```bash
 cd e2e && bun install        # or npm install
 npx playwright install chromium

@@ -19,6 +19,11 @@ import json
 import re
 import sys
 import urllib.request
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
+import config  # noqa: E402  (needs the sys.path line above)
 
 BASE = "http://localhost:4000"
 results: list[tuple[str, bool, str]] = []
@@ -33,7 +38,11 @@ def post(payload: dict) -> dict:
     request = urllib.request.Request(
         f"{BASE}/consult",
         data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
+        # /consult refuses anonymous callers, so a published backend cannot have
+        # its LLM quota spent by strangers. The service key is the server-to-
+        # server credential for exactly that: it admits the request without
+        # claiming to be any user, so this still exercises the real HTTP path.
+        headers={"Content-Type": "application/json", "x-service-key": config.SERVICE_KEY},
     )
     with urllib.request.urlopen(request, timeout=180) as response:
         return json.loads(response.read())

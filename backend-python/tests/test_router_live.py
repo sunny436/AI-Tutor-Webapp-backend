@@ -12,6 +12,11 @@ into a consultation.
 import json
 import sys
 import urllib.request
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
+import config  # noqa: E402  (needs the sys.path line above)
 
 BASE = "http://localhost:4000"
 results: list[tuple[str, bool, str]] = []
@@ -26,18 +31,53 @@ def post(payload: dict) -> dict:
     request = urllib.request.Request(
         f"{BASE}/consult",
         data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"},
+        # Server-to-server credential — /consult refuses anonymous callers so a
+        # published backend cannot have its LLM quota spent by strangers.
+        headers={"Content-Type": "application/json", "x-service-key": config.SERVICE_KEY},
     )
     with urllib.request.urlopen(request, timeout=180) as response:
         return json.loads(response.read())
 
 
-ASKS_PROBLEM = ("problem", "trouble", "help", "pareshan", "concern", "bother", "kya")
+# This assertion used to be a keyword hunt over model-written prose:
+#
+#     "?" in text and any(w in lowered for w in
+#         ("problem", "trouble", "help", "pareshan", "concern", "bother", "kya"))
+#
+# It failed three good replies on three different runs, each for a different
+# reason, none of them a product fault:
+#
+#   "who won the world cup?"   -> "...Aapki sehat se juda koi sawaal ho to
+#                                  bataiye!"   (Hinglish invites with an
+#                                  imperative, so there is no "?")
+#   "hello"                    -> "...How may I assist you today?"
+#                                 ("assist", not "help"; "well-being", not any
+#                                  word on the list)
+#
+# Every one of those does exactly what the test exists to enforce. Chasing the
+# synonyms is unwinnable — the model rewords freely — so assert the two
+# properties that are actually stable instead.
+INVITES = (
+    "bataiye", "batao", "bata dijiye", "batayein", "likhiye", "likho",
+    "poochhiye", "puchiye", "share", "tell me", "let me know",
+)
+# The product's own subject. Small and closed, unlike the synonyms for "problem".
+DOMAIN = ("ayurved", "yoga", "wellness", "well-being", "sehat", "swasthya", "health")
 
 
 def asks_what_is_wrong(text: str) -> bool:
+    """Does the reply hand the conversation back, pointed at a consultation?
+
+    Two things, both checkable without guessing the model's wording:
+      1. it is framed as this assistant's subject, not a generic chatbot line
+      2. it ENDS by inviting a reply — a question mark, or an imperative, which
+         is how Hinglish does the same job
+    """
     lowered = text.lower()
-    return "?" in text and any(word in lowered for word in ASKS_PROBLEM)
+    on_subject = any(word in lowered for word in DOMAIN)
+    tail = lowered.strip()[-160:]
+    invites_a_reply = "?" in tail or any(verb in tail for verb in INVITES)
+    return on_subject and invites_a_reply
 
 
 # --- 1. small talk must not become a consultation --------------------------
@@ -54,7 +94,15 @@ for message, label in [
         response["kind"] == "chat" and response.get("intake") is None and len(reply) > 10,
         f"kind={response['kind']} -> {reply[:90]!r}",
     )
-    check(f"{label}: ends by asking what's wrong", asks_what_is_wrong(reply))
+    # The detail is not optional here. This assertion is a heuristic over
+    # model-written prose, so when it fails the only useful question is "what did
+    # it actually say?" — and without the reply in the output there is no way to
+    # tell a real regression from a rewording.
+    check(
+        f"{label}: ends by asking what's wrong",
+        asks_what_is_wrong(reply),
+        f"{reply[-110:]!r}",
+    )
 
 # Hinglish in -> Hinglish out is the one that proves it isn't a canned string.
 hinglish = post({"problem": "hi kaise ho"})["answer"]
@@ -97,7 +145,11 @@ option_ids = [
 check(
     "after the questions, it asks what the user wants",
     choice["kind"] == "intake"
-    and choice["context"]["phase"] == "choose"
+    # "choosing", not "choose". `Phase` in schema.py has only ever had the
+    # participle form, so this assertion could never pass — it failed on the
+    # phase while the options list beside it was correct every time, which is
+    # what made it read as a product fault rather than a typo in the test.
+    and choice["context"]["phase"] == "choosing"
     and "complete" in option_ids,
     f"phase={choice['context']['phase']}, options={option_ids}",
 )

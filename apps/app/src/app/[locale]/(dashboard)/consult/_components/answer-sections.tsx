@@ -39,8 +39,23 @@ function styleFor(title: string) {
   return { Icon: Sparkles, ...PALETTE.emerald };
 }
 
+/**
+ * On the index keys below.
+ *
+ * They are safe HERE and nowhere else in this feature. Everything rendered in
+ * this file is a pure function of one `text` string: no child holds state, and
+ * a finished answer's text never changes, so no item is ever inserted, removed
+ * or reordered within a rendered list. Content-derived keys would be worse — two
+ * identical bullet lines in a food chart is ordinary, and duplicate keys are a
+ * real bug where these are a lint rule firing on a shape it cannot verify.
+ *
+ * The transcript in `page.tsx` was the opposite case — items removed from the
+ * end, a stateful child — and has real ids now. Suppressing these four sites is
+ * what stops that rule being background noise the next time it means something.
+ */
 function inline(text: string) {
   return text.split(/(\*\*.+?\*\*)/g).map((p, j) =>
+    // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
     p.startsWith("**") && p.endsWith("**") ? <strong key={j} className="font-semibold text-primary">{p.slice(2, -2)}</strong> : <span key={j}>{p}</span>,
   );
 }
@@ -61,14 +76,17 @@ function Body({ lines }: { lines: string[] }) {
     <>
       {lines.map((line, i) => {
         const t = line.trim();
+        // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
         if (!t) return <div key={i} className="h-1.5" />;
         if (/^[-*•]\s+/.test(t))
           return (
+            // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
             <div key={i} className="flex gap-2 text-sm leading-relaxed text-primary/80">
-              <span className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-current opacity-40" />
+              <span aria-hidden className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-current opacity-40" />
               <span>{inline(t.replace(/^[-*•]\s+/, ""))}</span>
             </div>
           );
+        // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
         return <p key={i} className="text-sm leading-relaxed text-primary/80">{inline(t)}</p>;
       })}
     </>
@@ -79,14 +97,19 @@ export function AnswerSections({ text }: { text: string }) {
   return (
     <div className="space-y-2.5">
       {parseSections(text).map((s, i) => {
+        // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
         if (!s.title) return <div key={i} className="space-y-0.5"><Body lines={s.body} /></div>;
         const st = styleFor(s.title);
         return (
+          // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
           <div key={i} className={`rounded-xl border p-3 ${st.cardCls}`}>
-            <div className={`mb-1.5 flex items-center gap-2 text-sm font-semibold ${st.titleCls}`}>
-              <span className={`grid h-6 w-6 place-items-center rounded-lg ${st.iconCls}`}><st.Icon className="h-3.5 w-3.5" /></span>
+            {/* A real heading, not a bold div. A plan is six sections long and
+                a screen reader could not jump between them — the only way
+                through "Food Chart" was to read "Root Cause" first. */}
+            <h3 className={`mb-1.5 flex items-center gap-2 text-sm font-semibold ${st.titleCls}`}>
+              <span aria-hidden className={`grid h-6 w-6 place-items-center rounded-lg ${st.iconCls}`}><st.Icon className="h-3.5 w-3.5" /></span>
               {s.title}
-            </div>
+            </h3>
             <div className="space-y-0.5 pl-0.5"><Body lines={s.body} /></div>
           </div>
         );

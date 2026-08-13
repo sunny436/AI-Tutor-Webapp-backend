@@ -115,45 +115,79 @@ def is_unavailable(error_text: str) -> bool:
 #
 # This is matched in code rather than left to the model: the phrasings are a
 # small closed set, and getting it wrong is very visible.
-_FOLLOWUP_PATTERNS = (
+#
+# The set is split in two because the two halves need opposite treatment, and
+# treating them the same produced a reproducible bug:
+#
+#     what is ashwagandha?  ->  "Ashwagandha is a root-based herb widely used…"
+#     tell me more          ->  "Ashwagandha is a root-based herb widely used…"
+#
+# Both went to `rework_answer`, whose prompt says to work ONLY from the previous
+# answer and introduce no new facts. That is exactly right for "say it in
+# English" and exactly wrong for "tell me more", which is a request for material
+# that is BY DEFINITION not in the previous answer.
+_REWORK_PATTERNS = (
     # rewrite / translate the previous answer
     r"\b(in|into|me|mein)\s+(english|hindi|hinglish|marathi|gujarati|tamil|telugu|bengali|punjabi|urdu|kannada|malayalam)\b",
     r"\btranslate\b",
     r"\b(english|hindi|marathi|gujarati|punjabi|urdu)\s+(me|mein)\s+(bata|batao|likh|samjha)",
-    # explain / simplify / summarise / expand — referring to what was just said
-    r"\bexplain\s+(this|it|that|the\s+above|again|more)\b",
-    r"\b(simplify|summari[sz]e|shorten|elaborate)\b",
+    # explain / simplify / summarise — referring to what was just said
+    r"\bexplain\s+(this|it|that|the\s+above|again)\b",
+    r"\b(simplify|summari[sz]e|shorten)\b",
     r"\b(simple|easy|aasan)\s+(words|language|bhasha|terms)\b",
-    r"\b(short|brief|detailed|detail)\s+(version|answer|me|mein)\b",
-    r"\bin\s+(short|brief|detail|simple)\b",
+    r"\b(short|brief)\s+(version|answer|me|mein)\b",
+    r"\bin\s+(short|brief|simple)\b",
     r"\b(tell|explain|samjha|batao|bata)\s+(me\s+)?(this|it|that|isko|ise|yeh|ye)\b",
     r"\b(iska|isko|ise|uska|usko)\s+(matlab|translation|hindi|english)\b",
     r"\b(above|previous)\s+(answer|response|message)\b",
     r"\bsummar(y|ise|ize)\b",
-    r"\bmore\s+detail",
-    r"\bexpand\b",
-    # Continuations. These carry no topic of their own — their whole meaning is
-    # "keep going with what you just said" — so without them the router saw a
-    # contentless message and fell back to chit-chat, losing the thread.
-    r"^\s*(tell\s+me\s+)?more\b",
-    r"\b(tell|say)\s+me\s+more\b",
-    r"\b(continue|carry\s+on|go\s+on|and\s+then)\b",
-    r"^\s*(aage|aur\s+batao|aur\s+bataiye|jari\s+rakho|continue\s+karo)\b",
-    r"\b(give|show)\s+(me\s+)?(an?\s+)?examples?\b",
-    r"^\s*examples?\b",
-    r"\bexample\s+(do|dijiye|batao)\b",
     # Clarification requests about the previous answer.
     r"\bwhat\s+do\s+you\s+mean\b",
     r"^\s*(why|how|kyun|kyu|kaise)\s*\??\s*$",
     r"^\s*(matlab|iska\s+matlab)\s*\??\s*$",
     r"^\s*(above|that|this|it|isko|usko|yeh|ye)\s*\??\s*$",
 )
-_FOLLOWUP_RE = re.compile("|".join(_FOLLOWUP_PATTERNS), re.IGNORECASE)
+
+# "Keep going" — carries no topic of its own, and asks for material the previous
+# answer does not contain. Note where the near-misses fall: "in short" reworks,
+# "in detail" continues; "explain this" reworks, "explain more" continues.
+_CONTINUATION_PATTERNS = (
+    r"^\s*(tell\s+me\s+)?more\b",
+    r"\b(tell|say)\s+me\s+more\b",
+    r"\bexplain\s+more\b",
+    r"\b(elaborate|expand)\b",
+    r"\bmore\s+detail",
+    r"\bin\s+detail\b",
+    r"\b(detailed|detail)\s+(version|answer|me|mein)\b",
+    r"\b(continue|carry\s+on|go\s+on|and\s+then)\b",
+    r"^\s*(aage|aur\s+batao|aur\s+bataiye|jari\s+rakho|continue\s+karo)\b",
+    r"\b(give|show)\s+(me\s+)?(an?\s+)?examples?\b",
+    r"^\s*examples?\b",
+    r"\bexample\s+(do|dijiye|batao)\b",
+)
+
+_FOLLOWUP_RE = re.compile(
+    "|".join(_REWORK_PATTERNS + _CONTINUATION_PATTERNS), re.IGNORECASE
+)
+_CONTINUATION_RE = re.compile("|".join(_CONTINUATION_PATTERNS), re.IGNORECASE)
 
 
 def is_followup_request(text: str) -> bool:
-    """Is this an instruction about the previous answer rather than a new question?"""
+    """Is this an instruction about the previous answer rather than a new question?
+
+    Still matches everything it used to — the split below narrows what happens
+    next, not what counts as a follow-up. Callers that branch on this keep
+    working unchanged.
+    """
     return bool(_FOLLOWUP_RE.search(text or ""))
+
+
+def is_continuation_request(text: str) -> bool:
+    """"Tell me more" — a follow-up asking to ADD, not to re-present.
+
+    Always a subset of `is_followup_request`, so check this one first.
+    """
+    return bool(_CONTINUATION_RE.search(text or ""))
 
 
 # --- small talk, decided in code -------------------------------------------

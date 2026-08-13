@@ -11,8 +11,16 @@ import json
 import sys
 import urllib.error
 import urllib.request
+from pathlib import Path
+
+sys.path.append(str(Path(__file__).resolve().parents[1]))
+
+import config  # noqa: E402  (needs the sys.path line above)
 
 BASE = "http://localhost:4000"
+# Server-to-server credential — /consult and /chat refuse anonymous callers so a
+# published backend cannot have its LLM quota spent by strangers.
+AUTH = {"Content-Type": "application/json", "x-service-key": config.SERVICE_KEY}
 results: list[tuple[str, bool, str]] = []
 
 
@@ -25,7 +33,7 @@ def post(payload: dict) -> dict:
     request = urllib.request.Request(
         f"{BASE}/consult",
         data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json"},
+        headers=AUTH,
     )
     with urllib.request.urlopen(request, timeout=180) as response:
         return json.loads(response.read())
@@ -145,7 +153,7 @@ try:
     legacy_request = urllib.request.Request(
         f"{BASE}/chat",
         data=json.dumps({"problem": "mild bloating", "followups": 9}).encode(),
-        headers={"Content-Type": "application/json"},
+        headers=AUTH,
     )
     with urllib.request.urlopen(legacy_request, timeout=180) as response:
         legacy = json.loads(response.read())

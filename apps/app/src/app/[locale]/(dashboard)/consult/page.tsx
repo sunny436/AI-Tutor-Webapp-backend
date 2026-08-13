@@ -54,7 +54,18 @@ import { AnswerSections } from "./_components/answer-sections";
 import { IntakePanel } from "./_components/intake-panel";
 import { SpeakButton } from "./_components/speak-button";
 
-type Turn =
+/**
+ * `id` is what React reconciles on, and it has to be assigned when the turn is
+ * CREATED rather than derived from its position.
+ *
+ * The list was keyed by array index while turns are both appended and removed
+ * from the end (`dropStreamingPlaceholder` slices the last one off), and one of
+ * the children — IntakePanel — keeps its own `useState` for the selected chips.
+ * That is the exact combination React documents as unsafe: the panel instance
+ * sitting at index 4 is reused for whatever turn lands at index 4 next, so a set
+ * of taps could be carried over onto a different set of questions.
+ */
+type Turn = { id: string } & (
   | { who: "user"; text: string }
   | {
       who: "bot";
@@ -65,7 +76,8 @@ type Turn =
       /** An expired login is not an outage — see the banner below. */
       reason?: "service" | "session" | "signed_out";
     }
-  | { who: "bot"; kind: "intake"; plan: IntakePlan; selection?: Selection; locked: boolean };
+  | { who: "bot"; kind: "intake"; plan: IntakePlan; selection?: Selection; locked: boolean }
+);
 
 /** Phases where a typed message is extra detail rather than a new message. */
 const IN_CONSULTATION = new Set<string>(CONSULTING);
@@ -77,6 +89,11 @@ function newId() {
     return `s_${Date.now()}_${Math.floor(Math.random() * 1e6)}`;
   }
 }
+
+// Module scope on purpose: it must keep counting across a remount, so a turn
+// rendered before a navigation can never collide with one created after it.
+let turnSeq = 0;
+const nextTurnId = () => `turn_${++turnSeq}`;
 
 function BotBubble({ children }: { children: React.ReactNode }) {
   return (
@@ -129,9 +146,26 @@ function ConsultInner() {
   const voice = useVoiceRecorder();
 
   const scrollRef = useRef<HTMLDivElement>(null);
+  const composerRef = useRef<HTMLTextAreaElement>(null);
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [turns, busy]);
+
+  /**
+   * Which conversation is on screen RIGHT NOW.
+   *
+   * `sessionId` cannot answer that question from inside an in-flight request:
+   * the closure captured its value at send time. A card set takes ~17s, which is
+   * a wide enough window to send in chat A, open chat B from the sidebar, and
+   * have A's answer append itself to B's transcript — and, worse, have A's
+   * consultation context become B's, so B's next message continues A's intake
+   * under the wrong condition.
+   *
+   * The database was never affected: `persist(sid, …)` captured `sid` the same
+   * way and always wrote to the right chat. Only the screen went wrong, which is
+   * the harder kind to notice.
+   */
+  const onScreenRef = useRef<string | null>(null);
 
   /**
    * Rehydrate a saved chat. The transcript alone is not enough  -  without the
@@ -141,6 +175,10 @@ function ConsultInner() {
   const loadedRef = useRef<string | null>(null);
   useEffect(() => {
     const key = urlSession ?? "new";
+    // Before the early returns, deliberately. The conversation on screen changes
+    // the moment the URL does — waiting until the transcript has loaded would
+    // leave a window in which an in-flight reply still believes it belongs here.
+    onScreenRef.current = urlSession;
     if (loadedRef.current === key) return;
 
     if (!urlSession) {
@@ -159,7 +197,7 @@ function ConsultInner() {
 
     for (const message of messages) {
       if (message.role === "user") {
-        restored.push({ who: "user", text: message.content });
+        restored.push({ id: nextTurnId(), who: "user", text: message.content });
         continue;
       }
       let state: PersistedConsultState | null = null;
@@ -172,6 +210,7 @@ function ConsultInner() {
 
       if (message.kind === "intake" && state?.intake) {
         restored.push({
+          id: nextTurnId(),
           who: "bot",
           kind: "intake",
           plan: state.intake,
@@ -184,7 +223,7 @@ function ConsultInner() {
           message.kind === "escalation" || message.kind === "chat"
             ? (message.kind as "escalation" | "chat")
             : "answer";
-        restored.push({ who: "bot", kind, text: message.content });
+        restored.push({ id: nextTurnId(), who: "bot", kind, text: message.content });
       }
     }
 
@@ -232,14 +271,14 @@ function ConsultInner() {
       if (result.kind === "intake" && result.intake) {
         return [
           ...locked,
-          { who: "bot", kind: "intake", plan: result.intake, locked: false },
+          { id: nextTurnId(), who: "bot", kind: "intake", plan: result.intake, locked: false },
         ];
       }
       const kind =
         result.kind === "escalation" || result.kind === "chat" || result.kind === "error"
           ? result.kind
           : "answer";
-      return [...locked, { who: "bot", kind, text: result.answer }];
+      return [...locked, { id: nextTurnId(), who: "bot", kind, text: result.answer }];
     });
   }, []);
 
@@ -251,7 +290,13 @@ function ConsultInner() {
     // a reply, so it gets the warning banner rather than a chat bubble.
     setTurns((current) => [
       ...current,
-      { who: "bot", kind: "error", text: message, reason: known?.reason ?? "service" },
+      {
+        id: nextTurnId(),
+        who: "bot",
+        kind: "error",
+        text: message,
+        reason: known?.reason ?? "service",
+      },
     ]);
   };
 
@@ -268,9 +313,13 @@ function ConsultInner() {
     setTurns((current) => {
       const last = current[current.length - 1];
       if (last && last.who === "bot" && "streaming" in last && last.streaming) {
+        // Same `id`, deliberately: this is one bubble growing, not a new turn.
         return [...current.slice(0, -1), { ...last, text: last.text + piece }];
       }
-      return [...current, { who: "bot", kind: "answer", text: piece, streaming: true }];
+      return [
+        ...current,
+        { id: nextTurnId(), who: "bot", kind: "answer", text: piece, streaming: true },
+      ];
     });
   }, []);
 
@@ -284,11 +333,20 @@ function ConsultInner() {
     });
   }, []);
 
-  /** Start (or restart) a consultation from a typed sentence. */
-  const send = async (raw: string) => {
+  /**
+   * Start (or restart) a consultation from a typed sentence.
+   *
+   * `refocus` is only true when the send button was activated from the keyboard.
+   * Pressing Enter never moves focus out of the composer, so it needs nothing;
+   * clicking the button does, and a keyboard user was left having to tab the
+   * whole page again for every message. Restoring focus on a touch tap would
+   * force the on-screen keyboard back open, so the caller distinguishes the two.
+   */
+  const send = async (raw: string, refocus = false) => {
     const text = raw.trim();
     if (!text || busy) return;
     setInput("");
+    if (refocus) composerRef.current?.focus();
 
     let sid = sessionId;
     if (!sid) {
@@ -308,13 +366,14 @@ function ConsultInner() {
       // already loaded is what closes it: this tab is the authority on a session
       // it just created, and there is nothing on the server to restore.
       loadedRef.current = sid;
+      onScreenRef.current = sid;
       setSessionId(sid);
       // Put the session in the URL so a refresh keeps the chat and the sidebar
       // can highlight it.
       window.history.replaceState({}, "", `?c=${sid}`);
     }
 
-    setTurns((current) => [...current, { who: "user", text }]);
+    setTurns((current) => [...current, { id: nextTurnId(), who: "user", text }]);
     saveMsg({ sessionId: sid, role: "user", content: text }).catch(() => {});
 
     // Typing during a consultation is extra detail; otherwise the message gets
@@ -326,18 +385,27 @@ function ConsultInner() {
     try {
       const result = await postConsultStream(
         inConsultation ? { context, freeText: text } : { problem: text, context },
-        streamToken,
+        // Tokens stop reaching the screen the instant the reader opens another
+        // chat; the request itself is left to finish, because an answer already
+        // paid for should be waiting in the chat that asked for it.
+        (piece) => {
+          if (onScreenRef.current === sid) streamToken(piece);
+        },
         undefined,
         token,
       );
+      // Save first and render second. `persist` is addressed to `sid`, so it is
+      // always correct; only the screen has to be told apart.
+      persist(sid, result);
+      if (onScreenRef.current !== sid) return;
       // `apply` still runs, and still receives the authoritative result. The
       // streamed text was only a preview: dropping the placeholder here and
       // letting `apply` append the real turn keeps one code path responsible for
       // what ends up in the transcript, whether or not any tokens arrived.
       dropStreamingPlaceholder();
       apply(result);
-      persist(sid, result);
     } catch (error) {
+      if (onScreenRef.current !== sid) return;
       dropStreamingPlaceholder();
       failed(error);
     } finally {
@@ -353,6 +421,7 @@ function ConsultInner() {
       // Same claim as in `send` — a session this tab just minted must not be
       // rehydrated out from under itself.
       loadedRef.current = sid;
+      onScreenRef.current = sid;
       setSessionId(sid);
     }
 
@@ -363,9 +432,13 @@ function ConsultInner() {
         undefined,
         token,
       );
-      apply(result);
+      // Same guard as `send`: the plan is written to the chat that asked for it,
+      // and only rendered if that chat is still the one being read.
       persist(sid, result);
+      if (onScreenRef.current !== sid) return;
+      apply(result);
     } catch (error) {
+      if (onScreenRef.current !== sid) return;
       failed(error);
     } finally {
       setBusy(false);
@@ -459,6 +532,19 @@ function ConsultInner() {
       <div className="relative mx-auto flex h-full w-full max-w-3xl flex-col px-3 sm:px-5">
         <div
           ref={scrollRef}
+          // The transcript announces itself. Without this a screen-reader user
+          // was told nothing at all when a reply arrived — on a chat surface
+          // that is not a rough edge, it is the product not existing for them.
+          //
+          // `additions` rather than the default `additions text` on purpose:
+          // streamed tokens are written into the SAME text node, which is a text
+          // mutation, so the default would read the answer out again on every
+          // chunk. Restricting it to additions means each turn is announced once
+          // when it appears.
+          role="log"
+          aria-live="polite"
+          aria-relevant="additions"
+          aria-label="Conversation"
           // On an empty chat the greeting is centred rather than pinned to the
           // top, which otherwise left a screen-height void between it and the
           // composer and made the page look half-loaded. `justify-center` only
@@ -494,10 +580,10 @@ function ConsultInner() {
             </div>
           )}
 
-          {turns.map((turn, i) =>
+          {turns.map((turn) =>
             turn.who === "user" ? (
               <div
-                key={i}
+                key={turn.id}
                 // `break-words` is not decoration: a pasted URL or a long
                 // unbroken word would otherwise widen the bubble past the
                 // viewport and give the whole page a horizontal scrollbar.
@@ -506,7 +592,7 @@ function ConsultInner() {
                 {turn.text}
               </div>
             ) : turn.kind === "intake" ? (
-              <BotBubble key={i}>
+              <BotBubble key={turn.id}>
                 {turn.locked ? (
                   <div className="rounded-2xl border border-border bg-white/60 p-3.5 text-sm text-primary/60 dark:bg-white/[0.03]">
                     <span className="font-medium text-primary/75">
@@ -539,7 +625,7 @@ function ConsultInner() {
               // it isn't something the assistant said, and dressing it up as one
               // makes users reword their message instead of waiting.
               <div
-                key={i}
+                key={turn.id}
                 role="alert"
                 className="animate-in fade-in slide-in-from-bottom-1 flex items-start gap-2.5 rounded-xl border border-rose-500/40 bg-rose-50/80 p-3.5 text-sm text-rose-700 shadow-sm dark:bg-rose-500/10 dark:text-rose-300"
               >
@@ -581,7 +667,7 @@ function ConsultInner() {
                 </div>
               </div>
             ) : (
-              <BotBubble key={i}>
+              <BotBubble key={turn.id}>
                 <div className="rounded-2xl rounded-tl-md border border-border bg-white/80 p-3.5 shadow-sm backdrop-blur dark:bg-white/[0.04]">
                   {turn.kind === "escalation" ? (
                     <div className="flex gap-2 text-sm text-rose-600 dark:text-rose-400">
@@ -625,9 +711,13 @@ function ConsultInner() {
                 <Leaf className="h-4 w-4" />
               </span>
               <div className="flex items-center gap-1 rounded-2xl rounded-tl-md border border-border bg-white/80 px-4 py-4 dark:bg-white/[0.04]">
-                <span className="h-2 w-2 animate-bounce rounded-full bg-emerald-500 [animation-delay:-0.3s]" />
-                <span className="h-2 w-2 animate-bounce rounded-full bg-emerald-500 [animation-delay:-0.15s]" />
-                <span className="h-2 w-2 animate-bounce rounded-full bg-emerald-500" />
+                {/* Three bouncing dots say nothing out loud. This is the text
+                    the surrounding log reads when the block appears — no nested
+                    live region, which would announce it a second time. */}
+                <span className="sr-only">Preparing your answer…</span>
+                <span aria-hidden className="h-2 w-2 animate-bounce rounded-full bg-emerald-500 [animation-delay:-0.3s]" />
+                <span aria-hidden className="h-2 w-2 animate-bounce rounded-full bg-emerald-500 [animation-delay:-0.15s]" />
+                <span aria-hidden className="h-2 w-2 animate-bounce rounded-full bg-emerald-500" />
               </div>
             </div>
           )}
@@ -693,6 +783,8 @@ function ConsultInner() {
               )}
             </button>
             <textarea
+              ref={composerRef}
+              aria-label="Your message"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => {
@@ -740,12 +832,16 @@ function ConsultInner() {
             </button>
             <button
               type="button"
-              onClick={() => send(input)}
+              // `detail === 0` means the click came from Enter or Space on the
+              // button rather than a pointer — the one case where focus needs
+              // putting back in the composer. See `send`.
+              onClick={(e) => send(input, e.detail === 0)}
               disabled={busy || !input.trim()}
+              aria-label="Send"
               // 44px minimum on touch: below that it is measurably harder to hit.
               className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white elev-2 transition-all duration-200 hover:brightness-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none sm:h-10 sm:w-10"
             >
-              <SendHorizonal className="h-4 w-4" />
+              <SendHorizonal aria-hidden className="h-4 w-4" />
             </button>
           </div>
           <p className="mt-2 text-center text-[11px] text-primary/40">
