@@ -25,6 +25,21 @@
 
     Consequence worth knowing: a logon-triggered task does not run until someone
     logs into the machine after a reboot. Until then the site is down.
+
+    THE SCHEDULED TASK NEEDS A TIME LIMIT, and this is not stored in the repo, so
+    it is written here to survive being forgotten:
+
+        $t = Get-ScheduledTask -TaskName "AyurvedaSite"
+        $s = $t.Settings; $s.ExecutionTimeLimit = "PT2M"
+        Set-ScheduledTask -TaskName "AyurvedaSite" -Settings $s
+
+    It shipped as `PT0S`, which means NO limit. One pass hung and sat there for
+    32 minutes; because the task refuses a new instance while one is running,
+    every scheduled pass after it was declined (0x800710E0) and nothing was
+    supervised at all. The frontend went down during that window and stayed down,
+    with a watchdog that looked perfectly healthy in Task Scheduler.
+
+    A supervisor with no timeout is a single hang away from being no supervisor.
 #>
 
 $ErrorActionPreference = "Stop"
