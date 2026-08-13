@@ -22,6 +22,7 @@ import { api } from "@v1/backend/convex/_generated/api";
 import { useMutation, useQuery } from "convex/react";
 import {
   AlertTriangle,
+  Check,
   FileText,
   Leaf,
   Loader2,
@@ -46,11 +47,13 @@ import { CONSULTING, answeredCount } from "@/lib/consult/types";
 import type {
   ConsultContext,
   ConsultResult,
+  ConsultSource,
   IntakePlan,
   PersistedConsultState,
   Selection,
 } from "@/lib/consult/types";
 import { AnswerSections } from "./_components/answer-sections";
+import { AnswerSources } from "./_components/answer-sources";
 import { IntakePanel } from "./_components/intake-panel";
 import { SpeakButton } from "./_components/speak-button";
 
@@ -75,12 +78,50 @@ type Turn = { id: string } & (
       streaming?: boolean;
       /** An expired login is not an outage — see the banner below. */
       reason?: "service" | "session" | "signed_out";
+      /** Which knowledge notes this answer was drawn from. */
+      sources?: ConsultSource[];
     }
   | { who: "bot"; kind: "intake"; plan: IntakePlan; selection?: Selection; locked: boolean }
 );
 
 /** Phases where a typed message is extra detail rather than a new message. */
 const IN_CONSULTATION = new Set<string>(CONSULTING);
+
+/**
+ * Opening lines for an empty chat.
+ *
+ * Every one of these has a note behind it in `data/knowledge/` — acidity,
+ * insomnia, gas/bloating and hair-fall are four of the twenty-nine — so tapping
+ * one leads to a grounded answer rather than the model improvising. Written the
+ * way people type, which is also how the `aliases:` field in those same notes is
+ * written ("neend nahi aati", "khatti dakar", "baal jhadna").
+ */
+const STARTERS = [
+  "Acidity ho rahi hai",
+  "Neend nahi aati",
+  "Gas aur bloating",
+  "Baal jhad rahe hain",
+] as const;
+
+/**
+ * What the backend is doing during the wait, in the order it does it.
+ *
+ * Measured on this deployment: question cards take ~17s and the final plan ~18s.
+ * Three bouncing dots for two seconds read as thinking; for seventeen they read
+ * as broken, and people reload — which abandons a request that was about to
+ * succeed and costs another one.
+ *
+ * These are the real stages of `run_turn`, not invented reassurance: the router
+ * classifies, `_retrieve` searches the notes, then the planner or responder
+ * writes. The timings below are elapsed-time thresholds rather than events from
+ * the server — an honest progress indication that does not claim more precision
+ * than it has, and needs no protocol change to the existing SSE channel.
+ */
+const STAGES = [
+  { at: 0, label: "Samajh raha hoon…", english: "Understanding" },
+  { at: 2500, label: "Notes dhoond raha hoon…", english: "Searching the notes" },
+  { at: 7000, label: "Aapke liye plan bana raha hoon…", english: "Writing your plan" },
+] as const;
 
 function newId() {
   try {
@@ -102,7 +143,14 @@ function BotBubble({ children }: { children: React.ReactNode }) {
     // right edge that made long answers look like chat messages rather than
     // written guidance.
     <div className="flex animate-rise-in gap-3">
-      <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white elev-1 ring-1 ring-emerald-600/15">
+      {/* `bg-brand`, not an emerald→teal gradient. The app had eight hand-rolled
+          copies of that gradient competing with the token-driven <Button> on the
+          same screens — two primary treatments, neither of which was the design
+          system's. */}
+      <span
+        aria-hidden
+        className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-brand text-brand-foreground elev-1"
+      >
         <Leaf className="h-4 w-4" />
       </span>
       <div className="min-w-0 flex-1">{children}</div>
@@ -150,6 +198,23 @@ function ConsultInner() {
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [turns, busy]);
+
+  /**
+   * How long the current request has been running, for the staged progress.
+   *
+   * Reset to 0 the moment `busy` turns true, so a second question does not
+   * inherit the first one's clock and skip straight to the last stage. Ticks
+   * once a second — the thresholds are seconds apart, so anything faster is
+   * re-rendering the transcript for no visible difference.
+   */
+  const [elapsed, setElapsed] = useState(0);
+  useEffect(() => {
+    if (!busy) return;
+    setElapsed(0);
+    const startedAt = Date.now();
+    const timer = window.setInterval(() => setElapsed(Date.now() - startedAt), 1000);
+    return () => window.clearInterval(timer);
+  }, [busy]);
 
   /**
    * Which conversation is on screen RIGHT NOW.
@@ -223,7 +288,13 @@ function ConsultInner() {
           message.kind === "escalation" || message.kind === "chat"
             ? (message.kind as "escalation" | "chat")
             : "answer";
-        restored.push({ id: nextTurnId(), who: "bot", kind, text: message.content });
+        restored.push({
+          id: nextTurnId(),
+          who: "bot",
+          kind,
+          text: message.content,
+          sources: state?.sources,
+        });
       }
     }
 
@@ -248,6 +319,11 @@ function ConsultInner() {
         v: 1,
         context: result.context,
         intake: result.intake ?? null,
+        // Stored so citations survive a reload. Without it, reopening a
+        // consultation showed the plan with its provenance silently missing —
+        // worse than never showing it, because the reader cannot tell "no
+        // sources" from "sources were dropped on the way to storage".
+        sources: result.sources?.length ? result.sources : undefined,
       };
       saveMsg({
         sessionId: sid,
@@ -278,7 +354,10 @@ function ConsultInner() {
         result.kind === "escalation" || result.kind === "chat" || result.kind === "error"
           ? result.kind
           : "answer";
-      return [...locked, { id: nextTurnId(), who: "bot", kind, text: result.answer }];
+      return [
+        ...locked,
+        { id: nextTurnId(), who: "bot", kind, text: result.answer, sources: result.sources },
+      ];
     });
   }, []);
 
@@ -559,22 +638,39 @@ function ConsultInner() {
               whole point is that they're chosen for that specific problem, so
               offering any before then would just be guessing. */}
           {empty && (
-            <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+            <div className="animate-rise-in">
               <BotBubble>
-                <div className="rounded-2xl rounded-tl-md border border-border bg-white/80 p-4 shadow-sm backdrop-blur dark:bg-white/[0.04]">
-                  <p className="text-sm font-semibold text-primary">Namaste 🌿</p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-primary/75">
-                    I&apos;m your Ayurveda &amp; Yoga wellness assistant. Tell me what&apos;s
-                    troubling you  -  one line is enough.
+                <div className="rounded-2xl rounded-tl-md border border-border bg-card p-4 elev-1">
+                  <p className="font-display text-base font-semibold text-foreground">
+                    Namaste
                   </p>
-                  <p className="mt-2.5 text-sm leading-relaxed text-primary/75">
-                    I&apos;ll then ask a few quick questions you can simply tap through, and give
-                    you the likely root cause, a food chart, yoga &amp; breathing, and a daily
-                    routine.
+                  <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
+                    Tell me what&apos;s troubling you — one line is enough, in English,
+                    Hindi or Hinglish. I&apos;ll ask a few questions you can tap through,
+                    then build a plan from the Ayurveda notes and show you which ones
+                    it came from.
                   </p>
-                  <p className="mt-3 text-xs text-primary/45">
-                    For example: <span className="italic">&ldquo;I have had acidity for a week&rdquo;</span>
-                  </p>
+
+                  {/* STARTERS, not a second paragraph explaining the first.
+                      A blank chat asks the reader to compose an opening line
+                      before they know what this thing can do, which is the
+                      moment most people close the tab. These are the four most
+                      common complaints in the knowledge base, in the language
+                      people actually type — the `aliases` in the notes
+                      themselves are written the same way. */}
+                  <div className="mt-3.5 flex flex-wrap gap-1.5">
+                    {STARTERS.map((starter) => (
+                      <button
+                        key={starter}
+                        type="button"
+                        onClick={() => send(starter)}
+                        disabled={busy}
+                        className="rounded-full border border-border bg-surface-2 px-3 py-1.5 text-xs font-medium text-text-secondary transition-colors hover:border-brand/40 hover:bg-brand-soft hover:text-brand disabled:opacity-50"
+                      >
+                        {starter}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </BotBubble>
             </div>
@@ -587,15 +683,15 @@ function ConsultInner() {
                 // `break-words` is not decoration: a pasted URL or a long
                 // unbroken word would otherwise widen the bubble past the
                 // viewport and give the whole page a horizontal scrollbar.
-                className="ml-auto max-w-[85%] animate-rise-in whitespace-pre-wrap break-words rounded-2xl rounded-br-md bg-gradient-to-br from-emerald-500 to-teal-600 px-4 py-2.5 text-sm font-medium leading-relaxed text-white elev-2 sm:max-w-[78%]"
+                className="ml-auto max-w-[85%] animate-rise-in whitespace-pre-wrap break-words rounded-2xl rounded-br-md bg-brand px-4 py-2.5 text-sm font-medium leading-relaxed text-brand-foreground elev-2 sm:max-w-[78%]"
               >
                 {turn.text}
               </div>
             ) : turn.kind === "intake" ? (
               <BotBubble key={turn.id}>
                 {turn.locked ? (
-                  <div className="rounded-2xl border border-border bg-white/60 p-3.5 text-sm text-primary/60 dark:bg-white/[0.03]">
-                    <span className="font-medium text-primary/75">
+                  <div className="rounded-2xl border border-border bg-surface-2 p-3.5 text-sm text-text-secondary">
+                    <span className="font-medium text-foreground">
                       {turn.plan.condition || "Your answers"}
                     </span>{" "}
                     {/* Count what was ACTUALLY answered. This printed
@@ -627,7 +723,7 @@ function ConsultInner() {
               <div
                 key={turn.id}
                 role="alert"
-                className="animate-in fade-in slide-in-from-bottom-1 flex items-start gap-2.5 rounded-xl border border-rose-500/40 bg-rose-50/80 p-3.5 text-sm text-rose-700 shadow-sm dark:bg-rose-500/10 dark:text-rose-300"
+                className="animate-rise-in flex items-start gap-2.5 rounded-xl border border-destructive/30 bg-destructive/5 p-3.5 text-sm text-destructive elev-1"
               >
                 <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
                 <div className="min-w-0">
@@ -651,7 +747,7 @@ function ConsultInner() {
                   {turn.reason === "signed_out" ? (
                     <a
                       href={`/login?redirect=${encodeURIComponent("/consult")}`}
-                      className="mt-2 inline-block rounded-lg bg-rose-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-rose-700"
+                      className="mt-2 inline-block rounded-lg bg-destructive px-3 py-1.5 text-xs font-semibold text-destructive-foreground transition hover:brightness-110"
                     >
                       Sign in again
                     </a>
@@ -659,7 +755,7 @@ function ConsultInner() {
                     <button
                       type="button"
                       onClick={() => window.location.reload()}
-                      className="mt-2 rounded-lg bg-rose-600 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-rose-700"
+                      className="mt-2 rounded-lg bg-destructive px-3 py-1.5 text-xs font-semibold text-destructive-foreground transition hover:brightness-110"
                     >
                       Refresh page
                     </button>
@@ -668,16 +764,16 @@ function ConsultInner() {
               </div>
             ) : (
               <BotBubble key={turn.id}>
-                <div className="rounded-2xl rounded-tl-md border border-border bg-white/80 p-3.5 shadow-sm backdrop-blur dark:bg-white/[0.04]">
+                <div className="rounded-2xl rounded-tl-md border border-border bg-card p-3.5 elev-1">
                   {turn.kind === "escalation" ? (
-                    <div className="flex gap-2 text-sm text-rose-600 dark:text-rose-400">
+                    <div className="flex gap-2 text-sm text-destructive">
                       <ShieldAlert className="h-5 w-5 shrink-0" />
                       <p className="whitespace-pre-wrap">{turn.text}</p>
                     </div>
                   ) : turn.kind === "chat" ? (
                     // Conversational replies are prose, not a sectioned plan, so
                     // they render as plain paragraphs.
-                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-primary/80">
+                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-text-secondary">
                       {turn.text}
                     </p>
                   ) : "streaming" in turn && turn.streaming ? (
@@ -685,15 +781,22 @@ function ConsultInner() {
                     // rather than through AnswerSections, because a half-written
                     // answer has no complete section headings to split on yet
                     // and would flicker between layouts as they appeared.
-                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-primary/80">
+                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-text-secondary">
                       {turn.text}
                       <span
                         aria-hidden
-                        className="ml-0.5 inline-block h-4 w-[2px] translate-y-0.5 animate-pulse bg-emerald-500/70"
+                        className="ml-0.5 inline-block h-4 w-[2px] translate-y-0.5 animate-soft-pulse bg-brand"
                       />
                     </p>
                   ) : (
                     <AnswerSections text={turn.text} />
+                  )}
+                  {/* Provenance. The backend has always returned this and the
+                      UI has never rendered it once — see answer-sources.tsx.
+                      Not shown while streaming: the sources arrive with the
+                      final result, not with the tokens. */}
+                  {!("streaming" in turn && turn.streaming) && "sources" in turn && (
+                    <AnswerSources sources={turn.sources ?? []} />
                   )}
                   {/* Error turns never reach here - they are filtered further
                       up - so there is no guard against reading "the backend is
@@ -706,20 +809,39 @@ function ConsultInner() {
           )}
 
           {busy && (
-            <div className="flex gap-2.5">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-600 text-white shadow-sm">
-                <Leaf className="h-4 w-4" />
-              </span>
-              <div className="flex items-center gap-1 rounded-2xl rounded-tl-md border border-border bg-white/80 px-4 py-4 dark:bg-white/[0.04]">
-                {/* Three bouncing dots say nothing out loud. This is the text
-                    the surrounding log reads when the block appears — no nested
-                    live region, which would announce it a second time. */}
-                <span className="sr-only">Preparing your answer…</span>
-                <span aria-hidden className="h-2 w-2 animate-bounce rounded-full bg-emerald-500 [animation-delay:-0.3s]" />
-                <span aria-hidden className="h-2 w-2 animate-bounce rounded-full bg-emerald-500 [animation-delay:-0.15s]" />
-                <span aria-hidden className="h-2 w-2 animate-bounce rounded-full bg-emerald-500" />
+            <BotBubble>
+              <div className="inline-flex flex-col gap-2 rounded-2xl rounded-tl-md border border-border bg-card px-4 py-3 elev-1">
+                {/* The surrounding log announces this block once when it
+                    appears. No nested live region — that would read it twice —
+                    and the stage label is deliberately NOT announced on every
+                    change, which would interrupt continuously for 17 seconds. */}
+                <span className="sr-only">Preparing your answer</span>
+                {STAGES.map((stage, index) => {
+                  const reached = elapsed >= stage.at;
+                  const current =
+                    reached && (index === STAGES.length - 1 || elapsed < STAGES[index + 1]!.at);
+                  if (!reached) return null;
+                  return (
+                    <span
+                      key={stage.english}
+                      aria-hidden
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      {current ? (
+                        <Loader2 className="h-3.5 w-3.5 shrink-0 animate-spin text-brand" />
+                      ) : (
+                        <Check className="h-3.5 w-3.5 shrink-0 text-brand" />
+                      )}
+                      <span
+                        className={current ? "text-foreground" : "text-text-secondary/70"}
+                      >
+                        {stage.label}
+                      </span>
+                    </span>
+                  );
+                })}
               </div>
-            </div>
+            </BotBubble>
           )}
         </div>
 
@@ -730,21 +852,21 @@ function ConsultInner() {
               {documents.map((name) => (
                 <span
                   key={name}
-                  className="flex items-center gap-1.5 rounded-lg bg-emerald-500/10 px-2 py-1 text-[11px] text-emerald-700 dark:text-emerald-300"
+                  className="flex items-center gap-1.5 rounded-lg bg-brand-soft px-2 py-1 text-2xs text-brand"
                 >
                   <FileText className="h-3 w-3" />
                   {name}
                 </span>
               ))}
-              <span className="text-[11px] text-primary/40">
+              <span className="text-2xs text-text-secondary">
                 — ask me anything about these
               </span>
             </div>
           )}
 
           {voice.state === "recording" && (
-            <div className="mb-2 flex items-center gap-2 rounded-lg bg-rose-500/10 px-3 py-1.5 text-[11px] text-rose-600 dark:text-rose-400">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-rose-500" />
+            <div className="mb-2 flex items-center gap-2 rounded-lg bg-destructive/10 px-3 py-1.5 text-2xs text-destructive">
+              <span aria-hidden className="h-2 w-2 animate-soft-pulse rounded-full bg-destructive" />
               Listening… {voice.seconds}s
               <button
                 type="button"
@@ -760,7 +882,7 @@ function ConsultInner() {
               white, so it reads as one solid object over the page wash instead
               of a pane of frosted glass. pb + safe-area keeps it clear of the
               home indicator on modern phones. */}
-          <div className="mb-[max(0.75rem,env(safe-area-inset-bottom))] flex items-end gap-1.5 rounded-2xl border border-border bg-card/95 p-2 elev-2 backdrop-blur-sm transition-all duration-200 focus-within:border-emerald-500/60 focus-within:ring-4 focus-within:ring-emerald-500/10 sm:gap-2">
+          <div className="mb-[max(0.75rem,env(safe-area-inset-bottom))] flex items-end gap-1.5 rounded-2xl border border-border bg-card/95 p-2 elev-2 backdrop-blur-sm transition-all duration-200 focus-within:border-brand/60 focus-within:ring-4 focus-within:ring-brand/10 sm:gap-2">
             <input
               ref={fileInput}
               type="file"
@@ -774,7 +896,7 @@ function ConsultInner() {
               onClick={() => fileInput.current?.click()}
               disabled={uploading || busy}
               title="Attach a report (PDF, photo or text)"
-              className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-primary/50 transition hover:bg-primary/5 hover:text-primary disabled:opacity-40"
+              className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-text-secondary transition hover:bg-surface-2 hover:text-foreground disabled:opacity-40"
             >
               {uploading ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
@@ -805,7 +927,7 @@ function ConsultInner() {
               // 16px on small screens is not a style choice: iOS Safari zooms
               // the whole page when a focused input is smaller than that, and
               // the zoom does not undo itself.
-              className="max-h-40 flex-1 resize-none bg-transparent p-2 text-base leading-relaxed text-primary outline-none placeholder:text-primary/40 sm:text-sm"
+              className="max-h-40 flex-1 resize-none bg-transparent p-2 text-base leading-relaxed text-foreground outline-none placeholder:text-text-secondary sm:text-sm"
             />
             <button
               type="button"
@@ -818,8 +940,8 @@ function ConsultInner() {
               }
               className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl transition disabled:opacity-40 ${
                 voice.state === "recording"
-                  ? "bg-rose-500/15 text-rose-600 dark:text-rose-400"
-                  : "text-primary/50 hover:bg-primary/5 hover:text-primary"
+                  ? "bg-destructive/15 text-destructive"
+                  : "text-text-secondary hover:bg-surface-2 hover:text-foreground"
               }`}
             >
               {voice.state === "processing" ? (
@@ -839,12 +961,19 @@ function ConsultInner() {
               disabled={busy || !input.trim()}
               aria-label="Send"
               // 44px minimum on touch: below that it is measurably harder to hit.
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white elev-2 transition-all duration-200 hover:brightness-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none sm:h-10 sm:w-10"
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand text-brand-foreground elev-2 transition-all duration-200 hover:brightness-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-35 disabled:shadow-none sm:h-10 sm:w-10"
             >
-              <SendHorizonal aria-hidden className="h-4 w-4" />
+              {/* idle → sending. A send button that looks identical before and
+                  after the tap invites a second tap, and on a 17-second request
+                  that is a second billed consultation. */}
+              {busy ? (
+                <Loader2 aria-hidden className="h-4 w-4 animate-spin" />
+              ) : (
+                <SendHorizonal aria-hidden className="h-4 w-4" />
+              )}
             </button>
           </div>
-          <p className="mt-2 text-center text-[11px] text-primary/40">
+          <p className="mt-2 text-center text-2xs text-text-secondary">
             Educational wellness guidance only · Ayurveda &amp; Yoga · by Ollasoftware
           </p>
         </div>
@@ -855,7 +984,7 @@ function ConsultInner() {
 
 export default function ConsultPage() {
   return (
-    <Suspense fallback={<div className="p-8 text-sm text-primary/50">Loading...</div>}>
+    <Suspense fallback={<div className="p-8 text-sm text-text-secondary">Loading…</div>}>
       <ConsultInner />
     </Suspense>
   );

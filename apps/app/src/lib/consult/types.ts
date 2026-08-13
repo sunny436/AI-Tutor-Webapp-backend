@@ -100,6 +100,23 @@ export interface ConsultContext {
  */
 export type ConsultKind = "chat" | "intake" | "answer" | "escalation" | "error";
 
+/**
+ * Where an answer came from.
+ *
+ * `source` is the knowledge file the passage was retrieved from — `acidity.md`,
+ * `hair-fall.md`. Per `backend-python/docs/knowledge-format.md` the filename IS
+ * the citation, which is also why it maps cleanly onto a published URL later.
+ *
+ * `score` is the retrieval relevance, higher being closer. It is shown rounded
+ * and only as supporting detail: a number with two decimal places invites a
+ * precision the embedding does not have.
+ */
+export interface ConsultSource {
+  section: string;
+  source: string;
+  score?: number | null;
+}
+
 export interface ConsultResult {
   kind: ConsultKind;
   condition: string;
@@ -107,7 +124,7 @@ export interface ConsultResult {
   intake?: IntakePlan | null;
   answer: string;
   context: ConsultContext;
-  sources: { section: string; source: string; score?: number | null }[];
+  sources: ConsultSource[];
 }
 
 export interface ConsultRequest {
@@ -118,11 +135,24 @@ export interface ConsultRequest {
   profile?: string;
 }
 
-/** What gets persisted on an assistant row so a reopened chat can resume. */
+/**
+ * What gets persisted on an assistant row so a reopened chat can resume.
+ *
+ * `sources` is stored so citations survive a reload. Without it, reopening a
+ * consultation showed the plan with its provenance silently missing — which is
+ * worse than never showing it, because the reader has no way to tell "this
+ * answer had no sources" from "the sources were dropped on the way to storage".
+ *
+ * `v` stays 1 on purpose. The field is OPTIONAL, so every blob written before
+ * this change still validates and still resumes; `state.sources ?? []` is the
+ * only reader. Bumping the version would have made `load_context` discard every
+ * existing conversation — see `SUPPORTED_VERSION` in consult/state.py.
+ */
 export interface PersistedConsultState {
   v: 1;
   context: ConsultContext;
   intake?: IntakePlan | null;
+  sources?: ConsultSource[];
 }
 
 export type Selection = Record<string, ConsultAnswer>;

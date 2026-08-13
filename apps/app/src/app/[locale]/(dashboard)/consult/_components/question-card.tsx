@@ -66,9 +66,9 @@ export function QuestionCard({
       aria-labelledby={labelId}
       aria-describedby={hint ? hintId : undefined}
       className={cn(
-        "rounded-2xl border bg-white/70 p-4 shadow-sm backdrop-blur transition-colors dark:bg-white/[0.04]",
+        "rounded-2xl border bg-card p-4 elev-1 transition-colors",
         "animate-in fade-in slide-in-from-bottom-2 fill-mode-both duration-500",
-        answered ? "border-emerald-500/40" : "border-border",
+        answered ? "border-brand/40" : "border-border",
       )}
       // Cards reveal in sequence rather than all at once, so a five-question
       // form reads as a conversation instead of a wall of controls.
@@ -79,8 +79,8 @@ export function QuestionCard({
           className={cn(
             "mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-lg text-xs font-bold transition-colors",
             answered
-              ? "bg-emerald-500 text-white"
-              : "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300",
+              ? "bg-brand text-brand-foreground"
+              : "bg-brand-soft text-brand",
           )}
         >
           {/* The number and the tick are decoration for the label beside them;
@@ -93,12 +93,12 @@ export function QuestionCard({
           )}
         </span>
         <div className="min-w-0 flex-1">
-          <p id={labelId} className="text-sm font-semibold leading-snug text-primary">
+          <p id={labelId} className="text-sm font-semibold leading-snug text-foreground">
             {question.label}
             {answered && <span className="sr-only"> — answered</span>}
           </p>
           {hint && (
-            <p id={hintId} className="mt-0.5 text-xs text-primary/45">
+            <p id={hintId} className="mt-0.5 text-xs text-text-secondary">
               {hint}
             </p>
           )}
@@ -114,7 +114,7 @@ export function QuestionCard({
           value={answer.text ?? ""}
           onChange={(e) => onChange(question.id, { ...answer, text: e.target.value })}
           placeholder="Type here (optional)…"
-          className="w-full resize-none rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none transition focus:border-emerald-500/60 focus:ring-2 focus:ring-emerald-500/20"
+          className="w-full resize-none rounded-xl border border-border bg-background px-3 py-2 text-sm outline-none transition focus:border-brand/60 focus:ring-2 focus:ring-brand/20"
         />
       ) : (
         <div

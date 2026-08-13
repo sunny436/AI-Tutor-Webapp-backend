@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@v1/ui/button";
 import { Sparkles } from "lucide-react";
 import { useMemo, useState } from "react";
 import type { ConsultAnswer, IntakePlan, Selection } from "@/lib/consult/types";
@@ -28,7 +29,10 @@ export function IntakePanel({
   const [selection, setSelection] = useState<Selection>(initialSelection ?? {});
 
   const total = plan.questions.length;
-  const done = useMemo(() => answeredCount(plan.questions, selection), [plan.questions, selection]);
+  const done = useMemo(
+    () => answeredCount(plan.questions, selection),
+    [plan.questions, selection],
+  );
   const progress = total === 0 ? 0 : Math.round((done / total) * 100);
 
   const change = (questionId: string, next: ConsultAnswer) =>
@@ -37,26 +41,28 @@ export function IntakePanel({
   return (
     <div className="space-y-3">
       {/* Header + progress */}
-      <div className="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-teal-500/5 p-4">
-        <div className="flex items-center gap-2 text-sm font-semibold text-primary">
-          <Sparkles className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+      <div className="rounded-2xl border border-brand/20 bg-brand-soft/50 p-4">
+        <div className="flex items-center gap-2 font-display text-base font-semibold text-foreground">
+          <Sparkles aria-hidden className="h-4 w-4 text-brand" />
           {plan.condition || "A few quick questions"}
         </div>
-        {plan.note && <p className="mt-1 text-sm leading-relaxed text-primary/70">{plan.note}</p>}
+        {plan.note && (
+          <p className="mt-1 text-sm leading-relaxed text-text-secondary">{plan.note}</p>
+        )}
 
         <div className="mt-3 flex items-center gap-3">
           {/* The bar is a picture of the count beside it, so it is described
               once, in words, rather than twice. */}
           <div
             aria-hidden
-            className="h-1.5 flex-1 overflow-hidden rounded-full bg-emerald-500/15"
+            className="h-1.5 flex-1 overflow-hidden rounded-full bg-brand/15"
           >
             <div
-              className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-500"
+              className="h-full rounded-full bg-brand transition-all duration-500"
               style={{ width: `${progress}%` }}
             />
           </div>
-          <span className="shrink-0 text-[11px] font-medium tabular-nums text-primary/50">
+          <span className="shrink-0 font-mono text-2xs font-medium tabular-nums text-text-secondary">
             <span aria-hidden>
               {done}/{total}
             </span>
@@ -85,18 +91,13 @@ export function IntakePanel({
           type="button"
           disabled={pending}
           onClick={() => onSubmit({})}
-          className="text-xs text-primary/50 underline underline-offset-2 transition hover:text-primary/80 disabled:opacity-50"
+          className="text-xs text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground disabled:opacity-50"
         >
           Skip — answer now
         </button>
-        <button
-          type="button"
-          disabled={pending}
-          onClick={() => onSubmit(selection)}
-          className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-emerald-500/25 transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-50"
-        >
+        <Button type="button" disabled={pending} onClick={() => onSubmit(selection)}>
           {pending ? "Preparing your plan…" : done > 0 ? "Get my plan" : "Continue"}
-        </button>
+        </Button>
       </div>
     </div>
   );

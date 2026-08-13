@@ -3,60 +3,226 @@
 import {
   Apple,
   ClipboardCheck,
+  HeartPulse,
   Search,
   ShieldAlert,
   Sparkles,
   Sun,
   Wind,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 
 /**
- * Renders the AI's plan as colour-coded section cards.
+ * Renders the assistant's plan.
  *
- * The backend prompt (`ANSWER_PROMPT`) always emits six `**bold**` headings —
- * Root Cause, Changes To Make, Yoga & Breathing, Food Chart, Daily Routine, When
- * To See A Doctor — and this maps each to an icon and palette. Extracted from
- * the consult page unchanged so the answer styling is exactly as before.
+ * TWO THINGS CHANGED HERE.
+ *
+ * 1. COLOUR. This file used to carry a second, parallel design system: a
+ *    `PALETTE` object of six hardcoded Tailwind hues (amber, emerald, sky, lime,
+ *    violet, rose), selected by string-matching the section heading. Six
+ *    competing colours on one answer is a rainbow, not a hierarchy — everything
+ *    is emphasised so nothing is. The ICONS now carry the differentiation, which
+ *    is what icons are for, and colour is spent in the two places it means
+ *    something: saffron on Root Cause (the finding) and the destructive token on
+ *    When To See A Doctor (the safety rail, and the one section the backend
+ *    forces into every answer — `ALWAYS_INCLUDED` in sections.py).
+ *
+ * 2. MARKDOWN. The old renderer understood exactly two things: `**bold**` and a
+ *    leading bullet character. Anything else the model emitted — numbered steps,
+ *    nested bullets, inline code, a `## heading` inside a section — rendered as
+ *    literal asterisks and hashes in the user's face. The prompts ask for
+ *    structure, so the structure arrives; it just was not being read.
+ *
+ * Still deliberately NOT a markdown library. The input is not arbitrary
+ * markdown: it is generated against `ANSWER_PROMPT` and reliably produces bold
+ * headings, bullets and numbered steps. A parser for that is ~60 lines, and
+ * pulling in react-markdown plus a sanitiser to cover syntax that never arrives
+ * would add bundle weight and a new XSS surface for no gain.
  */
 
-const PALETTE = {
-  amber: { iconCls: "bg-amber-500/15 text-amber-600 dark:text-amber-400", titleCls: "text-amber-700 dark:text-amber-300", cardCls: "border-amber-500/20 bg-amber-50/60 dark:bg-amber-500/[0.06]" },
-  emerald: { iconCls: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400", titleCls: "text-emerald-700 dark:text-emerald-300", cardCls: "border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-500/[0.06]" },
-  sky: { iconCls: "bg-sky-500/15 text-sky-600 dark:text-sky-400", titleCls: "text-sky-700 dark:text-sky-300", cardCls: "border-sky-500/20 bg-sky-50/60 dark:bg-sky-500/[0.06]" },
-  lime: { iconCls: "bg-lime-500/15 text-lime-600 dark:text-lime-400", titleCls: "text-lime-700 dark:text-lime-300", cardCls: "border-lime-500/20 bg-lime-50/60 dark:bg-lime-500/[0.06]" },
-  violet: { iconCls: "bg-violet-500/15 text-violet-600 dark:text-violet-400", titleCls: "text-violet-700 dark:text-violet-300", cardCls: "border-violet-500/20 bg-violet-50/60 dark:bg-violet-500/[0.06]" },
-  rose: { iconCls: "bg-rose-500/15 text-rose-600 dark:text-rose-400", titleCls: "text-rose-700 dark:text-rose-300", cardCls: "border-rose-500/20 bg-rose-50/60 dark:bg-rose-500/[0.06]" },
-};
+const SECTION_STYLES = {
+  finding: {
+    card: "border-accent-warm/25 bg-accent-warm-soft/50",
+    title: "text-accent-warm",
+    icon: "bg-accent-warm/15 text-accent-warm",
+  },
+  safety: {
+    card: "border-destructive/25 bg-destructive/5",
+    title: "text-destructive",
+    icon: "bg-destructive/10 text-destructive",
+  },
+  standard: {
+    card: "border-border bg-card",
+    title: "text-foreground",
+    icon: "bg-brand-soft text-brand",
+  },
+} as const;
 
-function styleFor(title: string) {
+function styleFor(title: string): { Icon: LucideIcon; tone: keyof typeof SECTION_STYLES } {
   const t = title.toLowerCase();
-  if (t.includes("cause")) return { Icon: Search, ...PALETTE.amber };
-  if (t.includes("change") || t.includes("do") || t.includes("avoid") || t.includes("lifestyle")) return { Icon: ClipboardCheck, ...PALETTE.emerald };
-  if (t.includes("yoga") || t.includes("breath") || t.includes("pranayam") || t.includes("asana")) return { Icon: Wind, ...PALETTE.sky };
-  if (t.includes("food") || t.includes("diet") || t.includes("eat")) return { Icon: Apple, ...PALETTE.lime };
-  if (t.includes("routine") || t.includes("daily") || t.includes("dinacharya")) return { Icon: Sun, ...PALETTE.violet };
-  if (t.includes("doctor") || t.includes("serious") || t.includes("emergency") || t.includes("see a")) return { Icon: ShieldAlert, ...PALETTE.rose };
-  return { Icon: Sparkles, ...PALETTE.emerald };
+  if (t.includes("cause")) return { Icon: Search, tone: "finding" };
+  if (
+    t.includes("doctor") ||
+    t.includes("serious") ||
+    t.includes("emergency") ||
+    t.includes("see a")
+  )
+    return { Icon: ShieldAlert, tone: "safety" };
+  if (t.includes("food") || t.includes("diet") || t.includes("eat"))
+    return { Icon: Apple, tone: "standard" };
+  if (
+    t.includes("yoga") ||
+    t.includes("breath") ||
+    t.includes("pranayam") ||
+    t.includes("asana")
+  )
+    return { Icon: Wind, tone: "standard" };
+  if (t.includes("routine") || t.includes("daily") || t.includes("dinacharya"))
+    return { Icon: Sun, tone: "standard" };
+  if (t.includes("remedy") || t.includes("remedies") || t.includes("home"))
+    return { Icon: HeartPulse, tone: "standard" };
+  if (
+    t.includes("change") ||
+    t.includes("do") ||
+    t.includes("avoid") ||
+    t.includes("lifestyle")
+  )
+    return { Icon: ClipboardCheck, tone: "standard" };
+  return { Icon: Sparkles, tone: "standard" };
 }
 
 /**
- * On the index keys below.
+ * Inline markup within one line: `**bold**`, `*italic*`, `` `code` ``.
  *
- * They are safe HERE and nowhere else in this feature. Everything rendered in
- * this file is a pure function of one `text` string: no child holds state, and
- * a finished answer's text never changes, so no item is ever inserted, removed
- * or reordered within a rendered list. Content-derived keys would be worse — two
- * identical bullet lines in a food chart is ordinary, and duplicate keys are a
- * real bug where these are a lint rule firing on a shape it cannot verify.
- *
- * The transcript in `page.tsx` was the opposite case — items removed from the
- * end, a stateful child — and has real ids now. Suppressing these four sites is
- * what stops that rule being background noise the next time it means something.
+ * One pass over a single split, so the segments cannot overlap or nest
+ * incorrectly. Index keys are safe here and only here: the array is a pure
+ * function of an immutable string, nothing is reordered, and no child holds
+ * state. Content-derived keys would collide on repeated words.
  */
-function inline(text: string) {
-  return text.split(/(\*\*.+?\*\*)/g).map((p, j) =>
-    // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
-    p.startsWith("**") && p.endsWith("**") ? <strong key={j} className="font-semibold text-primary">{p.slice(2, -2)}</strong> : <span key={j}>{p}</span>,
+function inline(text: string): ReactNode[] {
+  return text.split(/(\*\*[^*]+\*\*|`[^`]+`|(?<![*\w])\*[^*\n]+\*(?!\w))/g).map((part, index) => {
+    const key = `${index}-${part.slice(0, 12)}`;
+    if (part.startsWith("**") && part.endsWith("**") && part.length > 4) {
+      return (
+        <strong key={key} className="font-semibold text-foreground">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    if (part.startsWith("`") && part.endsWith("`") && part.length > 2) {
+      return (
+        <code key={key} className="rounded bg-surface-2 px-1 py-0.5 font-mono text-[0.9em]">
+          {part.slice(1, -1)}
+        </code>
+      );
+    }
+    if (part.startsWith("*") && part.endsWith("*") && part.length > 2) {
+      return <em key={key}>{part.slice(1, -1)}</em>;
+    }
+    return <span key={key}>{part}</span>;
+  });
+}
+
+type Block =
+  | { kind: "p"; lines: string[] }
+  | { kind: "ul"; items: string[] }
+  | { kind: "ol"; items: string[] }
+  | { kind: "h"; text: string };
+
+/**
+ * Group consecutive lines into blocks, so a run of bullets becomes ONE list.
+ *
+ * The old renderer emitted a separate flex row per bullet, which meant no `<ul>`
+ * and no `<li>` — a screen reader could not say "list, 6 items", and the reader
+ * lost the one cue that tells them how much is coming.
+ */
+function toBlocks(lines: string[]): Block[] {
+  const blocks: Block[] = [];
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) continue;
+
+    const bullet = line.match(/^[-*•]\s+(.*)$/);
+    const numbered = line.match(/^\d+[.)]\s+(.*)$/);
+    const heading = line.match(/^#{1,4}\s+(.*)$/);
+    const last = blocks[blocks.length - 1];
+
+    if (heading?.[1]) {
+      blocks.push({ kind: "h", text: heading[1] });
+    } else if (bullet?.[1] !== undefined) {
+      if (last?.kind === "ul") last.items.push(bullet[1]);
+      else blocks.push({ kind: "ul", items: [bullet[1]] });
+    } else if (numbered?.[1] !== undefined) {
+      if (last?.kind === "ol") last.items.push(numbered[1]);
+      else blocks.push({ kind: "ol", items: [numbered[1]] });
+    } else if (last?.kind === "p") {
+      last.lines.push(line);
+    } else {
+      blocks.push({ kind: "p", lines: [line] });
+    }
+  }
+  return blocks;
+}
+
+function Body({ lines }: { lines: string[] }) {
+  const blocks = toBlocks(lines);
+  return (
+    <div className="space-y-2">
+      {blocks.map((block, index) => {
+        const key = `${block.kind}-${index}`;
+        if (block.kind === "h") {
+          return (
+            <h4 key={key} className="pt-1 text-sm font-semibold text-foreground">
+              {inline(block.text)}
+            </h4>
+          );
+        }
+        if (block.kind === "ul") {
+          return (
+            <ul key={key} className="space-y-1.5">
+              {block.items.map((item, i) => (
+                <li
+                  key={`${i}-${item.slice(0, 16)}`}
+                  className="flex gap-2 text-sm leading-relaxed text-text-secondary"
+                >
+                  <span
+                    aria-hidden
+                    className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-current opacity-40"
+                  />
+                  <span className="min-w-0">{inline(item)}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        if (block.kind === "ol") {
+          return (
+            <ol key={key} className="space-y-1.5">
+              {block.items.map((item, i) => (
+                <li
+                  key={`${i}-${item.slice(0, 16)}`}
+                  className="flex gap-2.5 text-sm leading-relaxed text-text-secondary"
+                >
+                  <span
+                    aria-hidden
+                    className="mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-surface-2 font-mono text-[10px] tabular-nums text-foreground"
+                  >
+                    {i + 1}
+                  </span>
+                  <span className="min-w-0">{inline(item)}</span>
+                </li>
+              ))}
+            </ol>
+          );
+        }
+        return (
+          <p key={key} className="text-sm leading-relaxed text-text-secondary">
+            {inline(block.lines.join(" "))}
+          </p>
+        );
+      })}
+    </div>
   );
 }
 
@@ -64,54 +230,54 @@ function parseSections(text: string) {
   const out: { title: string | null; body: string[] }[] = [];
   let cur: { title: string | null; body: string[] } | null = null;
   for (const line of text.split("\n")) {
-    const h = line.match(/^\s*\*\*(.+?)\*\*\s*$/);
-    if (h) { cur = { title: h[1] ?? "", body: [] }; out.push(cur); }
-    else { if (!cur) { cur = { title: null, body: [] }; out.push(cur); } cur.body.push(line); }
+    // A whole line that is bold, or a markdown heading, opens a section.
+    const bold = line.match(/^\s*\*\*(.+?)\*\*:?\s*$/);
+    const hash = line.match(/^\s*#{1,3}\s+(.+?)\s*$/);
+    const title = bold?.[1] ?? hash?.[1];
+    if (title) {
+      cur = { title, body: [] };
+      out.push(cur);
+    } else {
+      if (!cur) {
+        cur = { title: null, body: [] };
+        out.push(cur);
+      }
+      cur.body.push(line);
+    }
   }
   return out;
-}
-
-function Body({ lines }: { lines: string[] }) {
-  return (
-    <>
-      {lines.map((line, i) => {
-        const t = line.trim();
-        // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
-        if (!t) return <div key={i} className="h-1.5" />;
-        if (/^[-*•]\s+/.test(t))
-          return (
-            // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
-            <div key={i} className="flex gap-2 text-sm leading-relaxed text-primary/80">
-              <span aria-hidden className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-current opacity-40" />
-              <span>{inline(t.replace(/^[-*•]\s+/, ""))}</span>
-            </div>
-          );
-        // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
-        return <p key={i} className="text-sm leading-relaxed text-primary/80">{inline(t)}</p>;
-      })}
-    </>
-  );
 }
 
 export function AnswerSections({ text }: { text: string }) {
   return (
     <div className="space-y-2.5">
-      {parseSections(text).map((s, i) => {
-        // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
-        if (!s.title) return <div key={i} className="space-y-0.5"><Body lines={s.body} /></div>;
-        const st = styleFor(s.title);
+      {parseSections(text).map((section, index) => {
+        const key = `${index}-${section.title ?? "intro"}`;
+        if (!section.title) {
+          // Prose before the first heading — usually one framing sentence.
+          if (section.body.every((line) => !line.trim())) return null;
+          return <Body key={key} lines={section.body} />;
+        }
+        const { Icon, tone } = styleFor(section.title);
+        const style = SECTION_STYLES[tone];
         return (
-          // biome-ignore lint/suspicious/noArrayIndexKey: static split of an immutable string; see note above
-          <div key={i} className={`rounded-xl border p-3 ${st.cardCls}`}>
-            {/* A real heading, not a bold div. A plan is six sections long and
-                a screen reader could not jump between them — the only way
-                through "Food Chart" was to read "Root Cause" first. */}
-            <h3 className={`mb-1.5 flex items-center gap-2 text-sm font-semibold ${st.titleCls}`}>
-              <span aria-hidden className={`grid h-6 w-6 place-items-center rounded-lg ${st.iconCls}`}><st.Icon className="h-3.5 w-3.5" /></span>
-              {s.title}
+          <section key={key} className={`rounded-xl border p-3.5 ${style.card}`}>
+            {/* A real heading. These were `div`s, so a plan was one flat blob to
+                anyone navigating by heading — and the only way to reach "Food
+                Chart" was to read everything above it. */}
+            <h3 className={`mb-2 flex items-center gap-2 text-sm font-semibold ${style.title}`}>
+              <span
+                aria-hidden
+                className={`grid h-6 w-6 shrink-0 place-items-center rounded-lg ${style.icon}`}
+              >
+                <Icon className="h-3.5 w-3.5" />
+              </span>
+              {section.title}
             </h3>
-            <div className="space-y-0.5 pl-0.5"><Body lines={s.body} /></div>
-          </div>
+            <div className="pl-0.5">
+              <Body lines={section.body} />
+            </div>
+          </section>
         );
       })}
     </div>
