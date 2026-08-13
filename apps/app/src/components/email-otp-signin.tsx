@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const inputCls =
-  "w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring";
+  "h-11 w-full rounded-lg border border-input bg-background px-3 text-base outline-none transition-colors placeholder:text-text-secondary focus:border-brand/60 focus:ring-2 focus:ring-brand/20 sm:h-10 sm:text-sm";
 
 const RESEND_COOLDOWN_SECONDS = 30;
 
@@ -62,13 +62,17 @@ export function EmailOtpSignin() {
           autoComplete="email"
           required
           placeholder="you@example.com"
+          // A placeholder is not a label: it disappears the moment you type, so
+          // this field announced as an unnamed textbox once focused. It also
+          // needs to say WHICH email form this is — there are two on the page.
+          aria-label="Email for a one-time code"
           className={inputCls}
         />
         <Button type="submit" variant="outline" className="w-full" disabled={pending}>
           {pending ? "Sending…" : "Send code"}
         </Button>
         {error && (
-          <p role="alert" className="text-xs text-red-500">
+          <p role="alert" className="text-xs font-medium text-destructive">
             {error}
           </p>
         )}
@@ -112,6 +116,7 @@ export function EmailOtpSignin() {
         autoComplete="one-time-code"
         required
         placeholder="8-digit code"
+        aria-label="8-digit code"
         className={inputCls}
       />
       <Button type="submit" className="w-full" disabled={pending}>
@@ -122,13 +127,13 @@ export function EmailOtpSignin() {
           type="button"
           onClick={() => void sendCode(step.email)}
           disabled={cooldown > 0 || pending}
-          className="text-xs text-muted-foreground underline disabled:no-underline disabled:opacity-50"
+          className="text-xs text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground disabled:no-underline disabled:opacity-50"
         >
           {cooldown > 0 ? `Resend in ${cooldown}s` : "Resend code"}
         </button>
         <button
           type="button"
-          className="text-xs text-muted-foreground underline"
+          className="text-xs text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground"
           onClick={() => {
             setStep("signIn");
             setError(null);
@@ -139,7 +144,7 @@ export function EmailOtpSignin() {
         </button>
       </div>
       {error && (
-        <p role="alert" className="text-xs text-red-500">
+        <p role="alert" className="text-xs font-medium text-destructive">
           {error}
         </p>
       )}

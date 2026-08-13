@@ -10,8 +10,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 type Mode = "signIn" | "signUp" | "verify" | "forgot" | "reset";
 
+// `text-base` below `sm`, not `text-sm`: iOS Safari zooms the whole page when a
+// focused input's font is under 16px, and the zoom does not undo itself — you
+// land on the login screen and it is suddenly magnified with no way back.
+// h-11 on touch matches the Button's own accessible target height.
 const input =
-  "w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-ring";
+  "h-11 w-full rounded-lg border border-input bg-background px-3 text-base outline-none transition-colors placeholder:text-text-secondary focus:border-brand/60 focus:ring-2 focus:ring-brand/20 sm:h-10 sm:text-sm";
 
 const RESEND_COOLDOWN_SECONDS = 30;
 const REMEMBER_COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
@@ -56,7 +60,7 @@ function Shell({
 }
 
 const Switch = ({ label, onClick }: { label: string; onClick: () => void }) => (
-  <button type="button" className="text-xs text-muted-foreground underline" onClick={onClick}>
+  <button type="button" className="rounded text-xs text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground" onClick={onClick}>
     {label}
   </button>
 );
@@ -267,7 +271,7 @@ export function AuthForm() {
         type="checkbox"
         checked={remember}
         onChange={(e) => setRemember(e.target.checked)}
-        className="h-3.5 w-3.5 rounded border-input accent-emerald-600"
+        className="h-4 w-4 rounded border-input accent-[hsl(var(--brand))]"
       />
       Keep me signed in
     </label>
@@ -289,8 +293,8 @@ export function AuthForm() {
       {mode === "signIn" && (
         <>
           <Shell onSubmit={submitSignIn} cta="Sign in" {...shellProps}>
-            <input className={input} type="email" autoComplete="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input className={input} type="password" autoComplete="current-password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input className={input} aria-label="Email" type="email" autoComplete="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input className={input} aria-label="Password" type="password" autoComplete="current-password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
             {RememberMe}
           </Shell>
           <div className="flex w-72 justify-between">
@@ -303,11 +307,11 @@ export function AuthForm() {
       {mode === "signUp" && (
         <>
           <Shell onSubmit={submitSignUp} cta="Create account" {...shellProps}>
-            <input className={input} type="email" autoComplete="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input className={input} type="password" autoComplete="new-password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input className={input} aria-label="Email" type="email" autoComplete="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input className={input} aria-label="Password" type="password" autoComplete="new-password" placeholder="Password" required value={password} onChange={(e) => setPassword(e.target.value)} />
             {password.length > 0 && (
-              <p className={`text-xs ${strength.length ? "text-muted-foreground" : "text-emerald-600"}`}>
-                {strength.length ? `Needs ${strength.join(", ")}.` : "Strong enough ✓"}
+              <p className={`text-xs ${strength.length ? "text-text-secondary" : "text-success"}`}>
+                {strength.length ? `Needs ${strength.join(", ")}.` : "Strong enough"}
               </p>
             )}
             {RememberMe}
@@ -320,7 +324,7 @@ export function AuthForm() {
         <>
           <Shell onSubmit={submitVerify} cta="Verify email" {...shellProps}>
             <p className="text-xs text-muted-foreground">Code sent to {email}</p>
-            <input className={input} inputMode="numeric" autoComplete="one-time-code" placeholder="Verification code" required value={code} onChange={(e) => setCode(e.target.value)} />
+            <input className={input} aria-label="Verification code" inputMode="numeric" autoComplete="one-time-code" placeholder="Verification code" required value={code} onChange={(e) => setCode(e.target.value)} />
           </Shell>
           <div className="flex w-72 justify-between">
             {ResendButton}
@@ -332,7 +336,7 @@ export function AuthForm() {
       {mode === "forgot" && (
         <>
           <Shell onSubmit={submitForgot} cta="Send reset code" {...shellProps}>
-            <input className={input} type="email" autoComplete="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input className={input} aria-label="Email" type="email" autoComplete="email" placeholder="Email" required value={email} onChange={(e) => setEmail(e.target.value)} />
           </Shell>
           <Switch label="Back to sign in" onClick={() => switchTo("signIn")} />
         </>
@@ -342,11 +346,11 @@ export function AuthForm() {
         <>
           <Shell onSubmit={submitReset} cta="Set new password" {...shellProps}>
             <p className="text-xs text-muted-foreground">Reset code for {email}</p>
-            <input className={input} inputMode="numeric" autoComplete="one-time-code" placeholder="Reset code" required value={code} onChange={(e) => setCode(e.target.value)} />
-            <input className={input} type="password" autoComplete="new-password" placeholder="New password" required value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
+            <input className={input} aria-label="Reset code" inputMode="numeric" autoComplete="one-time-code" placeholder="Reset code" required value={code} onChange={(e) => setCode(e.target.value)} />
+            <input className={input} aria-label="New password" type="password" autoComplete="new-password" placeholder="New password" required value={newPassword} onChange={(e) => setNewPassword(e.target.value)} />
             {newPassword.length > 0 && (
-              <p className={`text-xs ${resetStrength.length ? "text-muted-foreground" : "text-emerald-600"}`}>
-                {resetStrength.length ? `Needs ${resetStrength.join(", ")}.` : "Strong enough ✓"}
+              <p className={`text-xs ${resetStrength.length ? "text-text-secondary" : "text-success"}`}>
+                {resetStrength.length ? `Needs ${resetStrength.join(", ")}.` : "Strong enough"}
               </p>
             )}
           </Shell>
@@ -366,7 +370,7 @@ export function AuthForm() {
           </div>
           <Button
             variant="outline"
-            className="w-72 font-mono"
+            className="w-72"
             onClick={() => {
               setRememberCookie(remember);
               void signIn("google", { redirectTo: redirectTo.current });

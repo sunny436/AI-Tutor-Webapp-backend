@@ -45,14 +45,17 @@ export default function OnboardingUsername() {
   }
 
   return (
-    <div className="mx-auto flex h-full w-full max-w-96 flex-col items-center justify-center gap-6">
+    <div className="mx-auto flex w-full max-w-sm flex-col items-center gap-6">
       <div className="flex flex-col items-center gap-2">
-        <span className="mb-2 select-none text-6xl">👋</span>
-        <h3 className="text-center text-2xl font-medium text-primary">
-          Welcome!
-        </h3>
-        <p className="text-center text-base font-normal text-primary/60">
-          Let's get started by choosing a username.
+        {/* A 60px waving-hand emoji was the largest element on the first screen
+            after signup. Emoji render differently on every platform, carry no
+            brand, and cannot be styled — the h1 does this job better. */}
+        <h1 className="text-center font-display text-2xl font-semibold tracking-tight text-foreground">
+          Welcome
+        </h1>
+        <p className="text-center text-sm leading-relaxed text-text-secondary">
+          Choose a username. It&apos;s the only thing we need before you start —
+          everything else the assistant learns from what you tell it.
         </p>
       </div>
       <form
@@ -98,13 +101,20 @@ export default function OnboardingUsername() {
           )}
         </div>
 
-        <Button type="submit" size="sm" className="w-full">
-          {pending ? <Loader2 className="animate-spin" /> : "Continue"}
+        <Button type="submit" className="mt-1 w-full">
+          {pending ? (
+            <>
+              <Loader2 aria-hidden className="mr-2 h-4 w-4 animate-spin" />
+              Saving…
+            </>
+          ) : (
+            "Continue"
+          )}
         </Button>
       </form>
 
-      <p className="px-6 text-center text-sm font-normal leading-normal text-primary/60">
-        You can update your username at any time from your account settings.
+      <p className="text-center text-xs leading-relaxed text-text-secondary">
+        You can change this at any time in settings.
       </p>
     </div>
   );
