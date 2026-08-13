@@ -26,7 +26,7 @@ function Card({
   return (
     <div className="rounded-lg border border-border bg-card">
       <div className="flex items-center justify-between gap-2 border-b border-border px-4 py-3">
-        <h2 className="text-sm font-medium text-primary">{title}</h2>
+        <h2 className="text-sm font-medium text-foreground">{title}</h2>
         {action}
       </div>
       <div className="divide-y divide-border/50">{children}</div>
@@ -36,13 +36,13 @@ function Card({
 function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode }) {
   return (
     <div className="flex items-center justify-between gap-2 px-4 py-2.5 text-sm">
-      <span className="truncate font-mono text-primary/80">{left}</span>
-      <span className="shrink-0 text-primary/60">{right}</span>
+      <span className="truncate font-mono text-foreground">{left}</span>
+      <span className="shrink-0 text-text-secondary">{right}</span>
     </div>
   );
 }
 function Empty({ children }: { children: React.ReactNode }) {
-  return <div className="px-4 py-4 text-sm text-primary/40">{children}</div>;
+  return <div className="px-4 py-4 text-sm text-text-secondary">{children}</div>;
 }
 type PageStatus =
   | "LoadingFirstPage"
@@ -59,7 +59,7 @@ function LoadMore({
   onLoadMore: () => void;
 }) {
   if (status === "LoadingMore") {
-    return <div className="px-4 py-2.5 text-sm text-primary/40">Loading…</div>;
+    return <div className="px-4 py-2.5 text-sm text-text-secondary">Loading…</div>;
   }
   if (status !== "CanLoadMore") return null;
   return (
@@ -107,7 +107,7 @@ export default function PlatformPage() {
 
   if (!current) {
     return (
-      <div className="p-8 text-sm text-primary/60">Setting up your workspace…</div>
+      <div className="p-8 text-sm text-text-secondary">Setting up your workspace…</div>
     );
   }
 
@@ -116,8 +116,8 @@ export default function PlatformPage() {
       <div className="z-10 mx-auto w-full max-w-screen-xl space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-medium text-primary">Platform</h1>
-            <p className="text-sm text-primary/60">
+            <h1 className="text-xl font-medium text-foreground">Platform</h1>
+            <p className="text-sm text-text-secondary">
               Multi-tenant: members, invites, usage, API keys, audit & events —
               scoped to the selected workspace.
             </p>
@@ -151,7 +151,7 @@ export default function PlatformPage() {
 
         {myInvites && myInvites.length > 0 && (
           <div className="rounded-lg border border-blue-500/30 bg-blue-500/5 p-4">
-            <p className="mb-2 text-sm font-medium text-primary">
+            <p className="mb-2 text-sm font-medium text-foreground">
               You have pending invites
             </p>
             {myInvites.map((inv) => (
@@ -159,7 +159,7 @@ export default function PlatformPage() {
                 key={inv._id}
                 className="flex items-center justify-between py-1 text-sm"
               >
-                <span className="text-primary/80">
+                <span className="text-foreground">
                   {inv.workspaceName ?? "workspace"} · {inv.role}
                 </span>
                 <Button size="sm" onClick={() => acceptInvite({ inviteId: inv._id })}>

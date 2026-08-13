@@ -9,10 +9,10 @@ import { useState } from "react";
 import { toast } from "sonner";
 
 const badge: Record<string, string> = {
-  pending: "bg-amber-500/12 text-amber-600 dark:text-amber-400",
-  running: "bg-sky-500/12 text-sky-600 dark:text-sky-400",
-  done: "bg-emerald-500/12 text-emerald-600 dark:text-emerald-400",
-  error: "bg-rose-500/12 text-rose-600 dark:text-rose-400",
+  pending: "bg-warning-soft text-warning",
+  running: "bg-info-soft text-info",
+  done: "bg-brand-soft text-brand",
+  error: "bg-destructive/10 text-destructive",
 };
 
 export default function JobsPage() {
@@ -39,17 +39,17 @@ export default function JobsPage() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-3rem)] w-full bg-gradient-to-br from-emerald-50 via-white to-teal-50 px-6 py-7 dark:from-zinc-950 dark:via-black dark:to-emerald-950/30">
+    <div className="min-h-full w-full px-4 py-6 sm:px-6 sm:py-8">
       <div className="mx-auto w-full max-w-screen-xl space-y-5">
         <div className="flex items-end justify-between">
           <div>
-            <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-primary">
-              <ListChecks className="h-6 w-6 text-emerald-600 dark:text-emerald-400" /> Jobs
+            <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight text-foreground">
+              <ListChecks className="h-6 w-6 text-brand" /> Jobs
             </h1>
-            <p className="mt-0.5 text-sm text-primary/60">Async tasks — created in Convex, processed by the backend, updated live.</p>
+            <p className="mt-0.5 text-sm text-text-secondary">Async tasks — created in Convex, processed by the backend, updated live.</p>
           </div>
           <button type="button" onClick={runDemo} disabled={pending || !current}
-            className="inline-flex h-10 items-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 px-4 text-sm font-semibold text-white shadow-md shadow-emerald-500/25 transition hover:brightness-105 disabled:opacity-50">
+            className="inline-flex h-10 items-center rounded-xl bg-brand px-4 text-sm font-medium text-brand-foreground elev-1 transition hover:brightness-110 disabled:opacity-50">
             {pending ? "Creating…" : "Run demo job"}
           </button>
         </div>
@@ -57,7 +57,7 @@ export default function JobsPage() {
         <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
           <table className="w-full text-sm">
             <thead className="sticky top-0 border-b border-border bg-card text-left">
-              <tr className="text-[11px] uppercase tracking-wide text-primary/50">
+              <tr className="text-[11px] uppercase tracking-wide text-text-secondary">
                 <th className="px-4 py-3 font-semibold">Kind</th>
                 <th className="px-4 py-3 font-semibold">Status</th>
                 <th className="px-4 py-3 font-semibold">Result</th>
@@ -66,21 +66,21 @@ export default function JobsPage() {
             </thead>
             <tbody>
               {status === "LoadingFirstPage" && (
-                <tr><td className="px-4 py-6 text-primary/40" colSpan={4}>Loading…</td></tr>
+                <tr><td className="px-4 py-6 text-text-secondary" colSpan={4}>Loading…</td></tr>
               )}
               {status !== "LoadingFirstPage" && jobs.length === 0 && (
-                <tr><td className="px-4 py-8 text-center text-primary/40" colSpan={4}>No jobs yet.</td></tr>
+                <tr><td className="px-4 py-8 text-center text-text-secondary" colSpan={4}>No jobs yet.</td></tr>
               )}
               {jobs.map((job) => (
                 <tr key={job._id} className="border-b border-border/50 transition last:border-0 hover:bg-primary/[0.03]">
-                  <td className="px-4 py-3 font-mono text-primary/80">{job.kind}</td>
+                  <td className="px-4 py-3 font-mono text-foreground">{job.kind}</td>
                   <td className="px-4 py-3">
                     <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${badge[job.status] ?? ""}`}>{job.status}</span>
                   </td>
-                  <td className="max-w-[420px] truncate px-4 py-3 font-mono text-xs text-primary/55">
+                  <td className="max-w-[420px] truncate px-4 py-3 font-mono text-xs text-text-secondary">
                     {job.result ? JSON.stringify(job.result) : job.error ? `⚠ ${job.error}` : "—"}
                   </td>
-                  <td className="px-4 py-3 text-primary/50">{new Date(job.updatedAt).toLocaleTimeString()}</td>
+                  <td className="px-4 py-3 text-text-secondary">{new Date(job.updatedAt).toLocaleTimeString()}</td>
                 </tr>
               ))}
             </tbody>
@@ -89,7 +89,7 @@ export default function JobsPage() {
         {status === "CanLoadMore" && (
           <div className="flex justify-center"><Button variant="outline" size="sm" onClick={() => loadMore(20)}>Load more</Button></div>
         )}
-        {status === "LoadingMore" && <p className="text-center text-sm text-primary/40">Loading…</p>}
+        {status === "LoadingMore" && <p className="text-center text-sm text-text-secondary">Loading…</p>}
       </div>
     </div>
   );
