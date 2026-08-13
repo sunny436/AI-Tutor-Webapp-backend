@@ -37,7 +37,7 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@v1/ui", "@v1/backend", "@v1/analytics", "@v1/logger"],
+  transpilePackages: ["@v1/ui", "@v1/backend"],
   // Do not advertise the framework version to scanners.
   poweredByHeader: false,
   async headers() {

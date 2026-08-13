@@ -3,9 +3,11 @@ server.py
 ---------
 The Python AI backend (FastAPI). It does two jobs:
 
-A) Serves a friendly WEB APP (the chat UI) at http://localhost:4000
-   - GET  /            -> the chat page (frontend/index.html)
-   - POST /chat        -> run one turn of the Ayurveda/Yoga flow, return the answer
+A) Answers consultations for the dashboard
+   - GET  /            -> says what this host is; it used to serve a public chat
+                          page, which was removed once /chat required a login
+   - POST /consult     -> one turn of the card-driven consultation
+   - POST /chat        -> the older single-shot flow, signed-in callers only
    - POST /upload      -> read text from an uploaded report (PDF/image)
 
 B) Talks to the Convex template (the "bring your own backend" paths):
@@ -58,7 +60,6 @@ for _stream in (sys.stdout, sys.stderr):
         pass
 
 BASE_DIR = Path(__file__).resolve().parent
-FRONTEND_FILE = BASE_DIR / "frontend" / "index.html"
 
 app = FastAPI(title="Ayurveda & Yoga AI Backend")
 

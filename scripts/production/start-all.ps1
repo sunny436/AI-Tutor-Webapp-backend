@@ -215,23 +215,65 @@ function Set-MinimumWorkingSet([int]$ProcessId, [int]$MinMB, [int]$MaxMB) {
 #
 # Judging by the port instead of by the path removes the guesswork: if something
 # is answering on 4000 it is the server, whatever its argv says.
+#
+# STARTING IS NOT THE SAME AS STUCK.
+#
+# The backend takes 40-60 seconds to become useful: it loads a 1.9 GB embedding
+# model before uvicorn accepts anything, and on a 2 GB-free machine that is slow.
+# For all that time it is running and not yet serving 4000 — indistinguishable,
+# to the check above, from a hung leftover.
+#
+# That was survivable while this ran once a minute. It stopped being survivable
+# the moment the tunnel work added an offset trigger and halved the interval to
+# 30 seconds: every pass killed a backend that was ~30 seconds into a ~50 second
+# start, and started another one that met the same end. Measured in a loop —
+#
+#     623 MB -> 13 MB    (killed, restarted)
+#     756 MB -> 33 MB    (killed, restarted)
+#     420 MB -> ...      (and again)
+#
+# — the process climbing toward its 1.9 GB and being shot each time just before
+# it could bind. The site's AI was down not because anything crashed, but
+# because its own supervisor would not let it finish standing up.
+#
+# So a process gets a grace period. Only something older than that, and still
+# not serving, is genuinely stuck.
+$BackendStartupGraceSeconds = 150
+
 if (Test-Listening 4000) {
     Write-Log "backend  already listening on 4000"
 } else {
-    $leftovers = Get-CimInstance Win32_Process -Filter "Name='python.exe'" -ErrorAction SilentlyContinue |
+    $now = Get-Date
+    $candidates = Get-CimInstance Win32_Process -Filter "Name='python.exe'" -ErrorAction SilentlyContinue |
         Where-Object { $_.CommandLine -match "server\.py" }
-    foreach ($leftover in $leftovers) {
-        Write-Log "backend  clearing leftover pid=$($leftover.ProcessId) (nothing was serving 4000)"
-        Stop-Process -Id $leftover.ProcessId -Force -ErrorAction SilentlyContinue
-    }
-    if ($leftovers) { Start-Sleep -Seconds 3 }
 
-    Write-Log "backend  starting"
-    Start-Process -FilePath $Python -ArgumentList "server.py" `
-        -WorkingDirectory "$Repo\backend-python" `
-        -RedirectStandardOutput "$LogDir\backend-out.log" `
-        -RedirectStandardError  "$LogDir\backend-err.log" `
-        -WindowStyle Hidden
+    $starting = @($candidates | Where-Object {
+        $_.CreationDate -and ($now - $_.CreationDate).TotalSeconds -lt $BackendStartupGraceSeconds
+    })
+
+    if ($starting.Count -gt 0) {
+        # NOT `return` — at script scope that exits the whole file and would skip
+        # the frontend and tunnel checks below, turning one slow backend into
+        # three unsupervised services.
+        $age = [Math]::Round(($now - ($starting | Sort-Object CreationDate | Select-Object -First 1).CreationDate).TotalSeconds)
+        Write-Log "backend  still starting (${age}s old, grace ${BackendStartupGraceSeconds}s) - leaving it alone"
+    }
+    else {
+        $leftovers = @($candidates)
+        foreach ($leftover in $leftovers) {
+            $age = [Math]::Round(($now - $leftover.CreationDate).TotalSeconds)
+            Write-Log "backend  clearing leftover pid=$($leftover.ProcessId) (${age}s old, nothing serving 4000)"
+            Stop-Process -Id $leftover.ProcessId -Force -ErrorAction SilentlyContinue
+        }
+        if ($leftovers.Count -gt 0) { Start-Sleep -Seconds 3 }
+
+        Write-Log "backend  starting"
+        Start-Process -FilePath $Python -ArgumentList "server.py" `
+            -WorkingDirectory "$Repo\backend-python" `
+            -RedirectStandardOutput "$LogDir\backend-out.log" `
+            -RedirectStandardError  "$LogDir\backend-err.log" `
+            -WindowStyle Hidden
+    }
 }
 
 # ---- Next.js dashboard ------------------------------------------------------
