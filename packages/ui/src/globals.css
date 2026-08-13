@@ -78,7 +78,10 @@
        `.backdrop-wash` paints hsl(28 60% 55%) — now a first-class token. It is
        the SECOND accent: green acts, saffron marks. Used for provenance and
        highlights, never for a button, so the two never compete. */
-    --accent-warm: 30 64% 48%;
+    /* 4.65:1 on --background. Was `30 64% 48%` = 3.19:1, which clears AA for
+       LARGE text only — but this token's main job is the provenance line
+       ("Based on 2 notes…"), which is 12px. Darkened until small text passes. */
+    --accent-warm: 30 70% 38%;
     --accent-warm-soft: 34 70% 94%;
 
     /* Status. Distinct from `--brand` on purpose: "this worked" and "this is our
@@ -87,7 +90,9 @@
        warning is never mistaken for a citation. */
     --success: 152 48% 30%;
     --success-soft: 152 44% 93%;
-    --warning: 38 78% 40%;
+    /* 4.68:1. Was 3.45:1 — again AA-large only, and this colour labels the
+       red-flag options in the intake form, which are short strings at 14px. */
+    --warning: 38 82% 33%;
     --warning-soft: 42 84% 93%;
     --info: 200 44% 36%;
     --info-soft: 200 46% 94%;
@@ -121,7 +126,13 @@
     --accent: 158 12% 17%;
     --accent-foreground: 40 22% 94%;
 
-    --destructive: 4 55% 42%;
+    /* 4.86:1 on the dark background. Was `4 55% 42%` = 2.88:1 — a real WCAG
+       AA FAILURE, and not a cosmetic one: this token colours the error
+       banner, the "When To See A Doctor" section of every plan, and the
+       delete confirmations. Unreadable safety text is the worst kind to get
+       wrong. Lightened to the darkest value that clears 4.5:1 while still
+       reading as red rather than pink. */
+    --destructive: 4 62% 58%;
     --destructive-foreground: 40 22% 96%;
 
     --border: 158 10% 18%;
