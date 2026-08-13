@@ -60,6 +60,38 @@
     /* 0.75rem reads as considered; 0.5 reads as a default nobody chose. */
     --radius: 0.75rem;
 
+    /* ---- semantic layer ------------------------------------------------
+       Added because the app was reaching past the tokens: 20 raw `bg-white/*`
+       and `bg-black/*` surfaces, 8 hand-rolled `emerald-500 → teal-600`
+       gradients, and 78 manual `dark:` overrides papering over colours that
+       should have adapted on their own.
+
+       `surface` is where a raised pane goes when `card` is already taken by the
+       thing sitting on it — a sidebar against the page, a well inside a card.
+       `text-secondary` names what the codebase spells `text-primary/60` in 90
+       places, which is a colour decision hidden inside an opacity. */
+    --surface: 44 32% 96.5%;
+    --surface-2: 150 20% 94%;
+    --text-secondary: 155 12% 38%;
+
+    /* Saffron. Already latent in the system — `--chart-2` is this hue and
+       `.backdrop-wash` paints hsl(28 60% 55%) — now a first-class token. It is
+       the SECOND accent: green acts, saffron marks. Used for provenance and
+       highlights, never for a button, so the two never compete. */
+    --accent-warm: 30 64% 48%;
+    --accent-warm-soft: 34 70% 94%;
+
+    /* Status. Distinct from `--brand` on purpose: "this worked" and "this is our
+       colour" are different messages, and using one for both means neither
+       reads. Amber is deliberately not the same hue as saffron above, so a
+       warning is never mistaken for a citation. */
+    --success: 152 48% 30%;
+    --success-soft: 152 44% 93%;
+    --warning: 38 78% 40%;
+    --warning-soft: 42 84% 93%;
+    --info: 200 44% 36%;
+    --info-soft: 200 46% 94%;
+
     --chart-1: 158 45% 35%;
     --chart-2: 28 62% 55%;
     --chart-3: 190 40% 40%;
@@ -99,6 +131,25 @@
     --brand: 152 44% 56%;
     --brand-foreground: 158 20% 8%;
     --brand-soft: 158 22% 16%;
+
+    /* ---- semantic layer, dark ------------------------------------------
+       Not inverted mechanically. On a dark ground the SOFT variants have to
+       become dim tints rather than pale washes, and the foreground colours have
+       to get lighter and less saturated or they vibrate against the surface —
+       which is exactly what a naive inversion produces. */
+    --surface: 158 13% 11%;
+    --surface-2: 158 12% 14%;
+    --text-secondary: 150 9% 66%;
+
+    --accent-warm: 34 74% 62%;
+    --accent-warm-soft: 30 30% 15%;
+
+    --success: 152 46% 58%;
+    --success-soft: 155 25% 14%;
+    --warning: 42 80% 60%;
+    --warning-soft: 38 30% 15%;
+    --info: 199 48% 62%;
+    --info-soft: 200 26% 15%;
 
     --chart-1: 152 44% 56%;
     --chart-2: 28 58% 62%;

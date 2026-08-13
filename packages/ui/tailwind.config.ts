@@ -87,6 +87,33 @@ const config = {
           foreground: "hsl(var(--brand-foreground))",
           soft: "hsl(var(--brand-soft))",
         },
+        // A raised pane when `card` is already the thing sitting on it.
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          2: "hsl(var(--surface-2))",
+        },
+        // Names what 90 call sites spell as `text-primary/60` — a colour
+        // decision currently hidden inside an opacity, which is why it drifts
+        // (/45, /50, /60, /70 and /75 all appear, meaning the same thing).
+        "text-secondary": "hsl(var(--text-secondary))",
+        // The second accent. Green acts, saffron marks: this is for provenance
+        // and highlights and never for a button, so the two never compete.
+        "accent-warm": {
+          DEFAULT: "hsl(var(--accent-warm))",
+          soft: "hsl(var(--accent-warm-soft))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          soft: "hsl(var(--success-soft))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          soft: "hsl(var(--warning-soft))",
+        },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          soft: "hsl(var(--info-soft))",
+        },
       },
       borderRadius: {
         // xl and 2xl added so surfaces can differ in softness by role — a page
