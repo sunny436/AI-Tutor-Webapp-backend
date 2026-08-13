@@ -70,7 +70,7 @@ function Stat({
   );
 }
 
-export default function Home() {
+export function DashboardHome() {
   const { current } = useWorkspace();
   const scoped = current ? { workspaceId: current } : "skip";
   const stats = useQuery(api.dashboard.stats, scoped);

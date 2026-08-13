@@ -4,6 +4,10 @@ import {
 } from "@convex-dev/auth/nextjs/server";
 import { type NextRequest, NextResponse } from "next/server";
 import { createI18nMiddleware } from "next-international/middleware";
+// The locale list was written out THREE times in this file — once for
+// createI18nMiddleware, once as a const, and once inside the regex on the
+// redirect path. Three copies of a list that must agree.
+import { DEFAULT_LOCALE, LOCALES, stripLocale } from "@/lib/locales";
 
 /**
  * "redirect", not "rewrite" — and the reason is not cosmetic.
@@ -29,27 +33,39 @@ import { createI18nMiddleware } from "next-international/middleware";
  * /login. That is standard for i18n sites and is the cheaper half of the trade.
  */
 const I18nMiddleware = createI18nMiddleware({
-  locales: ["en", "fr", "es"],
-  defaultLocale: "en",
+  locales: [...LOCALES],
+  defaultLocale: DEFAULT_LOCALE,
   urlMappingStrategy: "redirect",
 });
 
-const LOCALES = ["en", "fr", "es"] as const;
-
 /**
- * Everything except these requires a session.
+ * TWO MATCHERS, NOT ONE — and the split is what makes a public `/` safe.
  *
- * The locale-prefixed variants are NOT redundant. `createI18nMiddleware` runs
- * with `urlMappingStrategy: "rewrite"`, so by the time this handler sees the
- * request the path has already become `/en/login` — matching only `/login`
- * classified the login page itself as protected, which redirected it to
- * `/login`, which was rewritten to `/en/login` again: an infinite loop that
- * nested the `redirect` query parameter on every pass until the browser gave up.
- * Nobody could sign in.
+ * The locale-prefixed variants are NOT redundant. With
+ * `urlMappingStrategy: "redirect"` the browser URL always carries the locale, so
+ * by the time a second request arrives the path really is `/en/login`. Matching
+ * only `/login` classified the login page itself as protected, which redirected
+ * it to `/login`, which acquired the prefix again: an infinite loop that nested
+ * the `redirect` parameter on every pass until the browser gave up. Nobody could
+ * sign in.
+ *
+ * `createRouteMatcher(["/"])` is an EXACT match, not a prefix wildcard —
+ * verified against the installed path-to-regexp, which compiles it to
+ * `/^\/[\/#\?]?$/i`. Adding "/" here cannot accidentally make the app public.
+ *
+ * `/fr` and `/es` are load-bearing, not defensive padding: next-international
+ * picks the locale from the `Next-Locale` cookie and then `Accept-Language`, so
+ * a French-configured browser lands on `/fr`. Omit it and those visitors get the
+ * login page instead of the landing page.
  */
-const isPublicPage = createRouteMatcher([
+const isAuthPage = createRouteMatcher([
   "/login",
   ...LOCALES.map((locale) => `/${locale}/login`),
+]);
+
+const isMarketingPage = createRouteMatcher([
+  "/",
+  ...LOCALES.map((locale) => `/${locale}`),
 ]);
 
 const THIRTY_DAYS_SECONDS = 60 * 60 * 24 * 30;
@@ -139,9 +155,12 @@ async function handler(
   }
 
   const isAuthenticated = await convexAuth.isAuthenticated();
-  const isPublic = isPublicPage(request);
+  // Marketing pages are public AND never redirected. That second property is the
+  // one that matters: a URL that cannot redirect cannot take part in a redirect
+  // cycle, which is what makes `/` safe to open up at all.
+  const isPublic = isAuthPage(request) || isMarketingPage(request);
 
-  if (isPublic && isAuthenticated) {
+  if (isAuthPage(request) && isAuthenticated) {
     // Deliberately NOT `nextjsMiddlewareRedirect`. That helper builds its
     // Location from `request.nextUrl`, which reports localhost:3000 behind a
     // proxy — so a signed-in visitor hitting /login was sent to
@@ -164,10 +183,10 @@ async function handler(
     // Preserve where they were heading so sign-in can return them there, instead
     // of dumping everyone on the dashboard.
     const url = publicUrl(request);
-    // Strip the locale the i18n rewrite has already added, so the round trip
+    // Strip the locale the i18n redirect has already added, so the round trip
     // records "/consult" rather than "/en/consult" — the latter is an internal
     // path that would be rewritten a second time on the way back.
-    const bare = request.nextUrl.pathname.replace(/^\/(en|fr|es)(?=\/|$)/, "") || "/";
+    const bare = stripLocale(request.nextUrl.pathname);
     const target = `${bare}${request.nextUrl.search}`;
     url.pathname = "/login";
     url.search = target && target !== "/" ? `?redirect=${encodeURIComponent(target)}` : "";
@@ -232,7 +251,22 @@ export default function middleware(
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    // `robots.txt`, `sitemap.xml` and `monitoring` are excluded, and each for a
+    // reason that was already costing something:
+    //
+    //   robots/sitemap — the old lookahead excluded image extensions but not
+    //     .txt/.xml, so a crawler asking for /robots.txt was answered with a 307
+    //     to /login. Note they must be excluded from the MATCHER, not added to
+    //     `isMarketingPage`: doing the latter lets them fall through to the i18n
+    //     middleware, which would send /robots.txt to /en/robots.txt and a 404 —
+    //     the identical failure mode to the /api/ outage this file documents.
+    //
+    //   monitoring — `next.config.mjs` sets `tunnelRoute: "/monitoring"` for
+    //     Sentry. It is neither public nor under /api/, so anonymous error
+    //     reports were 307ing to /login and signed-in ones were being sent to
+    //     /en/monitoring, which does not exist. Sentry has not been receiving
+    //     client errors from this app at all.
+    "/((?!_next/static|_next/image|favicon\\.ico|robots\\.txt|sitemap\\.xml|monitoring|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml)$).*)",
     // Convex Auth proxies signIn/signOut through /api/auth, so it must be matched.
     "/(api|trpc)(.*)",
   ],

@@ -1,35 +1,24 @@
-import { WorkspaceProvider } from "@/lib/workspace-provider";
-import { convexAuthNextjsToken } from "@convex-dev/auth/nextjs/server";
-import { api } from "@v1/backend/convex/_generated/api";
-import { fetchQuery } from "convex/nextjs";
 import { redirect } from "next/navigation";
-import { Toaster } from "sonner";
-import { CommandPalette } from "./_components/command-palette";
-import { Sidebar } from "./_components/sidebar";
-import { Topbar } from "./_components/topbar";
+import { DashboardShell } from "@/components/dashboard-shell";
+import { currentUser } from "@/lib/current-user";
 
-export default async function Layout({
-  children,
-}: { children: React.ReactNode }) {
-  const user = await fetchQuery(
-    api.users.getUser,
-    {},
-    { token: await convexAuthNextjsToken() },
-  );
+/**
+ * The gate for every authenticated page: consult, files, jobs, platform,
+ * settings, settings/billing.
+ *
+ * FAIL-CLOSED, deliberately. It would have been less code to add a "render
+ * anyway when signed out" branch here and keep `/` inside this group — but that
+ * converts the single gate for six routes into a fail-open one, so a later edit
+ * to the middleware matcher would silently serve dashboard pages bare instead of
+ * redirecting. `/` lives outside this group instead; see `[locale]/page.tsx`.
+ *
+ * The chrome moved to `<DashboardShell>` because that root page needs to render
+ * exactly the same thing.
+ */
+export default async function Layout({ children }: { children: React.ReactNode }) {
+  const user = await currentUser();
   if (!user?.username) {
     return redirect("/onboarding");
   }
-  return (
-    <WorkspaceProvider>
-      <div className="min-h-screen w-full bg-secondary dark:bg-black md:flex">
-        <Sidebar />
-        <main className="flex min-w-0 flex-1 flex-col">
-          <Topbar />
-          <div className="min-h-0 flex-1">{children}</div>
-        </main>
-      </div>
-      <Toaster richColors position="top-right" />
-      <CommandPalette />
-    </WorkspaceProvider>
-  );
+  return <DashboardShell>{children}</DashboardShell>;
 }

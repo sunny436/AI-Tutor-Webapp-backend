@@ -7,7 +7,9 @@ const step = async (n, f) => { try { const d = await f(); results.push([true, n,
   const page = await (await b.newContext({ viewport: { width: 1366, height: 850 } })).newPage();
   page.on("console", (m) => { if (m.type() === "error") errs.push(m.text()); });
   await step("login → dashboard home", async () => {
-    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    // `/` is the public landing page now, not a redirect to login. Go straight
+    // to /login, which is what these steps were actually reaching.
+    await page.goto(BASE + "/login", { waitUntil: "domcontentloaded" });
     await page.waitForURL(/login/, { timeout: 20000 });
     await page.locator('input[type="email"]').first().fill("admin@myos.test");
     await page.locator('input[type="password"]').first().fill("MyosAdmin#2026");

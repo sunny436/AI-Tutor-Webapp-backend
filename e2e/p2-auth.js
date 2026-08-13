@@ -26,7 +26,9 @@ async function getCode(label, email) {
   page.on("console", (m) => { if (m.type() === "error") errs.push(`[${cur}] ${m.text()}`); });
 
   await step("login page renders AuthForm + Google", async () => {
-    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    // `/` is the public landing page now, not a redirect to login. Go straight
+    // to /login, which is what these steps were actually reaching.
+    await page.goto(BASE + "/login", { waitUntil: "domcontentloaded" });
     await page.waitForURL(/login/, { timeout: 20000 }); cur = page.url();
     if (!(await page.locator('button:has-text("Continue with Google")').isVisible())) throw new Error("no Google button");
   });
@@ -58,7 +60,9 @@ async function getCode(label, email) {
     await page.waitForTimeout(2500);
   });
   await step("Forgot password → reset → signed in with new password", async () => {
-    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    // `/` is the public landing page now, not a redirect to login. Go straight
+    // to /login, which is what these steps were actually reaching.
+    await page.goto(BASE + "/login", { waitUntil: "domcontentloaded" });
     await page.waitForURL(/login/, { timeout: 15000 }); cur = page.url();
     await page.click('button:has-text("Forgot password?")');
     await page.fill('input[type="email"]', EMAIL);
@@ -77,7 +81,9 @@ async function getCode(label, email) {
     await page.waitForTimeout(700);
     await page.getByText("Log Out").click({ timeout: 8000 }).catch(() => {});
     await page.waitForTimeout(2000);
-    await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
+    // `/` is the public landing page now, not a redirect to login. Go straight
+    // to /login, which is what these steps were actually reaching.
+    await page.goto(BASE + "/login", { waitUntil: "domcontentloaded" });
     await page.waitForURL(/login/, { timeout: 15000 });
     await page.fill('input[type="email"]', "admin@myos.test");
     await page.fill('input[type="password"]', "MyosAdmin#2026");
