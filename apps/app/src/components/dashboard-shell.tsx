@@ -21,7 +21,10 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
     <WorkspaceProvider>
       <div className="min-h-dvh w-full bg-background md:flex">
         <Sidebar />
-        <main className="flex min-w-0 flex-1 flex-col">
+        {/* `id="main"` is the skip link's target. The sidebar above renders
+            fourteen links, so without this a keyboard user tabs through the
+            whole navigation on every page before reaching content. */}
+        <main id="main" className="flex min-w-0 flex-1 flex-col">
           <Topbar />
           <div className="min-h-0 flex-1">{children}</div>
         </main>

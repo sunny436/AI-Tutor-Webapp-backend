@@ -12,9 +12,10 @@ coverage
 .next/
 out/
 next-env.d.ts
-# Output of a verification build (NEXT_DIST_DIR=.next-verify), used to prove a
-# change compiles without rewriting the .next a running `next start` is serving.
-.next-verify/
+# Output of a verification build or dev server (NEXT_DIST_DIR=.next-verify,
+# .next-dev-verify), used to prove a change compiles and behaves without
+# rewriting the .next a running `next start` is serving.
+.next-*/
 
 # expo
 .expo/

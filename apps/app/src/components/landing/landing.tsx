@@ -152,9 +152,14 @@ export function Landing() {
   return (
     <div className="relative min-h-dvh bg-background">
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
+      {/* `<main>`, not a bare div. The landing page had no main landmark at all,
+          so a screen-reader user had nothing to jump to on the first page most
+          visitors see — and the skip link needs a target. The nav sits outside
+          it, which is what makes skipping past the nav mean anything. */}
       <div className="relative">
         <Nav />
 
+        <main id="main">
         {/* HERO */}
         <section className="mx-auto w-full max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-24 sm:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr]">
@@ -395,6 +400,7 @@ export function Landing() {
             </Button>
           </div>
         </section>
+        </main>
 
         {/* FOOTER — only links that exist */}
         <footer className="border-t border-border">

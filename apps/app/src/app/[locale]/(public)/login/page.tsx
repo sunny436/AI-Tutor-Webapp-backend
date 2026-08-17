@@ -141,8 +141,14 @@ export default function Page() {
         </p>
       </section>
 
-      {/* Right: the form. */}
-      <section className="relative flex min-h-dvh flex-col items-center justify-center px-4 py-10 lg:min-h-0">
+      {/* Right: the form. A `<main>`, not a bare section — this page had no main
+          landmark at all, so screen-reader landmark navigation had nothing to
+          jump to on one of the first pages a new user meets. The left panel is
+          supporting material and correctly stays a `<section>`. */}
+      <main
+        id="main"
+        className="relative flex min-h-dvh flex-col items-center justify-center px-4 py-10 lg:min-h-0"
+      >
         <div className="absolute right-4 top-4">
           <ThemeSwitcher />
         </div>
@@ -188,7 +194,7 @@ export default function Page() {
             © {new Date().getFullYear()} Ollasoftware · Ayurveda &amp; Yoga
           </p>
         </div>
-      </section>
+      </main>
     </div>
   );
 }

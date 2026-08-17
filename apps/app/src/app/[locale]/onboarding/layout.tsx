@@ -37,9 +37,12 @@ export default async function Layout({ children }: { children: React.ReactNode }
         <ThemeSwitcher />
       </header>
 
-      <div className="relative flex flex-1 items-center justify-center px-4 pb-16">
+      {/* The third page that had no main landmark. The header above carries the
+          brand and the theme switcher; the form is the content, so it is what
+          the skip link should land on. */}
+      <main id="main" className="relative flex flex-1 items-center justify-center px-4 pb-16">
         {children}
-      </div>
+      </main>
     </div>
   );
 }

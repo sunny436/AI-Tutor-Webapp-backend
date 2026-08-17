@@ -98,12 +98,22 @@ const PRECONNECT_ORIGINS = Array.from(
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   return (
     <ConvexAuthNextjsServerProvider>
-      <html lang="en" suppressHydrationWarning>
+      {/*
+        `lang` follows the route, instead of claiming "en" on every page.
+        WCAG 3.1.1 (Level A), and not a technicality: a screen reader picks its
+        voice and pronunciation rules from this attribute, so a French or Spanish
+        page was being read aloud with English phonetics. The Library pages set
+        `hi-Latn` on their own bodies for the same reason — romanised Hindi read
+        with an English voice is gibberish.
+      */}
+      <html lang={params.locale || "en"} suppressHydrationWarning>
         <head>
           {PRECONNECT_ORIGINS.map((origin) => (
             // dns-prefetch as well as preconnect: browsers cap concurrent
@@ -124,6 +134,25 @@ export default function RootLayout({
             "font-sans antialiased",
           )}
         >
+          {/*
+            SKIP TO CONTENT. WCAG 2.4.1 Bypass Blocks (Level A), and the app had
+            none at all.
+
+            It is not a formality here: the dashboard sidebar renders FOURTEEN
+            links before `<main>`, so a keyboard user tabbed through the entire
+            navigation on every single page before reaching anything they came
+            for. Every page-level `<main>` in the app carries `id="main"`.
+
+            Visually hidden until focused, then a real, visible control — a skip
+            link that stays invisible while focused is worse than none, because
+            the user cannot tell where they are.
+          */}
+          <a
+            href="#main"
+            className="sr-only z-50 focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:rounded-xl focus:bg-brand focus:px-4 focus:py-2.5 focus:text-sm focus:font-medium focus:text-brand-foreground focus:outline-none focus:ring-2 focus:ring-brand/40"
+          >
+            Skip to content
+          </a>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
