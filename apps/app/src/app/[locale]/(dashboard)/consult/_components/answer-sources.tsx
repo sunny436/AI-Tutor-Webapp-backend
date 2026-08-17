@@ -1,7 +1,7 @@
 "use client";
 
 import { Badge } from "@v1/ui/badge";
-import { BookOpen, ChevronDown, FileText, History } from "lucide-react";
+import { BookOpen, ChevronDown, FileText, History, Library } from "lucide-react";
 import { useId, useState } from "react";
 import type { ConsultSource } from "@/lib/consult/types";
 
@@ -54,6 +54,17 @@ const KINDS = {
     many: "documents you uploaded",
     variant: "info" as const,
   },
+  // External document service. Named "reference document" rather than anything
+  // mentioning GraphRAG: the reader does not know or care which vendor indexed
+  // it, only that it is a supporting document rather than one of the curated
+  // Ayurveda notes. Kept apart from `knowledge` for the same reason the others
+  // are — counting it as an Ayurveda note would be a false claim.
+  graphrag: {
+    icon: Library,
+    one: "reference document",
+    many: "reference documents",
+    variant: "neutral" as const,
+  },
   memory: {
     icon: History,
     one: "earlier consultation",
@@ -63,13 +74,17 @@ const KINDS = {
 };
 
 type Kind = keyof typeof KINDS;
-const ORDER: Kind[] = ["knowledge", "report", "memory"];
+// Curated notes first, then the reader's own documents, then external reference
+// material, and memory last — the same descending order of authority the prompt
+// rules give them.
+const ORDER: Kind[] = ["knowledge", "report", "graphrag", "memory"];
 
 function classify(raw: string): { kind: Kind; name: string } {
   const at = raw.indexOf(":");
   const prefix = at === -1 ? "" : raw.slice(0, at);
   const rest = at === -1 ? raw : raw.slice(at + 1);
   if (prefix === "report") return { kind: "report", name: rest };
+  if (prefix === "graphrag") return { kind: "graphrag", name: rest };
   if (prefix === "memory" || prefix === "convex") return { kind: "memory", name: rest };
   return { kind: "knowledge", name: rest };
 }

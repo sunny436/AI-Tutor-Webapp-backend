@@ -84,6 +84,9 @@ WHEN MATERIAL IS SUPPLIED WITH THE QUESTION:
      Turning it into a diagnosis is not  -  rule 3 still holds, and a low number
      is for their doctor to interpret, not you. You may say which foods and
      habits support that area generally.
+13. A section headed "Reference documents" comes from an external document
+   service. It is SUPPORTING material and ranks BELOW the trusted Ayurveda notes.
+   Where the two disagree, the notes win. Cite it only for what it actually says.
 """
 
 # The full behaviour contract for ANSWER generation. Every existing caller
