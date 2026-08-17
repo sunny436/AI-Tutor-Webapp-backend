@@ -38,6 +38,21 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ["@v1/ui", "@v1/backend"],
+  /**
+   * Where the build output goes. `.next` unless told otherwise.
+   *
+   * The override exists so a build can be VERIFIED without touching the one a
+   * running `next start` is serving from. Production here runs from this same
+   * working tree, so a plain `next build` rewrites `.next` underneath the live
+   * process — which drops chunks for anyone mid-session. Uptime is a hard
+   * requirement on this deployment, so:
+   *
+   *     NEXT_DIST_DIR=.next-verify bun run build
+   *
+   * proves a change compiles and prerenders without going anywhere near the
+   * served output. Unset, behaviour is exactly what it always was.
+   */
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   // Do not advertise the framework version to scanners.
   poweredByHeader: false,
   async headers() {

@@ -2,6 +2,7 @@
 
 import { Badge } from "@v1/ui/badge";
 import { BookOpen, ChevronDown, FileText, History, Library } from "lucide-react";
+import Link from "next/link";
 import { useId, useState } from "react";
 import type { ConsultSource } from "@/lib/consult/types";
 
@@ -97,6 +98,55 @@ const pretty = (name: string) =>
     .replace(/[-_]/g, " ")
     .trim();
 
+// The published URL for a cited note. `docs/knowledge-format.md` makes the
+// filename the citation identifier, which is also what makes this a rename
+// rather than a mapping: `acidity.md` -> `/library/acidity`.
+const slugOf = (name: string) => name.replace(/\.mdx?$/i, "");
+
+/**
+ * One cited source.
+ *
+ * Curated notes are PUBLISHED, and the filename IS the slug — `knowledge:acidity.md`
+ * is `/library/acidity` — so these link. A reader can check any claim in one
+ * click, and every consultation quietly builds internal links into the content
+ * that ranks.
+ *
+ * Only that kind links. `report:` is the reader's own upload, `memory:` is their
+ * own past message, and `graphrag:` is an external document; none has a public
+ * page, so linking them would 404.
+ */
+function SourceBadge({
+  kind,
+  name,
+  score,
+}: {
+  kind: Kind;
+  name: string;
+  score: number | null;
+}) {
+  const badge = (
+    <Badge variant={KINDS[kind].variant} title={name}>
+      {pretty(name)}
+      {typeof score === "number" && (
+        // One decimal. The embedding is not precise enough to justify two, and a
+        // longer number reads as a measurement rather than a hint.
+        <span className="opacity-60">{score.toFixed(1)}</span>
+      )}
+    </Badge>
+  );
+
+  if (kind !== "knowledge") return badge;
+
+  return (
+    <Link
+      href={`/library/${slugOf(name)}`}
+      className="rounded-full outline-none focus-visible:ring-2 focus-visible:ring-brand/40"
+    >
+      {badge}
+    </Link>
+  );
+}
+
 export function AnswerSources({ sources }: { sources: ConsultSource[] }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
@@ -167,15 +217,7 @@ export function AnswerSources({ sources }: { sources: ConsultSource[] }) {
                 </p>
                 <div className="flex flex-wrap gap-1.5">
                   {files.map(([name, score]) => (
-                    <Badge key={name} variant={KINDS[kind].variant} title={name}>
-                      {pretty(name)}
-                      {typeof score === "number" && (
-                        // One decimal. The embedding is not precise enough to
-                        // justify two, and a longer number reads as a
-                        // measurement rather than a hint.
-                        <span className="opacity-60">{score.toFixed(1)}</span>
-                      )}
-                    </Badge>
+                    <SourceBadge key={name} kind={kind} name={name} score={score} />
                   ))}
                 </div>
               </div>
