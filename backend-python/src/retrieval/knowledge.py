@@ -132,24 +132,32 @@ class KnowledgeRetriever:
     def __init__(self, enabled: bool = True) -> None:
         self.enabled = enabled
 
-    def _search(self, query: str) -> tuple[list, list]:
+    def _search(self, query: str, collection: str) -> tuple[list, list]:
         """Return `(everything scored, what survived)` for one query.
 
         Blocking on purpose — the caller runs it off the event loop.
+
+        `collection` comes from the request's BotConfig and is passed to BOTH
+        lookups below. Both matter: the alias index decides which note FILENAMES
+        are claimed, and the claimed path then searches those sources directly,
+        skipping the relevance threshold. Scoping the search but not the index
+        would hand this bot another bot's filenames and then fetch them.
         """
-        claimed = match_topics(query)
+        claimed = match_topics(query, collection=collection)
         if claimed:
             # A note's own aliases named this topic. Trust that over the score:
             # the threshold exists to reject questions nothing covers, and this
             # question is demonstrably covered. Ranking now only chooses the
             # section.
-            scored = search_knowledge_scored(query, FETCH_K, sources=claimed)
+            scored = search_knowledge_scored(
+                query, FETCH_K, sources=claimed, collection=collection
+            )
             if scored:
                 print(f"[knowledge] topic index matched {', '.join(claimed)}")
                 return scored, scored
             # Index and store disagree (a note deleted since ingest) — fall through.
 
-        scored = search_knowledge_scored(query, FETCH_K)
+        scored = search_knowledge_scored(query, FETCH_K, collection=collection)
         kept = [(doc, score) for doc, score in scored if score is None or score >= MIN_RELEVANCE]
         kept = _one_topic_only(query, kept)
         if scored and not kept:
@@ -163,7 +171,12 @@ class KnowledgeRetriever:
     async def retrieve(self, ctx: RetrievalContext) -> RetrievalResult:
         # Chroma and sentence-transformers are blocking C/NumPy work, so this has
         # to leave the event loop or it stalls every concurrent request.
-        scored, kept = await asyncio.to_thread(self._search, ctx.query)
+        #
+        # The collection is read from the request's bot, NOT from a module
+        # constant — that is what makes the isolation real rather than declared.
+        scored, kept = await asyncio.to_thread(
+            self._search, ctx.query, ctx.bot.knowledge_collection
+        )
 
         chunks = [
             Chunk(

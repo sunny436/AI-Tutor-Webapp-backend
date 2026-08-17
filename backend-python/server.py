@@ -31,6 +31,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, StreamingResponse
 
 import config
+from src.bots import BOTS, BotConfig, UnknownBotError, get_bot
 from src.consult import run_turn as run_consult_turn
 from src.graph import run_consult
 from src.documents import extract_text
@@ -335,6 +336,30 @@ async def chat(
     return result  # {kind, answer, knowledge_used}
 
 
+def _resolve_bot(data: dict) -> BotConfig:
+    """Which bot is this request for? Unknown ids are a 400, never a fallback.
+
+    Called BEFORE the turn starts, so an unregistered bot_id never reaches a
+    retriever, an LLM or the vector store. Falling back to the default bot here
+    would silently answer out of Ayurveda's corpus for a caller that explicitly
+    asked for something else — the exact cross-bot leak the Bot Manager exists to
+    prevent, and one that no happy-path test would ever catch.
+
+    An ABSENT bot_id is still accepted and means the default bot: the current
+    frontend does not send one yet. That default is transitional and should
+    become an error once it does.
+    """
+    try:
+        return get_bot(data.get("bot_id"))
+    except UnknownBotError:
+        # Naming the known ids keeps the error actionable. They are not secret —
+        # the frontend sends them in plain request bodies.
+        raise HTTPException(
+            status_code=400,
+            detail=f"unknown bot_id: {data.get('bot_id')!r}; known: {sorted(BOTS)}",
+        )
+
+
 @app.post("/consult")
 async def consult(
     request: Request,
@@ -372,6 +397,11 @@ async def consult(
     principal = {**(data.get("principal") or {}), "token": token}
     principal["user_id"] = require_user(authorization, x_service_key)
 
+    # After auth, before any work: an unauthenticated caller learns nothing about
+    # which bots exist, and an unknown bot_id costs one dict lookup rather than a
+    # retrieval pass.
+    bot = _resolve_bot(data)
+
     result = await run_consult_turn(
         problem=data.get("problem", ""),
         raw_context=data.get("context"),
@@ -379,6 +409,7 @@ async def consult(
         free_text=data.get("freeText"),
         profile=data.get("profile", ""),
         principal=principal,
+        bot=bot,
     )
     return result.model_dump()
 
@@ -416,6 +447,11 @@ async def consult_stream(
     principal = {**(data.get("principal") or {}), "token": token}
     principal["user_id"] = require_user(authorization, x_service_key)
 
+    # Resolved here rather than inside `run()` so an unknown bot_id is a real
+    # HTTP 400 the client can act on, not an `error` frame arriving mid-stream
+    # after the connection has already been accepted.
+    bot = _resolve_bot(data)
+
     # The turn runs in a worker thread and pushes pieces onto this queue; the
     # response generator drains it. A queue rather than a direct yield because
     # `run_turn` calls the writer several frames deep and cannot itself be a
@@ -436,6 +472,7 @@ async def consult_stream(
                 profile=data.get("profile", ""),
                 principal=principal,
                 on_token=on_token,
+                bot=bot,
             )
             await queue.put(("done", result.model_dump()))
         except Exception as error:  # noqa: BLE001

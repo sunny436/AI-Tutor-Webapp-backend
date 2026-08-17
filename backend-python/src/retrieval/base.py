@@ -31,6 +31,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Protocol, Sequence, runtime_checkable
 
+from src.bots import BotConfig, get_bot
+
 
 @dataclass(frozen=True)
 class RetrievalContext:
@@ -41,6 +43,16 @@ class RetrievalContext:
     problem: str = ""
     # Human-readable "Question: Answer" lines collected so far.
     intake_summary: str = ""
+
+    # WHICH BOT IS ASKING — and therefore which knowledge it may see.
+    #
+    # Resolved server-side from a validated `bot_id`, never from an unvalidated
+    # body field: `get_bot` rejects anything unregistered, so an unknown id never
+    # reaches a retriever at all.
+    #
+    # Defaults to the default bot so every existing caller and test constructs
+    # exactly today's behaviour without naming a bot.
+    bot: BotConfig = field(default_factory=lambda: get_bot(None))
 
     # Who is asking. Populated from a verified Convex JWT, never from the body.
     # Unused today; the four server-owned retrievers will need it.

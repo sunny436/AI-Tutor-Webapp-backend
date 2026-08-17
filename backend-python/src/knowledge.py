@@ -11,12 +11,30 @@ rest are fast.
 
 import re
 import warnings
+from dataclasses import dataclass, field
 
 import config
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+from src.bots import get_bot
 
-COLLECTION_NAME = "ayurveda_yoga"
+# The collection used when a caller names none. It is read from the DEFAULT BOT
+# rather than written here, so "which corpus" has exactly one owner
+# (src/bots/registry.py) instead of two that can drift apart.
+#
+# Every function below takes an optional `collection`. Callers that pass one -
+# the consultation retriever, via the request's BotConfig - are isolated per bot.
+# Callers that pass nothing get the default bot, which is what keeps the legacy
+# /chat path and the ingest script working exactly as before.
+DEFAULT_COLLECTION_NAME = get_bot(None).knowledge_collection
+
+# Back-compat alias. Nothing in this repo imports it, but it was the public name
+# for a long time and removing it buys nothing.
+COLLECTION_NAME = DEFAULT_COLLECTION_NAME
+
+
+def _resolve(collection: str | None) -> str:
+    return collection or DEFAULT_COLLECTION_NAME
 
 # Words that carry no topic signal. Without these, "mujhe acidity hai" and
 # "gas ki problem" both match every note that happens to use the same filler.
@@ -82,8 +100,13 @@ def _tokens(text: str) -> list[str]:
     ]
 
 # Module-level caches (loaded once, reused forever).
+#
+# The embedding MODEL is shared across collections on purpose — it is ~1.9GB and
+# carries no per-bot state, so loading a second copy per bot would cost gigabytes
+# to isolate nothing. The vector STORES are keyed by collection, which is where
+# the actual isolation lives.
 _embeddings = None
-_vector_store = None
+_vector_stores: dict[str, Chroma] = {}
 
 
 def get_embeddings():
@@ -104,12 +127,18 @@ def get_embeddings():
     return _embeddings
 
 
-def get_vector_store() -> Chroma:
-    """Open the Ayurveda/Yoga vector DB once and reuse it."""
-    global _vector_store
-    if _vector_store is None:
-        _vector_store = Chroma(
-            collection_name=COLLECTION_NAME,
+def get_vector_store(collection: str | None = None) -> Chroma:
+    """Open one bot's vector DB once and reuse it.
+
+    Cached PER COLLECTION. This is the isolation boundary: two bots configured
+    with different collections get different Chroma handles, so one physically
+    cannot read the other's notes.
+    """
+    name = _resolve(collection)
+    store = _vector_stores.get(name)
+    if store is None:
+        store = Chroma(
+            collection_name=name,
             embedding_function=get_embeddings(),
             persist_directory=config.VECTOR_DB_DIR,
             # Chroma defaults to L2. Cosine is what these sentence embeddings are
@@ -118,14 +147,15 @@ def get_vector_store() -> Chroma:
             # changing it means wiping the store and re-ingesting.
             collection_metadata={"hnsw:space": "cosine"},
         )
-    return _vector_store
+        _vector_stores[name] = store
+    return store
 
 
-def warm_up() -> None:
+def warm_up(collection: str | None = None) -> None:
     """Called at server startup so the first real answer is already fast."""
     try:
-        get_vector_store().similarity_search("warm up", k=1)
-        get_topic_index()
+        get_vector_store(collection).similarity_search("warm up", k=1)
+        get_topic_index(collection)
     except Exception:
         pass
 
@@ -137,9 +167,23 @@ def warm_up() -> None:
 # jhad rahe hain" did not return the right note anywhere in the top 12, even
 # though both phrases are listed verbatim in that note's aliases. A keyword the
 # author explicitly wrote down should never lose to a similarity score.
-_topic_index: dict[str, set[str]] | None = None
-_topic_phrases: dict[str, list[list[str]]] = {}
-_token_df: dict[str, int] = {}
+# PER COLLECTION, and this half matters as much as the vector store above.
+#
+# The topic index is built from the notes' own front matter, so a single shared
+# index would hand `match_topics` a list of AYURVEDA filenames no matter which
+# bot asked — and the retriever then searches those sources by name, bypassing
+# the score threshold entirely. Isolating the store but not the index would look
+# correct and leak anyway.
+@dataclass
+class _TopicIndex:
+    """One collection's alias index: the three views `match_topics` needs."""
+
+    tokens: dict[str, set[str]] = field(default_factory=dict)
+    phrases: dict[str, list[list[str]]] = field(default_factory=dict)
+    token_df: dict[str, int] = field(default_factory=dict)
+
+
+_topic_indexes: dict[str, _TopicIndex] = {}
 
 # Tier 2 only. A token appearing in more notes than this is filler that happened
 # to land inside a longer alias phrase — "kaam" from "kisi kaam mein mann nahi
@@ -150,44 +194,49 @@ MAX_DISTINCTIVE_DF = 2
 MIN_TOKEN_SCORE = 1.0
 
 
-def get_topic_index() -> dict[str, set[str]]:
-    """`{source filename: {searchable token, ...}}` from every note's front matter.
+def _get_index(collection: str | None = None) -> _TopicIndex:
+    """Build (once) and return one collection's alias index."""
+    name = _resolve(collection)
+    cached = _topic_indexes.get(name)
+    if cached is not None:
+        return cached
 
-    Also fills `_topic_phrases`, which holds each `aliases:` entry as a whole
-    phrase. Both views are needed and they answer different questions: the token
-    set is a bag of words, the phrase list preserves the fact that the author
-    wrote "triphala" as a complete search term but "kaam" only ever as one word
-    inside a sentence.
-    """
-    global _topic_index
-    if _topic_index is not None:
-        return _topic_index
-
-    index: dict[str, set[str]] = {}
-    _topic_phrases.clear()
+    built = _TopicIndex()
     try:
-        stored = get_vector_store().get(include=["metadatas"])
+        stored = get_vector_store(name).get(include=["metadatas"])
         for meta in stored.get("metadatas") or []:
             source = (meta or {}).get("source")
-            if not source or source in index:
+            if not source or source in built.tokens:
                 continue
             topic = (meta or {}).get("topic", "")
             aliases = (meta or {}).get("aliases", "")
-            index[source] = {t for t in _tokens(f"{topic} {aliases}") if len(t) >= 2}
+            built.tokens[source] = {
+                t for t in _tokens(f"{topic} {aliases}") if len(t) >= 2
+            }
             # The topic title counts as a phrase too — it is how a note names
             # itself, and it is often what the user types.
             phrases = [_tokens(part) for part in f"{topic},{aliases}".split(",")]
-            _topic_phrases[source] = [p for p in phrases if p]
+            built.phrases[source] = [p for p in phrases if p]
     except Exception as error:
-        print(f"[knowledge] could not build topic index: {error}")
+        print(f"[knowledge] could not build topic index for {name!r}: {error}")
 
-    _token_df.clear()
-    for tokens in index.values():
+    for tokens in built.tokens.values():
         for token in tokens:
-            _token_df[token] = _token_df.get(token, 0) + 1
+            built.token_df[token] = built.token_df.get(token, 0) + 1
 
-    _topic_index = index
-    return index
+    _topic_indexes[name] = built
+    return built
+
+
+def get_topic_index(collection: str | None = None) -> dict[str, set[str]]:
+    """`{source filename: {searchable token, ...}}` from every note's front matter.
+
+    The companion phrase view holds each `aliases:` entry as a whole phrase. Both
+    are needed and they answer different questions: the token set is a bag of
+    words, the phrase list preserves the fact that the author wrote "triphala" as
+    a complete search term but "kaam" only ever as one word inside a sentence.
+    """
+    return _get_index(collection).tokens
 
 
 def _contains(haystack: list[str], needle: list[str]) -> bool:
@@ -201,7 +250,7 @@ def _contains(haystack: list[str], needle: list[str]) -> bool:
     return False
 
 
-def match_topics(query: str, limit: int = 2) -> list[str]:
+def match_topics(query: str, limit: int = 2, collection: str | None = None) -> list[str]:
     """Sources whose author-written aliases identify the query's topic.
 
     Two tiers, because one rule cannot serve both cases.
@@ -223,11 +272,14 @@ def match_topics(query: str, limit: int = 2) -> list[str]:
     if not query_tokens:
         return []
 
-    get_topic_index()  # populates _topic_phrases and _token_df
+    # Scoped to ONE collection, so a bot can only ever be handed its own notes'
+    # filenames. The retriever searches by those names and skips the relevance
+    # threshold when it does, so a cross-bot name here would be a direct leak.
+    scoped = _get_index(collection)
 
     # --- tier 1: whole alias phrase present in the query ---------------------
     phrase_hits: list[tuple[int, str]] = []
-    for source, phrases in _topic_phrases.items():
+    for source, phrases in scoped.phrases.items():
         longest = max(
             (len(p) for p in phrases if _contains(query_tokens, p)),
             default=0,
@@ -241,12 +293,11 @@ def match_topics(query: str, limit: int = 2) -> list[str]:
         return [source for length, source in phrase_hits[:limit] if length == best]
 
     # --- tier 2: weighted token overlap --------------------------------------
-    index = get_topic_index()
     scored: list[tuple[float, str]] = []
-    for source, alias_tokens in index.items():
+    for source, alias_tokens in scoped.tokens.items():
         score = 0.0
         for token in query_tokens:
-            frequency = _token_df.get(token, 0)
+            frequency = scoped.token_df.get(token, 0)
             if token in alias_tokens:
                 # Rare tokens are worth a full match on their own; common ones
                 # are worth a fraction, so several must agree.
@@ -265,7 +316,12 @@ def match_topics(query: str, limit: int = 2) -> list[str]:
     return [source for score, source in scored[:limit] if score == best_score]
 
 
-def search_knowledge_scored(query: str, k: int = 4, sources: list[str] | None = None) -> list[tuple]:
+def search_knowledge_scored(
+    query: str,
+    k: int = 4,
+    sources: list[str] | None = None,
+    collection: str | None = None,
+) -> list[tuple]:
     """Top-k matching notes as (Document, relevance) pairs.
 
     Relevance runs 0..1, higher being closer. The score matters: a plain
@@ -289,7 +345,7 @@ def search_knowledge_scored(query: str, k: int = 4, sources: list[str] | None = 
             # identified, so the ranking only has to pick the best SECTION of the
             # right note rather than find the right note at all.
             where = {"source": {"$in": sources}} if sources else None
-            return get_vector_store().similarity_search_with_relevance_scores(
+            return get_vector_store(collection).similarity_search_with_relevance_scores(
                 query, k=k, filter=where
             )
     except Exception as error:
@@ -299,19 +355,19 @@ def search_knowledge_scored(query: str, k: int = 4, sources: list[str] | None = 
         return []
 
 
-def search_knowledge_docs(query: str, k: int = 4) -> list:
+def search_knowledge_docs(query: str, k: int = 4, collection: str | None = None) -> list:
     """Top-k matching notes as raw LangChain Documents (unscored)."""
     try:
-        return get_vector_store().similarity_search(query, k=k)
+        return get_vector_store(collection).similarity_search(query, k=k)
     except Exception as error:
         print(f"[knowledge] search failed: {error}")
         return []
 
 
-def search_knowledge(query: str, k: int = 4) -> str:
+def search_knowledge(query: str, k: int = 4, collection: str | None = None) -> str:
     """Find the top-k relevant Ayurveda/Yoga notes for a question."""
     try:
-        results = get_vector_store().similarity_search(query, k=k)
+        results = get_vector_store(collection).similarity_search(query, k=k)
         if not results:
             return ""
         chunks = []
