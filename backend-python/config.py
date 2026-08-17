@@ -223,6 +223,32 @@ MAX_CONTEXT_MESSAGES = int(_get("MAX_CONTEXT_MESSAGES", "12"))
 # service-key-guarded debug route. Never enable on a public deployment.
 DEBUG_RAG = _get("DEBUG_RAG", "0") == "1"
 
+# ---- GraphRAG (external document service) ----
+# DECLARATIONS ONLY. Nothing reads these yet — there is no GraphRAG client and no
+# retriever. They exist so the later integration adds one file under
+# src/retrieval/ instead of also editing config in the same commit.
+#
+# Credentials come from .env and never from source. The vendor brief that carries
+# them, docs/graphrag-api.md, is git-ignored: it holds a live key under its own
+# instruction "KEEP SECRET. Do not commit to git."
+GRAPHRAG_ENABLED = _get("GRAPHRAG_ENABLED", "0") == "1"
+GRAPHRAG_BASE_URL = _get("GRAPHRAG_BASE_URL", "")
+GRAPHRAG_PROJECT_ID = _get("GRAPHRAG_PROJECT_ID", "")
+GRAPHRAG_API_KEY = _get("GRAPHRAG_API_KEY", "")
+
+# `k` in the /v1/search request body. 6 is the vendor doc's own example.
+GRAPHRAG_TOP_K = int(_get("GRAPHRAG_TOP_K", "6"))
+
+# Kept at or below RETRIEVAL_TIMEOUT_S above: this is a network-backed retriever
+# on an internal host, and a wedged source must not hold up a consultation.
+GRAPHRAG_TIMEOUT_S = float(_get("GRAPHRAG_TIMEOUT_S", "3.0"))
+
+# Path to graphrag-internal-root.crt, to be passed to httpx as `verify=`. Must
+# point OUTSIDE the repo. NEVER set verify=False: the vendor doc is explicit that
+# it leaves the connection encrypted but UNAUTHENTICATED, which would let anyone
+# on the network read the API key in transit.
+GRAPHRAG_CA_BUNDLE = _get("GRAPHRAG_CA_BUNDLE", "")
+
 # ---- Network exposure ----
 # Which interface uvicorn binds to. `127.0.0.1` means ONLY this machine can
 # connect, which is what we want in production: Cloudflare Tunnel's `cloudflared`

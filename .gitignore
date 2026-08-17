@@ -34,6 +34,12 @@ yarn-error.log*
 .env
 .env*.local
 
+# Vendor credential brief. Contains a LIVE GraphRAG API key and the internal CA,
+# under its own instruction "KEEP SECRET. Do not commit to git". It was untracked
+# but matched no ignore rule, so any `git add -A` would have committed it.
+# The key itself belongs in backend-python/.env, which is already ignored.
+docs/graphrag-api.md
+
 # vercel
 .vercel
 
