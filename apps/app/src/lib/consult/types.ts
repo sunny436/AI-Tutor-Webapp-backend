@@ -147,6 +147,15 @@ export interface ConsultRequest {
    * second time, labelled as an earlier consultation.
    */
   conversationId?: string;
+  /**
+   * Which bot this frontend is — the backend uses it to select the knowledge
+   * base. Snake_case because it is the wire field the Python side reads, unlike
+   * the camelCase fields above which predate that convention.
+   *
+   * An unregistered value is a 400. Omitting it currently falls back to the
+   * default bot, which is transitional: see the note in `server.py::_resolve_bot`.
+   */
+  bot_id?: string;
 }
 
 /**

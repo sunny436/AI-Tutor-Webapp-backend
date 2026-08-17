@@ -5,7 +5,7 @@
  * in the consult page, so the URL is configurable per environment.
  */
 
-import type { ConsultRequest, ConsultResult } from "./types";
+import type { ConsultContext, ConsultRequest, ConsultResult } from "./types";
 
 export const AI_BACKEND_URL =
   process.env.NEXT_PUBLIC_AI_BACKEND_URL ?? "http://localhost:4000";
@@ -23,7 +23,78 @@ export const AI_BACKEND_URL =
  * code pretending to be safety.
  */
 export const CONSULT_PROVIDER =
-  process.env.NEXT_PUBLIC_CONSULT_PROVIDER === "central" ? "central" : "local";
+  process.env.NEXT_PUBLIC_CONSULT_PROVIDER === "central"
+    ? "central"
+    : process.env.NEXT_PUBLIC_CONSULT_PROVIDER === "mock"
+      ? "mock"
+      : "local";
+
+/**
+ * Which bot this frontend is. Sent on every turn; the backend validates it.
+ *
+ * One central Python backend serves several frontends, and `bot_id` is what
+ * selects the knowledge base, so it belongs in the frontend's own configuration
+ * rather than being inferred server-side. An unregistered value is a 400 — never
+ * a silent fallback to somebody else's corpus.
+ *
+ * Defaults to "ayurveda" so an unset env var keeps this deployment working.
+ */
+export const BOT_ID = process.env.NEXT_PUBLIC_BOT_ID || "ayurveda";
+
+/**
+ * A canned conversation, for building UI without a backend.
+ *
+ * Deliberately a third branch of the switch that already exists rather than a
+ * separate mock server: the seam is proven, and this way switching between mock
+ * and real is one env var with no code change — which is the whole point of
+ * `NEXT_PUBLIC_CONSULT_PROVIDER` existing.
+ *
+ * A frontend developer needs no Python, no Convex, no API key and no knowledge
+ * of how retrieval works to change the chat UI.
+ */
+function mockResult(request: ConsultRequest): ConsultResult {
+  const said = (request.problem || request.freeText || "").trim();
+  const turns = (request.context?.chat_history?.length ?? 0) / 2;
+  const done = turns >= 2;
+
+  return {
+    kind: done ? "answer" : "chat",
+    condition: "Acidity",
+    message: "",
+    intake: null,
+    answer: done
+      ? "**Root Cause**\nEating late and lying down soon after weakens digestion, so acid rises instead of settling.\n\n**Changes To Make**\nFinish dinner by 8pm. Sit upright for 20 minutes after eating.\n\n**When To See A Doctor**\nBlood in vomit, black stools, or difficulty swallowing need a doctor promptly."
+      : said
+        ? "Samajh gaya. Ye kab se ho raha hai, aur khaane ke baad zyada hota hai?"
+        : "Namaste! Bataiye, kya takleef hai?",
+    context: {
+      ...(request.context ?? {
+        v: 1,
+        greeted: true,
+        last_answer: "",
+        round: 0,
+        problem: said,
+        needs_second_round: false,
+        asked: [],
+        answers: {},
+        notes: [],
+      }),
+      phase: done ? "completed" : "gathering",
+      condition: "Acidity",
+      chat_history: [
+        ...(request.context?.chat_history ?? []),
+        { role: "user" as const, text: said },
+        { role: "assistant" as const, text: "…" },
+      ],
+    } as ConsultContext,
+    sources: done
+      ? [
+          { section: "Trusted Ayurveda / Yoga knowledge", source: "knowledge:acidity.md", score: 0.59 },
+          { section: "Trusted Ayurveda / Yoga knowledge", source: "knowledge:gas-bloating.md", score: 0.54 },
+        ]
+      : [],
+  };
+}
 
 /**
  * Both providers go through OUR server. Same-origin, no token, no key.
@@ -39,6 +110,8 @@ export const CONSULT_PROVIDER =
  */
 const CONSULT_ENDPOINT = "/api/consult";
 const CONSULT_STREAM_ENDPOINT = "/api/consult/stream";
+const UPLOAD_ENDPOINT = "/api/upload";
+const TRANSCRIBE_ENDPOINT = "/api/transcribe";
 
 /** Add `Authorization` only when a token exists, so anonymous calls stay clean. */
 function authHeaders(
@@ -106,11 +179,18 @@ async function classify401(response: Response): Promise<ConsultUnavailableError>
  * back here, and it re-derives everything from that plus the freshly submitted
  * answers.
  */
+/** Every outbound turn carries the bot it is for. Added in one place, not four. */
+function withBot(request: ConsultRequest): ConsultRequest {
+  return { bot_id: BOT_ID, ...request };
+}
+
 export async function postConsult(
   request: ConsultRequest,
   signal?: AbortSignal,
   token?: string | null,
 ): Promise<ConsultResult> {
+  if (CONSULT_PROVIDER === "mock") return mockResult(request);
+
   let response: Response;
   try {
     response = await fetch(CONSULT_ENDPOINT, {
@@ -120,7 +200,7 @@ export async function postConsult(
       // without it the consultation still works, but only against the shared
       // knowledge base. Get it from `useAuthToken()` in a client component.
       headers: authHeaders(token, { "Content-Type": "application/json" }),
-      body: JSON.stringify(request),
+      body: JSON.stringify(withBot(request)),
       signal,
     });
   } catch (error) {
@@ -160,12 +240,16 @@ export async function postConsultStream(
   signal?: AbortSignal,
   token?: string | null,
 ): Promise<ConsultResult> {
+  // The mock does not stream. `postConsult` is the documented fallback for a
+  // backend that cannot, so the UI already handles this path.
+  if (CONSULT_PROVIDER === "mock") return postConsult(request, signal, token);
+
   let response: Response;
   try {
     response = await fetch(CONSULT_STREAM_ENDPOINT, {
       method: "POST",
       headers: authHeaders(token, { "Content-Type": "application/json" }),
-      body: JSON.stringify(request),
+      body: JSON.stringify(withBot(request)),
       signal,
     });
   } catch (error) {
@@ -250,7 +334,10 @@ export async function uploadDocument(
   // No Content-Type on purpose: the browser must set it itself so it can add
   // the multipart boundary. Setting it by hand produces a body the server
   // cannot parse.
-  const response = await fetch(`${AI_BACKEND_URL}/upload`, {
+  // Through OUR server, like every other call. It used to post straight to the
+  // backend with a token the page had no way to refresh — the same bug the
+  // consult route was moved to fix, just rarer because uploads are rarer.
+  const response = await fetch(UPLOAD_ENDPOINT, {
     method: "POST",
     headers: authHeaders(token),
     body: form,
@@ -286,7 +373,7 @@ export async function transcribeAudio(
   const ext = blob.type.includes("mp4") ? "mp4" : "webm";
   form.append("file", blob, `clip.${ext}`);
 
-  const response = await fetch(`${AI_BACKEND_URL}/transcribe`, {
+  const response = await fetch(TRANSCRIBE_ENDPOINT, {
     method: "POST",
     headers: authHeaders(token),
     body: form,

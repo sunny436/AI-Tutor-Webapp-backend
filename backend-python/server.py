@@ -345,10 +345,19 @@ def _resolve_bot(data: dict) -> BotConfig:
     asked for something else — the exact cross-bot leak the Bot Manager exists to
     prevent, and one that no happy-path test would ever catch.
 
-    An ABSENT bot_id is still accepted and means the default bot: the current
-    frontend does not send one yet. That default is transitional and should
-    become an error once it does.
+    An ABSENT bot_id is still accepted and means the default bot. The frontend
+    now sends one, so this remains only for clients still running an older
+    bundle — a browser tab open across the deploy, or a cached script. Rejecting
+    absence immediately would 400 those users mid-conversation for no fault of
+    their own, and this site is expected to stay up.
+
+    It is logged rather than silent, so the transition is observable: once this
+    warning stops appearing in production, absence can safely become a 400 too.
+    A default is a silent fallback wearing a different hat, and it is only
+    tolerable while it is temporary and visible.
     """
+    if not data.get("bot_id"):
+        print("[consult] request without bot_id; defaulting to the ayurveda bot")
     try:
         return get_bot(data.get("bot_id"))
     except UnknownBotError:

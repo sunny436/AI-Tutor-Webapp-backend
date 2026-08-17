@@ -17,6 +17,7 @@ Run from the project root:
 The knowledge-file format is documented in `docs/knowledge-format.md`.
 """
 
+import argparse
 import hashlib
 import re
 import sys
@@ -28,7 +29,8 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 import config
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
-from src.knowledge import get_vector_store
+from src.bots import get_bot
+from src.knowledge import DEFAULT_COLLECTION_NAME, get_vector_store
 
 
 _FRONT_MATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
@@ -129,6 +131,42 @@ def chunk_id(chunk: Document, index: int) -> str:
 
 
 def main() -> None:
+    # WHICH BOT'S CORPUS THIS BUILDS.
+    #
+    # Was hardcoded to the one collection, which meant a second bot could be
+    # CONFIGURED but never INGESTED — its collection would stay empty and it
+    # would silently answer from nothing. `--collection` is what makes the Bot
+    # Manager's isolation boundary usable rather than theoretical.
+    #
+    # Defaults to the default bot's collection, so every existing invocation —
+    # `python scripts/ingest_knowledge.py`, the run_backend scripts, the docs —
+    # keeps doing exactly what it did.
+    parser = argparse.ArgumentParser(description="Build a bot's knowledge vector store.")
+    parser.add_argument(
+        "--collection",
+        default=None,
+        help=(
+            "Chroma collection to write into. Defaults to the default bot's "
+            "(see src/bots/registry.py). Must match that bot's "
+            "BotConfig.knowledge_collection, or the bot will search an empty store."
+        ),
+    )
+    parser.add_argument(
+        "--bot",
+        default=None,
+        help="Resolve the collection from a registered bot_id instead of naming it.",
+    )
+    args = parser.parse_args()
+
+    collection = args.collection
+    if args.bot:
+        if collection:
+            raise SystemExit("Pass --bot or --collection, not both.")
+        collection = get_bot(args.bot).knowledge_collection
+
+    target = collection or DEFAULT_COLLECTION_NAME
+    print(f"Ingesting into collection: {target}")
+
     docs = load_files()
     if not docs:
         print("No knowledge files found in", config.KNOWLEDGE_DIR)
@@ -148,7 +186,7 @@ def main() -> None:
     ids = [chunk_id(chunk, i) for i, chunk in enumerate(chunks)]
 
     print(f"Loaded {len(docs)} files -> {len(chunks)} chunks. Building vector store...")
-    store = get_vector_store()
+    store = get_vector_store(collection)
 
     # Drop anything left from the old id-less runs, and any chunk deleted from a
     # note since the last ingest. Without this the duplicates would persist.

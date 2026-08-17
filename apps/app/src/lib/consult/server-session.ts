@@ -70,6 +70,52 @@ export function callerToken(request: Request, cookieToken: string | null): strin
 }
 
 /**
+ * Forward a multipart request to the Python backend, carrying the session token.
+ *
+ * WHY THIS EXISTS
+ * `uploadDocument` and `transcribeAudio` used to post straight from the browser
+ * to `AI_BACKEND_URL`, which is exactly the pattern the consult route was moved
+ * away from. The reason it had to move is documented at the top of
+ * `app/api/consult/route.ts`: `@convex-dev/auth` refreshes a token only when
+ * Convex's own client hits an auth error, so a hand-written fetch to another
+ * host can carry one that expired an hour ago and nothing ever corrects it.
+ *
+ * These two had the same bug. It had simply not been reported, because uploads
+ * are far rarer than chat turns — a tab open long enough to stale a token is
+ * usually one being chatted in, not one uploading a report.
+ *
+ * The body is forwarded as raw BYTES with the original `content-type`. That
+ * header carries the multipart boundary, so re-encoding through `formData()`
+ * would produce a different boundary and a body the backend cannot parse.
+ */
+export async function proxyMultipart(
+  request: Request,
+  path: string,
+  token: string,
+): Promise<Response> {
+  const contentType = request.headers.get("content-type") ?? "";
+  const body = await request.arrayBuffer();
+
+  const upstream = await fetch(`${LOCAL_BACKEND}${path}`, {
+    method: "POST",
+    headers: {
+      // Never set this by hand for multipart — the boundary must survive intact.
+      ...(contentType ? { "Content-Type": contentType } : {}),
+      Authorization: `Bearer ${token}`,
+    },
+    body,
+    // Transcription and OCR are slow; matches the consult route's budget.
+    signal: AbortSignal.timeout(180_000),
+  });
+
+  const text = await upstream.text();
+  return new Response(text, {
+    status: upstream.status,
+    headers: { "Content-Type": "application/json" },
+  });
+}
+
+/**
  * Who is calling, according to the session.
  *
  * Uses the existing `api.users.getUser` rather than a new Convex function, so
