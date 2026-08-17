@@ -17,6 +17,7 @@ arbitrary text into the answer prompt.
 from __future__ import annotations
 
 from src.consult.schema import (
+    LEGACY_PHASES,
     MAX_CHAT_HISTORY,
     Answer,
     ChatTurn,
@@ -29,6 +30,10 @@ SUPPORTED_VERSION = 2
 # The blob rides on every request and is persisted to Convex, so keep it bounded.
 MAX_NOTES = 8
 MAX_NOTE_CHARS = 400
+# Retrieval keywords: short, and few. These go straight into the vector query, so
+# the caps are a quality guard rather than a storage one — see `search_query`.
+MAX_SYMPTOMS = 10
+MAX_SYMPTOM_CHARS = 40
 # Generous: a six-section plan runs ~3k characters and must survive intact for
 # "translate this" to be faithful.
 MAX_LAST_ANSWER = 6000
@@ -42,10 +47,45 @@ def load_context(raw: dict | None) -> ConsultContext:
         # An older persisted blob — degrade to a new consult rather than crash.
         return ConsultContext()
     try:
-        return ConsultContext.model_validate(raw)
+        context = ConsultContext.model_validate(raw)
     except Exception as error:  # noqa: BLE001
         print(f"[consult] discarding unreadable context: {error}")
         return ConsultContext()
+
+    # A conversation persisted before the card intake was replaced. Its phase is
+    # `collecting` or `choosing`, neither of which exists in the product any
+    # more — carry it into `gathering` so the consultation simply continues in
+    # prose from whatever was already collected.
+    #
+    # SUPPORTED_VERSION deliberately stays 2. Bumping it would make the check
+    # above discard every one of these blobs, which is the outcome this mapping
+    # exists to prevent: the user's half-finished consultation would disappear
+    # and the assistant would greet them as if they had just arrived.
+    if context.phase in LEGACY_PHASES:
+        print(f"[consult] migrating legacy phase {context.phase!r} -> 'gathering'")
+        # Anything already tapped is real detail the user gave us. Fold it into
+        # the new retrieval signal so the plan is still built from it.
+        context.symptoms = _merge_symptoms(context.symptoms, selected_labels(context))
+        context.phase = "gathering"
+
+    return context
+
+
+def _merge_symptoms(existing: list[str], incoming: list[str]) -> list[str]:
+    """Append new keywords, de-duplicated case-insensitively and bounded.
+
+    Bounded because this rides on every request and feeds the vector query;
+    letting it grow turn after turn would dilute the query in exactly the way
+    `search_query` documents.
+    """
+    seen = {s.lower() for s in existing}
+    merged = list(existing)
+    for item in incoming:
+        cleaned = (item or "").strip()[:MAX_SYMPTOM_CHARS]
+        if cleaned and cleaned.lower() not in seen:
+            seen.add(cleaned.lower())
+            merged.append(cleaned)
+    return merged[-MAX_SYMPTOMS:]
 
 
 def remember_chat(
@@ -190,6 +230,37 @@ def selected_labels(context: ConsultContext) -> list[str]:
     return labels
 
 
+def safety_fragments(context: ConsultContext) -> list[str]:
+    """Every piece of user-supplied text worth scanning for a red flag.
+
+    THIS IS THE REPLACEMENT FOR THE CARDS' PRIMARY RED-FLAG MECHANISM, and it
+    deliberately covers more text than the mechanism it replaces.
+
+    `safety.scan` used to run over the tapped option labels, and its docstring is
+    explicit that keyword matching was the BACKSTOP for the planner's own
+    `red_flag` markers rather than the only defence. Those markers are gone with
+    the cards, so the keyword scan has to widen: it now reads the WHOLE
+    conversation, not just the opening complaint.
+
+    That matters because of where a red flag actually appears. "I have acidity"
+    is harmless; "there was blood in it this morning", typed three turns later,
+    is not — and under the old flow that sentence was only ever seen if the
+    planner happened to have written it as an option.
+
+    Note this is one of THREE defences, not the only one. The gathering step sets
+    `red_flag` itself, and `safety.is_serious_condition` still runs on the
+    problem and on retrieved report text, both unchanged.
+    """
+    fragments = [context.problem, context.condition, *context.symptoms, *context.notes]
+    # The transcript, both sides. The assistant's own turns are included on
+    # purpose: it may have repeated back a symptom the user typed in a message
+    # long since pushed out of the history window.
+    fragments.extend(turn.text for turn in context.chat_history)
+    # Anything tapped in a consultation that predates the conversational flow.
+    fragments.extend(selected_labels(context))
+    return [f for f in fragments if f]
+
+
 def selected_red_flags(context: ConsultContext) -> list[str]:
     """Labels the planner itself marked as warranting a doctor."""
     by_id: dict[str, Question] = {q.id: q for q in context.asked}
@@ -228,15 +299,28 @@ def intake_summary(context: ConsultContext) -> str:
 def search_query(context: ConsultContext) -> str:
     """What the retrieval layer should search for.
 
-    Uses the problem, the condition and the SELECTED LABELS — deliberately not
-    `intake_summary`, which also carries the question text.
+    Problem, condition, and SHORT KEYWORDS — never the conversation.
 
-    Question wording ("What have you eaten in the last 24 hours?") is noise for a
-    similarity search: it drags the embedding towards generic interrogative
-    phrasing and away from the topic. Measured on this corpus, an acidity query
-    scored 0.408 on the problem alone but only 0.172 once the full summary was
-    appended — enough dilution to start dropping notes that genuinely match.
-    The answers are the signal; the questions are not.
+    The measurement that governs this function has not changed, only where the
+    keywords come from. On this corpus an acidity query scored 0.408 on the
+    problem alone but only 0.172 once the full collected text was appended —
+    enough dilution to start dropping notes that genuinely match. Interrogative
+    and conversational wording drags the embedding toward generic phrasing and
+    away from the topic.
+
+    That is why the conversational flow does NOT put the transcript here. The
+    gathering step returns `symptoms` — "gas", "after meals", "spicy food" — and
+    those are the signal, exactly as the tapped option labels were before it.
+    Feeding `chat_history` in instead would reproduce the 0.172 case precisely.
+
+    `selected_labels` is still included so a consultation persisted mid-cards
+    keeps retrieving on what the user had already tapped; it returns nothing for
+    conversations started after the change.
     """
-    parts = [context.problem, context.condition, *selected_labels(context)]
+    parts = [
+        context.problem,
+        context.condition,
+        *context.symptoms,
+        *selected_labels(context),
+    ]
     return " ".join(p for p in parts if p).strip()

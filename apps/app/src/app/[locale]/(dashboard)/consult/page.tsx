@@ -43,18 +43,19 @@ import {
   uploadDocument,
 } from "@/lib/consult/client";
 import { useVoiceRecorder } from "@/lib/consult/use-voice";
-import { CONSULTING, answeredCount } from "@/lib/consult/types";
+import { CONSULTING } from "@/lib/consult/types";
 import type {
   ConsultContext,
   ConsultResult,
   ConsultSource,
-  IntakePlan,
   PersistedConsultState,
-  Selection,
 } from "@/lib/consult/types";
 import { AnswerSections } from "./_components/answer-sections";
 import { AnswerSources } from "./_components/answer-sources";
-import { IntakePanel } from "./_components/intake-panel";
+// NOTE: `IntakePanel`, `QuestionCard` and `OptionChip` are deliberately NOT
+// imported any more. The files stay on disk, unreferenced, so this change is one
+// revert rather than a resurrection; they go in a later commit once the
+// conversational flow has run on real traffic.
 import { SpeakButton } from "./_components/speak-button";
 
 /**
@@ -62,11 +63,16 @@ import { SpeakButton } from "./_components/speak-button";
  * CREATED rather than derived from its position.
  *
  * The list was keyed by array index while turns are both appended and removed
- * from the end (`dropStreamingPlaceholder` slices the last one off), and one of
- * the children — IntakePanel — keeps its own `useState` for the selected chips.
- * That is the exact combination React documents as unsafe: the panel instance
- * sitting at index 4 is reused for whatever turn lands at index 4 next, so a set
- * of taps could be carried over onto a different set of questions.
+ * from the end (`dropStreamingPlaceholder` slices the last one off), which is
+ * the combination React documents as unsafe: the component instance sitting at
+ * index 4 is reused for whatever turn lands at index 4 next, carrying its local
+ * state onto different content.
+ *
+ * The original offender was the intake panel, which held its own `useState` for
+ * the selected chips — a set of taps could end up attached to a different set of
+ * questions. That panel is gone with the card flow, but the hazard is not: the
+ * streaming placeholder is still appended and sliced off the end, and bubbles
+ * still hold local state. Stable ids stay.
  */
 type Turn = { id: string } & (
   | { who: "user"; text: string }
@@ -81,7 +87,6 @@ type Turn = { id: string } & (
       /** Which knowledge notes this answer was drawn from. */
       sources?: ConsultSource[];
     }
-  | { who: "bot"; kind: "intake"; plan: IntakePlan; selection?: Selection; locked: boolean }
 );
 
 /** Phases where a typed message is extra detail rather than a new message. */
@@ -273,40 +278,21 @@ function ConsultInner() {
       }
       if (state?.context) lastContext = state.context;
 
-      if (message.kind === "intake" && state?.intake) {
-        restored.push({
-          id: nextTurnId(),
-          who: "bot",
-          kind: "intake",
-          plan: state.intake,
-          selection: state.context?.answers,
-          // Only the newest card set stays interactive.
-          locked: true,
-        });
-      } else {
-        const kind =
-          message.kind === "escalation" || message.kind === "chat"
-            ? (message.kind as "escalation" | "chat")
-            : "answer";
-        restored.push({
-          id: nextTurnId(),
-          who: "bot",
-          kind,
-          text: message.content,
-          sources: state?.sources,
-        });
-      }
-    }
-
-    // Reopen the last card set if the consultation was left mid-intake.
-    const last = restored[restored.length - 1];
-    if (
-      last &&
-      last.who === "bot" &&
-      last.kind === "intake" &&
-      IN_CONSULTATION.has(lastContext?.phase ?? "")
-    ) {
-      last.locked = false;
+      // A stored `intake` means this conversation was held before the card flow
+      // was replaced. Its question set is NOT re-rendered — the consultation
+      // continues in prose from here — but the message text is kept, so the
+      // transcript still reads as the history it actually was.
+      const kind =
+        message.kind === "escalation" || message.kind === "chat" || message.kind === "intake"
+          ? ((message.kind === "intake" ? "chat" : message.kind) as "escalation" | "chat")
+          : "answer";
+      restored.push({
+        id: nextTurnId(),
+        who: "bot",
+        kind,
+        text: message.content,
+        sources: state?.sources,
+      });
     }
 
     setTurns(restored);
@@ -340,22 +326,16 @@ function ConsultInner() {
   const apply = useCallback((result: ConsultResult) => {
     setContext(result.context);
     setTurns((current) => {
-      // A new card set supersedes the previous one, so only one is ever live.
-      const locked = current.map((turn) =>
-        turn.who === "bot" && turn.kind === "intake" ? { ...turn, locked: true } : turn,
-      );
-      if (result.kind === "intake" && result.intake) {
-        return [
-          ...locked,
-          { id: nextTurnId(), who: "bot", kind: "intake", plan: result.intake, locked: false },
-        ];
-      }
+      // `kind: "intake"` is no longer produced by the backend — gathering
+      // questions arrive as ordinary `chat` turns. The mapping below is kept
+      // total rather than assuming that, so an in-flight response from an older
+      // server renders as a message instead of vanishing.
       const kind =
         result.kind === "escalation" || result.kind === "chat" || result.kind === "error"
           ? result.kind
           : "answer";
       return [
-        ...locked,
+        ...current,
         { id: nextTurnId(), who: "bot", kind, text: result.answer, sources: result.sources },
       ];
     });
@@ -492,38 +472,6 @@ function ConsultInner() {
     } catch (error) {
       if (onScreenRef.current !== sid) return;
       dropStreamingPlaceholder();
-      failed(error);
-    } finally {
-      setBusy(false);
-    }
-  };
-
-  /** Submit a set of tapped answers. */
-  const submitIntake = async (selection: Selection) => {
-    if (busy || !context) return;
-    const sid = sessionId ?? newId();
-    if (!sessionId) {
-      // Same claim as in `send` — a session this tab just minted must not be
-      // rehydrated out from under itself.
-      loadedRef.current = sid;
-      onScreenRef.current = sid;
-      setSessionId(sid);
-    }
-
-    setBusy(true);
-    try {
-      const result = await postConsult(
-        { context, answers: selection, conversationId: sid },
-        undefined,
-        token,
-      );
-      // Same guard as `send`: the plan is written to the chat that asked for it,
-      // and only rendered if that chat is still the one being read.
-      persist(sid, result);
-      if (onScreenRef.current !== sid) return;
-      apply(result);
-    } catch (error) {
-      if (onScreenRef.current !== sid) return;
       failed(error);
     } finally {
       setBusy(false);
@@ -693,35 +641,6 @@ function ConsultInner() {
               >
                 {turn.text}
               </div>
-            ) : turn.kind === "intake" ? (
-              <BotBubble key={turn.id}>
-                {turn.locked ? (
-                  <div className="rounded-2xl border border-border bg-surface-2 p-3.5 text-sm text-text-secondary">
-                    <span className="font-medium text-foreground">
-                      {turn.plan.condition || "Your answers"}
-                    </span>{" "}
-                    {/* Count what was ACTUALLY answered. This printed
-                        "N questions answered o"" unconditionally, so a card set
-                        the user never touched  -  because they typed a new message
-                        instead of tapping  -  still claimed all N were answered. */}
-                    {(() => {
-                      const total = turn.plan.questions.length;
-                      const done = answeredCount(turn.plan.questions, turn.selection ?? {});
-                      if (done === 0) return ` -  skipped, ${total} questions unanswered`;
-                      return done === total
-                        ? ` -  ${total} questions answered o"`
-                        : ` -  ${done} of ${total} answered`;
-                    })()}
-                  </div>
-                ) : (
-                  <IntakePanel
-                    plan={turn.plan}
-                    initialSelection={turn.selection}
-                    pending={busy}
-                    onSubmit={submitIntake}
-                  />
-                )}
-              </BotBubble>
             ) : turn.kind === "error" ? (
               // A service failure, not a reply. Deliberately NOT in a chat bubble:
               // it isn't something the assistant said, and dressing it up as one

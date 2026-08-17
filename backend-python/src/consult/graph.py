@@ -5,19 +5,29 @@ The consultation flow.
 
     typed message -> route -+- greeting / about / off-topic -> conversational reply
                             +- general question -------------> retrieve -> short answer
-                            +- health complaint -------------> question cards
+                            +- health complaint -------------> gather (in prose)
                                                                    |
-                                        taps answers <-------------+
-                                                |
-                                                v
-                                   "anything else? what do you want?"
-                                                |
-                                                v
-                                   retrieve -> plan (chosen sections only)
+                                            replies <--------------+
+                                                |          one or two questions
+                                                v          a turn, until "ready"
+                                   retrieve -> plan (all sections)
 
-Safety runs on every turn, over the labels the user actually selected - the chip
-text is model-written, so a red flag can appear in an option that the original
-sentence never hinted at.
+NO CARDS. The consultation used to answer "mujhe gas ho rahi hai" with a
+five-card questionnaire and then a second card screen asking which parts of the
+plan they wanted. Both were forms. The user is now never asked to pick from a
+list, and never has to in order to reach a plan.
+
+SAFETY, AFTER THE CARDS
+The planner used to mark individual options `red_flag`, and safety.py describes
+its own keyword scan as the BACKSTOP to those markers rather than the only
+defence. Removing the cards removed the primary mechanism, so it is replaced by
+three:
+  1. `safety.scan` now reads the WHOLE conversation, not just the opening
+     complaint (state.safety_fragments) - strictly more text than the labels it
+     used to cover;
+  2. the gathering step returns `red_flag` itself, having read the transcript;
+  3. `safety.is_serious_condition` still runs on the problem and on retrieved
+     report text, unchanged.
 
 Written as plain async orchestration rather than a compiled StateGraph: the
 branches are short, the state is a Pydantic model rather than a merge-able dict,
@@ -35,7 +45,7 @@ import config
 from src import safety
 from src.bots import BotConfig, get_bot
 from src.consult import state as ctx_state
-from src.consult.planner import plan_intake
+from src.consult.gathering import gather
 from src.consult.responder import (
     rework_answer,
     write_knowledge,
@@ -56,12 +66,13 @@ from src.consult.router import (
     route_message,
 )
 from src.consult.schema import CONSULTING, ConsultContext, ConsultResult
-from src.consult.sections import SECTIONS_QUESTION_ID, delivery_plan, resolve_sections
+from src.consult.sections import SECTIONS_QUESTION_ID, resolve_sections
 from src.retrieval.base import RetrievalContext
 from src.retrieval.registry import get_pipeline
 
-# Hard ceiling on generated question rounds, regardless of what the planner asks.
-MAX_INTAKE_ROUNDS = getattr(config, "MAX_INTAKE_ROUNDS", 2)
+# Hard ceiling on gathering rounds now lives in `consult/gathering.py`, next to
+# the prompt that also asks the model to stop. `config.MAX_INTAKE_ROUNDS` still
+# exists and still applies to the legacy `/chat` path in src/graph.py.
 
 # Replies for small talk typed while the cards are open. Fixed strings, not a
 # model call: the whole point is that this path works with no LLM, and there is
@@ -366,7 +377,7 @@ async def run_turn(
         # led here so the assistant doesn't greet them all over again.
         context = ConsultContext(
             problem=route.problem or message,
-            phase="collecting",
+            phase="gathering",
             **ctx_state.carry_conversation(context),
         )
         context = ctx_state.remember_chat(context, message, "")
@@ -472,7 +483,7 @@ async def run_turn(
             # condition carrying the new one's details.
             context = ConsultContext(
                 problem=aside.problem or typed,
-                phase="collecting",
+                phase="gathering",
                 **ctx_state.carry_conversation(context),
             )
             context = ctx_state.remember_chat(context, typed, "")
@@ -510,53 +521,60 @@ async def run_turn(
             context=context,
         )
 
-    # --- safety -----------------------------------------------------------
-    flagged = ctx_state.selected_red_flags(context)
+    # --- safety, over the WHOLE conversation ------------------------------
+    # Widened deliberately. The planner's per-option `red_flag` markers were the
+    # PRIMARY defence and went with the cards, so the keyword scan — which
+    # safety.py itself describes as the backstop — now reads the entire
+    # transcript rather than just the opening complaint. "I have acidity" is
+    # harmless; "there was blood in it this morning", three turns later, is not.
+    flagged = ctx_state.selected_red_flags(context)  # legacy card contexts only
     if flagged:
         return _escalate(context, f"planner-marked option: {flagged[0]}")
-    if safety.scan(context.problem, *ctx_state.selected_labels(context)):
+    if safety.scan(*ctx_state.safety_fragments(context)):
         return _escalate(context, "red-flag keyword")
 
-    # --- 1. generated condition questions ---------------------------------
-    if context.phase != "choosing":
-        should_ask = context.round == 0 or (
-            context.needs_second_round and context.round < MAX_INTAKE_ROUNDS
+    # --- 1. gather, in prose ----------------------------------------------
+    # Replaces the question cards AND the "what would you like in your plan?"
+    # step. Both were forms; this is a conversation. The user is never asked to
+    # pick from a list, and never has to, to reach a plan.
+    if context.phase != "completed":
+        gathered = await gather(
+            problem=context.problem,
+            history=ctx_state.render_history(context),
+            symptoms=context.symptoms,
+            # The conversation's sticky language, resolved above from what the
+            # user actually typed. `context.problem` is the router's Latin
+            # restatement, so this must not be re-detected from it.
+            language=context.language,
+            rounds=context.round,
         )
-        if should_ask:
-            plan = await plan_intake(
-                problem=context.problem,
-                collected=ctx_state.intake_summary(context),
-                round_number=context.round + 1,
-                # The conversation's sticky language, detected above from what the
-                # user actually typed. `context.problem` is the router's Latin
-                # restatement, so the planner must not re-detect from it.
-                language=context.language,
+
+        context.condition = gathered.condition or context.condition
+        context.symptoms = ctx_state._merge_symptoms(context.symptoms, gathered.symptoms)
+
+        # The second of the three replacements for the planner's red flags: the
+        # model reading the conversation and saying so outright.
+        if gathered.red_flag:
+            return _escalate(context, "gathering flagged a red flag")
+
+        if not gathered.ready:
+            context.phase = "gathering"
+            context.round += 1
+            context = ctx_state.remember_chat(context, "", gathered.reply)
+            return ConsultResult(
+                kind="chat",
+                condition=context.condition,
+                message=gathered.reply,
+                answer=gathered.reply,
+                context=context,
             )
-            if plan.questions:
-                context = ctx_state.record_plan(context, plan)
-                context.phase = "collecting"
-                return ConsultResult(
-                    kind="intake",
-                    condition=context.condition,
-                    message=plan.note,
-                    intake=plan,
-                    context=context,
-                )
-            # No usable questions on a later round  -  move on rather than retry.
+        # ready -> fall through and write the plan on this same turn.
 
-        # --- 2. "anything else? what would you like?" ---------------------
-        plan = delivery_plan(context.condition)
-        context = ctx_state.record_plan(context, plan)
-        context.phase = "choosing"
-        return ConsultResult(
-            kind="intake",
-            condition=context.condition,
-            message=plan.note,
-            intake=plan,
-            context=context,
-        )
-
-    # --- 3. the plan, containing only what they asked for -----------------
+    # --- 2. the plan -------------------------------------------------------
+    # Everyone gets the complete plan now. The section picker was the second card
+    # surface and is gone; `resolve_sections(None)` returns DEFAULT_SECTIONS, so
+    # ALWAYS_INCLUDED — "When To See A Doctor" — still cannot be dropped.
+    # `context.answers` is only ever populated on a pre-change conversation.
     chosen = context.answers.get(SECTIONS_QUESTION_ID)
     sections = resolve_sections(chosen.options if chosen else None)
 
@@ -589,7 +607,27 @@ async def run_turn(
             context=context,
         )
 
-    details = f"Problem: {context.problem}\n{ctx_state.intake_summary(context)}".strip()
+    # What the plan is written FROM. This used to be `intake_summary` — the
+    # "Question: Answer" lines from the cards. With the cards gone, the same
+    # information now comes out of the conversation: the transcript is what the
+    # user actually said, and `symptoms` is what the gathering step understood
+    # from it.
+    #
+    # The transcript is safe HERE, unlike in `search_query`. This is prose going
+    # to a language model that reads prose; that one is an embedding lookup where
+    # conversational filler measurably destroys relevance.
+    details = "\n".join(
+        part
+        for part in (
+            f"Problem: {context.problem}",
+            f"Noted: {', '.join(context.symptoms)}" if context.symptoms else "",
+            # Only ever non-empty for a consultation that began before the cards
+            # were removed and is being finished now.
+            ctx_state.intake_summary(context),
+            f"--- CONVERSATION ---\n{ctx_state.render_history(context)}",
+        )
+        if part
+    ).strip()
     answer = await write_plan(
         knowledge=pipeline.to_prompt_block(results),
         profile=profile,

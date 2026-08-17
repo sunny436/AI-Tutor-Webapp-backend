@@ -32,6 +32,46 @@ RED_FLAG_KEYWORDS = [
     "labour pain", "labor pain", "water broke",
 ]
 
+# HINGLISH AND DEVANAGARI.
+#
+# Everything above is English and PHRASE-ORDERED — "vomiting blood". This
+# product is Hinglish-first, and its users write "ulti me khoon" or "vomit me
+# blood aaya", neither of which contains the substring "vomiting blood". So the
+# entire English list above simply did not fire for most of the people using it.
+#
+# It mattered less while the card intake existed: the planner wrote per-condition
+# `red_flag` options ("Blood in stool") and those were the PRIMARY mechanism,
+# with this keyword scan as the documented backstop. The cards are gone, so this
+# scan is now a primary defence and has to cover the language it is used in.
+#
+# PHRASES, NEVER BARE WORDS. "khoon" alone would fire on "khoon ki kami"
+# (anaemia) — a diet question, not an emergency — and refusing to answer it
+# would be its own kind of failure. Likewise "daura" is not listed alone,
+# because it is a substring of "dauran" ("during").
+RED_FLAG_KEYWORDS += [
+    # bleeding
+    "khoon aa", "khoon nikal", "khoon bah", "blood aa", "blood nikal",
+    "ulti me khoon", "ulti mein khoon", "ulti me blood", "ulti mein blood",
+    "vomit me khoon", "vomit mein khoon", "vomit me blood", "vomit mein blood",
+    "blood in vomit", "blood vomit", "khoon ki ulti",
+    "stool me khoon", "stool mein khoon", "stool me blood", "stool mein blood",
+    "latrine me khoon", "potty me khoon", "tatti me khoon",
+    "kala stool", "kaala stool", "black stool", "tarry stool",
+    # chest / breathing
+    "seene me dard", "seene mein dard", "chhati me dard", "chhaati me dard",
+    "chest me dard", "chest mein dard",
+    "saans nahi aa", "saans nhi aa", "saans phool", "saans lene me dikkat",
+    "dam ghut", "damm ghut",
+    # collapse / neuro
+    "behosh", "behoshi", "mirgi", "daura pad", "chakkar aakar gir",
+    # self-harm
+    "khudkushi", "khudkhushi", "jaan dene", "marne ka mann", "atmahatya",
+    # Devanagari
+    "खून आ", "खून निकल", "उल्टी में खून", "मल में खून", "शौच में खून",
+    "सीने में दर्द", "छाती में दर्द", "सांस नहीं आ", "साँस नहीं आ",
+    "बेहोश", "मिर्गी", "खुदकुशी", "आत्महत्या",
+]
+
 # Diagnosed conditions that are treated by a doctor, not managed with a food
 # chart. These are NOT emergencies — someone living with cancer for a year does
 # not need "go to hospital now" — but building them a lifestyle plan as if it

@@ -54,24 +54,28 @@ export interface ChatTurn {
 }
 
 /**
- * The conversation state machine.
+ * The conversation state machine. Mirrors `consult/schema.py`.
  *  idle       nothing said yet
  *  greeted    hello exchanged — the assistant must not greet again
  *  casual     chatting, no health concern raised
- *  collecting answering the generated condition questions
- *  choosing   picking which parts of the plan they want
+ *  gathering  asking about the complaint in prose, a question or two at a time
  *  completed  plan delivered
+ *
+ * `collecting` and `choosing` are RETIRED — they were the two card surfaces —
+ * but remain in the union because conversations persisted before the change
+ * still carry them. The backend maps them to `gathering` on load.
  */
 export type ConsultPhase =
   | "idle"
   | "greeted"
   | "casual"
+  | "gathering"
   | "collecting"
   | "choosing"
   | "completed";
 
-/** Phases where a typed message is extra detail, not a new message to route. */
-export const CONSULTING: ConsultPhase[] = ["collecting", "choosing"];
+/** Phases where a typed message continues the consultation rather than starting one. */
+export const CONSULTING: ConsultPhase[] = ["gathering", "collecting", "choosing"];
 
 export interface ConsultContext {
   v: number;

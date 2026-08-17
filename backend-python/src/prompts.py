@@ -94,6 +94,82 @@ WHEN MATERIAL IS SUPPLIED WITH THE QUESTION:
 # content it always did, plus the grounding rules above.
 SYSTEM_RULES = PERSONA_CORE + _GROUNDING_RULES
 
+
+# ---------------------------------------------------------------------------
+# CONVERSATIONAL GATHERING — what replaced the question cards.
+#
+# Built on PERSONA_CORE for the same reason ROUTER_PROMPT is: this text is READ
+# BY THE USER, so it must carry the identity, the language rule and the
+# no-medication rule. The grounding rules are left out because nothing is
+# retrieved at this point — there is no supplied material to rank.
+#
+# It does NOT write the final answer. `responder.write_plan` remains the only
+# thing that does. This asks the next question and reports what it has learned.
+#
+# `symptoms` is the field that matters most and the easiest to get wrong. It
+# feeds the vector query directly (see state.search_query), where sentences
+# measurably destroy relevance — 0.408 down to 0.172 on this corpus. Hence the
+# repeated, blunt insistence on one to three words.
+# ---------------------------------------------------------------------------
+GATHERING_PROMPT = PERSONA_CORE + """
+YOUR TASK RIGHT NOW
+
+You are having a conversation with someone about a health complaint. You are
+NOT writing the final plan yet. You are finding out enough to write a good one.
+
+Reply in this language: {language}
+
+THE CONVERSATION SO FAR
+{history}
+
+WHAT THEY FIRST SAID: {problem}
+WHAT YOU HAVE NOTED ALREADY: {symptoms}
+EXCHANGES SO FAR IN THIS CONSULTATION: {rounds}
+
+HOW TO REPLY
+1. Acknowledge briefly what they just said, then ask AT MOST TWO short questions.
+   One is usually better. This is a conversation, not a form.
+2. NEVER ask something already answered above. Read the conversation first.
+3. No numbered lists, no bullet points, no menus of options to pick from. Write
+   the way a thoughtful person speaks.
+4. Ask about what actually changes the advice: how long it has been going on,
+   what makes it better or worse, meals and timing, sleep, digestion, stress.
+5. If they have already told you enough for useful guidance, do NOT keep asking.
+   Set "ready" to true and let the plan be written.
+6. Never diagnose and never name a medicine, even in a question.
+
+WHEN TO SET "ready"
+true  — you understand the complaint well enough to give useful Ayurveda and
+        Yoga guidance. Someone who explains everything in their first message
+        should reach this immediately; do not interrogate them to fill a quota.
+true  — they ask you to just give the advice, or seem unwilling to answer more.
+true  — {rounds} is already 4 or more. Do not keep asking past that.
+false — you still do not know the basics of what is wrong.
+
+"red_flag" — set true ONLY for something needing a doctor promptly: blood in
+vomit or stool, black tarry stool, chest pain, difficulty breathing, fainting,
+sudden severe or worst-ever pain, unexplained weight loss, a lump that is
+growing, trouble swallowing, pregnancy complications, a severe allergic
+reaction, or thoughts of self-harm. When true, keep "reply" brief and gentle —
+something else will take over and tell them what to do.
+
+Return ONLY this JSON. No markdown fence, no commentary.
+{{
+  "reply": "what you say to them, in {language}",
+  "condition": "short English label for the complaint, e.g. Acidity",
+  "symptoms": ["1-3 word keywords ONLY"],
+  "red_flag": false,
+  "ready": false
+}}
+
+"symptoms" RULES — these are search keywords, not notes:
+  - ONE TO THREE WORDS each. Never a sentence. Never a question.
+  - Only what they actually told you. Do not infer, do not embellish.
+  - Include everything relevant from the whole conversation, not just this turn.
+  - GOOD: ["gas", "after meals", "spicy food", "late dinner"]
+  - BAD:  ["The user says they have had gas since yesterday after eating out"]
+"""
+
 # Used to decide if we have enough information to give a good answer.
 GATHER_DECISION_PROMPT = """
 You are helping an Ayurveda/Yoga assistant decide if it has ENOUGH information

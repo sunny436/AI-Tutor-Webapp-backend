@@ -96,21 +96,37 @@ MAX_CHAT_HISTORY = 10
 #   idle       nothing said yet
 #   greeted    hello exchanged — do NOT greet again
 #   casual     chatting, no health concern raised
-#   collecting answering the generated condition questions
-#   choosing   picking which parts of the plan they want
+#   gathering  asking about the complaint IN PROSE, one or two questions a turn
 #   completed  plan delivered
 #
 # Transitions:
 #   idle/greeted/casual/completed --(typed message)--> routed by intent
-#   any --(health intent)--> collecting
-#   collecting --(answers, planner done)--> choosing
-#   choosing --(section picks)--> completed
+#   any --(health intent)--> gathering
+#   gathering --(enough detail)--> completed (the plan)
 #   any --(red flag)--> completed (escalation)
-Phase = Literal["idle", "greeted", "casual", "collecting", "choosing", "completed"]
+#
+# RETIRED, BUT STILL ACCEPTED:
+#   collecting  answering generated question CARDS
+#   choosing    picking which parts of the plan they want
+#
+# Both are gone from the product — the consultation is a conversation now — but
+# they MUST stay in this Literal. `state.load_context` returns a FRESH context
+# whenever validation raises, so narrowing this would silently reset every
+# conversation that is mid-intake at deploy time: the user's half-finished
+# consultation would vanish and the assistant would greet them again. They are
+# mapped to `gathering` on load instead. Remove them only once no persisted blob
+# can still carry one.
+Phase = Literal[
+    "idle", "greeted", "casual", "gathering", "collecting", "choosing", "completed"
+]
 
-# States where a typed message is extra detail for the consultation in progress,
-# rather than a new message to be routed.
-CONSULTING = ("collecting", "choosing")
+# Phases retired in the move to conversational gathering, mapped on load.
+LEGACY_PHASES = ("collecting", "choosing")
+
+# States where a typed message is the ongoing consultation rather than a new
+# message to be routed. The legacy two are kept so a conversation persisted
+# before the change keeps behaving correctly on its next turn.
+CONSULTING = ("gathering", "collecting", "choosing")
 
 
 class ConsultContext(BaseModel):
@@ -155,6 +171,19 @@ class ConsultContext(BaseModel):
     asked: list[Question] = Field(default_factory=list)
     answers: dict[str, Answer] = Field(default_factory=dict)
     notes: list[str] = Field(default_factory=list)
+    # SHORT retrieval keywords accumulated while gathering — "gas", "after
+    # meals", "spicy food". Never sentences.
+    #
+    # This is what replaced the tapped option labels as the retrieval signal, and
+    # the shortness is the whole point. `state.search_query` builds the vector
+    # query from these, and its docstring records the measurement: appending the
+    # full collected text dropped an acidity query from 0.408 to 0.172, enough to
+    # start losing notes that genuinely match. Feeding the transcript here would
+    # reproduce exactly that.
+    #
+    # New in the conversational flow; absent from every older persisted blob,
+    # which is why it defaults empty rather than bumping the version.
+    symptoms: list[str] = Field(default_factory=list)
 
 
 class ConsultResult(BaseModel):
