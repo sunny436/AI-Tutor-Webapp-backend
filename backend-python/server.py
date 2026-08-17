@@ -410,6 +410,7 @@ async def consult(
         profile=data.get("profile", ""),
         principal=principal,
         bot=bot,
+        conversation_id=data.get("conversationId"),
     )
     return result.model_dump()
 
@@ -473,6 +474,7 @@ async def consult_stream(
                 principal=principal,
                 on_token=on_token,
                 bot=bot,
+                conversation_id=data.get("conversationId"),
             )
             await queue.put(("done", result.model_dump()))
         except Exception as error:  # noqa: BLE001

@@ -463,7 +463,13 @@ function ConsultInner() {
     setBusy(true);
     try {
       const result = await postConsultStream(
-        inConsultation ? { context, freeText: text } : { problem: text, context },
+        // `conversationId` is `sid`, not `sessionId`: inside an in-flight
+        // request the closure holds the value captured at send time, and `sid`
+        // is the one this turn actually belongs to. Same reasoning as `persist`
+        // below, which is already addressed to `sid` for exactly this reason.
+        inConsultation
+          ? { context, freeText: text, conversationId: sid }
+          : { problem: text, context, conversationId: sid },
         // Tokens stop reaching the screen the instant the reader opens another
         // chat; the request itself is left to finish, because an answer already
         // paid for should be waiting in the chat that asked for it.
@@ -507,7 +513,7 @@ function ConsultInner() {
     setBusy(true);
     try {
       const result = await postConsult(
-        { context, answers: selection },
+        { context, answers: selection, conversationId: sid },
         undefined,
         token,
       );

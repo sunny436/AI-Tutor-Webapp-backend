@@ -151,7 +151,10 @@ def _escalate(context: ConsultContext, reason: str = "") -> ConsultResult:
 
 
 async def _retrieve(
-    context: ConsultContext, principal: dict | None, bot: BotConfig | None = None
+    context: ConsultContext,
+    principal: dict | None,
+    bot: BotConfig | None = None,
+    conversation_id: str | None = None,
 ):
     pipeline = get_pipeline()
     results = await pipeline.run(
@@ -169,7 +172,17 @@ async def _retrieve(
             # JWT subject. Only the verified one may select private documents,
             # so reading the wrong key here would undo the whole auth change.
             user_id=(principal or {}).get("user_id"),
-            session_id=(principal or {}).get("sessionId"),
+            # WHICH conversation this is, so long-term memory can leave it out.
+            #
+            # Memory fetches this user's EARLIER consultations. With nothing to
+            # exclude it also returned the turns of the chat currently on screen,
+            # so the model was handed its own transcript a second time under the
+            # heading "Earlier consultations with this user" — it reads as the
+            # user having said everything twice. `memory.py` has always forwarded
+            # this to Convex as `excludeSessionId`; nothing ever filled it in.
+            #
+            # The `principal` fallback is kept for callers that already set it.
+            session_id=conversation_id or (principal or {}).get("sessionId"),
             auth_token=(principal or {}).get("token"),
         )
     )
@@ -186,6 +199,7 @@ async def run_turn(
     principal: dict | None = None,
     on_token: Callable[[str], None] | None = None,
     bot: BotConfig | None = None,
+    conversation_id: str | None = None,
 ) -> ConsultResult:
     """Advance the consultation by one turn.
 
@@ -258,7 +272,7 @@ async def run_turn(
                 # word for word. Go back to the notes for the same topic, and
                 # say what has already been covered so the model extends it.
                 question_context = ConsultContext(problem=topic)
-                pipeline, results = await _retrieve(question_context, principal, bot)
+                pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
                 reworked = await write_knowledge(
                     _continuation_question(topic, context.last_answer),
                     pipeline.to_prompt_block(results),
@@ -276,7 +290,7 @@ async def run_turn(
                 # classifier, and came back as the OFF-TOPIC refusal. Answer the
                 # topic itself rather than pretending not to understand.
                 question_context = ConsultContext(problem=context.problem)
-                pipeline, results = await _retrieve(question_context, principal, bot)
+                pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
                 reworked = await write_knowledge(
                     context.problem, pipeline.to_prompt_block(results), context.language
                 )
@@ -334,7 +348,7 @@ async def run_turn(
 
         if route.intent == "knowledge":
             question_context = ConsultContext(problem=message)
-            pipeline, results = await _retrieve(question_context, principal, bot)
+            pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
             answer = await write_knowledge(
                 message, pipeline.to_prompt_block(results), context.language, on_token
             )
@@ -382,7 +396,7 @@ async def run_turn(
         # consultation's own problem — so there is no "nothing to continue" case.
         if is_continuation_request(typed):
             question_context = ConsultContext(problem=context.problem)
-            pipeline, results = await _retrieve(question_context, principal, bot)
+            pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
             reworked = await write_knowledge(
                 _continuation_question(context.problem, context.last_answer),
                 pipeline.to_prompt_block(results),
@@ -394,7 +408,7 @@ async def run_turn(
             # Cards are open but nothing has been answered yet, so there is no
             # previous answer - explain the topic itself in the asked-for language.
             question_context = ConsultContext(problem=context.problem)
-            pipeline, results = await _retrieve(question_context, principal, bot)
+            pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
             reworked = await write_knowledge(
                 context.problem, pipeline.to_prompt_block(results), context.language
             )
@@ -546,7 +560,7 @@ async def run_turn(
     chosen = context.answers.get(SECTIONS_QUESTION_ID)
     sections = resolve_sections(chosen.options if chosen else None)
 
-    pipeline, results = await _retrieve(context, principal, bot)
+    pipeline, results = await _retrieve(context, principal, bot, conversation_id)
 
     # A serious condition can arrive in an uploaded report rather than in what
     # the user typed - somebody attaches an oncology summary and asks about

@@ -133,6 +133,16 @@ export interface ConsultRequest {
   answers?: Record<string, ConsultAnswer>;
   freeText?: string;
   profile?: string;
+  /**
+   * Which conversation this turn belongs to — the same `sessionId` Convex keys
+   * messages on and `?c=` reopens.
+   *
+   * Identity, not content: the backend uses it to EXCLUDE this conversation from
+   * the long-term memory it retrieves. Without it, memory returned the turns of
+   * the chat currently on screen, so the model was handed its own transcript a
+   * second time, labelled as an earlier consultation.
+   */
+  conversationId?: string;
 }
 
 /**
