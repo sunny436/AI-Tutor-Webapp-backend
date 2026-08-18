@@ -726,6 +726,7 @@ def whoami(authorization: str = Header(default="")):
 async def debug_retrieve(
     q: str = "",
     user_id: str = "",
+    bot_id: str = "",
     x_service_key: str = Header(default=""),
 ):
     """Why did THIS query retrieve THAT note? Developers and admins only.
@@ -753,9 +754,14 @@ async def debug_retrieve(
 
     from src.debug import pipeline_trace
 
+    # Same validation as a real consultation: an unknown bot_id is a 400 here
+    # too, so a typo produces an error rather than a trace of the wrong corpus
+    # that looks perfectly plausible.
+    bot = _resolve_bot({"bot_id": bot_id} if bot_id else {})
+
     # user_id is honoured only because the caller already proved it holds the
     # service key; it is never taken from an end user.
-    return await pipeline_trace(q, user_id or None)
+    return await pipeline_trace(q, user_id or None, bot)
 
 
 @app.post("/extract")
