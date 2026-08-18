@@ -61,10 +61,24 @@ from src.knowledge import match_topics
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult
 from src.retrieval.pipeline import dedupe
 
-# Candidate keys, most specific first. Every one of these is a GUESS about an
-# undocumented response and is treated as such: nothing here is relied on, and an
-# unrecognised shape raises rather than silently returning nothing.
-_LIST_KEYS = ("results", "passages", "chunks", "matches", "hits", "documents", "items")
+# CONFIRMED against the live service on 2026-08-18. A real /v1/search reply is:
+#
+#     {"chunks": [], "entities": [], "edges": [], "graph_chunk_ids": []}
+#
+# so `chunks` is the passage list and is checked first. The rest are kept as
+# fallbacks rather than deleted: this is a pilot API, the shape is still not
+# written down anywhere, and a reader that survives a rename costs nothing.
+#
+# `entities`, `edges` and `graph_chunk_ids` are deliberately NOT read. They are the
+# graph half, and section 5 of the vendor brief says the knowledge graph is off for
+# answering — every one of them came back empty. Mapping fields that are currently
+# always empty would be inventing a capability the service does not yet offer.
+_LIST_KEYS = ("chunks", "results", "passages", "matches", "hits", "documents", "items")
+
+# STILL UNVERIFIED. The project contains no documents yet, so `chunks` has only
+# ever come back empty and the per-passage field names have never been observed.
+# These remain guesses, and `_read_passages` still fails loudly on a shape it does
+# not recognise rather than returning a quiet empty list.
 _TEXT_KEYS = ("text", "content", "passage", "chunk", "page_content", "body", "snippet")
 _SOURCE_KEYS = ("document_name", "filename", "source", "title", "document_id", "id")
 # Deliberately NOT including "distance": distance is INVERTED relative to
