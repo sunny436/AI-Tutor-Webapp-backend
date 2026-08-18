@@ -57,8 +57,8 @@ const HOW = [
   },
   {
     step: "04",
-    title: "Check where it came from",
-    body: "Every answer shows which notes it was drawn from, so you can see the reasoning rather than trust it.",
+    title: "Read the notes yourself",
+    body: "The whole knowledge base is published and open. Read any topic in full, whenever you like.",
   },
 ];
 
@@ -239,9 +239,9 @@ export function Landing() {
                       aria-hidden
                       className="h-3.5 w-3.5 shrink-0 text-accent-warm"
                     />
-                    <span className="text-xs text-text-secondary">Based on</span>
-                    <Badge variant="source">acidity</Badge>
-                    <Badge variant="source">digestion</Badge>
+                    <span className="text-xs text-text-secondary">
+                      Written from a curated Ayurveda knowledge base
+                    </span>
                   </div>
                 </div>
               </div>
@@ -257,7 +257,7 @@ export function Landing() {
           <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2">
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-accent-warm">
-                Why it can be checked
+                Why it is grounded
               </p>
               <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-foreground">
                 It looks the answer up.
@@ -269,8 +269,8 @@ export function Landing() {
                 <strong className="font-semibold text-foreground">
                   29 curated Ayurveda notes
                 </strong>{" "}
-                first, writes from what it found, and then tells you which notes those
-                were.
+                first and writes from what it found — rather than from whatever a model
+                happens to recall.
               </p>
               <p className="mt-3 leading-relaxed text-text-secondary">
                 If nothing relevant is found, it says so instead of inventing a remedy.

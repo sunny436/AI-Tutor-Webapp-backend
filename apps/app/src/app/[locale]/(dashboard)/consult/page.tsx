@@ -51,7 +51,8 @@ import type {
   PersistedConsultState,
 } from "@/lib/consult/types";
 import { AnswerSections } from "./_components/answer-sections";
-import { AnswerSources } from "./_components/answer-sources";
+// `AnswerSources` is deliberately NOT imported. The file stays on disk,
+// unreferenced, so restoring citations is one import and one line.
 // NOTE: `IntakePanel`, `QuestionCard` and `OptionChip` are deliberately NOT
 // imported any more. The files stay on disk, unreferenced, so this change is one
 // revert rather than a resurrection; they go in a later commit once the
@@ -716,13 +717,11 @@ function ConsultInner() {
                   ) : (
                     <AnswerSections text={turn.text} />
                   )}
-                  {/* Provenance. The backend has always returned this and the
-                      UI has never rendered it once — see answer-sources.tsx.
-                      Not shown while streaming: the sources arrive with the
-                      final result, not with the tokens. */}
-                  {!("streaming" in turn && turn.streaming) && "sources" in turn && (
-                    <AnswerSources sources={turn.sources ?? []} />
-                  )}
+                  {/* CITATIONS ARE NOT SHOWN. The backend still returns `sources`
+                      and the transcript still persists them, so restoring this is
+                      one import plus one line — but nothing in the UI reveals
+                      which notes an answer was built from. `answer-sources.tsx`
+                      stays on disk, unreferenced. */}
                   {/* Error turns never reach here - they are filtered further
                       up - so there is no guard against reading "the backend is
                       unreachable" aloud. Hidden while streaming: there is

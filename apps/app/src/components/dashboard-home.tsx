@@ -111,7 +111,7 @@ export function DashboardHome() {
         </h1>
         <p className="mt-1 text-sm text-text-secondary">
           Describe what&apos;s troubling you and get a plan drawn from Ayurveda — with
-          its sources shown.
+          the notes published in full for you to read.
         </p>
       </div>
 

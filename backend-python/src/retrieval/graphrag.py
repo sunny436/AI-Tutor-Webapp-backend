@@ -4,9 +4,9 @@ retrieval/graphrag.py
 The external GraphRAG document service, as one more retriever.
 
 SHIPS DORMANT. `config.GRAPHRAG_ENABLED` defaults to 0, so this contributes
-nothing until it is switched on. That is deliberate: the service is not reachable
-from this machine yet (see BLOCKERS below), and a retriever that cannot be
-exercised should not be able to affect a live consultation.
+nothing until it is switched on. It is now fully connected and verified against
+the live service, so the remaining reasons to leave it off are latency and an
+open decision about the graph -- both recorded below.
 
 WHY A RETRIEVER AND NOT A BRANCH IN consult/graph.py
 `retrieval/registry.py` states its own contract: adding a knowledge source is one
@@ -33,21 +33,25 @@ documents from the external index -- the same leak, one layer further out.
 `config.GRAPHRAG_PROJECT_ID` survives only as the DEFAULT BOT's value inside
 `src/bots/registry.py`; nothing on the request path reads it.
 
-BLOCKERS -- both real, both outside this file
-1. `graphrag.internal` does not resolve from this machine, and the vendor doc
-   forbids the raw IP because the certificate is issued for the name. Fixing it
-   needs a DNS record or an Administrator hosts edit.
-2. The `/v1/search` RESPONSE BODY IS NOT DOCUMENTED. The brief shows the request
-   for search and answer, and a response only for upload. So the field holding
-   passage text, the field holding document identity, and whether a score comes
-   back at all are all unknown.
+VERIFIED AGAINST THE LIVE SERVICE (2026-08-18)
+DNS, TLS against the vendor CA with full hostname checking, authentication, and a
+real populated response have all been exercised end to end. The shape below is
+observed, not guessed. Two things still stand between this and being switched on:
 
-`_read_passages` below is therefore written as a TOLERANT READER, not a guess
-dressed up as a fact -- the same approach already taken in
-`apps/app/src/lib/consult/central.ts` for the same reason. It accepts the shapes
-such an API realistically returns and, when it recognises none of them, raises an
-error naming the keys it actually received. Filling in the real mapping is then a
-glance at that message rather than a debugging session.
+1. LATENCY. Measured on five real calls: 2.43s, 3.72s, 5.59s, 7.28s, 3.07s. The
+   per-retriever budget is min(RETRIEVAL_TIMEOUT_S, GRAPHRAG_TIMEOUT_S) = 3.0s,
+   so most calls currently time out. Raising it means raising
+   RETRIEVAL_TIMEOUT_S, which the pipeline applies to EVERY retriever, so a slow
+   GraphRAG would delay every consultation on the site. That is a trade to make
+   deliberately, not a number to nudge.
+
+2. THE GRAPH. See the note on `entities` and `edges` below.
+
+`_read_passages` remains a TOLERANT READER even though the shape is now known --
+the same approach as `apps/app/src/lib/consult/central.ts`. This is a pilot API
+whose response is still documented nowhere, so it accepts the shapes such a
+service realistically returns and, when it recognises none, raises an error
+naming the keys it actually received rather than returning a quiet empty list.
 """
 
 from __future__ import annotations
@@ -69,22 +73,44 @@ from src.retrieval.pipeline import dedupe
 # fallbacks rather than deleted: this is a pilot API, the shape is still not
 # written down anywhere, and a reader that survives a rename costs nothing.
 #
-# `entities`, `edges` and `graph_chunk_ids` are deliberately NOT read. They are the
-# graph half, and section 5 of the vendor brief says the knowledge graph is off for
-# answering — every one of them came back empty. Mapping fields that are currently
-# always empty would be inventing a capability the service does not yet offer.
+# `entities`, `edges` and `graph_chunk_ids` are NOT read -- but no longer because
+# they are empty. Section 5 of the vendor brief said the knowledge graph was off
+# for answering; that is now out of date, confirmed both by the client and by a
+# real response carrying 30 entities and 21 edges:
+#
+#     entity: {"entity_id", "name", "entity_type", "description"}
+#     edge:   {"source_id", "target_id", "relation_type": "CAUSES", "weight"}
+#
+# This is the actual reason to use this service over the local retriever, and it
+# is a deliberate open decision rather than an oversight. Feeding relationship
+# claims like "X CAUSES Y" into a health prompt changes what the model asserts
+# about causation, so it needs a decision and a safety review, not a quiet edit.
 _LIST_KEYS = ("chunks", "results", "passages", "matches", "hits", "documents", "items")
 
-# STILL UNVERIFIED. The project contains no documents yet, so `chunks` has only
-# ever come back empty and the per-passage field names have never been observed.
-# These remain guesses, and `_read_passages` still fails loudly on a shape it does
-# not recognise rather than returning a quiet empty list.
+# CONFIRMED against a real populated response on 2026-08-18. A chunk is:
+#
+#     {"chunk_id": "...", "document_id": "doc:<uuid>", "text": "...", "score": 0.43}
+#
+# so `text` and `score` were already first in their lists and are now facts rather
+# than guesses. The alternatives stay as fallbacks for the same reason as above.
 _TEXT_KEYS = ("text", "content", "passage", "chunk", "page_content", "body", "snippet")
+
+# ⚠ THE ONLY IDENTIFIER RETURNED IS `document_id`, AND IT IS A UUID.
+#
+# There is no filename and no title, so a citation reads
+# "graphrag:doc:b2522dcf-82d2-4173-821b-3756e91b1cf0" rather than something a
+# person could look up. It is kept anyway: it is stable, it is what the vendor's
+# delete/retry endpoints take, and it makes a retrieved passage traceable back to
+# an upload when debugging. But nothing here should be shown to a reader as-is.
+#
+# Restoring a human-readable name would mean keeping an id->filename map at upload
+# time. Not built, because per-answer citations are not currently displayed.
 _SOURCE_KEYS = ("document_name", "filename", "source", "title", "document_id", "id")
-# Deliberately NOT including "distance": distance is INVERTED relative to
-# relevance, so reading one as the other would rank the worst passage first.
-# An unrecognised score is left as None, which the UI already renders as
-# "no score" rather than as zero.
+
+# `score` confirmed. Note it is NOT on the same scale as the local retriever's
+# cosine relevance -- an on-topic passage came back at 0.4336, which would sit
+# below `MIN_RELEVANCE` (0.52) if this retriever thresholded. It does not, and
+# should not start doing so without measuring this scale properly first.
 _SCORE_KEYS = ("score", "relevance", "relevance_score", "similarity")
 
 

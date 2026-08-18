@@ -27,8 +27,9 @@ export const metadata = {
  * WHAT IT DOES INSTEAD
  *
  * Split screen. The left half is not decoration and not stock photography: it is
- * the product's actual claim, shown as the thing itself — a sourced answer with
- * its citation attached. That is what this app does that a chatbot does not, and
+ * the product's actual claim, shown as the thing itself — an answer written from
+ * the curated notes rather than recalled. That is what this app does that a
+ * chatbot does not, and
  * it is the most honest thing to put in front of someone deciding whether to
  * sign up. On mobile it collapses to a compact header, because a marketing panel
  * above the fold is a wall between the user and the form.
@@ -42,8 +43,8 @@ export const metadata = {
 const PROOF = [
   {
     icon: BookOpen,
-    title: "Answers you can check",
-    body: "Every plan is drawn from a curated Ayurveda knowledge base, and shows you which notes it came from.",
+    title: "Grounded, not guessed",
+    body: "Every plan is drawn from a curated Ayurveda knowledge base, published in full for anyone to read.",
   },
   {
     icon: Languages,
@@ -93,12 +94,14 @@ export default function Page() {
             them — all saved to your account.
           </p>
 
-          {/* A real answer with its citation, rendered the way the product
-              renders it. Not a screenshot, not a mock-up of a chat window with
-              invented content — the same Badge component the chat uses. */}
+          {/* A real answer in the shape the product renders it. Not a
+              screenshot, and not a mock-up with invented content.
+              Per-answer citations are no longer shown, so this no longer
+              claims they are — showing one here would advertise a feature
+              the reader will not find. */}
           <figure className="mt-7 rounded-xl border border-border bg-card p-4 elev-1">
             <figcaption className="sr-only">
-              An example of how an answer shows its sources
+              An example of how an answer is written
             </figcaption>
             <p className="text-sm leading-relaxed text-text-secondary">
               <span className="font-medium text-foreground">Root cause.</span> Eating late
@@ -107,9 +110,9 @@ export default function Page() {
             </p>
             <div className="mt-3 flex items-center gap-2 border-t border-border pt-2.5">
               <BookOpen aria-hidden className="h-3.5 w-3.5 shrink-0 text-accent-warm" />
-              <span className="text-xs text-text-secondary">Based on</span>
-              <Badge variant="source">acidity</Badge>
-              <Badge variant="source">digestion</Badge>
+              <span className="text-xs text-text-secondary">
+                Written from a curated Ayurveda knowledge base
+              </span>
             </div>
           </figure>
 

@@ -38,16 +38,16 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ayur.namahos.com";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Ayurveda — AI wellness guidance, traced to its sources",
+    default: "Ayurveda — AI wellness guidance, grounded in curated notes",
     template: "%s · Ayurveda",
   },
   description:
-    "Describe what is troubling you in English, Hindi or Hinglish. Get a personalised Ayurveda and Yoga plan — root cause, food chart, yoga, daily routine — drawn from a curated knowledge base, with its sources shown.",
+    "Describe what is troubling you in English, Hindi or Hinglish. Get a personalised Ayurveda and Yoga plan — root cause, food chart, yoga, daily routine — drawn from a curated knowledge base that is published in full.",
   applicationName: "Ayurveda",
   openGraph: {
     type: "website",
     siteName: "Ayurveda",
-    title: "Ayurveda — AI wellness guidance, traced to its sources",
+    title: "Ayurveda — AI wellness guidance, grounded in curated notes",
     description:
       "Personalised Ayurveda and Yoga guidance in English, Hindi or Hinglish, grounded in a curated knowledge base.",
   },
