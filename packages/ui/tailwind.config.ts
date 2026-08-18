@@ -136,7 +136,10 @@ const config = {
         lg: ["1.0625rem", { lineHeight: "1.7rem", letterSpacing: "-0.005em" }],
         xl: ["1.25rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em" }],
         "2xl": ["1.5rem", { lineHeight: "2rem", letterSpacing: "-0.015em" }],
-        "3xl": ["1.875rem", { lineHeight: "2.25rem", letterSpacing: "-0.02em" }],
+        "3xl": [
+          "1.875rem",
+          { lineHeight: "2.25rem", letterSpacing: "-0.02em" },
+        ],
         "4xl": ["2.25rem", { lineHeight: "2.5rem", letterSpacing: "-0.025em" }],
       },
       maxWidth: {

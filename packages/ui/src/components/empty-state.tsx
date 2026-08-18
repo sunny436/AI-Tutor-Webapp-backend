@@ -48,7 +48,9 @@ export function EmptyState({
           <Icon aria-hidden className="h-5 w-5" />
         </span>
       )}
-      <p className="font-display text-base font-semibold text-foreground">{title}</p>
+      <p className="font-display text-base font-semibold text-foreground">
+        {title}
+      </p>
       {description && (
         <p className="mt-1 max-w-sm text-sm leading-relaxed text-text-secondary">
           {description}
@@ -93,7 +95,9 @@ export function ErrorState({
           <Icon aria-hidden className="h-5 w-5" />
         </span>
       )}
-      <p className="font-display text-base font-semibold text-foreground">{title}</p>
+      <p className="font-display text-base font-semibold text-foreground">
+        {title}
+      </p>
       {description && (
         <p className="mt-1 max-w-sm text-sm leading-relaxed text-text-secondary">
           {description}

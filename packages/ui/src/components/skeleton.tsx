@@ -21,7 +21,10 @@ import { cn } from "../utils";
  * text. Ours is a slower, shallower breath, and it is one of the two animations
  * the reduced-motion rule has always disabled.
  */
-function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+function Skeleton({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       aria-hidden

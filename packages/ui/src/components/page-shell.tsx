@@ -42,7 +42,10 @@ export function PageShell({
     <div className="relative min-h-full w-full">
       {/* Fixed, not absolute: the wash should stay put while the page scrolls,
           or it repeats the gradient down a long document. */}
-      <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
+      <div
+        aria-hidden
+        className="backdrop-wash pointer-events-none fixed inset-0"
+      />
       <div
         className={cn(
           "relative mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8",
