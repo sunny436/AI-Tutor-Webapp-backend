@@ -79,8 +79,13 @@ from src.retrieval.registry import get_pipeline
 # nothing to be creative about in answering "ok". Both point back at the cards,
 # because that is what the user is actually in the middle of.
 SMALL_TALK_REPLIES = {
-    "greeting": "Namaste! 🌿 Upar wale sawaalon ka jawab de dijiye, phir main aapke liye plan bana deta hoon.",
-    "ack": "Theek hai 🙂 Jab taiyaar hon, upar ke sawaal chun lijiye.",
+    # These pointed at "upar wale sawaal" - the question CARDS. Those were removed
+    # with the questionnaire, and no turn returns kind="intake" any more, so the
+    # assistant was telling people to answer questions that are not on their
+    # screen. It now points back at the conversation, which is what is actually
+    # in front of them.
+    "greeting": "Namaste! 🌿 Bataiye, apni takleef ke baare mein aur kya bata sakte hain?",
+    "ack": "Theek hai 🙂 Jab taiyaar hon, thoda aur bata dijiye — phir main plan bana deta hoon.",
 }
 
 _GREETING_WORDS = re.compile(
