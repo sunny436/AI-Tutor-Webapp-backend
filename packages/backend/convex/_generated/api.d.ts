@@ -17,7 +17,6 @@ import type * as authEmail from "../authEmail.js";
 import type * as authStatus from "../authStatus.js";
 import type * as backend from "../backend.js";
 import type * as chats from "../chats.js";
-import type * as consults from "../consults.js";
 import type * as counters from "../counters.js";
 import type * as dashboard from "../dashboard.js";
 import type * as devGuard from "../devGuard.js";
@@ -64,7 +63,6 @@ declare const fullApi: ApiFromModules<{
   authStatus: typeof authStatus;
   backend: typeof backend;
   chats: typeof chats;
-  consults: typeof consults;
   counters: typeof counters;
   dashboard: typeof dashboard;
   devGuard: typeof devGuard;
