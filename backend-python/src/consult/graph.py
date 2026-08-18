@@ -47,6 +47,7 @@ from src.bots import BotConfig, get_bot
 from src.consult import state as ctx_state
 from src.consult.gathering import gather
 from src.consult.responder import (
+    NO_KNOWLEDGE,
     rework_answer,
     write_knowledge,
     write_plan,
@@ -200,6 +201,42 @@ async def _retrieve(
     return pipeline, results
 
 
+def knowledge_for_prompt(pipeline, results) -> str:
+    """The retrieved block, marked as UNGROUNDED when no reference material came back.
+
+    `responder` decides whether to admit ignorance with `knowledge or NO_KNOWLEDGE`
+    -- an EMPTINESS test. That was wrong, and silently so. `to_prompt_block`
+    concatenates every non-empty retriever, and `PreviousConversationsRetriever`
+    (order 20) is enabled for every signed-in user. So for anyone with history the
+    block was never empty, `NO_KNOWLEDGE` never appeared, and the honesty branches
+    in PLAN_PROMPT and KNOWLEDGE_ANSWER_PROMPT could not fire.
+
+    What that produced: a full six-section health plan, on a question no reference
+    note covers, grounded on the assistant's OWN recycled earlier answers -- sitting
+    under a heading that grounding rule 9 calls "your FIRST source". A brand-new
+    user got an honest refusal; a returning user got a confident invention. Exactly
+    backwards.
+
+    So the test is GROUNDING, not emptiness: did any retriever that actually holds
+    Ayurveda reference material contribute?
+
+    Reports (`report:`) and memory (`memory:`) deliberately do NOT count. The
+    honesty sentence is a claim about the reference corpus, and rule 12 already
+    gives a user's own uploaded report its own, higher authority. Their text is
+    still passed through -- it is context the model should read -- it just no
+    longer suppresses the admission.
+    """
+    block = pipeline.to_prompt_block(results)
+    grounded = any(
+        chunk.source.startswith(("graphrag:", "knowledge:"))
+        for result in results
+        for chunk in result.chunks
+    )
+    if grounded:
+        return block
+    return f"{NO_KNOWLEDGE}\n\n{block}" if block else NO_KNOWLEDGE
+
+
 async def run_turn(
     *,
     problem: str,
@@ -286,7 +323,7 @@ async def run_turn(
                 pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
                 reworked = await write_knowledge(
                     _continuation_question(topic, context.last_answer),
-                    pipeline.to_prompt_block(results),
+                    knowledge_for_prompt(pipeline, results),
                     context.language,
                 )
             elif context.last_answer:
@@ -303,7 +340,7 @@ async def run_turn(
                 question_context = ConsultContext(problem=context.problem)
                 pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
                 reworked = await write_knowledge(
-                    context.problem, pipeline.to_prompt_block(results), context.language
+                    context.problem, knowledge_for_prompt(pipeline, results), context.language
                 )
             else:
                 reworked = ""
@@ -387,7 +424,7 @@ async def run_turn(
             question_context = ConsultContext(problem=message)
             pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
             answer = await write_knowledge(
-                message, pipeline.to_prompt_block(results), context.language, on_token
+                message, knowledge_for_prompt(pipeline, results), context.language, on_token
             )
             context = ctx_state.remember_chat(context, message, answer)
             context.phase = "casual"
@@ -436,7 +473,7 @@ async def run_turn(
             pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
             reworked = await write_knowledge(
                 _continuation_question(context.problem, context.last_answer),
-                pipeline.to_prompt_block(results),
+                knowledge_for_prompt(pipeline, results),
                 context.language,
             )
         elif context.last_answer:
@@ -447,7 +484,7 @@ async def run_turn(
             question_context = ConsultContext(problem=context.problem)
             pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
             reworked = await write_knowledge(
-                context.problem, pipeline.to_prompt_block(results), context.language
+                context.problem, knowledge_for_prompt(pipeline, results), context.language
             )
         context = ctx_state.remember_chat(context, typed, reworked)
         return ConsultResult(
@@ -657,7 +694,7 @@ async def run_turn(
         if part
     ).strip()
     answer = await write_plan(
-        knowledge=pipeline.to_prompt_block(results),
+        knowledge=knowledge_for_prompt(pipeline, results),
         profile=profile,
         details=details,
         sections=sections,

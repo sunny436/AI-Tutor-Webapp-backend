@@ -203,6 +203,37 @@ block = empty_pipeline.to_prompt_block(run(empty_pipeline.run(RetrievalContext(q
 check("empty retrieval produces an EMPTY prompt block, not filler", block == "", repr(block[:40]))
 check("empty retrieval produces no citations", empty_pipeline.to_sources([]) == [])
 
+# The honesty branch is decided by GROUNDING, not by emptiness. This was a real
+# defect: to_prompt_block concatenates every retriever, and memory (order 20) is
+# enabled for every signed-in user - so the block was never empty, NO_KNOWLEDGE
+# never appeared, and the model wrote a full plan grounded on its own recycled
+# earlier answers. A new user got an honest refusal; a returning user got a
+# confident invention. Exactly backwards.
+from src.consult.graph import knowledge_for_prompt  # noqa: E402
+
+
+def _one(section: str, source: str) -> RetrievalResult:
+    return RetrievalResult(section=section, chunks=(Chunk(text="x", source=source),))
+
+
+for _label, _results, _want_admission in [
+    ("memory only", [_one("Earlier", "memory:s1")], True),
+    ("uploaded report only", [_one("Uploaded", "report:r1")], True),
+    ("nothing at all", [], True),
+    ("graphrag present", [_one("Reference", "graphrag:a.md")], False),
+    ("local notes present", [_one("Trusted", "knowledge:a.md")], False),
+    ("memory + graphrag", [_one("Earlier", "memory:s1"), _one("Reference", "graphrag:a.md")], False),
+]:
+    _out = knowledge_for_prompt(RetrievalPipeline, _results)
+    _admits = _out.startswith("(no relevant")
+    check(
+        f"ungrounded retrieval admits it: {_label}"
+        if _want_admission
+        else f"grounded retrieval does NOT admit ignorance: {_label}",
+        _admits == _want_admission,
+        f"admits={_admits}",
+    )
+
 
 class _Exploding:
     name, section, order, enabled = "boom", "Boom", 10, True
