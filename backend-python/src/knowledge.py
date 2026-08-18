@@ -191,7 +191,27 @@ _topic_indexes: dict[str, _TopicIndex] = {}
 MAX_DISTINCTIVE_DF = 2
 # Enough weight to claim a topic in tier 2. One distinctive token reaches it; two
 # ordinary ones do too; a single common word never does.
-MIN_TOKEN_SCORE = 1.0
+#
+# RAISED 1.0 -> 1.5. At 1.0 two PREFIX-ONLY matches (0.5 each) were enough, and a
+# tier-2 claim skips the relevance floor entirely in retrieval/knowledge.py - so a
+# claim built from nothing but prefixes reached the prompt under the heading
+# "Trusted Ayurveda / Yoga knowledge" with no score check at all. Observed on a
+# real message from the logs:
+#
+#     "matlab ya na oily ka ka bad jayaf hotie ha"
+#         -> claimed immunity + weight-loss on prefixes alone
+#         -> served 4 chunks at best score 0.474, under the 0.52 floor
+#
+# 1.5 means a claim now needs at least one EXACT token match; prefixes can top it
+# up but can no longer carry it alone. Measured over a 14-query sweep of typo-heavy
+# Hinglish: all 12 good claims survive unchanged, and that one bad claim is the
+# only thing that disappears. It is this surgical because tier 1 (phrase matching)
+# is what actually serves the healthy queries; this gate only guards tier 2.
+#
+# Measure any future change with the real `match_topics`. A tier-2-only
+# reimplementation of this exact change reported "6 of 11 claims lost" - the
+# opposite conclusion - because it skipped tier 1 entirely.
+MIN_TOKEN_SCORE = 1.5
 
 
 def _get_index(collection: str | None = None) -> _TopicIndex:
