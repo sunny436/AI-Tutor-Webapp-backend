@@ -28,6 +28,29 @@ import { canonical, siteUrl } from "@/lib/seo";
  * diet change, and that must not sit eighth on the page.
  */
 
+/**
+ * Rendered per request, exactly like the Library index beside it.
+ *
+ * WHY THIS IS NOT SSG, DESPITE LOOKING LIKE THE PERFECT CANDIDATE
+ *
+ * These pages are static content read off disk at build time, so `next build`
+ * quite reasonably marked them `●` and put them in `dynamicRoutes` — generate on
+ * demand, then cache. That combination cannot work here: `[locale]/layout.tsx`
+ * wraps every page in `ConvexAuthNextjsServerProvider`, which reads cookies, and
+ * reading cookies inside a static render throws DYNAMIC_SERVER_USAGE.
+ *
+ * The result was a 500 on every note page in production while the index — which
+ * has no `generateStaticParams` and so renders dynamically — served fine. It did
+ * not show up in dev, where everything renders per request, nor in the build,
+ * which succeeds precisely because it defers these pages to request time.
+ *
+ * `generateStaticParams` is deliberately LEFT IN PLACE below. It is ignored while
+ * this flag is set, but it is what makes these pages prerenderable the moment the
+ * auth providers move out of the root layout into `(dashboard)/layout.tsx` —
+ * delete this export then, and they go back to being static.
+ */
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
   return allNotes().map((note) => ({ slug: note.slug }));
 }
