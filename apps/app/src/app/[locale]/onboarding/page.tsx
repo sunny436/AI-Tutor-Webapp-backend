@@ -6,6 +6,7 @@ import { api } from "@v1/backend/convex/_generated/api";
 import * as validators from "@v1/backend/convex/utils/validators";
 import { Button } from "@v1/ui/button";
 import { Input } from "@v1/ui/input";
+import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { useMutation, useQuery } from "convex/react";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -41,11 +42,25 @@ export default function OnboardingUsername() {
   }, [user]);
 
   if (!user) {
-    return null;
+    // Was `return null`. This is the first screen after signup, and it flashed
+    // completely blank while the user query resolved.
+    return (
+      <SkeletonGroup
+        label="Loading"
+        className="mx-auto flex w-full max-w-sm flex-col items-center gap-4 rounded-2xl border border-border bg-card p-6 elev-1 sm:p-8"
+      >
+        <Skeleton className="h-8 w-40" />
+        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-11 w-full" />
+        <Skeleton className="h-11 w-full" />
+      </SkeletonGroup>
+    );
   }
 
   return (
-    <div className="mx-auto flex w-full max-w-sm flex-col items-center gap-6">
+    // The form sat naked on the page wash. A card gives it an edge and makes
+    // the one thing being asked for read as one thing.
+    <div className="mx-auto flex w-full max-w-sm flex-col items-center gap-6 rounded-2xl border border-border bg-card p-6 elev-1 sm:p-8">
       <div className="flex flex-col items-center gap-2">
         {/* A 60px waving-hand emoji was the largest element on the first screen
             after signup. Emoji render differently on every platform, carry no
@@ -95,7 +110,7 @@ export default function OnboardingUsername() {
 
         <div className="flex flex-col">
           {form.state.fieldMeta.username?.errors.length > 0 && (
-            <span className="mb-2 text-sm text-destructive dark:text-destructive-foreground">
+            <span className="mb-2 text-sm text-destructive">
               {form.state.fieldMeta.username?.errors.join(" ")}
             </span>
           )}

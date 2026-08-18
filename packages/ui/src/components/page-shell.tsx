@@ -33,19 +33,43 @@ import { cn } from "../utils";
  * stretched across a 27-inch monitor puts the first and last number a head-turn
  * apart.
  */
+const WIDTHS = {
+  narrow: "max-w-3xl",
+  default: "max-w-6xl",
+  wide: "max-w-screen-xl",
+} as const;
+
 export function PageShell({
+  width = "default",
+  wash = true,
   className,
   children,
   ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+}: React.HTMLAttributes<HTMLDivElement> & {
+  /**
+   * `max-w-6xl` was hardcoded, which is most of why eleven of fourteen pages
+   * rolled their own container instead of adopting this: the dense admin
+   * screens genuinely need more room, so they opted out entirely and lost the
+   * wash and the padding rhythm with it.
+   */
+  width?: keyof typeof WIDTHS;
+  /** Off when an ancestor already paints the wash, so it is not doubled. */
+  wash?: boolean;
+}) {
   return (
     <div className="relative min-h-full w-full">
       {/* Fixed, not absolute: the wash should stay put while the page scrolls,
           or it repeats the gradient down a long document. */}
-      <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
+      {wash && (
+        <div
+          aria-hidden
+          className="backdrop-wash pointer-events-none fixed inset-0"
+        />
+      )}
       <div
         className={cn(
-          "relative mx-auto w-full max-w-6xl px-4 py-6 sm:px-6 sm:py-8",
+          "relative mx-auto w-full px-4 py-6 sm:px-6 sm:py-8",
+          WIDTHS[width],
           className,
         )}
         {...props}

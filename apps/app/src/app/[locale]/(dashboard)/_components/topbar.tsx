@@ -25,18 +25,25 @@ export function Topbar() {
   const title = TITLES[path];
 
   return (
-    <header className="flex h-12 shrink-0 items-center justify-between border-b border-border bg-card px-4 sm:px-6">
+    // h-14, matching the sidebar header and the sidebar's mobile bar. At h-12
+    // the two horizontal rules meeting at the sidebar edge were 8px apart.
+    // NOTE: consult/page.tsx subtracts this height twice — see the comment there.
+    //
+    // No `bg-card`: the sidebar is `bg-surface` and card is LIGHTER than both,
+    // so the topbar read as the brightest thing on screen. Transparent lets
+    // PageShell's backdrop-wash run continuously from the top of the viewport.
+    <header className="flex h-14 shrink-0 items-center justify-between border-b border-border px-4 sm:px-6">
       {/* A breadcrumb whose first crumb is not a link is just decoration. */}
-      <nav aria-label="Breadcrumb" className="flex min-w-0 items-center gap-1.5 text-sm">
+      <nav aria-label="Breadcrumb" className="flex min-w-0 items-center gap-2 text-sm">
         <Link
           href="/"
-          className="shrink-0 text-muted-foreground transition-colors hover:text-foreground"
+          className="focus-ring shrink-0 rounded-md text-text-secondary transition-colors hover:text-foreground"
         >
           Ayurveda
         </Link>
         {title && path !== "/" && (
           <>
-            <span aria-hidden className="text-muted-foreground/50">
+            <span aria-hidden className="text-border">
               /
             </span>
             <span aria-current="page" className="truncate font-medium text-foreground">
@@ -45,13 +52,15 @@ export function Topbar() {
           </>
         )}
       </nav>
-      <div className="flex items-center gap-3 text-xs text-muted-foreground">
+      <div className="flex items-center gap-2 text-xs text-text-secondary">
         <NotificationsBell />
         {/* The Help link pointed at github.com/get-convex/v1 — the starter
             template's own documentation, which says nothing about this product.
             Removed rather than repointed: there is no docs site to send anyone
             to yet, and a link to someone else's README is worse than none. */}
-        <span className="hidden font-mono text-2xs sm:inline">v{APP_VERSION}</span>
+        <span className="hidden font-mono text-2xs text-text-secondary sm:inline">
+          v{APP_VERSION}
+        </span>
       </div>
     </header>
   );

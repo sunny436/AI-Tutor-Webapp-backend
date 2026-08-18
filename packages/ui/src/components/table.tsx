@@ -33,7 +33,7 @@ const Table = React.forwardRef<
     tabIndex={0}
     role="region"
     aria-label={label}
-    className="w-full overflow-x-auto rounded-xl border border-border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+    className="focus-ring w-full overflow-x-auto rounded-xl border border-border"
   >
     <table ref={ref} className={cn("w-full caption-bottom text-sm", className)} {...props} />
   </div>

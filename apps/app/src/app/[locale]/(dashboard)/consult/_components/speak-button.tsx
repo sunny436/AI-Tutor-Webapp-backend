@@ -175,7 +175,7 @@ export function SpeakButton({ text }: { text: string }) {
       onClick={toggle}
       disabled={state === "loading" || !text.trim()}
       title={state === "playing" ? "Stop" : "Read this out loud"}
-      className="mt-1 flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[11px] text-primary/40 transition hover:bg-primary/5 hover:text-primary/70 disabled:opacity-50"
+      className="focus-ring mt-1 flex items-center gap-1.5 rounded-md px-1.5 py-1 text-2xs font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground disabled:opacity-50"
     >
       {state === "loading" ? (
         <Loader2 className="h-3 w-3 animate-spin" />

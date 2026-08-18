@@ -102,6 +102,9 @@
     --chart-3: 190 40% 40%;
     --chart-4: 42 60% 55%;
     --chart-5: 340 35% 55%;
+
+    /* See the note on --overlay in .dark below. */
+    --overlay: 155 24% 10%;
   }
 
   .dark {
@@ -167,6 +170,19 @@
     --chart-3: 190 38% 55%;
     --chart-4: 42 55% 62%;
     --chart-5: 340 35% 62%;
+
+    /* The scrim behind a modal. Its three consumers spelled it three ways:
+       `bg-black/80` (Dialog), `bg-black/40` (command palette) and nothing at
+       all (the sidebar drawer used `bg-foreground/50`).
+
+       NOT `bg-foreground/x`: --foreground inverts, so on dark that paints a
+       WHITE veil over the page. NOT `bg-black/x`: README rule 7, and pure
+       black over a warm page reads as soot for the same reason the elevation
+       shadows are hue-tinted rather than neutral grey.
+
+       Not a text pair, so 4.5:1 does not apply. Chosen so that at /55 the
+       page behind drops far enough in luminance to read as inert. */
+    --overlay: 158 26% 3%;
   }
 }
 
@@ -270,6 +286,72 @@
   }
   .animate-soft-pulse {
     animation: soft-pulse 1.6s ease-in-out infinite;
+  }
+
+  /**
+   * FOCUS. One intent, previously spelled four ways.
+   *
+   * The app had `ring-ring` (Button, Table), `ring-brand/40` (the skip link),
+   * `focus:border-brand/60 focus:ring-2 focus:ring-brand/20` (both auth forms,
+   * the file search, the sidebar search) and `focus:ring-1 focus:ring-ring`
+   * (the Select trigger) — plus roughly fifteen controls with no focus style
+   * at all, falling back to the UA outline or, worse, `outline-none` with no
+   * replacement.
+   *
+   * `--ring` already exists for exactly this and is already brand-tinted
+   * (158 42% 38% light, 152 40% 46% dark), so these canonicalise ON it rather
+   * than inventing a fifth spelling. Ring against the adjacent surface is
+   * 4.9:1 light and 5.2:1 dark — WCAG 1.4.11 wants 3:1 for a non-text
+   * indicator, so there is real margin.
+   *
+   * Three variants because one ring cannot serve three geometries:
+   */
+
+  /* ON A SURFACE — buttons, links, icon buttons, nav rows. */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  /* IN A FIELD. An offset ring on a stacked form draws OVER the field above
+     it — visible in the change-password card, which has three inputs in a
+     column. Border plus an inner halo instead. This is byte-equivalent to
+     what the auth forms already do, and they are the most-seen fields in the
+     product, so the Input primitive moves to them rather than the reverse. */
+  .focus-field {
+    @apply focus-visible:outline-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/25;
+  }
+
+  /* INSIDE AN OVERFLOW-HIDDEN PARENT — popover items, table cells. An offset
+     ring is clipped to invisibility by the parent's overflow. */
+  .focus-ring-inset {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset focus-visible:ring-offset-0;
+  }
+
+  /* The sidebar's consultation list is the only long scroll region in the
+     chrome, and on Windows it renders a 17px grey slab against a warm
+     surface. Firefox takes the two-property form; WebKit and Blink need the
+     pseudo-elements. `background-clip: content-box` with a transparent border
+     is what insets the thumb without a wrapper element. */
+  .scrollbar-subtle {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  .scrollbar-subtle::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-subtle::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-subtle::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  .scrollbar-subtle::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--text-secondary) / 0.45);
+    background-clip: content-box;
   }
 
   /* REDUCED MOTION, APPLIED TO EVERYTHING — not just our two classes.

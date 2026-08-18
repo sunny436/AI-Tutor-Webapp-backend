@@ -11,11 +11,13 @@ export function SessionsCard() {
   const revokeOthers = useMutation(api.sessions.revokeOtherSessions);
 
   return (
-    <div className="flex w-full flex-col items-start rounded-lg border border-border bg-card">
-      <div className="flex w-full items-start justify-between p-6">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-xl font-medium text-primary">Active sessions</h2>
-          <p className="text-sm font-normal text-primary/60">
+    <div className="flex w-full flex-col rounded-xl border border-border bg-card elev-1">
+      <div className="flex w-full flex-wrap items-start justify-between gap-3 p-5">
+        <div className="flex flex-col gap-1">
+          <h2 className="font-display text-lg font-semibold tracking-tight text-foreground">
+            Active sessions
+          </h2>
+          <p className="text-sm leading-relaxed text-text-secondary">
             Devices currently signed in to your account.
           </p>
         </div>
@@ -34,19 +36,22 @@ export function SessionsCard() {
       </div>
       <div className="w-full divide-y divide-border/50 border-t border-border">
         {sessions === undefined ? (
-          <p className="px-6 py-4 text-sm text-primary/40">Loading…</p>
+          <p className="px-5 py-4 text-sm text-text-secondary">Loading…</p>
         ) : sessions.length === 0 ? (
-          <p className="px-6 py-4 text-sm text-primary/40">No sessions</p>
+          <p className="px-5 py-4 text-sm text-text-secondary">No sessions</p>
         ) : (
           sessions.map((s) => (
             <div
               key={s._id}
-              className="flex items-center justify-between px-6 py-3 text-sm"
+              // flex-col below sm: a long locale timestamp plus the badge plus
+              // the revoke control is about 340px, inside a row with ~295px at
+              // 375px, so the three collided on a phone.
+              className="flex flex-col items-start justify-between gap-1.5 px-5 py-3 text-sm sm:flex-row sm:items-center sm:gap-3"
             >
-              <span className="text-primary/70">
+              <span className="text-text-secondary">
                 Started {new Date(s.createdAt).toLocaleString()}
                 {s.isCurrent && (
-                  <span className="ml-2 rounded-full bg-green-500/10 px-2 py-0.5 text-xs font-medium text-green-600 ring-1 ring-inset ring-green-600/20">
+                  <span className="ml-2 inline-flex items-center rounded-md border border-success/20 bg-success-soft px-2 py-0.5 text-xs font-medium text-success">
                     this device
                   </span>
                 )}
@@ -54,7 +59,7 @@ export function SessionsCard() {
               {!s.isCurrent && (
                 <button
                   type="button"
-                  className="text-xs text-red-500 underline"
+                  className="focus-ring shrink-0 rounded-md text-xs font-medium text-destructive underline-offset-2 hover:underline"
                   onClick={async () => {
                     await revokeSession({ sessionId: s._id });
                     toast.success("Session revoked");

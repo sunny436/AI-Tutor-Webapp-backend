@@ -18,7 +18,10 @@ export function ConfirmButton({
   title = "Are you sure?",
   description,
   confirmLabel = "Confirm",
-  className = "text-xs text-red-500 underline",
+  // `text-red-500 underline` was a raw palette colour on a link-shaped
+  // control. `--destructive` is the token, and it is tuned for both themes;
+  // red-500 is not, and read as pink-on-charcoal in dark mode.
+  className = "focus-ring rounded-md text-xs font-medium text-destructive underline-offset-2 hover:underline",
 }: {
   onConfirm: () => Promise<void> | void;
   label: React.ReactNode;

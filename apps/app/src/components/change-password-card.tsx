@@ -69,14 +69,14 @@ export function ChangePasswordCard() {
   return (
     <form
       onSubmit={submit}
-      className="flex w-full flex-col items-start rounded-lg border border-border bg-card"
+      className="flex w-full flex-col rounded-xl border border-border bg-card elev-1"
     >
-      <div className="flex w-full flex-col gap-4 rounded-lg p-6">
-        <div className="flex flex-col gap-2">
-          <h2 className="text-xl font-medium text-primary">
+      <div className="flex w-full flex-col gap-4 p-5">
+        <div className="flex flex-col gap-1">
+          <h2 className="font-display text-lg font-semibold tracking-tight text-foreground">
             {hasPassword ? "Change password" : "Set a password"}
           </h2>
-          <p className="text-sm font-normal text-primary/60">
+          <p className="text-sm leading-relaxed text-text-secondary">
             {hasPassword
               ? "Choose a new password. Signing in on your other devices will be required again."
               : "You sign in with a one-time email code. Add a password to sign in with one directly."}
@@ -91,7 +91,8 @@ export function ChangePasswordCard() {
             required
             value={current}
             onChange={(e) => setCurrent(e.target.value)}
-            className="w-80 bg-transparent"
+            aria-label="Current password"
+            className="w-full bg-transparent sm:w-80"
           />
         )}
         <Input
@@ -101,7 +102,12 @@ export function ChangePasswordCard() {
           required
           value={next}
           onChange={(e) => setNext(e.target.value)}
-          className="w-80 bg-transparent"
+          aria-label="New password"
+          // w-full sm:w-80 — three stacked 320px fields in a card with about
+          // 295px of inner width overflowed it by 25px at 375px. The
+          // placeholder was also the only label, and placeholders vanish on
+          // input, so each field now carries an explicit name too.
+          className="w-full bg-transparent sm:w-80"
         />
         <Input
           type="password"
@@ -110,21 +116,24 @@ export function ChangePasswordCard() {
           required
           value={confirm}
           onChange={(e) => setConfirm(e.target.value)}
-          className={`w-80 bg-transparent ${mismatch ? "border-destructive focus-visible:ring-destructive" : ""}`}
+          aria-label="Confirm new password"
+          className={`w-full bg-transparent sm:w-80 ${mismatch ? "border-destructive focus-visible:ring-destructive" : ""}`}
         />
 
         {next.length > 0 && problems.length > 0 && (
-          <p className="text-sm text-primary/60">Needs {problems.join(", ")}.</p>
+          <p className="text-sm text-text-secondary">
+            Needs {problems.join(", ")}.
+          </p>
         )}
         {error && (
-          <p role="alert" className="text-sm text-destructive dark:text-destructive-foreground">
+          <p role="alert" className="text-sm text-destructive">
             {error}
           </p>
         )}
       </div>
 
-      <div className="flex min-h-14 w-full items-center justify-between rounded-lg rounded-t-none border-t border-border bg-secondary px-6 dark:bg-card">
-        <p className="text-sm font-normal text-primary/60">
+      <div className="flex w-full flex-wrap items-center justify-between gap-3 rounded-b-xl border-t border-border bg-surface px-5 py-3.5">
+        <p className="text-sm text-text-secondary">
           At least 8 characters, with upper case, lower case and a number.
         </p>
         <Button type="submit" size="sm" disabled={pending}>

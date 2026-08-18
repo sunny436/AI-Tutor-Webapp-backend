@@ -2,7 +2,9 @@
 
 import { CheckoutLink, CustomerPortalLink } from "@convex-dev/polar/react";
 import { api } from "@v1/backend/convex/_generated/api";
+import { Badge } from "@v1/ui/badge";
 import { Button } from "@v1/ui/button";
+import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Switch } from "@v1/ui/switch";
 import { useQuery } from "convex/react";
 import { useState } from "react";
@@ -71,7 +73,16 @@ export default function BillingSettings() {
   >("month");
 
   if (!user) {
-    return null;
+    // Was `return null` — a blank pane where the plan cards were about to be.
+    return (
+      <SkeletonGroup
+        label="Loading billing"
+        className="flex h-full w-full flex-col gap-6"
+      >
+        <Skeleton className="h-16 w-full rounded-xl" />
+        <Skeleton className="h-64 w-full rounded-xl" />
+      </SkeletonGroup>
+    );
   }
 
   const monthlyProProduct = products?.find(
@@ -105,14 +116,16 @@ export default function BillingSettings() {
       </div>
 
       {/* Plans */}
-      <div className="flex w-full flex-col items-start rounded-lg border border-border bg-card">
-        <div className="flex flex-col gap-2 p-6">
-          <h2 className="text-xl font-medium text-foreground">Plan</h2>
-          <p className="flex items-start gap-1 text-sm font-normal text-text-secondary">
-            You are currently on the{" "}
-            <span className="flex h-[18px] items-center rounded-md bg-primary/10 px-1.5 text-sm font-medium text-foreground">
+      <div className="flex w-full flex-col rounded-xl border border-border bg-card elev-1">
+        <div className="flex flex-col gap-1 p-5">
+          <h2 className="font-display text-lg font-semibold tracking-tight text-foreground">
+            Plan
+          </h2>
+          <p className="flex flex-wrap items-center gap-1.5 text-sm text-text-secondary">
+            You are currently on the
+            <Badge variant="brand">
               {user.subscription ? user.subscription.product.name : "Free"}
-            </span>
+            </Badge>
             plan.
           </p>
         </div>
@@ -160,7 +173,7 @@ export default function BillingSettings() {
           (user.subscription?.productId === monthlyProProduct?.id ||
             user.subscription?.productId === yearlyProProduct?.id) && (
             <div className="flex w-full flex-col items-center justify-evenly gap-2 border-border p-6 pt-0">
-              <div className="flex w-full items-center overflow-hidden rounded-md border border-primary/60">
+              <div className="flex w-full items-center overflow-hidden rounded-xl border border-brand/50 ring-1 ring-brand/20">
                 <div className="flex w-full flex-col items-start p-4">
                   <div className="flex items-end gap-2">
                     <span className="text-base font-medium text-foreground">

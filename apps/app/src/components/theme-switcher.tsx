@@ -46,10 +46,11 @@ export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
         // The trigger has no visible label, so without this it announces as an
         // unnamed combobox.
         aria-label="Colour theme"
-        className={cn(
-          "h-7 rounded-md border-border bg-surface-2 !px-2 hover:border-brand/40",
-          triggerClass,
-        )}
+        // `size="sm"` rather than a `h-7 … !px-2` className override: see the
+        // note on selectTriggerVariants in packages/ui/src/components/select.tsx
+        // for why an override here is a breakpoint hazard.
+        size="sm"
+        className={cn("border-border bg-surface-2", triggerClass)}
       >
         <span className="flex items-center gap-2">
           {shown === "light" ? (

@@ -114,6 +114,19 @@ const config = {
           DEFAULT: "hsl(var(--info))",
           soft: "hsl(var(--info-soft))",
         },
+        // The modal scrim. See the --overlay note in globals.css.
+        overlay: "hsl(var(--overlay))",
+        // --chart-1..5 have existed in globals.css since the token pass and
+        // were mapped nowhere, so `bg-chart-1` was not a class — five dead
+        // custom properties. Mapping them costs two lines and makes the
+        // stylesheet honest about what it defines.
+        chart: {
+          1: "hsl(var(--chart-1))",
+          2: "hsl(var(--chart-2))",
+          3: "hsl(var(--chart-3))",
+          4: "hsl(var(--chart-4))",
+          5: "hsl(var(--chart-5))",
+        },
       },
       borderRadius: {
         // xl and 2xl added so surfaces can differ in softness by role — a page
@@ -138,6 +151,11 @@ const config = {
         "2xl": ["1.5rem", { lineHeight: "2rem", letterSpacing: "-0.015em" }],
         "3xl": ["1.875rem", { lineHeight: "2.25rem", letterSpacing: "-0.02em" }],
         "4xl": ["2.25rem", { lineHeight: "2.5rem", letterSpacing: "-0.025em" }],
+        // The landing hero is the one heading in the product that fell through
+        // to Tailwind's stock 3rem/1 with NO tracking, while every h2 below it
+        // gets -0.02em — which is why the hero read looser than the sections
+        // under it. Tracking continues the scale's progression (-.025 -> -.03).
+        "5xl": ["2.75rem", { lineHeight: "1.06", letterSpacing: "-0.03em" }],
       },
       maxWidth: {
         // One comfortable measure for conversation, used by the chat column so
