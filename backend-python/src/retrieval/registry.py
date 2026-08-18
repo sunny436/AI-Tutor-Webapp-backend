@@ -12,8 +12,8 @@ The `order` values encode the specified pipeline sequence:
     20  previous conversations
     30  medical profile
     40  uploaded reports                             <- live
-    45  external GraphRAG document service           <- dormant (GRAPHRAG_ENABLED)
-    50  vector search over the Ayurveda/Yoga notes   <- live
+    45  external GraphRAG document service           <- AUTHORITATIVE
+    50  vector search over the Ayurveda/Yoga notes   <- rollback only (LOCAL_RAG_ENABLED)
 
 They run concurrently; `order` only decides where each lands in the final prompt.
 """
@@ -40,10 +40,9 @@ RETRIEVERS: list[Retriever] = [
     PreviousConversationsRetriever(enabled=True),
     MedicalProfileRetriever(enabled=False),
     UploadedReportsRetriever(enabled=True),
-    # External document service, order 45 — between the user's own reports and
-    # the shared notes. SHIPS DORMANT: GRAPHRAG_ENABLED defaults to 0, so with no
-    # env change this contributes nothing and the pipeline behaves exactly as it
-    # did before. Retrieval only; the vendor's /v1/answer is never called.
+    # External document service, order 45. THIS IS THE AYURVEDA KNOWLEDGE SOURCE.
+    # Retrieval only; the vendor's /v1/answer is never called, because a second
+    # unaudited model writing health text would bypass every rule in prompts.py.
     GraphRagRetriever(enabled=config.GRAPHRAG_ENABLED),
     KnowledgeRetriever(enabled=True),
 ]

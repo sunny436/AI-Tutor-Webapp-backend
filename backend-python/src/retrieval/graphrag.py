@@ -3,10 +3,9 @@ retrieval/graphrag.py
 ---------------------
 The external GraphRAG document service, as one more retriever.
 
-SHIPS DORMANT. `config.GRAPHRAG_ENABLED` defaults to 0, so this contributes
-nothing until it is switched on. It is now fully connected and verified against
-the live service, so the remaining reasons to leave it off are latency and an
-open decision about the graph -- both recorded below.
+THE AUTHORITATIVE SOURCE. This is where Ayurveda knowledge comes from. The local
+Chroma retriever still exists behind `config.LOCAL_RAG_ENABLED` as a rollback,
+but in production it is off and this is the only grounding the model receives.
 
 WHY A RETRIEVER AND NOT A BRANCH IN consult/graph.py
 `retrieval/registry.py` states its own contract: adding a knowledge source is one
@@ -37,19 +36,17 @@ path (`/v1/projects/{id}/documents`) takes. It is no longer described as a
 security boundary, because it never was one. Anyone holding GRAPHRAG_API_KEY can
 read and write this index; that is the whole boundary.
 
-VERIFIED AGAINST THE LIVE SERVICE (2026-08-18)
+VERIFIED AGAINST THE LIVE SERVICE (2026-08-19)
 DNS, TLS against the vendor CA with full hostname checking, authentication, and a
-real populated response have all been exercised end to end. The shape below is
-observed, not guessed. Two things still stand between this and being switched on:
+real populated response exercised end to end.
 
-1. LATENCY. Measured on five real calls: 2.43s, 3.72s, 5.59s, 7.28s, 3.07s. The
-   per-retriever budget is min(RETRIEVAL_TIMEOUT_S, GRAPHRAG_TIMEOUT_S) = 3.0s,
-   so most calls currently time out. Raising it means raising
-   RETRIEVAL_TIMEOUT_S, which the pipeline applies to EVERY retriever, so a slow
-   GraphRAG would delay every consultation on the site. That is a trade to make
-   deliberately, not a number to nudge.
-
-2. THE GRAPH. See the note on `entities` and `edges` below.
+LATENCY, re-measured after the vendor's extractor fix: 0.45-1.55s across six
+queries, average 0.71s, none over the 3.0s budget. The 2.43-7.28s figures this
+block used to carry were pre-fix and are gone. The budget is still
+min(RETRIEVAL_TIMEOUT_S, GRAPHRAG_TIMEOUT_S), and it is now a correctness cliff
+rather than a slowdown: with local retrieval off, a timeout costs 100% of the
+grounding for that turn. That is what the failure counter in `server.py::health`
+exists to make visible.
 
 `_read_passages` remains a TOLERANT READER even though the shape is now known --
 the same approach as `apps/app/src/lib/consult/central.ts`. This is a pilot API
