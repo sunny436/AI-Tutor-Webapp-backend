@@ -66,7 +66,7 @@ from src.consult.router import (
     route_message,
 )
 from src.consult.schema import CONSULTING, ConsultContext, ConsultResult
-from src.consult.sections import SECTIONS_QUESTION_ID, resolve_sections
+from src.consult.sections import SECTIONS_QUESTION_ID, looks_like_plan, resolve_sections
 from src.retrieval.base import RetrievalContext
 from src.retrieval.registry import get_pipeline
 
@@ -313,7 +313,16 @@ async def run_turn(
                 if context.phase not in ("completed", *CONSULTING):
                     context.phase = "casual"
                 return ConsultResult(
-                    kind="chat", message=reworked, answer=reworked, context=context
+                    # A reworked PLAN is still a plan. `FOLLOWUP_PROMPT` rule 6
+                    # tells the model to keep the bold headings, and the client
+                    # renders `chat` as one plain paragraph with no markdown - so
+                    # returning this as chat printed literal `**Root Cause**`
+                    # asterisks on screen for "explain this in English", the most
+                    # common follow-up there is. Prose replies stay chat.
+                    kind="answer" if looks_like_plan(reworked) else "chat",
+                    message=reworked,
+                    answer=reworked,
+                    context=context,
                 )
 
         # Fast path: the alias index already named a topic and the wording is a
@@ -425,7 +434,9 @@ async def run_turn(
             )
         context = ctx_state.remember_chat(context, typed, reworked)
         return ConsultResult(
-            kind="chat",
+            # Same reasoning as the follow-up branch above. Reachable with a
+            # sectioned answer because this path also calls `write_knowledge`.
+            kind="answer" if looks_like_plan(reworked) else "chat",
             condition=context.condition,
             message=reworked,
             answer=reworked,

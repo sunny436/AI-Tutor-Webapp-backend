@@ -119,3 +119,32 @@ def render_section_spec(sections: list[str]) -> str:
         for s in sections
         if s in SECTION_LIBRARY
     )
+
+
+# How many of the six headings must be present before text counts as a plan.
+# Two rather than one: a single heading can appear inside ordinary prose ("the
+# root cause here is..."), but a reply carrying two of these exact strings, each
+# alone on its line, is the sectioned format and nothing else.
+_PLAN_HEADING_QUORUM = 2
+
+
+def looks_like_plan(text: str) -> bool:
+    """Is this text the sectioned plan format, rather than prose?
+
+    Used to decide `kind`, which decides how the client renders it. The frontend
+    shows `kind="chat"` as one plain paragraph with NO markdown handling, so a
+    reworked plan returned as chat puts literal `**Root Cause**` asterisks on the
+    user's screen. That is a real, reported bug, and `FOLLOWUP_PROMPT` rule 6 is
+    what causes it: it tells the model to KEEP the bold headings when reworking a
+    previous answer, so "explain this in English" reliably produces exactly the
+    text this function has to recognise.
+
+    Deliberately matched on whole lines, the same way `answer-sections.tsx`
+    splits them. Checking `heading in text` would count a heading quoted in the
+    middle of a sentence, which is prose and must stay prose.
+    """
+    if not text:
+        return False
+    lines = {line.strip() for line in text.splitlines()}
+    headings = {heading for heading, _ in SECTION_LIBRARY.values()}
+    return len(lines & headings) >= _PLAN_HEADING_QUORUM
