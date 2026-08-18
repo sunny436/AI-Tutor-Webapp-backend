@@ -212,7 +212,7 @@ def _read_relationships(body: Any, context: str = "") -> list[str]:
     return lines
 
 
-def _top_document_only(passages: list[dict]) -> list[dict]:
+def _top_document_only(passages: list[dict], claimed: list[str] | None = None) -> list[dict]:
     """Passages from the best-scoring document, and nothing else.
 
     ⚠ THIS SERVICE APPLIES NO RELEVANCE FLOOR OF ITS OWN, and neither did we when
@@ -251,6 +251,19 @@ def _top_document_only(passages: list[dict]) -> list[dict]:
         # No scores or no document ids to group by -- nothing to reason about, so
         # pass everything through rather than silently dropping the lot.
         return passages
+    # THE ALIAS INDEX WINS OVER THE SCORE when it has an opinion. Measured:
+    #   "constipation treatment"  piles.md 0.5187  >  constipation.md 0.4683
+    # The top score is piles; the right note is constipation, and the alias index
+    # said so. Picking by score alone lost three of 74 retrieval cases exactly
+    # this way. The alias index scores 27/28 as a topic gate against the score's
+    # 26/28, and here it is not even close - it is categorical where the score is
+    # two similar decimals.
+    wanted = {c for c in (claimed or [])}
+    if wanted:
+        matched = [p for p, _, d in ranked if d in wanted]
+        if matched:
+            return matched
+
     best_doc = max(ranked, key=lambda row: row[1])[2]
     return [p for p, _, d in ranked if d == best_doc]
 
@@ -412,7 +425,7 @@ class GraphRagRetriever:
             # Narrowed to the best-scoring document. This service applies no
             # relevance floor of its own, so without this an off-topic passage
             # scoring 0.1251 reached the prompt labelled "Reference documents".
-            passages = _top_document_only(_read_passages(body)) if body else []
+            passages = _top_document_only(_read_passages(body), claimed) if body else []
 
             # THE COVERAGE GATE. This service never returns empty - an off-topic
             # question comes back with its nearest neighbours, and downstream
