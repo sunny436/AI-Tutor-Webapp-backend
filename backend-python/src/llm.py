@@ -247,12 +247,29 @@ def invoke(
     """
     last_error: Exception | None = None
 
-    for name in _available_models(model):
+    candidates = _available_models(model)
+    for position, name in enumerate(candidates):
         for attempt in range(1, MAX_ATTEMPTS + 1):
             try:
                 client = get_llm(temperature, json_mode, model=name, max_tokens=max_tokens)
                 reply = client.invoke(messages)
                 _cooldown.pop(name, None)
+                if position:
+                    # SAY WHICH MODEL ACTUALLY ANSWERED, when it was not the one
+                    # we asked for. The chain is ordered by answer quality, and
+                    # its tail is measured at 58s and, for sibling free models,
+                    # at "0/4 headings" and one that named a medicine. Until now
+                    # a reply from there was indistinguishable from a healthy one
+                    # - the return value is a bare string with no attribution, and
+                    # nothing downstream records the model - so "the answers got
+                    # worse today" had no evidence anywhere to explain it.
+                    #
+                    # Only logged on a FALLBACK. Logging every success would put a
+                    # line on every turn and bury the one that matters.
+                    print(
+                        f"[llm] answered by {name}, fallback #{position} of "
+                        f"{len(candidates) - 1} (first choice: {candidates[0]})"
+                    )
                 return str(reply.content)
             except Exception as error:  # noqa: BLE001 - re-raised below if nothing works
                 last_error = error
