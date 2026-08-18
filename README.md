@@ -130,6 +130,13 @@ docs/              the API contract
 
 ---
 
+## What is next
+
+[`ROADMAP.md`](ROADMAP.md) is the deferred work for this repository. The AI
+backend keeps its own; anything about retrieval, prompts or safety lives there.
+
+---
+
 ## Deploys
 
 Staging is yours. **Production is not** — promoting a build to the live site is
