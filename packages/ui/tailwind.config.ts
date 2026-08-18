@@ -30,18 +30,32 @@ const config = {
       // Every `font-mono` in the app resolved to the stock monospace stack too.
       //
       // The roles are deliberate, not decorative:
-      //   sans     everything the interface says
-      //   display  headings and the six plan section titles — a reading serif,
-      //            so a health answer looks like a reference work rather than a
-      //            chat log. Explicitly NOT Inter or Space Grotesk.
-      //   mono     provenance ONLY — note filename and relevance score — so a
-      //            citation reads as data rather than as marketing copy.
+      //
+      //   display  ECZAR. Headings and the six plan section titles. Drawn by
+      //            Vaibhav Singh for Devanagari first and Latin second, which
+      //            is the right way round for a product whose knowledge base
+      //            is romanised Hindi. It has real stroke contrast and a
+      //            slightly calligraphic axis, so a health answer reads as a
+      //            reference work rather than as a chat log.
+      //
+      //   sans     HANKEN GROTESK. Everything the interface says. A humanist
+      //            grotesque with open apertures and a warm, slightly
+      //            irregular rhythm — it sits on aged paper without the
+      //            clinical flatness of a neo-grotesque.
+      //
+      //   mono     MARTIAN MONO. Provenance ONLY — note filename and relevance
+      //            score — so a citation reads as data rather than as copy.
+      //            Wide and rectilinear, like a specimen label.
+      //
+      // Explicitly NOT Inter, Roboto, or Space Grotesk. Those are where every
+      // generated interface lands, and landing there would undo the point of
+      // the direction before a single colour is applied.
       //
       // `departure` was here before and pointed at `--font-departure-mono`,
       // which is defined nowhere and used by no class. Starter leftover, gone.
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...defaultTheme.fontFamily.sans],
-        mono: ["var(--font-geist-mono)", ...defaultTheme.fontFamily.mono],
+        sans: ["var(--font-ui)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
         display: ["var(--font-display)", ...defaultTheme.fontFamily.serif],
       },
       colors: {
@@ -142,20 +156,27 @@ const config = {
         // set per size. Headings get negative tracking (large type looks loose
         // without it); body keeps generous leading because this app is read, not
         // scanned.
-        "2xs": ["0.6875rem", { lineHeight: "1rem", letterSpacing: "0.01em" }],
-        xs: ["0.75rem", { lineHeight: "1.125rem" }],
-        sm: ["0.8125rem", { lineHeight: "1.375rem" }],
-        base: ["0.9375rem", { lineHeight: "1.65rem" }],
-        lg: ["1.0625rem", { lineHeight: "1.7rem", letterSpacing: "-0.005em" }],
-        xl: ["1.25rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em" }],
-        "2xl": ["1.5rem", { lineHeight: "2rem", letterSpacing: "-0.015em" }],
-        "3xl": ["1.875rem", { lineHeight: "2.25rem", letterSpacing: "-0.02em" }],
-        "4xl": ["2.25rem", { lineHeight: "2.5rem", letterSpacing: "-0.025em" }],
+        // Small sizes get POSITIVE tracking: at 11-12px on a textured warm
+        // ground, letters set tight fill in and stop resolving.
+        "2xs": ["0.6875rem", { lineHeight: "1rem", letterSpacing: "0.02em" }],
+        xs: ["0.75rem", { lineHeight: "1.15rem", letterSpacing: "0.01em" }],
+        sm: ["0.8125rem", { lineHeight: "1.4rem" }],
+        // Generous leading: this product is READ, not scanned, and a plan runs
+        // to six sections.
+        base: ["0.9375rem", { lineHeight: "1.7rem" }],
+        // The display sizes step harder than the stock scale. Eczar has real
+        // stroke contrast, and contrast needs size to show — a timid jump
+        // wastes the face and leaves headings looking like bold body text.
+        lg: ["1.125rem", { lineHeight: "1.75rem", letterSpacing: "-0.005em" }],
+        xl: ["1.375rem", { lineHeight: "1.85rem", letterSpacing: "-0.01em" }],
+        "2xl": ["1.75rem", { lineHeight: "2.1rem", letterSpacing: "-0.015em" }],
+        "3xl": ["2.125rem", { lineHeight: "2.4rem", letterSpacing: "-0.02em" }],
+        "4xl": ["2.625rem", { lineHeight: "2.85rem", letterSpacing: "-0.022em" }],
         // The landing hero is the one heading in the product that fell through
         // to Tailwind's stock 3rem/1 with NO tracking, while every h2 below it
         // gets -0.02em — which is why the hero read looser than the sections
         // under it. Tracking continues the scale's progression (-.025 -> -.03).
-        "5xl": ["2.75rem", { lineHeight: "1.06", letterSpacing: "-0.03em" }],
+        "5xl": ["3.25rem", { lineHeight: "1.05", letterSpacing: "-0.025em" }],
       },
       maxWidth: {
         // One comfortable measure for conversation, used by the chat column so

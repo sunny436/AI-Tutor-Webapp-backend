@@ -2,26 +2,53 @@ import "@v1/ui/globals.css";
 import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 import { TooltipProvider } from "@v1/ui/tooltip";
 import { cn } from "@v1/ui/utils";
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Eczar, Hanken_Grotesk, Martian_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { ConvexClientProvider } from "../convex-client-provider";
 
 /**
- * The display face. Self-hosted at build time by `next/font/google` — no request
- * ever leaves the user's browser for it, which is why this is safe under the
- * app's own security headers and costs no third-party connection.
+ * THE THREE FACES.
  *
- * A reading serif rather than another geometric sans. This product's job is to
- * present sourced health guidance, so its headings should look like a reference
- * work; Inter and Space Grotesk are avoided deliberately, being the two faces
- * that make a page read as generated rather than designed.
+ * All self-hosted at build time by `next/font/google` — no request ever leaves
+ * the user's browser for them, which is why this is safe under the app's own
+ * security headers and costs no third-party connection.
+ *
+ * Eczar was drawn by Vaibhav Singh for Devanagari first and Latin second. That
+ * is the right way round here: the knowledge base this product cites is
+ * romanised Hindi, and the face carries real stroke contrast, so headings read
+ * as a printed reference work rather than as a chat log.
+ *
+ * Inter, Roboto and Space Grotesk are avoided deliberately. They are where
+ * every generated interface lands, and landing there would undo the direction
+ * before a single colour is applied.
+ *
+ * `weight` is pinned rather than left to the variable range: Eczar ships a
+ * 400-800 axis, and letting a heading inherit an arbitrary weight is how a
+ * display face ends up looking like bold body text.
  */
-const display = Fraunces({
-  subsets: ["latin"],
+const display = Eczar({
+  subsets: ["latin", "devanagari"],
+  weight: ["400", "600", "700"],
   variable: "--font-display",
+  display: "swap",
+});
+
+const ui = Hanken_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-ui",
+  display: "swap",
+});
+
+/**
+ * Provenance only — note filenames and relevance scores. Wide and rectilinear,
+ * like a specimen label. Deliberately NOT used for body copy: at paragraph
+ * length its width slows reading badly.
+ */
+const mono = Martian_Mono({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -60,8 +87,8 @@ export const viewport = {
   // Both entries were present but had NO `color` key, so they emitted nothing
   // and the browser chrome stayed unthemed. These are --background, light/dark.
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FBFAF7" },
-    { media: "(prefers-color-scheme: dark)", color: "#0E1614" },
+    { media: "(prefers-color-scheme: light)", color: "#F3F0E7" },
+    { media: "(prefers-color-scheme: dark)", color: "#171512" },
   ],
 };
 
@@ -126,7 +153,7 @@ export default function RootLayout({
         </head>
         <body
           className={cn(
-            `${GeistSans.variable} ${GeistMono.variable} ${display.variable}`,
+            `${ui.variable} ${mono.variable} ${display.variable}`,
             // `font-sans` is not redundant. The `.variable` classes only DEFINE
             // the custom properties; without a font utility actually consuming
             // them, every one of these faces is downloaded and then ignored —

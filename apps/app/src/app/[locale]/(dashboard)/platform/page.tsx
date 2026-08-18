@@ -150,7 +150,7 @@ export default function PlatformPage() {
         </div>
 
         {myInvites && myInvites.length > 0 && (
-          <div className="rounded-lg border border-blue-500/30 bg-blue-500/5 p-4">
+          <div className="rounded-lg border border-info/25 bg-info-soft/60 p-4">
             <p className="mb-2 text-sm font-medium text-foreground">
               You have pending invites
             </p>
@@ -292,7 +292,7 @@ export default function PlatformPage() {
             }
           >
             {newKey && (
-              <div className="m-3 break-all rounded bg-green-500/10 p-2 font-mono text-xs text-green-700">
+              <div className="m-3 break-all rounded border border-success/25 bg-success-soft p-2 font-mono text-xs text-success">
                 Copy now (shown once): {newKey}
               </div>
             )}

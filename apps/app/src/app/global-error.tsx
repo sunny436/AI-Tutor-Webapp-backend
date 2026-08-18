@@ -45,11 +45,11 @@ export default function GlobalError({
       </head>
       <body style={{ margin: 0 }}>
         <style>{`
-          :root { color-scheme: light dark; --ge-bg:#FBFAF7; --ge-fg:#17201A;
-                  --ge-soft:#5E6E66; --ge-line:#DFE6E1; --ge-brand:#2C7757; }
+          :root { color-scheme: light dark; --ge-bg:#F3F0E7; --ge-fg:#1C1A17;
+                  --ge-soft:#5F594F; --ge-line:#D5D0C3; --ge-brand:#2C6349; }
           @media (prefers-color-scheme: dark) {
-            :root { --ge-bg:#0E1614; --ge-fg:#F3EFE8; --ge-soft:#A7B4AE;
-                    --ge-line:#253430; --ge-brand:#64C79A; }
+            :root { --ge-bg:#171512; --ge-fg:#EDE9DE; --ge-soft:#B1ABA0;
+                    --ge-line:#38342E; --ge-brand:#65B38C; }
           }
         `}</style>
         <main
