@@ -43,6 +43,7 @@ from src import safety  # noqa: E402
 from src.bots import BotConfig, get_bot  # noqa: E402
 from src.consult import gathering, graph  # noqa: E402
 from src.consult import state as ctx_state  # noqa: E402
+from src.consult.schema import MAX_CHAT_HISTORY  # noqa: E402
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult  # noqa: E402
 from src.retrieval.graphrag import GraphRagRetriever  # noqa: E402
 from src.retrieval.knowledge import KnowledgeRetriever  # noqa: E402
@@ -122,9 +123,13 @@ long_history = ctx_state.load_context({"v": 2, "problem": "acidity"})
 for i in range(50):
     long_history = ctx_state.remember_chat(long_history, f"message {i}", f"reply {i}")
 check(
-    "50 turns of chat stay capped",
-    len(long_history.chat_history) <= 20,
-    f"{len(long_history.chat_history)} turns",
+    # Bound against the constant, not a hand-copied number. The point of this
+    # check is that history cannot grow without limit on a long conversation; the
+    # limit itself is a tuning decision that has already moved once (10 -> 24)
+    # and broke this line when it did.
+    "a 50-turn chat stays capped at MAX_CHAT_HISTORY",
+    len(long_history.chat_history) <= MAX_CHAT_HISTORY,
+    f"{len(long_history.chat_history)} turns, cap {MAX_CHAT_HISTORY}",
 )
 
 

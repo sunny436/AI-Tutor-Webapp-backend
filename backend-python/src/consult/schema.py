@@ -89,7 +89,30 @@ class ChatTurn(BaseModel):
 
 # Enough for the assistant to see how the conversation is going, without letting
 # the context blob (which rides on every request) grow without bound.
-MAX_CHAT_HISTORY = 10
+#
+# RAISED 10 -> 24. Since the intake cards were removed, this history IS the
+# clinical record - write_plan is fed render_history(). At 10 turns, and with
+# small talk sharing the window (remember_chat runs for greetings too), five
+# throwaway replies were enough to push every clinical fact out of view:
+#
+#     after turn  5   duration, trigger, bloating, belching
+#     after turn  8   duration GONE
+#     after turn  9   trigger GONE
+#     after turn 10   nothing left
+#
+# The plan was then written for a complaint whose details the model could no
+# longer see. Raising the COUNT is the fix, and it is cheap, because real user
+# messages are tiny - measured at 2-59 chars, median 23:
+#
+#     10 turns    779 tokens        24 turns   1870 tokens   (+1091)
+#
+# ~1091 extra input tokens is less than one knowledge note (1501 avg).
+#
+# Deliberately NOT raising state.MAX_NOTE_CHARS (400). Measured: it never fires
+# on user turns, and rework_answer reads `last_answer` (6000 chars), not this
+# history - so the assistant entries here only carry conversational continuity,
+# which 400 covers. Raising it to 800 would cost 3609 tokens for no benefit.
+MAX_CHAT_HISTORY = 24
 
 # The conversation state machine.
 #
