@@ -3,16 +3,22 @@ The GraphRAG retriever: wiring, isolation, and safe failure.
 
     python tests/test_graphrag.py
 
-⚠ THE RESPONSE FIXTURES BELOW ARE UNVERIFIED.
+THE LIVE SHAPE IS NOW KNOWN. A real /v1/search returns:
 
-The vendor brief documents the /v1/search REQUEST and never the response. It
-shows a response only for upload. So the field holding passage text, the field
-holding document identity, and whether a score comes back at all are all
-NOT DOCUMENTED.
+    {"chunks": [{"text", "score", "document_name", "document_id"}],
+     "entities": [{"entity_id", "name", "entity_type", "description"}],
+     "edges": [{"source_id", "target_id", "relation_type", "weight"}],
+     "graph_chunk_ids": []}
 
-These fixtures are therefore plausible shapes, clearly labelled as invented, used
-to prove the plumbing either side of the mapping. **They are not evidence that
-the real service returns any of them.** What IS proven here:
+Measured against the service, not guessed: 6/6 queries answered in 0.45-1.55s,
+zero bare MENTIONS edges, 14 meaningful relation types. The retriever is LIVE
+(GRAPHRAG_ENABLED=1).
+
+The fixtures below are still deliberately varied rather than narrowed to that one
+shape. `_read_passages` is a tolerant reader on purpose -- this is a pilot API
+whose response is documented nowhere -- so the alternative shapes exercise the
+tolerance itself, and the confirmed shape is exercised by the graph tests further
+down, which use the real field names. What is proven here:
 
   - a recognised shape maps to Chunks correctly, whichever of the shapes it is;
   - an UNRECOGNISED shape raises loudly, naming the keys actually received,
@@ -22,8 +28,8 @@ the real service returns any of them.** What IS proven here:
   - certificate verification is never disabled;
   - a dead or slow service degrades the answer instead of failing the consult.
 
-Live mapping remains UNVERIFIED until one real response is captured. No LLM and
-no network are involved -- httpx is stubbed throughout.
+No LLM and no network are involved in the sections above -- httpx is stubbed --
+so this suite stays fast and deterministic even though the service is now live.
 """
 
 from __future__ import annotations
@@ -42,6 +48,7 @@ from src.retrieval.graphrag import (  # noqa: E402
     GraphRagRetriever,
     _read_passages,
     _read_relationships,
+    _top_document_only,
     english_handle,
 )
 
@@ -320,6 +327,39 @@ check(
     f"cap is {MAX_RELATIONSHIPS}",
 )
 
+
+# ===========================================================================
+# NO RELEVANCE FLOOR OF ITS OWN. Measured on a real constipation query, this
+# service returned an off-topic chunk at 0.1251 alongside on-topic ones at
+# 0.6773 and 0.1703 - so a score threshold cannot separate them, but the
+# document can: the leader wins by ~2x every time.
+# ===========================================================================
+MIXED = [
+    {"text": "constipation root cause", "document_name": "constipation.md", "score": 0.6773},
+    {"text": "piles root cause", "document_name": "piles.md", "score": 0.3392},
+    {"text": "constipation more", "document_name": "constipation.md", "score": 0.1703},
+    {"text": "loose motions", "document_name": "loose-motions.md", "score": 0.1251},
+]
+kept = _top_document_only(MIXED)
+check(
+    "only the best-scoring document survives",
+    {p["document_name"] for p in kept} == {"constipation.md"},
+    str(sorted({p["document_name"] for p in kept})),
+)
+check(
+    "a LOW-scoring chunk from the winning document is kept",
+    any(p["score"] == 0.1703 for p in kept),
+    "0.1703 chunk is on-topic despite scoring under an off-topic 0.3392",
+)
+check(
+    "the off-topic chunk that used to reach the prompt is gone",
+    not any(p["document_name"] == "loose-motions.md" for p in kept),
+)
+check(
+    "unscored or unlabelled passages pass through rather than being dropped",
+    len(_top_document_only([{"text": "x"}, {"text": "y"}])) == 2,
+)
+check("no passages in, no passages out", _top_document_only([]) == [])
 
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== graphrag: {passed}/{len(results)} passed =====")

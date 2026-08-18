@@ -210,6 +210,49 @@ def _read_relationships(body: Any, context: str = "") -> list[str]:
     return lines
 
 
+def _top_document_only(passages: list[dict]) -> list[dict]:
+    """Passages from the best-scoring document, and nothing else.
+
+    ⚠ THIS SERVICE APPLIES NO RELEVANCE FLOOR OF ITS OWN, and neither did we when
+    it was first switched on. The local retriever rejects anything under
+    MIN_RELEVANCE (0.52); this one returned everything it found. Measured on a
+    real constipation query:
+
+        0.6773  Constipation      on topic
+        0.3392  Piles             loosely related
+        0.1703  Constipation      on topic
+        0.1608  Constipation      on topic
+        0.1510  Piles             marginal
+        0.1251  Loose motions     OFF TOPIC, and it reached the prompt
+
+    A score threshold cannot separate those: a genuinely relevant Constipation
+    chunk scores 0.1703 while an unrelated one scores 0.1251. What DOES separate
+    them is the document. The leader wins by roughly 2x every time -- 0.68 vs
+    0.34, 0.84 vs 0.43, 0.85 vs 0.45 -- so the top document is unambiguous even
+    though its individual chunk scores are not.
+
+    Same reasoning as `knowledge._one_topic_only`, which exists because four
+    unrelated notes at similar scores were being handed over "as though they
+    answered the question". This is that failure, one service further out.
+
+    Deliberately strict. Grounding rule 13 makes this SUPPORTING material ranked
+    below the curated notes, and the graph relationships are the reason to call
+    this service at all -- so losing a marginal passage costs little, while an
+    off-topic one labelled "Reference documents" costs a wrong answer.
+    """
+    scored = [
+        (p, _first(p, _SCORE_KEYS), _first(p, _SOURCE_KEYS))
+        for p in passages
+    ]
+    ranked = [(p, s, d) for p, s, d in scored if isinstance(s, (int, float)) and d]
+    if not ranked:
+        # No scores or no document ids to group by -- nothing to reason about, so
+        # pass everything through rather than silently dropping the lot.
+        return passages
+    best_doc = max(ranked, key=lambda row: row[1])[2]
+    return [p for p, _, d in ranked if d == best_doc]
+
+
 def _first(source: dict, keys: tuple[str, ...]) -> Any:
     for key in keys:
         value = source.get(key)
@@ -336,7 +379,10 @@ class GraphRagRetriever:
         # retriever's name attached.
         try:
             body = await asyncio.to_thread(self._search, query, project_id)
-            passages = _read_passages(body) if body else []
+            # Narrowed to the best-scoring document. This service applies no
+            # relevance floor of its own, so without this an off-topic passage
+            # scoring 0.1251 reached the prompt labelled "Reference documents".
+            passages = _top_document_only(_read_passages(body)) if body else []
         except Exception as error:  # noqa: BLE001
             print(f"[graphrag] search failed: {error}")
             return RetrievalResult(section=self.section, chunks=())

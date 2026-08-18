@@ -11,22 +11,18 @@ fabricated answer. Empty retrieval must yield an honest "nothing covers this",
 because the prompt labels whatever comes back as trusted knowledge and the model
 will dutifully build an answer around it.
 
-PART B — GraphRAG. ⚠ EVERY GRAPHRAG RESULT HERE IS PRODUCED BY A LOCAL STUB.
+PART B — GraphRAG. Every result here is produced by a LOCAL STUB, and that is
+now a choice rather than a limitation.
 
-    THE REAL SERVICE HAS NEVER BEEN CONTACTED.
+Both original blockers are gone: the service resolves and answers (6/6 queries,
+0.45-1.55s), and the response shape is confirmed. GRAPHRAG_ENABLED=1, so this
+runs in production.
 
-Two blockers, both outside this repo:
-  1. `graphrag.internal` does not resolve from this machine, and the vendor doc
-     forbids the raw IP because the certificate is issued for the name. Fixing it
-     needs a DNS record or an Administrator hosts edit.
-  2. The /v1/search RESPONSE BODY IS NOT DOCUMENTED. The brief shows the request
-     and a response only for upload.
-
-So what Part B proves is every hop EXCEPT the network call: that a passage
-entering the retriever reaches the Context Builder, lands in the prompt under its
-own heading, becomes a citation, and that a dead service degrades instead of
-failing the consultation. It does NOT prove the real service returns anything of
-this shape. Saying otherwise would be fabricating a live result.
+The stub stays because what Part B tests is FAILURE - a dead service, a refusing
+service, a hanging service - and you cannot ask a healthy service to fail on
+demand. Stubbing is how those paths get exercised deterministically and without
+network flakiness. Live behaviour is verified separately, by hand, against the
+real endpoint; the numbers above came from that.
 """
 
 from __future__ import annotations
@@ -133,6 +129,61 @@ check(
 )
 
 
+
+# ---------------------------------------------------------------------------
+# AUTH INFRASTRUCTURE. Not hypothetical: every login on the live site failed
+# because PyJWKClient fetches over urllib, which sends "Python-urllib/3.x", and
+# the edge in front of CONVEX_SITE_URL answers that with 403. The tokens were
+# fine; the keys needed to verify them could not be fetched. The app told users
+# "your session expired, please refresh", which no refresh could fix.
+#
+# Fetched EXACTLY the way server.py fetches it, User-Agent included. A check
+# written with httpx or curl would have passed throughout the entire outage.
+# ---------------------------------------------------------------------------
+print("\nA2b. auth infrastructure")
+
+import urllib.error  # noqa: E402
+import urllib.request  # noqa: E402
+
+_jwks_url = f"{config.CONVEX_SITE_URL}/.well-known/jwks.json"
+_UA = {"User-Agent": "ayurveda-backend/1.0"}
+try:
+    with urllib.request.urlopen(
+        urllib.request.Request(_jwks_url, headers=_UA), timeout=15
+    ) as _resp:
+        _jwks = json.loads(_resp.read())
+    _rsa = [k for k in (_jwks.get("keys") or []) if k.get("kty") == "RSA"]
+    check(
+        "signing keys fetch the way server.py fetches them",
+        bool(_rsa),
+        f"{len(_rsa)} RSA key(s)",
+    )
+    check(
+        "exactly one RSA key, which _signing_key requires when there is no kid",
+        len(_rsa) == 1,
+        f"{len(_rsa)} RSA key(s)",
+    )
+except Exception as _error:  # noqa: BLE001
+    check(
+        "signing keys fetch the way server.py fetches them",
+        False,
+        f"{type(_error).__name__}: {_error} - EVERY LOGIN IS BROKEN while this fails",
+    )
+
+# The bare default UA is what broke it. Recorded so nobody removes the explicit
+# header without the consequence showing up here.
+try:
+    with urllib.request.urlopen(urllib.request.Request(_jwks_url), timeout=15) as _bare:
+        _bare_status = _bare.status
+except urllib.error.HTTPError as _error:
+    _bare_status = _error.code
+except Exception:  # noqa: BLE001
+    _bare_status = -1
+check(
+    "server.py keeps sending an explicit User-Agent",
+    "User-Agent" in open("server.py", encoding="utf-8").read(),
+    f"bare urllib -> {_bare_status}",
+)
 print("\nA3. dependencies failing")
 
 # The LLM is unreachable: gathering must FAIL SAFE, not write a plan from nothing.

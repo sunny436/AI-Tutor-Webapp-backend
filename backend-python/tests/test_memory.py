@@ -45,17 +45,32 @@ ROUTE = f"{(config.CONVEX_SITE_URL or '').rstrip('/')}/backend/user-memory"
 
 
 def post(body: dict, service_key: str | None) -> tuple[int, dict]:
+    """Call the route the way `retrieval/memory.py` calls it.
+
+    Uses httpx, not urllib, and that is the point rather than a preference. The
+    edge in front of CONVEX_SITE_URL answers `Python-urllib/3.x` with 403, so
+    every check here failed with 403 while the retriever itself was perfectly
+    healthy — the test was measuring its own transport, not the route. A test
+    that cannot tell "the route rejected me" from "the CDN rejected my
+    User-Agent" is worse than no test: all four assertions here are ABOUT status
+    codes.
+    """
+    import httpx
+
     headers = {"content-type": "application/json"}
     if service_key is not None:
         headers["x-service-key"] = service_key
-    request = urllib.request.Request(
-        ROUTE, data=json.dumps(body).encode("utf-8"), headers=headers
-    )
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            return response.status, json.loads(response.read())
-    except urllib.error.HTTPError as error:
-        return error.code, {}
+        response = httpx.post(ROUTE, content=json.dumps(body).encode("utf-8"),
+                              headers=headers, timeout=30)
+    except Exception:  # noqa: BLE001 - unreachable is reported as a status, not a crash
+        return 0, {}
+    if response.status_code != 200:
+        return response.status_code, {}
+    try:
+        return response.status_code, response.json()
+    except Exception:  # noqa: BLE001
+        return response.status_code, {}
 
 
 # --- the route itself -------------------------------------------------------

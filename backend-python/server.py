@@ -198,6 +198,23 @@ def _signing_key(token: str):
 
     The client is cached because `PyJWKClient` fetches the JWKS over the network;
     building a new one per request re-fetched it on every single call.
+
+    ⚠ THE USER-AGENT IS LOAD-BEARING. `PyJWKClient` fetches over `urllib`, which
+    sends `Python-urllib/3.x`, and the edge in front of CONVEX_SITE_URL answers
+    that with 403 Forbidden. Every login then failed - not because a token was
+    bad, but because the public keys to check it against could not be fetched -
+    and the app told users "your session expired, please refresh", which no amount
+    of refreshing could fix. Measured against the live endpoint:
+
+        Python-urllib/3.12 (default)   403
+        ayurveda-backend/1.0           200
+        curl/8.0                       200
+        python-httpx/0.27              200
+        Mozilla/5.0                    200
+
+    So only the literal default is filtered. This sends an honest identifier
+    rather than impersonating a browser: the request really is this service, and
+    a UA that says so is both truthful and sufficient.
     """
     global _jwk_client
     import jwt  # PyJWT
@@ -206,6 +223,7 @@ def _signing_key(token: str):
         _jwk_client = jwt.PyJWKClient(
             f"{config.CONVEX_SITE_URL}/.well-known/jwks.json",
             cache_keys=True,
+            headers={"User-Agent": "ayurveda-backend/1.0"},
         )
 
     if jwt.get_unverified_header(token).get("kid"):
@@ -247,7 +265,22 @@ def verify_token(token: str) -> str:
         # able to ask about turmeric; it just does not get a private document
         # library. Failing the whole request would turn a logged-out tab into a
         # broken app.
-        print(f"[auth] token rejected: {error}")
+        #
+        # SAY WHICH KIND OF FAILURE THIS IS. "token rejected" covers two
+        # completely different situations that need opposite responses: a genuinely
+        # bad or expired token (the user should sign in again) and an unreachable
+        # JWKS endpoint (nothing is wrong with the user at all, and the app telling
+        # them to refresh is actively misleading). Both looked identical in the log
+        # while every login on the site was failing.
+        detail = str(error)
+        if "url" in detail.lower() or "fetch" in detail.lower():
+            print(
+                f"[auth] CANNOT FETCH SIGNING KEYS from {config.CONVEX_SITE_URL}"
+                f"/.well-known/jwks.json - {detail}. This rejects EVERY login "
+                "until it is fixed; the tokens themselves are fine."
+            )
+        else:
+            print(f"[auth] token rejected: {detail}")
         return ""
 
 
