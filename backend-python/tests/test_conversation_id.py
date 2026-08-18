@@ -28,7 +28,6 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import config  # noqa: E402
-from src.bots import get_bot  # noqa: E402
 from src.consult import graph  # noqa: E402
 from src.consult.schema import ConsultContext  # noqa: E402
 from src.retrieval.base import RetrievalContext, RetrievalResult  # noqa: E402
@@ -71,7 +70,6 @@ def retrieve_with(conversation_id, principal):
             graph._retrieve(
                 ConsultContext(problem="acidity"),
                 principal,
-                get_bot(None),
                 conversation_id,
             )
         )
@@ -96,7 +94,6 @@ check("an explicit conversation_id outranks principal", ctx.session_id == "conv-
 ctx = retrieve_with(None, {"user_id": "u1"})
 check("absent everywhere stays None (today's behaviour)", ctx.session_id is None, str(ctx.session_id))
 
-check("the bot is still threaded alongside it", ctx.bot.knowledge_collection == "ayurveda_yoga")
 
 
 # --- 2. the retriever forwards it to Convex ---------------------------------

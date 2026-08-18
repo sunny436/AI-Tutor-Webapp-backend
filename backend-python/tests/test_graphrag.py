@@ -41,7 +41,6 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import config  # noqa: E402
-from src.bots import BotConfig, get_bot  # noqa: E402
 from src.retrieval.base import RetrievalContext  # noqa: E402
 from src.retrieval.graphrag import (  # noqa: E402
     MAX_RELATIONSHIPS,
@@ -74,9 +73,6 @@ SHAPES = {
     "bare array": [{"text": "Ashwagandha is a rasayana.", "filename": "charaka.pdf"}],
 }
 
-PROBE_BOT = BotConfig(
-    bot_id="probe", knowledge_collection="p1-bot-isolation-probe", graphrag_project_id="proj-probe"
-)
 
 
 class _FakeResponse:
@@ -101,7 +97,7 @@ def make_post(payload):
     return _post
 
 
-def run_retrieve(payload, bot=PROBE_BOT, query="ashwagandha ke fayde"):
+def run_retrieve(payload, query="ashwagandha ke fayde"):
     import httpx
 
     calls.clear()
@@ -111,7 +107,7 @@ def run_retrieve(payload, bot=PROBE_BOT, query="ashwagandha ke fayde"):
         config.GRAPHRAG_API_KEY = "test-key-not-a-real-credential"
         config.GRAPHRAG_BASE_URL = "https://graphrag.invalid"
         return asyncio.run(
-            GraphRagRetriever(enabled=True).retrieve(RetrievalContext(query=query, bot=bot))
+            GraphRagRetriever(enabled=True).retrieve(RetrievalContext(query=query))
         )
     finally:
         httpx.post, config.GRAPHRAG_API_KEY, config.GRAPHRAG_BASE_URL = real_post, real_key, real_base
@@ -155,32 +151,35 @@ result = run_retrieve({"unexpected": 1})
 check("...and the retriever still returns empty rather than propagating", result.is_empty)
 
 
-# --- 2. bot isolation --------------------------------------------------------
-print("\nbot isolation (P1 boundary must hold on the remote index too)")
+# --- 2. scope + the dark switch ---------------------------------------------
+# This section used to assert that the project id came from a per-bot config and
+# that two bots therefore could not read each other's documents. That claim was
+# MEASURED FALSE: the vendor ignores project_id on /v1/search - correct, wrong
+# and absent ids return byte-identical results - and their documentation does not
+# list the field. Isolation is the API key. The test is rewritten rather than
+# deleted because one guard in it is still real: an unconfigured project id must
+# make this retriever go dark rather than call out with a blank scope.
+print("\nscope + the dark switch")
 
-run_retrieve(SHAPES["bare array"], bot=PROBE_BOT)
+run_retrieve(SHAPES["bare array"])
 check(
-    "the project id comes from the BOT, not from global config",
-    calls[0]["json"].get("project_id") == "proj-probe",
+    "sends the configured project id",
+    calls[0]["json"].get("project_id") == config.GRAPHRAG_PROJECT_ID,
     str(calls[0]["json"].get("project_id")),
 )
 
-ayurveda = get_bot("ayurveda")
-run_retrieve(SHAPES["bare array"], bot=ayurveda)
-check(
-    "a different bot sends a different project id",
-    calls[0]["json"].get("project_id") == ayurveda.graphrag_project_id != "proj-probe",
-)
-
-blank = BotConfig(bot_id="unscoped", knowledge_collection="x", graphrag_project_id="")
-calls.clear()
-result = run_retrieve(SHAPES["bare array"], bot=blank)
-check(
-    "a bot with no GraphRAG project retrieves nothing and makes no call",
-    result.is_empty and not calls,
-    f"{len(calls)} calls",
-)
-
+_real_project = config.GRAPHRAG_PROJECT_ID
+try:
+    config.GRAPHRAG_PROJECT_ID = ""
+    calls.clear()
+    result = run_retrieve(SHAPES["bare array"])
+    check(
+        "no project id configured -> retrieves nothing and makes NO call",
+        result.is_empty and not calls,
+        f"{len(calls)} calls",
+    )
+finally:
+    config.GRAPHRAG_PROJECT_ID = _real_project
 
 # --- 3. the two hard rules ---------------------------------------------------
 print("\nsecurity + architecture invariants")
@@ -239,7 +238,7 @@ try:
     config.GRAPHRAG_BASE_URL = "https://graphrag.invalid"
     dead = asyncio.run(
         GraphRagRetriever(enabled=True).retrieve(
-            RetrievalContext(query="acidity", bot=PROBE_BOT)
+            RetrievalContext(query="acidity")
         )
     )
     check("a dead service degrades to empty instead of failing the consult", dead.is_empty)

@@ -36,7 +36,6 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import config  # noqa: E402
 from src import safety  # noqa: E402
-from src.bots import BotConfig, get_bot  # noqa: E402
 from src.consult import gathering, graph  # noqa: E402
 from src.consult import state as ctx_state  # noqa: E402
 from src.consult.schema import MAX_CHAT_HISTORY  # noqa: E402
@@ -76,10 +75,6 @@ check("malformed JSON body -> 400, not a 500 stack trace", r.status_code == 400,
 
 r = client.post("/consult", content=b"\xff\xfe\x00bad", headers={**H, "Content-Type": "application/json"})
 check("non-UTF-8 body -> 400", r.status_code == 400, str(r.status_code))
-
-r = client.post("/consult", json={"bot_id": "no-such-bot", "problem": "hi"}, headers=H)
-check("unknown bot_id -> 400", r.status_code == 400, str(r.status_code))
-check("...and the 400 explains which ids exist", "ayurveda" in r.text, r.text[:80])
 
 r = client.post("/consult", json={"problem": "hi", "context": "not-an-object"}, headers=H)
 check("a context of the wrong TYPE does not 500", r.status_code < 500, str(r.status_code))
@@ -315,10 +310,6 @@ check(
 # ===========================================================================
 print("\nB. GraphRAG proof chain  ⚠ STUB, NOT THE LIVE SERVICE")
 
-PROOF_BOT = BotConfig(
-    bot_id="proof", knowledge_collection="p1-bot-isolation-probe", graphrag_project_id="proj-proof"
-)
-
 # An INVENTED response. The real schema is NOT DOCUMENTED.
 STUB_RESPONSE = {
     "results": [
@@ -352,7 +343,7 @@ try:
     config.GRAPHRAG_BASE_URL = "https://graphrag.stub.invalid"
 
     pipeline = RetrievalPipeline([GraphRagRetriever(enabled=True)])
-    got = run(pipeline.run(RetrievalContext(query="mujhe acidity hai", bot=PROOF_BOT)))
+    got = run(pipeline.run(RetrievalContext(query="mujhe acidity hai")))
 
     check("1. a passage enters the retriever", any(not r.is_empty for r in got))
 
@@ -384,13 +375,18 @@ try:
     check("7. /v1/search was called, never /v1/answer", captured[0]["url"].endswith("/v1/search"))
     check("8. TLS verification was never disabled", captured[0].get("verify") is not False)
     check(
-        "9. the project id came from the BOT, preserving isolation",
-        captured[0]["json"]["project_id"] == "proj-proof",
+        # Was "the project id came from the BOT, preserving isolation". Measured
+        # false: the vendor ignores project_id on /v1/search, so it isolates
+        # nothing. What is still worth pinning is that the configured value is
+        # what goes out - a blank one must make the retriever go dark instead.
+        "9. the configured project id is what is sent",
+        captured[0]["json"]["project_id"] == config.GRAPHRAG_PROJECT_ID,
+        str(captured[0]["json"]["project_id"]),
     )
 
     # 10. the service dies mid-flight
     httpx.post = lambda *a, **k: (_ for _ in ()).throw(httpx.ConnectError("refused"))
-    dead = run(pipeline.run(RetrievalContext(query="acidity", bot=PROOF_BOT)))
+    dead = run(pipeline.run(RetrievalContext(query="acidity")))
     check("10. a dead service yields nothing rather than an error", all(r.is_empty for r in dead))
     check("11. ...and the prompt is simply built without it", pipeline.to_prompt_block(dead) == "")
 
@@ -402,7 +398,7 @@ try:
 
     httpx.post = _hang
     slow_pipeline = RetrievalPipeline([GraphRagRetriever(enabled=True)], timeout_s=1.0)
-    hung = run(slow_pipeline.run(RetrievalContext(query="acidity", bot=PROOF_BOT)))
+    hung = run(slow_pipeline.run(RetrievalContext(query="acidity")))
     check("12. a hanging service is cut off by the pipeline timeout", all(r.is_empty for r in hung))
 finally:
     httpx.post, config.GRAPHRAG_API_KEY, config.GRAPHRAG_BASE_URL = real_post, real_k, real_b

@@ -31,7 +31,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, StreamingResponse
 
 import config
-from src.bots import BOTS, BotConfig, UnknownBotError, get_bot
 from src.consult import run_turn as run_consult_turn
 from src.graph import run_consult
 from src.documents import extract_text
@@ -369,37 +368,6 @@ async def chat(
     return result  # {kind, answer, knowledge_used}
 
 
-def _resolve_bot(data: dict) -> BotConfig:
-    """Which bot is this request for? Unknown ids are a 400, never a fallback.
-
-    Called BEFORE the turn starts, so an unregistered bot_id never reaches a
-    retriever, an LLM or the vector store. Falling back to the default bot here
-    would silently answer out of Ayurveda's corpus for a caller that explicitly
-    asked for something else — the exact cross-bot leak the Bot Manager exists to
-    prevent, and one that no happy-path test would ever catch.
-
-    An ABSENT bot_id is still accepted and means the default bot. The frontend
-    now sends one, so this remains only for clients still running an older
-    bundle — a browser tab open across the deploy, or a cached script. Rejecting
-    absence immediately would 400 those users mid-conversation for no fault of
-    their own, and this site is expected to stay up.
-
-    It is logged rather than silent, so the transition is observable: once this
-    warning stops appearing in production, absence can safely become a 400 too.
-    A default is a silent fallback wearing a different hat, and it is only
-    tolerable while it is temporary and visible.
-    """
-    if not data.get("bot_id"):
-        print("[consult] request without bot_id; defaulting to the ayurveda bot")
-    try:
-        return get_bot(data.get("bot_id"))
-    except UnknownBotError:
-        # Naming the known ids keeps the error actionable. They are not secret —
-        # the frontend sends them in plain request bodies.
-        raise HTTPException(
-            status_code=400,
-            detail=f"unknown bot_id: {data.get('bot_id')!r}; known: {sorted(BOTS)}",
-        )
 
 
 @app.post("/consult")
@@ -442,7 +410,6 @@ async def consult(
     # After auth, before any work: an unauthenticated caller learns nothing about
     # which bots exist, and an unknown bot_id costs one dict lookup rather than a
     # retrieval pass.
-    bot = _resolve_bot(data)
 
     result = await run_consult_turn(
         problem=data.get("problem", ""),
@@ -451,7 +418,6 @@ async def consult(
         free_text=data.get("freeText"),
         profile=data.get("profile", ""),
         principal=principal,
-        bot=bot,
         conversation_id=data.get("conversationId"),
     )
     return result.model_dump()
@@ -493,7 +459,6 @@ async def consult_stream(
     # Resolved here rather than inside `run()` so an unknown bot_id is a real
     # HTTP 400 the client can act on, not an `error` frame arriving mid-stream
     # after the connection has already been accepted.
-    bot = _resolve_bot(data)
 
     # The turn runs in a worker thread and pushes pieces onto this queue; the
     # response generator drains it. A queue rather than a direct yield because
@@ -515,7 +480,6 @@ async def consult_stream(
                 profile=data.get("profile", ""),
                 principal=principal,
                 on_token=on_token,
-                bot=bot,
                 conversation_id=data.get("conversationId"),
             )
             await queue.put(("done", result.model_dump()))
@@ -790,11 +754,10 @@ async def debug_retrieve(
     # Same validation as a real consultation: an unknown bot_id is a 400 here
     # too, so a typo produces an error rather than a trace of the wrong corpus
     # that looks perfectly plausible.
-    bot = _resolve_bot({"bot_id": bot_id} if bot_id else {})
 
     # user_id is honoured only because the caller already proved it holds the
     # service key; it is never taken from an end user.
-    return await pipeline_trace(q, user_id or None, bot)
+    return await pipeline_trace(q, user_id or None)
 
 
 @app.post("/extract")

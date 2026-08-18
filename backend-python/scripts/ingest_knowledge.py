@@ -29,7 +29,6 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 import config
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
-from src.bots import get_bot
 from src.knowledge import DEFAULT_COLLECTION_NAME, get_vector_store
 
 
@@ -147,14 +146,8 @@ def main() -> None:
         default=None,
         help=(
             "Chroma collection to write into. Defaults to the default bot's "
-            "(see src/bots/registry.py). Must match that bot's "
-            "BotConfig.knowledge_collection, or the bot will search an empty store."
+            "Defaults to the one collection this backend has."
         ),
-    )
-    parser.add_argument(
-        "--bot",
-        default=None,
-        help="Resolve the collection from a registered bot_id instead of naming it.",
     )
     args = parser.parse_args()
 
@@ -162,7 +155,6 @@ def main() -> None:
     if args.bot:
         if collection:
             raise SystemExit("Pass --bot or --collection, not both.")
-        collection = get_bot(args.bot).knowledge_collection
 
     target = collection or DEFAULT_COLLECTION_NAME
     print(f"Ingesting into collection: {target}")

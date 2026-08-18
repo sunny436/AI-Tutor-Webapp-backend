@@ -16,17 +16,12 @@ from dataclasses import dataclass, field
 import config
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
-from src.bots import get_bot
 
-# The collection used when a caller names none. It is read from the DEFAULT BOT
-# rather than written here, so "which corpus" has exactly one owner
-# (src/bots/registry.py) instead of two that can drift apart.
-#
-# Every function below takes an optional `collection`. Callers that pass one -
-# the consultation retriever, via the request's BotConfig - are isolated per bot.
-# Callers that pass nothing get the default bot, which is what keeps the legacy
-# /chat path and the ingest script working exactly as before.
-DEFAULT_COLLECTION_NAME = get_bot(None).knowledge_collection
+# The one collection this backend has. It was derived from a bot registry when
+# the backend was meant to host several chatbots; there is one Ayurveda chatbot,
+# and the vendor now isolates GraphRAG per API key rather than per project id,
+# so the registry bought nothing and cost a parameter on 72 call sites.
+DEFAULT_COLLECTION_NAME = "ayurveda_yoga"
 
 # Back-compat alias. Nothing in this repo imports it, but it was the public name
 # for a long time and removing it buys nothing.
@@ -102,9 +97,8 @@ def _tokens(text: str) -> list[str]:
 # Module-level caches (loaded once, reused forever).
 #
 # The embedding MODEL is shared across collections on purpose — it is ~1.9GB and
-# carries no per-bot state, so loading a second copy per bot would cost gigabytes
-# to isolate nothing. The vector STORES are keyed by collection, which is where
-# the actual isolation lives.
+# carries no per-collection state. The vector STORES are keyed by collection,
+# which is what keeps uploaded reports out of the shared notes.
 _embeddings = None
 _vector_stores: dict[str, Chroma] = {}
 
@@ -128,11 +122,11 @@ def get_embeddings():
 
 
 def get_vector_store(collection: str | None = None) -> Chroma:
-    """Open one bot's vector DB once and reuse it.
+    """Open the vector DB once and reuse it.
 
-    Cached PER COLLECTION. This is the isolation boundary: two bots configured
-    with different collections get different Chroma handles, so one physically
-    cannot read the other's notes.
+    Still cached per collection name, because `user_documents` is a second,
+    genuinely separate store - uploaded medical reports must never be searchable
+    alongside the shared notes.
     """
     name = _resolve(collection)
     store = _vector_stores.get(name)

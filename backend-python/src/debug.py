@@ -37,7 +37,6 @@ from __future__ import annotations
 import asyncio
 
 import config
-from src.bots import BotConfig, get_bot
 from src.knowledge import (
     DEFAULT_COLLECTION_NAME,
     _tokens,
@@ -129,25 +128,17 @@ def retrieval_trace(
     }
 
 
-async def pipeline_trace(
-    query: str, user_id: str | None = None, bot: BotConfig | None = None
-) -> dict:
+async def pipeline_trace(query: str, user_id: str | None = None) -> dict:
     """The retrieval trace PLUS what the full pipeline assembled for the prompt.
 
     `retrieval_trace` explains the knowledge retriever in isolation; this shows
     what every enabled retriever contributed and the exact text the model would
     receive, which is where ordering and section-labelling bugs show up.
 
-    `bot` picks which corpus to describe, and must be the bot the caller asked
-    about — a trace of the wrong corpus is worse than no trace, because it looks
-    entirely plausible. Validated at the HTTP edge, same as a real consultation.
     """
-    bot = bot or get_bot(None)
-    trace = await asyncio.to_thread(
-        retrieval_trace, query, user_id, bot.knowledge_collection
-    )
+    trace = await asyncio.to_thread(retrieval_trace, query, user_id)
 
-    ctx = RetrievalContext(query=query, problem=query, user_id=user_id, bot=bot)
+    ctx = RetrievalContext(query=query, problem=query, user_id=user_id)
     results = await get_pipeline().run(ctx)
 
     trace["retrievers"] = [

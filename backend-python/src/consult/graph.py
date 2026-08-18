@@ -43,7 +43,6 @@ from typing import Callable
 
 import config
 from src import safety
-from src.bots import BotConfig, get_bot
 from src.consult import state as ctx_state
 from src.consult.gathering import gather
 from src.consult.responder import (
@@ -165,7 +164,6 @@ def _escalate(context: ConsultContext, reason: str = "") -> ConsultResult:
 async def _retrieve(
     context: ConsultContext,
     principal: dict | None,
-    bot: BotConfig | None = None,
     conversation_id: str | None = None,
 ):
     pipeline = get_pipeline()
@@ -174,11 +172,6 @@ async def _retrieve(
             query=ctx_state.search_query(context),
             problem=context.problem,
             intake_summary=ctx_state.intake_summary(context),
-            # Which bot's knowledge this turn may search. Already validated by
-            # `get_bot` at the edge, so an unregistered id never arrives here.
-            # `or get_bot(None)` keeps callers that pass nothing on the default
-            # bot, which is exactly today's behaviour.
-            bot=bot or get_bot(None),
             # "user_id", not "userId". The camelCase key is whatever the browser
             # sent; the snake_case one is written by server.py from the verified
             # JWT subject. Only the verified one may select private documents,
@@ -246,16 +239,9 @@ async def run_turn(
     profile: str = "",
     principal: dict | None = None,
     on_token: Callable[[str], None] | None = None,
-    bot: BotConfig | None = None,
     conversation_id: str | None = None,
 ) -> ConsultResult:
     """Advance the consultation by one turn.
-
-    `bot` selects which knowledge base this turn may search. It is resolved and
-    validated at the HTTP edge by `bots.get_bot`, so an unregistered id is a 400
-    and never reaches here. Omitting it uses the default bot, which is what keeps
-    every existing caller — and the current frontend, which does not send a
-    bot_id yet — behaving exactly as before.
 
     `on_token` is optional and purely additive. When supplied, prose answers hand
     their text over piece by piece as the model writes it; the ConsultResult that
@@ -320,7 +306,7 @@ async def run_turn(
                 # word for word. Go back to the notes for the same topic, and
                 # say what has already been covered so the model extends it.
                 question_context = ConsultContext(problem=topic)
-                pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
+                pipeline, results = await _retrieve(question_context, principal, conversation_id)
                 reworked = await write_knowledge(
                     _continuation_question(topic, context.last_answer),
                     knowledge_for_prompt(pipeline, results),
@@ -338,7 +324,7 @@ async def run_turn(
                 # classifier, and came back as the OFF-TOPIC refusal. Answer the
                 # topic itself rather than pretending not to understand.
                 question_context = ConsultContext(problem=context.problem)
-                pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
+                pipeline, results = await _retrieve(question_context, principal, conversation_id)
                 reworked = await write_knowledge(
                     context.problem, knowledge_for_prompt(pipeline, results), context.language
                 )
@@ -422,7 +408,7 @@ async def run_turn(
 
         if route.intent == "knowledge":
             question_context = ConsultContext(problem=message)
-            pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
+            pipeline, results = await _retrieve(question_context, principal, conversation_id)
             answer = await write_knowledge(
                 message, knowledge_for_prompt(pipeline, results), context.language, on_token
             )
@@ -470,7 +456,7 @@ async def run_turn(
         # consultation's own problem — so there is no "nothing to continue" case.
         if is_continuation_request(typed):
             question_context = ConsultContext(problem=context.problem)
-            pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
+            pipeline, results = await _retrieve(question_context, principal, conversation_id)
             reworked = await write_knowledge(
                 _continuation_question(context.problem, context.last_answer),
                 knowledge_for_prompt(pipeline, results),
@@ -482,7 +468,7 @@ async def run_turn(
             # Cards are open but nothing has been answered yet, so there is no
             # previous answer - explain the topic itself in the asked-for language.
             question_context = ConsultContext(problem=context.problem)
-            pipeline, results = await _retrieve(question_context, principal, bot, conversation_id)
+            pipeline, results = await _retrieve(question_context, principal, conversation_id)
             reworked = await write_knowledge(
                 context.problem, knowledge_for_prompt(pipeline, results), context.language
             )
@@ -643,7 +629,7 @@ async def run_turn(
     chosen = context.answers.get(SECTIONS_QUESTION_ID)
     sections = resolve_sections(chosen.options if chosen else None)
 
-    pipeline, results = await _retrieve(context, principal, bot, conversation_id)
+    pipeline, results = await _retrieve(context, principal, conversation_id)
 
     # A serious condition can arrive in an uploaded report rather than in what
     # the user typed - somebody attaches an oncology summary and asks about

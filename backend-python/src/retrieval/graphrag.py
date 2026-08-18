@@ -24,14 +24,18 @@ mirror the user's language (rule 6), or must not claim to be a practitioner
 So this asks only for passages, and our single existing LLM still writes every
 word the user reads.
 
-BOT-SCOPED, LIKE THE LOCAL CORPUS
-The project id comes from `ctx.bot.graphrag_project_id`, never from
-`config.GRAPHRAG_PROJECT_ID`. Reading the global would have punched a hole
-straight through the isolation boundary added with the Bot Manager: every bot
-would query the same remote project, so one bot could retrieve another's
-documents from the external index -- the same leak, one layer further out.
-`config.GRAPHRAG_PROJECT_ID` survives only as the DEFAULT BOT's value inside
-`src/bots/registry.py`; nothing on the request path reads it.
+ISOLATION IS THE API KEY, NOT THE PROJECT ID
+This block used to claim the opposite: that reading `config.GRAPHRAG_PROJECT_ID`
+instead of a per-bot value would leak one chatbot's documents into another's
+answers. That was measured and is FALSE. Sending the correct project id, a wrong
+one, and none at all returns byte-identical results -- the vendor ignores the
+field on /v1/search, and their own documentation does not list it. The credential
+scopes the data, exactly as they intend: one chatbot, one API key, one index.
+
+The id is still sent, because it is harmless and it is what the vendor's upload
+path (`/v1/projects/{id}/documents`) takes. It is no longer described as a
+security boundary, because it never was one. Anyone holding GRAPHRAG_API_KEY can
+read and write this index; that is the whole boundary.
 
 VERIFIED AGAINST THE LIVE SERVICE (2026-08-18)
 DNS, TLS against the vendor CA with full hostname checking, authentication, and a
@@ -61,7 +65,7 @@ from pathlib import Path
 from typing import Any
 
 import config
-from src.knowledge import match_topics
+from src.knowledge import DEFAULT_COLLECTION_NAME, match_topics
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult
 from src.retrieval.pipeline import dedupe
 
@@ -367,11 +371,14 @@ class GraphRagRetriever:
 
     async def retrieve(self, ctx: RetrievalContext) -> RetrievalResult:
         # Per-bot scope on the remote index. See the module docstring.
-        project_id = ctx.bot.graphrag_project_id
+        project_id = config.GRAPHRAG_PROJECT_ID
         if not project_id:
+            # Loudly, not silently. This is now the ONLY grounding source, so an
+            # unconfigured id means every answer this turn is ungrounded.
+            print("[graphrag] no project id configured; retrieving nothing")
             return RetrievalResult(section=self.section, chunks=())
 
-        query = english_handle(ctx.query, ctx.bot.knowledge_collection)
+        query = english_handle(ctx.query, DEFAULT_COLLECTION_NAME)
 
         # `pipeline._safe_retrieve` already absorbs timeouts and exceptions, so a
         # wedged or broken service degrades the answer instead of failing the

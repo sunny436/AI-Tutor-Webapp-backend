@@ -36,7 +36,7 @@ from __future__ import annotations
 import asyncio
 
 import config
-from src.knowledge import match_topics, search_knowledge_scored
+from src.knowledge import DEFAULT_COLLECTION_NAME, match_topics, search_knowledge_scored
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult
 from src.retrieval.pipeline import dedupe
 
@@ -137,11 +137,9 @@ class KnowledgeRetriever:
 
         Blocking on purpose — the caller runs it off the event loop.
 
-        `collection` comes from the request's BotConfig and is passed to BOTH
-        lookups below. Both matter: the alias index decides which note FILENAMES
-        are claimed, and the claimed path then searches those sources directly,
-        skipping the relevance threshold. Scoping the search but not the index
-        would hand this bot another bot's filenames and then fetch them.
+        `collection` is passed to BOTH lookups below. Both matter: the alias
+        index decides which note FILENAMES are claimed, and the claimed path then
+        searches those sources directly, skipping the relevance threshold.
         """
         claimed = match_topics(query, collection=collection)
         if claimed:
@@ -175,7 +173,7 @@ class KnowledgeRetriever:
         # The collection is read from the request's bot, NOT from a module
         # constant — that is what makes the isolation real rather than declared.
         scored, kept = await asyncio.to_thread(
-            self._search, ctx.query, ctx.bot.knowledge_collection
+            self._search, ctx.query, DEFAULT_COLLECTION_NAME
         )
 
         chunks = [
