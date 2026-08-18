@@ -24,6 +24,22 @@ ingress:
       # A full consultation can take ~150s on the free model tier.
       connectTimeout: 30s
 
+  # Self-hosted Convex. Two hostnames because Convex serves the client API and
+  # its HTTP actions on separate ports, and cloudflared forwards the full path
+  # without stripping a prefix, so one host cannot carry both.
+  #
+  # The site host is load-bearing beyond Convex itself: auth.config.ts uses it
+  # as the JWT issuer, and backend-python fetches
+  # <site>/.well-known/jwks.json from it to verify every login token.
+  - hostname: ayur-convex.namahos.com
+    service: http://127.0.0.1:3210
+    originRequest:
+      # The browser holds a long-lived websocket here for live queries.
+      connectTimeout: 30s
+
+  - hostname: ayur-convex-http.namahos.com
+    service: http://127.0.0.1:3211
+
   # Anything else reaching this tunnel is not ours. Refuse it rather than
   # letting an unexpected Host header through to a local service.
   - service: http_status:404
