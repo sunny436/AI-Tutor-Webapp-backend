@@ -272,6 +272,26 @@ GRAPHRAG_API_KEY = _get("GRAPHRAG_API_KEY", "")
 # `k` in the /v1/search request body. 6 is the vendor doc's own example.
 GRAPHRAG_TOP_K = int(_get("GRAPHRAG_TOP_K", "6"))
 
+# Does GraphRAG actually COVER this question, or is it just returning its nearest
+# neighbours? It never returns empty - "stock market kaisa hai" comes back with
+# joint-pain passages at 0.0378 - so without a gate the honest-refusal branch can
+# never fire, and every off-topic question gets a confident six-section plan.
+#
+# A score threshold alone CANNOT be that gate. Measured on production-shaped
+# Hinglish, the distributions overlap: an uncovered "naak se khoon aata hai"
+# scores 0.6005, above six genuinely covered queries.
+#
+# So coverage is decided by TWO signals, and either one is enough:
+#   1. the alias index claims a note  - categorical, 27/28 on a labelled sweep
+#   2. the top passage clears this floor - catches a topic we DO cover that the
+#      alias index missed on a typo ("nend nhi ati" -> no claim, but 0.6927)
+#
+# 0.65 sits between the highest uncovered query (naak se khoon, 0.6005) and the
+# lowest typo'd covered one (nend nhi ati, 0.6927). Combined: 9/10 on the sweep,
+# against 8/10 for the alias alone. Re-measure with the same sweep if the vendor
+# changes their embedder - the scale is theirs, not ours.
+GRAPHRAG_MIN_RELEVANCE = float(_get("GRAPHRAG_MIN_RELEVANCE", "0.65"))
+
 # Kept at or below RETRIEVAL_TIMEOUT_S above: this is a network-backed retriever
 # on an internal host, and a wedged source must not hold up a consultation.
 GRAPHRAG_TIMEOUT_S = float(_get("GRAPHRAG_TIMEOUT_S", "3.0"))

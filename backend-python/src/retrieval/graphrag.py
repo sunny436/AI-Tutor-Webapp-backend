@@ -398,6 +398,9 @@ class GraphRagRetriever:
             print("[graphrag] no project id configured; retrieving nothing")
             return RetrievalResult(section=self.section, chunks=())
 
+        # Does the corpus actually COVER this question? Two signals, either one
+        # enough - see config.GRAPHRAG_MIN_RELEVANCE for the measurements.
+        claimed = match_topics(ctx.query, collection=DEFAULT_COLLECTION_NAME)
         query = english_handle(ctx.query, DEFAULT_COLLECTION_NAME)
 
         # `pipeline._safe_retrieve` already absorbs timeouts and exceptions, so a
@@ -410,6 +413,24 @@ class GraphRagRetriever:
             # relevance floor of its own, so without this an off-topic passage
             # scoring 0.1251 reached the prompt labelled "Reference documents".
             passages = _top_document_only(_read_passages(body)) if body else []
+
+            # THE COVERAGE GATE. This service never returns empty - an off-topic
+            # question comes back with its nearest neighbours, and downstream
+            # that is indistinguishable from a real answer. With the local
+            # retriever off, letting those through means every uncovered
+            # question gets a confident plan built on unrelated passages, and
+            # the honest-refusal branch can never fire.
+            best = max(
+                (s for s in (_first(p, _SCORE_KEYS) for p in passages)
+                 if isinstance(s, (int, float))),
+                default=0.0,
+            )
+            if not claimed and best < config.GRAPHRAG_MIN_RELEVANCE:
+                print(
+                    f"[graphrag] not covered: {ctx.query[:60]!r} "
+                    f"(no alias claim, best {best:.4f} < {config.GRAPHRAG_MIN_RELEVANCE})"
+                )
+                return RetrievalResult(section=self.section, chunks=())
         except Exception as error:  # noqa: BLE001
             global CONSECUTIVE_FAILURES
             CONSECUTIVE_FAILURES += 1

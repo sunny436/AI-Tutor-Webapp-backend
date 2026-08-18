@@ -360,6 +360,49 @@ check(
 )
 check("no passages in, no passages out", _top_document_only([]) == [])
 
+# ===========================================================================
+# THE COVERAGE GATE. This service NEVER returns empty - an off-topic question
+# comes back with its nearest neighbours ("stock market kaisa hai" -> joint-pain
+# passages at 0.0378). Downstream that is indistinguishable from a real answer,
+# so without a gate every uncovered question gets a confident plan built on
+# unrelated passages and the honest-refusal branch can never fire.
+#
+# Two signals, either sufficient: an alias-index claim, or a top score clearing
+# GRAPHRAG_MIN_RELEVANCE. Neither works alone - see the config comment.
+# ===========================================================================
+print("\ncoverage gate")
+
+_HI = config.GRAPHRAG_MIN_RELEVANCE + 0.10
+_LO = config.GRAPHRAG_MIN_RELEVANCE - 0.10
+
+
+def _scored(score):
+    return {"chunks": [{"text": "passage", "document_name": "a.md", "score": score}]}
+
+
+# No alias claim is possible for gibberish, so only the score can carry it.
+result = run_retrieve(_scored(_LO), query="zzz qqq wwww")
+check(
+    "no alias claim and a low score -> retrieves NOTHING",
+    result.is_empty,
+    f"{len(result.chunks)} chunks",
+)
+
+result = run_retrieve(_scored(_HI), query="zzz qqq wwww")
+check(
+    "no alias claim but a high score -> still retrieved (typo escape hatch)",
+    not result.is_empty,
+    f"{len(result.chunks)} chunks",
+)
+
+# A real covered topic claims an alias, so a LOW score must still pass.
+result = run_retrieve(_scored(_LO), query="mujhe gas ho rahi hai")
+check(
+    "an alias claim carries a low score through",
+    not result.is_empty,
+    f"{len(result.chunks)} chunks",
+)
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== graphrag: {passed}/{len(results)} passed =====")
 print("NOTE: response mapping is fixture-based. LIVE MAPPING UNVERIFIED (DNS + undocumented schema).")
