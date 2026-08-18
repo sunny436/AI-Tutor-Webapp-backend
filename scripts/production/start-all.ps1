@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     Start (or repair) the three processes that make the site public, and keep
     them responsive.
@@ -45,6 +45,9 @@
 $ErrorActionPreference = "Stop"
 
 $Repo = "C:\Users\test\Desktop\Ayurveda-"
+# The frontend now lives in its own repository, owned by a separate team.
+# This one keeps the Python backend, the tunnel and this supervisor.
+$Frontend = "C:\Users\test\Desktop\ayurveda-frontend"
 $Bun = "C:\Users\test\.bun\bin\bun.exe"
 $Python = "$Repo\backend-python\.venv\Scripts\python.exe"
 $Cloudflared = "C:\Users\test\.cloudflared\bin\cloudflared.exe"
@@ -296,12 +299,15 @@ if (Test-Listening 4000) {
 # the dev server mishandles X-Forwarded-Proto behind the tunnel and 500s.
 # After changing any NEXT_PUBLIC_* value, run `bun run build` before restarting —
 # those values are compiled into the bundle, not read at runtime.
+#
+# Built from $Frontend, NOT this repository. The frontend was split out so an
+# external team could own it; this repo no longer contains apps/app.
 if (Test-Listening 3000) {
     Write-Log "frontend already listening on 3000"
 } else {
     Write-Log "frontend starting"
     Start-Process -FilePath $Bun -ArgumentList "run", "start" `
-        -WorkingDirectory "$Repo\apps\app" `
+        -WorkingDirectory "$Frontend\apps\app" `
         -RedirectStandardOutput "$LogDir\frontend-out.log" `
         -RedirectStandardError  "$LogDir\frontend-err.log" `
         -WindowStyle Hidden

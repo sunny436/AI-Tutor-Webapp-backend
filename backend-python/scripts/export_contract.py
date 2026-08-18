@@ -40,13 +40,18 @@ from src.consult.schema import (  # noqa: E402
     Question,
 )
 
-# Written INTO the frontend, not into docs/: it has to travel with the app so
-# the check still runs in a repository containing no Python. One copy, one
-# owner -- a second copy would be the drift this exists to prevent.
-OUT = (
-    Path(__file__).resolve().parents[2]
-    / "apps" / "app" / "src" / "content" / "consult-contract.json"
-)
+# Lives HERE, in the repository that owns the models.
+#
+# It used to be written into apps/app, which worked while the frontend shared this
+# repository. It no longer does: the frontend was split out to be owned by another
+# team, so the contract has become an interface BETWEEN two repositories rather
+# than a file one of them happens to hold.
+#
+# The frontend keeps its own committed copy and checks the TypeScript against it.
+# Updating that copy is therefore a deliberate, visible step in a coordinated
+# release -- which is the point. A contract that both sides can change silently is
+# not a contract.
+OUT = Path(__file__).resolve().parents[2] / "docs" / "consult-contract.json"
 
 
 def fields(model) -> dict:

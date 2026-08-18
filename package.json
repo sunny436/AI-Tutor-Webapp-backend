@@ -1,24 +1,14 @@
 {
-  "name": "v1",
+  "name": "ayurveda-backend",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "apps/*",
     "tooling/*"
   ],
   "scripts": {
-    "build": "turbo build",
     "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo clean",
-    "dev": "turbo dev --parallel",
-    "dev:app": "turbo dev --filter=@v1/app",
-    "start:app": "turbo start --filter=@v1/app",
-    "test": "turbo test --parallel",
     "format": "biome format --write .",
-    "lint": "turbo lint && bun lint:repo",
-    "lint:repo": "bunx sherif@latest",
-    "lint:repo:fix": "bunx sherif@latest --fix",
-    "typecheck": "turbo typecheck"
+    "lint": "biome lint",
+    "test": "turbo test --parallel"
   },
   "devDependencies": {
     "@auth/core": "0.37.0",

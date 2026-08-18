@@ -21,7 +21,7 @@ sys.path.append(str(ROOT))
 
 from scripts.export_contract import build  # noqa: E402
 
-CONTRACT = ROOT.parent / "apps" / "app" / "src" / "content" / "consult-contract.json"
+CONTRACT = ROOT.parent / "docs" / "consult-contract.json"
 
 results: list[tuple[str, bool, str]] = []
 

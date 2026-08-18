@@ -16,7 +16,7 @@ Built on the [Convex v1 starter](https://github.com/get-convex/v1), heavily exte
 Two backends, deliberately split:
 
 ```
-                    Browser — Next.js dashboard (apps/app)
+        Browser — Next.js dashboard (SEPARATE REPO: ayurveda-frontend)
                        │                      │
               login, data, jobs         consultations
                        │                      │
@@ -40,16 +40,13 @@ without touching the other.
 
 ## Layout
 
+**The frontend is not in this repository.** It was split out to
+`ayurveda-frontend` so an external team could own it. This repo keeps the AI
+backend, the contract it publishes, the browser tests, the tunnel and the
+supervisor — and the live site is served FROM that other repo, which is why
+`scripts/production/start-all.ps1` points outside this tree.
+
 ```
-apps/app/              Next.js 14 dashboard — the product
-  src/app/[locale]/    App Router. Folder path IS the URL; do not rearrange.
-    (dashboard)/       authenticated area — consult, jobs, files, platform, settings
-    (public)/          login
-packages/
-  backend/convex/      Convex functions + schema. Filename IS the API path
-                       (audit.ts → api.audit.*); do not rename casually.
-  ui/                  shared shadcn components
-  email/ logger/ analytics/
 backend-python/        FastAPI AI backend
   src/consult/         the live engine: router → planner → responder
   src/graph.py         LEGACY single-shot flow, serves frontend/index.html only
