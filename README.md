@@ -58,7 +58,7 @@ docs/
   START.md             day-to-day run instructions
   TECH_STACK.md        what every technology is and why it is here
   MODELS.md            model evaluation notes
-ROADMAP.md             deferred work, ordered by priority
+ROADMAP.md             deferred work (backend only; the frontend has its own)
 ```
 
 ---
