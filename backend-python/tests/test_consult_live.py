@@ -16,6 +16,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import config  # noqa: E402  (needs the sys.path line above)
+from src.consult.sections import SECTION_LIBRARY  # noqa: E402
 
 BASE = "http://localhost:4000"
 # Server-to-server credential — /consult and /chat refuse anonymous callers so a
@@ -92,12 +93,40 @@ final = post(
         "freeText": "",
     }
 )
-headings = ["Root Cause", "Changes To Make", "Yoga", "Food Chart", "Daily Routine", "Doctor"]
-present = [h for h in headings if h.lower() in final.get("answer", "").lower()]
+# The exact strings the client splits on, matched on WHOLE LINES, all six
+# required. The old version of this check dropped the `**` markers, lowercased
+# both sides, shortened two headings to "Yoga" and "Doctor" — so the word
+# "doctor" anywhere in the prose satisfied it — and passed at five of six. A plan
+# truncated by MAX_TOKENS_ANSWER loses exactly one section, the last one, which
+# is the ALWAYS_INCLUDED "When To See A Doctor". So the check was calibrated to
+# pass the precise failure it should have caught.
+headings = [heading for heading, _ in SECTION_LIBRARY.values()]
+answer_text = final.get("answer", "")
+answer_lines = {line.strip() for line in answer_text.splitlines()}
+present = [h for h in headings if h in answer_lines]
+missing = [h for h in headings if h not in answer_lines]
 check(
-    "tapping options produces the final answer",
-    final["kind"] == "answer" and len(present) >= 5,
-    f"kind={final['kind']}, {len(present)}/6 sections, {len(final.get('answer',''))} chars",
+    "tapping options produces the final answer, with all six headings intact",
+    final["kind"] == "answer" and len(present) == len(headings),
+    f"kind={final['kind']}, {len(present)}/{len(headings)} sections, "
+    f"{len(answer_text)} chars"
+    + (f", MISSING {', '.join(missing)}" if missing else ""),
+)
+check(
+    "no stray bold line invents a seventh section",
+    # answer-sections.tsx opens a card at EVERY whole-line bold, so a label like
+    # **Eat:** left alone on a line becomes a sibling of Food Chart.
+    not [
+        line
+        for line in answer_lines
+        if line.startswith("**") and line.endswith("**") and line not in headings
+    ],
+    ", ".join(
+        line
+        for line in answer_lines
+        if line.startswith("**") and line.endswith("**") and line not in headings
+    )
+    or "none",
 )
 check(
     "answer cites retrieved knowledge",

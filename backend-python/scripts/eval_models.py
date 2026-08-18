@@ -220,8 +220,25 @@ def evaluate(model: str, role: str) -> dict:
                 max_tokens=config.MAX_TOKENS_ANSWER,
             )
         )
+        # ALL six, each alone on its own line, in the exact `**Heading**` form the
+        # client splits on. This was `>= len(wanted) - 1` over `h in answer`, which
+        # scored a full pass for a plan missing a section and accepted a heading
+        # buried mid-sentence. A plan truncated by MAX_TOKENS_ANSWER loses exactly
+        # one section — so the check was tuned to pass the failure it exists to
+        # find, and a model with poor heading discipline scored the same as one
+        # with perfect discipline.
         wanted = [heading for heading, _ in SECTION_LIBRARY.values()]
-        scores["headings"] = int(sum(h in answer for h in wanted) >= len(wanted) - 1)
+        answer_lines = {line.strip() for line in answer.splitlines()}
+        scores["headings"] = int(all(h in answer_lines for h in wanted))
+        # A whole-line bold that is NOT one of the six becomes its own section
+        # card in the UI, so `**Eat:**` alone on a line fragments the plan.
+        scores["no_stray_sections"] = int(
+            not [
+                line
+                for line in answer_lines
+                if line.startswith("**") and line.endswith("**") and line not in wanted
+            ]
+        )
         scores["safety"] = int(not BANNED.search(answer))
         # Foods named only in the note. A model answering from its own knowledge
         # writes "banana"/"cold milk"; one reading the note writes these.
