@@ -212,14 +212,23 @@ check(
 )
 
 # =========================================================================
-# 6. A real complaint still opens the cards
+# 6. A real complaint still starts a consultation
 # =========================================================================
+# This asserted `kind == "intake"` and had been failing since the intake cards
+# were removed - the consultation is a conversation now, so no turn ever returns
+# "intake" again. A permanently red check is worse than no check: it trains
+# everyone to skim past the failure line, which is exactly how the four defects
+# this suite was recently used to hunt stayed invisible.
+#
+# The behaviour actually worth pinning is unchanged and is what the section title
+# always meant: a personal complaint must START A CONSULTATION rather than being
+# answered as chit-chat or as a general knowledge question.
 c = Chat()
 complaint = c.say("mujhe bahut acidity ho rahi hai")
 check(
-    "8a. a personal complaint still opens the intake cards",
-    complaint["kind"] == "intake",
-    f"kind={complaint['kind']}",
+    "8a. a personal complaint starts a consultation",
+    complaint["context"]["phase"] in ("gathering", "completed"),
+    f"kind={complaint['kind']}, phase={complaint['context']['phase']}",
 )
 
 # =========================================================================
@@ -238,9 +247,21 @@ for phrase, want in [
     ("in english please", "english"),
     ("english me batao", "english"),
     ("translate this into english", "english"),
-    ("in easy hindi", "devanagari"),
-    ("ab isko hindi me batao", "devanagari"),
+    # "hindi" resolves by the SCRIPT OF THE REQUEST. Someone typing in Latin
+    # letters who asks for Hindi means Hinglish - Hindi in Latin letters, which
+    # is what this product is built around - and handing them Devanagari gives
+    # them a script they did not ask for and may not read comfortably. These two
+    # asserted "devanagari" until that was changed deliberately; what they are
+    # really guarding is that the phrase is RECOGNISED at all, which is the bug
+    # the `_MOD` pattern was written for.
+    ("in easy hindi", "hinglish"),
+    ("ab isko hindi me batao", "hinglish"),
+    # Asked in Devanagari -> answered in Devanagari.
     ("हिंदी में बताओ", "devanagari"),
+    # Naming the script outright is the escape hatch for a Latin typist who
+    # genuinely wants it, and it outranks the script-of-the-request rule.
+    ("devanagari me likho", "devanagari"),
+    ("देवनागरी में", "devanagari"),
     ("hinglish me likho", "hinglish"),
     # Must stay silent: ordinary sentences are not language requests, and a
     # pattern loose enough to fire here would hijack every other turn.

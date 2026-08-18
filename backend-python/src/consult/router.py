@@ -384,8 +384,11 @@ _LANGUAGE_REQUESTS = (
         ),
     ),
     ("hinglish", re.compile(r"\bhinglish\b", re.I)),
+    # Naming the script outright is unambiguous and outranks everything below.
+    ("devanagari", re.compile(r"\bdevanagari\b|देवनागरी", re.I)),
+    # "hindi" is deliberately NOT resolved here. See `requested_language`.
     (
-        "devanagari",
+        "_hindi",
         re.compile(
             rf"\b(?:in|into|me|mein){_MOD}\s+hindi\b"
             r"|\bhindi\s+(?:me|mein)\b"
@@ -395,6 +398,8 @@ _LANGUAGE_REQUESTS = (
     ),
 )
 
+_DEVANAGARI_CHARS = re.compile(r"[ऀ-ॿ]")
+
 
 def requested_language(text: str) -> str:
     """The language the user explicitly ASKED for, or "" if they did not.
@@ -403,11 +408,28 @@ def requested_language(text: str) -> str:
     happens to be written in. "explain this in English" is written in English but
     the request is what matters, and it must outrank both the detected language
     and whatever the conversation had settled into.
+
+    "HINDI" MEANS THE SCRIPT THEY ARE ALREADY TYPING IN.
+    "hindi me batao" used to resolve to `devanagari` unconditionally, so somebody
+    typing in Latin letters asked for Hindi and got देवनागरी back - a script they
+    may well not read comfortably, and did not ask for. Hindi written in Latin
+    letters is Hinglish, and it is what this product is built around.
+
+    So the script of the REQUEST decides: ask in Devanagari (or name the script
+    outright) and you get Devanagari; ask in Latin and you get Hinglish. Naming
+    "devanagari" is matched before this and always wins, which is the escape
+    hatch for a Latin typist who genuinely wants the script.
+
+    This also matters for length. config.py measures Devanagari at ~2.6x the
+    tokens per character of Latin, so an unwanted script switch was also the
+    fastest way to reach the answer ceiling and get a truncated plan.
     """
     body = text or ""
     for name, pattern in _LANGUAGE_REQUESTS:
         if pattern.search(body):
-            return name
+            if name != "_hindi":
+                return name
+            return "devanagari" if _DEVANAGARI_CHARS.search(body) else "hinglish"
     return ""
 
 
