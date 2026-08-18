@@ -125,6 +125,69 @@ check(
 )
 
 
+# ===========================================================================
+# RULE 2 — herbs are permitted, medicines and doses are not.
+#
+# Rule 2 had NO test coverage at all until this point, and no runtime guard
+# either: it was enforced by prompt text alone. That mattered more once the rule
+# was WIDENED to allow Ayurvedic herbs by name, so the GraphRAG graph's herb
+# relationships could be used. A widened rule with nothing checking it is how a
+# health product ends up naming a drug.
+# ===========================================================================
+for text in [
+    "Ashwagandha stress ke liye madad karta hai",
+    "Triphala churna pachan ke liye acha hai",
+    "Saunf aur jeera ka paani piyein",
+    "Tulsi ki chai lijiye",
+]:
+    check(f"herb is allowed: {text[:34]!r}", safety.names_medicine(text) == "", safety.names_medicine(text))
+
+# Lifestyle numbers are NOT doses. A guard that fires on these would be useless,
+# because it would fire on almost every plan.
+for text in [
+    "20 minutes yoga karein",
+    "8 glass paani piyein",
+    "din me 2 baar karein",
+    "raat ko 7-8 ghante sona zaroori hai",
+]:
+    check(f"lifestyle number is not a dose: {text[:34]!r}", safety.names_medicine(text) == "", safety.names_medicine(text))
+
+for text, expected in [
+    # "antacid" is matched before "tablet" - both are correct catches, and the
+    # function returns the FIRST offending phrase so the log names one thing.
+    ("Ek antacid tablet le lijiye", "antacid"),
+    ("Ek tablet le lijiye khane ke baad", "tablet"),
+    ("Omeprazole subah lijiye", "Omeprazole"),
+    ("Eno le lijiye khane ke baad", "Eno"),
+    ("Ashwagandha 500mg lijiye", "500mg"),
+    ("Triphala 5 gram raat ko", "5 gram"),
+    ("2 teaspoon lijiye khane se pehle", "2 teaspoon"),
+    ("Cough syrup pe lijiye", "syrup"),
+]:
+    found = safety.names_medicine(text)
+    check(
+        f"drug or dose is caught: {text[:34]!r}",
+        found.lower() == expected.lower(),
+        f"got {found!r}, wanted {expected!r}",
+    )
+
+# The prompt and the guard must agree, or one of them is lying.
+from src import prompts  # noqa: E402
+
+check(
+    "rule 2 permits naming herbs",
+    "HERBS YES, MEDICINES NO" in prompts.SYSTEM_RULES,
+)
+check(
+    "rule 2 still forbids a dosage in any units",
+    "give a DOSAGE, strength, quantity or frequency" in prompts.SYSTEM_RULES,
+)
+check(
+    "no prompt still claims medicines of any kind are banned outright",
+    "NO medicines or drugs of any kind" not in prompts.PLAN_PROMPT,
+)
+
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== safety: {passed}/{len(results)} passed =====")
 if passed != len(results):

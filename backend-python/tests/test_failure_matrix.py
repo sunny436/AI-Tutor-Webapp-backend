@@ -325,10 +325,16 @@ try:
 finally:
     httpx.post, config.GRAPHRAG_API_KEY, config.GRAPHRAG_BASE_URL = real_post, real_k, real_b
 
+# This asserted GRAPHRAG_ENABLED is False, which was right while it shipped
+# dormant and is not any more - it was switched on deliberately once the vendor's
+# extractor fix landed and latency came inside the retrieval budget. What still
+# matters, and matters MORE now that it is live, is everything above: a dead,
+# refusing or hanging service must degrade the answer instead of failing the
+# consultation. So this pins the property that made enabling it safe.
 check(
-    "13. and it is STILL DISABLED by default, so none of the above runs in production",
-    config.GRAPHRAG_ENABLED is False,
-    f"GRAPHRAG_ENABLED={config.GRAPHRAG_ENABLED}",
+    "13. GraphRAG is live, and a broken GraphRAG still cannot fail a consultation",
+    config.GRAPHRAG_ENABLED is True,
+    f"GRAPHRAG_ENABLED={config.GRAPHRAG_ENABLED}; checks 9-12 above cover the failure modes",
 )
 
 

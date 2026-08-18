@@ -114,6 +114,102 @@ _SOURCE_KEYS = ("document_name", "filename", "source", "title", "document_id", "
 _SCORE_KEYS = ("score", "relevance", "relevance_score", "similarity")
 
 
+# Relation types observed on the live service, rendered as plain words.
+#
+# NEVER shipped raw. "CONTRAINDICATED_WITH" is database jargon: a Hinglish reader
+# cannot use it, and a model handed it will repeat the token in its prose. The
+# right-hand side is what the sentence should read like once the model puts it in
+# an answer.
+_RELATION_WORDS = {
+    "ALLEVIATES": "helps with",
+    "TREATS": "is used for",
+    "PACIFIES": "calms",
+    "PREVENTS": "helps prevent",
+    "RISK_FACTOR": "raises the risk of",
+    "AGGRAVATES": "makes worse",
+    "SYMPTOM_OF": "is a symptom of",
+    "CONTRAINDICATED_WITH": "should be avoided with",
+    "INTERACTS_WITH": "interacts with",
+    "CONTAINS": "contains",
+    "PART_OF": "is part of",
+    "PREPARED_AS": "is prepared as",
+    "AFFECTS": "affects",
+    "RELATED_TO": "is related to",
+}
+
+# How many relationship lines may reach the prompt. Six passages already come
+# back, and a single response carries ~120 edges -- handing all of them over
+# would drown the curated notes, which grounding rule 9 says must stay the
+# model's FIRST source. Deliberately small; raise it only with a measurement.
+MAX_RELATIONSHIPS = 15
+
+
+def _read_relationships(body: Any, context: str = "") -> list[str]:
+    """Readable "X — verb — Y" lines from the graph, or nothing.
+
+    ⚠ ONLY EDGES WHOSE BOTH ENDPOINTS RESOLVE TO A NAME. Measured against the
+    live service: a response returns 60 entities while its edges reference 71
+    distinct ids, and only 27 of those appear in the same payload. So roughly
+    62% of edges have an end this response cannot name. Emitting them with the
+    raw uuid, or inventing a label, would put an unreadable or invented claim
+    into a health prompt -- dropping them silently is the honest choice.
+
+    ⚠ AND ONLY EDGES THIS CONSULTATION IS ABOUT. The graph slice that comes back
+    is much broader than the query. Observed live: asking about insomnia returned
+    "Banana — helps with — Constipation" and "Vitamin B12 — raises the risk of —
+    Fatigue and Weakness". None of that is wrong, and all of it is noise in a
+    prompt where rule 9 says the curated notes must stay the model's FIRST
+    source. `context` is the query plus the retrieved passage text; an edge is
+    kept only when one of its two names actually appears there.
+
+    Passing no `context` keeps every resolvable edge, which is what the unit
+    tests exercise -- relevance is a separate property from resolvability and is
+    easier to reason about tested apart.
+
+    `weight` is deliberately never shown. It is a retrieval signal, not a fact
+    about the herb, and a number printed beside a health claim reads as a
+    confidence the vendor never offered.
+    """
+    if not isinstance(body, dict):
+        return []
+
+    haystack = (context or "").lower()
+
+    names: dict[str, str] = {}
+    for entity in body.get("entities") or []:
+        if not isinstance(entity, dict):
+            continue
+        entity_id, name = entity.get("entity_id"), entity.get("name")
+        if isinstance(entity_id, str) and isinstance(name, str) and name.strip():
+            names[entity_id] = name.strip()
+
+    lines: list[str] = []
+    seen: set[str] = set()
+    for edge in body.get("edges") or []:
+        if not isinstance(edge, dict):
+            continue
+        source = names.get(edge.get("source_id"))
+        target = names.get(edge.get("target_id"))
+        if not source or not target or source == target:
+            continue
+        verb = _RELATION_WORDS.get(str(edge.get("relation_type") or "").upper())
+        # An unmapped relation type is a vendor change, not something to guess a
+        # wording for. Skipped rather than printed raw.
+        if not verb:
+            continue
+        # On topic, or not at all. See the docstring.
+        if haystack and source.lower() not in haystack and target.lower() not in haystack:
+            continue
+        line = f"{source} — {verb} — {target}"
+        if line in seen:
+            continue
+        seen.add(line)
+        lines.append(line)
+        if len(lines) >= MAX_RELATIONSHIPS:
+            break
+    return lines
+
+
 def _first(source: dict, keys: tuple[str, ...]) -> Any:
     for key in keys:
         value = source.get(key)
@@ -189,18 +285,23 @@ class GraphRagRetriever:
     def __init__(self, enabled: bool = False) -> None:
         self.enabled = enabled
 
-    def _search(self, query: str, project_id: str) -> list[dict]:
+    def _search(self, query: str, project_id: str) -> dict:
         """Blocking HTTP. The caller runs it off the event loop.
 
         Same shape as `retrieval/memory.py::_fetch`, which already does exactly
         this against Convex.
+
+        Returns the WHOLE body, not just the passages, because the graph lives
+        alongside them in `entities` and `edges` and both are needed together --
+        an edge only names entity ids, so it is meaningless without the entity
+        list from the same response.
         """
         import httpx
 
         base = (config.GRAPHRAG_BASE_URL or "").rstrip("/")
         # Unconfigured is not an error -- it means this source is simply off.
         if not base or not config.GRAPHRAG_API_KEY or not project_id:
-            return []
+            return {}
 
         response = httpx.post(
             f"{base}/v1/search",
@@ -218,7 +319,8 @@ class GraphRagRetriever:
             timeout=min(config.RETRIEVAL_TIMEOUT_S, config.GRAPHRAG_TIMEOUT_S),
         )
         response.raise_for_status()
-        return _read_passages(response.json())
+        body = response.json()
+        return body if isinstance(body, dict) else {"chunks": body}
 
     async def retrieve(self, ctx: RetrievalContext) -> RetrievalResult:
         # Per-bot scope on the remote index. See the module docstring.
@@ -233,12 +335,36 @@ class GraphRagRetriever:
         # consultation. Caught here as well so the reason is logged with this
         # retriever's name attached.
         try:
-            passages = await asyncio.to_thread(self._search, query, project_id)
+            body = await asyncio.to_thread(self._search, query, project_id)
+            passages = _read_passages(body) if body else []
         except Exception as error:  # noqa: BLE001
             print(f"[graphrag] search failed: {error}")
             return RetrievalResult(section=self.section, chunks=())
 
         chunks = []
+
+        # The graph, first, as one chunk. This is the reason to use this service
+        # over the local retriever at all: the notes describe conditions, the
+        # graph states relationships between them. Put ahead of the passages so
+        # it survives `dedupe`'s limit rather than being crowded out by prose.
+        # Relevance is judged against what this turn is actually about: the
+        # user's own words plus the passages the service just returned.
+        relationships = _read_relationships(
+            body,
+            context=" ".join(
+                [ctx.query, ctx.problem]
+                + [str(_first(p, _TEXT_KEYS) or "") for p in passages]
+            ),
+        )
+        if relationships:
+            chunks.append(
+                Chunk(
+                    text="Known relationships:\n" + "\n".join(relationships),
+                    source="graphrag:graph",
+                    score=None,
+                    metadata={"project_id": project_id, "edges": len(relationships)},
+                )
+            )
         for passage in passages:
             text = _first(passage, _TEXT_KEYS)
             if not isinstance(text, str) or not text.strip():

@@ -25,7 +25,7 @@ from typing import Callable
 from langchain_core.messages import HumanMessage, SystemMessage
 
 import config
-from src import prompts
+from src import prompts, safety
 from src.consult.sections import SECTION_LIBRARY, render_section_spec
 from src.llm import invoke as llm_invoke
 from src.llm import stream as llm_stream
@@ -110,7 +110,25 @@ async def write_plan(
         return FAILURE_MESSAGE
 
     _warn_if_incomplete(answer, sections, language)
+    _warn_if_medicine(answer)
     return answer
+
+
+def _warn_if_medicine(answer: str) -> None:
+    """Say so in the log when a plan named a drug or gave a dose.
+
+    Rule 2 was widened to permit Ayurvedic herbs by name, and a widened rule needs
+    a way to notice when it has been overshot. `safety.names_medicine` is a
+    keyword backstop, not a filter: it reports and never rewrites, because a regex
+    quietly deleting part of a health answer is a worse failure than the one it
+    would be preventing.
+    """
+    found = safety.names_medicine(answer)
+    if found:
+        print(
+            f"[consult] plan mentions {found!r} - rule 2 permits Ayurvedic herbs "
+            "by name but never a drug, a brand or a dose."
+        )
 
 
 def _warn_if_incomplete(answer: str, sections: list[str], language: str) -> None:

@@ -150,3 +150,54 @@ def scan(*fragments: str) -> bool:
     for the planner's explicit `red_flag` markers rather than the only defence.
     """
     return any(is_emergency(fragment) for fragment in fragments if fragment)
+
+
+# ---------------------------------------------------------------------------
+# RULE 2 BACKSTOP — pharmaceuticals and dosages in a generated answer.
+#
+# Rule 2 in prompts.py was widened to permit Ayurvedic HERBS by name, because the
+# GraphRAG graph's whole value is its herb relationships. That widening needs a
+# guard, and until now rule 2 had NONE: no runtime check, and not one of
+# test_safety.py's checks mentioned a medicine. It was enforced by prompt text
+# alone, which is a instruction to a model, not a property of the system.
+#
+# This is a BACKSTOP, in the same sense `scan` is: keyword matching over
+# model-written text is best-effort. It reports; it does not rewrite or block. A
+# regex must never silently delete part of a health answer, and a false positive
+# on "20 minutes of yoga" would do exactly that if it were allowed to.
+# ---------------------------------------------------------------------------
+import re as _re
+
+# Pharmaceutical forms, common OTC drug names and brands. NOT herbs: Ashwagandha,
+# Triphala, Tulsi and the rest are deliberately absent, since naming those is now
+# permitted.
+_DRUG_WORDS = _re.compile(
+    r"\b(tablet|tablets|capsule|capsules|syrup|injection|antacid|antibiotic|"
+    r"omeprazole|pantoprazole|ranitidine|paracetamol|ibuprofen|metformin|"
+    r"eno|gelusil|digene|crocin|dolo)\b",
+    _re.IGNORECASE,
+)
+
+# A quantity attached to a substance. Time and counts are deliberately excluded -
+# "20 minutes", "8 glasses of water" and "2 times a day" are lifestyle guidance,
+# not a dose. What is caught is a MASS or VOLUME, which is only ever a dosage.
+_DOSAGE = _re.compile(
+    r"\b\d+(?:\.\d+)?\s*(mg|mcg|ml|gram|grams|gm|g)\b"
+    r"|\b\d+\s*(?:x|times)?\s*(?:tablet|capsule|tsp|teaspoon|tablespoon|tbsp)s?\b",
+    _re.IGNORECASE,
+)
+
+
+def names_medicine(text: str) -> str:
+    """The first drug name or dosage found in `text`, or "" if it is clean.
+
+    Returns the offending phrase rather than a bool so the caller can log what
+    was actually said - "it named something" is not actionable, "it said 500mg"
+    is.
+    """
+    body = text or ""
+    for pattern in (_DRUG_WORDS, _DOSAGE):
+        found = pattern.search(body)
+        if found:
+            return found.group(0)
+    return ""

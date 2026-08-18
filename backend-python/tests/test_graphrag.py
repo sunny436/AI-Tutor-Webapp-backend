@@ -37,7 +37,13 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 import config  # noqa: E402
 from src.bots import BotConfig, get_bot  # noqa: E402
 from src.retrieval.base import RetrievalContext  # noqa: E402
-from src.retrieval.graphrag import GraphRagRetriever, _read_passages, english_handle  # noqa: E402
+from src.retrieval.graphrag import (  # noqa: E402
+    MAX_RELATIONSHIPS,
+    GraphRagRetriever,
+    _read_passages,
+    _read_relationships,
+    english_handle,
+)
 
 results: list[tuple[str, bool, str]] = []
 
@@ -198,10 +204,17 @@ from src.retrieval.registry import RETRIEVERS  # noqa: E402
 registered = [r for r in RETRIEVERS if r.name == "graphrag"]
 check("registered in the pipeline", len(registered) == 1)
 check("order 45: after uploaded reports (40), before curated notes (50)", registered[0].order == 45)
+# This asserted `enabled is False` while GraphRAG shipped dormant. Both blockers
+# that justified that have since been measured away: the vendor's extractor fix
+# landed (0 bare MENTIONS edges, correct direction) and latency came down from
+# 2.43-7.28s to 0.45-1.52s, inside the 3.0s budget. Enabling it was an explicit
+# decision, so what is pinned now is that the switch and the registration agree -
+# a retriever registered as enabled while the flag says otherwise, or the
+# reverse, is the confusing state worth catching.
 check(
-    "SHIPS DORMANT — disabled, because GRAPHRAG_ENABLED defaults to 0",
-    registered[0].enabled is False and config.GRAPHRAG_ENABLED is False,
-    f"enabled={registered[0].enabled}",
+    "the registry and the flag agree on whether this runs",
+    registered[0].enabled == config.GRAPHRAG_ENABLED,
+    f"registered={registered[0].enabled}, GRAPHRAG_ENABLED={config.GRAPHRAG_ENABLED}",
 )
 
 
@@ -240,6 +253,71 @@ check(
 check(
     "an unmatched query is passed through untouched",
     english_handle("qwertyuiop zxcvbnm", "ayurveda_yoga") == "qwertyuiop zxcvbnm",
+)
+
+
+# ===========================================================================
+# THE GRAPH. Measured against the live service: a response returns 60 entities
+# while its edges reference 71 distinct ids, and only 27 of those appear in the
+# same payload. So ~62% of edges have an end this response cannot name, and how
+# those are handled is the whole correctness question here.
+# ===========================================================================
+GRAPH_BODY = {
+    "entities": [
+        {"entity_id": "e1", "name": "Triphala", "entity_type": "Herb"},
+        {"entity_id": "e2", "name": "Constipation", "entity_type": "Condition"},
+        {"entity_id": "e3", "name": "Ashwagandha", "entity_type": "Herb"},
+        {"entity_id": "e4", "name": "Pregnancy", "entity_type": "Condition"},
+    ],
+    "edges": [
+        {"source_id": "e1", "target_id": "e2", "relation_type": "ALLEVIATES", "weight": 0.91},
+        {"source_id": "e3", "target_id": "e4", "relation_type": "CONTRAINDICATED_WITH", "weight": 0.95},
+        {"source_id": "e1", "target_id": "unresolved-uuid", "relation_type": "CONTAINS"},
+        {"source_id": "another-uuid", "target_id": "e2", "relation_type": "TREATS"},
+        {"source_id": "e1", "target_id": "e2", "relation_type": "ALLEVIATES"},
+        {"source_id": "e1", "target_id": "e2", "relation_type": "VENDOR_ADDED_THIS_LATER"},
+        {"source_id": "e1", "target_id": "e1", "relation_type": "RELATED_TO"},
+    ],
+}
+lines = _read_relationships(GRAPH_BODY)
+joined = "\n".join(lines)
+
+check("both-ends-resolvable edges are rendered", len(lines) == 2, f"{len(lines)}: {lines}")
+check(
+    "an unresolvable endpoint is DROPPED, never printed as a uuid",
+    "unresolved-uuid" not in joined and "another-uuid" not in joined,
+    joined,
+)
+check(
+    "relation types are plain words, never raw database tokens",
+    "CONTRAINDICATED_WITH" not in joined and "should be avoided with" in joined,
+    joined,
+)
+check("a duplicate edge appears once", joined.count("Triphala — helps with — Constipation") == 1)
+check("an unmapped relation type is skipped rather than guessed at", "VENDOR_ADDED" not in joined)
+check("a self-referencing edge is skipped", "Triphala — is related to — Triphala" not in joined)
+check(
+    "weight never reaches the prompt",
+    "0.91" not in joined and "0.95" not in joined,
+    joined,
+)
+check("no graph at all yields nothing, not an error", _read_relationships({}) == [])
+check("a non-dict body yields nothing", _read_relationships(None) == [])
+check(
+    "the number of relationship lines is capped",
+    len(
+        _read_relationships(
+            {
+                "entities": [{"entity_id": f"n{i}", "name": f"Herb{i}"} for i in range(200)],
+                "edges": [
+                    {"source_id": f"n{i}", "target_id": f"n{i + 1}", "relation_type": "ALLEVIATES"}
+                    for i in range(199)
+                ],
+            }
+        )
+    )
+    == MAX_RELATIONSHIPS,
+    f"cap is {MAX_RELATIONSHIPS}",
 )
 
 
