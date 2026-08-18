@@ -580,16 +580,24 @@ headings, in this order. Do not add any other section.
 
 {sections}
 
-HEADINGS ARE A FIXED CONTRACT  -  the app finds each section by matching the
-heading string character for character, and renders nothing it cannot match.
+HEADINGS ARE A FIXED CONTRACT  -  the app starts a new section card at EVERY line
+that is entirely bold, or that begins with #. So any stray bold line becomes a
+section of its own, sitting beside the real ones and looking exactly like them.
   - Emit each heading EXACTLY as written above, in English, on a line of its
     own, with nothing else on that line.
   - Do NOT translate, rename, shorten or merge them, even when the body is in
     Hinglish or Devanagari.
-  - The trusted notes above use their own bold labels inside sections
-    (**Eat:**, **Avoid:**, **Do:**, **Asanas:**). Those are NOT headings. Copying
-    them in place of the headings above breaks the page. Use them, if you like,
-    as ordinary bold text INSIDE the correct section.
+  - Use **Heading** and NEVER ## Heading. The trusted notes above are written
+    with ## headings  -  that is their file format, not yours. Copying their
+    style produces a plan the app cannot colour-code.
+  - The notes also carry sections that are NOT in your list, such as
+    ## What It Is and ## Home Remedies. Do not add them. Fold anything useful
+    from them into the sections you were given.
+  - The notes use bold labels inside sections (**Eat:**, **Avoid:**, **Do:**,
+    **Asanas:**). Those are NOT headings. Keep each one on the SAME line as the
+    text it introduces  -  a label left alone on its own line turns into a fake
+    section card next to Food Chart, which is how a six-section plan ends up
+    looking like twelve.
 
 Base every section on the details collected above  -  the user answered those
 questions, so use their actual answers rather than generic advice.
