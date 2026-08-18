@@ -58,6 +58,7 @@ naming the keys it actually received rather than returning a quiet empty list.
 from __future__ import annotations
 
 import asyncio
+import time
 from pathlib import Path
 from typing import Any
 
@@ -315,6 +316,28 @@ def english_handle(query: str, collection: str) -> str:
     return f"{terms} — {query}" if terms else query
 
 
+# Health signal for the sole remaining grounding source.
+#
+# Every failure mode of this retriever - timeout, 401, 5xx, DNS, an unrecognised
+# response shape - produces the identical `RetrievalResult(chunks=())` and an
+# HTTP 200 to the user. Before the cutover that meant a slightly thinner answer,
+# because local Chroma still answered. Now it means the turn had NO grounding at
+# all, and nothing anywhere says so. These two numbers are what `/health` reports
+# so a regression is visible without reading logs.
+LAST_SUCCESS_AT: float | None = None
+CONSECUTIVE_FAILURES = 0
+
+
+def health() -> dict:
+    """What `/health` publishes about this retriever. No secrets, no URLs."""
+    return {
+        "last_success_age_s": (
+            None if LAST_SUCCESS_AT is None else round(time.monotonic() - LAST_SUCCESS_AT, 1)
+        ),
+        "consecutive_failures": CONSECUTIVE_FAILURES,
+    }
+
+
 class GraphRagRetriever:
     name = "graphrag"
     # Becomes the prompt heading. Named for what it IS to the reader, not for the
@@ -388,8 +411,17 @@ class GraphRagRetriever:
             # scoring 0.1251 reached the prompt labelled "Reference documents".
             passages = _top_document_only(_read_passages(body)) if body else []
         except Exception as error:  # noqa: BLE001
-            print(f"[graphrag] search failed: {error}")
+            global CONSECUTIVE_FAILURES
+            CONSECUTIVE_FAILURES += 1
+            print(
+                f"[graphrag] search failed ({CONSECUTIVE_FAILURES} in a row): {error}. "
+                "This turn has NO Ayurveda grounding."
+            )
             return RetrievalResult(section=self.section, chunks=())
+
+        global LAST_SUCCESS_AT
+        LAST_SUCCESS_AT = time.monotonic()
+        CONSECUTIVE_FAILURES = 0
 
         chunks = []
 

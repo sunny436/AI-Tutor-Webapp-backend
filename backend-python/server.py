@@ -52,9 +52,15 @@ from src.documents import extract_text
 # Fixed here rather than at each print site: there are dozens, they all handle
 # user text, and any one added later would reintroduce it. `errors="replace"`
 # guarantees logging can never again take a request down, whatever arrives.
+#
+# `line_buffering=True` for the same class of reason. Production launches this
+# with Start-Process and a redirected stdout, which Python then block-buffers in
+# 8 KB chunks -- so a print() written during an incident can sit unwritten and
+# land in the log long after the thing it was meant to explain. Diagnostics that
+# arrive late are diagnostics you do not have.
 for _stream in (sys.stdout, sys.stderr):
     try:
-        _stream.reconfigure(encoding="utf-8", errors="replace")
+        _stream.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
     except (AttributeError, ValueError):  # already wrapped, or not reconfigurable
         pass
 
@@ -639,7 +645,14 @@ def health():
     head = chain[0] if chain else ""
     provider, model = split_provider(head) if head else (config.LLM_PROVIDER, "")
 
+    # The sole grounding source's health. Every failure mode of that retriever
+    # looks identical downstream -- empty chunks and an HTTP 200 -- so without
+    # this an outage of the authoritative knowledge source stays invisible until
+    # somebody notices the answers went vague.
+    from src.retrieval import graphrag as _graphrag
+
     payload = {
+        "graphrag": _graphrag.health(),
         "ok": True,
         "llm_ready": config.is_llm_ready(),
         "provider": provider,
