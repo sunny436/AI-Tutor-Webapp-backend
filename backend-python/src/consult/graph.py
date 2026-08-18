@@ -325,6 +325,23 @@ async def run_turn(
                     context=context,
                 )
 
+        # RED FLAGS ARE CHECKED BEFORE ANY ANSWERING PATH, not after.
+        #
+        # Everything below this line can answer and return: the fast path at the
+        # next statement, the conversational intents, and the knowledge answer.
+        # None of them reached `safety.scan`, which only ran further down once a
+        # consultation had already begun. So a question phrased as a QUESTION
+        # rather than a complaint - "blood in stool me kya khana chahiye",
+        # "seene me dard ke liye kya khaye" - matched the alias index, took the
+        # fast path, and was answered with a food chart. The words that should
+        # have escalated were the very words that made it look answerable.
+        #
+        # Scanning the message alone here, not the transcript: at this point the
+        # user has typed one line outside any consultation, and the whole-
+        # transcript scan further down still runs for everything after that.
+        if safety.scan(message):
+            return _escalate(context, "red-flag keyword")
+
         # Fast path: the alias index already named a topic and the wording is a
         # question, not "mujhe X hai". That is exactly what the classifier would
         # answer, so asking it costs ~2.5s of the user's wait for a verdict we
