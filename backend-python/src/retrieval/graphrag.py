@@ -97,16 +97,15 @@ _LIST_KEYS = ("chunks", "results", "passages", "matches", "hits", "documents", "
 # than guesses. The alternatives stay as fallbacks for the same reason as above.
 _TEXT_KEYS = ("text", "content", "passage", "chunk", "page_content", "body", "snippet")
 
-# ⚠ THE ONLY IDENTIFIER RETURNED IS `document_id`, AND IT IS A UUID.
+# CONFIRMED 2026-08-19: the vendor returns `filename`, holding the real note name
+# ("constipation.md"), alongside `document_id` ("doc:<uuid>"). An earlier note
+# here said document_id was the ONLY identifier and that citations were therefore
+# unreadable uuids -- that is no longer true, and `filename` sits second in this
+# tuple so it is what a citation actually shows.
 #
-# There is no filename and no title, so a citation reads
-# "graphrag:doc:b2522dcf-82d2-4173-821b-3756e91b1cf0" rather than something a
-# person could look up. It is kept anyway: it is stable, it is what the vendor's
-# delete/retry endpoints take, and it makes a retrieved passage traceable back to
-# an upload when debugging. But nothing here should be shown to a reader as-is.
-#
-# Restoring a human-readable name would mean keeping an id->filename map at upload
-# time. Not built, because per-answer citations are not currently displayed.
+# `document_id` is kept in the list behind it: it is stable, it is what the
+# vendor's delete/retry endpoints take, and it is the fallback if `filename` ever
+# stops being sent.
 _SOURCE_KEYS = ("document_name", "filename", "source", "title", "document_id", "id")
 
 # `score` confirmed. Note it is NOT on the same scale as the local retriever's
