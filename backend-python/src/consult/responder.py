@@ -26,7 +26,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 import config
 from src import prompts
-from src.consult.sections import render_section_spec
+from src.consult.sections import SECTION_LIBRARY, render_section_spec
 from src.llm import invoke as llm_invoke
 from src.llm import stream as llm_stream
 
@@ -102,12 +102,48 @@ async def write_plan(
     could come back in the wrong language after a flawless English intake.
     """
     try:
-        return await asyncio.to_thread(
+        answer = await asyncio.to_thread(
             _write_plan_sync, knowledge, profile, details, sections, language
         )
     except Exception as error:  # noqa: BLE001
         print(f"[consult] plan generation failed: {error}")
         return FAILURE_MESSAGE
+
+    _warn_if_incomplete(answer, sections, language)
+    return answer
+
+
+def _warn_if_incomplete(answer: str, sections: list[str], language: str) -> None:
+    """Say so in the log when a plan came back missing its last section.
+
+    A plan that overruns `MAX_TOKENS_ANSWER` stops mid-sentence and is returned
+    with no error at all, so the failure is invisible: the user gets a plan that
+    simply ends, and nothing upstream can tell that from a short answer.
+
+    The section lost first is the LAST one, and `sections.ALWAYS_INCLUDED` exists
+    precisely so that one - "When To See A Doctor" - can never be dropped. A
+    silent truncation defeats that guarantee, which is why this warns rather than
+    staying quiet about a merely cosmetic problem.
+
+    Deliberately a log line and not an exception: a truncated plan is still worth
+    more to the reader than a failure message, and `graph.py` has no better
+    answer to substitute. This exists so the problem is discoverable, not so it
+    can be handled.
+    """
+    if not answer or answer == FAILURE_MESSAGE:
+        return
+    expected = [SECTION_LIBRARY[s][0] for s in sections if s in SECTION_LIBRARY]
+    if not expected:
+        return
+    lines = {line.strip() for line in answer.splitlines()}
+    missing = [heading for heading in expected if heading not in lines]
+    if missing:
+        print(
+            f"[consult] plan is missing {len(missing)}/{len(expected)} headings "
+            f"({', '.join(missing)}) - language={language or 'unset'}, "
+            f"{len(answer)} chars. Suspect MAX_TOKENS_ANSWER "
+            f"({config.MAX_TOKENS_ANSWER}) if the text also ends mid-sentence."
+        )
 
 
 def _rework_sync(previous: str, request: str, language: str) -> str:

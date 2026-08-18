@@ -171,7 +171,28 @@ MAX_TOKENS_ROUTER = int(_get("MAX_TOKENS_ROUTER", "800"))
 # Devanagari, which currently pays for 1200 truncated tokens and then discards
 # them. 2000 leaves room for a longer form without being a runaway.
 MAX_TOKENS_PLANNER = int(_get("MAX_TOKENS_PLANNER", "2000"))
-MAX_TOKENS_ANSWER = int(_get("MAX_TOKENS_ANSWER", "1600"))
+
+# The answer cap was left at 1600 when the planner's went up, and the reasoning
+# above applies to it MORE, not less. Measured by tokenising the 29 real notes -
+# same language, same domain, same section structure as a plan, and literally the
+# material a plan is written from:
+#
+#     chars per token, Hinglish (Latin)     2.76
+#     chars per token, Devanagari           1.05      <- 2.6x more expensive
+#     the 29 notes            min 1132 / avg 1501 / max 2002 tokens
+#
+# So the AVERAGE note only just fits under 1600 and the largest does not fit at
+# all - in the cheap script. The 1.34x the planner measured was a JSON form,
+# mostly English keys with Devanagari only in the values; a plan is almost
+# entirely prose in the target script, so it pays the full ratio.
+#
+# Honest caveat: measured with cl100k_base, which is not the tokenizer
+# deepseek/gemini/llama use, and observed plans currently run 2180-2949 chars
+# (~800-1070 tokens) without truncating. So this is headroom, not a fix for a
+# reproducing failure - `responder._warn_if_incomplete` is what will actually
+# tell us if the ceiling ever bites. Raising it costs nothing either way:
+# max_tokens is a ceiling, not a reservation.
+MAX_TOKENS_ANSWER = int(_get("MAX_TOKENS_ANSWER", "4000"))
 LLM_TIMEOUT_SECONDS = float(_get("LLM_TIMEOUT_SECONDS", "60"))
 
 # ---- Ayurveda/Yoga knowledge search (RAG) ----
