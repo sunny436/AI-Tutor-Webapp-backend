@@ -44,7 +44,7 @@ RETRIEVERS: list[Retriever] = [
     # Retrieval only; the vendor's /v1/answer is never called, because a second
     # unaudited model writing health text would bypass every rule in prompts.py.
     GraphRagRetriever(enabled=config.GRAPHRAG_ENABLED),
-    KnowledgeRetriever(enabled=True),
+    KnowledgeRetriever(enabled=config.LOCAL_RAG_ENABLED),
 ]
 
 _pipeline: RetrievalPipeline | None = None

@@ -232,6 +232,18 @@ REPORT_MIN_RELEVANCE = float(_get("REPORT_MIN_RELEVANCE", "0.30"))
 # need a cap so a wedged source cannot hold up the whole consultation.
 RETRIEVAL_TIMEOUT_S = float(_get("RETRIEVAL_TIMEOUT_S", "3.0"))
 
+# Is the LOCAL Chroma retriever allowed to ground an answer?
+#
+# GraphRAG is the authoritative Ayurveda source. This flag exists so that is a
+# CONFIG decision with a config rollback, not a code deploy: production sets 0,
+# and if GraphRAG regresses, setting 1 and restarting restores full local
+# grounding in one line, with the vector store still on disk untouched.
+#
+# Default is 1, not 0, on purpose. A fresh checkout or a dev machine without the
+# vendor credential must not silently answer with zero grounding - it should
+# behave the way this repo always did, and production opts out explicitly.
+LOCAL_RAG_ENABLED = _get("LOCAL_RAG_ENABLED", "1") == "1"
+
 # No reranker ships today. Declared so the pipeline has a documented switch
 # rather than the capability being invisible; a cross-encoder on a CPU-only host
 # costs more latency than the relevance it buys on a corpus this size.
