@@ -125,7 +125,7 @@ check(
   if (!dir) {
     console.log("SKIP  committed JSON matches the notes - no notes in this repository");
   } else {
-    const rebuilt = JSON.stringify(buildNotes(dir), null, 2) + "\n";
+    const rebuilt = `${JSON.stringify(buildNotes(dir), null, 2)}\n`;
     // Resolved from THIS MODULE, never process.cwd(): the suite is run both from
     // the repo root and from apps/app, and a cwd-relative path silently reads a
     // file that does not exist — which reports as "stale" rather than as a broken
