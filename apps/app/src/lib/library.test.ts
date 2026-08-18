@@ -1,12 +1,22 @@
 /**
- * The published knowledge base, checked against the real notes.
+ * The published knowledge base, and the guard that keeps it honest.
  *
  *   bun apps/app/src/lib/library.test.ts
  *
- * Reads `backend-python/data/knowledge/` — the same files the retriever searches
- * and cites. That is the point: if this suite passes but the pages are empty,
- * the path is wrong, and an empty Library is indistinguishable from a deploy
- * that shipped nothing to rank.
+ * The pages now read a COMMITTED JSON file rather than the notes on disk, so that
+ * the frontend can build in a repository containing no Python. That trade is only
+ * safe if the JSON cannot silently fall behind the notes it was generated from —
+ * the filename is the citation identifier, so a page and the note an answer cites
+ * have to stay the same document.
+ *
+ * The last check below is what buys that: it regenerates from
+ * `backend-python/data/knowledge/` and fails if the committed file differs. Drift
+ * becomes a failing test and a visible diff instead of a page that disagrees with
+ * the answer that cited it.
+ *
+ * In a repository with no notes present, that one check is skipped and reported as
+ * skipped — there is nothing to compare against, and pretending otherwise would be
+ * a green tick that means nothing.
  */
 
 import { allNotes, doctorSection, metaDescription, noteBySlug } from "./library";
@@ -94,6 +104,43 @@ check(
   "notes are ordered for the index",
   notes.every((n, i) => i === 0 || (notes[i - 1]?.topic ?? "") <= n.topic),
 );
+
+// --- the drift guard ---------------------------------------------------------
+{
+  const { buildNotes } = await import("../../scripts/generate-library.mjs");
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const { fileURLToPath } = await import("node:url");
+
+  let dir: string | null = null;
+  let probe = process.cwd();
+  for (let i = 0; i < 6; i += 1) {
+    const candidate = path.join(probe, "backend-python", "data", "knowledge");
+    if (fs.existsSync(candidate)) { dir = candidate; break; }
+    const parent = path.dirname(probe);
+    if (parent === probe) break;
+    probe = parent;
+  }
+
+  if (!dir) {
+    console.log("SKIP  committed JSON matches the notes - no notes in this repository");
+  } else {
+    const rebuilt = JSON.stringify(buildNotes(dir), null, 2) + "\n";
+    // Resolved from THIS MODULE, never process.cwd(): the suite is run both from
+    // the repo root and from apps/app, and a cwd-relative path silently reads a
+    // file that does not exist — which reports as "stale" rather than as a broken
+    // test path. That exact mistake is why library.ts walks up instead of guessing.
+    const committedPath = fileURLToPath(new URL("../content/library.json", import.meta.url));
+    const committed = fs.existsSync(committedPath)
+      ? fs.readFileSync(committedPath, "utf8")
+      : "";
+    check(
+      "committed library.json still matches the notes on disk",
+      rebuilt === committed,
+      rebuilt === committed ? "" : "stale - run: bun run library:generate",
+    );
+  }
+}
 
 const passed = results.filter(([, ok]) => ok).length;
 console.log(`\n===== library: ${passed}/${results.length} passed =====`);
