@@ -32,8 +32,8 @@ three:
 Written as plain async orchestration rather than a compiled StateGraph: the
 branches are short, the state is a Pydantic model rather than a merge-able dict,
 and every step is async I/O. A graph object would add indirection without buying
-routing we need. The old `src/graph.py` is untouched - `/chat` and `/jobs/run`
-still depend on it.
+routing we need. The old `src/graph.py` LangGraph flow has been deleted; this is
+now the only orchestration, and `/jobs/run` calls it too.
 """
 
 from __future__ import annotations

@@ -378,16 +378,3 @@ def search_knowledge_docs(query: str, k: int = 4, collection: str | None = None)
         return []
 
 
-def search_knowledge(query: str, k: int = 4, collection: str | None = None) -> str:
-    """Find the top-k relevant Ayurveda/Yoga notes for a question."""
-    try:
-        results = get_vector_store(collection).similarity_search(query, k=k)
-        if not results:
-            return ""
-        chunks = []
-        for i, doc in enumerate(results, start=1):
-            source = doc.metadata.get("source", "knowledge")
-            chunks.append(f"[Note {i} - from {source}]\n{doc.page_content}")
-        return "\n\n".join(chunks)
-    except Exception:
-        return ""

@@ -6,7 +6,7 @@ The Python AI backend (FastAPI). It does two jobs:
 A) Answers consultations for the dashboard
    - GET  /            -> says what this host is; it used to serve a public chat
                           page, which was removed once /chat required a login
-   - POST /consult     -> one turn of the card-driven consultation
+   - POST /consult     -> one turn of the consultation (also /consult/stream)
    - POST /chat        -> the older single-shot flow, signed-in callers only
    - POST /upload      -> read text from an uploaded report (PDF/image)
 
@@ -32,7 +32,6 @@ from fastapi.responses import HTMLResponse, StreamingResponse
 
 import config
 from src.consult import run_turn as run_consult_turn
-from src.graph import run_consult
 from src.documents import extract_text
 
 # Make the logs UTF-8 before anything can write to them.
@@ -318,54 +317,6 @@ def home():
     )
 
 
-@app.post("/chat")
-async def chat(
-    request: Request,
-    authorization: str = Header(default=""),
-    x_service_key: str = Header(default=""),
-):
-    """
-    Run ONE turn of the LEGACY Ayurveda/Yoga flow and return the result directly.
-    Kept for `frontend/index.html`; the dashboard now uses POST /consult.
-
-    SIGNED-IN CALLERS ONLY — and that was missing, which made this the one hole
-    in an otherwise closed backend.
-
-    Every other AI route already called `require_user`. This one did not, and
-    the backend is published at ayur-api.namahos.com, so it was an open,
-    anonymous, internet-reachable endpoint onto the model chain. Verified from
-    the public hostname with no credentials at all:
-
-        POST https://ayur-api.namahos.com/chat {"problem":"...","followups":99}
-        -> 200, a full generated plan, billed to our OpenRouter balance
-
-    Anyone who found the URL could spend the AI budget, which is precisely the
-    "credit khatam" failure this project has been working to make impossible —
-    and no chain ordering or fallback can defend against it, because the
-    requests are legitimate as far as the model is concerned.
-
-    Nothing in the product calls this route (the dashboard uses /consult), so
-    requiring a caller to be signed in costs no working functionality.
-
-    `run_consult` is fully synchronous (LangGraph -> LangChain -> blocking HTTP to
-    Groq, plus blocking Chroma/sentence-transformers), so it must be pushed to a
-    worker thread. Calling it inline froze the whole event loop for the duration
-    of every consult, stalling all other requests.
-    """
-    require_user(authorization, x_service_key)
-
-    data = await request.json()
-    problem = data.get("problem", "")
-    profile = data.get("profile", "")
-    history = data.get("history", "")
-    followups = int(data.get("followups", 0))
-    document_text = data.get("document_text", "")
-
-    if document_text:
-        profile = f"{profile}\n\nInfo from uploaded documents:\n{document_text}"
-
-    result = await asyncio.to_thread(run_consult, problem, profile, history, followups)
-    return result  # {kind, answer, knowledge_used}
 
 
 
@@ -780,32 +731,50 @@ async def extract(request: Request, x_service_key: str = Header(default="")):
 
 @app.post("/jobs/run")
 async def jobs_run(request: Request, x_service_key: str = Header(default="")):
+    """Convex hands us a consultation job; we answer and webhook the result back.
+
+    Repointed from the legacy LangGraph flow to the same `run_turn` the website
+    uses. That flow called `search_knowledge` directly -- raw local Chroma, no
+    pipeline, no GraphRAG -- so any traffic through here made "GraphRAG is the
+    authoritative source" false for a whole class of requests.
+    """
     _check_service_key(x_service_key)
     body = await request.json()
     job_id = body.get("jobId")
     data = body.get("input", {}) or {}
     problem = data.get("problem", "")
     profile = data.get("profile", "")
-    history = data.get("history", "")
-    followups = int(data.get("followups", 0))
     document_text = data.get("document_text", "")
     if document_text:
         profile = f"{profile}\n\nInfo from uploaded documents:\n{document_text}"
 
     try:
-        # Same blocking-call reasoning as /chat above.
-        result = await asyncio.to_thread(run_consult, problem, profile, history, followups)
+        result = await run_consult_turn(
+            problem=problem,
+            raw_context=None,
+            answers=None,
+            free_text=None,
+            profile=profile,
+        )
     except Exception as e:
         await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": str(e)})
         return {"accepted": True, "jobId": job_id}
 
+    # Built FIELD BY FIELD, never `result.model_dump()`. The Convex `jobs` table
+    # accepts `v.any()` for this payload, so a dump would silently write the
+    # entire ConsultContext -- including chat_history -- into a table nobody
+    # expects to hold conversation text.
+    #
+    # `knowledge_used` is kept because the legacy result carried it and the
+    # Convex side may read it; ConsultResult has no equivalent, so it is empty
+    # rather than invented.
     await _post_webhook({
         "type": "job.result",
         "jobId": job_id,
         "result": {
-            "kind": result["kind"],
-            "answer": result["answer"],
-            "knowledge_used": result["knowledge_used"],
+            "kind": result.kind,
+            "answer": result.answer,
+            "knowledge_used": "",
         },
     })
     return {"accepted": True, "jobId": job_id}

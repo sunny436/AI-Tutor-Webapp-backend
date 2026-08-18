@@ -7,7 +7,7 @@ Ayurveda/Yoga notes in `data/knowledge/`, via ChromaDB and a local
 
 This is the vector-search stage of the target pipeline. It wraps the existing
 `src/knowledge.py` rather than replacing it, because the legacy /chat path still
-calls `search_knowledge` directly.
+calls it directly.
 
 TWO WAYS IN, BECAUSE VECTORS ALONE ARE NOT ENOUGH
 Retrieval runs the author-written alias index FIRST, and only falls back to pure
