@@ -60,17 +60,22 @@ def check(name: str, ok: bool, detail: str = "") -> None:
 
 
 # --- INVENTED fixtures. See the module docstring. ---------------------------
+#
+# The document name is "common-herbs.md" rather than an arbitrary one because the
+# coverage gate now requires the alias index's claim to be CORROBORATED by what
+# came back. These fixtures exist to prove SHAPE MAPPING, so they must not also
+# be fighting the gate - the gate has its own three checks further down.
 SHAPES = {
     "results/text/document_name": {
-        "results": [{"text": "Ashwagandha is a rasayana.", "document_name": "charaka.pdf", "score": 0.81}]
+        "results": [{"text": "Ashwagandha is a rasayana.", "document_name": "common-herbs.md", "score": 0.81}]
     },
     "passages/content/source": {
-        "passages": [{"content": "Ashwagandha is a rasayana.", "source": "charaka.pdf", "relevance": 0.81}]
+        "passages": [{"content": "Ashwagandha is a rasayana.", "source": "common-herbs.md", "relevance": 0.81}]
     },
     "data-wrapped": {
-        "data": {"chunks": [{"passage": "Ashwagandha is a rasayana.", "title": "charaka.pdf"}]}
+        "data": {"chunks": [{"passage": "Ashwagandha is a rasayana.", "title": "common-herbs.md"}]}
     },
-    "bare array": [{"text": "Ashwagandha is a rasayana.", "filename": "charaka.pdf"}],
+    "bare array": [{"text": "Ashwagandha is a rasayana.", "filename": "common-herbs.md"}],
 }
 
 
@@ -124,7 +129,7 @@ for label, payload in SHAPES.items():
 result = run_retrieve(SHAPES["results/text/document_name"])
 check(
     "namespaces the citation so the UI can group it",
-    result.chunks[0].source == "graphrag:charaka.pdf",
+    result.chunks[0].source == "graphrag:common-herbs.md",
     result.chunks[0].source,
 )
 check("carries the score when one is offered", result.chunks[0].score == 0.81, str(result.chunks[0].score))
@@ -376,8 +381,8 @@ _HI = config.GRAPHRAG_MIN_RELEVANCE + 0.10
 _LO = config.GRAPHRAG_MIN_RELEVANCE - 0.10
 
 
-def _scored(score):
-    return {"chunks": [{"text": "passage", "document_name": "a.md", "score": score}]}
+def _scored(score, name="a.md"):
+    return {"chunks": [{"text": "passage", "document_name": name, "score": score}]}
 
 
 # No alias claim is possible for gibberish, so only the score can carry it.
@@ -395,11 +400,22 @@ check(
     f"{len(result.chunks)} chunks",
 )
 
-# A real covered topic claims an alias, so a LOW score must still pass.
-result = run_retrieve(_scored(_LO), query="mujhe gas ho rahi hai")
+# A CORROBORATED claim carries a low score: the alias index named gas-bloating.md
+# and that is what came back, so the two agree and the score does not have to.
+result = run_retrieve(_scored(_LO, "gas-bloating.md"), query="mujhe gas ho rahi hai")
 check(
-    "an alias claim carries a low score through",
+    "a corroborated alias claim carries a low score through",
     not result.is_empty,
+    f"{len(result.chunks)} chunks",
+)
+
+# ...but a claim the RESPONSE CONTRADICTS must not. This is the fail-open bug:
+# gating on the claim alone made the score floor a no-op for every query the
+# alias index recognised, which is most real ones.
+result = run_retrieve(_scored(_LO, "joint-pain.md"), query="mujhe gas ho rahi hai")
+check(
+    "an alias claim the response contradicts does NOT carry a low score",
+    result.is_empty,
     f"{len(result.chunks)} chunks",
 )
 

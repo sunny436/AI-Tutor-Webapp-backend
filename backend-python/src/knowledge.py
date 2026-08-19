@@ -232,11 +232,29 @@ def _get_index(collection: str | None = None) -> _TopicIndex:
             phrases = [_tokens(part) for part in f"{topic},{aliases}".split(",")]
             built.phrases[source] = [p for p in phrases if p]
     except Exception as error:
-        print(f"[knowledge] could not build topic index for {name!r}: {error}")
+        # DO NOT CACHE A FAILURE. This used to fall through and store the empty
+        # index for the process lifetime, so one transient Chroma error at
+        # startup left `match_topics` returning nothing forever.
+        #
+        # That is now far worse than it was. GraphRAG's coverage gate and its
+        # english_handle query expansion BOTH read this index, so an empty one
+        # turns the product into a blanket refusal machine - and every other
+        # signal, /health included, still reads green.
+        print(
+            f"[knowledge] could not build topic index for {name!r}: {error}. "
+            "NOT caching the failure; the next call will retry."
+        )
+        return built
 
     for tokens in built.tokens.values():
         for token in tokens:
             built.token_df[token] = built.token_df.get(token, 0) + 1
+
+    if not built.tokens:
+        # An empty index from a store that did not error is still an outage -
+        # an un-ingested collection looks identical to a healthy one otherwise.
+        print(f"[knowledge] topic index for {name!r} is EMPTY; not caching it.")
+        return built
 
     _topic_indexes[name] = built
     return built
@@ -378,3 +396,16 @@ def search_knowledge_docs(query: str, k: int = 4, collection: str | None = None)
         return []
 
 
+
+
+def alias_index_size(collection: str | None = None) -> int:
+    """How many notes the alias index knows about. Published on /health.
+
+    GraphRAG's coverage gate and its query expansion both read this index, so a
+    zero here means the product refuses everything while every other signal
+    still reads healthy. It is the one number that makes that visible.
+    """
+    try:
+        return len(_get_index(collection).tokens)
+    except Exception:  # noqa: BLE001 - health must never fail
+        return 0

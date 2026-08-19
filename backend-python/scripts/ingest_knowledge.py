@@ -152,10 +152,6 @@ def main() -> None:
     args = parser.parse_args()
 
     collection = args.collection
-    if args.bot:
-        if collection:
-            raise SystemExit("Pass --bot or --collection, not both.")
-
     target = collection or DEFAULT_COLLECTION_NAME
     print(f"Ingesting into collection: {target}")
 

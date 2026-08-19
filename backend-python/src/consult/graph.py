@@ -288,6 +288,23 @@ async def run_turn(
         context.language = detect_language(spoken)
 
     if message:
+        # RED FLAGS ARE CHECKED BEFORE ANY ANSWERING PATH, not after.
+        #
+        # Everything below this line can answer and return: the fast path at the
+        # next statement, the conversational intents, and the knowledge answer.
+        # None of them reached `safety.scan`, which only ran further down once a
+        # consultation had already begun. So a question phrased as a QUESTION
+        # rather than a complaint - "blood in stool me kya khana chahiye",
+        # "seene me dard ke liye kya khaye" - matched the alias index, took the
+        # fast path, and was answered with a food chart. The words that should
+        # have escalated were the very words that made it look answerable.
+        #
+        # Scanning the message alone here, not the transcript: at this point the
+        # user has typed one line outside any consultation, and the whole-
+        # transcript scan further down still runs for everything after that.
+        if safety.scan(message):
+            return _escalate(context, "red-flag keyword")
+
         # Follow-ups are checked BEFORE classification and before any retrieval.
         # "Explain this in English" is an instruction about the answer already on
         # screen, so re-running the classifier (which used to call it "casual")
@@ -353,22 +370,6 @@ async def run_turn(
                     context=context,
                 )
 
-        # RED FLAGS ARE CHECKED BEFORE ANY ANSWERING PATH, not after.
-        #
-        # Everything below this line can answer and return: the fast path at the
-        # next statement, the conversational intents, and the knowledge answer.
-        # None of them reached `safety.scan`, which only ran further down once a
-        # consultation had already begun. So a question phrased as a QUESTION
-        # rather than a complaint - "blood in stool me kya khana chahiye",
-        # "seene me dard ke liye kya khaye" - matched the alias index, took the
-        # fast path, and was answered with a food chart. The words that should
-        # have escalated were the very words that made it look answerable.
-        #
-        # Scanning the message alone here, not the transcript: at this point the
-        # user has typed one line outside any consultation, and the whole-
-        # transcript scan further down still runs for everything after that.
-        if safety.scan(message):
-            return _escalate(context, "red-flag keyword")
 
         # Fast path: the alias index already named a topic and the wording is a
         # question, not "mujhe X hai". That is exactly what the classifier would
@@ -448,6 +449,18 @@ async def run_turn(
     # the final plan. So classify it first: a new complaint restarts, chit-chat
     # gets answered, and only genuine extra detail becomes a note.
     typed = (free_text or "").strip()
+
+    # THE SAME SCAN ON THE freeText SIDE, and this is the one that mattered most.
+    # Once a consultation opens the client stops sending `problem` and sends
+    # `freeText`, so EVERY turn after the first arrives here - and the branches
+    # below (follow-up rework, small talk, aside) all answer and return before
+    # the whole-transcript scan further down ever runs. "khudkushi ka mann karta
+    # hai, in short batao" matched a rework pattern and got a reworded wellness
+    # answer. The rework patterns are unanchored, so any red flag with a
+    # follow-up phrase anywhere in the sentence took this path.
+    if typed and safety.scan(typed):
+        return _escalate(context, "red-flag keyword in typed text")
+
     if typed and not answers and context.phase in CONSULTING and is_followup_request(typed):
         # A follow-up typed while cards are open. It must be handled here as well
         # as in the `message` branch above, because once a consultation starts the

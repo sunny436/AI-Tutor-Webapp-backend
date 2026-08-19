@@ -294,7 +294,11 @@ GRAPHRAG_MIN_RELEVANCE = float(_get("GRAPHRAG_MIN_RELEVANCE", "0.65"))
 
 # Kept at or below RETRIEVAL_TIMEOUT_S above: this is a network-backed retriever
 # on an internal host, and a wedged source must not hold up a consultation.
-GRAPHRAG_TIMEOUT_S = float(_get("GRAPHRAG_TIMEOUT_S", "3.0"))
+# Strictly BELOW RETRIEVAL_TIMEOUT_S. When they were equal the pipeline's own
+# wait_for always fired first and cancelled this coroutine -- and CancelledError
+# is BaseException on 3.12, so `except Exception` never saw it and the failure
+# counter stayed at zero through a complete outage.
+GRAPHRAG_TIMEOUT_S = float(_get("GRAPHRAG_TIMEOUT_S", "2.5"))
 
 # Path to graphrag-internal-root.crt, to be passed to httpx as `verify=`. Must
 # point OUTSIDE the repo. NEVER set verify=False: the vendor doc is explicit that

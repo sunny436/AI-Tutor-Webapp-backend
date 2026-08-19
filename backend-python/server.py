@@ -649,10 +649,14 @@ def health():
     # looks identical downstream -- empty chunks and an HTTP 200 -- so without
     # this an outage of the authoritative knowledge source stays invisible until
     # somebody notices the answers went vague.
+    from src.knowledge import alias_index_size as _alias_index_size
     from src.retrieval import graphrag as _graphrag
 
     payload = {
         "graphrag": _graphrag.health(),
+        # Zero here means match_topics is blind, which makes GraphRAG refuse
+        # everything while looking perfectly healthy. 29 is correct today.
+        "alias_index_notes": _alias_index_size(),
         "ok": True,
         "llm_ready": config.is_llm_ready(),
         "provider": provider,

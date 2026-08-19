@@ -378,9 +378,13 @@ class GraphRagRetriever:
         import httpx
 
         base = (config.GRAPHRAG_BASE_URL or "").rstrip("/")
-        # Unconfigured is not an error -- it means this source is simply off.
+        # Unconfigured used to return {} quietly, which fell through to the
+        # success stamp -- so a rotated key on the SOLE grounding source read as
+        # perfect health forever. It is an error now, and it is counted.
         if not base or not config.GRAPHRAG_API_KEY or not project_id:
-            return {}
+            raise RuntimeError(
+                "GraphRAG is not configured (base url, api key or project id is empty)"
+            )
 
         response = httpx.post(
             f"{base}/v1/search",
@@ -424,6 +428,14 @@ class GraphRagRetriever:
             # Narrowed to the best-scoring document. This service applies no
             # relevance floor of its own, so without this an off-topic passage
             # scoring 0.1251 reached the prompt labelled "Reference documents".
+            # Stamped HERE, on a successful HTTP round trip, NOT after the
+            # coverage gate. The gate returning empty is the system working;
+            # counting that as a failure would age the timestamp on ordinary
+            # off-topic traffic and hide a real outage behind noise.
+            global LAST_SUCCESS_AT, CONSECUTIVE_FAILURES
+            LAST_SUCCESS_AT = time.monotonic()
+            CONSECUTIVE_FAILURES = 0
+
             passages = _top_document_only(_read_passages(body), claimed) if body else []
 
             # THE COVERAGE GATE. This service never returns empty - an off-topic
@@ -437,14 +449,30 @@ class GraphRagRetriever:
                  if isinstance(s, (int, float))),
                 default=0.0,
             )
-            if not claimed and best < config.GRAPHRAG_MIN_RELEVANCE:
+            # ⚠ THE CLAIM MUST BE CORROBORATED BY THE RESPONSE.
+            #
+            # Gating on `claimed` alone failed OPEN. `claimed` is computed from
+            # the QUERY and says nothing about what came back, so for any query
+            # the alias index recognises - the common case for real users - the
+            # score floor became a no-op. Alias claims gas-bloating, the service
+            # returns joint-pain at 0.10, the chunk sails through prefixed
+            # `graphrag:`, `knowledge_for_prompt` calls the turn grounded, and
+            # rule 13 tells the model that off-topic passage is its FIRST source.
+            # Exactly the failure this gate was written to stop, through the
+            # other arm.
+            #
+            # So coverage means: the alias index named a note AND that note is
+            # what came back. Otherwise the score has to carry it alone.
+            kept_docs = {d for d in (_first(p, _SOURCE_KEYS) for p in passages) if d}
+            corroborated = bool(kept_docs & set(claimed or ()))
+            if not corroborated and best < config.GRAPHRAG_MIN_RELEVANCE:
                 print(
                     f"[graphrag] not covered: {ctx.query[:60]!r} "
-                    f"(no alias claim, best {best:.4f} < {config.GRAPHRAG_MIN_RELEVANCE})"
+                    f"(claimed={claimed or []}, returned={sorted(kept_docs)}, "
+                    f"best {best:.4f} < {config.GRAPHRAG_MIN_RELEVANCE})"
                 )
                 return RetrievalResult(section=self.section, chunks=())
         except Exception as error:  # noqa: BLE001
-            global CONSECUTIVE_FAILURES
             CONSECUTIVE_FAILURES += 1
             print(
                 f"[graphrag] search failed ({CONSECUTIVE_FAILURES} in a row): {error}. "
@@ -452,9 +480,7 @@ class GraphRagRetriever:
             )
             return RetrievalResult(section=self.section, chunks=())
 
-        global LAST_SUCCESS_AT
-        LAST_SUCCESS_AT = time.monotonic()
-        CONSECUTIVE_FAILURES = 0
+
 
         chunks = []
 

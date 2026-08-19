@@ -19,7 +19,7 @@ import config  # noqa: E402  (needs the sys.path line above)
 from src.consult.sections import SECTION_LIBRARY  # noqa: E402
 
 BASE = "http://localhost:4000"
-# Server-to-server credential — /consult and /chat refuse anonymous callers so a
+# Server-to-server credential — /consult refuses anonymous callers so a
 # published backend cannot have its LLM quota spent by strangers.
 AUTH = {"Content-Type": "application/json", "x-service-key": config.SERVICE_KEY}
 results: list[tuple[str, bool, str]] = []
@@ -176,20 +176,6 @@ if flagged_label:
     )
 else:
     print("SKIP  no red-flag option generated for this condition (not a failure)")
-
-# --- 4. legacy path still alive --------------------------------------------
-try:
-    legacy_request = urllib.request.Request(
-        f"{BASE}/chat",
-        data=json.dumps({"problem": "mild bloating", "followups": 9}).encode(),
-        headers=AUTH,
-    )
-    with urllib.request.urlopen(legacy_request, timeout=180) as response:
-        legacy = json.loads(response.read())
-    check("legacy /chat still works", legacy.get("kind") in {"answer", "followup", "escalation"},
-          f"kind={legacy.get('kind')}")
-except urllib.error.URLError as error:
-    check("legacy /chat still works", False, str(error))
 
 failed = [n for n, ok, _ in results if not ok]
 print(f"\n===== consult live: {len(results) - len(failed)}/{len(results)} passed =====")
