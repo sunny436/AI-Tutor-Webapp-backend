@@ -1,0 +1,25 @@
+[Unit]
+# The database. Everything else waits for this.
+#
+# Convex ships as a container image, so this unit is a thin wrapper around
+# `docker compose`. On Linux that is fine: docker.service is a real systemd
+# service that starts at boot with no session and no GUI. On Windows it was a
+# desktop application, which is the single reason the site went down whenever
+# somebody signed out.
+Description=Convex (self-hosted) for Ayurveda
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/ayurveda/Ayurveda-/deploy/compose
+EnvironmentFile=/etc/ayurveda/convex.env
+ExecStart=/usr/bin/docker compose up -d --remove-orphans
+ExecStop=/usr/bin/docker compose stop
+# `stop`, never `down -v`. The volume IS the database.
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

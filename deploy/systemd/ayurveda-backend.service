@@ -1,0 +1,27 @@
+[Unit]
+# FastAPI + the bge-m3 embedding model. Talks to Convex and to Groq.
+Description=Ayurveda Python AI backend
+After=convex.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/ayurveda/Ayurveda-/backend-python
+EnvironmentFile=/etc/ayurveda/backend.env
+ExecStart=/opt/ayurveda/Ayurveda-/backend-python/.venv/bin/python server.py
+Restart=always
+RestartSec=10
+
+# This process peaks near 2 GB loading the embedding model. On a 3.8 GB box an
+# unbounded spike lets the kernel pick a victim, and the victim could be Convex
+# - i.e. the database. Capped so a bad day kills only the process that caused
+# it, and systemd restarts that one rather than the whole machine limping.
+MemoryMax=2600M
+MemoryHigh=2200M
+
+# Model load can take a while on a cold page cache.
+TimeoutStartSec=300
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Nightly Convex snapshot export
+
+[Timer]
+OnCalendar=*-*-* 03:15:00
+# If the machine was off at 03:15, run once it is back. A backup that silently
+# skips the days you needed it is not a backup.
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
