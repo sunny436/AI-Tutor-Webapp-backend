@@ -7,6 +7,22 @@ THE AUTHORITATIVE SOURCE. This is where Ayurveda knowledge comes from. The local
 Chroma retriever still exists behind `config.LOCAL_RAG_ENABLED` as a rollback,
 but in production it is off and this is the only grounding the model receives.
 
+⚠ IT IS NOT SELF-SUFFICIENT, AND THAT IS NOT OPTIONAL. Measured over the 74
+retrieval cases:
+
+    with the local alias index    73/74
+    alias index blinded           48/74
+
+Twenty-five of those cases are carried by `knowledge.match_topics`, through
+`english_handle` below - it turns "mujhe gas ho rahi hai" into a query that scores
+0.5159 instead of 0.2849 - and through the coverage gate, which needs a claim to
+corroborate. So "GraphRAG is the authoritative source" is true about the CONTENT
+and false about the mechanism: the local topic index is load-bearing.
+
+Anyone reading LOCAL_RAG_ENABLED=0 and concluding that src/knowledge.py can now be
+deleted would drop recall by a third and take the coverage gate down with it. The
+vector SEARCH over the notes is retired; the alias index is not.
+
 WHY A RETRIEVER AND NOT A BRANCH IN consult/graph.py
 `retrieval/registry.py` states its own contract: adding a knowledge source is one
 retriever file plus one line there, and nothing in `src/consult/` changes. This
