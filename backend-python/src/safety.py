@@ -1,3 +1,5 @@
+import re
+
 """
 safety.py
 ---------
@@ -115,10 +117,27 @@ SERIOUS_CONDITION_MESSAGE = (
 )
 
 
+# Word boundaries, not substrings. The old test was
+#     f" {word} " in lowered or word in lowered
+# whose second clause is a plain substring match, so short entries fired inside
+# ordinary words. Measured:
+#
+#     "mujhe hives ho rahe hain"      -> True   via "hiv"
+#     "footbath se pair ka dard"      -> True   via "tb"
+#     "outbreak"                      -> True   via "tb"
+#
+# Hives is squarely this product's domain, and the user was handed the
+# cancer/HIV message for it. `\b` still matches the multi-word entries
+# ("kidney failure", "stroke ke baad") and the escaped dot in "t.b".
+_SERIOUS_RE = re.compile(
+    r"\b(?:" + "|".join(re.escape(w) for w in SERIOUS_CONDITIONS) + r")\b",
+    re.IGNORECASE,
+)
+
+
 def is_serious_condition(text: str) -> bool:
     """A diagnosed condition this assistant must not build a wellness plan for."""
-    lowered = f" {(text or '').lower()} "
-    return any(f" {word} " in lowered or word in lowered for word in SERIOUS_CONDITIONS)
+    return bool(_SERIOUS_RE.search(text or ""))
 
 
 # The message we show when a red flag is found.

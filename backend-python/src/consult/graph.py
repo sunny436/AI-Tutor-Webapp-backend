@@ -154,8 +154,30 @@ def _continuation_question(topic: str, already_said: str) -> str:
     )
 
 
-def _escalate(context: ConsultContext, reason: str = "") -> ConsultResult:
+def _escalate(
+    context: ConsultContext, reason: str = "", said: str = ""
+) -> ConsultResult:
+    """Stop the consultation and send them to a doctor.
+
+    ⚠ `said` IS NOT OPTIONAL IN PRACTICE. This was the only exit in the file that
+    never called `remember_chat`, so the sentence that triggered the escalation
+    was erased from the transcript. Combined with phase="completed", which skips
+    gathering, the NEXT turn walked straight into write_plan:
+
+        turn 1  "ulti me khoon aa raha hai"   -> escalation, history empty
+        turn 2  "theek hai, ab kya karu"      -> a full six-section wellness plan
+
+    A haematemesis disclosure followed one turn later by a food chart, with no
+    adversarial phrasing - just the client echoing back the context we gave it.
+    The whole-transcript scan could never re-catch it because the transcript no
+    longer contained it.
+
+    Recording the exchange fixes both halves: the red flag stays in
+    `safety_fragments`, so every later turn re-escalates on it.
+    """
     context.phase = "completed"
+    if said:
+        context = ctx_state.remember_chat(context, said, safety.ESCALATION_MESSAGE)
     if reason:
         print(f"[consult] escalating: {reason}")
     return ConsultResult(
@@ -287,23 +309,21 @@ async def run_turn(
         # sentence rather than locking the conversation to a guess.
         context.language = detect_language(spoken)
 
+    # ONE SCAN, ABOVE EVERYTHING, ON BOTH FIELDS.
+    #
+    # Two earlier attempts put this lower and both left holes. A red flag can
+    # arrive as `problem`, as `freeText`, or as BOTH IN ONE REQUEST - and the
+    # branches below (follow-up rework, small talk, aside, the fast path) all
+    # answer and return before any per-field check further down. Measured:
+    #
+    #   problem="explain in english"  freeText="ulti me khoon aa raha hai"  -> answered
+    #   problem="hii"                 freeText="khudkushi ka mann karta hai" -> answered
+    #
+    # `scan` takes varargs and skips empties, so one call covers every shape.
+    _typed_now = (free_text or "").strip()
+    if safety.scan(message, _typed_now):
+        return _escalate(context, "red-flag keyword", said=message or _typed_now)
     if message:
-        # RED FLAGS ARE CHECKED BEFORE ANY ANSWERING PATH, not after.
-        #
-        # Everything below this line can answer and return: the fast path at the
-        # next statement, the conversational intents, and the knowledge answer.
-        # None of them reached `safety.scan`, which only ran further down once a
-        # consultation had already begun. So a question phrased as a QUESTION
-        # rather than a complaint - "blood in stool me kya khana chahiye",
-        # "seene me dard ke liye kya khaye" - matched the alias index, took the
-        # fast path, and was answered with a food chart. The words that should
-        # have escalated were the very words that made it look answerable.
-        #
-        # Scanning the message alone here, not the transcript: at this point the
-        # user has typed one line outside any consultation, and the whole-
-        # transcript scan further down still runs for everything after that.
-        if safety.scan(message):
-            return _escalate(context, "red-flag keyword")
 
         # Follow-ups are checked BEFORE classification and before any retrieval.
         # "Explain this in English" is an instruction about the answer already on
@@ -458,8 +478,6 @@ async def run_turn(
     # hai, in short batao" matched a rework pattern and got a reworded wellness
     # answer. The rework patterns are unanchored, so any red flag with a
     # follow-up phrase anywhere in the sentence took this path.
-    if typed and safety.scan(typed):
-        return _escalate(context, "red-flag keyword in typed text")
 
     if typed and not answers and context.phase in CONSULTING and is_followup_request(typed):
         # A follow-up typed while cards are open. It must be handled here as well

@@ -263,9 +263,25 @@ def _top_document_only(passages: list[dict], claimed: list[str] | None = None) -
     ]
     ranked = [(p, s, d) for p, s, d in scored if isinstance(s, (int, float)) and d]
     if not ranked:
-        # No scores or no document ids to group by -- nothing to reason about, so
-        # pass everything through rather than silently dropping the lot.
-        return passages
+        # ⚠ THIS USED TO RETURN EVERYTHING, and that failed OPEN. If the vendor
+        # stops sending `score`, or sends it as a string, `ranked` is empty and
+        # every returned document sailed through - measured, three off-topic
+        # notes reached the prompt on a query whose alias claim was corroborated
+        # by a fourth. One field change on their side, and the coverage gate is
+        # bypassed entirely.
+        #
+        # With no scores the only signal left is the alias claim, so use it.
+        if claimed:
+            named = [
+                p for p in passages if _first(p, _SOURCE_KEYS) in set(claimed)
+            ]
+            if named:
+                return named
+        print(
+            "[graphrag] no usable scores in the response; "
+            f"keeping {len(passages)} passage(s) on the alias claim alone"
+        )
+        return passages if claimed else []
     # THE ALIAS INDEX WINS OVER THE SCORE when it has an opinion. Measured:
     #   "constipation treatment"  piles.md 0.5187  >  constipation.md 0.4683
     # The top score is piles; the right note is constipation, and the alias index
@@ -430,29 +446,41 @@ class GraphRagRetriever:
             print("[graphrag] no project id configured; retrieving nothing")
             return RetrievalResult(section=self.section, chunks=())
 
-        # Does the corpus actually COVER this question? Two signals, either one
-        # enough - see config.GRAPHRAG_MIN_RELEVANCE for the measurements.
-        claimed = match_topics(ctx.query, collection=DEFAULT_COLLECTION_NAME)
-        query = english_handle(ctx.query, DEFAULT_COLLECTION_NAME)
+        # Both of these touch the local alias index, which on a cold or broken
+        # Chroma can block for a long time. They were running synchronously on
+        # the event loop, ABOVE the try/except and outside every timeout, so a
+        # stalled store took the whole server down rather than one retrieval.
+        # Off the loop, inside the guarded section, like the HTTP call.
+        def _topic_lookup() -> tuple[list[str], str]:
+            return (
+                match_topics(ctx.query, collection=DEFAULT_COLLECTION_NAME),
+                english_handle(ctx.query, DEFAULT_COLLECTION_NAME),
+            )
 
         # `pipeline._safe_retrieve` already absorbs timeouts and exceptions, so a
         # wedged or broken service degrades the answer instead of failing the
         # consultation. Caught here as well so the reason is logged with this
         # retriever's name attached.
         try:
+            claimed, query = await asyncio.to_thread(_topic_lookup)
             body = await asyncio.to_thread(self._search, query, project_id)
             # Narrowed to the best-scoring document. This service applies no
             # relevance floor of its own, so without this an off-topic passage
             # scoring 0.1251 reached the prompt labelled "Reference documents".
-            # Stamped HERE, on a successful HTTP round trip, NOT after the
-            # coverage gate. The gate returning empty is the system working;
-            # counting that as a failure would age the timestamp on ordinary
-            # off-topic traffic and hide a real outage behind noise.
+            # Parse FIRST, then stamp. Resetting the counter before parsing meant
+            # a vendor schema change - HTTP 200, unreadable body - reset it on
+            # every turn, so it could never climb past 1. Measured: six
+            # consecutive ungrounded turns reported as one failure and a
+            # zero-second-old success. Any alert on >= 3 would never fire.
+            passages = _top_document_only(_read_passages(body), claimed) if body else []
+
+            # Stamped here: the round trip returned something we could read. NOT
+            # after the coverage gate - the gate returning empty is the system
+            # working, and counting that would age the timestamp on ordinary
+            # off-topic traffic and hide a real outage behind the noise.
             global LAST_SUCCESS_AT, CONSECUTIVE_FAILURES
             LAST_SUCCESS_AT = time.monotonic()
             CONSECUTIVE_FAILURES = 0
-
-            passages = _top_document_only(_read_passages(body), claimed) if body else []
 
             # THE COVERAGE GATE. This service never returns empty - an off-topic
             # question comes back with its nearest neighbours, and downstream

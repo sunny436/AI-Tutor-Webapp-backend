@@ -359,9 +359,24 @@ check(
     "the off-topic chunk that used to reach the prompt is gone",
     not any(p["document_name"] == "loose-motions.md" for p in kept),
 )
+# This used to assert that unscored passages PASS THROUGH. That was fail-open,
+# and one vendor field change was enough to trigger it: with no numeric score,
+# `ranked` is empty and every returned document sailed past the coverage gate -
+# measured, three off-topic notes reached the prompt on a corroborated query.
+# With no scores the only signal left is the alias claim, so that is what decides.
 check(
-    "unscored or unlabelled passages pass through rather than being dropped",
-    len(_top_document_only([{"text": "x"}, {"text": "y"}])) == 2,
+    "unscored passages with NO alias claim are dropped, not passed through",
+    _top_document_only([{"text": "x"}, {"text": "y"}]) == [],
+)
+check(
+    "unscored passages are narrowed to the alias-claimed note when there is one",
+    [
+        p["filename"]
+        for p in _top_document_only(
+            [{"text": "x", "filename": "gas-bloating.md"}, {"text": "y", "filename": "piles.md"}],
+            ["gas-bloating.md"],
+        )
+    ] == ["gas-bloating.md"],
 )
 check("no passages in, no passages out", _top_document_only([]) == [])
 
