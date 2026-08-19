@@ -17,8 +17,18 @@
 set -euo pipefail
 
 REPO_ROOT="/opt/ayurveda"
-BACKEND_REPO="https://github.com/akshat948/Ayurveda-Backend-.git"
-FRONTEND_REPO="https://github.com/akshat948/ayurveda-frontend.git"
+# SSH, not HTTPS: both repositories are private, and an unattended host has no
+# way to answer a username prompt. Each URL uses a Host alias from
+# /root/.ssh/config so it presents its own read-only DEPLOY KEY - a GitHub
+# deploy key is valid for exactly one repository, so they cannot share one.
+#
+# Set up once per machine (see deploy/README.md):
+#   ssh-keygen -t ed25519 -f /root/.ssh/deploy_backend  -N ""
+#   ssh-keygen -t ed25519 -f /root/.ssh/deploy_frontend -N ""
+# then add each .pub to the matching repo under Settings -> Deploy keys,
+# WITHOUT write access.
+BACKEND_REPO="git@github-backend:akshat948/Ayurveda-Backend-.git"
+FRONTEND_REPO="git@github-frontend:akshat948/ayurveda-frontend.git"
 SECRETS_DIR="/etc/ayurveda"
 BUN="/root/.bun/bin/bun"
 
@@ -58,6 +68,11 @@ command -v cloudflared >/dev/null || {
 
 log "4/8  repositories"
 mkdir -p "$REPO_ROOT"
+for k in deploy_backend deploy_frontend; do
+  [ -f "/root/.ssh/$k" ] || { echo "  MISSING /root/.ssh/$k - see deploy/README.md (deploy keys)"; exit 1; }
+done
+ssh-keyscan -t ed25519 github.com >> /root/.ssh/known_hosts 2>/dev/null
+sort -u /root/.ssh/known_hosts -o /root/.ssh/known_hosts
 clone_or_pull() {
   local url="$1" dir="$2"
   if [ -d "$dir/.git" ]; then git -C "$dir" pull --ff-only

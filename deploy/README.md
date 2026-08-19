@@ -76,6 +76,39 @@ The off-box copy in `deploy/backup.sh` is still commented out. Until it points
 at real storage, the archives share a disk with the database they exist to
 protect — which is not a backup.
 
+## Deploy keys
+
+Both repositories are private, so a fresh host needs read access before
+`install.sh` can clone anything. GitHub deploy keys are per-repository - one key
+cannot serve both - so each gets its own:
+
+```sh
+ssh-keygen -t ed25519 -f /root/.ssh/deploy_backend  -N "" -C deploy-backend@$(hostname)
+ssh-keygen -t ed25519 -f /root/.ssh/deploy_frontend -N "" -C deploy-frontend@$(hostname)
+```
+
+Add each `.pub` under the matching repository, Settings -> Deploy keys, with
+**write access unchecked** - this host only ever reads. Then
+`/root/.ssh/config` maps the two Host aliases the installer clones from:
+
+```
+Host github-backend
+  HostName github.com
+  User git
+  IdentityFile /root/.ssh/deploy_backend
+  IdentitiesOnly yes
+
+Host github-frontend
+  HostName github.com
+  User git
+  IdentityFile /root/.ssh/deploy_frontend
+  IdentitiesOnly yes
+```
+
+`IdentitiesOnly yes` matters: without it ssh offers every key it has and GitHub
+authenticates as whichever one it recognises first, which will be the wrong
+repository.
+
 ## Secrets
 
 `/etc/ayurveda/*.env`, mode 600, root owned, never in git. Every variable is
