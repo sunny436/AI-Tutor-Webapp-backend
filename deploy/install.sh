@@ -42,6 +42,7 @@ apt-get update -qq
 apt-get install -y -qq \
   ca-certificates curl git jq \
   docker.io docker-compose-v2 \
+  tesseract-ocr \
   python3 python3-venv python3-pip
 systemctl enable --now docker
 
