@@ -217,8 +217,64 @@ function Set-MinimumWorkingSet([int]$ProcessId, [int]$MinMB, [int]$MaxMB) {
     }
 }
 
+# ---- Convex (self-hosted, Docker) -------------------------------------------
+# Supervised FIRST, because everything else depends on it: login, chat history,
+# files and settings all read from Convex. When Convex is down the site still
+# answers 200 and then fails every request, which is worse than being plainly
+# offline - Cloudflare returns 524 on the Convex hostname while the app itself
+# looks perfectly healthy.
+#
+# This was unsupervised until it bit us. Docker Desktop is NOT a Windows
+# service: it starts on user logon, and it can hang with its processes still
+# running but its WSL backend wedged. That is exactly what happened - engine
+# answering 500, containers gone, and nothing in this supervisor watching.
+#
+# The compose file sets `restart: unless-stopped`, so the containers return on
+# their own ONCE the engine is up. The job here is only to get the engine up
+# and then nudge compose.
+#
+# Deliberately NON-BLOCKING. Docker Desktop takes minutes to boot and this
+# supervisor runs every ~30 seconds, so each stage returns immediately and the
+# next tick continues from there. Waiting here would stack overlapping runs.
+$DockerExe = Join-Path $env:LOCALAPPDATA 'Programs\DockerDesktop\resources\bin\docker.exe'
+$DockerApp = Join-Path $env:LOCALAPPDATA 'Programs\DockerDesktop\Docker Desktop.exe'
+$ComposeDir = Join-Path $Repo 'self-hosted'
+
+if (Test-Listening 3210) {
+    Write-Log "convex   already listening on 3210"
+} elseif (-not (Test-Path $DockerExe)) {
+    Write-Log "convex   SKIP - docker not installed"
+} else {
+    # `docker version` against the named pipe is the only honest test. The
+    # Docker Desktop PROCESS can be alive while the engine behind it is
+    # wedged, so checking for the process alone reports a healthy Docker that
+    # cannot actually run a container.
+    $engineUp = $false
+    $ErrorActionPreference = "Continue"
+    & $DockerExe version --format '{{.Server.Version}}' 2>$null | Out-Null
+    $engineUp = ($LASTEXITCODE -eq 0)
+    $ErrorActionPreference = "Stop"
+
+    if (-not $engineUp) {
+        if (Get-Process 'Docker Desktop' -ErrorAction SilentlyContinue) {
+            Write-Log "convex   docker engine still booting - leaving it alone"
+        } else {
+            Write-Log "convex   docker engine down, launching Docker Desktop"
+            Start-Process -FilePath $DockerApp -ErrorAction SilentlyContinue
+        }
+    } else {
+        Write-Log "convex   engine up but 3210 silent - docker compose up"
+        Push-Location $ComposeDir
+        try {
+            $ErrorActionPreference = "Continue"
+            & $DockerExe compose up -d 2>$null | Out-Null
+            $ErrorActionPreference = "Stop"
+        } finally { Pop-Location }
+    }
+}
+
 # ---- Python AI backend ------------------------------------------------------
-# Started first: it loads the bge-m3 embedding model (~1.9 GB) and takes the
+# Started first among the app processes: it loads the bge-m3 embedding model (~1.9 GB) and takes the
 # longest to become useful, so giving it a head start shortens total downtime.
 #
 # Leftover server.py processes are cleared ONLY when nothing is serving port
