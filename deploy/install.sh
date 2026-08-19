@@ -101,6 +101,16 @@ cd "$REPO_ROOT/Ayurveda-/backend-python"
 [ -d .venv ] || python3 -m venv .venv
 ./.venv/bin/pip install -q -r requirements.txt
 
+# The knowledge index is a BUILD ARTIFACT: data/knowledge holds the 29 source
+# notes and is in git, but data/vector_store is gitignored and is not. A fresh
+# host therefore has the notes and no index, and the backend starts happily,
+# logs "topic index is EMPTY" once, and then answers every consultation
+# ungrounded. Build it here so provisioning cannot leave that state behind.
+if [ ! -d data/vector_store ] || [ -z "$(ls -A data/vector_store 2>/dev/null)" ]; then
+  log "6b/8  knowledge index"
+  ./.venv/bin/python scripts/ingest_knowledge.py
+fi
+
 log "7/8  systemd units"
 install -m 644 "$REPO_ROOT/Ayurveda-/deploy/systemd/"*.service /etc/systemd/system/
 install -m 644 "$REPO_ROOT/Ayurveda-/deploy/systemd/"*.timer   /etc/systemd/system/
