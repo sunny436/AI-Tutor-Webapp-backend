@@ -321,7 +321,20 @@ async def run_turn(
     #
     # `scan` takes varargs and skips empties, so one call covers every shape.
     _typed_now = (free_text or "").strip()
-    if safety.scan(message, _typed_now):
+    if safety.scan(message, _typed_now, *ctx_state.safety_fragments(context)):
+        # THE TRANSCRIPT IS SCANNED HERE TOO, not just this message.
+        #
+        # Recording the escalation (see `_escalate`) fixed a plan being written
+        # one turn later, but it left a smaller hole: "aur batao" carries no red
+        # flag of its own, so it fell through to the follow-up branch, which
+        # reworded the escalation message and returned kind="chat". The words
+        # stayed safe, but the client renders chat as ordinary prose - no
+        # warning styling - and the conversation carried on as if nothing had
+        # happened.
+        #
+        # Once somebody has said they are vomiting blood, every following turn
+        # should keep pointing at a doctor. There is no wellness answer that
+        # becomes appropriate again three messages later.
         return _escalate(context, "red-flag keyword", said=message or _typed_now)
     if message:
 

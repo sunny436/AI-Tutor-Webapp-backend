@@ -277,11 +277,18 @@ def _top_document_only(passages: list[dict], claimed: list[str] | None = None) -
             ]
             if named:
                 return named
+        # `return passages if claimed else []` was still fail-open: when NO
+        # passage carries a resolvable source name, the claimed-filter above
+        # matches nothing and every document came through on the strength of a
+        # claim that nothing in the response corroborated. Measured: four
+        # off-topic notes into the prompt on a covered query.
+        #
+        # No score and no name is no evidence. Refuse.
         print(
-            "[graphrag] no usable scores in the response; "
-            f"keeping {len(passages)} passage(s) on the alias claim alone"
+            "[graphrag] response carries neither usable scores nor document "
+            f"names; dropping {len(passages)} passage(s) rather than guessing"
         )
-        return passages if claimed else []
+        return []
     # THE ALIAS INDEX WINS OVER THE SCORE when it has an opinion. Measured:
     #   "constipation treatment"  piles.md 0.5187  >  constipation.md 0.4683
     # The top score is piles; the right note is constipation, and the alias index
