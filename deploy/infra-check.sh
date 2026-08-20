@@ -168,9 +168,15 @@ head_ "code and deployment (section 4)"
 for d in "$REPO" "$FRONTEND"; do
   n=$(basename "$d")
   if [ -d "$d/.git" ]; then
-    git -C "$d" remote get-url origin 2>/dev/null | grep -q github.com \
-      && ok "$n origin" "$(git -C "$d" log --oneline -1 | cut -c1-46)" \
-      || bad "$n origin" "not a github remote"
+    # Matches the SSH Host ALIASES too (git@github-backend:...). Grepping for a
+    # literal github.com reported every correct deploy-key remote as drift,
+    # which is how this check first earned its keep - on itself.
+    url=$(git -C "$d" remote get-url origin 2>/dev/null)
+    case "$url" in
+      *github.com*|git@github-backend:*|git@github-frontend:*)
+        ok "$n origin" "$(git -C "$d" log --oneline -1 | cut -c1-46)" ;;
+      *) bad "$n origin" "unexpected remote: ${url:-none}" ;;
+    esac
     behind=$(git -C "$d" fetch -q 2>/dev/null; git -C "$d" rev-list --count HEAD..@{u} 2>/dev/null || echo '?')
     [ "$behind" = "0" ] && ok "$n up to date" || note "$n" "$behind commits behind origin"
   else
