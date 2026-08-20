@@ -1,3 +1,11 @@
+> **SUPERSEDED — 2026-08-20**
+>
+> Describes Windows paths, a PowerShell installer, and `start-all.ps1`. It documents 2 of the 4 tunnel hostnames and shows Convex as cloud-hosted; Convex is now self-hosted with two hostnames of its own. The token permission matrix and the shared-zone warning below are still correct and still matter.
+>
+> Production moved to the Ubuntu VM `10.1.30.37` on 19 Aug 2026.
+> The authoritative description is [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+> Everything below is kept for history and may be wrong.
+
 # Cloudflare edge
 
 The application runs on the **company machine**. Cloudflare hosts nothing — it

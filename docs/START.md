@@ -1,3 +1,11 @@
+> **SUPERSEDED — 2026-08-20**
+>
+> Uses `C:\ayurveda` paths that exist on no machine, and a two-terminal Windows run flow. The stack now runs as systemd units.
+>
+> Production moved to the Ubuntu VM `10.1.30.37` on 19 Aug 2026.
+> The authoritative description is [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+> Everything below is kept for history and may be wrong.
+
 # Project kaise chalayein
 
 Har baar bas **2 terminal** chahiye. Dono khule rakhne hain.

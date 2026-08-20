@@ -1,3 +1,11 @@
+> **SUPERSEDED — 2026-08-20**
+>
+> The Running and Production sections describe the Windows laptop, `start-all.ps1` and the `AyurvedaSite` scheduled task. They also tell you to `cd apps\app`, a directory that is empty in this repository.
+>
+> Production moved to the Ubuntu VM `10.1.30.37` on 19 Aug 2026.
+> The authoritative description is [INFRASTRUCTURE.md](INFRASTRUCTURE.md).
+> Everything below is kept for history and may be wrong.
+
 # Ayurveda & Yoga Wellness Assistant
 
 *by Ollasoftware*

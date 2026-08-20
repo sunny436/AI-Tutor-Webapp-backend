@@ -1,3 +1,11 @@
+> **SUPERSEDED — 2026-08-20**
+>
+> A Windows double-click quickstart (`run_backend.bat`, `.venv\Scripts`). On the VM the backend is `systemctl start ayurveda-backend`.
+>
+> Production moved to the Ubuntu VM `10.1.30.37` on 19 Aug 2026.
+> The authoritative description is [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+> Everything below is kept for history and may be wrong.
+
 # START HERE — how to run it (simple)
 
 There are two parts: the **Python AI brain** (this `backend-python` folder) and

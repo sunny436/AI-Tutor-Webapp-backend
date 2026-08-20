@@ -1,3 +1,11 @@
+> **SUPERSEDED — 2026-08-20**
+>
+> This plan is COMPLETE. All six phases ran on 19-20 Aug 2026. Kept as the record of what was decided and why.
+>
+> Production moved to the Ubuntu VM `10.1.30.37` on 19 Aug 2026.
+> The authoritative description is [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+> Everything below is kept for history and may be wrong.
+
 # Production deploy — Ubuntu VM, reproducible from git
 
 ## Why

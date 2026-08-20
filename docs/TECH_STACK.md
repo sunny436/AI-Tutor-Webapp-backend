@@ -1,3 +1,11 @@
+> **SUPERSEDED — 2026-08-20**
+>
+> The technology choices are still accurate; the directory map and `C:\ayurveda` paths are not.
+>
+> Production moved to the Ubuntu VM `10.1.30.37` on 19 Aug 2026.
+> The authoritative description is [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+> Everything below is kept for history and may be wrong.
+
 # Ayurveda & Yoga Chatbot — Complete Tech Stack (Detailed)
 
 **By Ollasoftware**
