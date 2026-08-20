@@ -1,3 +1,17 @@
+> **SUPERSEDED — 2026-08-20**
+>
+> This guide migrated Convex Cloud onto the WINDOWS host. That migration ran,
+> and was then superseded three days later when production moved to the Ubuntu
+> VM `10.1.30.37`. Its hardcoded Windows paths and its "Docker Desktop must
+> stay running" premise no longer apply.
+>
+> Current infrastructure: `INFRASTRUCTURE.md` in the **Ayurveda-Backend-** repo.
+>
+> The Convex-specific traps below are still true and still worth reading — the
+> `--` argument trap, the PKCS#8-with-spaces key format, `--include-file-storage`
+> not being the default, the `VALIDATE_ENV`/`POLAR_*` requirement, and the
+> verification checklist. They have been carried into `INFRASTRUCTURE.md`.
+
 # Moving Convex from Cloud to this host
 
 Every account, consultation, uploaded report and workspace currently lives in a
