@@ -19,7 +19,6 @@ The knowledge-file format is documented in `docs/knowledge-format.md`.
 
 import argparse
 import hashlib
-import re
 import sys
 from pathlib import Path
 
@@ -29,37 +28,17 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 import config
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
-from src.knowledge import DEFAULT_COLLECTION_NAME, get_vector_store
+from src.knowledge import (
+    DEFAULT_COLLECTION_NAME,
+    get_vector_store,
+    parse_front_matter,
+)
 
 
-_FRONT_MATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
-
-
-def parse_front_matter(text: str) -> tuple[dict[str, str], str]:
-    """Split a `---` header off the top of a note, returning (fields, body).
-
-    Deliberately not a YAML parser. The header only ever carries `topic` and
-    `aliases`, and these notes are hand-written — a stray colon or an unquoted
-    ampersand should not take down the whole ingest. Indented continuation lines
-    are folded into the previous key so a long alias list can wrap.
-    """
-    match = _FRONT_MATTER.match(text)
-    if not match:
-        return {}, text
-
-    fields: dict[str, str] = {}
-    key = ""
-    for line in match.group(1).splitlines():
-        if not line.strip():
-            continue
-        if line[:1].isspace() and key:
-            fields[key] += " " + line.strip()  # wrapped continuation
-        elif ":" in line:
-            name, _, value = line.partition(":")
-            key = name.strip().lower()
-            fields[key] = value.strip()
-    return fields, text[match.end() :]
-
+# `parse_front_matter` now lives in src/knowledge.py, which builds the alias
+# index from the same two fields. Two copies could drift, and a note whose
+# aliases parsed one way for the index and another for the chunks would be
+# retrievable by name but stamped with the wrong header, or the reverse.
 
 def topic_header(topic: str, aliases: str) -> str:
     """The identity line stamped onto EVERY chunk of a note.

@@ -12,6 +12,7 @@ rest are fast.
 import re
 import warnings
 from dataclasses import dataclass, field
+from pathlib import Path
 
 import config
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -208,8 +209,55 @@ MAX_DISTINCTIVE_DF = 2
 MIN_TOKEN_SCORE = 1.5
 
 
+_FRONT_MATTER = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+
+
+def parse_front_matter(text: str) -> tuple[dict[str, str], str]:
+    """Split a `---` header off the top of a note, returning (fields, body).
+
+    Deliberately not a YAML parser. The header only ever carries `topic` and
+    `aliases`, and these notes are hand-written — a stray colon or an unquoted
+    ampersand should not take down the whole index. Indented continuation lines
+    are folded into the previous key so a long alias list can wrap, which most
+    of the 29 notes do.
+
+    This is the canonical copy. `scripts/ingest_knowledge.py` imports it rather
+    than keeping its own, so the index and the ingest can never disagree about
+    what a note's aliases are.
+    """
+    match = _FRONT_MATTER.match(text)
+    if not match:
+        return {}, text
+
+    fields: dict[str, str] = {}
+    key = ""
+    for line in match.group(1).splitlines():
+        if not line.strip():
+            continue
+        if line[:1].isspace() and key:
+            fields[key] += " " + line.strip()  # wrapped continuation
+        elif ":" in line:
+            name, _, value = line.partition(":")
+            key = name.strip().lower()
+            fields[key] = value.strip()
+    return fields, text[match.end() :]
+
+
 def _get_index(collection: str | None = None) -> _TopicIndex:
-    """Build (once) and return one collection's alias index."""
+    """Build (once) and return one collection's alias index.
+
+    READS THE NOTES, NOT THE VECTOR STORE. This used to pull `topic`/`aliases`
+    out of Chroma metadata, which made the alias index depend on an ingest
+    having run — and `data/vector_store` is a gitignored build artifact, so a
+    fresh host had the notes, no index, and no error anyone would notice.
+    INFRASTRUCTURE.md §6 documents that trap; reading the front matter straight
+    from `data/knowledge/*.md` removes it, and lets the embedding model go.
+
+    Same two fields, same tokenisation, same `source` key (the bare filename) as
+    the metadata carried, so this is a change of data source and nothing else.
+    Anything that moves in the 74-query sweep is a regression, not an
+    improvement.
+    """
     name = _resolve(collection)
     cached = _topic_indexes.get(name)
     if cached is not None:
@@ -217,13 +265,20 @@ def _get_index(collection: str | None = None) -> _TopicIndex:
 
     built = _TopicIndex()
     try:
-        stored = get_vector_store(name).get(include=["metadatas"])
-        for meta in stored.get("metadatas") or []:
-            source = (meta or {}).get("source")
-            if not source or source in built.tokens:
+        directory = Path(config.KNOWLEDGE_DIR)
+        notes = sorted(directory.glob("*.md")) + sorted(directory.glob("*.txt"))
+        for note in notes:
+            source = note.name
+            if source in built.tokens:
                 continue
-            topic = (meta or {}).get("topic", "")
-            aliases = (meta or {}).get("aliases", "")
+            fields, _ = parse_front_matter(note.read_text(encoding="utf-8"))
+            topic = fields.get("topic", "")
+            aliases = fields.get("aliases", "")
+            if not topic and not aliases:
+                # An unconverted note still answers, it just cannot be claimed
+                # by name. Silent here would look identical to a healthy note.
+                print(f"[knowledge] {source} has no topic/aliases front matter")
+                continue
             built.tokens[source] = {
                 t for t in _tokens(f"{topic} {aliases}") if len(t) >= 2
             }
@@ -233,8 +288,11 @@ def _get_index(collection: str | None = None) -> _TopicIndex:
             built.phrases[source] = [p for p in phrases if p]
     except Exception as error:
         # DO NOT CACHE A FAILURE. This used to fall through and store the empty
-        # index for the process lifetime, so one transient Chroma error at
-        # startup left `match_topics` returning nothing forever.
+        # index for the process lifetime, so one transient read error at startup
+        # left `match_topics` returning nothing forever. Rarer now that it is a
+        # directory read rather than a database call — a missing KNOWLEDGE_DIR
+        # or an unreadable note is about all that reaches here — but the
+        # consequence is unchanged, so the guard stays.
         #
         # That is now far worse than it was. GraphRAG's coverage gate and its
         # english_handle query expansion BOTH read this index, so an empty one
@@ -251,9 +309,13 @@ def _get_index(collection: str | None = None) -> _TopicIndex:
             built.token_df[token] = built.token_df.get(token, 0) + 1
 
     if not built.tokens:
-        # An empty index from a store that did not error is still an outage -
-        # an un-ingested collection looks identical to a healthy one otherwise.
-        print(f"[knowledge] topic index for {name!r} is EMPTY; not caching it.")
+        # An empty index that did not raise is still an outage - an empty or
+        # missing KNOWLEDGE_DIR looks identical to a healthy one otherwise, and
+        # this index is what picks the document GraphRAG is asked about.
+        print(
+            f"[knowledge] topic index for {name!r} is EMPTY "
+            f"(read {config.KNOWLEDGE_DIR!r}); not caching it."
+        )
         return built
 
     _topic_indexes[name] = built
