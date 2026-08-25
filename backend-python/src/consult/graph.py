@@ -38,18 +38,25 @@ now the only orchestration, and `/jobs/run` calls it too.
 
 from __future__ import annotations
 
+import asyncio
 import re
 from typing import Callable
 
 import config
 from src import safety
 from src.consult import state as ctx_state
-from src.consult.gathering import gather
+from src.consult.gathering import MAX_GATHERING_ROUNDS, gather
+from src.consult.offline import offline_answer
+from src.retrieval import graphrag
+# `write_plan` is deliberately absent: GraphRAG writes the plan now. Everything
+# still here is a job GraphRAG cannot do, because its request carries no history
+# and no instructions beyond the query — reworking the answer already on screen
+# ("isko english me samjhao"), answering a general question, and the supportive
+# reply for a serious disclosure.
 from src.consult.responder import (
     NO_KNOWLEDGE,
     rework_answer,
     write_knowledge,
-    write_plan,
     write_supportive_care,
 )
 from src.knowledge import match_topics
@@ -219,6 +226,116 @@ async def _retrieve(
         )
     )
     return pipeline, results
+
+
+# The instruction that turns a free-form reply into the six sections the
+# frontend renders as cards. There is no format parameter on the vendor's API -
+# `query`, `k`, `graph_hops`, `exclude_relations` is the whole request - so the
+# instruction has to travel inside the query itself.
+#
+# MEASURED at 6/6 headings, with and without a document filter. The wording is
+# load-bearing: change it only with a re-measurement, not by eye.
+_SECTION_INSTRUCTION = (
+    "Jawab bilkul in 6 headings mein do, isi order mein, har heading ko "
+    "**Heading** ki tarah likho: **Root Cause**, **Changes To Make**, "
+    "**Yoga & Breathing**, **Food Chart**, **Daily Routine**, "
+    "**When To See A Doctor**"
+)
+
+
+def _plan_query(context: ConsultContext) -> str:
+    """What we ask GraphRAG for, when GraphRAG writes the plan.
+
+    DELIBERATELY NOT THE TRANSCRIPT. `query` is one string doing two jobs: it is
+    the embedding used for retrieval AND the question handed to the model. The
+    vendor was explicit that padding it shifts the embedding away from the real
+    question, and that short follow-ups suffer worst - which is exactly the case
+    that matters in a symptom conversation. So it carries the complaint and what
+    gathering understood, and nothing else.
+
+    The instruction goes LAST so the complaint leads the embedding.
+    """
+    complaint = " ".join(
+        part for part in (context.problem, ", ".join(context.symptoms)) if part
+    ).strip()
+    room = graphrag.MAX_QUERY_CHARS - len(_SECTION_INSTRUCTION) - 2
+    return f"{complaint[:room]}\n\n{_SECTION_INSTRUCTION}"
+
+
+def _sticky_topic(context: ConsultContext) -> str | None:
+    """The note this consultation is about, however the wording has drifted.
+
+    `context.problem` alone is not enough. A typed reply that classifies as
+    health + personal restarts the consultation and REWRITES `problem` with that
+    reply, so a detail volunteered late replaces the complaint:
+
+        "I have acidity"       -> problem "acidity"              -> acidity.md
+        "for 3 weeks"          -> problem "acidity"              -> acidity.md
+        "burning after meals"  -> problem "burning after meals"  -> NOTHING
+
+    and the plan for an acidity consultation then went out unscoped, which is
+    the blending this whole change exists to stop.
+
+    So: the current problem if it still names a note, otherwise the most recent
+    thing the user said that does. Newest-first, so someone who genuinely
+    changes subject is followed rather than pinned to their first complaint.
+    """
+    claimed = match_topics(context.problem or "")
+    if claimed:
+        return claimed[0]
+    for turn in reversed(context.chat_history):
+        if turn.role != "user":
+            continue
+        claimed = match_topics(turn.text or "")
+        if claimed:
+            return claimed[0]
+    return None
+
+
+async def _plan_from_graphrag(context: ConsultContext) -> tuple[str, str | None, bool]:
+    """Write the plan. Returns (answer, source filename, served_offline).
+
+    `sticky` is the topic the CONSULTATION is about, taken from the original
+    complaint rather than the latest message. A follow-up like "aur batao"
+    matches no alias, and asked cold the service offered thyroid, back pain and
+    low mood to someone three turns into a gas consultation.
+
+    On any failure this falls back to the note itself. That path is why the
+    change is safe to make at all: on 2026-08-25 every GraphRAG endpoint
+    returned 500 for most of a day, and after this commit GraphRAG is the only
+    thing that writes a plan.
+    """
+    sticky = _sticky_topic(context)
+    query = _plan_query(context)
+
+    filename, document_id = await asyncio.to_thread(
+        graphrag.pick_document, query, sticky
+    )
+    # The alias index is local, so it still names a note when the network is
+    # gone - which is precisely when `pick_document` cannot return one.
+    note = filename or sticky
+
+    try:
+        body = await asyncio.to_thread(
+            graphrag.answer, query, [document_id] if document_id else None
+        )
+        answer = (body.get("answer") or "").strip()
+        if answer:
+            cited = [c.get("filename") for c in body.get("citations") or []]
+            return answer, next((c for c in cited if c), note), False
+        print("[consult] GraphRAG returned an empty answer")
+    except Exception as error:
+        print(f"[consult] GraphRAG could not write the plan: {error}")
+
+    if note:
+        offline = offline_answer(note)
+        if offline:
+            # LOUD on purpose. A fallback nobody notices is a service that looks
+            # healthy while quietly answering from static text.
+            print(f"[consult] SERVING THE OFFLINE FALLBACK from {note}")
+            return offline, note, True
+
+    return "", note, False
 
 
 def knowledge_for_prompt(pipeline, results) -> str:
@@ -532,9 +649,21 @@ async def run_turn(
             context=context,
         )
 
-    if typed and not answers and context.phase in CONSULTING and is_small_talk(typed):
-        # "hii" while the cards are open. Settled in code, BEFORE the router, so
-        # it cannot depend on a classification that might come back wrong - or
+    if (
+        typed
+        and not answers
+        and context.phase in CONSULTING
+        and is_small_talk(typed)
+        # ...but only while the intake has rounds left. This is the SECOND place
+        # a conversational reply short-circuits the turn, and both had to learn
+        # the same lesson: returning here forever means `gather` never runs, its
+        # MAX_GATHERING_ROUNDS ceiling never fires, and the user is asked for
+        # more detail until they give up. Traced live, "ok" and "haan" mixed into
+        # a normal intake pinned it at round 4 through six turns with no plan.
+        and context.round < MAX_GATHERING_ROUNDS
+    ):
+        # "hii" while a consultation is open. Settled in code, BEFORE the router,
+        # so it cannot depend on a classification that might come back wrong - or
         # not come back at all when the model is unreachable.
         #
         # This is the screenshot bug: the greeting fell through to `add_note`,
@@ -546,6 +675,9 @@ async def run_turn(
         reply = SMALL_TALK_REPLIES.get(
             "greeting" if _looks_like_greeting(typed) else "ack"
         )
+        # Counts towards the ceiling. Someone answering "ok" is still spending a
+        # turn of the intake, and pretending otherwise is what made it endless.
+        context.round += 1
         context = ctx_state.remember_chat(context, typed, reply)
         return ConsultResult(
             kind="chat",
@@ -588,9 +720,33 @@ async def run_turn(
             )
             context = ctx_state.remember_chat(context, typed, "")
             free_text = None
-        elif aside.intent in CONVERSATIONAL:
-            # "hii", "thanks", "haan"  -  answer it and leave the cards standing.
+        elif aside.intent in CONVERSATIONAL and context.round < MAX_GATHERING_ROUNDS:
+            # "hii", "thanks", "haan"  -  answer it and leave the intake standing,
+            # but ONLY while the intake still has rounds left. At the ceiling this
+            # branch stops catching the turn and it falls through to `gather`,
+            # which sees `rounds >= MAX_GATHERING_ROUNDS` and writes the plan.
+            #
+            # Returning here unconditionally was a dead end, and counting the
+            # round was not enough to fix it: the counter rose to 7 while the
+            # ceiling that reads it lives inside `gather`, which this branch
+            # returns before ever reaching.
             # Filing these as symptoms is what let a greeting push the intake on.
+            #
+            # It still COUNTS, though, and not counting it was a dead end. This
+            # branch returns before `gather` runs, so `context.round` never moved
+            # and `MAX_GATHERING_ROUNDS` could never fire. Traced live: someone
+            # who answers "bas yahi hai" - "that's all" - is asked again, and
+            # again, and never receives a plan:
+            #
+            #     "mujhe gas ho rahi hai"  -> question, round 1
+            #     "bas yahi hai"  x7       -> question, round 1, seven times
+            #
+            # That is the single most natural way to say "I am done talking", so
+            # the intake has to end somewhere. Counting it is the same trade
+            # gathering.MAX_GATHERING_ROUNDS already makes: an assistant that
+            # keeps asking forever is worse than one that answers with slightly
+            # less detail.
+            context.round += 1
             context = ctx_state.remember_chat(context, typed, aside.reply)
             return ConsultResult(
                 kind="chat",
@@ -716,34 +872,41 @@ async def run_turn(
     # The transcript is safe HERE, unlike in `search_query`. This is prose going
     # to a language model that reads prose; that one is an embedding lookup where
     # conversational filler measurably destroys relevance.
-    details = "\n".join(
-        part
-        for part in (
-            f"Problem: {context.problem}",
-            f"Noted: {', '.join(context.symptoms)}" if context.symptoms else "",
-            # Only ever non-empty for a consultation that began before the cards
-            # were removed and is being finished now.
-            ctx_state.intake_summary(context),
-            f"--- CONVERSATION ---\n{ctx_state.render_history(context)}",
+    # GRAPHRAG WRITES THE PLAN NOW, not our own model.
+    #
+    # It can be given no rules - the request is `query`, `k`, `graph_hops`,
+    # `exclude_relations` and nothing else, and its prompt template is fixed and
+    # shared across every tenant - so everything we are accountable for has to
+    # sit OUTSIDE it. That is why `safety.scan` runs above this, why the
+    # gathering red-flag check runs above this, and why a flagged turn returns
+    # long before reaching here. It is also why the section instruction has to
+    # travel inside the query: there is no other channel.
+    #
+    # `sections` is still resolved above and still cannot drop "When To See A
+    # Doctor"; the instruction asks for all six every time.
+    answer, source_note, served_offline = await _plan_from_graphrag(context)
+
+    if not answer:
+        # Neither the service nor the note produced anything. Say so plainly
+        # rather than returning an empty plan that renders as a blank screen.
+        answer = (
+            "Abhi main aapke liye plan nahi bana pa raha hoon. "
+            "Thodi der baad dobara koshish karein."
         )
-        if part
-    ).strip()
-    answer = await write_plan(
-        knowledge=knowledge_for_prompt(pipeline, results),
-        profile=profile,
-        details=details,
-        sections=sections,
-        language=context.language,
-    )
+        source_note = None
 
     context.phase = "completed"
     # Remember the plan too, so "explain this in English" works on it just as it
     # does on a general answer.
     context = ctx_state.remember_chat(context, "", answer)
+    sources = pipeline.to_sources(results)
+    if source_note:
+        label = "Ayurveda notes (offline)" if served_offline else "Reference documents"
+        sources = [{"section": label, "source": source_note, "score": None}]
     return ConsultResult(
         kind="answer",
         condition=context.condition,
         answer=answer,
         context=context,
-        sources=pipeline.to_sources(results),
+        sources=sources,
     )

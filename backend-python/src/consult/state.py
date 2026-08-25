@@ -135,11 +135,34 @@ def carry_conversation(context: ConsultContext) -> dict:
     English question came back in Hinglish, and changing the language of a later
     message changed nothing, because nothing was ever being carried in the first
     place.
+
+    `round` belongs here too, and its absence meant NO PLAN WAS EVER WRITTEN.
+
+    Restarting a consultation built a fresh context with `round` back at 0, and
+    the restart fires whenever a typed reply classifies as health + personal —
+    which an ordinary answer to a gathering question does. Traced live, before
+    and after this fix was needed:
+
+        "mujhe gas ho rahi hai"           -> gathering, round 1
+        "2 hafte se"                      -> gathering, round 2
+        "spicy khane ke baad badhta hai"  -> gathering, round 1   <- reset
+        "bas yahi hai"                    -> gathering, round 1
+        "plan bana do"                    -> gathering, round 1
+
+    `gathering.MAX_GATHERING_ROUNDS` is the guard for a model that will not stop
+    asking, and it is checked against this counter — so a counter that keeps
+    resetting disables the guard entirely and the intake runs forever. The user
+    is asked question after question and never receives the plan they came for.
+
+    Carrying it is also what the ceiling means: it counts how long we have been
+    questioning THIS PERSON, not this topic. Someone who drifts from gas to
+    indigestion has still been answering questions for four rounds.
     """
     return {
         "greeted": context.greeted,
         "chat_history": list(context.chat_history),
         "language": context.language,
+        "round": context.round,
     }
 
 
