@@ -74,9 +74,11 @@ naming the keys it actually received rather than returning a quiet empty list.
 from __future__ import annotations
 
 import asyncio
+import json
+import re
 import time
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterator, Sequence
 
 import config
 from src.knowledge import DEFAULT_COLLECTION_NAME, match_topics
@@ -387,6 +389,230 @@ def health() -> dict:
         ),
         "consecutive_failures": CONSECUTIVE_FAILURES,
     }
+
+
+def _stamp_success() -> None:
+    """Record a completed call.
+
+    Stamped only AFTER a body has been read, never on a 200 alone. A blank or
+    rotated key used to read as perfect health forever because the failure
+    happened later than the stamp.
+    """
+    global LAST_SUCCESS_AT, CONSECUTIVE_FAILURES
+    LAST_SUCCESS_AT = time.monotonic()
+    CONSECUTIVE_FAILURES = 0
+
+
+def _stamp_failure(what: str, error: object) -> None:
+    """Count and announce a failed call, so an outage cannot be silent."""
+    global CONSECUTIVE_FAILURES
+    CONSECUTIVE_FAILURES += 1
+    print(f"[graphrag] {what} failed ({CONSECUTIVE_FAILURES} in a row): {error}")
+
+
+# ---------------------------------------------------------------------------
+# ANSWER GENERATION
+#
+# From the 2026-08-25 deployment the vendor also writes the reply, via
+# /v1/answer and /v1/answer/stream. We use the streaming one: server.py already
+# emits SSE token frames and the browser already reads them, so nothing the
+# frontend does has to change.
+#
+# `document_ids` IS NOT OPTIONAL IN PRACTICE. Without it the model is handed
+# passages from several notes and blends them into one confident answer. Live,
+# "gas aur bloating ke baare mein aur batao" cited back-pain.md for "naram
+# gadda / AC seedha kamar par ... yeh sab gas ko badha sakte hain" - a soft
+# mattress presented as a cause of gas. Scoped to the one note, that stops, the
+# citations resolve, and the reply gets shorter and twice as fast.
+# ---------------------------------------------------------------------------
+
+# The vendor validates 1-2000 and returns 422 outside it. Truncate rather than
+# let a long intake turn the whole call into an error.
+MAX_QUERY_CHARS = 2000
+
+# Citation markers as the model actually emits them. Three shapes were seen on
+# one deployment: `[chunk:doc:<uuid>:N]`, `[chunk:<uuid>:N]` (missing `doc:` -
+# the vendor's own validator drops these) and `[doc:<uuid>:N]`. Corrupted uuids
+# appear too: `1b26bd74-fd01-4e4d-a869d-...` carries an extra character.
+#
+# So this MATCHES LOOSELY AND DELETES. It never parses one. Provenance comes
+# from the `citations` array, which the vendor validates; the inline markers are
+# display noise and must not reach a reader.
+_CITATION_MARKER = re.compile(
+    r"[ \t]*\[\s*(?:chunk:)?(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}:\d+\s*\]"
+)
+# Deleting " [ref]." leaves " ." behind.
+_ORPHAN_SPACE = re.compile(r"[ \t]+([.,;:!?।])")
+
+# How far past a `[` the streaming reader will wait for its `]` before deciding
+# this was ordinary prose. The longest real marker is `[chunk:doc:` + a uuid +
+# `:N]`, about 55 characters; 80 leaves room for the corrupted uuids the model
+# emits without holding a bracketed aside back for a noticeable time.
+_MAX_MARKER_CHARS = 80
+
+
+def strip_citation_markers(text: str) -> str:
+    """Remove inline citation markers, so no uuid is ever shown to a user."""
+    cleaned = _CITATION_MARKER.sub("", text or "")
+    return _ORPHAN_SPACE.sub(r"\1", cleaned)
+
+
+def _answer_request(
+    query: str, document_ids: Sequence[str] | None, k: int | None
+) -> tuple[str, dict, dict]:
+    """(base_url, headers, body) for an answer call, or raise if unconfigured.
+
+    Unconfigured is an error and it is counted, not a quiet empty result: this
+    is the only thing that writes the reply now, so a missing key means the
+    product has nothing to say and somebody must be told.
+    """
+    base = (config.GRAPHRAG_BASE_URL or "").rstrip("/")
+    if not base or not config.GRAPHRAG_API_KEY:
+        raise RuntimeError("GraphRAG is not configured (base url or api key is empty)")
+
+    body: dict[str, Any] = {
+        "query": (query or "").strip()[:MAX_QUERY_CHARS],
+        "k": k or config.GRAPHRAG_TOP_K,
+    }
+    if document_ids:
+        body["document_ids"] = list(document_ids)
+    return base, {
+        "Authorization": f"Bearer {config.GRAPHRAG_API_KEY}",
+        "content-type": "application/json",
+    }, body
+
+
+def answer(
+    query: str, document_ids: Sequence[str] | None = None, k: int | None = None
+) -> dict:
+    """Blocking. POST /v1/answer -> {answer, citations, graph_used, ...}.
+
+    The non-streaming sibling, kept for tests and for any caller that cannot
+    stream. `answer` comes back with markers already stripped.
+    """
+    import httpx
+
+    base, headers, body = _answer_request(query, document_ids, k)
+    try:
+        response = httpx.post(
+            f"{base}/v1/answer",
+            headers=headers,
+            json=body,
+            # NEVER `verify=False`. An empty bundle falls back to the system
+            # trust store, which fails closed on an untrusted certificate.
+            verify=config.GRAPHRAG_CA_BUNDLE or True,
+            timeout=config.GRAPHRAG_ANSWER_TIMEOUT_S,
+        )
+        response.raise_for_status()
+        parsed = response.json()
+    except Exception as error:
+        _stamp_failure("answer", error)
+        raise
+
+    _stamp_success()
+    if not isinstance(parsed, dict):
+        return {"answer": "", "citations": []}
+    parsed["answer"] = strip_citation_markers(parsed.get("answer") or "")
+    return parsed
+
+
+def answer_stream(
+    query: str, document_ids: Sequence[str] | None = None, k: int | None = None
+) -> Iterator[str]:
+    """Blocking generator. Yields pieces of the reply as the model writes them.
+
+    The caller runs it off the event loop, exactly as `_search` is run.
+
+    Frames are `data: {"t": "<piece>"}` and the stream ends with a literal
+    `data: [DONE]`. The piece is JSON-encoded by the vendor precisely so a
+    newline or the text "[DONE]" inside it cannot break the framing, so it is
+    decoded rather than pattern-matched.
+
+    MARKERS CANNOT BE STRIPPED PER FRAME. A first attempt did exactly that and
+    the uuids came straight through: 2145 characters arrived as 729 frames, so
+    roughly three characters each, and every marker was split across several of
+    them. Nothing matched, and `[chunk:doc:<uuid>:3]` reached the reader.
+
+    So this holds back a tail instead. Once a `[` appears with no `]` after it,
+    everything from that `[` is buffered until the bracket closes - or until the
+    run is longer than any real marker, which means it was ordinary prose and is
+    released. Whitespace immediately before the `[` is held with it, so removing
+    " [ref]" does not leave a double space behind.
+    """
+    import httpx
+
+    base, headers, body = _answer_request(query, document_ids, k)
+    seen_done = False
+    buffer = ""
+
+    def _flush(text: str) -> tuple[str, str]:
+        """Split `text` into (safe to emit now, must be held back)."""
+        opened, closed = text.rfind("["), text.rfind("]")
+        if opened > closed and len(text) - opened <= _MAX_MARKER_CHARS:
+            # A marker may be forming. Hold it, and the whitespace in front of
+            # it, so removing " [ref]" does not leave the space behind.
+            held = opened
+            while held > 0 and text[held - 1] in " \t":
+                held -= 1
+            return text[:held], text[held:]
+        # No bracket pending - but trailing whitespace might be the space BEFORE
+        # a marker that has not arrived yet. Emitting it now is what produced a
+        # double space around every removed marker, because by the time the `[`
+        # showed up its leading space was already gone down the wire.
+        safe = text.rstrip(" \t")
+        return safe, text[len(safe) :]
+
+    try:
+        with httpx.stream(
+            "POST",
+            f"{base}/v1/answer/stream",
+            headers=headers,
+            json=body,
+            verify=config.GRAPHRAG_CA_BUNDLE or True,
+            timeout=config.GRAPHRAG_ANSWER_TIMEOUT_S,
+        ) as response:
+            response.raise_for_status()
+            for line in response.iter_lines():
+                if not line.startswith("data:"):
+                    continue
+                payload = line[5:].strip()
+                if payload == "[DONE]":
+                    seen_done = True
+                    break
+                try:
+                    piece = json.loads(payload).get("t", "")
+                except Exception:
+                    # One unreadable frame is not an outage. Skipping it loses a
+                    # few characters; aborting loses the whole consultation.
+                    continue
+                if not piece:
+                    continue
+                buffer += piece
+                ready, buffer = _flush(buffer)
+                if ready:
+                    cleaned = strip_citation_markers(ready)
+                    if cleaned:
+                        yield cleaned
+    except Exception as error:
+        _stamp_failure("answer/stream", error)
+        raise
+
+    if buffer:
+        # Whatever is still held back was never a marker, or the stream stopped
+        # mid-one. Strip and release it either way; dropping it would silently
+        # truncate the reply.
+        cleaned = strip_citation_markers(buffer)
+        if cleaned:
+            yield cleaned
+
+    if not seen_done:
+        # The connection ended without [DONE], so the reply is truncated. Say so
+        # rather than hand back half an answer that reads as complete - a plan
+        # cut off before "When To See A Doctor" is the dangerous half to lose.
+        _stamp_failure("answer/stream", "stream ended without [DONE]")
+        raise RuntimeError("GraphRAG stream ended before the answer was complete")
+
+    _stamp_success()
 
 
 class GraphRagRetriever:

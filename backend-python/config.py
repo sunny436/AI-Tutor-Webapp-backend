@@ -300,6 +300,19 @@ GRAPHRAG_MIN_RELEVANCE = float(_get("GRAPHRAG_MIN_RELEVANCE", "0.65"))
 # counter stayed at zero through a complete outage.
 GRAPHRAG_TIMEOUT_S = float(_get("GRAPHRAG_TIMEOUT_S", "2.5"))
 
+# Separate budget for /v1/answer and /v1/answer/stream, because those call a
+# model and the 2.5s above would abort every single one of them.
+#
+# MEASURED on this corpus, 2026-08-25: first token 13.6-18.9s, total 14.7-22.2s
+# for a covered question; ~5s when it abstains, because nothing is generated;
+# 43.8s worst case, a six-section instruction with no document filter. Scoping
+# the call with `document_ids` roughly halves it (39.7s -> 18.1s).
+#
+# 120s is deliberately far above the worst measurement rather than close to it.
+# The frontend allows 180s, so this still fails before the browser gives up and
+# the reader sees our error instead of a dead connection.
+GRAPHRAG_ANSWER_TIMEOUT_S = float(_get("GRAPHRAG_ANSWER_TIMEOUT_S", "120"))
+
 # Path to graphrag-internal-root.crt, to be passed to httpx as `verify=`. Must
 # point OUTSIDE the repo. NEVER set verify=False: the vendor doc is explicit that
 # it leaves the connection encrypted but UNAUTHENTICATED, which would let anyone

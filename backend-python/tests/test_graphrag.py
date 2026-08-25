@@ -24,7 +24,10 @@ down, which use the real field names. What is proven here:
   - an UNRECOGNISED shape raises loudly, naming the keys actually received,
     rather than silently returning nothing;
   - the project id is per-bot, never the global config value;
-  - /v1/answer is never called;
+  - THE RETRIEVER never calls /v1/answer. Answer generation is now a separate,
+    explicit path with its own section at the end of this file: it is only safe
+    because `document_ids` scopes it to one note, and it is never reached by
+    accident from retrieval;
   - certificate verification is never disabled;
   - a dead or slow service degrades the answer instead of failing the consult.
 
@@ -35,6 +38,7 @@ so this suite stays fast and deterministic even though the service is now live.
 from __future__ import annotations
 
 import asyncio
+import json
 import sys
 from pathlib import Path
 
@@ -433,6 +437,126 @@ check(
     result.is_empty,
     f"{len(result.chunks)} chunks",
 )
+
+# ===========================================================================
+# ANSWER GENERATION (stubbed: no network, no model)
+#
+# The retriever above must never call /v1/answer. These cover the separate,
+# deliberate path that does -- added when the vendor shipped `document_ids`,
+# which is what makes a generated answer safe to use at all.
+# ===========================================================================
+from src.retrieval import graphrag as G  # noqa: E402
+
+
+class _FakeStream:
+    """Stands in for `httpx.stream(...)`'s context manager."""
+
+    def __init__(self, lines, record):
+        self._lines, self._record = lines, record
+
+    def __call__(self, method, url, headers=None, json=None, timeout=None, verify=None):  # noqa: A002
+        self._record.append({"method": method, "url": url, "json": json or {}, "verify": verify})
+        return self
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def raise_for_status(self):
+        return None
+
+    def iter_lines(self):
+        return iter(self._lines)
+
+
+def run_stream(lines, **kwargs):
+    """Drive answer_stream over canned SSE lines. Returns (pieces, calls)."""
+    import httpx
+
+    record: list[dict] = []
+    real_stream = httpx.stream
+    real_key, real_base = config.GRAPHRAG_API_KEY, config.GRAPHRAG_BASE_URL
+    try:
+        httpx.stream = _FakeStream(lines, record)
+        config.GRAPHRAG_API_KEY = config.GRAPHRAG_API_KEY or "test-key"
+        config.GRAPHRAG_BASE_URL = config.GRAPHRAG_BASE_URL or "https://graphrag.test"
+        return list(G.answer_stream("gas", **kwargs)), record
+    finally:
+        httpx.stream = real_stream
+        config.GRAPHRAG_API_KEY, config.GRAPHRAG_BASE_URL = real_key, real_base
+
+
+def sse(*pieces):
+    out = []
+    for piece in pieces:
+        out.append("data: " + json.dumps({"t": piece}))
+        out.append("")
+    # The vendor terminates every healthy stream with this. Without it the
+    # reader is right to treat the reply as truncated -- see the test below.
+    out.append("data: [DONE]")
+    return out
+
+
+UUID = "92b813fb-9285-4650-9471-1235a961fa1b"
+
+# --- strip_citation_markers -------------------------------------------------
+for label, raw, want in [
+    ("chunk:doc: form", f"tight lagta hai [chunk:doc:{UUID}:0].", "tight lagta hai."),
+    ("chunk: form (validator drops these)", f"a [chunk:{UUID}:1] b", "a b"),
+    ("doc: form", f"c [doc:{UUID}:0] d", "c d"),
+    ("corrupted uuid", "x [chunk:doc:1b26bd74-fd01-4e4d-a869d-fe97ac6a2bf2:3] y", "x y"),
+    ("two adjacent", f"two [chunk:doc:{UUID}:1][chunk:doc:{UUID}:2] y", "two y"),
+    ("leaves prose alone", "no markers here [see below]", "no markers here [see below]"),
+]:
+    check(f"strip: {label}", G.strip_citation_markers(raw) == want, repr(G.strip_citation_markers(raw)))
+
+# --- streaming --------------------------------------------------------------
+pieces, record = run_stream(sse("Ajwain ", "madad ", "karta hai."), document_ids=["doc:x"])
+check("stream reassembles the reply", "".join(pieces) == "Ajwain madad karta hai.", repr("".join(pieces)))
+check("stream posts to /v1/answer/stream", record[0]["url"].endswith("/v1/answer/stream"), record[0]["url"])
+check("stream sends document_ids", record[0]["json"].get("document_ids") == ["doc:x"], str(record[0]["json"]))
+check("stream never disables TLS verification", record[0]["verify"] is not False, repr(record[0]["verify"]))
+check("stream caps the query at the vendor's 2000", G.MAX_QUERY_CHARS == 2000, str(G.MAX_QUERY_CHARS))
+
+# THE REGRESSION THIS FILE EXISTS FOR. Stripping each frame as it arrived let
+# every uuid through: 2145 characters arrived as 729 frames, so a marker is
+# always split across several. Split one deliberately.
+split = sse("Pet bhara lagta hai ", "[chunk:", "doc:" + UUID[:8], UUID[8:] + ":0", "]", " aur gas banti hai.")
+pieces, _ = run_stream(split)
+joined = "".join(pieces)
+check(
+    "a marker split across frames is still removed",
+    "chunk:" not in joined and "doc:" not in joined and "[" not in joined,
+    repr(joined),
+)
+check("and the prose around it survives intact", joined == "Pet bhara lagta hai aur gas banti hai.", repr(joined))
+
+# Prose in brackets must NOT be eaten just because it opened a bracket.
+pieces, _ = run_stream(sse("khaayein ", "[roz ", "subah] ", "garam paani"))
+check("bracketed prose is left alone", "".join(pieces) == "khaayein [roz subah] garam paani", repr("".join(pieces)))
+
+# --- truncation -------------------------------------------------------------
+# A stream that stops without [DONE] is a half-written plan. The section it
+# loses first is the last one, "When To See A Doctor".
+truncated = ["data: " + json.dumps({"t": "Root Cause: vata"}), ""]
+try:
+    run_stream(truncated)
+    check("a stream with no [DONE] raises rather than returning half an answer", False, "no exception")
+except RuntimeError as error:
+    check("a stream with no [DONE] raises rather than returning half an answer", True, str(error)[:60])
+
+# --- unconfigured -----------------------------------------------------------
+real_key = config.GRAPHRAG_API_KEY
+try:
+    config.GRAPHRAG_API_KEY = ""
+    G.answer("gas")
+    check("an unconfigured key is an error, not a quiet empty answer", False, "no exception")
+except RuntimeError as error:
+    check("an unconfigured key is an error, not a quiet empty answer", True, str(error)[:60])
+finally:
+    config.GRAPHRAG_API_KEY = real_key
 
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== graphrag: {passed}/{len(results)} passed =====")
