@@ -410,6 +410,183 @@ def _stamp_failure(what: str, error: object) -> None:
     print(f"[graphrag] {what} failed ({CONSECUTIVE_FAILURES} in a row): {error}")
 
 
+def _post_search(
+    query: str,
+    k: int | None = None,
+    document_ids: Sequence[str] | None = None,
+    project_id: str | None = None,
+) -> dict:
+    """POST /v1/search. Blocking; the caller runs it off the event loop.
+
+    Returns the WHOLE body, not just the passages, because the graph lives
+    alongside them in `entities` and `edges` and both are needed together -- an
+    edge only names entity ids, so it is meaningless without the entity list
+    from the same response.
+
+    Shared by the retriever and by the document-id lookup below, so there is one
+    place that knows the URL, the credential and the TLS rule.
+    """
+    import httpx
+
+    base = (config.GRAPHRAG_BASE_URL or "").rstrip("/")
+    # Unconfigured used to return {} quietly, which fell through to the success
+    # stamp -- so a rotated key on the SOLE grounding source read as perfect
+    # health forever. It is an error now, and it is counted.
+    if not base or not config.GRAPHRAG_API_KEY:
+        raise RuntimeError("GraphRAG is not configured (base url or api key is empty)")
+
+    body: dict[str, Any] = {"query": query, "k": k or config.GRAPHRAG_TOP_K}
+    if project_id:
+        body["project_id"] = project_id
+    if document_ids:
+        body["document_ids"] = list(document_ids)
+
+    response = httpx.post(
+        f"{base}/v1/search",
+        headers={
+            "Authorization": f"Bearer {config.GRAPHRAG_API_KEY}",
+            "content-type": "application/json",
+        },
+        json=body,
+        # NEVER `verify=False`. The vendor doc is explicit: it leaves the
+        # connection encrypted but UNAUTHENTICATED, letting anyone on the
+        # network read the API key in transit. An empty bundle falls back to the
+        # system trust store, which fails closed on an untrusted certificate.
+        verify=config.GRAPHRAG_CA_BUNDLE or True,
+        timeout=min(config.RETRIEVAL_TIMEOUT_S, config.GRAPHRAG_TIMEOUT_S),
+    )
+    response.raise_for_status()
+    parsed = response.json()
+    return parsed if isinstance(parsed, dict) else {"chunks": parsed}
+
+
+# ---------------------------------------------------------------------------
+# DOCUMENT SELECTION
+#
+# `document_ids` takes the GRAPH document id (`doc:<uuid>`), which is a
+# different id space from the PostgreSQL id that
+# GET /v1/projects/{id}/documents returns. The vendor's reference is explicit
+# that the two cannot be joined, and there is no endpoint that maps between
+# them -- so the only way to learn a note's graph id is to see it on a chunk.
+#
+# Hence: probe with the note's own name, read the id off whatever comes back,
+# and remember it. A probe usually names four or five other notes at the same
+# time, so the map fills up quickly on its own.
+# ---------------------------------------------------------------------------
+
+_DOCUMENT_IDS: dict[str, str] = {}
+
+
+def _harvest_ids(body: dict) -> None:
+    """Record every filename -> graph document id pair a response mentions."""
+    for chunk in body.get("chunks") or []:
+        if not isinstance(chunk, dict):
+            continue
+        filename, document_id = chunk.get("filename"), chunk.get("document_id")
+        if filename and document_id:
+            _DOCUMENT_IDS.setdefault(filename, document_id)
+
+
+def document_id_for(filename: str) -> str | None:
+    """The graph document id for a note, looked up once and cached.
+
+    The probe is the filename with its separators opened out -- "gas-bloating"
+    rather than "gas-bloating.md" -- because that is what the note is about and
+    it is the one string guaranteed to exist for every note, front matter or
+    not.
+    """
+    if filename in _DOCUMENT_IDS:
+        return _DOCUMENT_IDS[filename]
+    probe = Path(filename).stem.replace("-", " ").replace("_", " ")
+    try:
+        _harvest_ids(_post_search(probe, k=8))
+        _stamp_success()
+    except Exception as error:
+        _stamp_failure("document id lookup", error)
+        return None
+    return _DOCUMENT_IDS.get(filename)
+
+
+def pick_document(query: str, sticky: str | None = None) -> tuple[str | None, str | None]:
+    """Choose the ONE note this turn should be answered from.
+
+    Returns (filename, graph document id); either may be None.
+
+    Order, and the reason for it:
+
+    1. THE CONVERSATION'S ESTABLISHED TOPIC. A follow-up like "aur batao"
+       matches no alias at all, and asking the service cold returns an unrelated
+       menu -- measured, it offered thyroid, back pain and low mood to someone
+       three turns into a gas consultation. The topic is sticky until the user
+       plainly changes it.
+    2. THE ALIAS INDEX, which is author-written and categorical. Measured over
+       74 real queries it names the right note 73 times; the service on its own
+       manages 48.
+    3. THE SERVICE'S OWN TOP DOCUMENT, but only above GRAPHRAG_MIN_RELEVANCE.
+       Unfiltered, this step is dangerous rather than helpful: the service
+       always names something, so "car ka engine kharab hai" picked
+       joint-pain.md and "stock market kaisa hai" picked migraine-headache.md.
+       Scoping an answer to those would turn a correct refusal into a confident
+       reply about the wrong organ.
+    4. Nothing -- and then the caller sends no `document_ids` at all.
+
+    WHY A CONSERVATIVE FLOOR IS THE RIGHT TRADE HERE. Measured on this corpus:
+
+        covered   painful periods every month   period-pain.md      0.3675
+        covered   sugar control kaise kare      diabetes.md         0.7295
+        covered   skin par daane nikal rahe     acne.md             0.7602
+        uncovered naak se khoon aata hai        blood-pressure.md   0.6005
+        uncovered mujhe kaan me dard hai        back-pain.md        0.1936
+        uncovered car ka engine kharab hai      joint-pain.md       0.0526
+        vague     aur batao                     low-mood.md         0.0932
+
+    The two distributions overlap -- 0.3675 is covered and 0.6005 is not -- so
+    no threshold separates them cleanly, which is why the alias index runs
+    first and is allowed to bypass this floor entirely. For the residue, 0.65
+    rejects every uncovered query above, and the price is that "painful periods"
+    goes unscoped.
+
+    Unscoped is not a failure: it is exactly what happens today, and the
+    service's own grounding instruction still refuses off-topic questions
+    ("car ka engine kharab hai" -> "This is not covered in the documents").
+    So the worst case of a floor set too high is NO IMPROVEMENT, while the worst
+    case of one set too low is a confident answer from the wrong note. Fail
+    towards today's behaviour.
+    """
+    if sticky:
+        document_id = document_id_for(sticky)
+        if document_id:
+            return sticky, document_id
+
+    claimed = match_topics(query, collection=DEFAULT_COLLECTION_NAME)
+    if claimed:
+        document_id = document_id_for(claimed[0])
+        if document_id:
+            return claimed[0], document_id
+
+    try:
+        body = _post_search(query)
+        _harvest_ids(body)
+        _stamp_success()
+    except Exception as error:
+        _stamp_failure("document pick", error)
+        return None, None
+
+    passages = _read_passages(body)
+    best_score = max(
+        (s for s in (_first(p, _SCORE_KEYS) for p in passages) if isinstance(s, (int, float))),
+        default=0.0,
+    )
+    if best_score < config.GRAPHRAG_MIN_RELEVANCE:
+        return None, None
+
+    for passage in _top_document_only(passages, claimed):
+        filename = _first(passage, _SOURCE_KEYS)
+        if filename and filename in _DOCUMENT_IDS:
+            return filename, _DOCUMENT_IDS[filename]
+    return None, None
+
+
 # ---------------------------------------------------------------------------
 # ANSWER GENERATION
 #
@@ -639,36 +816,18 @@ class GraphRagRetriever:
         alongside them in `entities` and `edges` and both are needed together --
         an edge only names entity ids, so it is meaningless without the entity
         list from the same response.
+
+        The request itself lives in `_post_search`, shared with the document-id
+        lookup. The empty-project-id guard stays HERE rather than moving with
+        it: the vendor ignores `project_id` on this endpoint, so it buys no
+        isolation, but a blank one still means this deployment is misconfigured
+        and the retriever should go dark rather than call out with a bare scope.
         """
-        import httpx
-
-        base = (config.GRAPHRAG_BASE_URL or "").rstrip("/")
-        # Unconfigured used to return {} quietly, which fell through to the
-        # success stamp -- so a rotated key on the SOLE grounding source read as
-        # perfect health forever. It is an error now, and it is counted.
-        if not base or not config.GRAPHRAG_API_KEY or not project_id:
-            raise RuntimeError(
-                "GraphRAG is not configured (base url, api key or project id is empty)"
-            )
-
-        response = httpx.post(
-            f"{base}/v1/search",
-            headers={
-                "Authorization": f"Bearer {config.GRAPHRAG_API_KEY}",
-                "content-type": "application/json",
-            },
-            json={"query": query, "k": config.GRAPHRAG_TOP_K, "project_id": project_id},
-            # NEVER `verify=False`. The vendor doc is explicit: it leaves the
-            # connection encrypted but UNAUTHENTICATED, letting anyone on the
-            # network read the API key in transit. An empty bundle falls back to
-            # the system trust store, which is the correct default -- it fails
-            # closed on an untrusted cert rather than silently accepting one.
-            verify=config.GRAPHRAG_CA_BUNDLE or True,
-            timeout=min(config.RETRIEVAL_TIMEOUT_S, config.GRAPHRAG_TIMEOUT_S),
-        )
-        response.raise_for_status()
-        body = response.json()
-        return body if isinstance(body, dict) else {"chunks": body}
+        if not project_id:
+            raise RuntimeError("GraphRAG is not configured (project id is empty)")
+        body = _post_search(query, project_id=project_id)
+        _harvest_ids(body)
+        return body
 
     async def retrieve(self, ctx: RetrievalContext) -> RetrievalResult:
         # Per-bot scope on the remote index. See the module docstring.

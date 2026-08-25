@@ -501,6 +501,68 @@ def sse(*pieces):
 
 UUID = "92b813fb-9285-4650-9471-1235a961fa1b"
 
+# --- document picker (stubbed) ----------------------------------------------
+# The live 74-query sweep lives in the commit message and in pick_document's
+# docstring; these pin the DECISION ORDER, which is what a refactor breaks.
+def run_pick(chunks, query, sticky=None, seed=None):
+    """Drive pick_document over one canned /v1/search body."""
+    import httpx
+
+    calls.clear()
+    G._DOCUMENT_IDS.clear()
+    if seed:
+        G._DOCUMENT_IDS.update(seed)
+    real_post, real_key, real_base = httpx.post, config.GRAPHRAG_API_KEY, config.GRAPHRAG_BASE_URL
+    try:
+        httpx.post = make_post({"chunks": chunks})
+        config.GRAPHRAG_API_KEY = "test-key-not-a-real-credential"
+        config.GRAPHRAG_BASE_URL = "https://graphrag.invalid"
+        return G.pick_document(query, sticky=sticky), list(calls)
+    finally:
+        httpx.post, config.GRAPHRAG_API_KEY, config.GRAPHRAG_BASE_URL = real_post, real_key, real_base
+
+
+HIGH = [{"filename": "diabetes.md", "document_id": "doc:dia", "text": "sugar", "score": 0.73}]
+LOW = [{"filename": "joint-pain.md", "document_id": "doc:joint", "text": "knees", "score": 0.05}]
+
+(picked, doc_id), made = run_pick(HIGH, "aur batao", sticky="gas-bloating.md",
+                                  seed={"gas-bloating.md": "doc:gas"})
+check("picker: a sticky topic wins", picked == "gas-bloating.md" and doc_id == "doc:gas", str(picked))
+check("picker: and a sticky topic costs no search call", not made, f"{len(made)} calls")
+
+(picked, doc_id), _ = run_pick(
+    [{"filename": "gas-bloating.md", "document_id": "doc:gas", "text": "vata", "score": 0.51}],
+    "mujhe gas ho rahi hai",
+)
+check("picker: the alias index claims it", picked == "gas-bloating.md", str(picked))
+
+(picked, _), _ = run_pick(HIGH, "sugar control kaise kare")
+check("picker: falls back to the service above the floor", picked == "diabetes.md", str(picked))
+
+(picked, _), _ = run_pick(LOW, "car ka engine kharab hai")
+check(
+    "picker: picks NOTHING below the floor, so an off-topic question stays unscoped",
+    picked is None,
+    str(picked),
+)
+
+check(
+    "picker: the floor it uses is the configured one",
+    config.GRAPHRAG_MIN_RELEVANCE > 0.5,
+    str(config.GRAPHRAG_MIN_RELEVANCE),
+)
+
+G._DOCUMENT_IDS.clear()
+G._harvest_ids({"chunks": [{"filename": "a.md", "document_id": "doc:a"},
+                           {"filename": "b.md", "document_id": "doc:b"},
+                           {"filename": "c.md"}]})
+check(
+    "picker: one response fills the id map for every note it names",
+    G._DOCUMENT_IDS == {"a.md": "doc:a", "b.md": "doc:b"},
+    str(G._DOCUMENT_IDS),
+)
+G._DOCUMENT_IDS.clear()
+
 # --- strip_citation_markers -------------------------------------------------
 for label, raw, want in [
     ("chunk:doc: form", f"tight lagta hai [chunk:doc:{UUID}:0].", "tight lagta hai."),
