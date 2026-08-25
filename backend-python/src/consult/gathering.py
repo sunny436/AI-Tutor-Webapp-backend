@@ -10,8 +10,8 @@ the same funnel regardless of how much they had already said. Now the assistant
 asks one or two questions the way a person would, and keeps the thread.
 
 THIS IS NOT A SECOND ANSWER GENERATOR
-It asks questions; `responder.write_plan` still writes every final plan, and it
-is still the only thing that does. Same relationship `router.py` already has —
+It asks questions; GraphRAG's /v1/answer writes the final plan, scoped to one
+note. Same relationship `router.py` already has —
 that one writes greetings and refusals the user reads, on the same single model
 chain. This uses `llm.invoke` exactly as both of them do: no second provider, no
 separate service, no vendor `/v1/answer`.

@@ -3,9 +3,10 @@ retrieval/graphrag.py
 ---------------------
 The external GraphRAG document service, as one more retriever.
 
-THE AUTHORITATIVE SOURCE. This is where Ayurveda knowledge comes from. The local
-Chroma retriever still exists behind `config.LOCAL_RAG_ENABLED` as a rollback,
-but in production it is off and this is the only grounding the model receives.
+THE AUTHORITATIVE SOURCE. This is where Ayurveda knowledge comes from, and since
+the plan moved to /v1/answer it also WRITES it. The rollback is no longer the
+Chroma retriever behind `config.LOCAL_RAG_ENABLED` — it is `consult/offline.py`,
+which renders the note's own six sections with no network and no model at all.
 
 ⚠ IT IS NOT SELF-SUFFICIENT, AND THAT IS NOT OPTIONAL. Measured over the 74
 retrieval cases:
@@ -30,14 +31,29 @@ follows it exactly, so nothing downstream learns that a passage came from a
 remote service -- `to_prompt_block` renders it like any other section and
 `to_sources` emits a citation for it like any other chunk.
 
-/v1/search, NEVER /v1/answer
-The vendor exposes both. `/v1/answer` writes prose with its OWN model, which
-would put a second, unaudited LLM into a health product: it has never seen
-SYSTEM_RULES, so it does not know that it must not name a medicine (rule 2), must
-mirror the user's language (rule 6), or must not claim to be a practitioner
-(rule 7). It would also not produce the exact section headings the UI colours on.
-So this asks only for passages, and our single existing LLM still writes every
-word the user reads.
+/v1/search FOR RETRIEVAL, /v1/answer FOR THE PLAN — AND WHAT THAT COST
+This block used to say `/v1/answer` was never called, because it writes prose
+with its own model and has never seen SYSTEM_RULES. That reasoning was right and
+the objections are all still true: it cannot be told not to name a medicine, not
+to claim to be a practitioner, or to produce our six headings. The vendor
+confirmed there is no channel for any of it — the request is `query`, `k`,
+`graph_hops`, `exclude_relations`, and one fixed prompt template shared by every
+tenant.
+
+It is called anyway, deliberately, because on 2026-08-25 they shipped
+`document_ids`. Scoped to a single note the blending stops, and each objection is
+answered OUTSIDE their service instead:
+
+  - the six headings travel inside `query` (measured 6/6);
+  - `safety.scan` and the gathering red-flag check run above the call, so a
+    flagged turn never reaches it;
+  - `safety.names_medicine` stays as the backstop;
+  - the notes themselves carry the no-self-medication line, so grounding makes
+    the model repeat it.
+
+The retriever below still calls ONLY `/v1/search`. Answer generation is a
+separate, explicit path — `answer`, `answer_stream` — so nothing reaches the
+vendor's model by accident from retrieval.
 
 ISOLATION IS THE API KEY, NOT THE PROJECT ID
 This block used to claim the opposite: that reading `config.GRAPHRAG_PROJECT_ID`

@@ -117,8 +117,8 @@ SYSTEM_RULES = PERSONA_CORE + _GROUNDING_RULES
 # no-medication rule. The grounding rules are left out because nothing is
 # retrieved at this point — there is no supplied material to rank.
 #
-# It does NOT write the final answer. `responder.write_plan` remains the only
-# thing that does. This asks the next question and reports what it has learned.
+# It does NOT write the final answer. GraphRAG's /v1/answer does that now.
+# This asks the next question and reports what it has learned.
 #
 # `symptoms` is the field that matters most and the easiest to get wrong. It
 # feeds the vector query directly (see state.search_query), where sentences
