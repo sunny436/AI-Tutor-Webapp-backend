@@ -243,7 +243,28 @@ _SECTION_INSTRUCTION = (
 )
 
 
-def _plan_query(context: ConsultContext) -> str:
+def _wants_full_plan(context: ConsultContext) -> bool:
+    """Is this turn asking for the whole six-section plan, or one part of it?
+
+    A plan already written means the next ask is a follow-up, whatever its
+    wording. `phase` becomes "completed" only after the plan is generated, so on
+    the turn that first produces one this is still False - which is exactly
+    right.
+
+    This exists because the vendor reported the failure from their side: every
+    call we made carried the six-heading template regardless of what the user
+    typed, so "hn yr b iska liya yoga btao" - just tell me the yoga - came back
+    as the entire card set for the second time. Reproduced here before changing
+    anything: 6/6 headings, 1101 characters, on a one-line follow-up.
+
+    `is_followup_request` does not catch that phrasing and should not be made
+    to: it is a narrow classifier for "tell me more" and "say it in English".
+    Whether a plan already exists is a fact we hold, not a guess about wording.
+    """
+    return not (context.phase == "completed" and bool(context.last_answer))
+
+
+def _plan_query(context: ConsultContext, asked: str = "") -> str:
     """What we ask GraphRAG for, when GraphRAG writes the plan.
 
     DELIBERATELY NOT THE TRANSCRIPT. `query` is one string doing two jobs: it is
@@ -253,11 +274,40 @@ def _plan_query(context: ConsultContext) -> str:
     that matters in a symptom conversation. So it carries the complaint and what
     gathering understood, and nothing else.
 
-    The instruction goes LAST so the complaint leads the embedding.
+    THE TEMPLATE IS NOT ALWAYS APPENDED. It used to be, on every single call,
+    and the vendor found the consequence in their request logs before we found
+    it in a bug report: a user asking only for the yoga got the whole card set
+    again, because the model was being told to produce six headings no matter
+    what the person had typed.
+
+    It also cost retrieval on every call. `query` is one string doing two jobs -
+    the embedding for retrieval AND the question for the model - so 213
+    characters of pure instruction, carrying no topical signal at all, competed
+    with the symptom words for weight in the vector. On a follow-up the
+    instruction was most of the string.
+
+    So: a fresh plan gets the complaint and the template. A follow-up gets the
+    topic and the user's own words, and no template.
+
+    THE TOPIC HAS TO TRAVEL WITH IT. Sending the follow-up alone was tried and
+    is worse than the bug it fixes: "hn yr b iska liya yoga btao" carries no
+    topical signal at all - "iska" is "for this", and the service has no memory
+    of what "this" was - so it retrieved nothing and answered "I don't have
+    enough information to answer that." The vendor said as much in August:
+    a bare follow-up "has almost no retrieval signal of its own".
+
+    Prefixing the complaint is the same move `english_handle` makes for Hinglish
+    and the same one their own reply recommends: rewrite the follow-up into a
+    question that stands on its own before it leaves us.
     """
     complaint = " ".join(
         part for part in (context.problem, ", ".join(context.symptoms)) if part
     ).strip()
+
+    if not _wants_full_plan(context) and asked.strip():
+        narrow = f"{complaint} — {asked.strip()}" if complaint else asked.strip()
+        return narrow[: graphrag.MAX_QUERY_CHARS]
+
     room = graphrag.MAX_QUERY_CHARS - len(_SECTION_INSTRUCTION) - 2
     return f"{complaint[:room]}\n\n{_SECTION_INSTRUCTION}"
 
@@ -292,7 +342,9 @@ def _sticky_topic(context: ConsultContext) -> str | None:
     return None
 
 
-async def _plan_from_graphrag(context: ConsultContext) -> tuple[str, str | None, bool]:
+async def _plan_from_graphrag(
+    context: ConsultContext, asked: str = ""
+) -> tuple[str, str | None, bool]:
     """Write the plan. Returns (answer, source filename, served_offline).
 
     NO `document_ids`. THE VENDOR'S CORPUS DECIDES, NOT OURS. Scoping to one
@@ -324,7 +376,7 @@ async def _plan_from_graphrag(context: ConsultContext) -> tuple[str, str | None,
     the service is unreachable - which is precisely when it is needed.
     """
     note = _sticky_topic(context)
-    query = _plan_query(context)
+    query = _plan_query(context, asked)
 
     try:
         body = await asyncio.to_thread(graphrag.answer, query)
@@ -893,7 +945,11 @@ async def run_turn(
     #
     # `sections` is still resolved above and still cannot drop "When To See A
     # Doctor"; the instruction asks for all six every time.
-    answer, source_note, served_offline = await _plan_from_graphrag(context)
+    # `asked` is what the user typed THIS turn. Without it a follow-up cannot be
+    # told apart from a fresh complaint, and every turn asks for six headings.
+    answer, source_note, served_offline = await _plan_from_graphrag(
+        context, asked=typed or message
+    )
 
     if not answer:
         # Neither the service nor the note produced anything. Say so plainly
