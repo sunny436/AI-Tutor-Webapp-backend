@@ -60,11 +60,31 @@ const nextConfig = {
   },
 };
 
-export default withSentryConfig(nextConfig, {
+// ONLY WRAP WHEN THERE IS SOMEWHERE TO SEND ERRORS.
+//
+// `sentry.client.config.ts` sets `enabled: NODE_ENV === "production"` but takes
+// its dsn from NEXT_PUBLIC_SENTRY_DSN, which is EMPTY on the live host. So the
+// SDK initialised, reported to nowhere, and still shipped to every browser.
+// Measured on /en/login: the Sentry chunk is 95KB gzipped and 316KB to parse,
+// out of 302KB gzipped for the whole page — roughly a third of the JavaScript
+// on the first screen a user sees, doing nothing at all. On a phone that parse
+// cost is the wait people notice after tapping "Get started".
+//
+// Guarding `enabled` alone would not help: the import is static, so the bundle
+// ships either way. The wrapper is what injects it, so the wrapper is what has
+// to be conditional.
+//
+// Set NEXT_PUBLIC_SENTRY_DSN and rebuild to turn it back on. Same options, just
+// applied only when they can do something.
+const sentryOptions = {
   silent: !process.env.CI,
   telemetry: false,
   widenClientFileUpload: true,
   hideSourceMaps: true,
   disableLogger: true,
   tunnelRoute: "/monitoring",
-});
+};
+
+export default process.env.NEXT_PUBLIC_SENTRY_DSN
+  ? withSentryConfig(nextConfig, sentryOptions)
+  : nextConfig;
