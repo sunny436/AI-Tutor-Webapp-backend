@@ -584,6 +584,12 @@ for label, raw, want in [
     ("a plain hex run is not a citation", "hex a1b2c3d4e5f6 stays", "hex a1b2c3d4e5f6 stays"),
     ("the word doctor is not a doc: prefix", "doctor ko dikhaye", "doctor ko dikhaye"),
     ("and neither is the heading", "**When To See A Doctor**", "**When To See A Doctor**"),
+    # The vendor's own response fields are named `chunk_id` and `document_id`,
+    # so the model has seen those spellings and does reproduce them. A pattern
+    # that only knew `chunk:` walked past both.
+    ("chunk_id with a space", f"u (chunk_id: {UUID}) v", "u v"),
+    ("document_id", f"w document_id:{UUID} x", "w x"),
+    ("space after the colon", f"space chunk: doc:{UUID} here", "space here"),
     ("two adjacent", f"two [chunk:doc:{UUID}:1][chunk:doc:{UUID}:2] y", "two y"),
     ("leaves prose alone", "no markers here [see below]", "no markers here [see below]"),
 ]:

@@ -652,11 +652,16 @@ MAX_QUERY_CHARS = 2000
 #
 # The bare form REQUIRES an explicit `chunk:` or `doc:` prefix, so this can
 # never swallow an ordinary long hex string that happens to sit in the prose.
+# `chunk_id:` and `document_id:` are in here because the vendor's own response
+# fields are named that, so the model has seen them and does reproduce them. A
+# test caught that shape slipping past a pattern that only knew `chunk:`.
+# Whitespace after the colon is allowed for the same reason.
+_ID_PREFIX = r"(?:chunk(?:_id)?|doc(?:ument)?(?:_id)?)\s*:\s*"
+_UUIDISH = r"[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?"
 _CITATION_MARKER = re.compile(
     r"[ \t]*(?:"
-    r"[\[(]\s*(?:chunk:)?(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?\s*[\])]"
-    r"|chunk:(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?"
-    r"|doc:[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?"
+    rf"[\[(]\s*(?:{_ID_PREFIX})?(?:{_ID_PREFIX})?{_UUIDISH}\s*[\])]"
+    rf"|{_ID_PREFIX}(?:{_ID_PREFIX})?{_UUIDISH}"
     r")"
 )
 # Deleting " [ref]." leaves " ." behind.
@@ -669,10 +674,30 @@ _ORPHAN_SPACE = re.compile(r"[ \t]+([.,;:!?।])")
 _MAX_MARKER_CHARS = 80
 
 
+# Anything that still looks like an identifier AFTER stripping. This is a
+# detector, not a second stripper: it exists so a shape we have not seen yet
+# announces itself in the log instead of appearing on someone's screen.
+#
+# Three shapes have already had to be learned from live output rather than
+# reasoning - bracketed with a chunk index, bracketed without one, and bare -
+# and each was found by chance. Sampling production to catch the next one is
+# slow and mostly misses, so the code reports it itself.
+_RESIDUE = re.compile(r"(?:chunk(?:_id)?|doc(?:ument)?(?:_id)?)\s*:\s*\S{0,48}")
+
+
 def strip_citation_markers(text: str) -> str:
     """Remove inline citation markers, so no uuid is ever shown to a user."""
-    cleaned = _CITATION_MARKER.sub("", text or "")
-    return _ORPHAN_SPACE.sub(r"\1", cleaned)
+    cleaned = _ORPHAN_SPACE.sub(r"\1", _CITATION_MARKER.sub("", text or ""))
+
+    leftover = _RESIDUE.search(cleaned)
+    if leftover:
+        # The matched token only, never the prose around it - that prose is
+        # somebody's symptoms. This is enough to write the next pattern from.
+        print(
+            "[graphrag] CITATION SHAPE NOT STRIPPED: "
+            f"{leftover.group(0)!r} - add it to _CITATION_MARKER"
+        )
+    return cleaned
 
 
 def _answer_request(
