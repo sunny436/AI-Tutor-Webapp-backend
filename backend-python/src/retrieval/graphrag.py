@@ -526,6 +526,15 @@ def document_id_for(filename: str) -> str | None:
 def pick_document(query: str, sticky: str | None = None) -> tuple[str | None, str | None]:
     """Choose the ONE note this turn should be answered from.
 
+    ⚠ NOT CALLED IN PRODUCTION RIGHT NOW. `consult/graph.py` stopped sending
+    `document_ids` so that the vendor's corpus is the live one - add a note
+    there and it answers from it, delete one and it stops, with nothing to
+    deploy here. The docstring on `_plan_from_graphrag` records what that costs.
+
+    Kept, not deleted, because it is exactly what gets switched back on if the
+    unscoped answers turn out to mix notes too badly to live with. Its tests
+    still run, so it will still work when it is wanted.
+
     Returns (filename, graph document id); either may be None.
 
     Order, and the reason for it:
@@ -631,8 +640,13 @@ MAX_QUERY_CHARS = 2000
 # So this MATCHES LOOSELY AND DELETES. It never parses one. Provenance comes
 # from the `citations` array, which the vendor validates; the inline markers are
 # display noise and must not reach a reader.
+# The trailing `:N` is OPTIONAL, and requiring it was a real leak. Scoped to one
+# document the model writes `[chunk:doc:<uuid>:3]`; unscoped it cites whole
+# documents and writes `[chunk:<uuid>]` with no chunk index at all. The pattern
+# demanded the index, so the moment `document_ids` was dropped every uuid went
+# straight through to the reader. Caught by test_plan_live, not by reasoning.
 _CITATION_MARKER = re.compile(
-    r"[ \t]*\[\s*(?:chunk:)?(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}:\d+\s*\]"
+    r"[ \t]*\[\s*(?:chunk:)?(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?\s*\]"
 )
 # Deleting " [ref]." leaves " ." behind.
 _ORPHAN_SPACE = re.compile(r"[ \t]+([.,;:!?।])")

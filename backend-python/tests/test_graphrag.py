@@ -569,6 +569,11 @@ for label, raw, want in [
     ("chunk: form (validator drops these)", f"a [chunk:{UUID}:1] b", "a b"),
     ("doc: form", f"c [doc:{UUID}:0] d", "c d"),
     ("corrupted uuid", "x [chunk:doc:1b26bd74-fd01-4e4d-a869d-fe97ac6a2bf2:3] y", "x y"),
+    # No chunk index. This is what an UNSCOPED answer emits - it cites whole
+    # documents - and requiring the `:N` let every uuid through the day
+    # `document_ids` was dropped.
+    ("no chunk index", f"p [chunk:{UUID}] q", "p q"),
+    ("no chunk index, doc: form", f"r [doc:{UUID}] s", "r s"),
     ("two adjacent", f"two [chunk:doc:{UUID}:1][chunk:doc:{UUID}:2] y", "two y"),
     ("leaves prose alone", "no markers here [see below]", "no markers here [see below]"),
 ]:

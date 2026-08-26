@@ -295,30 +295,39 @@ def _sticky_topic(context: ConsultContext) -> str | None:
 async def _plan_from_graphrag(context: ConsultContext) -> tuple[str, str | None, bool]:
     """Write the plan. Returns (answer, source filename, served_offline).
 
-    `sticky` is the topic the CONSULTATION is about, taken from the original
-    complaint rather than the latest message. A follow-up like "aur batao"
-    matches no alias, and asked cold the service offered thyroid, back pain and
-    low mood to someone three turns into a gas consultation.
+    NO `document_ids`. THE VENDOR'S CORPUS DECIDES, NOT OURS. Scoping to one
+    note meant naming a filename we hold locally, so anything they added or
+    deleted on their side had no effect until somebody edited this repo. The
+    founder's call, made twice with the costs on the table, is that their corpus
+    should be the live one - upload a note there and it answers from it, delete
+    one and it stops, with nothing to deploy here.
 
-    On any failure this falls back to the note itself. That path is why the
-    change is safe to make at all: on 2026-08-25 every GraphRAG endpoint
-    returned 500 for most of a day, and after this commit GraphRAG is the only
-    thing that writes a plan.
+    Two measured costs, recorded so nobody rediscovers them as surprises:
+
+      - CITATIONS COME BACK EMPTY. Filtered, 4-5 resolve; unfiltered, zero, in
+        every sample. `sources` therefore falls through to what retrieval saw
+        rather than what the answer actually used, and the reader is not shown
+        which note it came from.
+      - IT MIXES NOTES. "gas aur bloating ke baare mein aur batao" cited
+        back-pain.md for "naram gadda ... AC seedha kamar par - yeh sab gas ko
+        badha sakte hain". A soft mattress is not a cause of gas. `document_ids`
+        exists because the vendor shipped it to stop exactly this.
+
+    There is also a dated risk: zero validated citations is one of the two
+    triggers for the vendor's abstain check. It is in shadow mode today, so it
+    computes and logs without changing the response. When they turn it on, this
+    request shape is the one it suppresses. Ask them to say so before they do.
+
+    `sticky` is the topic the CONSULTATION is about, taken from the original
+    complaint rather than the latest message. It is now used only to choose the
+    note for the offline fallback, and it stays local, so it still works when
+    the service is unreachable - which is precisely when it is needed.
     """
-    sticky = _sticky_topic(context)
+    note = _sticky_topic(context)
     query = _plan_query(context)
 
-    filename, document_id = await asyncio.to_thread(
-        graphrag.pick_document, query, sticky
-    )
-    # The alias index is local, so it still names a note when the network is
-    # gone - which is precisely when `pick_document` cannot return one.
-    note = filename or sticky
-
     try:
-        body = await asyncio.to_thread(
-            graphrag.answer, query, [document_id] if document_id else None
-        )
+        body = await asyncio.to_thread(graphrag.answer, query)
         answer = (body.get("answer") or "").strip()
         if answer:
             cited = [c.get("filename") for c in body.get("citations") or []]
