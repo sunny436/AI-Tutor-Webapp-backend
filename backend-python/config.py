@@ -36,6 +36,25 @@ OPENROUTER_APP_NAME = _get("OPENROUTER_APP_NAME", "Ayurveda & Yoga Assistant")
 GROQ_API_KEY = _get("GROQ_API_KEY", "")
 GROQ_MODEL = _get("GROQ_MODEL", "llama-3.3-70b-versatile")
 
+# Ollima = OpenAI-compatible gateway, one key, several vendors' models behind it.
+# Added because the plan moved to GraphRAG, so our own model now only runs the
+# intake, the router and the reworks - modest jobs where a fast free model is
+# worth more than a strong slow one.
+#
+# MEASURED on the intake's JSON task, which is the one that actually matters
+# because `gathering.py` needs `response_format: json_object` to come back
+# parseable:
+#
+#     deepseek-v4-flash      4.0s   valid JSON   (free on any plan)
+#     gemini-3.1-flash-lite  2.3s   valid JSON
+#     gpt-5.6-luna           9.2s   valid JSON
+#     glm-5.2               12.4s   BROKEN - wraps it in a ```json fence
+#
+# glm-5.2 is deliberately not in any chain. `repair.extract_json` would rescue
+# the fence, but a model that needs rescuing on every call is the wrong default.
+OLLIMA_API_KEY = _get("OLLIMA_API_KEY", "")
+OLLIMA_BASE_URL = _get("OLLIMA_BASE_URL", "https://api.ollima.com/v1")
+
 # Ollama = free local option (optional)
 OLLAMA_MODEL = _get("OLLAMA_MODEL", "llama3.2")
 OLLAMA_BASE_URL = _get("OLLAMA_BASE_URL", "http://localhost:11434")
@@ -392,6 +411,8 @@ def is_llm_ready() -> bool:
             return bool(GROQ_API_KEY) and GROQ_API_KEY != "your_free_groq_key_here"
         if provider == "openrouter":
             return bool(OPENROUTER_API_KEY)
+        if provider == "ollima":
+            return bool(OLLIMA_API_KEY)
         # Ollama runs locally with no credential — the genuine exception.
         return provider == "ollama"
 
@@ -406,7 +427,7 @@ def is_llm_ready() -> bool:
         head, separator, rest = entry.partition(":")
         provider = (
             head.lower()
-            if separator and rest and head.lower() in ("groq", "openrouter", "ollama")
+            if separator and rest and head.lower() in ("groq", "openrouter", "ollima", "ollama")
             else LLM_PROVIDER
         )
         if _usable(provider):

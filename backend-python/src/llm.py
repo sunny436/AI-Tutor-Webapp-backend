@@ -79,7 +79,7 @@ COOLDOWN_SECONDS = 900.0
 _cooldown: dict[str, float] = {}
 
 
-KNOWN_PROVIDERS = ("groq", "openrouter", "ollama")
+KNOWN_PROVIDERS = ("groq", "openrouter", "ollima", "ollama")
 
 
 def split_provider(name: str) -> tuple[str, str]:
@@ -128,6 +128,25 @@ def _build(model: str, temperature: float, json_mode: bool, max_tokens: int = 0)
             },
             **kwargs,
         )
+    if provider == "ollima":
+        # Same client as OpenRouter — it is the same wire protocol, just another
+        # key and host. No attribution headers: they are an OpenRouter dashboard
+        # feature and mean nothing here.
+        from langchain_openai import ChatOpenAI
+
+        kwargs = {}
+        if json_mode:
+            kwargs["model_kwargs"] = {"response_format": {"type": "json_object"}}
+        if max_tokens:
+            kwargs["max_tokens"] = max_tokens
+        return ChatOpenAI(
+            model=model,
+            api_key=config.OLLIMA_API_KEY,
+            base_url=config.OLLIMA_BASE_URL,
+            temperature=temperature,
+            timeout=config.LLM_TIMEOUT_SECONDS,
+            **kwargs,
+        )
     if provider == "groq":
         from langchain_groq import ChatGroq
 
@@ -148,7 +167,8 @@ def _build(model: str, temperature: float, json_mode: bool, max_tokens: int = 0)
     # and two config knobs that nothing exercised. Dead paths in a fallback ladder
     # are worse than absent ones: they look like safety that is not there.
     raise ValueError(
-        f"Unknown LLM_PROVIDER '{provider}'. Set it to 'openrouter' or 'groq' in .env."
+        f"Unknown LLM_PROVIDER '{provider}'. "
+        "Set it to 'openrouter', 'ollima' or 'groq' in .env."
     )
 
 

@@ -42,6 +42,17 @@ def expect(entry: str, provider: str, model: str) -> None:
 expect("groq:llama-3.3-70b-versatile", "groq", "llama-3.3-70b-versatile")
 expect("groq:openai/gpt-oss-120b", "groq", "openai/gpt-oss-120b")
 expect("ollama:llama3.2", "ollama", "llama3.2")
+expect("ollima:deepseek-v4-flash", "ollima", "deepseek-v4-flash")
+# Ollima ids can carry colons of their own, the same trap as OpenRouter.
+expect(
+    "ollima:tensorzero::model_name::glm-4.7",
+    "ollima",
+    "tensorzero::model_name::glm-4.7",
+)
+# "ollima" and "ollama" differ by one letter and are different providers -
+# one is a hosted OpenAI-compatible gateway, the other the local runtime.
+expect("ollima:x", "ollima", "x")
+expect("ollama:x", "ollama", "x")
 
 # --- THE case that motivated this: colons inside an OpenRouter id -----------
 expect(
@@ -82,7 +93,7 @@ for entry in (m.strip() for m in config.MODEL_CHAIN.split(",")):
     provider, model = split_provider(entry)
     check(
         f"chain entry {entry!r} resolves to a known provider",
-        provider in ("groq", "openrouter", "ollama") and bool(model),
+        provider in ("groq", "openrouter", "ollima", "ollama") and bool(model),
         f"({provider}, {model})",
     )
 
