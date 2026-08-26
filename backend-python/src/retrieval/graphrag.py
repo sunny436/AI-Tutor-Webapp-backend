@@ -660,7 +660,14 @@ _ID_PREFIX = r"(?:chunk(?:_id)?|doc(?:ument)?(?:_id)?)\s*:\s*"
 _UUIDISH = r"[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?"
 _CITATION_MARKER = re.compile(
     r"[ \t]*(?:"
+    # Bracketed, with an id. `[chunk:doc:<uuid>:3]` and friends.
     rf"[\[(]\s*(?:{_ID_PREFIX})?(?:{_ID_PREFIX})?{_UUIDISH}\s*[\])]"
+    # Bracketed, with the prefix but NO id at all - the model writes a bare
+    # `[chunk:]` when it means to cite and has nothing to cite. Found in
+    # production by the residue detector below, on its first day. The prefix is
+    # required here precisely so `[see below]` is not swallowed with it.
+    rf"|[\[(]\s*{_ID_PREFIX}\s*[\])]"
+    # Unbracketed. Always needs a prefix, so ordinary prose is safe.
     rf"|{_ID_PREFIX}(?:{_ID_PREFIX})?{_UUIDISH}"
     r")"
 )

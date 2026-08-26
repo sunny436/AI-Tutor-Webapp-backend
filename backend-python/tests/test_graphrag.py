@@ -590,6 +590,12 @@ for label, raw, want in [
     ("chunk_id with a space", f"u (chunk_id: {UUID}) v", "u v"),
     ("document_id", f"w document_id:{UUID} x", "w x"),
     ("space after the colon", f"space chunk: doc:{UUID} here", "space here"),
+    # An EMPTY citation. The model writes `[chunk:]` when it means to cite and
+    # has nothing to cite. Found in production by the residue detector on its
+    # first day, which is exactly what that detector is for.
+    ("empty citation", "pet phoolta hai [chunk:] aur gas banti hai.",
+     "pet phoolta hai aur gas banti hai."),
+    ("empty citation, doc: form", "a [doc:] b", "a b"),
     ("two adjacent", f"two [chunk:doc:{UUID}:1][chunk:doc:{UUID}:2] y", "two y"),
     ("leaves prose alone", "no markers here [see below]", "no markers here [see below]"),
 ]:
