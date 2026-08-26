@@ -574,6 +574,16 @@ for label, raw, want in [
     # `document_ids` was dropped.
     ("no chunk index", f"p [chunk:{UUID}] q", "p q"),
     ("no chunk index, doc: form", f"r [doc:{UUID}] s", "r s"),
+    # No brackets at all, and parentheses instead. A weaker model in the chain
+    # writes them this way, which a bracket-only pattern walked straight past.
+    ("parentheses", f"t (chunk:doc:{UUID}:2) u", "t u"),
+    ("bare, no brackets", f"bare chunk:doc:{UUID}:1 here", "bare here"),
+    ("bare doc: form", f"bare doc:{UUID} here", "bare here"),
+    # ...and the things that must survive untouched. The bare form requires an
+    # explicit prefix precisely so a long hex string in the prose is safe.
+    ("a plain hex run is not a citation", "hex a1b2c3d4e5f6 stays", "hex a1b2c3d4e5f6 stays"),
+    ("the word doctor is not a doc: prefix", "doctor ko dikhaye", "doctor ko dikhaye"),
+    ("and neither is the heading", "**When To See A Doctor**", "**When To See A Doctor**"),
     ("two adjacent", f"two [chunk:doc:{UUID}:1][chunk:doc:{UUID}:2] y", "two y"),
     ("leaves prose alone", "no markers here [see below]", "no markers here [see below]"),
 ]:

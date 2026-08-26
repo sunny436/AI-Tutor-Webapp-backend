@@ -645,8 +645,19 @@ MAX_QUERY_CHARS = 2000
 # documents and writes `[chunk:<uuid>]` with no chunk index at all. The pattern
 # demanded the index, so the moment `document_ids` was dropped every uuid went
 # straight through to the reader. Caught by test_plan_live, not by reasoning.
+# THE BRACKETS ARE OPTIONAL TOO. A weaker model writes the identifier bare -
+# `chunk:doc:<uuid>` with nothing around it, or in parentheses - and a
+# bracket-only pattern walks straight past it. Seen live the moment the free
+# models moved to the head of MODEL_CHAIN.
+#
+# The bare form REQUIRES an explicit `chunk:` or `doc:` prefix, so this can
+# never swallow an ordinary long hex string that happens to sit in the prose.
 _CITATION_MARKER = re.compile(
-    r"[ \t]*\[\s*(?:chunk:)?(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?\s*\]"
+    r"[ \t]*(?:"
+    r"[\[(]\s*(?:chunk:)?(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?\s*[\])]"
+    r"|chunk:(?:doc:)?[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?"
+    r"|doc:[0-9a-fA-F][0-9a-fA-F-]{7,}(?::\d+)?"
+    r")"
 )
 # Deleting " [ref]." leaves " ." behind.
 _ORPHAN_SPACE = re.compile(r"[ \t]+([.,;:!?।])")
