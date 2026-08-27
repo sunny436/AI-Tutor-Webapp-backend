@@ -188,9 +188,15 @@ async function questionLabels() {
       await go("/consult");
       await page.fill("textarea", message);
       await page.keyboard.press("Enter");
-      // A reply is a plain bot bubble, so wait for the typing dots to clear.
+      // Wait for the loading bubble to go. This used to watch `.animate-bounce`,
+      // which stopped existing when the loader was rebuilt - so the selector
+      // matched nothing, the wait resolved instantly, and this only LOOKED like
+      // it was waiting. The loader is wordless dots now, so there is no visible
+      // text to wait on either; the sr-only "Preparing your answer" inside the
+      // bubble is the stable handle, because it is an accessibility requirement
+      // rather than a styling detail and cannot be quietly dropped.
       await page.waitForFunction(
-        () => !document.querySelector(".animate-bounce"),
+        () => !document.body.textContent?.includes("Preparing your answer"),
         { timeout: SLOW },
       );
       await page.waitForTimeout(1200);
@@ -217,9 +223,11 @@ async function questionLabels() {
     await go("/consult");
     await page.fill("textarea", "what is ashwagandha?");
     await page.keyboard.press("Enter");
-    await page.waitForFunction(() => !document.querySelector(".animate-bounce"), {
-      timeout: SLOW,
-    });
+    // Same stable handle as above - see the note there.
+    await page.waitForFunction(
+      () => !document.body.textContent?.includes("Preparing your answer"),
+      { timeout: SLOW },
+    );
     await page.waitForTimeout(1200);
     if ((await cards().count()) > 0) throw new Error("cards shown for a general question");
     const bubbles = await page.locator("p.whitespace-pre-wrap").allTextContents();
