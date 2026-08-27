@@ -65,6 +65,7 @@ from src.consult.router import (
     Route,
     detect_language,
     has_health_signal,
+    is_about_uploaded_document,
     is_continuation_request,
     is_followup_request,
     is_personal_complaint,
@@ -582,12 +583,28 @@ async def run_turn(
                 )
 
 
+        # A question about a file they attached, from someone signed in.
+        #
+        # `knowledge` is the ONLY intent whose branch puts uploaded-report text in
+        # front of a model (see `route.intent == "knowledge"` below, which passes
+        # `principal` into `_retrieve`). The classifier has no intent for "what is
+        # in my file" and cannot learn one reliably, so this is decided here.
+        #
+        # `has_health_signal` is the guard that keeps this narrow: "mujhe acidity
+        # hai, meri report dekho" still opens a consultation, because it carries a
+        # complaint. Only the bare document question is redirected.
+        if (
+            (principal or {}).get("user_id")
+            and is_about_uploaded_document(message)
+            and not has_health_signal(message)
+        ):
+            route = Route(intent="knowledge")
         # Fast path: the alias index already named a topic and the wording is a
         # question, not "mujhe X hai". That is exactly what the classifier would
         # answer, so asking it costs ~2.5s of the user's wait for a verdict we
         # already have. Deliberately narrow - anything ambiguous still goes to
         # the model.
-        if match_topics(message) and not is_personal_complaint(message):
+        elif match_topics(message) and not is_personal_complaint(message):
             route = Route(intent="knowledge")
         else:
             route = await route_message(

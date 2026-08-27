@@ -433,6 +433,34 @@ def requested_language(text: str) -> str:
     return ""
 
 
+# Words for a file somebody has attached. The misspellings and the Devanagari
+# are deliberate: this is matched against what a person types on a phone, and
+# "docuemnt" / "rapot" are what actually arrives.
+_DOCUMENT_WORDS = re.compile(
+    r"\b(?:pdf|file|files|doc|docs|document|documents|docuemnt|report|reports|"
+    r"rapot|riport|attachment|attached|upload|uploaded)\b"
+    r"|रिपोर्ट|फाइल|दस्तावेज",
+    re.IGNORECASE,
+)
+
+
+def is_about_uploaded_document(text: str) -> bool:
+    """Is this a question ABOUT a file they attached, rather than a complaint?
+
+    The classifier has no intent for it. Measured on the live product: "ya pdf
+    kis bara ma ha", asked right after an upload, was classified `health`, which
+    opened a consultation and answered about a complaint from earlier in the
+    conversation while the file sat unread. The other two plausible outcomes are
+    `knowledge` (correct, by luck) and `other` (a flat refusal). Two of three
+    fail, and which one you get is a temperature-0.7 call.
+
+    So this is decided here rather than asked. Only the WORDING is checked; the
+    caller adds the two conditions that make it safe - that the person is signed
+    in, and that the message carries no health complaint of its own.
+    """
+    return bool(_DOCUMENT_WORDS.search(text or ""))
+
+
 def is_personal_complaint(text: str) -> bool:
     """Are they describing their OWN problem, or asking a general question?"""
     if _PERSONAL_MARKERS.search(text or ""):
