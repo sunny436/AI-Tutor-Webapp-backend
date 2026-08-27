@@ -447,6 +447,12 @@ it overrides everything else. The notes below are STORED in Hinglish; that is no
 a signal about how to reply - translate them into the language named above.
 Copying the notes'' language because it is in front of you is the mistake to avoid.
 
+If the block below contains MORE THAN ONE uploaded file, say what EACH file
+contains and name each one, rather than describing only the closest match. The
+files are labelled "from report:<filename>". Somebody who attached two reports
+and asks what they say is asking about both  -  answering about one and staying
+silent about the other reads as the second upload having failed.
+
 Answer directly and conversationally.
 
 --- TRUSTED AYURVEDA / YOGA KNOWLEDGE ---

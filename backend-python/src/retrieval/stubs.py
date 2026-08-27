@@ -93,6 +93,11 @@ class UploadedReportsRetriever(_Stub):
     MIN_RELEVANCE = config.REPORT_MIN_RELEVANCE
     TOP_K = config.REPORT_TOP_K
 
+    # How many chunks any ONE file may contribute when the question is about the
+    # attachments themselves. Two, not one: a single chunk off the top of a
+    # report is often just its header, which describes nothing.
+    PER_DOCUMENT = 2
+
     async def retrieve(self, ctx: RetrievalContext) -> RetrievalResult:
         # No verified user, no private data. `user_documents.search` refuses an
         # empty id as well; both checks stay, because this is the failure that
@@ -104,11 +109,29 @@ class UploadedReportsRetriever(_Stub):
 
         from src import user_documents
 
+        # A question ABOUT the attachments has to reach ALL of them. TOP_K is a
+        # global budget, so with several files the highest-scoring one can take
+        # every slot and the others are never mentioned - and a subject-less
+        # question scores them almost identically anyway (measured 0.322 against
+        # 0.288 for two unrelated reports), so which one wins is close to noise.
+        # Ask for enough rows that every file can be represented, then even them
+        # out below.
+        about_documents = bool(ctx.extras.get("document_question"))
+        filenames: list[str] = []
+        if about_documents:
+            try:
+                filenames = await asyncio.to_thread(
+                    user_documents.list_documents, ctx.user_id
+                )
+            except Exception:  # noqa: BLE001
+                filenames = []
+        k = max(self.TOP_K, len(filenames) * self.PER_DOCUMENT) if about_documents else self.TOP_K
+
         try:
             # Chroma is blocking, and this runs inside the request event loop
             # alongside the other retrievers - inline it would stall them all.
             hits = await asyncio.to_thread(
-                user_documents.search, ctx.user_id, ctx.query, self.TOP_K
+                user_documents.search, ctx.user_id, ctx.query, k
             )
         except Exception as error:  # noqa: BLE001
             # A broken document index must not take the consultation down: the
@@ -122,7 +145,22 @@ class UploadedReportsRetriever(_Stub):
         # no file was attached. The floor exists to keep an UNRELATED report out
         # of an unrelated answer; when the report IS the question, there is
         # nothing to keep out. Set only by `_retrieve` for that one turn.
-        floor = 0.0 if ctx.extras.get("document_question") else self.MIN_RELEVANCE
+        floor = 0.0 if about_documents else self.MIN_RELEVANCE
+        kept = [(f, t, s) for f, t, s in hits if s >= floor]
+
+        if about_documents and filenames:
+            # Cap each file's share so one long report cannot crowd the others
+            # out of the prompt. Order follows the score, so the closest match
+            # still leads; the point is only that nothing is missing.
+            per_file: dict[str, int] = {}
+            evened = []
+            for filename, text, score in kept:
+                if per_file.get(filename, 0) >= self.PER_DOCUMENT:
+                    continue
+                per_file[filename] = per_file.get(filename, 0) + 1
+                evened.append((filename, text, score))
+            kept = evened
+
         chunks = tuple(
             Chunk(
                 text=text,
@@ -130,7 +168,6 @@ class UploadedReportsRetriever(_Stub):
                 score=score,
                 metadata={"filename": filename},
             )
-            for filename, text, score in hits
-            if score >= floor
+            for filename, text, score in kept
         )
         return RetrievalResult(section=self.section, chunks=chunks)
