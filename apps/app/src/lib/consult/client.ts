@@ -1,14 +1,14 @@
 /**
  * The single place the dashboard talks to the AI backend.
  *
- * Replaces the hardcoded `AI_BACKEND = "http://localhost:4000"` that used to sit
- * in the consult page, so the URL is configurable per environment.
+ * Every call here goes to a same-origin Next.js route, never to the Python
+ * backend directly - the route re-derives a fresh session token server-side.
+ * The `AI_BACKEND_URL` export that used to live here is gone: its last consumer
+ * was the speak-aloud button. The Python host is still reached, but only from
+ * `server-session.ts`, which reads the env var itself.
  */
 
 import type { ConsultContext, ConsultRequest, ConsultResult } from "./types";
-
-export const AI_BACKEND_URL =
-  process.env.NEXT_PUBLIC_AI_BACKEND_URL ?? "http://localhost:4000";
 
 /**
  * Which brain answers: the local Python backend, or the central API.
@@ -111,7 +111,6 @@ function mockResult(request: ConsultRequest): ConsultResult {
 const CONSULT_ENDPOINT = "/api/consult";
 const CONSULT_STREAM_ENDPOINT = "/api/consult/stream";
 const UPLOAD_ENDPOINT = "/api/upload";
-const TRANSCRIBE_ENDPOINT = "/api/transcribe";
 
 /** Add `Authorization` only when a token exists, so anonymous calls stay clean. */
 function authHeaders(
@@ -355,38 +354,3 @@ export async function uploadDocument(
   return (await response.json()) as UploadResult;
 }
 
-export type TranscriptResult = {
-  text: string;
-  /** "english" | "hinglish" | "devanagari" - fed straight into context.language. */
-  language: string;
-};
-
-/** Turn a recorded clip into text, in whatever language was actually spoken. */
-export async function transcribeAudio(
-  blob: Blob,
-  token?: string | null,
-  signal?: AbortSignal,
-): Promise<TranscriptResult> {
-  const form = new FormData();
-  // The extension matters: the server passes the mime on to the model, and
-  // MediaRecorder produces webm on Chrome but mp4 on Safari.
-  const ext = blob.type.includes("mp4") ? "mp4" : "webm";
-  form.append("file", blob, `clip.${ext}`);
-
-  const response = await fetch(TRANSCRIBE_ENDPOINT, {
-    method: "POST",
-    headers: authHeaders(token),
-    body: form,
-    signal,
-  }).catch((error) => {
-    if ((error as Error)?.name === "AbortError") throw error;
-    throw new ConsultUnavailableError("Could not reach the AI backend.");
-  });
-
-  if (!response.ok) {
-    throw new ConsultUnavailableError(
-      `Could not transcribe that (${response.status}).`,
-    );
-  }
-  return (await response.json()) as TranscriptResult;
-}

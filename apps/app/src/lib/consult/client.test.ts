@@ -73,18 +73,6 @@ function stubFetch(calls: Call[], payload: unknown = {}) {
     calls[0]?.url,
   );
 
-  calls.length = 0;
-  await client.transcribeAudio(new Blob(["x"], { type: "audio/webm" }), "tok");
-  check(
-    "transcribe posts to /api/transcribe, NOT the backend directly",
-    calls[0]?.url === "/api/transcribe",
-    calls[0]?.url,
-  );
-  check(
-    "...and does not set Content-Type by hand (the boundary must survive)",
-    !Object.keys(calls[0]?.headers ?? {}).some((h) => h.toLowerCase() === "content-type"),
-    JSON.stringify(calls[0]?.headers),
-  );
 }
 
 // --- 2. bot_id rides on every turn -------------------------------------------

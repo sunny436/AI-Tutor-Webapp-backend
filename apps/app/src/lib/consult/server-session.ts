@@ -73,7 +73,7 @@ export function callerToken(request: Request, cookieToken: string | null): strin
  * Forward a multipart request to the Python backend, carrying the session token.
  *
  * WHY THIS EXISTS
- * `uploadDocument` and `transcribeAudio` used to post straight from the browser
+ * `uploadDocument` used to post straight from the browser
  * to `AI_BACKEND_URL`, which is exactly the pattern the consult route was moved
  * away from. The reason it had to move is documented at the top of
  * `app/api/consult/route.ts`: `@convex-dev/auth` refreshes a token only when
@@ -104,7 +104,9 @@ export async function proxyMultipart(
       Authorization: `Bearer ${token}`,
     },
     body,
-    // Transcription and OCR are slow; matches the consult route's budget.
+    // OCR is slow - a photographed report is rasterised and read page by
+    // page - so this matches the consult route's budget rather than a
+    // typical request's.
     signal: AbortSignal.timeout(180_000),
   });
 

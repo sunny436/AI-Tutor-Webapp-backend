@@ -25,13 +25,14 @@ const securityHeaders = [
   { key: "Content-Security-Policy", value: "frame-ancestors 'none'" },
   // Do not leak the full path of a health page in the Referer header.
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  // microphone=(self) is REQUIRED, not an oversight: use-voice.ts calls
-  // getUserMedia({audio:true}) for voice input. Denying it here breaks the mic
-  // button with a permissions error that looks nothing like a header problem.
-  // Camera and geolocation are genuinely unused, so they stay denied.
+  // Everything denied. microphone=(self) used to be here and was load-bearing:
+  // voice input called getUserMedia({audio:true}), and denying it broke the mic
+  // with a permissions error that looked nothing like a header problem. Voice is
+  // gone, so the permission goes with it - a page that cannot use a capability
+  // should not be asking the browser for it.
   {
     key: "Permissions-Policy",
-    value: "microphone=(self), camera=(), geolocation=(), interest-cohort=()",
+    value: "microphone=(), camera=(), geolocation=(), interest-cohort=()",
   },
 ];
 

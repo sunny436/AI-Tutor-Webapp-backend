@@ -25,11 +25,9 @@ import {
   FileText,
   Leaf,
   Loader2,
-  Mic,
   Paperclip,
   SendHorizonal,
   ShieldAlert,
-  Square,
 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
@@ -38,10 +36,8 @@ import {
   ConsultUnavailableError,
   postConsult,
   postConsultStream,
-  transcribeAudio,
   uploadDocument,
 } from "@/lib/consult/client";
-import { useVoiceRecorder } from "@/lib/consult/use-voice";
 import { CONSULTING } from "@/lib/consult/types";
 import type {
   ConsultContext,
@@ -56,7 +52,6 @@ import { AnswerSections } from "./_components/answer-sections";
 // imported any more. The files stay on disk, unreferenced, so this change is one
 // revert rather than a resurrection; they go in a later commit once the
 // conversational flow has run on real traffic.
-import { SpeakButton } from "./_components/speak-button";
 
 /**
  * `id` is what React reconciles on, and it has to be assigned when the turn is
@@ -176,7 +171,6 @@ function ConsultInner() {
   const [uploading, setUploading] = useState(false);
   const [documents, setDocuments] = useState<string[]>([]);
   const fileInput = useRef<HTMLInputElement>(null);
-  const voice = useVoiceRecorder();
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const composerRef = useRef<HTMLTextAreaElement>(null);
@@ -480,32 +474,6 @@ function ConsultInner() {
     }
   };
 
-  /** Record, transcribe, and put the text in the box - never send it blind. */
-  const toggleMic = async () => {
-    if (voice.state === "recording") {
-      const clip = await voice.stop();
-      if (!clip) return;
-      try {
-        const { text } = await transcribeAudio(clip, token);
-        if (!text) {
-          toast.error("Didn't catch that. Try again?");
-          return;
-        }
-        // Into the box, not straight to the backend. A mis-heard sentence should
-        // cost one edit, not one wrong consultation.
-        setInput((current) => (current ? `${current} ${text}` : text));
-      } catch {
-        toast.error("Could not transcribe that.");
-      }
-      return;
-    }
-    await voice.start();
-  };
-
-  useEffect(() => {
-    if (voice.error) toast.error(voice.error);
-  }, [voice.error]);
-
   const empty = turns.length === 0;
 
   /**
@@ -711,11 +679,6 @@ function ConsultInner() {
                       one import plus one line — but nothing in the UI reveals
                       which notes an answer was built from. `answer-sources.tsx`
                       stays on disk, unreferenced. */}
-                  {/* Error turns never reach here - they are filtered further
-                      up - so there is no guard against reading "the backend is
-                      unreachable" aloud. Hidden while streaming: there is
-                      nothing complete to read out yet. */}
-                  {!("streaming" in turn && turn.streaming) && <SpeakButton text={turn.text} />}
                 </div>
               </BotBubble>
             ),
@@ -788,20 +751,6 @@ function ConsultInner() {
             </div>
           )}
 
-          {voice.state === "recording" && (
-            <div className="mb-2 flex items-center gap-2 rounded-lg bg-destructive/10 px-3 py-1.5 text-2xs text-destructive">
-              <span aria-hidden className="h-2 w-2 animate-soft-pulse rounded-full bg-destructive" />
-              Listening… {voice.seconds}s
-              <button
-                type="button"
-                onClick={voice.cancel}
-                className="ml-auto underline hover:no-underline"
-              >
-                cancel
-              </button>
-            </div>
-          )}
-
           {/* The composer sits on the card surface rather than translucent
               white, so it reads as one solid object over the page wash instead
               of a pane of frosted glass. pb + safe-area keeps it clear of the
@@ -853,29 +802,6 @@ function ConsultInner() {
               // the zoom does not undo itself.
               className="max-h-40 flex-1 resize-none bg-transparent p-2 text-base leading-relaxed text-foreground outline-none placeholder:text-text-secondary sm:text-sm"
             />
-            <button
-              type="button"
-              onClick={toggleMic}
-              disabled={busy || voice.state === "processing"}
-              title={
-                voice.state === "recording"
-                  ? "Stop and transcribe"
-                  : "Speak your question - any language"
-              }
-              className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl transition disabled:opacity-40 ${
-                voice.state === "recording"
-                  ? "bg-destructive/15 text-destructive"
-                  : "text-text-secondary hover:bg-surface-2 hover:text-foreground"
-              }`}
-            >
-              {voice.state === "processing" ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : voice.state === "recording" ? (
-                <Square className="h-3.5 w-3.5 fill-current" />
-              ) : (
-                <Mic className="h-4 w-4" />
-              )}
-            </button>
             <button
               type="button"
               // `detail === 0` means the click came from Enter or Space on the

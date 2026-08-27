@@ -7,7 +7,6 @@ import {
   Languages,
   Leaf,
   MessageSquare,
-  Mic,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -77,11 +76,6 @@ const FEATURES = [
     icon: Languages,
     title: "Your language",
     body: "English, Hindi and Hinglish. Write however you speak; the reply comes back the same way.",
-  },
-  {
-    icon: Mic,
-    title: "Speak or type",
-    body: "Dictate your problem if typing is awkward. What you said goes into the box first, so you can correct it.",
   },
   {
     icon: FileText,
