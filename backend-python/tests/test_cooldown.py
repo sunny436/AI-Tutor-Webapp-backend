@@ -106,6 +106,27 @@ check(
     _classify(OPENROUTER),
 )
 
+# A provider dressing its own outage as a 401. Ollima returned this live, 8 of 8
+# calls, each after 60 seconds — and because nothing in it matched a marker it
+# was FATAL, so `invoke` gave up without ever reaching the two OpenRouter models
+# behind it in the same chain. Users saw the intake question repeated back.
+OLLIMA_POOL = (
+    "Error code: 401 - {'error': {'message': 'TensorZero authentication error: "
+    "Database error: pool timed out while waiting for an open connection'}}"
+)
+check(
+    "a provider outage disguised as 401 moves down the chain",
+    _classify(OLLIMA_POOL) == "exhausted",
+    _classify(OLLIMA_POOL),
+)
+# ...and the boundary that keeps it honest: a genuinely wrong key must still be
+# fatal, or every bad credential burns the whole chain before failing.
+check(
+    "a real bad key is still fatal",
+    _classify("Error code: 401 - Incorrect API key provided") == "fatal",
+    _classify("Error code: 401 - Incorrect API key provided"),
+)
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== cooldown: {passed}/{len(results)} passed =====")
 if passed != len(results):

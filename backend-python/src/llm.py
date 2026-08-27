@@ -63,7 +63,27 @@ _TRANSIENT = (
     "capacity", "try again",
 )
 # Does not clear on its own — drop this model and move down the chain.
-_EXHAUSTED = ("per day", "tpd", "quota", "insufficient_quota")
+#
+# "pool timed out" / "database error" are here because a provider dressed its
+# own outage as a 401. Ollima returned:
+#
+#     401 - TensorZero authentication error:
+#           Database error: pool timed out while waiting for an open connection
+#
+# Nothing in that matched any marker, so `_classify` called it FATAL and
+# `invoke` gave up on the spot — never reaching the two OpenRouter models
+# sitting behind it in the same chain. Measured live: 8 of 8 calls failed, each
+# after 60 seconds, and users got the intake question repeated back at them
+# because the model never answered.
+#
+# EXHAUSTED rather than TRANSIENT on purpose. The provider's backend is down,
+# not busy: waiting and retrying the same model burns another 60s for the same
+# answer, while moving down the chain gets a reply. The cooldown then stops us
+# reaching for it again every turn while it is still broken.
+_EXHAUSTED = (
+    "per day", "tpd", "quota", "insufficient_quota",
+    "pool timed out", "database error",
+)
 
 # Groq states its own backoff: "Please try again in 6.913s" / "in 2m30.5s".
 _RETRY_AFTER = re.compile(r"try again in (?:(\d+)m)?([\d.]+)s")
