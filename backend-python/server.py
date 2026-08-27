@@ -446,11 +446,29 @@ async def consult_stream(
         finally:
             await queue.put(None)
 
+    # Cloudflare gives up on an origin that has sent NOTHING and returns 524.
+    # A plan turn emits no tokens at all — the plan comes back whole from
+    # GraphRAG — so this generator used to sit silent on `queue.get()` for the
+    # entire turn and the reader got "AI service unavailable (524)" instead of
+    # their plan. Reproduced against production: 125 seconds, zero events.
+    #
+    # These are SSE COMMENTS. A line starting with ":" is ignored by every
+    # conforming reader, and `client.ts` only looks for `event:` lines, so they
+    # cost the frontend nothing and keep the connection demonstrably alive.
+    KEEPALIVE_SECONDS = 15
+
     async def events():
         task = asyncio.create_task(run())
         try:
+            # Immediately, so time-to-first-byte is milliseconds however long
+            # the turn itself takes.
+            yield ": open\n\n"
             while True:
-                item = await queue.get()
+                try:
+                    item = await asyncio.wait_for(queue.get(), KEEPALIVE_SECONDS)
+                except asyncio.TimeoutError:
+                    yield ": keepalive\n\n"
+                    continue
                 if item is None:
                     break
                 if isinstance(item, str):
