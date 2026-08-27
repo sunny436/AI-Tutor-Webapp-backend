@@ -200,10 +200,21 @@ async def _retrieve(
     context: ConsultContext,
     principal: dict | None,
     conversation_id: str | None = None,
+    document_question: bool = False,
 ):
+    """`document_question` is set when the user asked ABOUT their attachment.
+
+    It reaches `UploadedReportsRetriever` through `extras` and drops the
+    relevance floor for that one turn. Measured: "ya pdf kis bara ma ha" scores
+    nothing against a cardiology report, because a question with no subject has
+    no subject to be similar TO - so the floor filtered every chunk away and the
+    model, handed nothing, correctly reported that no file was attached. Asking
+    what a document says is the one case where similarity is the wrong tool.
+    """
     pipeline = get_pipeline()
     results = await pipeline.run(
         RetrievalContext(
+            extras={"document_question": True} if document_question else {},
             query=ctx_state.search_query(context),
             problem=context.problem,
             intake_summary=ctx_state.intake_summary(context),
@@ -642,7 +653,12 @@ async def run_turn(
 
         if route.intent == "knowledge":
             question_context = ConsultContext(problem=message)
-            pipeline, results = await _retrieve(question_context, principal, conversation_id)
+            pipeline, results = await _retrieve(
+                question_context,
+                principal,
+                conversation_id,
+                document_question=is_about_uploaded_document(message),
+            )
             answer = await write_knowledge(
                 message, knowledge_for_prompt(pipeline, results), context.language, on_token
             )

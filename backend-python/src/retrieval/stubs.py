@@ -116,6 +116,13 @@ class UploadedReportsRetriever(_Stub):
             print(f"[uploaded_reports] retrieval failed: {error}")
             return RetrievalResult(section=self.section, chunks=())
 
+        # A question ABOUT the attachment ("what is this pdf about") carries no
+        # subject, so it is similar to nothing and every chunk falls under the
+        # floor - the model is handed an empty block and truthfully answers that
+        # no file was attached. The floor exists to keep an UNRELATED report out
+        # of an unrelated answer; when the report IS the question, there is
+        # nothing to keep out. Set only by `_retrieve` for that one turn.
+        floor = 0.0 if ctx.extras.get("document_question") else self.MIN_RELEVANCE
         chunks = tuple(
             Chunk(
                 text=text,
@@ -124,6 +131,6 @@ class UploadedReportsRetriever(_Stub):
                 metadata={"filename": filename},
             )
             for filename, text, score in hits
-            if score >= self.MIN_RELEVANCE
+            if score >= floor
         )
         return RetrievalResult(section=self.section, chunks=chunks)
