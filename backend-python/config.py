@@ -85,7 +85,8 @@ OLLAMA_BASE_URL = _get("OLLAMA_BASE_URL", "http://localhost:11434")
 # Chat, the router and every other reasoning call run on OLLIMA. OpenRouter is
 # NOT in this chain and is not a fallback for it. It is kept for exactly two
 # jobs Ollima cannot do at all, each documented where it is configured:
-# embeddings (EMBEDDING_MODEL) and speech-to-text (STT_MODEL_CHAIN).
+# embeddings (EMBEDDING_MODEL). Speech-to-text used to be the second; it was
+# removed along with the microphone, so embeddings are now the only thing here.
 #
 # THERE IS NO CROSS-PROVIDER FALLBACK, by instruction. The cost is worth stating
 # plainly rather than discovering during an outage: when Ollima is unavailable
@@ -126,42 +127,20 @@ MODEL_CHAIN = _get(
     "ollima:gemini-3.5-flash-low",
 )
 
-# ---- Voice ----
-# Speech-to-text stays on OPENROUTER even though chat has moved to Ollima, and
-# that is a constraint rather than a preference: Ollima serves no speech model.
-# Its /v1/audio/transcriptions returns 404 and its catalogue lists no audio-in
-# model, so there is nothing to move this to. Re-check when their catalogue
-# grows; until then the mic button needs OpenRouter or it needs to be off.
+# ---- Voice: REMOVED ----
+# There is no speech in this product any more - no microphone in the composer,
+# no "Listen" on an answer. The endpoints, the model chain and the TTS settings
+# are gone with them, rather than left switched off.
 #
-# STT is a chain for the same reason MODEL_CHAIN is: the free tier is the right
-# default but is the first thing to rate-limit, so a paid model stands behind it.
-# Both are multimodal chat models rather than a dedicated transcription service,
-# which is what lets them return the DETECTED LANGUAGE alongside the transcript -
-# a plain speech-to-text endpoint would give the words and nothing else, and the
-# language is the whole reason a spoken Hindi question gets a Hindi answer.
-# Speech IN is free: `nemotron-omni` is the ONLY free model on OpenRouter that
-# accepts audio, and it is already the primary. The paid fallback was removed
-# with the rest, so a rate-limited transcription now fails rather than costing
-# money - the mic button reports it and the user can type instead.
-STT_MODEL_CHAIN = _get(
-    "STT_MODEL_CHAIN",
-    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-)
-
-# Speech OUT has NO free option. Checked against the live catalogue: of 400
-# models exactly four emit audio - openai/gpt-audio, openai/gpt-audio-mini, and
-# the two google/lyria models, which generate MUSIC, not speech. The two that
-# can read text aloud are both paid.
+# Both were already failing when they were removed, which is worth recording so
+# nobody restores them expecting them to work. Speech-to-text returned 402 from
+# OpenRouter, and text-to-speech had been off since it was written: of 400
+# models on the catalogue exactly four emit audio, two of those generate music,
+# and the two that read text aloud are both paid.
 #
-# So TTS is OFF by default. The "Listen" button reports that it is unavailable
-# rather than silently spending money on a key that is meant to be free-only.
-# To turn it back on, set TTS_MODEL=openai/gpt-audio-mini in .env and accept
-# ~$0.005 per answer read aloud.
-TTS_MODEL = _get("TTS_MODEL", "")
-TTS_VOICE = _get("TTS_VOICE", "alloy")
-TTS_ENABLED = bool(TTS_MODEL)
-# ~60s of speech is enough to describe a symptom and bounds the per-turn cost.
-MAX_AUDIO_SECONDS = int(_get("MAX_AUDIO_SECONDS", "60"))
+# Bringing either back means more than setting a variable: Ollima serves no
+# speech model at all (its /v1/audio/transcriptions is a 404), so speech would
+# put this product back on a second provider for that one feature.
 
 # Spend guards. A model that fails to stop is billed for everything it emits.
 #
@@ -391,7 +370,7 @@ HOST = _get("HOST", "127.0.0.1")
 RELOAD = _get("RELOAD", "0") == "1"
 
 # Require a valid Convex login token on the endpoints that cost money or CPU
-# (/consult, /upload, /transcribe, /speak).
+# (/consult and /upload).
 #
 # These used to accept anonymous callers on purpose — the reasoning was that a
 # logged-out tab should still be able to ask about turmeric. That was harmless

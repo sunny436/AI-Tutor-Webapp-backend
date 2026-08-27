@@ -575,63 +575,6 @@ async def delete_document(filename: str, authorization: str = Header(default="")
     return {"ok": True, "filename": filename}
 
 
-@app.post("/transcribe")
-async def transcribe_audio(
-    file: UploadFile = File(...),
-    authorization: str = Header(default=""),
-):
-    """Turn a recorded clip into text, in whatever language was actually spoken.
-
-    Returns the detected language alongside the transcript so the caller can set
-    the conversation language from it - somebody who speaks Hindi should not have
-    to also ask for a Hindi reply.
-
-    Signed-in callers only: speech-to-text runs against the model chain, so an
-    open endpoint here spends the same free-tier quota the consultations need.
-    """
-    require_user(authorization)
-    raw = await file.read()
-    if len(raw) > MAX_UPLOAD_BYTES:
-        raise HTTPException(status_code=413, detail="clip too large")
-    if not raw:
-        return {"text": "", "language": ""}
-
-    from src.llm import transcribe
-
-    mime = file.content_type or "audio/webm"
-    try:
-        return await asyncio.to_thread(transcribe, raw, mime)
-    except Exception as error:  # noqa: BLE001
-        print(f"[transcribe] failed: {error}")
-        raise HTTPException(status_code=502, detail="transcription failed")
-
-
-@app.post("/speak")
-async def speak_text(request: Request, authorization: str = Header(default="")):
-    """Read an answer aloud. Called only when the user presses the speaker icon."""
-    require_user(authorization)
-    if not config.TTS_ENABLED:
-        # No free model on OpenRouter emits speech, so this is off by default
-        # rather than quietly billing a key that is meant to cost nothing.
-        raise HTTPException(
-            status_code=503,
-            detail="Reading aloud needs a paid voice model. Set TTS_MODEL in .env.",
-        )
-
-    data = await request.json()
-    text = (data.get("text") or "").strip()
-    if not text:
-        return {"audio": "", "format": "wav"}
-
-    from src.llm import speak
-
-    try:
-        return await asyncio.to_thread(speak, text, data.get("voice", ""))
-    except Exception as error:  # noqa: BLE001
-        print(f"[speak] failed: {error}")
-        raise HTTPException(status_code=502, detail="speech generation failed")
-
-
 # ======================================================================
 #  B) CONVEX INTEGRATION (for the dashboard / template)
 # ======================================================================

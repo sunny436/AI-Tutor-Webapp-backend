@@ -18,7 +18,6 @@ calls the Python backend directly.
 browser ──POST /api/consult────────► Next.js route ──► Python backend :4000
         ──POST /api/consult/stream─►               ──►
         ──POST /api/upload─────────►               ──►
-        ──POST /api/transcribe─────►               ──►
 ```
 
 This is not a style choice. `@convex-dev/auth` refreshes a token only when
@@ -136,18 +135,17 @@ Fall back to `POST /api/consult` if the stream cannot be opened or ends without 
 
 ---
 
-## `POST /api/upload` · `POST /api/transcribe`
+## `POST /api/upload`
 
 `multipart/form-data`, one `file` field. Do **not** set `Content-Type` yourself —
 the browser must set it so it can add the multipart boundary.
 
 ```jsonc
 // /api/upload    -> { "filename": "report.pdf", "chars": 4821, "indexed": 12 }
-// /api/transcribe -> { "text": "mujhe gas ho rahi hai", "language": "hinglish" }
 ```
 
-`chars: 0` means nothing could be read from the file. `language` maps directly
-onto `context.language`.
+`chars: 0` means nothing could be read from the file - most often a scanned
+PDF, which is rasterised and OCR'd rather than parsed.
 
 ---
 

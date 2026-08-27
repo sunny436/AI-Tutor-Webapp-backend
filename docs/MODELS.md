@@ -13,14 +13,15 @@ wrong answer.
 | 2 | `gemini-3.1-flash-lite` | Chat, intake questions, gathering | Ollima | `config.PRIMARY_MODEL` |
 | 3 | `gemini-3.5-flash-low` | Chain fallback for 1 and 2 | Ollima | `config.MODEL_CHAIN[1]` |
 | 4 | `baai/bge-m3` | Embeddings — uploaded medical reports | OpenRouter | `config.EMBEDDING_MODEL` |
-| 5 | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` | Speech → text | OpenRouter | `config.STT_MODEL_CHAIN[0]` |
-| 6 | **unnamed** | **Writes the health answer / plan** | **GraphRAG vendor** | **not selectable — see below** |
-| — | *(none)* | Text → speech | off | `config.TTS_MODEL` empty |
+| 5 | **unnamed** | **Writes the health answer / plan** | **GraphRAG vendor** | **not selectable — see below** |
 
 Two hosts, and only two, are contacted by this backend for AI:
-`api.ollima.com` and `openrouter.ai` — plus `graphrag.internal` for #6.
+`api.ollima.com` and `openrouter.ai` — plus `graphrag.internal` for #5.
 
-## #6 is the one that surprises people
+OpenRouter now serves exactly ONE thing: embeddings. Speech-to-text was the
+other, and it was removed with the microphone.
+
+## #5 is the one that surprises people
 
 The text a user actually reads as their Ayurveda plan is **not written by any
 model this repo selects**. `consult/graph.py:382` calls `graphrag.answer(query)`
@@ -71,8 +72,7 @@ Against the OpenRouter chain this replaced, on the same four-turn conversation:
 ## There is no cross-provider fallback
 
 By instruction. OpenRouter is not a backstop for chat; it serves embeddings and
-speech and nothing else. **When Ollima is unavailable this product cannot
-answer.**
+nothing else. **When Ollima is unavailable this product cannot answer.**
 
 That is not hypothetical. On 2026-08-27 every Ollima chat call returned
 `401 TensorZero authentication error: Database error: pool timed out` after
@@ -96,23 +96,29 @@ re-ingested.
 The cost, stated plainly: text from uploaded medical reports now leaves this
 host.
 
-## Speech-to-text stays on OpenRouter — a constraint, not a preference
+## There is no speech in this product
 
-Ollima serves no speech model. `/v1/audio/transcriptions` returns 404 and its
-catalogue lists nothing that accepts audio, so there is nowhere to move it.
-Re-check when their catalogue grows; until then the mic button needs OpenRouter
-or it needs to be off.
+Both voice features are gone — the microphone in the composer and the "Listen"
+button on answers — along with `/transcribe`, `/speak`, `STT_MODEL_CHAIN` and
+the TTS settings. Removed, not switched off.
 
-Text-to-speech is off entirely. `TTS_MODEL` is empty, so `TTS_ENABLED` is false
-and `server.py` returns 503 before `speak()` is reached — the Listen button
-reports unavailable rather than quietly spending money.
+Both were already failing when they were removed, which is worth knowing before
+anyone restores them: speech-to-text returned `402 Payment Required` from
+OpenRouter, and text-to-speech had never been on, because of 400 models on the
+catalogue exactly four emit audio, two of those generate music, and the two that
+read text aloud are both paid.
+
+Restoring either is more than a setting. Ollima serves no speech model at all —
+`/v1/audio/transcriptions` is a 404 and its catalogue lists nothing that accepts
+audio — so speech would put this product back on a second provider for one
+feature.
 
 ## Known problems, as of 2026-08-27
 
-- **The mic button is broken.** Speech-to-text returns `402 Payment Required`.
-  The model is fine — it answers a text prompt with HTTP 200 — the OpenRouter
-  balance is not: $19.83 of $20 spent, ~$0.17 left. Embeddings still work but
-  run on the same balance, so uploaded reports go next.
+- **The OpenRouter balance is nearly spent**: $19.85 of $20, about $0.15 left.
+  It now pays for embeddings only, at roughly $0.0000001 a call, so it is not
+  urgent — but embeddings are what indexes and searches uploaded reports, and
+  when the balance does run out that feature stops.
 - **GraphRAG abstains on most questions.** Its corpus no longer contains this
   project's 29 notes; it holds Sanskrit source PDFs. The coverage check measures
   around 0.09 against a 0.65 floor, so the assistant says it has no information
@@ -129,9 +135,10 @@ independent layers while a real consultation ran:
    — the `model` argument, taken from the call itself.
 3. `httpx.HTTPTransport.handle_request` — raw httpx calls.
 
-Layer 3 caught **only** speech-to-text; the OpenAI SDK bypasses it entirely, and
-an earlier attempt patching `httpx.Client.send` missed just as much. Stopping at
-either would have reported "only speech-to-text runs", which is wrong. Layer 1 is
-the one to trust; layer 2 is what supplies model names.
+Layer 3 caught **only** the speech call (voice still existed when this was run);
+the OpenAI SDK bypasses it entirely, and an earlier attempt patching
+`httpx.Client.send` missed just as much. Stopping at either would have reported
+that one call as the whole system, which was wrong. Layer 1 is the one to trust;
+layer 2 is what supplies model names.
 
 Re-run it before believing any of the above has stayed true.
