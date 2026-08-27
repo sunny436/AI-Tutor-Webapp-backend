@@ -19,9 +19,13 @@ langchain-core>=0.3.0
 langchain-community>=0.3.0
 langchain-text-splitters>=0.3.0  # splits knowledge files into small chunks
 
-# ---- Talking to the free AI models ----
-langchain-groq>=0.2.0   # free CLOUD models (our default, needs a free key)
-langchain-ollama>=0.2.0 # free LOCAL models (optional)
+# ---- Talking to the AI models ----
+# Ollima and OpenRouter both speak the OpenAI wire format, so ONE client
+# serves both - only the key and base_url differ (see src/llm.py `_build`).
+#
+# langchain-groq and langchain-ollama were removed with the providers they
+# served. Groq is gone from the stack entirely, and nothing runs locally.
+# `_build` has no ollama branch, so langchain-ollama was already dead weight.
 # OpenRouter speaks the OpenAI wire format, so it uses the OpenAI client with a
 # different base_url (see src/llm.py `_build`). This was MISSING from this file
 # while config.py already defaulted LLM_PROVIDER to "openrouter" — a fresh
@@ -29,8 +33,15 @@ langchain-ollama>=0.2.0 # free LOCAL models (optional)
 langchain-openai>=0.2.0 # OpenRouter (second provider = separate daily budget)
 
 # ---- Ayurveda / Yoga knowledge search (RAG) ----
-langchain-huggingface>=0.1.0
-sentence-transformers>=3.0.0
+# NO local embedding model. langchain-huggingface and sentence-transformers
+# were removed: embeddings run on OpenRouter now (config.EMBEDDING_MODEL),
+# and sentence-transformers drags in torch - a multi-GB install on a 3.8 GB
+# host, for a model nothing loads any more.
+#
+# One casualty, deliberately accepted: scripts/eval_embeddings.py imports
+# sentence_transformers lazily to compare a local vector against the remote
+# one. That comparison was what proved the swap was exact (cosine 1.0000);
+# it has served its purpose. `pip install sentence-transformers` to re-run it.
 langchain-chroma>=0.1.4
 chromadb>=0.5.5
 

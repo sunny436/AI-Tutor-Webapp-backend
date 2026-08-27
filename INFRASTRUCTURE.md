@@ -336,7 +336,7 @@ Moving the database here did not move these. Each is a live dependency.
 | **Cloudflare** | all inbound traffic and DNS | site unreachable |
 | **Gmail SMTP** | auth emails — sign-in codes, password reset | nobody can sign up or reset |
 | **Google OAuth** | sign-in, when enabled (currently `false`) | Google sign-in only |
-| **GraphRAG** | retrieval queries, at `10.1.30.38` | currently `GRAPHRAG_ENABLED=0` |
+| **GraphRAG** | retrieval AND the health answer itself, at `10.1.30.38` | `GRAPHRAG_ENABLED=1`. Note the flag gates only retrieval - the vendor's `/v1/answer` is called on every plan turn regardless (see `consult/graph.py:382`), and the model that writes that text is the vendor's, not ours |
 | **Polar** | billing, if configured | billing only |
 
 This matters for a health product: the symptoms a user types are processed on
