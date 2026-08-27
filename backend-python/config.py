@@ -261,9 +261,27 @@ MIN_RELEVANCE = float(_get("KNOWLEDGE_MIN_RELEVANCE", "0.52"))
 REPORT_TOP_K = int(_get("REPORT_TOP_K", "4"))
 REPORT_MIN_RELEVANCE = float(_get("REPORT_MIN_RELEVANCE", "0.30"))
 
-# Per-retriever budget. Chroma answers in ~50ms warm; network-backed retrievers
-# need a cap so a wedged source cannot hold up the whole consultation.
-RETRIEVAL_TIMEOUT_S = float(_get("RETRIEVAL_TIMEOUT_S", "3.0"))
+# Per-retriever budget, and a cap so a wedged source cannot hold up the whole
+# consultation. The retrievers run concurrently (asyncio.gather in pipeline.py),
+# so this is the worst case for the pipeline, not a per-retriever sum.
+#
+# WAS 3.0, and that number came from an assumption this file used to state as
+# fact: "Chroma answers in ~50ms warm". It did, while the embedding model ran on
+# this machine. It does not now - every Chroma query first embeds the query
+# through OpenRouter, over the network.
+#
+# Measured on the VM, 2026-08-27, embedding baai/bge-m3 through OpenRouter:
+#   embed_query alone           0.64  0.72  0.64  0.67  2.05  seconds
+#   user_documents.search       0.58  0.60  0.64  0.67  0.68  1.90
+# Typical 0.6s, and a spike to 2.0s in six sequential calls with nothing else
+# running. Under a real turn every retriever fires at once and shares the loop
+# and the link, and 3.0s was duly observed dropping BOTH `uploaded_reports` and
+# `previous_conversations` in the same turn - which is how a user with two
+# attached reports was told "no documents were attached to your message".
+#
+# 8.0 is roughly four times the measured spike. Losing a user's own uploaded
+# report to an impatient timeout is a far worse failure than waiting.
+RETRIEVAL_TIMEOUT_S = float(_get("RETRIEVAL_TIMEOUT_S", "8.0"))
 
 # Is the LOCAL Chroma retriever allowed to ground an answer?
 #

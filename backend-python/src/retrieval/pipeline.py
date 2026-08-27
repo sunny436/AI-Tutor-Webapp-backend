@@ -23,10 +23,14 @@ from typing import Sequence
 import config
 from src.retrieval.base import Chunk, RetrievalContext, RetrievalResult, Retriever
 
-# Per-retriever budget. Chroma answers in ~50ms warm; the Convex-backed
-# retrievers are network calls, so this is the cap that keeps a slow or
-# wedged source from holding up the whole consultation.
-# Tunable via RETRIEVAL_TIMEOUT_S.
+# Per-retriever budget, the cap that keeps a slow or wedged source from holding
+# up the whole consultation. Retrievers run concurrently below, so this bounds
+# the pipeline rather than accumulating across it.
+#
+# Nothing here is local any more: the Convex retrievers were always network
+# calls, and since embeddings moved to OpenRouter so is every Chroma query -
+# it embeds the query remotely before it can search. The measurements and the
+# incident that set this number are recorded at config.RETRIEVAL_TIMEOUT_S.
 DEFAULT_TIMEOUT_S = config.RETRIEVAL_TIMEOUT_S
 
 
