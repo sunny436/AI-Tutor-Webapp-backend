@@ -15,7 +15,6 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import config
-from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 # The one collection this backend has. It was derived from a bot registry when
@@ -97,27 +96,40 @@ def _tokens(text: str) -> list[str]:
 
 # Module-level caches (loaded once, reused forever).
 #
-# The embedding MODEL is shared across collections on purpose — it is ~1.9GB and
-# carries no per-collection state. The vector STORES are keyed by collection,
+# The embedding CLIENT is shared across collections on purpose — it is a thin
+# HTTP client now, and carries no per-collection state. The vector STORES are keyed by collection,
 # which is what keeps uploaded reports out of the shared notes.
 _embeddings = None
 _vector_stores: dict[str, Chroma] = {}
 
 
 def get_embeddings():
-    """Load the (free, local) embedding model once and reuse it.
+    """The embedding client, built once and reused.
 
-    `normalize_embeddings` matters for scoring, not for ranking. Without it the
-    vectors keep their raw magnitude, Chroma's L2 distances come out large, and
-    the relevance mapping returns values like -17 for a chunk that is in fact the
-    correct one. Unit-length vectors put cosine distance in 0..2, so relevance
-    lands in a 0..1 range that a threshold can actually be set against.
+    OPENROUTER, NOT THIS MACHINE. bge-m3 used to be downloaded and held in
+    memory here — 1.9 GB on a 3.8 GB host, loaded before the first answer could
+    be given. It is now the same model called over the same OpenRouter key as
+    everything else.
+
+    The swap is exact, measured rather than assumed: 1024 dimensions both sides,
+    both unit-normalised, and the cosine between a local and a remote vector for
+    the same text is 1.0000. That matters because `MIN_RELEVANCE` is calibrated
+    per embedding model and vectors already stored in Chroma were written by the
+    local one — both stay valid, and nothing has to be re-ingested.
+
+    `check_embedding_ctx_length=False` because that pre-check tokenises with
+    tiktoken, which is OpenAI's tokeniser and not bge-m3's. Letting it run would
+    have it split text on the wrong boundaries for a model it does not describe.
     """
     global _embeddings
     if _embeddings is None:
-        _embeddings = HuggingFaceEmbeddings(
-            model_name=config.EMBEDDING_MODEL,
-            encode_kwargs={"normalize_embeddings": True},
+        from langchain_openai import OpenAIEmbeddings
+
+        _embeddings = OpenAIEmbeddings(
+            model=config.EMBEDDING_MODEL,
+            api_key=config.OPENROUTER_API_KEY,
+            base_url=config.OPENROUTER_BASE_URL,
+            check_embedding_ctx_length=False,
         )
     return _embeddings
 

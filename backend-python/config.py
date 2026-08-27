@@ -81,58 +81,57 @@ OLLAMA_BASE_URL = _get("OLLAMA_BASE_URL", "http://localhost:11434")
 # The router's latency is what the user feels first: nothing happens on a turn
 # until it returns, so speed outranks the fraction of a cent it saves.
 #
-# ---- FREE-ONLY, measured by scripts/eval_free_models.py ----
-# Every paid model was removed. The four tests are the ones that actually break
-# this product: JSON under the router token cap, section headings reproduced
-# character for character, an English question answered in English despite
-# Hinglish notes, and never naming a medicine.
+# ---- OLLIMA ONLY ----
+# Chat, the router and every other reasoning call run on OLLIMA. OpenRouter is
+# NOT in this chain and is not a fallback for it. It is kept for exactly two
+# jobs Ollima cannot do at all, each documented where it is configured:
+# embeddings (EMBEDDING_MODEL) and speech-to-text (STT_MODEL_CHAIN).
 #
-#   nvidia/nemotron-3-nano-30b-a3b:free      4/4   4.6s   <- STALE, see below
-#   google/gemma-4-26b-a4b-it:free           4/4  16.0s   <- fallback 1
-#   nvidia/nemotron-3-super-120b-a12b:free   4/4  18.7s   <- fallback 2
+# THERE IS NO CROSS-PROVIDER FALLBACK, by instruction. The cost is worth stating
+# plainly rather than discovering during an outage: when Ollima is unavailable
+# this product cannot answer at all, because there is no second provider to
+# reach for. That is not hypothetical — Ollima was returning
+#   401 "TensorZero authentication error: Database error: pool timed out"
+# on every chat call, after hanging for the full timeout, on the morning this
+# was written; it recovered a few minutes later. The failure was account-wide,
+# identical across every model, which is why a longer chain is not the answer:
+# each dead entry costs another LLM_TIMEOUT_SECONDS before the user is told it
+# failed, and none of them would have succeeded. Two entries, deliberately.
 #
-# RE-MEASURED 2026-08-10 (scripts/eval_chain_models.py) — the table above no
-# longer holds, so do not pick from it without re-running the script:
-#   nemotron-3-nano-30b-a3b:free   now FAILS. It spends the router's token cap on
-#                                  reasoning and returns no parseable JSON at all.
-#   gemma-4-26b-a4b-it:free        passes, 5 intake questions, but 58.7s not 16s
-#   nemotron-3-super-120b:free     passes, 4 intake questions, 58.3s
-# Free-tier models change under you; the script is the source of truth, not this
-# comment. The live chain lives in MODEL_CHAIN in .env.
-#   nvidia/nemotron-nano-9b-v2:free          3/4  10.8s   - returned empty JSON
-#   openrouter/free                          3/4  15.1s   - 0/4 headings, unusable
-#   openai/gpt-oss-20b:free                  3/4  20.2s   - rate-limited mid-run
-#   nvidia/nemotron-3-ultra-550b-a55b:free   3/4  33.4s   - named "antacid"
-#   google/gemma-4-31b-it:free               0/4          - 429 on every call
+# ---- measured 2026-08-27 by scripts/eval_chain_models.py, on the VM ----
+# Router JSON under the token cap, intent classification, and intake questions —
+# the two calls that decide whether a consultation happens at all:
 #
-# `openrouter/free` scoring 0/4 on headings is the one to remember: it would
-# render a completely blank answer, because AnswerSections drops anything whose
-# heading it cannot match exactly.
+#   ollima:gemini-3.1-flash-lite    ok  health  4 questions    6.5s  <- primary
+#   ollima:gemini-3.5-flash-low     ok  health  4 questions    9.3s  <- fallback
+#   ollima:gpt-oss-120b             ok  health  6 questions   21.9s
+#   ollima:deepseek-v4-flash        ok  health  6 questions   47.9s
+#   ollima:gemma4                   502 on every call — unusable
 #
-# The winner is also the fastest, which settles the usual quality-vs-latency
-# argument - there is nothing to trade here.
-PRIMARY_MODEL = _get("PRIMARY_MODEL", "nvidia/nemotron-3-nano-30b-a3b:free")
-ROUTER_MODEL = _get("ROUTER_MODEL", "nvidia/nemotron-3-nano-30b-a3b:free")
-# Tried in order when the primary is out of quota, spanning three vendors so one
-# provider outage cannot take out the chain. Ordered by measured score, then cost.
-# Claude and GPT-5-mini are deliberately absent: one failed the exact heading
-# strings the UI colour-codes, the other cannot emit JSON under a token cap.
-# All three scored 4/4. Ordered by measured latency.
-#
-# An honest limitation: only NVIDIA and Google ship free models that pass all
-# four tests, so this chain spans two vendors rather than three. It survives a
-# model being rate-limited - the common case on a free tier - but a full NVIDIA
-# outage would leave one option instead of two.
+# The two rejects are the useful part of this table. `deepseek-v4-flash` looks
+# like the obvious primary from its name and is the WORST choice here: it is a
+# reasoning model, so it spends tokens thinking before answering — 129 completion
+# tokens for "say ok" under a max_tokens of 5 — and takes 48s to do a job the
+# chosen model does in 6.5. It buys 6 intake questions instead of 4 for 7x the
+# wait, which is not a trade this product should make; slowness is the complaint
+# this project actually gets. `gpt-oss-120b` is the same trade, less extreme, and
+# is the one to promote if 4 questions ever proves too thin.
+PRIMARY_MODEL = _get("PRIMARY_MODEL", "ollima:gemini-3.1-flash-lite")
+# The router's latency is what the user feels first — nothing happens on a turn
+# until it returns — so the fastest measured model takes this job.
+ROUTER_MODEL = _get("ROUTER_MODEL", "ollima:gemini-3.1-flash-lite")
 MODEL_CHAIN = _get(
     "MODEL_CHAIN",
-    "nvidia/nemotron-3-nano-30b-a3b:free,"
-    "google/gemma-4-26b-a4b-it:free,"
-    "nvidia/nemotron-3-super-120b-a12b:free",
+    "ollima:gemini-3.1-flash-lite,"
+    "ollima:gemini-3.5-flash-low",
 )
 
 # ---- Voice ----
-# Speech in and speech out run on the SAME OpenRouter key as everything above -
-# there is one credential for the whole stack, not a separate speech vendor.
+# Speech-to-text stays on OPENROUTER even though chat has moved to Ollima, and
+# that is a constraint rather than a preference: Ollima serves no speech model.
+# Its /v1/audio/transcriptions returns 404 and its catalogue lists no audio-in
+# model, so there is nothing to move this to. Re-check when their catalogue
+# grows; until then the mic button needs OpenRouter or it needs to be off.
 #
 # STT is a chain for the same reason MODEL_CHAIN is: the free tier is the right
 # default but is the first thing to rate-limit, so a paid model stands behind it.
@@ -220,7 +219,22 @@ LLM_TIMEOUT_SECONDS = float(_get("LLM_TIMEOUT_SECONDS", "60"))
 # src/retrieval/knowledge.py documents itself as calibrated against bge-m3, and a
 # cosine threshold is only meaningful for the model it was measured on. Users
 # here type romanised Hindi, so the embedder has to cover it.
-EMBEDDING_MODEL = _get("EMBEDDING_MODEL", "BAAI/bge-m3")
+# Embeddings run on OPENROUTER now, not on this machine. Nothing is downloaded
+# and no model is held in memory.
+#
+# THE SWITCH IS EXACT, and that was measured rather than assumed: OpenRouter
+# serves `baai/bge-m3`, the identical model this used to run locally, and the
+# two agree perfectly — 1024 dimensions both sides, both unit-normalised, and
+# the cosine between a local and a remote vector for the same text is 1.0000.
+# So MIN_RELEVANCE stays calibrated and vectors already written under the local
+# model remain readable. Nothing has to be re-ingested.
+#
+# What it costs: uploaded medical reports are the only thing embedded, and that
+# text now leaves this host. A deliberate decision, not a default to drift into.
+#
+# What it buys: the 1.9 GB model is gone from a 3.8 GB machine, and the backend
+# no longer needs `sentence-transformers` or a warm-up before its first answer.
+EMBEDDING_MODEL = _get("EMBEDDING_MODEL", "baai/bge-m3")
 VECTOR_DB_DIR = _get("VECTOR_DB_DIR", "data/vector_store")
 KNOWLEDGE_DIR = _get("KNOWLEDGE_DIR", "data/knowledge")
 
