@@ -22,7 +22,6 @@ import { api } from "@v1/backend/convex/_generated/api";
 import { useMutation, useQuery } from "convex/react";
 import {
   AlertTriangle,
-  Check,
   FileText,
   Leaf,
   Loader2,
@@ -109,26 +108,6 @@ const STARTERS = [
   "Baal jhad rahe hain",
 ] as const;
 
-/**
- * What the backend is doing during the wait, in the order it does it.
- *
- * Measured on this deployment: question cards take ~17s and the final plan ~18s.
- * Three bouncing dots for two seconds read as thinking; for seventeen they read
- * as broken, and people reload — which abandons a request that was about to
- * succeed and costs another one.
- *
- * These are the real stages of `run_turn`, not invented reassurance: the router
- * classifies, `_retrieve` searches the notes, then the planner or responder
- * writes. The timings below are elapsed-time thresholds rather than events from
- * the server — an honest progress indication that does not claim more precision
- * than it has, and needs no protocol change to the existing SSE channel.
- */
-const STAGES = [
-  { at: 0, label: "Samajh raha hoon…", english: "Understanding" },
-  { at: 2500, label: "Notes dhoond raha hoon…", english: "Searching the notes" },
-  { at: 7000, label: "Aapke liye plan bana raha hoon…", english: "Writing your plan" },
-] as const;
-
 function newId() {
   try {
     return crypto.randomUUID();
@@ -204,23 +183,6 @@ function ConsultInner() {
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [turns, busy]);
-
-  /**
-   * How long the current request has been running, for the staged progress.
-   *
-   * Reset to 0 the moment `busy` turns true, so a second question does not
-   * inherit the first one's clock and skip straight to the last stage. Ticks
-   * once a second — the thresholds are seconds apart, so anything faster is
-   * re-rendering the transcript for no visible difference.
-   */
-  const [elapsed, setElapsed] = useState(0);
-  useEffect(() => {
-    if (!busy) return;
-    setElapsed(0);
-    const startedAt = Date.now();
-    const timer = window.setInterval(() => setElapsed(Date.now() - startedAt), 1000);
-    return () => window.clearInterval(timer);
-  }, [busy]);
 
   /**
    * Which conversation is on screen RIGHT NOW.
@@ -546,6 +508,28 @@ function ConsultInner() {
 
   const empty = turns.length === 0;
 
+  /**
+   * Is the reply already on screen?
+   *
+   * `busy` stays true for the whole request and the loader renders after every
+   * turn, so from the first token until `done` the reader would otherwise see
+   * the answer growing with its caret AND a loader underneath insisting nothing
+   * had started.
+   *
+   * No new state: a streaming reply is by construction the LAST turn with
+   * `streaming` set, the same invariant `streamToken` and
+   * `dropStreamingPlaceholder` are built on. Derived here, it cannot drift out
+   * of step with them.
+   *
+   * Deliberately NOT "busy for more than N ms". Several paths return no tokens
+   * at all — the mock provider, and every `postConsult` fallback inside
+   * `postConsultStream` (fetch failure, non-2xx, a stream that dies before
+   * `done`). Those wait out the whole turn in silence and must keep the dots.
+   */
+  const lastTurn = turns[turns.length - 1];
+  const answerArriving =
+    lastTurn?.who === "bot" && "streaming" in lastTurn && lastTurn.streaming === true;
+
   return (
     // `dvh` rather than `vh`: on mobile browsers the toolbar collapses as you
     // scroll and `vh` does not follow, which left the composer under the chrome.
@@ -737,38 +721,49 @@ function ConsultInner() {
             ),
           )}
 
-          {busy && (
+          {/* THREE DOTS, AND NO WORDS — and they step aside the moment there
+              is something to read. `busy` stays true for the whole request, so
+              without `answerArriving` this would sit beneath an answer that is
+              visibly streaming and claim it had not started.
+
+              This block used to narrate: a growing Hinglish checklist on
+              elapsed-time thresholds ("Samajh raha hoon…" -> "Notes dhoond raha
+              hoon…" -> "…plan bana raha hoon…"), spinner on the live line, tick
+              on the finished ones. Removed by decision, and the argument for it
+              is not a reason to bring it back. That argument was: turns took
+              ~17-18s, and seventeen seconds of dots read as broken, so people
+              reload and abandon a request that was about to succeed. Measured
+              again after the move to Ollima: 2.5s for an opening complaint,
+              7.0s worst case, first token at ~5.5s on the turns that stream.
+              The wait it was written for no longer exists.
+
+              If narration is ever wanted back, it has to come from real progress
+              events on the SSE channel — which carries only `token`, `done` and
+              `error` today — rather than from a clock that guesses, and it has
+              to go through i18n rather than hardcoded literals on a `[locale]`
+              route. */}
+          {busy && !answerArriving && (
             <BotBubble>
-              <div className="inline-flex flex-col gap-2 rounded-2xl rounded-tl-md border border-border bg-card px-4 py-3 elev-1">
-                {/* The surrounding log announces this block once when it
-                    appears. No nested live region — that would read it twice —
-                    and the stage label is deliberately NOT announced on every
-                    change, which would interrupt continuously for 17 seconds. */}
+              <div className="inline-flex items-center rounded-2xl rounded-tl-md border border-border bg-card px-4 py-3 elev-1">
+                {/* The surrounding log announces this once when it appears. No
+                    nested live region — that would read it twice. The dots are
+                    aria-hidden, so this line is the ONLY thing a screen reader
+                    gets while a request is in flight. */}
                 <span className="sr-only">Preparing your answer</span>
-                {STAGES.map((stage, index) => {
-                  const reached = elapsed >= stage.at;
-                  const current =
-                    reached && (index === STAGES.length - 1 || elapsed < STAGES[index + 1]!.at);
-                  if (!reached) return null;
-                  return (
+                {/* `animate-soft-pulse`, the same breath as the streaming caret
+                    above, NOT a bounce: it is the one animation globals.css
+                    switches off BY NAME under prefers-reduced-motion, and it
+                    fades instead of translating, which is what that block says
+                    matters. Reduced motion leaves three static brand dots. */}
+                <span aria-hidden className="flex items-center gap-1.5">
+                  {[0, 200, 400].map((delay) => (
                     <span
-                      key={stage.english}
-                      aria-hidden
-                      className="flex items-center gap-2 text-sm"
-                    >
-                      {current ? (
-                        <Loader2 className="h-3.5 w-3.5 shrink-0 animate-spin text-brand" />
-                      ) : (
-                        <Check className="h-3.5 w-3.5 shrink-0 text-brand" />
-                      )}
-                      <span
-                        className={current ? "text-foreground" : "text-text-secondary/70"}
-                      >
-                        {stage.label}
-                      </span>
-                    </span>
-                  );
-                })}
+                      key={delay}
+                      className="h-2 w-2 animate-soft-pulse rounded-full bg-brand"
+                      style={{ animationDelay: `${delay}ms` }}
+                    />
+                  ))}
+                </span>
               </div>
             </BotBubble>
           )}
