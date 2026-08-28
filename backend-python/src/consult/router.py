@@ -29,12 +29,12 @@ from src.llm import invoke as llm_invoke
 
 Intent = Literal[
     "health", "greeting", "casual", "thanks", "goodbye", "refusal", "about",
-    "knowledge", "other", "unavailable",
+    "knowledge", "document", "other", "unavailable",
 ]
 # "unavailable" is ours, never the model's — it means we couldn't reach the model.
 VALID_INTENTS = {
     "health", "greeting", "casual", "thanks", "goodbye", "refusal", "about",
-    "knowledge", "other",
+    "knowledge", "document", "other",
 }
 # Intents answered with a plain conversational reply rather than question cards.
 CONVERSATIONAL = {
@@ -662,6 +662,7 @@ def _route_sync(
     language: str = "",
     temperature: float = ROUTER_TEMPERATURE,
     avoid: str = "",
+    documents: str = "",
 ) -> Route:
     # `avoid` quotes back the sentence the model just produced and forbids it.
     #
@@ -688,6 +689,22 @@ def _route_sync(
                     # be faithful to yet - say so plainly rather than passing a
                     # blank the model has to interpret.
                     language=language or "not yet established",
+                    # WHAT THEY ATTACHED, by filename.
+                    #
+                    # Without this the classifier cannot place a question that
+                    # refers to a file without naming one. Measured on the live
+                    # product: "ya dusra wala kiss bara ma ha ?" - asked with two
+                    # files attached - was classified `other` and answered with
+                    # the off-topic refusal, because nothing in those words is
+                    # about Ayurveda and nothing in them says "document" either.
+                    #
+                    # A keyword list cannot close that. It was tried: it caught
+                    # "file", "pdf" and "report", and then broke on the next
+                    # phrasing, because "dusra wala" names no document at all -
+                    # it points at one. Resolving a reference is what the model
+                    # is for; it just has to be told there is something to
+                    # resolve against.
+                    documents=documents or "none",
                 )
                 + instruction
             )
@@ -714,7 +731,11 @@ def _route_sync(
 
 
 async def route_message(
-    message: str, history: str = "", greeted: bool = False, language: str = ""
+    message: str,
+    history: str = "",
+    greeted: bool = False,
+    language: str = "",
+    documents: str = "",
 ) -> Route:
     """Classify one user message in context and, when it isn't a complaint, answer it.
 
@@ -736,7 +757,10 @@ async def route_message(
         return Route(intent="casual", reply="")
 
     try:
-        route = await asyncio.to_thread(_route_sync, text, history, greeted, language)
+        route = await asyncio.to_thread(
+            _route_sync, text, history, greeted, language,
+            ROUTER_TEMPERATURE, "", documents,
+        )
     except Exception as error:  # noqa: BLE001
         detail = str(error)
         print(f"[consult] router failed: {detail}")
@@ -772,6 +796,7 @@ async def route_message(
                     language,
                     REPEAT_RETRY_TEMPERATURE,
                     route.reply,
+                    documents,
                 )
                 if retried.reply and not _repeats_any(retried.reply, previous):
                     route = retried

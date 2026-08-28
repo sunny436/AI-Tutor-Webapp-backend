@@ -400,6 +400,27 @@ for phrase in REAL_COMPLAINTS:
     check(f"still a health signal: {phrase!r}", has_health_signal(phrase))
 
 
+# ---------------------------------------------------------------------------
+# The router must be TOLD what is attached, or it cannot resolve a reference to
+# it. "ya dusra wala kiss bara ma ha ?" names no document - it points at one -
+# and with nothing in the FACTS block to point AT, the classifier put it on
+# `other` and answered with the off-topic refusal while two files sat indexed.
+#
+# A keyword list cannot close this, and one was tried: it caught "file", "pdf"
+# and "report", then broke on the next phrasing. Resolving a reference is the
+# model's job; it only needs something to resolve against.
+from src.consult.router import VALID_INTENTS  # noqa: E402
+from src.prompts import ROUTER_PROMPT  # noqa: E402
+
+check("the router has a `document` intent", "document" in VALID_INTENTS)
+check("...and the prompt is given the attached files", "{documents}" in ROUTER_PROMPT)
+# Checked as a single-line literal on purpose: the sentence around it is
+# hand-wrapped, so asserting on a phrase would fail the moment the wrap moves.
+check(
+    "...and says the intent is unavailable when nothing is attached",
+    'list says "none"' in ROUTER_PROMPT,
+)
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== conversational: {passed}/{len(results)} passed =====")
 if passed != len(results):

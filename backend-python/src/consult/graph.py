@@ -196,6 +196,30 @@ def _escalate(
     )
 
 
+async def _attached_filenames(principal: dict | None) -> list[str]:
+    """Filenames this signed-in user has indexed, for the router's FACTS block.
+
+    Cheap: a metadata read on the local Chroma collection, no embedding call and
+    no network - measured at 0.00s, unlike `user_documents.search`, which has to
+    embed the query remotely first.
+
+    Empty for anonymous callers, which is what makes the `document` intent
+    unavailable to them: the prompt says the intent does not exist when the list
+    is "none", so nobody can ask about a file they have not attached, and nobody
+    can ask about somebody else's.
+    """
+    user_id = (principal or {}).get("user_id")
+    if not user_id:
+        return []
+    try:
+        from src import user_documents
+
+        return await asyncio.to_thread(user_documents.list_documents, user_id)
+    except Exception as error:  # noqa: BLE001 - never let this block routing
+        print(f"[consult] could not list attachments: {error}")
+        return []
+
+
 async def _retrieve(
     context: ConsultContext,
     principal: dict | None,
@@ -625,6 +649,11 @@ async def run_turn(
                 # Resolved just above, so an explicit "answer in Hindi from now
                 # on" takes effect on THIS reply rather than the next one.
                 language=context.language,
+                # The filenames this person has attached, so the classifier can
+                # resolve a REFERENCE to one. Without it "ya dusra wala kis bare
+                # mein hai" is unplaceable - it names no document, it points at
+                # one - and it was landing on `other`, the off-topic refusal.
+                documents=", ".join(await _attached_filenames(principal)) or "",
             )
 
         if route.intent == "unavailable":
@@ -651,13 +680,26 @@ async def run_turn(
                 kind="chat", message=route.reply, answer=route.reply, context=context
             )
 
-        if route.intent == "knowledge":
+        if route.intent in ("knowledge", "document"):
+            # One path, two intents. `document` differs only in that the answer
+            # must come from the attachment even when the question is too vague
+            # to match it - "what is this about" is similar to nothing in
+            # particular, so the relevance floor would filter the whole file
+            # away and the model would truthfully report that nothing was
+            # attached. `document_question` drops that floor for this turn.
+            #
+            # The keyword check stays as a second source. The classifier is a
+            # temperature-0.7 call and this is deterministic, so an obvious
+            # phrasing ("is file me kya likha hai") does not depend on it.
             question_context = ConsultContext(problem=message)
             pipeline, results = await _retrieve(
                 question_context,
                 principal,
                 conversation_id,
-                document_question=is_about_uploaded_document(message),
+                document_question=(
+                    route.intent == "document"
+                    or is_about_uploaded_document(message)
+                ),
             )
             answer = await write_knowledge(
                 message, knowledge_for_prompt(pipeline, results), context.language, on_token

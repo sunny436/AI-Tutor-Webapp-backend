@@ -245,6 +245,7 @@ a medicine) and rule 7 (you are an AI, not a doctor).
 --- FACTS ---
 Already greeted this user: {greeted}
 Conversation language: {language}
+Files this user has attached: {documents}
 
 INTENTS
 - "health"   : describing a symptom, condition or health goal IN THEIR OWN BODY
@@ -264,6 +265,18 @@ INTENTS
 - "about"    : asking who or what you are, or what you can do
 - "knowledge": a general Ayurveda/Yoga question needing no personal consultation
                ("what is ashwagandha?", "benefits of surya namaskar")
+- "document": asking about a FILE THEY ATTACHED, named in the FACTS above. Use
+               this whenever the attached-files list is not "none" and the
+               message points at one of them - by name ("what does the blood
+               report say"), by word ("is file me kya likha hai", "tell me about
+               the pdf"), BY POSITION ("ya dusra wala kis bare mein hai", "the
+               first one", "the other document"), or by a pronoun that can only
+               mean the attachment ("isme kya hai", "ye kis bare mein hai").
+               A question about a value inside it is also "document" - "meri
+               report me haemoglobin kitna hai".
+               If the attached-files list says "none", this intent is not
+               available: nothing has been attached, so nothing can be asked
+               about.
 - "other"    : ANY question about the world that isn't health  -  sport, news,
                politics, geography, maths, code, celebrities, history. If they
                are asking you for a FACT and it isn't about health, Ayurveda or
