@@ -47,6 +47,11 @@ chromadb>=0.5.5
 
 # ---- Reading uploaded medical documents ----
 pypdf>=5.0.0
+# Rasterises a SCANNED pdf so it can be OCR'd - see _ocr_pdf in
+# src/documents.py. PyMuPDF rather than pdf2image because it renders in
+# process: pdf2image shells out to poppler-utils, a system package that
+# would have to be installed on every host separately from pip.
+pymupdf>=1.24.0
 pdfplumber>=0.11.0
 pytesseract>=0.3.13     # OCR for images (needs the free Tesseract program)
 pillow>=10.4.0

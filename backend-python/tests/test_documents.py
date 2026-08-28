@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src import user_documents  # noqa: E402
-from src.documents import extract_text  # noqa: E402
+from src.documents import _OCR_PAGE_LIMIT, extract_text  # noqa: E402
 
 passed = 0
 failed: list[str] = []
@@ -181,6 +181,109 @@ check(
 )
 
 user_documents.remove_document(BOB, BOB_FILE)
+
+
+print("\n--- 6. scanned pdfs (no text layer) ---")
+
+# A scan is a PICTURE of a document, so pypdf and pdfplumber find nothing in it -
+# and that is the common form of an Indian lab report. Before the OCR fallback
+# the SAME report succeeded as a JPG and produced an empty document as a PDF,
+# with the user told their scan was unreadable when nothing had been tried.
+#
+# Built here rather than committed as a fixture: a real scan is somebody's
+# medical record, and a generated one can assert on values it put there itself.
+
+
+def _scanned_pdf(lines_per_page: list[list[str]]) -> str:
+    """Write a pdf whose pages are images, with no text layer at all."""
+    import io
+
+    import pymupdf
+    from PIL import Image, ImageDraw, ImageFont
+
+    try:
+        font = ImageFont.truetype(
+            "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 34
+        )
+    except Exception:
+        font = ImageFont.load_default()
+
+    doc = pymupdf.open()
+    for lines in lines_per_page:
+        image = Image.new("RGB", (1240, 620), "white")
+        draw = ImageDraw.Draw(image)
+        y = 30
+        for line in lines:
+            draw.text((40, y), line, fill="black", font=font)
+            y += 52
+        buf = io.BytesIO()
+        image.save(buf, format="PNG")
+        page = doc.new_page(width=620, height=310)
+        page.insert_image(pymupdf.Rect(0, 0, 620, 310), stream=buf.getvalue())
+    path = tempfile.mktemp(suffix=".pdf")
+    doc.save(path)
+    doc.close()
+    return path
+
+
+scan = _scanned_pdf([
+    ["CITY DIAGNOSTIC LABORATORY", "Haemoglobin 9.6 g/dL (Low)"],
+    ["Vitamin D 14 ng/mL", "Fasting Glucose 104 mg/dL"],
+])
+
+# The premise: without OCR there is genuinely nothing to read. If this ever
+# fails, the fixture grew a text layer and the rest of this section proves
+# nothing.
+from pypdf import PdfReader  # noqa: E402
+
+bare = "".join((page.extract_text() or "") for page in PdfReader(scan).pages)
+check("the fixture really has no text layer", not bare.strip(), f"{len(bare.strip())} chars")
+
+scanned_text = extract_text(scan)
+check("a scanned pdf is read via OCR", len(scanned_text) > 40, f"{len(scanned_text)} chars")
+check("...values survive OCR", "9.6" in scanned_text, scanned_text[:60])
+check(
+    "...and every page is read, not just the first",
+    "14" in scanned_text and "104" in scanned_text,
+)
+Path(scan).unlink(missing_ok=True)
+
+# A pdf that HAS text must never pay for OCR. This is the regression that would
+# hurt most: it would slow every ordinary upload down by seconds for nothing.
+import time  # noqa: E402
+
+import pymupdf  # noqa: E402
+
+doc = pymupdf.open()
+doc.new_page().insert_text((60, 90), "Haemoglobin 13.2 g/dL Normal", fontsize=14)
+digital = tempfile.mktemp(suffix=".pdf")
+doc.save(digital)
+doc.close()
+started = time.time()
+digital_text = extract_text(digital)
+elapsed = time.time() - started
+check("a text-layer pdf still reads", "13.2" in digital_text, digital_text[:40])
+check("...without an OCR pass", elapsed < 1.0, f"{elapsed:.2f}s")
+Path(digital).unlink(missing_ok=True)
+
+# The page cap keeps one upload from becoming hundreds of OCR passes.
+many = _scanned_pdf([[f"PAGE MARKER {i:02d}"] for i in range(_OCR_PAGE_LIMIT + 3)])
+many_text = extract_text(many)
+seen = sum(
+    1 for i in range(_OCR_PAGE_LIMIT + 3) if f"MARKER {i:02d}" in many_text
+)
+check("the page cap holds", 0 < seen <= _OCR_PAGE_LIMIT, f"{seen} pages, cap {_OCR_PAGE_LIMIT}")
+Path(many).unlink(missing_ok=True)
+
+# Nothing here may raise: extract_text is called inside the upload request, and
+# an exception there is a 500 on a file the user cannot fix.
+broken = tempfile.mktemp(suffix=".pdf")
+Path(broken).write_bytes(b"%PDF-1.4 not actually a pdf")
+try:
+    check("a corrupt pdf returns text, not an exception", isinstance(extract_text(broken), str))
+except Exception as error:  # noqa: BLE001
+    check("a corrupt pdf returns text, not an exception", False, type(error).__name__)
+Path(broken).unlink(missing_ok=True)
 
 
 total = passed + len(failed)
