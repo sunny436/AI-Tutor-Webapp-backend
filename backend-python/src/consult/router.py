@@ -500,6 +500,57 @@ _HEALTH_SIGNALS = (
 )
 
 
+# Anchored at the START of a word, not floating anywhere inside one.
+#
+# The test used to be `signal in lowered`, a plain substring match, and it was
+# not a near miss - it made this guard approve almost everything. Measured
+# before the fix, every one of these returned True:
+#
+#   "i will tell you later"        via "ill" inside "will"
+#   "that is a good skill"         via "ill"
+#   "please fill the form"         via "ill"
+#   "send me the bill"             via "ill"
+#   "this is still pending"        via "ill"
+#   "i need a tissue"              via "issue"
+#   "the carpet is dirty"          via "pet"
+#   "what is the petrol price"     via "pet"
+#   "he has a strong persona"      via "sona"
+#   "the file i was attached"      via "ache" inside "attached"
+#
+# The last one is how it was found: a question about an uploaded file could not
+# be routed to the document path, because the guard swore it was a health
+# complaint. But the damage was wider than that - a guard that says yes to
+# everything is not a guard, and this one exists specifically to stop the
+# classifier inventing a complaint the user never made.
+#
+# `\b` at the start ONLY, deliberately. These entries are STEMS: "allerg" has to
+# reach "allergy" and "allergic", "bloat" has to reach "bloating", "digest" has
+# to reach "digestion", "ghabra" has to reach "ghabrahat". Closing the other end
+# too would break every one of them. A leading boundary is enough, because the
+# false positives above are all mid-word.
+#
+# safety.py:120-131 fixed this same bug in its own list, for the same reason
+# ("hives" matching "hiv", "footbath" matching "tb"). Two lists, one mistake.
+# A few entries are whole words that OTHER whole words begin with, so a start
+# anchor alone does not settle them. "pet" is Hindi for stomach and is always
+# written on its own ("pet dard", "pet saaf") - left open-ended it also claimed
+# "petrol", the single false positive still standing after the boundary fix.
+# "gas" would take "Vegas" the same way if it ever appeared mid-sentence.
+#
+# A short exception list rather than closing every entry, because most of the
+# list MUST stay open-ended: "allerg" has to reach allergy, "bloat" bloating,
+# "ache" aches, "ill" illness.
+_WHOLE_WORD_ONLY = {"pet", "gas", "sona", "cold", "sar", "sir"}
+
+_HEALTH_RE = re.compile(
+    "|".join(
+        r"\b" + re.escape(word) + (r"\b" if word in _WHOLE_WORD_ONLY else "")
+        for word in (signal.strip() for signal in _HEALTH_SIGNALS)
+    ),
+    re.IGNORECASE,
+)
+
+
 def has_health_signal(text: str) -> bool:
     """True when the message actually mentions something health-related.
 
@@ -514,8 +565,7 @@ def has_health_signal(text: str) -> bool:
     added later extends this automatically; the literal list stays only for
     symptom words ("dard", "jalan") that belong to no single topic.
     """
-    lowered = f" {(text or '').lower()} "
-    if any(signal in lowered for signal in _HEALTH_SIGNALS):
+    if _HEALTH_RE.search(text or ""):
         return True
     try:
         return bool(match_topics(text))

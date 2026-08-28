@@ -333,6 +333,73 @@ for required in ALWAYS_INCLUDED:
     check(f"ALWAYS_INCLUDED still forced: {required!r}", required in resolve_sections(None))
 
 
+# ---------------------------------------------------------------------------
+# has_health_signal must not fire on words that merely CONTAIN a symptom word.
+#
+# It used to, because the test was `signal in lowered` - a plain substring
+# match. Measured before the fix, every line in FALSE_POSITIVES below returned
+# True: "will" and "skill" and "bill" and "still" via "ill", "tissue" via
+# "issue", "carpet" and "petrol" via "pet", "persona" via "sona", and
+# "attached" via "ache".
+#
+# That last one is how it surfaced - a question about an uploaded file could not
+# reach the document path, because this guard swore it was a health complaint -
+# but the real damage was that a guard which says yes to everything is not a
+# guard at all. Its whole job is to stop the classifier inventing a complaint
+# the user never made.
+#
+# Both halves are asserted on purpose. Tightening this is only safe if real
+# complaints still register, and a boundary that is too strict would break the
+# stems: "allerg" has to reach allergy, "bloat" bloating, "ache" aches.
+from src.consult.router import has_health_signal  # noqa: E402
+
+FALSE_POSITIVES = (
+    "now can u see the file which i was attached",
+    "tell me something about the file i was attached",
+    "i will tell you later",
+    "that is a good skill",
+    "please fill the form",
+    "send me the bill",
+    "this is still pending",
+    "i need a tissue",
+    "the carpet is dirty",
+    "he has a strong persona",
+    "what is the petrol price",
+    "open the file",
+)
+
+REAL_COMPLAINTS = (
+    "i have a headache",
+    "mujhe gas ho rahi hai",
+    "i feel sick",
+    "mujhe pet dard ho raha hai",
+    "pet saaf nahi hota",
+    "raat ko neend nahi aati",
+    "my appetite is low",
+    "i have joint pain",
+    "khujli ho rahi hai",
+    "bahut thakan lagti hai",
+    "mujhe allergy hai",
+    "bloating problem",
+    "thyroid ke liye kya khana chahiye",
+    "baal jhad rahe hain",
+    "acidity ho rahi hai",
+    "saans lene me dikkat",
+    "sar dard ho raha hai",
+    "my back aches",
+    "i have an illness",
+    "swelling in my leg",
+    "mujhe cold hai",
+    "stomach pain",
+)
+
+for phrase in FALSE_POSITIVES:
+    check(f"not a health signal: {phrase!r}", not has_health_signal(phrase))
+
+for phrase in REAL_COMPLAINTS:
+    check(f"still a health signal: {phrase!r}", has_health_signal(phrase))
+
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== conversational: {passed}/{len(results)} passed =====")
 if passed != len(results):
