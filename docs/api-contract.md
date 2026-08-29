@@ -220,11 +220,12 @@ unrelated to, `documentTruncated` on `/api/consult` — that one is about how
 much of `documents` made it into one GraphRAG query, not how much
 `/api/upload` extracted in the first place).
 
-**Known limitation:** OCR asks for English *and* Hindi, but the production
-host may only have the English language pack installed. If so, a scanned
-Devanagari report returns `200` with plausible English text and silently
-drops the Hindi — there is no error to catch. Worth verifying before relying
-on this for a Hindi-script report.
+OCR asks for English *and* Hindi (`eng+hin`) — both language packs are
+confirmed installed on the production host (verified `tesseract --list-langs`
+2026-08-29). If a future host is ever missing the Hindi pack, this fails
+silently rather than with an error — `_ocr()` in `documents.py` retries
+English-only rather than raising — so it is worth re-checking after any
+fresh provisioning.
 
 ---
 
