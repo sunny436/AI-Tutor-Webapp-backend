@@ -45,10 +45,19 @@ Switching between them is that one variable. No UI code changes.
 [`docs/api-contract.md`](docs/api-contract.md) is the interface between this app
 and the backend. It is the only thing you should rely on.
 
-The backend publishes what it actually promises to
-`apps/app/src/content/consult-contract.json`, and `contract.test.ts` fails if the
-TypeScript here stops matching it. If that test goes red, the backend changed —
-talk to the backend team rather than editing types to make it pass.
+It is **hand-written**, and it is the whole contract. The generated
+`consult-contract.json` is gone: it came from the backend's `export_contract.py`,
+which read Pydantic models that the GraphRAG migration deleted, so no generated
+file is coming back.
+
+`contract.test.ts` reads the `json contract` block at the bottom of that document
+and fails if the TypeScript here stops matching it. It also parses the prose
+tables back out and checks them against the block, because a hand-written
+contract — unlike a generated one — can contradict itself.
+
+If that test goes red, the contract changed — talk to the backend team rather
+than editing types to make it pass. If you are the one changing the wire, edit
+the prose and the block in the same commit.
 
 ---
 

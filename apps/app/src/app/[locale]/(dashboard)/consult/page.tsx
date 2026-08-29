@@ -28,6 +28,7 @@ import {
   Paperclip,
   SendHorizonal,
   ShieldAlert,
+  X,
 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
@@ -41,6 +42,7 @@ import {
 import { CONSULTING } from "@/lib/consult/types";
 import type {
   ConsultContext,
+  ConsultDocument,
   ConsultResult,
   ConsultSource,
   PersistedConsultState,
@@ -81,11 +83,86 @@ type Turn = { id: string } & (
       reason?: "service" | "session" | "signed_out";
       /** Which knowledge notes this answer was drawn from. */
       sources?: ConsultSource[];
+      /**
+       * The attached report did not reach retrieval whole.
+       *
+       * Rendered, not swallowed. The plan may have been written from the first
+       * part of a blood test only, and on a health product the reader has to be
+       * able to tell that from a plan written with the whole thing.
+       */
+      documentTruncated?: boolean;
     }
 );
 
 /** Phases where a typed message is extra detail rather than a new message. */
 const IN_CONSULTATION = new Set<string>(CONSULTING);
+
+/**
+ * A report the user attached, and the text that came back with it.
+ *
+ * THE CLIENT IS NOW THE ONLY HOLDER OF THIS TEXT. `/api/upload` used to index
+ * the file into a per-user store and return `indexed: <chunks>`; it now returns
+ * the extracted text and stores nothing at all. So this array is not a display
+ * convenience any more — drop it and the assistant can never see the report
+ * again, because there is no server-side copy to fall back on.
+ *
+ * Deliberately component state and NOT localStorage. These are medical reports:
+ * in localStorage they would outlive the tab, the session and the sign-out, on
+ * whatever machine the reader happened to use. The cost of that choice is that a
+ * reload loses the attachment, which is a real regression from the indexed era
+ * and is called out in docs/api-contract.md rather than hidden.
+ */
+type AttachedDocument = {
+  name: string;
+  text: string;
+  /** The EXTRACTION was cut short, so `text` is a prefix of the report. */
+  truncated: boolean;
+};
+
+/**
+ * Every attachment, in the shape the wire takes.
+ *
+ * NO JOINING, AND NO FILENAME HEADERS. Both used to happen here: the wire took a
+ * single `documentText` string, so this built one by concatenating the reports
+ * under `--- name ---` headers. That string then had ONE ~1,200-character
+ * retrieval budget for all of it, which meant the second and third attachments
+ * were silently dropped — and the UI had to make the reader pick a single active
+ * report to avoid promising something the cap would break.
+ *
+ * The backend now takes a list, labels each entry itself and splits the budget
+ * across them. So all of them go, the selector is gone, and hand-rolled headers
+ * would now be duplicate labelling inside text the backend is already labelling.
+ *
+ * SPLITS, not multiplies — see `RETRIEVAL_BUDGET_CHARS`. Attaching more reports
+ * gives each one less room, so the composer says how much each is getting.
+ *
+ * Returns undefined for none, so the field is omitted rather than sent empty.
+ * Nothing is trimmed: the caps belong to the backend, and a client that
+ * pre-trims is guessing at a budget it does not own.
+ */
+/**
+ * The retrieval budget the backend divides between the attachments.
+ *
+ *     budget = MAX_DOCUMENT_CHARS_IN_QUERY // len(documents)
+ *
+ * ONE budget, SHARED. Three reports get ~400 characters each, not 1,200 each —
+ * which is why the composer says how much of each is actually being read rather
+ * than implying whole reports are in play.
+ *
+ * DISPLAY ONLY. Nothing is trimmed against it: the cap is the backend's and a
+ * client that pre-trims is guessing at a budget it does not own. It is mirrored
+ * here purely to put a number in front of the reader, so if the backend changes
+ * it the sentence goes slightly stale and nothing breaks. Kept next to
+ * `documentsForWire` so the two are read together.
+ */
+const RETRIEVAL_BUDGET_CHARS = 1200;
+
+function documentsForWire(documents: AttachedDocument[]): ConsultDocument[] | undefined {
+  if (!documents.length) return undefined;
+  // `truncated` is deliberately not sent — it describes our extraction, and the
+  // backend reports its own budget outcome on the response.
+  return documents.map((d) => ({ filename: d.name, text: d.text }));
+}
 
 /**
  * Opening lines for an empty chat.
@@ -169,7 +246,7 @@ function ConsultInner() {
   const token = useAuthToken();
 
   const [uploading, setUploading] = useState(false);
-  const [documents, setDocuments] = useState<string[]>([]);
+  const [documents, setDocuments] = useState<AttachedDocument[]>([]);
   const fileInput = useRef<HTMLInputElement>(null);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -207,6 +284,14 @@ function ConsultInner() {
     // leave a window in which an in-flight reply still believes it belongs here.
     onScreenRef.current = urlSession;
     if (loadedRef.current === key) return;
+
+    // Attachments belong to the conversation they were attached to, and there
+    // is no longer a server-side copy keyed by user that could sort them out
+    // afterwards. Carrying them across a chat switch would send chat A's blood
+    // test up with chat B's messages — silently, since nothing on screen would
+    // contradict it. Cleared here, where the conversation is known to have
+    // actually changed.
+    setDocuments([]);
 
     if (!urlSession) {
       loadedRef.current = key;
@@ -249,6 +334,7 @@ function ConsultInner() {
         kind,
         text: message.content,
         sources: state?.sources,
+        documentTruncated: state?.documentTruncated,
       });
     }
 
@@ -267,6 +353,8 @@ function ConsultInner() {
         // worse than never showing it, because the reader cannot tell "no
         // sources" from "sources were dropped on the way to storage".
         sources: result.sources?.length ? result.sources : undefined,
+        // `|| undefined` so a false never takes up room in every stored blob.
+        documentTruncated: result.documentTruncated || undefined,
       };
       saveMsg({
         sessionId: sid,
@@ -293,7 +381,14 @@ function ConsultInner() {
           : "answer";
       return [
         ...current,
-        { id: nextTurnId(), who: "bot", kind, text: result.answer, sources: result.sources },
+        {
+          id: nextTurnId(),
+          who: "bot",
+          kind,
+          text: result.answer,
+          sources: result.sources,
+          documentTruncated: result.documentTruncated,
+        },
       ];
     });
   }, []);
@@ -397,6 +492,7 @@ function ConsultInner() {
     // memory, and without it every message looked like the first one, so the
     // assistant kept re-greeting and re-asking what was wrong.
     const inConsultation = IN_CONSULTATION.has(context?.phase ?? "idle");
+    const attached = documentsForWire(documents);
     setBusy(true);
     try {
       const result = await postConsultStream(
@@ -404,9 +500,15 @@ function ConsultInner() {
         // request the closure holds the value captured at send time, and `sid`
         // is the one this turn actually belongs to. Same reasoning as `persist`
         // below, which is already addressed to `sid` for exactly this reason.
+        // `documents` goes on EVERY turn, not only the ones that look like they
+        // are about a report. The backend stores nothing, so a turn that omits
+        // it is a turn where the assistant cannot see the attachments at all —
+        // and "is this sugar level ok?" is a question about a blood test that no
+        // keyword check would catch. Undefined when nothing is attached, so the
+        // field is simply absent.
         inConsultation
-          ? { context, freeText: text, conversationId: sid }
-          : { problem: text, context, conversationId: sid },
+          ? { context, freeText: text, conversationId: sid, documents: attached }
+          : { problem: text, context, conversationId: sid, documents: attached },
         // Tokens stop reaching the screen the instant the reader opens another
         // chat; the request itself is left to finish, because an answer already
         // paid for should be waiting in the chat that asked for it.
@@ -435,7 +537,13 @@ function ConsultInner() {
     }
   };
 
-  /** Attach a report: read it server-side and add it to this user's library. */
+  /**
+   * Attach a report: the server reads it and hands the text back to US.
+   *
+   * It no longer indexes anything, so there is nothing to "add to a library" —
+   * this function's job is now to capture the text, because after this response
+   * is discarded there is no other copy anywhere.
+   */
   const attach = async (files: FileList | null) => {
     if (!files?.length) return;
     if (!token) {
@@ -446,13 +554,41 @@ function ConsultInner() {
     try {
       for (const file of Array.from(files)) {
         const result = await uploadDocument(file, token);
-        if (result.indexed > 0) {
-          setDocuments((current) =>
-            current.includes(result.filename)
-              ? current
-              : [...current, result.filename],
-          );
-          toast.success(`${result.filename} added. You can ask about it now.`);
+        // `chars`, not the retired `indexed`. This condition read
+        // `result.indexed > 0` after the field was removed, which is
+        // `undefined > 0` — always false — so every successful upload reported
+        // the "couldn't read it" error below while the text came back fine.
+        if (result.chars > 0) {
+          setDocuments((current) => {
+            const entry: AttachedDocument = {
+              name: result.filename,
+              text: result.text,
+              truncated: result.truncated,
+            };
+            // Re-attaching the same filename REPLACES it. The old behaviour was
+            // to skip, which was harmless when the row was just a label; now it
+            // would keep stale text and quietly ignore the corrected file.
+            const at = current.findIndex((d) => d.name === entry.name);
+            if (at === -1) return [...current, entry];
+            const next = [...current];
+            next[at] = entry;
+            return next;
+          });
+          // No "one at a time" warning any more, and no active-report state:
+          // the wire takes a list, so every attachment now contributes something
+          // instead of all but one being dropped.
+          //
+          // The trade did not disappear though, it changed shape — the budget is
+          // SHARED, so more reports means less of each. That is a live figure
+          // rather than a moment-of-upload fact, so it belongs under the composer
+          // where it updates, not in a toast that fires once and scrolls away.
+          if (result.truncated) {
+            toast.warning(
+              `${result.filename} added, but it was too long to read in full — only the first part will be used.`,
+            );
+          } else {
+            toast.success(`${result.filename} added. You can ask about it now.`);
+          }
         } else {
           // Almost always a scan with no OCR available. Say so, rather than
           // showing it as attached and letting them wonder why questions about
@@ -674,6 +810,17 @@ function ConsultInner() {
                   ) : (
                     <AnswerSections text={turn.text} />
                   )}
+                  {/* The report did not reach retrieval whole, so this plan was
+                      written from part of it. Shown rather than swallowed: the
+                      difference between a plan built from a full blood test and
+                      one built from its first page is exactly the kind of thing
+                      a reader is entitled to weigh for themselves. */}
+                  {turn.documentTruncated && (
+                    <p className="mt-2.5 border-t border-border pt-2 text-2xs text-text-secondary">
+                      Your report was too long to use in full — this was written
+                      from the first part of it.
+                    </p>
+                  )}
                   {/* CITATIONS ARE NOT SHOWN. The backend still returns `sources`
                       and the transcript still persists them, so restoring this is
                       one import plus one line — but nothing in the UI reveals
@@ -736,17 +883,60 @@ function ConsultInner() {
         <div className="pb-5">
           {documents.length > 0 && (
             <div className="mb-2 flex flex-wrap items-center gap-1.5">
-              {documents.map((name) => (
+              {documents.map((document) => (
                 <span
-                  key={name}
-                  className="flex items-center gap-1.5 rounded-lg bg-brand-soft px-2 py-1 text-2xs text-brand"
+                  key={document.name}
+                  // The truncation is worth being able to find, but it is not
+                  // what the reader is here for, so it lives in the tooltip.
+                  title={
+                    document.truncated
+                      ? `${document.name} — too long to read in full; only the first part is used`
+                      : document.name
+                  }
+                  className="flex items-center gap-1.5 rounded-lg bg-brand-soft py-1 pl-2 pr-1 text-2xs text-brand"
                 >
-                  <FileText className="h-3 w-3" />
-                  {name}
+                  <FileText className="h-3 w-3 shrink-0" />
+                  {document.name}
+                  {document.truncated && (
+                    <span className="text-text-secondary">(partial)</span>
+                  )}
+                  {/* REMOVING HAS TO BE POSSIBLE, because the line under this
+                      row tells the reader to do it. The budget is shared, so
+                      "attach fewer for more of each" is the one lever they have
+                      — and until this button existed the only way to pull it was
+                      to abandon the conversation and start a new one, which
+                      throws away the transcript to fix an attachment. */}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setDocuments((current) =>
+                        current.filter((d) => d.name !== document.name),
+                      )
+                    }
+                    aria-label={`Remove ${document.name}`}
+                    className="grid h-4 w-4 shrink-0 place-items-center rounded transition-colors hover:bg-brand hover:text-brand-foreground"
+                  >
+                    <X aria-hidden className="h-3 w-3" />
+                  </button>
                 </span>
               ))}
+              {/* THE NUMBER, not a vague warning. The backend divides ONE
+                  budget across the attachments, so each extra report makes
+                  every other one smaller — and that is a trade the reader can
+                  only make if they are told the terms. "Ask me anything about
+                  these" over four reports would be the kind of untrue claim
+                  this codebase removes elsewhere: at four, each is read down to
+                  a couple of sentences.
+
+                  Saying which way to fix it matters as much as the number.
+                  Someone told only that their reports are being cut has no idea
+                  that removing one is what buys the others room. */}
               <span className="text-2xs text-text-secondary">
-                — ask me anything about these
+                {documents.length > 1
+                  ? `— only about ${Math.floor(
+                      RETRIEVAL_BUDGET_CHARS / documents.length,
+                    )} characters of each is read; attach fewer for more of each`
+                  : "— ask me anything about this"}
               </span>
             </div>
           )}

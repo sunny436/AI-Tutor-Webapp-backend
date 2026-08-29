@@ -313,8 +313,26 @@ export type UploadResult = {
   filename: string;
   /** Characters of text recovered. 0 means the file could not be read. */
   chars: number;
-  /** Chunks embedded into this user's private index. 0 when not logged in. */
-  indexed: number;
+  /**
+   * The extracted text — and the ONLY copy of it.
+   *
+   * This replaced `indexed`, and the difference is not cosmetic. The backend
+   * used to embed the file into a per-user index and report how many chunks it
+   * had stored; it now extracts the text, hands it back, and keeps NOTHING.
+   * Whatever the caller does not hold on to is gone as soon as this response is
+   * discarded, and no later turn can recover it.
+   *
+   * So this is state the client owns, and `ConsultRequest.documents` is how it
+   * gets back to the assistant.
+   */
+  text: string;
+  /**
+   * True when the file was too long to extract whole, so `text` is a prefix.
+   *
+   * Distinct from `ConsultResult.documentTruncated`, which is about the text
+   * being cut on the way INTO retrieval. Either can happen without the other.
+   */
+  truncated: boolean;
 };
 
 /**
