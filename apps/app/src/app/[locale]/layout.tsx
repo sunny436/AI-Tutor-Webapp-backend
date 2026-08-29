@@ -15,9 +15,19 @@ import { ConvexClientProvider } from "../convex-client-provider";
  * security headers and costs no third-party connection.
  *
  * Eczar was drawn by Vaibhav Singh for Devanagari first and Latin second. That
- * is the right way round here: the knowledge base this product cites is
- * romanised Hindi, and the face carries real stroke contrast, so headings read
+ * is why it was chosen — the face carries real stroke contrast, so headings read
  * as a printed reference work rather than as a chat log.
+ *
+ * BUT THE DEVANAGARI SUBSET IS NOT LOADED, because nothing renders Devanagari.
+ * The knowledge base is romanised Hindi — `hi-Latn`, Latin script, as
+ * `lib/library.ts` sets out — so the glyphs never appear. Searching the whole of
+ * `apps/app/src`, `packages/ui/src` and `content/library.json` for U+0900-U+097F
+ * returns nothing at all.
+ *
+ * It was being shipped anyway: 88.2 KB preloaded on EVERY route, 20% of the
+ * login page's 425 KB, rendering not one character. Measured on production, not
+ * assumed. Add "devanagari" back the moment real देवनागरी content does — and
+ * nothing else has to change when you do.
  *
  * Inter, Roboto and Space Grotesk are avoided deliberately. They are where
  * every generated interface lands, and landing there would undo the direction
@@ -26,9 +36,14 @@ import { ConvexClientProvider } from "../convex-client-provider";
  * `weight` is pinned rather than left to the variable range: Eczar ships a
  * 400-800 axis, and letting a heading inherit an arbitrary weight is how a
  * display face ends up looking like bold body text.
+ *
+ * Trimming that list saves NOTHING, so do not bother. Only 600 is ever used —
+ * all 43 `font-display` call sites pair it with `font-semibold` — but because
+ * Eczar is variable, all three weights resolve to the SAME five files in the
+ * generated CSS. Dropping 400 and 700 removes @font-face rules and zero bytes.
  */
 const display = Eczar({
-  subsets: ["latin", "devanagari"],
+  subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-display",
   display: "swap",
