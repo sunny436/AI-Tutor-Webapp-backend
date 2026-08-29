@@ -1,11 +1,18 @@
 # The consultation API contract
 
+> **CHANGED — 2026-08-29.** The backend is now a thin proxy in front of
+> GraphRAG. There is no local model, no local knowledge base, and no
+> server-side conversation state. `POST /api/upload` **no longer exists** —
+> the backend has no local index for an uploaded document to join. This is a
+> coordinated two-repo change: the frontend needs updating alongside it, not
+> after.
+
 Everything a frontend needs. **You do not need the Python source, a GraphRAG key,
 Convex credentials or any backend `.env` to build against this.**
 
-The Python side is the source of truth: `backend-python/src/consult/schema.py`.
-`apps/app/src/lib/consult/types.ts` mirrors it by hand — if the two disagree,
-Python wins and the TypeScript is the bug.
+The Python side is the source of truth: `backend-python/src/graphrag.py` and
+`backend-python/server.py`. There is no `schema.py` any more — the response
+shape below is now just the JSON `server.py` builds by hand.
 
 ---
 
@@ -48,15 +55,17 @@ One turn of a consultation.
 }
 ```
 
-**`problem` vs `freeText` is the one thing that is easy to get wrong.**
-Send `freeText` when `context.phase` is one of `CONSULTING`
-(`gathering`, and the retired `collecting` / `choosing`); send `problem`
-otherwise. Getting it backwards makes every follow-up look like a brand-new
-complaint, and the consultation restarts instead of continuing.
+**`problem` and `freeText` are now equivalent.** Either is read as "what the
+user just said"; send whichever you have. There is no `phase` to branch on any
+more.
 
-**The backend is stateless.** Whatever `context` it returns must be sent back on
-the next turn. It carries the conversation state; without it every message looks
-like the first one.
+**The backend is stateless, and now genuinely so — `context` is not read.**
+Send whatever you like in it; it is echoed back unchanged and carries no
+meaning server-side. There is no conversation memory: every message is
+answered on its own, with nothing carried over from earlier turns. A
+follow-up like "explain that in English" is sent to GraphRAG exactly as
+typed, with no prior answer attached, so it may not resolve the way it used
+to.
 
 ### Response
 
@@ -78,27 +87,26 @@ like the first one.
 
 | `kind` | What it is | How to render |
 |---|---|---|
-| `chat` | a conversational reply, or a gathering question | a normal bubble |
-| `answer` | the final plan, six sections in markdown | bubble + sources |
-| `escalation` | a red flag was detected; see a doctor | prominent, not a normal bubble |
-| `error` | the assistant could not run (quota, outage) | a warning, not a chat bubble |
+| `chat` | a supportive-care reply for a serious diagnosed condition (cancer, dialysis, TB, ...) — caught locally, before GraphRAG | a normal bubble |
+| `answer` | GraphRAG's own reply, verbatim | bubble + sources |
+| `escalation` | a red flag was detected locally; see a doctor | prominent, not a normal bubble |
+| `error` | GraphRAG could not be reached, or is not configured | a warning, not a chat bubble |
 | `intake` | **retired** | never sent; treat as `chat` if you see it |
+
+`condition` and `message` are always `""` now — nothing classifies the
+complaint or writes a separate message any more. Render `answer`.
 
 ### Sources
 
-`source` is namespaced, and the namespaces mean different things. Do not flatten
-them into one count — "based on 3 Ayurveda notes" is false if one of them is the
-reader's own blood test.
+Only one namespace is possible now:
 
 | Prefix | Meaning |
 |---|---|
-| `knowledge:` | the shared curated Ayurveda corpus |
-| `report:` | a document THIS user uploaded |
-| `graphrag:` | an external reference document |
-| `memory:` | something they said in an earlier consultation |
+| `graphrag:` | GraphRAG's own citation for its answer |
 
-Deduplicate by file: retrieval returns one entry per *chunk*, so one note can
-appear four times.
+`knowledge:`, `report:` and `memory:` are gone along with the local knowledge
+base, the report-upload feature, and long-term memory. `sources` is often `[]`
+— GraphRAG does not always cite.
 
 ### Errors
 
@@ -135,17 +143,17 @@ Fall back to `POST /api/consult` if the stream cannot be opened or ends without 
 
 ---
 
-## `POST /api/upload`
+## `POST /api/upload` — REMOVED
 
-`multipart/form-data`, one `file` field. Do **not** set `Content-Type` yourself —
-the browser must set it so it can add the multipart boundary.
-
-```jsonc
-// /api/upload    -> { "filename": "report.pdf", "chars": 4821, "indexed": 12 }
-```
-
-`chars: 0` means nothing could be read from the file - most often a scanned
-PDF, which is rasterised and OCR'd rather than parsed.
+The backend no longer reads or indexes uploaded documents. There is no local
+retrieval for an extracted report to join, so the endpoint, the OCR pipeline
+and the per-user document store were removed along with local retrieval. A
+frontend that still calls this will get a 404 from the Python backend.
+Remove the upload UI, or hold this change until report analysis is designed
+against GraphRAG's own document API instead (a different mechanism — see
+`docs/graphrag-api.md` — and a product decision, not a default to drift into,
+since it uploads into GraphRAG's shared project corpus rather than a private
+per-user store).
 
 ---
 

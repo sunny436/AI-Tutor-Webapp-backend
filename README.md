@@ -5,6 +5,13 @@
 > Production moved to the Ubuntu VM `10.1.30.37` on 19 Aug 2026.
 > The authoritative description is [INFRASTRUCTURE.md](INFRASTRUCTURE.md).
 > Everything below is kept for history and may be wrong.
+>
+> **ALSO STALE — 2026-08-29.** The architecture diagram, `data/knowledge/`,
+> `LangGraph`, `Groq` and everything about local retrieval below describes a
+> backend that no longer exists. There is no local model and no local
+> knowledge base any more — the Python backend is a thin proxy that forwards
+> each question to GraphRAG's `/v1/answer` and relays the reply. See
+> `backend-python/server.py` and `backend-python/src/graphrag.py`.
 
 # Ayurveda & Yoga Wellness Assistant
 

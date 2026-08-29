@@ -1,114 +1,69 @@
 """
 server.py
 ---------
-The Python AI backend (FastAPI). It does two jobs:
+The Python AI backend (FastAPI). It is a thin proxy in front of GraphRAG:
 
-A) Answers consultations for the dashboard
-   - GET  /            -> says what this host is; it used to serve a public chat
-                          page, which was removed once /chat required a login
-   - POST /consult     -> one turn of the consultation (also /consult/stream)
-   - POST /chat        -> the older single-shot flow, signed-in callers only
-   - POST /upload      -> read text from an uploaded report (PDF/image)
+    GET  /            -> says what this host is
+    POST /consult      -> one turn. Safety scan, then GraphRAG writes the reply.
+    POST /consult/stream -> the same turn as Server-Sent Events
+    POST /jobs/run      -> Convex sends a job; we answer and webhook back
+    GET  /whoami        -> verify a Convex login token (JWT) via JWKS
+    GET  /health         -> liveness + is GraphRAG reachable
 
-B) Talks to the Convex template (the "bring your own backend" paths):
-   - POST /jobs/run    -> Convex sends a consult job; we answer and webhook back
-   - POST /extract     -> read a report (protected by the shared service key)
-   - GET  /whoami      -> verify a Convex login token (JWT) via JWKS
-   - GET  /health      -> simple "is it alive?" check
+There is no local model, no local knowledge base, and no local retrieval.
+GraphRAG's own team owns retrieval and answer quality; this backend verifies
+who is asking, refuses to forward a message that looks like a medical
+emergency, and relays whatever GraphRAG says. See `src/graphrag.py` and
+`src/safety.py` for what each of those two steps actually does.
 """
 
 import asyncio
-import base64
 import json
 import sys
-import tempfile
-import time
 from pathlib import Path
 
-import httpx
-from fastapi import FastAPI, Request, Header, HTTPException, UploadFile, File
+from fastapi import FastAPI, Request, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, StreamingResponse
 
 import config
-from src.consult import run_turn as run_consult_turn
-from src.documents import extract_text
+from src import graphrag, safety
 
 # Make the logs UTF-8 before anything can write to them.
 #
-# This is a crash fix, not tidiness. On Windows, Python picks stdout's encoding
-# from the ANSI codepage (cp1252 here) whenever stdout is NOT a console — which
-# is exactly what `Start-Process -RedirectStandardOutput` gives us in production.
-# Every `print()` in this codebase logs the text it is working on, so a single
-# Devanagari or emoji character raises UnicodeEncodeError. Raised inside a
-# request handler, that becomes an HTTP 500.
-#
-# Reproduced end to end: "मुझे गैस की समस्या है" then "सुबह क्या खाऊँ?" returned
-# 500 on the first attempt, every time. The traceback was in `print(...)` at
-# src/consult/router.py:525 — the log line, not the logic. It never showed up in
-# development because a terminal on this machine reports UTF-8, so the whole
-# class of failure only exists once the site is running for real.
-#
-# Fixed here rather than at each print site: there are dozens, they all handle
-# user text, and any one added later would reintroduce it. `errors="replace"`
-# guarantees logging can never again take a request down, whatever arrives.
-#
-# `line_buffering=True` for the same class of reason. Production launches this
-# with Start-Process and a redirected stdout, which Python then block-buffers in
-# 8 KB chunks -- so a print() written during an incident can sit unwritten and
-# land in the log long after the thing it was meant to explain. Diagnostics that
-# arrive late are diagnostics you do not have.
+# On Windows, Python picks stdout's encoding from the ANSI codepage whenever
+# stdout is NOT a console — which is exactly what a redirected production
+# launch gives us. Every print() here logs user text, so a single Devanagari
+# or emoji character raises UnicodeEncodeError inside a request handler,
+# which becomes an HTTP 500. `errors="replace"` guarantees logging can never
+# again take a request down, whatever arrives. `line_buffering=True` so a
+# print() written during an incident is not sitting unflushed in an 8 KB
+# buffer when someone goes looking for it.
 for _stream in (sys.stdout, sys.stderr):
     try:
         _stream.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
-    except (AttributeError, ValueError):  # already wrapped, or not reconfigurable
+    except (AttributeError, ValueError):
         pass
 
 BASE_DIR = Path(__file__).resolve().parent
 
 app = FastAPI(title="Ayurveda & Yoga AI Backend")
 
-# Only the app's own origin may call this API from a browser.
-#
-# This was `allow_origins=["*"]` with `allow_methods`/`allow_headers` equally open.
-# That is not merely untidy: the browser sends the Convex JWT on the DIRECT path
-# (src/lib/backend.config.ts), so any page the user happened to be visiting could
-# script authenticated calls against this backend and read the replies. Wildcard
-# origins also cannot be combined with credentials, so nothing is lost by naming
-# the origins explicitly.
-#
-# `allow_credentials` stays False on purpose: auth travels in the Authorization
-# header, never in a cookie, so cookies have no reason to cross origins here.
+# Only the app's own origin may call this API from a browser. The browser
+# sends the Convex JWT on the direct path, so any page the user happened to
+# be visiting could otherwise script authenticated calls against this backend
+# and read the replies. Wildcard origins cannot be combined with credentials,
+# so nothing is lost by naming the origins explicitly.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=config.ALLOWED_ORIGINS,
     allow_credentials=False,
-# DELETE is in the list because the browser really does use it —
-# `DELETE /documents/{filename}` backs the report-removal button. Omitting it
-# would have broken that silently, visible only as a CORS error in the console.
-# X-Service-Key is deliberately NOT allowed: those routes are called server-to-
-# server by Convex, where CORS does not apply, so a browser has no business
-# sending that header.
-    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Authorization", "Content-Type"],
 )
 
 
-@app.on_event("startup")
-def _warm_up_on_startup():
-    """Load the AI models once at startup so the first answer is already fast."""
-    try:
-        from src.knowledge import warm_up
-        from src.llm import get_llm
-        warm_up()          # loads embeddings + vector DB once
-        get_llm(0.2)       # pre-build the LLM clients
-        get_llm(0.5)
-        print("Warm-up complete — answers will be fast now.")
-    except Exception as e:
-        print("Warm-up skipped:", e)
-
-
-# ---------- helpers ----------
+# ---------- auth helpers ----------
 def _check_service_key(x_service_key: str | None) -> None:
     if (x_service_key or "") != config.SERVICE_KEY:
         raise HTTPException(status_code=401, detail="bad service key")
@@ -118,56 +73,13 @@ def _bearer(authorization: str) -> str:
     return authorization[7:] if authorization.startswith("Bearer ") else ""
 
 
-_balance_cache: dict[str, float] = {}
-
-
-def _openrouter_balance() -> float | None:
-    """Remaining OpenRouter credit in USD, or None if it cannot be read.
-
-    Refreshed at most every five minutes. /health is polled once a minute by the
-    supervisor, and a billing lookup on every poll would be both wasteful and a
-    new way for the health check to hang.
-    """
-    if not config.OPENROUTER_API_KEY:
-        return None
-
-    now = time.monotonic()
-    if _balance_cache and now - _balance_cache.get("at", 0.0) < 300:
-        return _balance_cache.get("value")
-
-    try:
-        with httpx.Client(timeout=5.0) as client:
-            response = client.get(
-                "https://openrouter.ai/api/v1/credits",
-                headers={"Authorization": f"Bearer {config.OPENROUTER_API_KEY}"},
-            )
-            data = (response.json() or {}).get("data") or {}
-        value = round(
-            float(data.get("total_credits") or 0) - float(data.get("total_usage") or 0), 4
-        )
-    except Exception as error:  # noqa: BLE001
-        # Never let billing telemetry break liveness. The key is not in the
-        # message — only the exception type, which is all that is diagnostic.
-        print(f"[health] could not read OpenRouter balance: {type(error).__name__}")
-        return None
-
-    _balance_cache.update({"at": now, "value": value})
-    return value
-
-
 def require_user(authorization: str, service_key: str = "") -> str:
     """Verified user id, or 401 when `config.REQUIRE_AUTH` is on.
 
-    Guards the endpoints that spend money or CPU. `verify_token` deliberately
-    returns "" rather than raising, so that private-data lookups degrade to
-    "nothing found" instead of erroring; that is right for retrieval but wrong
-    for admission, hence this second, stricter gate on top of it.
-
-    A valid service key is accepted as an alternative credential. It identifies
-    no user — the return value stays "" — so it unlocks admission without
-    unlocking anybody's private data. `/jobs/run` already performs the same
-    consultation on that credential, so trusting it here grants nothing new, and
-    it gives the test suite a way to exercise /consult without minting a login.
+    A valid service key is accepted as an alternative credential — it
+    identifies no user, so it unlocks admission without unlocking anybody's
+    private data, and it is what lets `/jobs/run` and the test suite reach
+    GraphRAG without minting a login.
     """
     user_id = verify_token(_bearer(authorization))
     if user_id:
@@ -186,39 +98,14 @@ def _signing_key(token: str):
     """The public key Convex signed `token` with.
 
     Convex issues JWTs whose header is just `{"alg":"RS256"}` — there is no
-    `kid` — and publishes a JWKS whose single key has no `kid` either. PyJWT's
-    `get_signing_key_from_jwt()` matches on `kid`, so it never found the key and
-    raised, and `verify_token` swallowed that into "" — the value it also returns
-    for genuinely anonymous callers.
+    `kid` — and publishes a JWKS whose single key has no `kid` either, so this
+    falls back to the sole signing key in the set when the token carries none.
 
-    The effect was silent and long-lived: every request was treated as anonymous,
-    so conversation memory and uploaded reports were never actually retrieved for
-    the person who owned them. Nothing looked broken, because the consultation
-    still answered — just without any of the caller's own context. Requiring auth
-    on /consult is what finally turned it into a visible 401.
-
-    So: use `kid` when a token has one (a future Convex release may add it), and
-    otherwise fall back to the sole signing key in the set.
-
-    The client is cached because `PyJWKClient` fetches the JWKS over the network;
-    building a new one per request re-fetched it on every single call.
-
-    ⚠ THE USER-AGENT IS LOAD-BEARING. `PyJWKClient` fetches over `urllib`, which
-    sends `Python-urllib/3.x`, and the edge in front of CONVEX_SITE_URL answers
-    that with 403 Forbidden. Every login then failed - not because a token was
-    bad, but because the public keys to check it against could not be fetched -
-    and the app told users "your session expired, please refresh", which no amount
-    of refreshing could fix. Measured against the live endpoint:
-
-        Python-urllib/3.12 (default)   403
-        ayurveda-backend/1.0           200
-        curl/8.0                       200
-        python-httpx/0.27              200
-        Mozilla/5.0                    200
-
-    So only the literal default is filtered. This sends an honest identifier
-    rather than impersonating a browser: the request really is this service, and
-    a UA that says so is both truthful and sufficient.
+    THE USER-AGENT IS LOAD-BEARING. `PyJWKClient` fetches over `urllib`,
+    which sends `Python-urllib/3.x`, and the edge in front of
+    CONVEX_SITE_URL answers that with 403 Forbidden — silently failing every
+    login. A UA that identifies this service truthfully is both accurate and
+    sufficient.
     """
     global _jwk_client
     import jwt  # PyJWT
@@ -235,7 +122,6 @@ def _signing_key(token: str):
 
     signing_keys = [k for k in _jwk_client.get_jwk_set().keys if k.key_type == "RSA"]
     if len(signing_keys) != 1:
-        # Ambiguous without a `kid`; refuse rather than guess which key to trust.
         raise ValueError(f"expected exactly one RSA signing key, found {len(signing_keys)}")
     return signing_keys[0].key
 
@@ -243,14 +129,9 @@ def _signing_key(token: str):
 def verify_token(token: str) -> str:
     """Return the Convex user id for a login token, or "" if it is not valid.
 
-    This is the ONLY thing allowed to establish who is asking. The browser sends
-    a `principal` blob too, but that is self-asserted and must never be trusted
-    for anything that selects private data - a client could simply claim to be
-    somebody else and be handed their medical reports.
-
-    Lifted out of GET /whoami, which had this logic inline and was the only route
-    using it. Nothing about the verification changed; it just needed to be
-    callable from /consult and /upload as well.
+    Deliberately not a 401 on failure: an anonymous or expired session should
+    still be able to consult; it just does not get past `require_user` on the
+    endpoints that spend GraphRAG's quota.
     """
     if not token:
         return ""
@@ -265,17 +146,6 @@ def verify_token(token: str) -> str:
         )
         return str(payload.get("sub") or "")
     except Exception as error:  # noqa: BLE001
-        # Deliberately not a 401. An anonymous or expired session should still be
-        # able to ask about turmeric; it just does not get a private document
-        # library. Failing the whole request would turn a logged-out tab into a
-        # broken app.
-        #
-        # SAY WHICH KIND OF FAILURE THIS IS. "token rejected" covers two
-        # completely different situations that need opposite responses: a genuinely
-        # bad or expired token (the user should sign in again) and an unreachable
-        # JWKS endpoint (nothing is wrong with the user at all, and the app telling
-        # them to refresh is actively misleading). Both looked identical in the log
-        # while every login on the site was failing.
         detail = str(error)
         if "url" in detail.lower() or "fetch" in detail.lower():
             print(
@@ -289,31 +159,75 @@ def verify_token(token: str) -> str:
 
 
 async def _post_webhook(body: dict) -> None:
+    import httpx
+
     url = f"{config.CONVEX_SITE_URL}/backend/webhook"
     async with httpx.AsyncClient(timeout=30) as client:
         await client.post(url, headers={"x-webhook-secret": config.WEBHOOK_SECRET}, json=body)
 
 
+# ---------- the one thing this backend decides on its own ----------
+def _query_text(data: dict) -> str:
+    """What the user actually said this turn.
+
+    `freeText` and `problem` are kept as separate request fields for
+    compatibility with the existing frontend contract, but nothing here
+    branches on which one arrived — every turn is answered on its own, with
+    no server-side conversation state, so there is nothing left for the
+    distinction to mean.
+    """
+    text = (data.get("freeText") or data.get("problem") or "").strip()
+    profile = (data.get("profile") or "").strip()
+    if profile and text:
+        return f"{text}\n\n(About the person asking: {profile})"
+    return text or profile
+
+
+def _safety_result(message: str, context: dict) -> dict | None:
+    """An escalation or supportive-care reply, or None if the message is clear
+    to forward to GraphRAG. The ONLY local decision this backend still makes."""
+    if safety.scan(message):
+        return {
+            "kind": "escalation",
+            "condition": "",
+            "message": "",
+            "answer": safety.ESCALATION_MESSAGE,
+            "intake": None,
+            "context": context,
+            "sources": [],
+        }
+    if safety.is_serious_condition(message):
+        return {
+            "kind": "chat",
+            "condition": "",
+            "message": "",
+            "answer": safety.SERIOUS_CONDITION_MESSAGE,
+            "intake": None,
+            "context": context,
+            "sources": [],
+        }
+    return None
+
+
+def _sources_from_citations(citations) -> list[dict]:
+    out = []
+    for citation in citations or []:
+        if not isinstance(citation, dict):
+            continue
+        name = citation.get("filename") or citation.get("document_id") or "unknown"
+        out.append({
+            "section": "Reference documents",
+            "source": f"graphrag:{name}",
+            "score": citation.get("score"),
+        })
+    return out
+
+
 # ======================================================================
-#  A) THE WEB APP (for using the product directly in your browser)
+#  A) THE CONSULTATION
 # ======================================================================
 @app.get("/", response_class=HTMLResponse)
 def home():
-    """Say what this host is. Deliberately NOT the legacy chat page any more.
-
-    This used to serve `frontend/index.html`, a complete working chat UI. That
-    was fine while the backend was a localhost development server; it stopped
-    being fine when the same process was published at ayur-api.namahos.com,
-    because the page and its `POST /chat` endpoint were then a fully functional
-    anonymous chatbot on the public internet, spending our AI balance.
-
-    `/chat` now requires a signed-in caller (see below), so this page could no
-    longer work regardless. Serving it anyway would put a product-branded chat
-    box on a public URL that errors on every message — worse than not serving it.
-
-    The file is left in the repo: it is still the quickest way to exercise the
-    legacy flow locally, and `python -m http.server` in that folder will open it.
-    """
     return HTMLResponse(
         "<!doctype html><meta charset='utf-8'>"
         "<title>Ayurveda API</title>"
@@ -323,61 +237,63 @@ def home():
     )
 
 
-
-
-
-
 @app.post("/consult")
 async def consult(
     request: Request,
     authorization: str = Header(default=""),
     x_service_key: str = Header(default=""),
 ):
-    """
-    Card-driven consultation — one turn.
-
-    Request : {problem, context, answers, freeText, profile, principal?}
-    Response: {kind: "intake"|"answer"|"escalation", condition, message,
-               intake?, answer?, context, sources}
-
-    STATELESS by design: the client echoes back the `context` it was given, and
-    that context carries INTAKE state only. Conversation history, medical profile
-    and uploaded reports are server-owned and will be fetched by the retrieval
-    layer using the caller's identity — never accepted from the browser, which
-    would let a client assert its own medical history to the model.
-
-    `principal` is threaded through now (unused) so switching those retrievers on
-    later needs no client change.
-    """
+    """One turn. `context` is echoed back unchanged — there is no server-side
+    conversation state to merge into it any more."""
     try:
         data = await request.json()
     except (UnicodeDecodeError, ValueError) as error:
-        # A body that isn't valid UTF-8 JSON is the caller's mistake, not ours —
-        # report it as such instead of surfacing a 500 with a stack trace.
         raise HTTPException(status_code=400, detail=f"invalid JSON body: {error}")
 
-    # Identity comes from the verified token and nowhere else. Whatever the client
-    # put in `principal` is passed along for logging, but `user_id` - the field
-    # the retrievers filter private data on - is overwritten from the JWT, so a
-    # forged principal buys nothing.
-    token = _bearer(authorization)
-    principal = {**(data.get("principal") or {}), "token": token}
-    principal["user_id"] = require_user(authorization, x_service_key)
+    require_user(authorization, x_service_key)
+    context = data.get("context") or {}
 
-    # After auth, before any work: an unauthenticated caller learns nothing about
-    # which bots exist, and an unknown bot_id costs one dict lookup rather than a
-    # retrieval pass.
+    message = _query_text(data)
+    if not message:
+        return {
+            "kind": "chat", "condition": "", "message": "", "answer": "",
+            "intake": None, "context": context, "sources": [],
+        }
 
-    result = await run_consult_turn(
-        problem=data.get("problem", ""),
-        raw_context=data.get("context"),
-        answers=data.get("answers"),
-        free_text=data.get("freeText"),
-        profile=data.get("profile", ""),
-        principal=principal,
-        conversation_id=data.get("conversationId"),
-    )
-    return result.model_dump()
+    flagged = _safety_result(message, context)
+    if flagged:
+        return flagged
+
+    if not config.is_graphrag_ready():
+        raise HTTPException(status_code=503, detail="service is not configured")
+
+    try:
+        body = await asyncio.to_thread(graphrag.answer, message)
+    except Exception as error:  # noqa: BLE001
+        print(f"[consult] GraphRAG call failed: {error}")
+        return {
+            "kind": "error", "condition": "", "message": "AI service unavailable, please try again.",
+            "answer": "AI service unavailable, please try again.",
+            "intake": None, "context": context, "sources": [],
+        }
+
+    answer_text = (body.get("answer") or "").strip()
+    if not answer_text:
+        return {
+            "kind": "error", "condition": "", "message": "AI service unavailable, please try again.",
+            "answer": "AI service unavailable, please try again.",
+            "intake": None, "context": context, "sources": [],
+        }
+
+    return {
+        "kind": "answer",
+        "condition": "",
+        "message": "",
+        "answer": answer_text,
+        "intake": None,
+        "context": context,
+        "sources": _sources_from_citations(body.get("citations")),
+    }
 
 
 @app.post("/consult/stream")
@@ -388,80 +304,67 @@ async def consult_stream(
 ):
     """The same turn as POST /consult, delivered as Server-Sent Events.
 
-    A sibling of `/consult`, not a replacement. `/consult` is untouched, so every
-    existing caller keeps working and this can be turned off by simply not
-    calling it.
-
     Two event types:
-      token: {"text": "..."}   a piece of a prose answer, as the model writes it
-      done:  <ConsultResult>   the identical JSON /consult would have returned
-
-    `done` always arrives, and it is what the client stores. The tokens are a
-    preview: a client that ignored them entirely would still end up with exactly
-    the right transcript. That is deliberate — the authoritative answer must not
-    depend on the reader having received every chunk.
-
-    Intake turns emit no tokens at all. They are question cards, and half a form
-    is not a form.
+      token: {"text": "..."}   a piece of GraphRAG's reply as it is written
+      done:  <same JSON /consult would have returned>
     """
     try:
         data = await request.json()
     except (UnicodeDecodeError, ValueError) as error:
         raise HTTPException(status_code=400, detail=f"invalid JSON body: {error}")
 
-    token = _bearer(authorization)
-    principal = {**(data.get("principal") or {}), "token": token}
-    principal["user_id"] = require_user(authorization, x_service_key)
+    require_user(authorization, x_service_key)
+    context = data.get("context") or {}
+    message = _query_text(data)
 
-    # Resolved here rather than inside `run()` so an unknown bot_id is a real
-    # HTTP 400 the client can act on, not an `error` frame arriving mid-stream
-    # after the connection has already been accepted.
+    flagged = None if not message else _safety_result(message, context)
 
-    # The turn runs in a worker thread and pushes pieces onto this queue; the
-    # response generator drains it. A queue rather than a direct yield because
-    # `run_turn` calls the writer several frames deep and cannot itself be a
-    # generator without changing its contract for every other caller.
     queue: asyncio.Queue = asyncio.Queue()
     loop = asyncio.get_running_loop()
 
-    def on_token(piece: str) -> None:
-        loop.call_soon_threadsafe(queue.put_nowait, piece)
+    def run_blocking() -> None:
+        try:
+            pieces: list[str] = []
+            for piece in graphrag.answer_stream(message):
+                pieces.append(piece)
+                loop.call_soon_threadsafe(queue.put_nowait, ("token", piece))
+            answer_text = "".join(pieces).strip()
+            result = {
+                "kind": "answer", "condition": "", "message": "", "answer": answer_text,
+                "intake": None, "context": context, "sources": [],
+            }
+            loop.call_soon_threadsafe(queue.put_nowait, ("done", result))
+        except Exception as error:  # noqa: BLE001
+            print(f"[consult] GraphRAG stream failed: {error}")
+            loop.call_soon_threadsafe(
+                queue.put_nowait, ("error", "AI service unavailable, please try again.")
+            )
+        finally:
+            loop.call_soon_threadsafe(queue.put_nowait, None)
 
     async def run() -> None:
-        try:
-            result = await run_consult_turn(
-                problem=data.get("problem", ""),
-                raw_context=data.get("context"),
-                answers=data.get("answers"),
-                free_text=data.get("freeText"),
-                profile=data.get("profile", ""),
-                principal=principal,
-                on_token=on_token,
-                conversation_id=data.get("conversationId"),
-            )
-            await queue.put(("done", result.model_dump()))
-        except Exception as error:  # noqa: BLE001
-            print(f"[consult] stream turn failed: {error}")
-            await queue.put(("error", str(error)))
-        finally:
+        if not message:
+            await queue.put(("done", {
+                "kind": "chat", "condition": "", "message": "", "answer": "",
+                "intake": None, "context": context, "sources": [],
+            }))
             await queue.put(None)
+            return
+        if flagged:
+            await queue.put(("done", flagged))
+            await queue.put(None)
+            return
+        if not config.is_graphrag_ready():
+            await queue.put(("error", "service is not configured"))
+            await queue.put(None)
+            return
+        await asyncio.to_thread(run_blocking)
 
-    # Cloudflare gives up on an origin that has sent NOTHING and returns 524.
-    # A plan turn emits no tokens at all — the plan comes back whole from
-    # GraphRAG — so this generator used to sit silent on `queue.get()` for the
-    # entire turn and the reader got "AI service unavailable (524)" instead of
-    # their plan. Reproduced against production: 125 seconds, zero events.
-    #
-    # These are SSE COMMENTS. A line starting with ":" is ignored by every
-    # conforming reader, and `client.ts` only looks for `event:` lines, so they
-    # cost the frontend nothing and keep the connection demonstrably alive.
     KEEPALIVE_SECONDS = 15
 
     async def events():
         task = asyncio.create_task(run())
         try:
-            # Immediately, so time-to-first-byte is milliseconds however long
-            # the turn itself takes.
             yield ": open\n\n"
             while True:
                 try:
@@ -471,11 +374,8 @@ async def consult_stream(
                     continue
                 if item is None:
                     break
-                if isinstance(item, str):
-                    yield f"event: token\ndata: {json.dumps({'text': item})}\n\n"
-                    continue
                 kind, payload = item
-                yield f"event: {kind}\ndata: {json.dumps(payload)}\n\n"
+                yield f"event: {kind}\ndata: {json.dumps(payload if kind != 'token' else {'text': payload})}\n\n"
         finally:
             if not task.done():
                 task.cancel()
@@ -483,156 +383,20 @@ async def consult_stream(
     return StreamingResponse(
         events(),
         media_type="text/event-stream",
-        headers={
-            "Cache-Control": "no-cache",
-            # Cloudflare and any intermediate proxy will happily buffer a
-            # response and deliver it in one piece, which would defeat the whole
-            # point. This is the header they honour.
-            "X-Accel-Buffering": "no",
-        },
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
 
 
-MAX_UPLOAD_BYTES = 20 * 1024 * 1024
-
-
-@app.post("/upload")
-async def upload(
-    file: UploadFile = File(...),
-    authorization: str = Header(default=""),
-):
-    """Read a report and add it to the caller's private document library.
-
-    Extraction and indexing in one request, on purpose: two round trips would
-    mean the browser holds extracted medical text in memory between them for no
-    benefit.
-
-    Requires a signed-in caller (see `config.REQUIRE_AUTH`). It previously
-    accepted anonymous uploads and simply indexed nothing, which was reasonable
-    on localhost; published to the internet it is an open door to 20 MB of OCR
-    per request. The check runs BEFORE the body is read so a rejected caller
-    never gets to spend that.
-    """
-    user_id = require_user(authorization)
-    filename = file.filename or "upload.bin"
-    raw = await file.read()
-    if len(raw) > MAX_UPLOAD_BYTES:
-        raise HTTPException(status_code=413, detail="file too large (max 20 MB)")
-
-    suffix = Path(filename).suffix or ".bin"
-    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
-        tmp.write(raw)
-        tmp_path = tmp.name
-    try:
-        # extract_text is blocking (pypdf, and Tesseract shelling out for OCR),
-        # so it must not run on the event loop.
-        text = await asyncio.to_thread(extract_text, tmp_path)
-    finally:
-        Path(tmp_path).unlink(missing_ok=True)
-
-    indexed = 0
-    if user_id and text:
-        from src import user_documents
-
-        indexed = await asyncio.to_thread(
-            user_documents.index_document, user_id, filename, text
-        )
-
-    # The extracted text is NOT returned any more. The browser has no use for it
-    # - the retriever reads it server-side - and sending medical text back over
-    # the wire only widens where it can end up.
-    return {"filename": filename, "chars": len(text or ""), "indexed": indexed}
-
-
-@app.get("/documents")
-async def list_documents(authorization: str = Header(default="")):
-    """Filenames this caller has indexed. Empty when logged out."""
-    user_id = verify_token(_bearer(authorization))
-    if not user_id:
-        return {"documents": []}
-
-    from src import user_documents
-
-    names = await asyncio.to_thread(user_documents.list_documents, user_id)
-    return {"documents": names}
-
-
-@app.delete("/documents/{filename}")
-async def delete_document(filename: str, authorization: str = Header(default="")):
-    """Remove a document and everything embedded from it.
-
-    Deleting the file without deleting its chunks would leave the report quietly
-    answering questions after the user believed it was gone - which is worse than
-    never having offered deletion.
-    """
-    user_id = verify_token(_bearer(authorization))
-    if not user_id:
-        raise HTTPException(status_code=401, detail="login required")
-
-    from src import user_documents
-
-    await asyncio.to_thread(user_documents.remove_document, user_id, filename)
-    return {"ok": True, "filename": filename}
-
-
 # ======================================================================
-#  B) CONVEX INTEGRATION (for the dashboard / template)
+#  B) CONVEX INTEGRATION
 # ======================================================================
 @app.get("/health")
 def health():
-    """Liveness, plus how much AI credit is left.
-
-    The balance is here because "the AI stopped working" was, every time, a
-    budget that had quietly run out — and the first warning was always a user
-    seeing an error. A number on the health check turns that into something
-    anyone can watch days ahead.
-
-    Cached and best-effort: this endpoint is hit every minute by the supervisor
-    and must never be slower or less reliable than the thing it reports on, so a
-    failed balance lookup is simply omitted rather than allowed to fail /health.
-    """
-    # `provider` reported config.LLM_PROVIDER, which is only the DEFAULT for
-    # chain entries that carry no "provider:" prefix of their own. Every entry in
-    # the live chain names its provider, so the field said "groq" while every
-    # request in fact went to OpenRouter. Harmless until the one moment it
-    # matters -- reading /health during an outage and chasing the wrong provider.
-    #
-    # Report what the next request will actually use: the head of the healthy
-    # chain, which is also the thing that changes when a model falls into
-    # cooldown, so this doubles as a view of the fallback state.
-    from src.llm import _available_models, split_provider
-
-    chain = _available_models("")
-    head = chain[0] if chain else ""
-    provider, model = split_provider(head) if head else (config.LLM_PROVIDER, "")
-
-    # The sole grounding source's health. Every failure mode of that retriever
-    # looks identical downstream -- empty chunks and an HTTP 200 -- so without
-    # this an outage of the authoritative knowledge source stays invisible until
-    # somebody notices the answers went vague.
-    from src.knowledge import alias_index_size as _alias_index_size
-    from src.retrieval import graphrag as _graphrag
-
-    payload = {
-        "graphrag": _graphrag.health(),
-        # Zero here means match_topics is blind, which makes GraphRAG refuse
-        # everything while looking perfectly healthy. 29 is correct today.
-        "alias_index_notes": _alias_index_size(),
+    return {
         "ok": True,
-        "llm_ready": config.is_llm_ready(),
-        "provider": provider,
-        "model": model,
-        # How many of the configured models are not currently cooling down. A
-        # drop here is the earliest visible sign of quota trouble.
-        "models_available": len(chain),
+        "graphrag_ready": config.is_graphrag_ready(),
+        "graphrag": graphrag.health(),
     }
-    balance = _openrouter_balance()
-    if balance is not None:
-        payload["ai_credit_usd"] = balance
-        # A threshold rather than a raw number alone, so it is actionable at a
-        # glance instead of needing arithmetic.
-        payload["ai_credit_low"] = balance < 1.0
-    return payload
 
 
 @app.get("/whoami")
@@ -642,128 +406,46 @@ def whoami(authorization: str = Header(default="")):
         raise HTTPException(status_code=401, detail="missing bearer token")
     sub = verify_token(token)
     if not sub:
-        # This route is a diagnostic - "is my login working?" - so unlike
-        # /consult it should say no rather than degrade quietly.
         raise HTTPException(status_code=401, detail="invalid token")
     return {"verified": True, "sub": sub}
 
 
-@app.get("/debug/retrieve")
-async def debug_retrieve(
-    q: str = "",
-    user_id: str = "",
-    bot_id: str = "",
-    x_service_key: str = Header(default=""),
-):
-    """Why did THIS query retrieve THAT note? Developers and admins only.
-
-    Two gates, because the blast radius of getting this wrong is the corpus and
-    another person's report text:
-
-      1. the service key — the same guard as /extract, so no browser can reach it
-      2. config.DEBUG_RAG — off unless a deployment deliberately turns it on
-
-    Returns 404 rather than 403 when disabled: a disabled debug route should not
-    advertise that it exists.
-
-    The DEBUG_RAG gate is checked FIRST, deliberately. With the key check first,
-    an anonymous request got 401 while a nonexistent path got 404 — so anyone
-    could tell the route was there, on a public hostname, just by the status
-    code. Checking the flag first makes a disabled route indistinguishable from
-    one that was never built.
-    """
-    if not config.DEBUG_RAG:
-        raise HTTPException(status_code=404, detail="not found")
-    _check_service_key(x_service_key)
-    if not q.strip():
-        raise HTTPException(status_code=400, detail="q is required")
-
-    from src.debug import pipeline_trace
-
-    # Same validation as a real consultation: an unknown bot_id is a 400 here
-    # too, so a typo produces an error rather than a trace of the wrong corpus
-    # that looks perfectly plausible.
-
-    # user_id is honoured only because the caller already proved it holds the
-    # service key; it is never taken from an end user.
-    return await pipeline_trace(q, user_id or None)
-
-
-@app.post("/extract")
-async def extract(request: Request, x_service_key: str = Header(default="")):
-    _check_service_key(x_service_key)
-    body = await request.json()
-    filename = body.get("filename", "upload.bin")
-    b64 = body.get("base64", "")
-    if not b64:
-        return {"text": ""}
-    raw = base64.b64decode(b64)
-    suffix = Path(filename).suffix or ".bin"
-    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
-        tmp.write(raw)
-        tmp_path = tmp.name
-    text = extract_text(tmp_path)
-    Path(tmp_path).unlink(missing_ok=True)
-    return {"text": text}
-
-
 @app.post("/jobs/run")
 async def jobs_run(request: Request, x_service_key: str = Header(default="")):
-    """Convex hands us a consultation job; we answer and webhook the result back.
-
-    Repointed from the legacy LangGraph flow to the same `run_turn` the website
-    uses. That flow called `search_knowledge` directly -- raw local Chroma, no
-    pipeline, no GraphRAG -- so any traffic through here made "GraphRAG is the
-    authoritative source" false for a whole class of requests.
-    """
+    """Convex hands us a consultation job; we answer and webhook the result back."""
     _check_service_key(x_service_key)
     body = await request.json()
     job_id = body.get("jobId")
     data = body.get("input", {}) or {}
-    problem = data.get("problem", "")
-    profile = data.get("profile", "")
-    document_text = data.get("document_text", "")
-    if document_text:
-        profile = f"{profile}\n\nInfo from uploaded documents:\n{document_text}"
+    message = _query_text(data)
 
-    try:
-        result = await run_consult_turn(
-            problem=problem,
-            raw_context=None,
-            answers=None,
-            free_text=None,
-            profile=profile,
-        )
-    except Exception as e:
-        await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": str(e)})
+    if not message:
+        await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": "empty problem"})
         return {"accepted": True, "jobId": job_id}
 
-    # Built FIELD BY FIELD, never `result.model_dump()`. The Convex `jobs` table
-    # accepts `v.any()` for this payload, so a dump would silently write the
-    # entire ConsultContext -- including chat_history -- into a table nobody
-    # expects to hold conversation text.
-    #
-    # `knowledge_used` is kept because the legacy result carried it and the
-    # Convex side may read it; ConsultResult has no equivalent, so it is empty
-    # rather than invented.
-    await _post_webhook({
-        "type": "job.result",
-        "jobId": job_id,
-        "result": {
-            "kind": result.kind,
-            "answer": result.answer,
-            "knowledge_used": "",
-        },
-    })
+    flagged = _safety_result(message, {})
+    if flagged:
+        await _post_webhook({
+            "type": "job.result", "jobId": job_id,
+            "result": {"kind": flagged["kind"], "answer": flagged["answer"], "knowledge_used": ""},
+        })
+        return {"accepted": True, "jobId": job_id}
+
+    if not config.is_graphrag_ready():
+        await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": "GraphRAG not configured"})
+        return {"accepted": True, "jobId": job_id}
+
+    try:
+        answer_body = await asyncio.to_thread(graphrag.answer, message)
+        await _post_webhook({
+            "type": "job.result", "jobId": job_id,
+            "result": {"kind": "answer", "answer": answer_body.get("answer") or "", "knowledge_used": ""},
+        })
+    except Exception as e:
+        await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": str(e)})
     return {"accepted": True, "jobId": job_id}
 
 
 if __name__ == "__main__":
     import uvicorn
-    # host comes from config (default 127.0.0.1). It used to be a hard-coded
-    # "0.0.0.0", which published this API to the whole LAN.
-    #
-    # reload is off unless RELOAD=1. It was hard-coded on, so production paid for
-    # a file watcher over `.venv` and a second process it never needed. Set
-    # RELOAD=1 in backend-python/.env while developing.
     uvicorn.run("server:app", host=config.HOST, port=config.PORT, reload=config.RELOAD)

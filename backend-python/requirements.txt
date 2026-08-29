@@ -1,60 +1,20 @@
 # ============================================================
-#  Python AI backend - all free / open-source libraries.
+#  Python AI backend - a thin proxy in front of GraphRAG.
 #  Install with:  pip install -r requirements.txt
 # ============================================================
+#
+# No LLM client, no vector database, no document parser lives here any more.
+# There is no local model and no local knowledge base: every consultation
+# answer comes from GraphRAG's own /v1/answer, called directly over httpx.
 
-# ---- Web server (this backend is a small web API) ----
-fastapi>=0.115.0        # builds the web API endpoints (/jobs/run, /extract, ...)
-uvicorn[standard]>=0.30.0  # runs the FastAPI app
-httpx>=0.27.0           # used to send the webhook back to Convex
-python-multipart>=0.0.9 # lets FastAPI accept uploaded form data
+# ---- Web server ----
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+httpx>=0.27.0           # calls GraphRAG's /v1/answer, and the Convex webhook
+python-multipart>=0.0.9 # FastAPI's form-data parser (kept for request bodies)
 
-# ---- Verifying Convex login tokens (the "direct" path) ----
+# ---- Verifying Convex login tokens ----
 pyjwt[crypto]>=2.9.0    # checks the Convex JWT using public keys (JWKS)
-
-# ---- The flow controller + LLM toolbox ----
-langgraph>=0.2.28       # builds our step-by-step Ayurveda/Yoga flow
-langchain>=0.3.0        # core building blocks
-langchain-core>=0.3.0
-langchain-community>=0.3.0
-langchain-text-splitters>=0.3.0  # splits knowledge files into small chunks
-
-# ---- Talking to the AI models ----
-# Ollima and OpenRouter both speak the OpenAI wire format, so ONE client
-# serves both - only the key and base_url differ (see src/llm.py `_build`).
-#
-# langchain-groq and langchain-ollama were removed with the providers they
-# served. Groq is gone from the stack entirely, and nothing runs locally.
-# `_build` has no ollama branch, so langchain-ollama was already dead weight.
-# OpenRouter speaks the OpenAI wire format, so it uses the OpenAI client with a
-# different base_url (see src/llm.py `_build`). This was MISSING from this file
-# while config.py already defaulted LLM_PROVIDER to "openrouter" — a fresh
-# install could therefore not run the documented default provider at all.
-langchain-openai>=0.2.0 # OpenRouter (second provider = separate daily budget)
-
-# ---- Ayurveda / Yoga knowledge search (RAG) ----
-# NO local embedding model. langchain-huggingface and sentence-transformers
-# were removed: embeddings run on OpenRouter now (config.EMBEDDING_MODEL),
-# and sentence-transformers drags in torch - a multi-GB install on a 3.8 GB
-# host, for a model nothing loads any more.
-#
-# One casualty, deliberately accepted: scripts/eval_embeddings.py imports
-# sentence_transformers lazily to compare a local vector against the remote
-# one. That comparison was what proved the swap was exact (cosine 1.0000);
-# it has served its purpose. `pip install sentence-transformers` to re-run it.
-langchain-chroma>=0.1.4
-chromadb>=0.5.5
-
-# ---- Reading uploaded medical documents ----
-pypdf>=5.0.0
-# Rasterises a SCANNED pdf so it can be OCR'd - see _ocr_pdf in
-# src/documents.py. PyMuPDF rather than pdf2image because it renders in
-# process: pdf2image shells out to poppler-utils, a system package that
-# would have to be installed on every host separately from pip.
-pymupdf>=1.24.0
-pdfplumber>=0.11.0
-pytesseract>=0.3.13     # OCR for images (needs the free Tesseract program)
-pillow>=10.4.0
 
 # ---- Helpers ----
 python-dotenv>=1.0.1

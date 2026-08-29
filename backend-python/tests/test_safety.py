@@ -171,100 +171,57 @@ for text, expected in [
         f"got {found!r}, wanted {expected!r}",
     )
 
-# The prompt and the guard must agree, or one of them is lying.
-from src import prompts  # noqa: E402
-
-check(
-    "rule 2 permits naming herbs",
-    "HERBS YES, MEDICINES NO" in prompts.SYSTEM_RULES,
-)
-check(
-    "rule 2 still forbids a dosage in any units",
-    "give a DOSAGE, strength, quantity or frequency" in prompts.SYSTEM_RULES,
-)
-check(
-    "no prompt still claims medicines of any kind are banned outright",
-    "NO medicines or drugs of any kind" not in prompts.PLAN_PROMPT,
-)
-
-
 # ===========================================================================
-# THE FRONT DOOR. Not a unit test of safety.py - a test that run_turn actually
-# CALLS it before anything can answer.
+# THE FRONT DOOR. Not a unit test of safety.py — a test that the SERVER
+# actually calls it before GraphRAG is ever reached.
 #
-# The gap this closes: a red flag phrased as a QUESTION rather than a complaint
-# matched the alias index, took the fast path, and was answered with a food
-# chart. safety.scan only ran further down, after a consultation had begun. The
-# words that should have escalated were the very words that made it look
-# answerable. Unit-testing scan() would not have caught this - scan() was always
-# right; nobody asked it.
-#
-# No LLM call: scan() returns True before any model is reached, so this stays
-# fast and deterministic.
+# The backend is a thin proxy now: server.py's `_safety_result` is the one
+# local decision left before a message is forwarded. The gap this guards
+# against is the same one that used to bite the old orchestration — a red
+# flag phrased as a question, or buried in a longer sentence, must still
+# escalate rather than reach the vendor, which has confirmed it has no
+# channel to enforce any safety rule of its own.
 # ===========================================================================
-import asyncio  # noqa: E402
+import sys as _sys  # noqa: E402
 
-from src.consult import graph as _graph  # noqa: E402
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import server as _server  # noqa: E402
 
 for _text in [
     "blood in stool me kya khana chahiye",
     "ulti me khoon aa raha hai to kya khana chahiye",
     "seene me dard ke liye kya khaye",
     "chest pain ke liye yoga batao",
+    "khudkushi ka mann karta hai, in short batao",
 ]:
-    _result = asyncio.run(
-        _graph.run_turn(problem=_text, raw_context=None, answers=None, free_text=None)
-    )
+    _result = _server._safety_result(_text, {})
     check(
-        f"a red flag asked as a QUESTION still escalates: {_text[:34]!r}",
-        _result.kind == "escalation",
-        _result.kind,
+        f"a red flag still escalates before GraphRAG: {_text[:34]!r}",
+        _result is not None and _result["kind"] == "escalation",
+        _result,
     )
-
-# ===========================================================================
-# THE SECOND TURN. The checks above pass `raw_context=None`, so there is no
-# last_answer and no open consultation - the follow-up branch always falls
-# through and the scan always fires. They were structurally incapable of
-# catching the real bypass, and did not: 63/63 green with it wide open.
-#
-# Once a consultation opens the client stops sending `problem` and sends
-# `freeText`, so EVERY turn after the first took a branch that answered and
-# returned before any scan. The rework patterns are unanchored, so a red flag
-# with a follow-up phrase anywhere in the sentence was reworded into a wellness
-# answer: "khudkushi ka mann karta hai, in short batao".
-# ===========================================================================
-from src.consult.schema import ConsultContext  # noqa: E402
-
-_MID = ConsultContext(
-    problem="gas", phase="gathering", last_answer="pichla jawab", language="hinglish"
-).model_dump()
 
 for _text in [
-    "seene me dard ho raha hai, explain in detail",
-    "ulti me khoon aa raha hai, tell me more",
-    "blood in stool ho raha hai, elaborate",
-    "khudkushi ka mann karta hai, in short batao",
-    "chest pain, translate in english",
+    "mujhe acidity hai, kya khana chahiye",
+    "raat ko neend nahi aati, kya karu",
+    "gas ho rahi hai, koi upay batao",
 ]:
-    _r = asyncio.run(
-        _graph.run_turn(
-            problem=_text, raw_context=None, answers=None, free_text=None
-        )
-    )
+    _result = _server._safety_result(_text, {})
     check(
-        f"turn 1, red flag wearing a follow-up phrase: {_text[:34]!r}",
-        _r.kind == "escalation",
-        _r.kind,
+        f"an ordinary complaint is NOT stopped locally: {_text[:34]!r}",
+        _result is None,
+        _result,
     )
-    _r2 = asyncio.run(
-        _graph.run_turn(
-            problem="", raw_context=_MID, answers=None, free_text=_text
-        )
-    )
+
+for _text in [
+    "mujhe cancer hai, kya karu",
+    "dialysis chal rahi hai, kamzori bahut hai",
+]:
+    _result = _server._safety_result(_text, {})
     check(
-        f"mid-consult freeText, same phrase: {_text[:34]!r}",
-        _r2.kind == "escalation",
-        _r2.kind,
+        f"a serious diagnosed condition gets the supportive reply, not GraphRAG: {_text[:34]!r}",
+        _result is not None and _result["kind"] == "chat",
+        _result,
     )
 
 passed = sum(1 for _, ok, _ in results if ok)

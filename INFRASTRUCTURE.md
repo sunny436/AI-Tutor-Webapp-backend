@@ -292,16 +292,15 @@ Two traps:
 | Location | docker volume `compose_data` → `/convex/data/db.sqlite3` |
 | Size | ~28 MB |
 | Contents | ~2160 documents: accounts, password hashes, consultations, workspaces |
-| Knowledge index | `backend-python/data/vector_store`, 29 notes → 204 chunks, ~4 MB |
 
 **Never run `docker compose down -v`.** The volume *is* the database.
 `convex.service` uses `stop` for exactly that reason.
 
-`data/knowledge` (the 29 source notes) is in git; `data/vector_store` is a
-gitignored **build artifact**. A fresh host therefore has the notes and no
-index, and the failure is silent — the backend starts, logs "topic index is
-EMPTY" once, then answers every consultation ungrounded. `install.sh` builds it
-(stage 6b) so provisioning cannot leave that state behind.
+> **CHANGED — 2026-08-29.** `backend-python/data/knowledge` and
+> `data/vector_store` are gone. There is no local knowledge base and nothing
+> to build on provisioning any more — every consultation answer comes from
+> GraphRAG's `/v1/answer`. `install.sh` stage 6b (build the index) is dead
+> and should be removed the next time that script is touched.
 
 ### Backups
 
@@ -332,11 +331,10 @@ Moving the database here did not move these. Each is a live dependency.
 
 | Service | What leaves the VM | Consequence if it fails |
 |---|---|---|
-| **Groq / OpenRouter** | every consultation's text, for the model to answer | no answers; the app otherwise works |
 | **Cloudflare** | all inbound traffic and DNS | site unreachable |
 | **Gmail SMTP** | auth emails — sign-in codes, password reset | nobody can sign up or reset |
 | **Google OAuth** | sign-in, when enabled (currently `false`) | Google sign-in only |
-| **GraphRAG** | retrieval AND the health answer itself, at `10.1.30.38` | `GRAPHRAG_ENABLED=1`. Note the flag gates only retrieval - the vendor's `/v1/answer` is called on every plan turn regardless (see `consult/graph.py:382`), and the model that writes that text is the vendor's, not ours |
+| **GraphRAG** | every consultation's text, and it writes the answer — the ONLY source, at `10.1.30.38` | no answers at all; there is no local model, no local knowledge base and no fallback left in this backend any more |
 | **Polar** | billing, if configured | billing only |
 
 This matters for a health product: the symptoms a user types are processed on

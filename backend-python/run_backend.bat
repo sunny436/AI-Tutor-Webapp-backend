@@ -6,7 +6,6 @@ if not exist ".venv" python -m venv .venv
 call .venv\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
-python scripts\ingest_knowledge.py
 echo Starting backend on http://localhost:4000  - press Ctrl+C to stop
 python server.py
 
