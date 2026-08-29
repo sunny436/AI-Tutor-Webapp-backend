@@ -8,7 +8,14 @@
 > **`POST /api/upload` is back — 2026-08-29, restored in a new, stateless
 > shape.** It extracts text and returns it; it does not store or index
 > anything. See its own section below — the response shape changed, and
-> `POST /api/consult` gained a `documentText` field to go with it.
+> `POST /api/consult` gained a `documents` field to go with it.
+>
+> **`documents` is a LIST, not a single string — 2026-08-29 (same day,
+> corrected).** It first shipped as one `documentText` string, which forced
+> the frontend to hand-join multiple attachments and let the first one
+> exhaust the whole truncation budget, silently starving every other
+> attached file. `documentText` never reached production and is gone — see
+> "Several attachments" below.
 
 Everything a frontend needs. **You do not need the Python source, a GraphRAG key,
 Convex credentials or any backend `.env` to build against this.**
@@ -55,7 +62,7 @@ One turn of a consultation.
   "freeText": "aaj se",        // what they typed DURING one — see below
   "context": { /* echoed back verbatim, opaque apart from `phase` */ },
   "profile": "",                // optional free-text user profile
-  "documentText": ""            // optional — the `text` a prior /api/upload returned
+  "documents": []               // optional — see "Several attachments" below
 }
 ```
 
@@ -63,14 +70,37 @@ One turn of a consultation.
 user just said"; send whichever you have. There is no `phase` to branch on any
 more.
 
-**`documentText`** is how an uploaded report reaches a question. The backend
-stores nothing, so YOU hold the text `/api/upload` returned and resend it
-here on whichever turn should be answered with it in mind — there is no
-"currently attached document" state on the backend to remember it for you.
-Only the first ~1200 characters of it are actually sent to GraphRAG per
-question (`documentTruncated` in the response says whether it was cut) — a
-long report's later pages are not visible to every question asked about it,
-because there is no retrieval over the document, just an excerpt.
+#### Several attachments
+
+`documents` is how uploaded reports reach a question:
+
+```jsonc
+"documents": [
+  { "filename": "blood-test.pdf", "text": "…the text /api/upload returned…" },
+  { "filename": "prescription.pdf", "text": "…" }
+]
+```
+
+The backend stores nothing, so YOU hold each `text` from its own
+`/api/upload` call and resend the ones relevant to this turn — there is no
+"currently attached" state on the backend to remember them for you.
+
+**Send a LIST, one object per attachment — do not join them into one string
+yourself.** This is deliberate, not a style preference: the backend owns
+both the `--- filename ---` labelling and the per-file truncation budget, so
+it can split that budget fairly across however many files are attached
+instead of one large file exhausting it before a second file is ever
+considered. A malformed `documents` (not a list, or entries missing `text`)
+is silently ignored — the turn still answers the typed question, just
+without any attachment.
+
+**The shared budget, and what happens past it.** `documentTruncated` in the
+response is `true` if EITHER: any single file's content had to be cut to
+fit its share of the budget, OR more than 5 files were attached (files
+beyond the 5th are dropped entirely, not just shrunk). With more files
+attached, each one's slice gets smaller — there is no retrieval over any
+document's content, just a shrinking excerpt, so a long report's later
+pages (or a 6th file) are not seen by every question asked.
 
 **The backend is stateless, and now genuinely so — `context` is not read.**
 Send whatever you like in it; it is echoed back unchanged and carries no
@@ -95,7 +125,7 @@ to.
       "source": "knowledge:gas-bloating.md",
       "score": 0.59 }
   ],
-  "documentTruncated": false   // true if documentText had to be cut to fit GraphRAG's query budget
+  "documentTruncated": false   // true if any attached document had to be cut (or dropped) to fit GraphRAG's query budget
 }
 ```
 
@@ -177,17 +207,18 @@ privately per user, which would leak one person's report into another
 person's ordinary answers — see `docs/graphrag-api.md` for that API, and do
 not route uploads through it.
 
-**Hold `text` client-side and send it back as `documentText` on a later
-`POST /api/consult` call to ask about it.** There is no session that
-remembers an "attached" file for you.
+**Hold `filename` and `text` client-side and send them back as one entry in
+`documents` on a later `POST /api/consult` call to ask about it** — see
+"Several attachments" above. There is no session that remembers an
+"attached" file for you.
 
 `chars: 0` / `text: ""` means nothing could be read from the file — most
 often a scanned PDF, which is rasterised and OCR'd rather than parsed.
 `truncated: true` means the extracted text was longer than the backend's own
-cap and was cut before being returned (independent of, and unrelated to,
-`documentTruncated` on `/api/consult` — that one is about how much of
-`documentText` made it into one GraphRAG query, not how much `/api/upload`
-extracted in the first place).
+per-file cap and was cut before being returned (independent of, and
+unrelated to, `documentTruncated` on `/api/consult` — that one is about how
+much of `documents` made it into one GraphRAG query, not how much
+`/api/upload` extracted in the first place).
 
 **Known limitation:** OCR asks for English *and* Hindi, but the production
 host may only have the English language pack installed. If so, a scanned

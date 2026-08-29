@@ -127,25 +127,31 @@ check("chars matches the returned text's length", body.get("chars") == len(body.
 check("truncated is False for a small fixture", body.get("truncated") is False, body)
 
 
-# --- the safety scan sees the FULL document text, not a truncated excerpt --
+# --- the safety scan sees the FULL text of EVERY attached document --------
 resp = client.post(
     "/consult",
     json={
         "freeText": "kya khana chahiye",
-        "documentText": "purani report: patient ne bataya ki ulti me khoon aa raha hai",
+        "documents": [
+            {"filename": "old.pdf", "text": "sab theek hai, koi dikkat nahi"},
+            {"filename": "new.pdf", "text": "patient ne bataya ki ulti me khoon aa raha hai"},
+        ],
     },
 )
 check("/consult returns 200 for a flagged document", resp.status_code == 200, resp.text)
 body = resp.json()
 check(
-    "a red flag ONLY in the attached document still escalates",
+    "a red flag in the SECOND of two attached documents still escalates",
     body.get("kind") == "escalation",
     body,
 )
 
 resp = client.post(
     "/consult",
-    json={"freeText": "mujhe acidity hai", "documentText": "purana blood test, sab normal hai"},
+    json={
+        "freeText": "mujhe acidity hai",
+        "documents": [{"filename": "report.pdf", "text": "purana blood test, sab normal hai"}],
+    },
 )
 body = resp.json()
 check(
@@ -154,8 +160,13 @@ check(
     body,
 )
 
+check(
+    "a malformed documents field (not a list) is ignored, not a 500",
+    client.post("/consult", json={"freeText": "hi", "documents": "not-a-list"}).status_code == 200,
+)
 
-# --- the query GraphRAG receives: question first, document capped ----------
+
+# --- the query GraphRAG receives: question first, documents fairly split ---
 captured: dict = {}
 
 
@@ -173,7 +184,7 @@ try:
     long_document = "yeh ek purani health report hai. " * 300  # well over MAX_QUERY_CHARS
     resp = client.post(
         "/consult",
-        json={"freeText": question, "documentText": long_document},
+        json={"freeText": question, "documents": [{"filename": "a.pdf", "text": long_document}]},
     )
     body = resp.json()
     query = captured.get("query", "")
@@ -186,6 +197,32 @@ try:
     check("the question survives verbatim and unclipped in the query", question in query, query[:200])
     check("a long attached document reports documentTruncated: true", body.get("documentTruncated") is True, body)
     check("the reply itself is GraphRAG's (stubbed) answer", body.get("answer") == "stubbed reply", body)
+
+    # --- the bug this replaced: a second document must not be starved -----
+    captured.clear()
+    doc_a = "REPORT-A " * 200   # long enough alone to eat the whole old single-file budget
+    doc_b = "REPORT-B " * 200
+    client.post(
+        "/consult",
+        json={
+            "freeText": "dono reports dekh kar batao",
+            "documents": [
+                {"filename": "a.pdf", "text": doc_a},
+                {"filename": "b.pdf", "text": doc_b},
+            ],
+        },
+    )
+    two_file_query = captured.get("query", "")
+    check(
+        "with two attachments, the SECOND file's content also reaches the query",
+        "REPORT-B" in two_file_query,
+        two_file_query[-300:],
+    )
+    check(
+        "with two attachments, the first file no longer eats the whole budget",
+        "REPORT-A" in two_file_query,
+        two_file_query[:300],
+    )
 finally:
     graphrag.answer = _original_answer
 

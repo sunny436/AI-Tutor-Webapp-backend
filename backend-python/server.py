@@ -191,37 +191,73 @@ def _query_text(data: dict) -> str:
     return text or profile
 
 
-# GraphRAG's own hard cap on the whole query string (src/graphrag.py). An
-# uploaded report can easily run to several thousand characters, so only a
-# capped excerpt travels with each question — the rest of this constant's
-# reasoning lives on `_build_query` below.
+# GraphRAG's own hard cap on the whole query string (src/graphrag.py) is
+# MAX_QUERY_CHARS = 2000. This is the SHARED budget every attached document
+# draws from — not per file — so one huge report cannot silently starve the
+# others. Split evenly by _build_query below.
 MAX_DOCUMENT_CHARS_IN_QUERY = 1200
+# Beyond this many attachments, each one's slice of the shared budget above
+# gets too thin to be worth sending at all — excess files are dropped rather
+# than diluted into uselessness, and that drop counts as truncation too.
+MAX_DOCUMENTS_IN_QUERY = 5
 
 
-def _build_query(message: str, document_text: str) -> tuple[str, bool]:
-    """The string sent to GraphRAG this turn: (query, was_document_truncated).
+def _parse_documents(data: dict) -> list[dict]:
+    """`documents: [{filename, text}, ...]` from the request, junk dropped.
 
-    `message` goes FIRST and is never truncated here. The document excerpt —
-    already capped to MAX_DOCUMENT_CHARS_IN_QUERY, leaving headroom under
-    graphrag.MAX_QUERY_CHARS for the question and the `profile` annotation
-    `_query_text` may have added — goes after it. If the combined string
-    still somehow exceeds the vendor's limit, graphrag.py's own tail-slice is
-    what trims it, and it trims from the end — the document excerpt, never
-    the question.
+    A LIST, not one joined string — this earlier shipped as a single
+    `documentText` field, which forced the FRONTEND to concatenate multiple
+    attachments by hand into one string with its own `--- filename ---`
+    convention. That coupled this backend to a format it did not own, and
+    worse, meant one file could exhaust the whole truncation budget before a
+    second file's content was ever considered. A list lets this backend own
+    both the labelling and the per-file budget.
+    """
+    raw = data.get("documents")
+    if not isinstance(raw, list):
+        return []
+    out = []
+    for item in raw:
+        if not isinstance(item, dict):
+            continue
+        text = str(item.get("text") or "").strip()
+        if not text:
+            continue
+        out.append({"filename": str(item.get("filename") or "attachment"), "text": text})
+    return out
+
+
+def _build_query(message: str, documents: list[dict]) -> tuple[str, bool]:
+    """The string sent to GraphRAG this turn: (query, was_anything_truncated).
+
+    `message` goes FIRST and is never truncated here. MAX_DOCUMENT_CHARS_IN_QUERY
+    is a SHARED budget split evenly across every attached document, so two
+    reports each get roughly half instead of the first one taking all of it
+    and the second being silently dropped — the bug this replaced. If the
+    combined string still somehow exceeds graphrag.MAX_QUERY_CHARS,
+    graphrag.py's own tail-slice trims from the end — the last document's
+    excerpt, never the question.
 
     ACCEPTED LIMITATION: every question about a given upload sees the same
-    first ~1200 characters of it — there is no retrieval over the document,
-    so a question about page 3 of a long report will not see page 3. Fixing
-    that means either GraphRAG's own shared-corpus upload (rejected — it is
-    not private per user) or a form of local per-document indexing (the kind
-    of local state this backend was deliberately rewritten to not have).
-    Out of scope for "upload a report, then ask about it".
+    excerpt of it — there is no retrieval over document content, so a
+    question about page 3 of a long report will not see page 3. Fixing that
+    means either GraphRAG's own shared-corpus upload (rejected — it is not
+    private per user) or a form of local per-document indexing (the kind of
+    local state this backend was deliberately rewritten to not have). Out of
+    scope for "upload a report, then ask about it".
     """
-    if not document_text:
+    if not documents:
         return message, False
-    truncated = len(document_text) > MAX_DOCUMENT_CHARS_IN_QUERY
-    excerpt = document_text[:MAX_DOCUMENT_CHARS_IN_QUERY]
-    piece = f"(From an attached report:\n{excerpt})"
+    truncated = len(documents) > MAX_DOCUMENTS_IN_QUERY
+    documents = documents[:MAX_DOCUMENTS_IN_QUERY]
+    budget = max(MAX_DOCUMENT_CHARS_IN_QUERY // len(documents), 1)
+    blocks = []
+    for doc in documents:
+        text = doc["text"]
+        if len(text) > budget:
+            truncated = True
+        blocks.append(f"--- {doc['filename']} ---\n{text[:budget]}")
+    piece = "(From attached reports:\n" + "\n\n".join(blocks) + ")"
     return (f"{message}\n\n{piece}" if message else piece), truncated
 
 
@@ -230,10 +266,10 @@ def _safety_result(message: str, context: dict, *extra: str) -> dict | None:
     to forward to GraphRAG. The ONLY local decision this backend still makes.
 
     `extra` carries anything else that will reach GraphRAG this turn — today,
-    an uploaded report's FULL extracted text, not the excerpt `_build_query`
-    truncates it to. A red flag past the excerpt's character-1200 boundary
-    must still be caught before anything is sent, so this must always see the
-    untruncated document text, never the truncated query built from it.
+    every attached document's FULL extracted text, not the excerpts
+    `_build_query` truncates them to. A red flag past an excerpt's boundary
+    must still be caught before anything is sent, so this must always see
+    the untruncated document text, never the truncated query built from it.
     """
     fragments = (message, *extra)
     if safety.scan(*fragments):
@@ -306,23 +342,24 @@ async def consult(
     context = data.get("context") or {}
 
     message = _query_text(data)
-    document_text = (data.get("documentText") or "").strip()
+    documents = _parse_documents(data)
     if not message:
         return {
             "kind": "chat", "condition": "", "message": "", "answer": "",
             "intake": None, "context": context, "sources": [], "documentTruncated": False,
         }
 
-    # The safety scan sees the FULL document text, not the excerpt the query
-    # will be truncated to below — see _safety_result's docstring.
-    flagged = _safety_result(message, context, document_text)
+    # The safety scan sees the FULL text of every attached document, not the
+    # excerpts the query will be truncated to below — see _safety_result's
+    # docstring.
+    flagged = _safety_result(message, context, *(d["text"] for d in documents))
     if flagged:
         return flagged
 
     if not config.is_graphrag_ready():
         raise HTTPException(status_code=503, detail="service is not configured")
 
-    query, doc_truncated = _build_query(message, document_text)
+    query, doc_truncated = _build_query(message, documents)
 
     try:
         body = await asyncio.to_thread(graphrag.answer, query)
@@ -374,10 +411,12 @@ async def consult_stream(
     require_user(authorization, x_service_key)
     context = data.get("context") or {}
     message = _query_text(data)
-    document_text = (data.get("documentText") or "").strip()
+    documents = _parse_documents(data)
 
-    flagged = None if not message else _safety_result(message, context, document_text)
-    query, doc_truncated = _build_query(message, document_text)
+    flagged = None if not message else _safety_result(
+        message, context, *(d["text"] for d in documents)
+    )
+    query, doc_truncated = _build_query(message, documents)
 
     queue: asyncio.Queue = asyncio.Queue()
     loop = asyncio.get_running_loop()
