@@ -373,7 +373,27 @@ export function AuthForm() {
             className="w-72"
             onClick={() => {
               setRememberCookie(remember);
-              void signIn("google", { redirectTo: redirectTo.current });
+              setError(null);
+              // NOT `void signIn(...)`. It was, and that is why a
+              // misconfiguration presented as the button doing nothing at all:
+              // the rejection went to an unhandled promise in the console and
+              // nothing reached the screen. Every other call in this file is
+              // awaited and reported; this one was the exception.
+              //
+              // The usual cause is the two Google gates disagreeing. This button
+              // renders on NEXT_PUBLIC_GOOGLE_AUTH_ENABLED, baked into the
+              // bundle at build time, while the provider is only registered when
+              // the CONVEX deployment has AUTH_GOOGLE_ID and AUTH_GOOGLE_SECRET
+              // (see convex/auth.ts). Nothing keeps those two in step, so the
+              // button can exist for a provider that does not.
+              signIn("google", { redirectTo: redirectTo.current }).catch(
+                (err: unknown) => {
+                  console.error("[auth] google sign-in failed:", err);
+                  setError(
+                    "Google sign-in is unavailable right now. Please use your email and password.",
+                  );
+                },
+              );
             }}
           >
             Continue with Google
