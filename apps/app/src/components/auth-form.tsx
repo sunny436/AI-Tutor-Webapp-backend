@@ -367,18 +367,28 @@ export function AuthForm() {
         "CONTINUE WITH GOOGLE" IS REMOVED, and removed from the CODE rather than
         switched off by env.
 
-        It rendered on `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED`, which is baked into the
-        bundle at build time, while the provider only exists when the CONVEX
-        deployment carries AUTH_GOOGLE_ID and AUTH_GOOGLE_SECRET (convex/auth.ts).
-        Nothing kept those two in step, and on production they disagreed: the
-        button was there, the provider was not. Every click failed, and because
-        the handler was `void signIn(...)` the rejection went to an unhandled
-        promise and NOTHING reached the screen. A button that silently does
-        nothing is worse than no button — the reader assumes the product is
-        broken rather than that a sign-in method is unavailable.
+        WHAT ACTUALLY BROKE IT — checked on the box, not guessed. Both
+        AUTH_GOOGLE_ID and AUTH_GOOGLE_SECRET ARE set on the Convex deployment,
+        so the provider was registered and `convex/auth.ts` was offering Google
+        correctly. The credentials were never the problem.
 
-        Turning the env var off would have fixed prod and left the same trap
-        armed for the next deploy that set it. So the gate is gone.
+        The redirect URI is. The callback lives on the HTTP-actions origin,
+        `https://ayur-convex-http.namahos.com/api/auth/callback/google`, and that
+        address only came into existence when Convex moved onto this VM. Google
+        Console still has the previous one, so Google rejects the round trip
+        before it ever reaches us.
+
+        And because the handler was `void signIn(...)`, the rejection went to an
+        unhandled promise and NOTHING reached the screen. A button that silently
+        does nothing is worse than no button — the reader concludes the product
+        is broken rather than that one sign-in method is unavailable.
+
+        REMOVED FROM THE CODE, not switched off via
+        `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED`. That variable is baked into the bundle
+        at build time and is set true on the box, while the provider depends on
+        Convex env vars — two gates, in two places, with nothing keeping them in
+        step. Flipping the variable would have fixed production and left the same
+        trap armed for whoever sets it next.
 
         TO RESTORE, all three, in this order:
           1. Google Cloud Console: authorised redirect URI

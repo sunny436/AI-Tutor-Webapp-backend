@@ -31,14 +31,16 @@ delete account) · 404 page, error boundary, empty states.
   log-mode keeps working when SMTP is unset. For real outbound mail, point
   `SMTP_*` at Resend or any provider — **no code change**.
 - **Google OAuth** — the button is **removed from the code**, not merely switched
-  off. It rendered on `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED` (baked in at build time)
-  while the provider only exists when the Convex deployment carries
-  `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET`. On production those disagreed, so
-  every click failed — silently, because the handler discarded the promise.
-  Restoring it needs all three of: the redirect URI registered at
-  `https://ayur-convex-http.namahos.com/api/auth/callback/google` (the `-http`
-  host, which changes whenever Convex itself moves), the two Convex env vars, and
-  the block restored from git. Full note at the foot of `auth-form.tsx`.
+  off. The credentials are NOT the gap: `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET`
+  were verified present on the Convex deployment, so the provider was registered
+  and working. **The redirect URI is the gap.** The callback lives on the
+  HTTP-actions origin, `https://ayur-convex-http.namahos.com/api/auth/callback/google`,
+  and that address only exists since Convex moved onto the Ubuntu VM — Google
+  Console still holds the previous one, so Google rejects the round trip before it
+  reaches us. Every click failed, and silently, because the handler discarded the
+  promise. **Restoring it is a Google Console round trip**, not an env-var fix:
+  update the authorised redirect URI, then restore the block from git. Full note
+  at the foot of `auth-form.tsx`.
 
 ## 3. Performance (from the read-amplification audit)
 
