@@ -6,6 +6,8 @@ The Python AI backend (FastAPI). It is a thin proxy in front of GraphRAG:
     GET  /            -> says what this host is
     POST /consult      -> one turn. Safety scan, then GraphRAG writes the reply.
     POST /consult/stream -> the same turn as Server-Sent Events
+    POST /upload         -> read text from an uploaded report (PDF/image);
+                             nothing is stored, the caller holds the text
     POST /jobs/run      -> Convex sends a job; we answer and webhook back
     GET  /whoami        -> verify a Convex login token (JWT) via JWKS
     GET  /health         -> liveness + is GraphRAG reachable
@@ -15,19 +17,25 @@ GraphRAG's own team owns retrieval and answer quality; this backend verifies
 who is asking, refuses to forward a message that looks like a medical
 emergency, and relays whatever GraphRAG says. See `src/graphrag.py` and
 `src/safety.py` for what each of those two steps actually does.
+
+The one local exception is `/upload`: reading a PDF/image is not a GraphRAG
+concern, and its extracted text is folded into a question rather than stored
+or indexed anywhere (see `src/documents.py` and `_build_query` below).
 """
 
 import asyncio
 import json
 import sys
+import tempfile
 from pathlib import Path
 
-from fastapi import FastAPI, Request, Header, HTTPException
+from fastapi import FastAPI, File, Request, Header, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, StreamingResponse
 
 import config
 from src import graphrag, safety
+from src.documents import extract_text
 
 # Make the logs UTF-8 before anything can write to them.
 #
@@ -183,10 +191,52 @@ def _query_text(data: dict) -> str:
     return text or profile
 
 
-def _safety_result(message: str, context: dict) -> dict | None:
+# GraphRAG's own hard cap on the whole query string (src/graphrag.py). An
+# uploaded report can easily run to several thousand characters, so only a
+# capped excerpt travels with each question — the rest of this constant's
+# reasoning lives on `_build_query` below.
+MAX_DOCUMENT_CHARS_IN_QUERY = 1200
+
+
+def _build_query(message: str, document_text: str) -> tuple[str, bool]:
+    """The string sent to GraphRAG this turn: (query, was_document_truncated).
+
+    `message` goes FIRST and is never truncated here. The document excerpt —
+    already capped to MAX_DOCUMENT_CHARS_IN_QUERY, leaving headroom under
+    graphrag.MAX_QUERY_CHARS for the question and the `profile` annotation
+    `_query_text` may have added — goes after it. If the combined string
+    still somehow exceeds the vendor's limit, graphrag.py's own tail-slice is
+    what trims it, and it trims from the end — the document excerpt, never
+    the question.
+
+    ACCEPTED LIMITATION: every question about a given upload sees the same
+    first ~1200 characters of it — there is no retrieval over the document,
+    so a question about page 3 of a long report will not see page 3. Fixing
+    that means either GraphRAG's own shared-corpus upload (rejected — it is
+    not private per user) or a form of local per-document indexing (the kind
+    of local state this backend was deliberately rewritten to not have).
+    Out of scope for "upload a report, then ask about it".
+    """
+    if not document_text:
+        return message, False
+    truncated = len(document_text) > MAX_DOCUMENT_CHARS_IN_QUERY
+    excerpt = document_text[:MAX_DOCUMENT_CHARS_IN_QUERY]
+    piece = f"(From an attached report:\n{excerpt})"
+    return (f"{message}\n\n{piece}" if message else piece), truncated
+
+
+def _safety_result(message: str, context: dict, *extra: str) -> dict | None:
     """An escalation or supportive-care reply, or None if the message is clear
-    to forward to GraphRAG. The ONLY local decision this backend still makes."""
-    if safety.scan(message):
+    to forward to GraphRAG. The ONLY local decision this backend still makes.
+
+    `extra` carries anything else that will reach GraphRAG this turn — today,
+    an uploaded report's FULL extracted text, not the excerpt `_build_query`
+    truncates it to. A red flag past the excerpt's character-1200 boundary
+    must still be caught before anything is sent, so this must always see the
+    untruncated document text, never the truncated query built from it.
+    """
+    fragments = (message, *extra)
+    if safety.scan(*fragments):
         return {
             "kind": "escalation",
             "condition": "",
@@ -195,8 +245,9 @@ def _safety_result(message: str, context: dict) -> dict | None:
             "intake": None,
             "context": context,
             "sources": [],
+            "documentTruncated": False,
         }
-    if safety.is_serious_condition(message):
+    if any(safety.is_serious_condition(fragment) for fragment in fragments if fragment):
         return {
             "kind": "chat",
             "condition": "",
@@ -205,6 +256,7 @@ def _safety_result(message: str, context: dict) -> dict | None:
             "intake": None,
             "context": context,
             "sources": [],
+            "documentTruncated": False,
         }
     return None
 
@@ -254,27 +306,32 @@ async def consult(
     context = data.get("context") or {}
 
     message = _query_text(data)
+    document_text = (data.get("documentText") or "").strip()
     if not message:
         return {
             "kind": "chat", "condition": "", "message": "", "answer": "",
-            "intake": None, "context": context, "sources": [],
+            "intake": None, "context": context, "sources": [], "documentTruncated": False,
         }
 
-    flagged = _safety_result(message, context)
+    # The safety scan sees the FULL document text, not the excerpt the query
+    # will be truncated to below — see _safety_result's docstring.
+    flagged = _safety_result(message, context, document_text)
     if flagged:
         return flagged
 
     if not config.is_graphrag_ready():
         raise HTTPException(status_code=503, detail="service is not configured")
 
+    query, doc_truncated = _build_query(message, document_text)
+
     try:
-        body = await asyncio.to_thread(graphrag.answer, message)
+        body = await asyncio.to_thread(graphrag.answer, query)
     except Exception as error:  # noqa: BLE001
         print(f"[consult] GraphRAG call failed: {error}")
         return {
             "kind": "error", "condition": "", "message": "AI service unavailable, please try again.",
             "answer": "AI service unavailable, please try again.",
-            "intake": None, "context": context, "sources": [],
+            "intake": None, "context": context, "sources": [], "documentTruncated": False,
         }
 
     answer_text = (body.get("answer") or "").strip()
@@ -282,7 +339,7 @@ async def consult(
         return {
             "kind": "error", "condition": "", "message": "AI service unavailable, please try again.",
             "answer": "AI service unavailable, please try again.",
-            "intake": None, "context": context, "sources": [],
+            "intake": None, "context": context, "sources": [], "documentTruncated": False,
         }
 
     return {
@@ -293,6 +350,7 @@ async def consult(
         "intake": None,
         "context": context,
         "sources": _sources_from_citations(body.get("citations")),
+        "documentTruncated": doc_truncated,
     }
 
 
@@ -316,8 +374,10 @@ async def consult_stream(
     require_user(authorization, x_service_key)
     context = data.get("context") or {}
     message = _query_text(data)
+    document_text = (data.get("documentText") or "").strip()
 
-    flagged = None if not message else _safety_result(message, context)
+    flagged = None if not message else _safety_result(message, context, document_text)
+    query, doc_truncated = _build_query(message, document_text)
 
     queue: asyncio.Queue = asyncio.Queue()
     loop = asyncio.get_running_loop()
@@ -325,13 +385,13 @@ async def consult_stream(
     def run_blocking() -> None:
         try:
             pieces: list[str] = []
-            for piece in graphrag.answer_stream(message):
+            for piece in graphrag.answer_stream(query):
                 pieces.append(piece)
                 loop.call_soon_threadsafe(queue.put_nowait, ("token", piece))
             answer_text = "".join(pieces).strip()
             result = {
                 "kind": "answer", "condition": "", "message": "", "answer": answer_text,
-                "intake": None, "context": context, "sources": [],
+                "intake": None, "context": context, "sources": [], "documentTruncated": doc_truncated,
             }
             loop.call_soon_threadsafe(queue.put_nowait, ("done", result))
         except Exception as error:  # noqa: BLE001
@@ -346,7 +406,7 @@ async def consult_stream(
         if not message:
             await queue.put(("done", {
                 "kind": "chat", "condition": "", "message": "", "answer": "",
-                "intake": None, "context": context, "sources": [],
+                "intake": None, "context": context, "sources": [], "documentTruncated": False,
             }))
             await queue.put(None)
             return
@@ -385,6 +445,52 @@ async def consult_stream(
         media_type="text/event-stream",
         headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
     )
+
+
+MAX_UPLOAD_BYTES = 20 * 1024 * 1024
+# Cap on what /upload hands back. documents.py's own _OCR_PAGE_LIMIT (10)
+# already bounds a scanned PDF; this is generous headroom above what ten
+# dense pages of OCR text produce, so the JSON response — and whatever the
+# frontend holds in memory for it — stays bounded rather than open-ended.
+MAX_EXTRACTED_CHARS = 40_000
+
+
+@app.post("/upload")
+async def upload(
+    file: UploadFile = File(...),
+    authorization: str = Header(default=""),
+    x_service_key: str = Header(default=""),
+):
+    """Read a report and hand the text straight back. Nothing is stored.
+
+    This is the whole feature: extract, return, forget. There is no per-user
+    document store any more — `require_user` is a COST gate only (OCR is not
+    free), not a step toward saving anything under the caller's identity. The
+    caller holds `text` and sends it back as `documentText` on a later
+    /consult call to ask about it; see _build_query.
+    """
+    require_user(authorization, x_service_key)
+    filename = file.filename or "upload.bin"
+    raw = await file.read()
+    if len(raw) > MAX_UPLOAD_BYTES:
+        raise HTTPException(status_code=413, detail="file too large (max 20 MB)")
+
+    suffix = Path(filename).suffix or ".bin"
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+        tmp.write(raw)
+        tmp_path = tmp.name
+    try:
+        # extract_text is blocking (pypdf, and Tesseract shelling out for
+        # OCR), so it must not run on the event loop.
+        text = await asyncio.to_thread(extract_text, tmp_path)
+    finally:
+        Path(tmp_path).unlink(missing_ok=True)
+
+    text = text or ""
+    truncated = len(text) > MAX_EXTRACTED_CHARS
+    if truncated:
+        text = text[:MAX_EXTRACTED_CHARS]
+    return {"filename": filename, "chars": len(text), "text": text, "truncated": truncated}
 
 
 # ======================================================================

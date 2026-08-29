@@ -3,18 +3,30 @@
 #  Install with:  pip install -r requirements.txt
 # ============================================================
 #
-# No LLM client, no vector database, no document parser lives here any more.
-# There is no local model and no local knowledge base: every consultation
-# answer comes from GraphRAG's own /v1/answer, called directly over httpx.
+# No LLM client, no vector database lives here any more. There is no local
+# model and no local knowledge base: every consultation answer comes from
+# GraphRAG's own /v1/answer, called directly over httpx. Document extraction
+# is the one local exception — see src/documents.py — because an uploaded
+# report's text is folded into a question, never stored or indexed.
 
 # ---- Web server ----
 fastapi>=0.115.0
 uvicorn[standard]>=0.30.0
 httpx>=0.27.0           # calls GraphRAG's /v1/answer, and the Convex webhook
-python-multipart>=0.0.9 # FastAPI's form-data parser (kept for request bodies)
+python-multipart>=0.0.9 # FastAPI's form-data parser (also needed for /upload)
 
 # ---- Verifying Convex login tokens ----
 pyjwt[crypto]>=2.9.0    # checks the Convex JWT using public keys (JWKS)
+
+# ---- Reading uploaded medical documents ----
+# PyMuPDF rather than pdf2image for rasterising a scanned pdf: it renders in
+# process, where pdf2image shells out to poppler-utils, a system package that
+# would have to be installed on every host separately from pip.
+pypdf>=5.0.0
+pymupdf>=1.24.0
+pdfplumber>=0.11.0
+pytesseract>=0.3.13     # OCR for images and scanned PDFs (needs the free Tesseract program)
+pillow>=10.4.0
 
 # ---- Helpers ----
 python-dotenv>=1.0.1

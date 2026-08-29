@@ -2,10 +2,13 @@
 
 > **CHANGED — 2026-08-29.** The backend is now a thin proxy in front of
 > GraphRAG. There is no local model, no local knowledge base, and no
-> server-side conversation state. `POST /api/upload` **no longer exists** —
-> the backend has no local index for an uploaded document to join. This is a
-> coordinated two-repo change: the frontend needs updating alongside it, not
-> after.
+> server-side conversation state. This is a coordinated two-repo change: the
+> frontend needs updating alongside it, not after.
+>
+> **`POST /api/upload` is back — 2026-08-29, restored in a new, stateless
+> shape.** It extracts text and returns it; it does not store or index
+> anything. See its own section below — the response shape changed, and
+> `POST /api/consult` gained a `documentText` field to go with it.
 
 Everything a frontend needs. **You do not need the Python source, a GraphRAG key,
 Convex credentials or any backend `.env` to build against this.**
@@ -51,13 +54,23 @@ One turn of a consultation.
   "problem": "mujhe gas ho rahi hai",  // what they typed, OUTSIDE a consultation
   "freeText": "aaj se",        // what they typed DURING one — see below
   "context": { /* echoed back verbatim, opaque apart from `phase` */ },
-  "profile": ""                // optional free-text user profile
+  "profile": "",                // optional free-text user profile
+  "documentText": ""            // optional — the `text` a prior /api/upload returned
 }
 ```
 
 **`problem` and `freeText` are now equivalent.** Either is read as "what the
 user just said"; send whichever you have. There is no `phase` to branch on any
 more.
+
+**`documentText`** is how an uploaded report reaches a question. The backend
+stores nothing, so YOU hold the text `/api/upload` returned and resend it
+here on whichever turn should be answered with it in mind — there is no
+"currently attached document" state on the backend to remember it for you.
+Only the first ~1200 characters of it are actually sent to GraphRAG per
+question (`documentTruncated` in the response says whether it was cut) — a
+long report's later pages are not visible to every question asked about it,
+because there is no retrieval over the document, just an excerpt.
 
 **The backend is stateless, and now genuinely so — `context` is not read.**
 Send whatever you like in it; it is echoed back unchanged and carries no
@@ -81,7 +94,8 @@ to.
     { "section": "Trusted Ayurveda / Yoga knowledge",
       "source": "knowledge:gas-bloating.md",
       "score": 0.59 }
-  ]
+  ],
+  "documentTruncated": false   // true if documentText had to be cut to fit GraphRAG's query budget
 }
 ```
 
@@ -138,22 +152,48 @@ would still end up with exactly the right transcript. Store `done`, never the
 accumulated tokens — tokens can stop arriving and the stored conversation must not
 depend on having received them all.
 
+`done`'s payload carries `documentTruncated` too, same meaning as in
+`POST /api/consult` above.
+
 Fall back to `POST /api/consult` if the stream cannot be opened or ends without a
 `done`.
 
 ---
 
-## `POST /api/upload` — REMOVED
+## `POST /api/upload`
 
-The backend no longer reads or indexes uploaded documents. There is no local
-retrieval for an extracted report to join, so the endpoint, the OCR pipeline
-and the per-user document store were removed along with local retrieval. A
-frontend that still calls this will get a 404 from the Python backend.
-Remove the upload UI, or hold this change until report analysis is designed
-against GraphRAG's own document API instead (a different mechanism — see
-`docs/graphrag-api.md` — and a product decision, not a default to drift into,
-since it uploads into GraphRAG's shared project corpus rather than a private
-per-user store).
+`multipart/form-data`, one `file` field. Do **not** set `Content-Type` yourself —
+the browser must set it so it can add the multipart boundary.
+
+```jsonc
+// /api/upload    -> { "filename": "report.pdf", "chars": 4821, "text": "…", "truncated": false }
+```
+
+**Nothing is stored.** There is no per-user document store any more — the
+backend extracts the text and hands it straight back in this response, then
+forgets the file completely. This is deliberate: GraphRAG's own document
+upload API stores files in a corpus shared across the whole project, not
+privately per user, which would leak one person's report into another
+person's ordinary answers — see `docs/graphrag-api.md` for that API, and do
+not route uploads through it.
+
+**Hold `text` client-side and send it back as `documentText` on a later
+`POST /api/consult` call to ask about it.** There is no session that
+remembers an "attached" file for you.
+
+`chars: 0` / `text: ""` means nothing could be read from the file — most
+often a scanned PDF, which is rasterised and OCR'd rather than parsed.
+`truncated: true` means the extracted text was longer than the backend's own
+cap and was cut before being returned (independent of, and unrelated to,
+`documentTruncated` on `/api/consult` — that one is about how much of
+`documentText` made it into one GraphRAG query, not how much `/api/upload`
+extracted in the first place).
+
+**Known limitation:** OCR asks for English *and* Hindi, but the production
+host may only have the English language pack installed. If so, a scanned
+Devanagari report returns `200` with plausible English text and silently
+drops the Hindi — there is no error to catch. Worth verifying before relying
+on this for a Hindi-script report.
 
 ---
 
