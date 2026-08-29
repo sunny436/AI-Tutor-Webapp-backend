@@ -9,9 +9,17 @@
  *
  *   this page          -> Convex storage (`api.files.*`). Stored, listed,
  *                         downloadable. The assistant CANNOT read any of it.
- *   the chat's paperclip -> POST /upload on the Python backend, indexed into a
- *                         private Chroma collection. The assistant CAN read it,
- *                         but it is never listed anywhere.
+ *   the chat's paperclip -> POST /upload on the Python backend, which extracts
+ *                         the text and STORES NOTHING. The assistant can read
+ *                         it only while the chat tab holds it in memory, and
+ *                         it is never listed anywhere.
+ *
+ * The paperclip used to index into a private Chroma collection, so an uploaded
+ * report survived a reload and carried into the next conversation. It no longer
+ * does: the backend hands the text back and keeps none of it, the consult page
+ * holds it in component state, and a refresh loses it. That widens the gap
+ * between the two systems rather than closing it — this page persists but
+ * cannot be read, the paperclip can be read but does not persist.
  *
  * The old copy here read "Your reports & documents, stored securely", which
  * invites exactly the wrong conclusion — that uploading a blood test here lets
