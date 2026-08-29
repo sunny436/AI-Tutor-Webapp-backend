@@ -28,6 +28,7 @@ import {
   Paperclip,
   SendHorizonal,
   ShieldAlert,
+  X,
 } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
@@ -892,13 +893,31 @@ function ConsultInner() {
                       ? `${document.name} — too long to read in full; only the first part is used`
                       : document.name
                   }
-                  className="flex items-center gap-1.5 rounded-lg bg-brand-soft px-2 py-1 text-2xs text-brand"
+                  className="flex items-center gap-1.5 rounded-lg bg-brand-soft py-1 pl-2 pr-1 text-2xs text-brand"
                 >
-                  <FileText className="h-3 w-3" />
+                  <FileText className="h-3 w-3 shrink-0" />
                   {document.name}
                   {document.truncated && (
                     <span className="text-text-secondary">(partial)</span>
                   )}
+                  {/* REMOVING HAS TO BE POSSIBLE, because the line under this
+                      row tells the reader to do it. The budget is shared, so
+                      "attach fewer for more of each" is the one lever they have
+                      — and until this button existed the only way to pull it was
+                      to abandon the conversation and start a new one, which
+                      throws away the transcript to fix an attachment. */}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setDocuments((current) =>
+                        current.filter((d) => d.name !== document.name),
+                      )
+                    }
+                    aria-label={`Remove ${document.name}`}
+                    className="grid h-4 w-4 shrink-0 place-items-center rounded transition-colors hover:bg-brand hover:text-brand-foreground"
+                  >
+                    <X aria-hidden className="h-3 w-3" />
+                  </button>
                 </span>
               ))}
               {/* THE NUMBER, not a vague warning. The backend divides ONE
