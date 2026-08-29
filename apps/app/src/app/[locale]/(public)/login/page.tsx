@@ -34,9 +34,10 @@ export const metadata = {
  * sign up. On mobile it collapses to a compact header, because a marketing panel
  * above the fold is a wall between the user and the form.
  *
- * Every function of the form is untouched: five modes, the OTP path, the Google
- * button's env gate, `?redirect=`, `rememberMe`, and all three `preflight*`
- * calls. The `w-72` / `w-64` widths inside it are load-bearing — `e2e/auth-live.js`
+ * Every function of the form is untouched: five modes, the OTP path,
+ * `?redirect=`, `rememberMe`, and all three `preflight*` calls. (The Google
+ * button and its env gate are gone — see the note at the foot of
+ * `auth-form.tsx` for why, and what restoring it needs.) The `w-72` / `w-64` widths inside it are load-bearing — `e2e/auth-live.js`
  * uses them to tell the password form from the magic-code one.
  */
 

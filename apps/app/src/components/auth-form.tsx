@@ -19,7 +19,9 @@ const input =
 
 const RESEND_COOLDOWN_SECONDS = 30;
 const REMEMBER_COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
-const googleEnabled = process.env.NEXT_PUBLIC_GOOGLE_AUTH_ENABLED === "true";
+// `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED` is no longer read. Setting it now does
+// nothing — see the note where the Google button used to render, at the bottom
+// of this file.
 
 // Module-level (stable identity) — defining this inside AuthForm remounts inputs every
 // keystroke, which steals focus after one character.
@@ -361,45 +363,37 @@ export function AuthForm() {
         </>
       )}
 
-      {googleEnabled && (
-        <>
-          <div className="flex w-72 items-center gap-3 text-xs text-muted-foreground">
-            <span className="h-px flex-1 bg-border" />
-            or
-            <span className="h-px flex-1 bg-border" />
-          </div>
-          <Button
-            variant="outline"
-            className="w-72"
-            onClick={() => {
-              setRememberCookie(remember);
-              setError(null);
-              // NOT `void signIn(...)`. It was, and that is why a
-              // misconfiguration presented as the button doing nothing at all:
-              // the rejection went to an unhandled promise in the console and
-              // nothing reached the screen. Every other call in this file is
-              // awaited and reported; this one was the exception.
-              //
-              // The usual cause is the two Google gates disagreeing. This button
-              // renders on NEXT_PUBLIC_GOOGLE_AUTH_ENABLED, baked into the
-              // bundle at build time, while the provider is only registered when
-              // the CONVEX deployment has AUTH_GOOGLE_ID and AUTH_GOOGLE_SECRET
-              // (see convex/auth.ts). Nothing keeps those two in step, so the
-              // button can exist for a provider that does not.
-              signIn("google", { redirectTo: redirectTo.current }).catch(
-                (err: unknown) => {
-                  console.error("[auth] google sign-in failed:", err);
-                  setError(
-                    "Google sign-in is unavailable right now. Please use your email and password.",
-                  );
-                },
-              );
-            }}
-          >
-            Continue with Google
-          </Button>
-        </>
-      )}
+      {/*
+        "CONTINUE WITH GOOGLE" IS REMOVED, and removed from the CODE rather than
+        switched off by env.
+
+        It rendered on `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED`, which is baked into the
+        bundle at build time, while the provider only exists when the CONVEX
+        deployment carries AUTH_GOOGLE_ID and AUTH_GOOGLE_SECRET (convex/auth.ts).
+        Nothing kept those two in step, and on production they disagreed: the
+        button was there, the provider was not. Every click failed, and because
+        the handler was `void signIn(...)` the rejection went to an unhandled
+        promise and NOTHING reached the screen. A button that silently does
+        nothing is worse than no button — the reader assumes the product is
+        broken rather than that a sign-in method is unavailable.
+
+        Turning the env var off would have fixed prod and left the same trap
+        armed for the next deploy that set it. So the gate is gone.
+
+        TO RESTORE, all three, in this order:
+          1. Google Cloud Console: authorised redirect URI
+             https://ayur-convex-http.namahos.com/api/auth/callback/google
+             The `-http` host, NOT ayur-convex.namahos.com. It is the HTTP-actions
+             origin (CONVEX_SITE_URL), and it CHANGES when Convex itself moves —
+             see docs/convex-self-hosting.md.
+          2. cd packages/backend && npx convex env set AUTH_GOOGLE_ID … and
+             AUTH_GOOGLE_SECRET. Verify with `npx convex env list`.
+          3. Restore this block from git and rebuild. Keep the `.catch` that was
+             here: it is what turns the next misconfiguration into a visible
+             message instead of a dead button.
+
+        `signIn` still handles "google" server-side, so nothing else has to change.
+      */}
     </div>
   );
 }

@@ -30,9 +30,15 @@ delete account) · 404 page, error boundary, empty states.
   self-hosted Mailpit and verified. The code is still logged as a fallback, so
   log-mode keeps working when SMTP is unset. For real outbound mail, point
   `SMTP_*` at Resend or any provider — **no code change**.
-- **Google OAuth** — needs `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET` and a
-  registered callback. **Blocked on the named tunnel + real domain**, which is a
-  backend-repo item: OAuth needs a redirect URI that does not change on restart.
+- **Google OAuth** — the button is **removed from the code**, not merely switched
+  off. It rendered on `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED` (baked in at build time)
+  while the provider only exists when the Convex deployment carries
+  `AUTH_GOOGLE_ID` / `AUTH_GOOGLE_SECRET`. On production those disagreed, so
+  every click failed — silently, because the handler discarded the promise.
+  Restoring it needs all three of: the redirect URI registered at
+  `https://ayur-convex-http.namahos.com/api/auth/callback/google` (the `-http`
+  host, which changes whenever Convex itself moves), the two Convex env vars, and
+  the block restored from git. Full note at the foot of `auth-form.tsx`.
 
 ## 3. Performance (from the read-amplification audit)
 
