@@ -10,10 +10,12 @@ rest are fast.
 """
 
 import re
+import threading
 import warnings
 from dataclasses import dataclass, field
 from pathlib import Path
 
+import chromadb
 import config
 from langchain_chroma import Chroma
 
@@ -102,6 +104,41 @@ def _tokens(text: str) -> list[str]:
 _embeddings = None
 _vector_stores: dict[str, Chroma] = {}
 
+# ONE chromadb client for the whole process, shared by every collection at this
+# persist_directory (the notes here, uploaded reports in user_documents.py).
+#
+# Not sharing this was a real bug, not a style choice. Each `Chroma(persist_
+# directory=...)` call used to mint its OWN `chromadb.PersistentClient`, and
+# chromadb keys a per-path "system" (the Rust engine underneath) by that exact
+# path in a class-level registry — chromadb/api/shared_system_client.py,
+# `_create_system_if_not_exists`. Two client objects for the same path share
+# ONE system, and building it is a several-step, unlocked sequence (create,
+# register in the class dict, THEN start()). Two `asyncio.to_thread` calls
+# racing to construct their own client for the same path — exactly what the
+# retrieval pipeline's concurrent gather does on the first request, one thread
+# for this file's notes and one for user_documents.py's reports — could
+# interleave: the second thread saw the system already registered and used it
+# before the first thread's `.start()` had actually run, and hit
+# `AttributeError: 'RustBindingsAPI' object has no attribute 'bindings'`
+# (chromadb/api/rust.py — `bindings` is set inside `start()`, nowhere else).
+# Measured: reproduced on the first concurrent access after a fresh ingest,
+# gone once a single shared client removes the second registration entirely.
+#
+# The lock guards this cache the same way — two threads racing past `is None`
+# would just reintroduce the identical bug one level up.
+_chroma_client: chromadb.ClientAPI | None = None
+_chroma_client_lock = threading.Lock()
+
+
+def get_chroma_client() -> chromadb.ClientAPI:
+    """The one chromadb client every collection at VECTOR_DB_DIR is opened through."""
+    global _chroma_client
+    if _chroma_client is None:
+        with _chroma_client_lock:
+            if _chroma_client is None:
+                _chroma_client = chromadb.PersistentClient(path=config.VECTOR_DB_DIR)
+    return _chroma_client
+
 
 def get_embeddings():
     """The embedding client, built once and reused.
@@ -147,7 +184,7 @@ def get_vector_store(collection: str | None = None) -> Chroma:
         store = Chroma(
             collection_name=name,
             embedding_function=get_embeddings(),
-            persist_directory=config.VECTOR_DB_DIR,
+            client=get_chroma_client(),
             # Chroma defaults to L2. Cosine is what these sentence embeddings are
             # trained for, and it is what makes `relevance = 1 - distance` a
             # meaningful 0..1 number. Only read at collection creation time, so

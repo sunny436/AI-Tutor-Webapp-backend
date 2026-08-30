@@ -24,16 +24,30 @@ pyjwt[crypto]>=2.9.0     # checks the Convex JWT using public keys (JWKS)
 # ---- Talking to the AI models ----
 # Ollima and OpenRouter both speak the OpenAI wire format, so ONE client
 # serves both — only the key and base_url differ (see src/llm.py `_build`).
-langchain-openai>=0.2.0
-langchain-core>=0.3.0    # message types (HumanMessage/SystemMessage), imported directly
+#
+# EXACT pins below, not floors, for this whole langchain/chromadb cluster.
+# Not a style preference — a loose `chromadb>=0.5.5` is what let a fresh
+# install resolve chromadb 1.5.9, a major version langchain-chroma>=0.1.4's
+# OWN floor never anticipated. Verified 2026-08-30 via each installed
+# package's declared `Requires-Dist`, not guessed:
+#   langchain-chroma 1.1.0  wants  chromadb>=1.3.5,<2.0.0  and
+#                                  langchain-core>=1.1.3,<2.0.0
+#   langchain-openai 1.4.2  wants  langchain-core>=1.5.3,<2.0.0
+#   langchain-text-splitters 1.1.2  wants  langchain-core>=1.2.31,<2.0.0
+# The five below satisfy all of those simultaneously, and are the exact
+# versions this was tested against — see src/knowledge.py's
+# get_chroma_client() for the concurrency bug this pairing still needed a
+# code fix for, separate from the version question.
+langchain-openai==1.4.2
+langchain-core==1.5.3    # message types (HumanMessage/SystemMessage), imported directly
 
 # ---- Ayurveda / Yoga knowledge search + per-user document retrieval (RAG) ----
 # NO local embedding model. Embeddings run on OpenRouter (config.EMBEDDING_MODEL) —
 # sentence-transformers would drag in torch, a multi-GB install on a 3.8 GB host,
 # for a model nothing loads any more.
-langchain-chroma>=0.1.4
-chromadb>=0.5.5
-langchain-text-splitters>=0.3.0  # chunks uploaded reports (src/user_documents.py)
+langchain-chroma==1.1.0
+chromadb==1.5.9
+langchain-text-splitters==1.1.2  # chunks uploaded reports (src/user_documents.py)
 
 # ---- Reading uploaded medical documents ----
 pypdf>=5.0.0

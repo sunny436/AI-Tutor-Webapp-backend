@@ -22,12 +22,11 @@ from __future__ import annotations
 
 import hashlib
 
-import config
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from src.knowledge import get_embeddings
+from src.knowledge import get_chroma_client, get_embeddings
 
 COLLECTION_NAME = "user_documents"
 
@@ -51,7 +50,10 @@ def get_store() -> Chroma:
         _store = Chroma(
             collection_name=COLLECTION_NAME,
             embedding_function=get_embeddings(),
-            persist_directory=config.VECTOR_DB_DIR,
+            # Shares knowledge.py's one chromadb client for this persist_dir —
+            # see get_chroma_client's docstring for why a second independent
+            # client here used to race chromadb's own system bootstrapping.
+            client=get_chroma_client(),
             # Must match the knowledge store: the same embeddings are used, and
             # relevance is read as `1 - distance`, which only holds for cosine.
             collection_metadata={"hnsw:space": "cosine"},
