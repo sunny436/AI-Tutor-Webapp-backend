@@ -66,6 +66,7 @@ export default function Page({
   // inside the form, and accepting them from the URL would let a link drop
   // someone straight onto "verify" or "reset" with no code to enter.
   const initialMode = searchParams?.mode === "signup" ? "signUp" : "signIn";
+  const signingUp = initialMode === "signUp";
   return (
     <div className="relative min-h-dvh w-full bg-background lg:grid lg:grid-cols-[1.05fr_1fr]">
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
@@ -94,7 +95,7 @@ export default function Page({
               hero line belongs to `/`; this panel speaks to someone who has
               already decided and is signing in. */}
           <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight text-foreground">
-            Pick up where you left off.
+            {signingUp ? "Start where it hurts." : "Pick up where you left off."}
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-text-secondary">
             Your consultations, the questions you answered, and the plans built from
@@ -178,15 +179,24 @@ export default function Page({
             <span className="text-2xs text-text-secondary">by Ollasoftware</span>
           </div>
 
+          {/* Mode-aware, because `/login?mode=signup` is where the landing
+              page's "Get started" now sends people. A brand-new visitor was
+              being greeted with "Welcome back" over a "Create account" button —
+              the form was right and everything around it was addressed to
+              somebody else. */}
           <div className="mb-6 hidden lg:block">
             <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground">
-              Welcome back
+              {signingUp ? "Create your account" : "Welcome back"}
             </h1>
             <p className="mt-1 text-sm text-text-secondary">
-              Sign in to pick up where you left off.
+              {signingUp
+                ? "A minute to set up, then describe what is troubling you."
+                : "Sign in to pick up where you left off."}
             </p>
           </div>
-          <h1 className="sr-only lg:hidden">Sign in</h1>
+          <h1 className="sr-only lg:hidden">
+            {signingUp ? "Create your account" : "Sign in"}
+          </h1>
 
           <div className="flex flex-col items-center gap-4">
             <AuthForm initialMode={initialMode} />
