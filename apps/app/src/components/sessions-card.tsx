@@ -14,9 +14,9 @@ export function SessionsCard() {
     <div className="flex w-full flex-col rounded-xl border border-border bg-card elev-1">
       <div className="flex w-full flex-wrap items-start justify-between gap-3 p-5">
         <div className="flex flex-col gap-1">
-          <h2 className="font-display text-lg font-semibold tracking-tight text-foreground">
+          <h3 className="font-display text-base font-semibold tracking-tight text-foreground">
             Active sessions
-          </h2>
+          </h3>
           <p className="text-sm leading-relaxed text-text-secondary">
             Devices currently signed in to your account.
           </p>

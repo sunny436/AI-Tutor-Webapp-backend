@@ -73,9 +73,9 @@ export function ChangePasswordCard() {
     >
       <div className="flex w-full flex-col gap-4 p-5">
         <div className="flex flex-col gap-1">
-          <h2 className="font-display text-lg font-semibold tracking-tight text-foreground">
+          <h3 className="font-display text-base font-semibold tracking-tight text-foreground">
             {hasPassword ? "Change password" : "Set a password"}
-          </h2>
+          </h3>
           <p className="text-sm leading-relaxed text-text-secondary">
             {hasPassword
               ? "Choose a new password. Signing in on your other devices will be required again."

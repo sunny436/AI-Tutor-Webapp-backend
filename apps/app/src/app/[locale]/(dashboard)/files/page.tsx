@@ -39,7 +39,7 @@ import { api } from "@v1/backend/convex/_generated/api";
 import { Button } from "@v1/ui/button";
 import { Card } from "@v1/ui/card";
 import { EmptyState } from "@v1/ui/empty-state";
-import { PageShell } from "@v1/ui/page-shell";
+import { PageHeader, PageShell } from "@v1/ui/page-shell";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { useMutation, usePaginatedQuery } from "convex/react";
 import {
@@ -66,6 +66,50 @@ function fmtSize(n: number) {
 function iconFor(type: string) {
   if (type?.startsWith("image/")) return ImageIcon;
   return FileText;
+}
+
+/**
+ * Reports, bucketed by when they were added.
+ *
+ * A flat grid of twenty files sorted by date only LOOKS sorted — nothing on
+ * screen says where last week ends and last month begins, so finding "the scan
+ * from around March" means reading every tile. Buckets give the eye somewhere to
+ * stop, which is what turns a file list into a health record.
+ *
+ * Relative buckets rather than calendar months: someone looking for a report
+ * remembers "a few days ago", not "the 3rd". Older entries fall back to the
+ * month name, where the calendar does become the useful handle.
+ */
+function groupByDate<T extends { createdAt: number }>(files: T[]) {
+  const now = new Date();
+  const startOfToday = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+  ).getTime();
+  const startOfYesterday = startOfToday - 86_400_000;
+  const startOfWeek = startOfToday - 6 * 86_400_000;
+
+  const groups = new Map<string, T[]>();
+  for (const file of files) {
+    const at = file.createdAt;
+    const label =
+      at >= startOfToday
+        ? "Today"
+        : at >= startOfYesterday
+          ? "Yesterday"
+          : at >= startOfWeek
+            ? "Earlier this week"
+            : new Date(at).toLocaleDateString(undefined, {
+                month: "long",
+                year: "numeric",
+              });
+    const bucket = groups.get(label);
+    if (bucket) bucket.push(file);
+    else groups.set(label, [file]);
+  }
+  // Insertion order follows the query, which is already newest-first.
+  return [...groups].map(([label, items]) => ({ label, items }));
 }
 
 export default function FilesPage() {
@@ -125,39 +169,44 @@ export default function FilesPage() {
     if (f) uploadFile(f);
   };
 
-  const usedBytes = useMemo(() => files.reduce((n, f) => n + (f.size ?? 0), 0), [files]);
+  const usedBytes = useMemo(
+    () => files.reduce((n, f) => n + (f.size ?? 0), 0),
+    [files],
+  );
   const filtered = files.filter((f) =>
     f.name.toLowerCase().includes(search.toLowerCase()),
   );
 
   return (
     <PageShell>
-      <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-        <div className="min-w-0">
-          <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            Reports
-          </h1>
-          <p className="mt-1 text-sm text-text-secondary">
-            Documents you keep on file — stored, listed and downloadable.
-          </p>
-        </div>
-        <label className="shrink-0 cursor-pointer">
-          <input
-            ref={inputRef}
-            type="file"
-            className="sr-only"
-            disabled={busy || !current}
-            onChange={onInput}
-          />
-          <span
-            className={`inline-flex h-11 items-center gap-2 rounded-lg bg-brand px-4 text-sm font-medium text-brand-foreground elev-1 transition hover:brightness-110 sm:h-10 ${
-              busy ? "opacity-60" : ""
-            }`}
-          >
-            <Upload aria-hidden className="h-4 w-4" /> {busy ? "Uploading…" : "Upload"}
-          </span>
-        </label>
-      </div>
+      {/* `PageHeader` rather than a hand-rolled h1. It was the only heading in
+          the dashboard written out by hand, at its own size — the component
+          exists precisely so the six pages share one heading rhythm, and it had
+          exactly one call site before this. */}
+      <PageHeader
+        icon={FolderOpen}
+        title="Reports"
+        description="Documents you keep on file — stored, listed and downloadable."
+        action={
+          <label className="shrink-0 cursor-pointer">
+            <input
+              ref={inputRef}
+              type="file"
+              className="sr-only"
+              disabled={busy || !current}
+              onChange={onInput}
+            />
+            <span
+              className={`inline-flex h-11 items-center gap-2 rounded-lg bg-brand px-4 text-sm font-medium text-brand-foreground elev-1 transition hover:brightness-110 sm:h-10 ${
+                busy ? "opacity-60" : ""
+              }`}
+            >
+              <Upload aria-hidden className="h-4 w-4" />{" "}
+              {busy ? "Uploading…" : "Upload"}
+            </span>
+          </label>
+        }
+      />
 
       {/* The correction. Prominent enough to be read before uploading, quiet
           enough not to be a warning — nothing is wrong, it just is not what
@@ -173,8 +222,8 @@ export default function FilesPage() {
           <span className="font-medium text-foreground">
             The assistant can&apos;t read files stored here.
           </span>{" "}
-          To ask about a report, attach it inside a consultation with the paperclip —
-          that copy is read and can be discussed.
+          To ask about a report, attach it inside a consultation with the
+          paperclip — that copy is read and can be discussed.
         </p>
         <Button asChild variant="outline" size="sm" className="shrink-0">
           <Link href="/consult">Open a consultation</Link>
@@ -206,12 +255,15 @@ export default function FilesPage() {
           <span className="text-sm font-medium text-foreground">
             Drag a file here, or click to browse
           </span>
-          <span className="mt-1 text-xs text-text-secondary">PDF, PNG or JPG</span>
+          <span className="mt-1 text-xs text-text-secondary">
+            PDF, PNG or JPG
+          </span>
         </button>
 
         <Card className="p-5">
           <div className="mb-3 flex items-center gap-2 text-sm font-medium text-foreground">
-            <HardDrive aria-hidden className="h-4 w-4 text-text-secondary" /> Storage
+            <HardDrive aria-hidden className="h-4 w-4 text-text-secondary" />{" "}
+            Storage
           </div>
           <p className="font-display text-2xl font-semibold tabular-nums text-foreground">
             {fmtSize(usedBytes)}
@@ -219,7 +271,10 @@ export default function FilesPage() {
           <p className="mt-0.5 text-xs text-text-secondary">
             {files.length} file{files.length === 1 ? "" : "s"} in this workspace
           </p>
-          <div aria-hidden className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface-2">
+          <div
+            aria-hidden
+            className="mt-3 h-1.5 overflow-hidden rounded-full bg-surface-2"
+          >
             <div
               className="h-full rounded-full bg-brand"
               style={{
@@ -259,7 +314,9 @@ export default function FilesPage() {
         ) : filtered.length === 0 ? (
           <EmptyState
             icon={FolderOpen}
-            title={files.length === 0 ? "No reports yet" : "Nothing matches that"}
+            title={
+              files.length === 0 ? "No reports yet" : "Nothing matches that"
+            }
             description={
               files.length === 0
                 ? "Upload a lab report, prescription or scan to keep it here."
@@ -274,55 +331,74 @@ export default function FilesPage() {
             }
           />
         ) : (
-          <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-            {filtered.map((f) => {
-              const Icon = iconFor(f.contentType);
-              return (
-                <li key={f._id}>
-                  <Card variant="interactive" className="group relative h-full p-4">
-                    <span
-                      aria-hidden
-                      className="mb-3 grid h-10 w-10 place-items-center rounded-lg bg-surface-2 text-text-secondary"
-                    >
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    {f.url ? (
-                      <a
-                        href={f.url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="block truncate text-sm font-medium text-foreground transition-colors hover:text-brand"
-                      >
-                        {f.name}
-                      </a>
-                    ) : (
-                      <span className="block truncate text-sm font-medium text-foreground">
-                        {f.name}
-                      </span>
-                    )}
-                    <p className="mt-0.5 text-xs tabular-nums text-text-secondary">
-                      {fmtSize(f.size)} · {new Date(f.createdAt).toLocaleDateString()}
-                    </p>
-                    {/* `focus-within` as well as hover: a delete button that
+          <div className="stagger space-y-7">
+            {groupByDate(filtered).map((group) => (
+              <section key={group.label}>
+                <h2 className="font-display text-sm font-semibold tracking-tight text-text-secondary">
+                  {group.label}
+                </h2>
+                {/* `.rule-printed` — denser at the ends than the middle, so it
+                    reads as set type rather than a div edge. Drawn for exactly
+                    this and unused until now. */}
+                <div aria-hidden className="rule-printed mt-2 h-px w-full" />
+                <ul className="mt-3 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+                  {group.items.map((f) => {
+                    const Icon = iconFor(f.contentType);
+                    return (
+                      <li key={f._id}>
+                        <Card
+                          variant="interactive"
+                          className="group relative h-full p-4"
+                        >
+                          <span
+                            aria-hidden
+                            className="mb-3 grid h-10 w-10 place-items-center rounded-lg bg-surface-2 text-text-secondary"
+                          >
+                            <Icon className="h-5 w-5" />
+                          </span>
+                          {f.url ? (
+                            <a
+                              href={f.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="block truncate text-sm font-medium text-foreground transition-colors hover:text-brand"
+                            >
+                              {f.name}
+                            </a>
+                          ) : (
+                            <span className="block truncate text-sm font-medium text-foreground">
+                              {f.name}
+                            </span>
+                          )}
+                          <p className="mt-0.5 text-xs tabular-nums text-text-secondary">
+                            {fmtSize(f.size)} ·{" "}
+                            {new Date(f.createdAt).toLocaleDateString()}
+                          </p>
+                          {/* `focus-within` as well as hover: a delete button that
                         only appears on hover cannot be reached by keyboard. */}
-                    <div className="absolute right-2 top-2 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
-                      <ConfirmButton
-                        label={<Trash2 aria-hidden className="h-3.5 w-3.5" />}
-                        className="grid h-7 w-7 place-items-center rounded-lg border border-border bg-card text-destructive transition-colors hover:bg-destructive/10"
-                        title="Delete this report?"
-                        description={`“${f.name}” will be permanently removed.`}
-                        confirmLabel="Delete"
-                        onConfirm={async () => {
-                          await removeFile({ fileId: f._id });
-                          toast.success("Report deleted");
-                        }}
-                      />
-                    </div>
-                  </Card>
-                </li>
-              );
-            })}
-          </ul>
+                          <div className="absolute right-2 top-2 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100">
+                            <ConfirmButton
+                              label={
+                                <Trash2 aria-hidden className="h-3.5 w-3.5" />
+                              }
+                              className="grid h-7 w-7 place-items-center rounded-lg border border-border bg-card text-destructive transition-colors hover:bg-destructive/10"
+                              title="Delete this report?"
+                              description={`“${f.name}” will be permanently removed.`}
+                              confirmLabel="Delete"
+                              onConfirm={async () => {
+                                await removeFile({ fileId: f._id });
+                                toast.success("Report deleted");
+                              }}
+                            />
+                          </div>
+                        </Card>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
+            ))}
+          </div>
         )}
       </div>
 
