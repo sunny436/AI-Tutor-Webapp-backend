@@ -1,28 +1,37 @@
 # The consultation API contract
 
-> **CHANGED — 2026-08-29.** The backend is now a thin proxy in front of
-> GraphRAG. There is no local model, no local knowledge base, and no
-> server-side conversation state. This is a coordinated two-repo change: the
-> frontend needs updating alongside it, not after.
+> **REVERSED — 2026-08-30.** The 2026-08-29 "thin proxy" design (GraphRAG
+> writes the answer, backend is stateless, no memory) has been undone by
+> explicit decision. The backend is a real orchestrator again: it runs
+> intent routing, a prose intake, retrieval (GraphRAG + local knowledge +
+> memory + uploaded reports), and a LOCAL LLM writes every final answer.
+> GraphRAG is retrieval-only now (`/v1/search`) — it never writes prose.
 >
-> **`POST /api/upload` is back — 2026-08-29, restored in a new, stateless
-> shape.** It extracts text and returns it; it does not store or index
-> anything. See its own section below — the response shape changed, and
-> `POST /api/consult` gained a `documents` field to go with it.
->
-> **`documents` is a LIST, not a single string — 2026-08-29 (same day,
-> corrected).** It first shipped as one `documentText` string, which forced
-> the frontend to hand-join multiple attachments and let the first one
-> exhaust the whole truncation budget, silently starving every other
-> attached file. `documentText` never reached production and is gone — see
-> "Several attachments" below.
+> **What this means for the frontend, concretely:**
+> - `context` is meaningful again. Send back exactly what you were given —
+>   `phase` now drives real server-side behavior (see `problem` vs
+>   `freeText` below), not an opaque echo.
+> - `documents: [{filename, text}]` on `/api/consult` still works exactly as
+>   it did yesterday (folded into the question), but it is now a
+>   **supplement, not the only path** — an upload is also indexed
+>   server-side, so a later question can retrieve just the relevant part of
+>   a long report even if you stop sending this field. No frontend change is
+>   required to keep working; sending it less is a later optimization, not a
+>   requirement.
+> - `POST /api/upload`'s response gained `indexed` back (chunk count) beside
+>   yesterday's `text`/`truncated` — both are present, nothing removed.
+> - `sources` can carry `graphrag:`, `knowledge:`, `report:` and `memory:`
+>   prefixes again — see the table below.
+> - `documentTruncated` (yesterday's field, about the per-query character
+>   budget) is gone. It described a mechanism (folding raw text into one
+>   GraphRAG query) that this reversal replaces with real retrieval.
 
 Everything a frontend needs. **You do not need the Python source, a GraphRAG key,
 Convex credentials or any backend `.env` to build against this.**
 
-The Python side is the source of truth: `backend-python/src/graphrag.py` and
-`backend-python/server.py`. There is no `schema.py` any more — the response
-shape below is now just the JSON `server.py` builds by hand.
+The Python side is the source of truth: `backend-python/src/consult/schema.py`.
+`apps/app/src/lib/consult/types.ts` mirrors it by hand — if the two disagree,
+Python wins and the TypeScript is the bug.
 
 ---
 
@@ -66,9 +75,13 @@ One turn of a consultation.
 }
 ```
 
-**`problem` and `freeText` are now equivalent.** Either is read as "what the
-user just said"; send whichever you have. There is no `phase` to branch on any
-more.
+**`problem` vs `freeText` matters again.** Send `freeText` when
+`context.phase` is one of `CONSULTING` (`gathering`, and the legacy
+`collecting` / `choosing`, mapped on load); send `problem` otherwise.
+Getting it backwards makes every follow-up look like a brand-new complaint.
+The backend tolerates either field regardless of phase (it will not crash or
+silently drop your message), but routing works correctly only when this
+convention is followed — a lenient parser is not the same as a stateless one.
 
 #### Several attachments
 
@@ -81,34 +94,18 @@ more.
 ]
 ```
 
-The backend stores nothing, so YOU hold each `text` from its own
-`/api/upload` call and resend the ones relevant to this turn — there is no
-"currently attached" state on the backend to remember them for you.
+This is still supported and still folded into the question exactly as
+before. It is no longer the only way a report reaches an answer: `/api/upload`
+now also indexes the document (per-user, embedded, isolated by a verified
+`user_id` — never a client-supplied one), so `run_consult_turn`'s own
+retrieval pipeline pulls the relevant chunk automatically on a later
+question, whether or not you resend this field.
 
-**Send a LIST, one object per attachment — do not join them into one string
-yourself.** This is deliberate, not a style preference: the backend owns
-both the `--- filename ---` labelling and the per-file truncation budget, so
-it can split that budget fairly across however many files are attached
-instead of one large file exhausting it before a second file is ever
-considered. A malformed `documents` (not a list, or entries missing `text`)
-is silently ignored — the turn still answers the typed question, just
-without any attachment.
-
-**The shared budget, and what happens past it.** `documentTruncated` in the
-response is `true` if EITHER: any single file's content had to be cut to
-fit its share of the budget, OR more than 5 files were attached (files
-beyond the 5th are dropped entirely, not just shrunk). With more files
-attached, each one's slice gets smaller — there is no retrieval over any
-document's content, just a shrinking excerpt, so a long report's later
-pages (or a 6th file) are not seen by every question asked.
-
-**The backend is stateless, and now genuinely so — `context` is not read.**
-Send whatever you like in it; it is echoed back unchanged and carries no
-meaning server-side. There is no conversation memory: every message is
-answered on its own, with nothing carried over from earlier turns. A
-follow-up like "explain that in English" is sent to GraphRAG exactly as
-typed, with no prior answer attached, so it may not resolve the way it used
-to.
+**The backend is stateful again — `context` carries real conversation
+state.** Resend exactly what the previous response gave you. There IS
+conversation memory now: earlier turns in this session (`context.chat_history`)
+and, separately, earlier CONSULTATIONS by this signed-in user (Convex-backed,
+see "Memory" below) both feed into the answer.
 
 ### Response
 
@@ -124,33 +121,33 @@ to.
     { "section": "Trusted Ayurveda / Yoga knowledge",
       "source": "knowledge:gas-bloating.md",
       "score": 0.59 }
-  ],
-  "documentTruncated": false   // true if any attached document had to be cut (or dropped) to fit GraphRAG's query budget
+  ]
 }
 ```
 
 | `kind` | What it is | How to render |
 |---|---|---|
-| `chat` | a supportive-care reply for a serious diagnosed condition (cancer, dialysis, TB, ...) — caught locally, before GraphRAG | a normal bubble |
-| `answer` | GraphRAG's own reply, verbatim | bubble + sources |
-| `escalation` | a red flag was detected locally; see a doctor | prominent, not a normal bubble |
-| `error` | GraphRAG could not be reached, or is not configured | a warning, not a chat bubble |
+| `chat` | a conversational reply, or a gathering question | a normal bubble |
+| `answer` | the final plan, six sections in markdown | bubble + sources |
+| `escalation` | a red flag was detected; see a doctor | prominent, not a normal bubble |
+| `error` | the assistant could not run (quota, outage) | a warning, not a chat bubble |
 | `intake` | **retired** | never sent; treat as `chat` if you see it |
-
-`condition` and `message` are always `""` now — nothing classifies the
-complaint or writes a separate message any more. Render `answer`.
 
 ### Sources
 
-Only one namespace is possible now:
+`source` is namespaced, and the namespaces mean different things. Do not flatten
+them into one count — "based on 3 Ayurveda notes" is false if one of them is the
+reader's own blood test.
 
 | Prefix | Meaning |
 |---|---|
-| `graphrag:` | GraphRAG's own citation for its answer |
+| `knowledge:` | the shared curated Ayurveda corpus (local fallback) |
+| `report:` | a document THIS user uploaded, retrieved by relevance |
+| `graphrag:` | GraphRAG's own retrieved passage or extracted relationship |
+| `memory:` | something they said in an earlier consultation |
 
-`knowledge:`, `report:` and `memory:` are gone along with the local knowledge
-base, the report-upload feature, and long-term memory. `sources` is often `[]`
-— GraphRAG does not always cite.
+Deduplicate by file: retrieval returns one entry per *chunk*, so one note can
+appear four times.
 
 ### Errors
 
@@ -182,9 +179,6 @@ would still end up with exactly the right transcript. Store `done`, never the
 accumulated tokens — tokens can stop arriving and the stored conversation must not
 depend on having received them all.
 
-`done`'s payload carries `documentTruncated` too, same meaning as in
-`POST /api/consult` above.
-
 Fall back to `POST /api/consult` if the stream cannot be opened or ends without a
 `done`.
 
@@ -196,36 +190,39 @@ Fall back to `POST /api/consult` if the stream cannot be opened or ends without 
 the browser must set it so it can add the multipart boundary.
 
 ```jsonc
-// /api/upload    -> { "filename": "report.pdf", "chars": 4821, "text": "…", "truncated": false }
+// /api/upload -> { "filename": "report.pdf", "chars": 4821, "text": "…", "truncated": false, "indexed": 12 }
 ```
 
-**Nothing is stored.** There is no per-user document store any more — the
-backend extracts the text and hands it straight back in this response, then
-forgets the file completely. This is deliberate: GraphRAG's own document
-upload API stores files in a corpus shared across the whole project, not
-privately per user, which would leak one person's report into another
-person's ordinary answers — see `docs/graphrag-api.md` for that API, and do
-not route uploads through it.
+**Extraction and indexing happen in the same request.** `indexed` is the
+number of chunks embedded and stored, scoped to the verified signed-in
+caller — an anonymous upload still gets `text` back (still useful for the
+`documents` field above) but `indexed` stays `0`, since there is no user to
+scope storage to.
 
-**Hold `filename` and `text` client-side and send them back as one entry in
-`documents` on a later `POST /api/consult` call to ask about it** — see
-"Several attachments" above. There is no session that remembers an
-"attached" file for you.
-
-`chars: 0` / `text: ""` means nothing could be read from the file — most
+`chars: 0` / `text: ""` means nothing could be read from the file - most
 often a scanned PDF, which is rasterised and OCR'd rather than parsed.
-`truncated: true` means the extracted text was longer than the backend's own
-per-file cap and was cut before being returned (independent of, and
-unrelated to, `documentTruncated` on `/api/consult` — that one is about how
-much of `documents` made it into one GraphRAG query, not how much
-`/api/upload` extracted in the first place).
+`truncated: true` bounds only what round-trips in THIS response
+(40,000 chars); indexing always uses the full extracted text regardless.
 
-OCR asks for English *and* Hindi (`eng+hin`) — both language packs are
-confirmed installed on the production host (verified `tesseract --list-langs`
-2026-08-29). If a future host is ever missing the Hindi pack, this fails
-silently rather than with an error — `_ocr()` in `documents.py` retries
-English-only rather than raising — so it is worth re-checking after any
-fresh provisioning.
+An indexing failure (bad or exhausted OpenRouter key, timeout) does not fail
+the request — extraction already succeeded, so `text` still comes back;
+`indexed` is `0` and the failure is logged server-side, not surfaced as an
+error to the caller.
+
+---
+
+## Memory
+
+Two distinct things, kept separate:
+
+- **Conversation history** — `context.chat_history`, capped at the last 24
+  turns, round-trips through the client like everything else in `context`.
+  Short-term, this-conversation-only.
+- **Long-term memory** — earlier CONSULTATIONS by this signed-in user,
+  fetched server-side from Convex (`/backend/user-memory`), scoped to the
+  verified `user_id` from the JWT — never a client-supplied one. Surfaces as
+  `memory:` sources. There is no way to opt out per-request today; it is
+  always consulted for a signed-in caller.
 
 ---
 

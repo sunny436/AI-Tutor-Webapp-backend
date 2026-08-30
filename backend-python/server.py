@@ -1,40 +1,42 @@
 """
 server.py
 ---------
-The Python AI backend (FastAPI). It is a thin proxy in front of GraphRAG:
+The Python AI backend (FastAPI). It does two jobs:
 
-    GET  /            -> says what this host is
-    POST /consult      -> one turn. Safety scan, then GraphRAG writes the reply.
-    POST /consult/stream -> the same turn as Server-Sent Events
-    POST /upload         -> read text from an uploaded report (PDF/image);
-                             nothing is stored, the caller holds the text
-    POST /jobs/run      -> Convex sends a job; we answer and webhook back
-    GET  /whoami        -> verify a Convex login token (JWT) via JWKS
-    GET  /health         -> liveness + is GraphRAG reachable
+A) Answers consultations for the dashboard
+   - GET  /            -> says what this host is
+   - POST /consult     -> one turn of the consultation (also /consult/stream)
+   - POST /upload      -> read text from an uploaded report (PDF/image),
+                          index it for this user, and hand the text back too
+   - GET  /documents, DELETE /documents/{filename} -> manage indexed reports
 
-There is no local model, no local knowledge base, and no local retrieval.
-GraphRAG's own team owns retrieval and answer quality; this backend verifies
-who is asking, refuses to forward a message that looks like a medical
-emergency, and relays whatever GraphRAG says. See `src/graphrag.py` and
-`src/safety.py` for what each of those two steps actually does.
+B) Talks to the Convex template (the "bring your own backend" paths):
+   - POST /jobs/run    -> Convex sends a consult job; we answer and webhook back
+   - POST /extract     -> read a report (protected by the shared service key)
+   - GET  /whoami      -> verify a Convex login token (JWT) via JWKS
+   - GET  /health      -> liveness + provider/GraphRAG/model status
 
-The one local exception is `/upload`: reading a PDF/image is not a GraphRAG
-concern, and its extracted text is folded into a question rather than stored
-or indexed anywhere (see `src/documents.py` and `_build_query` below).
+RESTORED from the pre-`d7e6d42` architecture: this file is thin again —
+`src.consult.run_turn` does the safety scan, routing, retrieval, memory, and
+plan-writing. GraphRAG is one retriever among several now (see
+src/retrieval/registry.py); it no longer writes the answer.
 """
 
 import asyncio
+import base64
 import json
 import sys
 import tempfile
+import time
 from pathlib import Path
 
-from fastapi import FastAPI, File, Request, Header, HTTPException, UploadFile
+import httpx
+from fastapi import FastAPI, Request, Header, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, StreamingResponse
 
 import config
-from src import graphrag, safety
+from src.consult import run_turn as run_consult_turn
 from src.documents import extract_text
 
 # Make the logs UTF-8 before anything can write to them.
@@ -62,16 +64,34 @@ app = FastAPI(title="Ayurveda & Yoga AI Backend")
 # be visiting could otherwise script authenticated calls against this backend
 # and read the replies. Wildcard origins cannot be combined with credentials,
 # so nothing is lost by naming the origins explicitly.
+#
+# DELETE is in the list because the browser uses it for the report-removal
+# button. X-Service-Key is deliberately NOT allowed: those routes are called
+# server-to-server by Convex, where CORS does not apply.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=config.ALLOWED_ORIGINS,
     allow_credentials=False,
-    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
     allow_headers=["Authorization", "Content-Type"],
 )
 
 
-# ---------- auth helpers ----------
+@app.on_event("startup")
+def _warm_up_on_startup():
+    """Load the AI models once at startup so the first answer is already fast."""
+    try:
+        from src.knowledge import warm_up
+        from src.llm import get_llm
+        warm_up()          # loads embeddings + vector DB once
+        get_llm(0.2)       # pre-build the LLM clients
+        get_llm(0.5)
+        print("Warm-up complete — answers will be fast now.")
+    except Exception as e:
+        print("Warm-up skipped:", e)
+
+
+# ---------- helpers ----------
 def _check_service_key(x_service_key: str | None) -> None:
     if (x_service_key or "") != config.SERVICE_KEY:
         raise HTTPException(status_code=401, detail="bad service key")
@@ -81,13 +101,48 @@ def _bearer(authorization: str) -> str:
     return authorization[7:] if authorization.startswith("Bearer ") else ""
 
 
+_balance_cache: dict[str, float] = {}
+
+
+def _openrouter_balance() -> float | None:
+    """Remaining OpenRouter credit in USD, or None if it cannot be read.
+
+    Refreshed at most every five minutes so a supervisor polling /health once
+    a minute doesn't turn this into extra load, and a failed lookup never
+    fails liveness — it is simply omitted.
+    """
+    if not config.OPENROUTER_API_KEY:
+        return None
+
+    now = time.monotonic()
+    if _balance_cache and now - _balance_cache.get("at", 0.0) < 300:
+        return _balance_cache.get("value")
+
+    try:
+        with httpx.Client(timeout=5.0) as client:
+            response = client.get(
+                "https://openrouter.ai/api/v1/credits",
+                headers={"Authorization": f"Bearer {config.OPENROUTER_API_KEY}"},
+            )
+            data = (response.json() or {}).get("data") or {}
+        value = round(
+            float(data.get("total_credits") or 0) - float(data.get("total_usage") or 0), 4
+        )
+    except Exception as error:  # noqa: BLE001
+        print(f"[health] could not read OpenRouter balance: {type(error).__name__}")
+        return None
+
+    _balance_cache.update({"at": now, "value": value})
+    return value
+
+
 def require_user(authorization: str, service_key: str = "") -> str:
     """Verified user id, or 401 when `config.REQUIRE_AUTH` is on.
 
     A valid service key is accepted as an alternative credential — it
     identifies no user, so it unlocks admission without unlocking anybody's
     private data, and it is what lets `/jobs/run` and the test suite reach
-    GraphRAG without minting a login.
+    the flow without minting a login.
     """
     user_id = verify_token(_bearer(authorization))
     if user_id:
@@ -137,9 +192,9 @@ def _signing_key(token: str):
 def verify_token(token: str) -> str:
     """Return the Convex user id for a login token, or "" if it is not valid.
 
-    Deliberately not a 401 on failure: an anonymous or expired session should
-    still be able to consult; it just does not get past `require_user` on the
-    endpoints that spend GraphRAG's quota.
+    This is the ONLY thing allowed to establish who is asking. A client's own
+    `principal` claim is never trusted for anything that selects private
+    data — a forged principal must buy nothing.
     """
     if not token:
         return ""
@@ -167,152 +222,41 @@ def verify_token(token: str) -> str:
 
 
 async def _post_webhook(body: dict) -> None:
-    import httpx
-
     url = f"{config.CONVEX_SITE_URL}/backend/webhook"
     async with httpx.AsyncClient(timeout=30) as client:
         await client.post(url, headers={"x-webhook-secret": config.WEBHOOK_SECRET}, json=body)
 
 
-# ---------- the one thing this backend decides on its own ----------
-def _query_text(data: dict) -> str:
-    """What the user actually said this turn.
+def _fold_documents_into_profile(profile: str, documents) -> str:
+    """`documents: [{filename, text}]`, if the caller sends it, folded into
+    `profile` — the same channel `/jobs/run` has always used for this.
 
-    `freeText` and `problem` are kept as separate request fields for
-    compatibility with the existing frontend contract, but nothing here
-    branches on which one arrived — every turn is answered on its own, with
-    no server-side conversation state, so there is nothing left for the
-    distinction to mean.
+    Kept for frontend compatibility (yesterday's upload contract). It is now
+    a SUPPLEMENT, not the only path: `run_consult_turn`'s own retrieval
+    pipeline also pulls from this user's indexed uploads automatically (see
+    `UploadedReportsRetriever`), so a caller that stops sending this field
+    loses nothing — the documents were already indexed at upload time.
     """
-    text = (data.get("freeText") or data.get("problem") or "").strip()
-    profile = (data.get("profile") or "").strip()
-    if profile and text:
-        return f"{text}\n\n(About the person asking: {profile})"
-    return text or profile
-
-
-# GraphRAG's own hard cap on the whole query string (src/graphrag.py) is
-# MAX_QUERY_CHARS = 2000. This is the SHARED budget every attached document
-# draws from — not per file — so one huge report cannot silently starve the
-# others. Split evenly by _build_query below.
-MAX_DOCUMENT_CHARS_IN_QUERY = 1200
-# Beyond this many attachments, each one's slice of the shared budget above
-# gets too thin to be worth sending at all — excess files are dropped rather
-# than diluted into uselessness, and that drop counts as truncation too.
-MAX_DOCUMENTS_IN_QUERY = 5
-
-
-def _parse_documents(data: dict) -> list[dict]:
-    """`documents: [{filename, text}, ...]` from the request, junk dropped.
-
-    A LIST, not one joined string — this earlier shipped as a single
-    `documentText` field, which forced the FRONTEND to concatenate multiple
-    attachments by hand into one string with its own `--- filename ---`
-    convention. That coupled this backend to a format it did not own, and
-    worse, meant one file could exhaust the whole truncation budget before a
-    second file's content was ever considered. A list lets this backend own
-    both the labelling and the per-file budget.
-    """
-    raw = data.get("documents")
-    if not isinstance(raw, list):
-        return []
-    out = []
-    for item in raw:
-        if not isinstance(item, dict):
-            continue
-        text = str(item.get("text") or "").strip()
-        if not text:
-            continue
-        out.append({"filename": str(item.get("filename") or "attachment"), "text": text})
-    return out
-
-
-def _build_query(message: str, documents: list[dict]) -> tuple[str, bool]:
-    """The string sent to GraphRAG this turn: (query, was_anything_truncated).
-
-    `message` goes FIRST and is never truncated here. MAX_DOCUMENT_CHARS_IN_QUERY
-    is a SHARED budget split evenly across every attached document, so two
-    reports each get roughly half instead of the first one taking all of it
-    and the second being silently dropped — the bug this replaced. If the
-    combined string still somehow exceeds graphrag.MAX_QUERY_CHARS,
-    graphrag.py's own tail-slice trims from the end — the last document's
-    excerpt, never the question.
-
-    ACCEPTED LIMITATION: every question about a given upload sees the same
-    excerpt of it — there is no retrieval over document content, so a
-    question about page 3 of a long report will not see page 3. Fixing that
-    means either GraphRAG's own shared-corpus upload (rejected — it is not
-    private per user) or a form of local per-document indexing (the kind of
-    local state this backend was deliberately rewritten to not have). Out of
-    scope for "upload a report, then ask about it".
-    """
-    if not documents:
-        return message, False
-    truncated = len(documents) > MAX_DOCUMENTS_IN_QUERY
-    documents = documents[:MAX_DOCUMENTS_IN_QUERY]
-    budget = max(MAX_DOCUMENT_CHARS_IN_QUERY // len(documents), 1)
+    if not isinstance(documents, list) or not documents:
+        return profile
     blocks = []
     for doc in documents:
-        text = doc["text"]
-        if len(text) > budget:
-            truncated = True
-        blocks.append(f"--- {doc['filename']} ---\n{text[:budget]}")
-    piece = "(From attached reports:\n" + "\n\n".join(blocks) + ")"
-    return (f"{message}\n\n{piece}" if message else piece), truncated
-
-
-def _safety_result(message: str, context: dict, *extra: str) -> dict | None:
-    """An escalation or supportive-care reply, or None if the message is clear
-    to forward to GraphRAG. The ONLY local decision this backend still makes.
-
-    `extra` carries anything else that will reach GraphRAG this turn — today,
-    every attached document's FULL extracted text, not the excerpts
-    `_build_query` truncates them to. A red flag past an excerpt's boundary
-    must still be caught before anything is sent, so this must always see
-    the untruncated document text, never the truncated query built from it.
-    """
-    fragments = (message, *extra)
-    if safety.scan(*fragments):
-        return {
-            "kind": "escalation",
-            "condition": "",
-            "message": "",
-            "answer": safety.ESCALATION_MESSAGE,
-            "intake": None,
-            "context": context,
-            "sources": [],
-            "documentTruncated": False,
-        }
-    if any(safety.is_serious_condition(fragment) for fragment in fragments if fragment):
-        return {
-            "kind": "chat",
-            "condition": "",
-            "message": "",
-            "answer": safety.SERIOUS_CONDITION_MESSAGE,
-            "intake": None,
-            "context": context,
-            "sources": [],
-            "documentTruncated": False,
-        }
-    return None
-
-
-def _sources_from_citations(citations) -> list[dict]:
-    out = []
-    for citation in citations or []:
-        if not isinstance(citation, dict):
+        if not isinstance(doc, dict):
             continue
-        name = citation.get("filename") or citation.get("document_id") or "unknown"
-        out.append({
-            "section": "Reference documents",
-            "source": f"graphrag:{name}",
-            "score": citation.get("score"),
-        })
-    return out
+        text = str(doc.get("text") or "").strip()
+        if not text:
+            continue
+        name = str(doc.get("filename") or "attachment")
+        blocks.append(f"--- {name} ---\n{text}")
+    if not blocks:
+        return profile
+    block = "\n\n".join(blocks)
+    return f"{profile}\n\nInfo from uploaded documents:\n{block}" if profile else \
+        f"Info from uploaded documents:\n{block}"
 
 
 # ======================================================================
-#  A) THE CONSULTATION
+#  A) THE WEB APP
 # ======================================================================
 @app.get("/", response_class=HTMLResponse)
 def home():
@@ -331,64 +275,36 @@ async def consult(
     authorization: str = Header(default=""),
     x_service_key: str = Header(default=""),
 ):
-    """One turn. `context` is echoed back unchanged — there is no server-side
-    conversation state to merge into it any more."""
+    """One turn of the consultation.
+
+    Request : {problem, context, answers, freeText, profile, documents?, principal?}
+    Response: {kind, condition, message, intake?, answer?, context, sources}
+
+    Identity comes from the verified token and nowhere else — `principal` is
+    threaded through for logging, but `user_id` (what retrievers filter
+    private data on) is always overwritten from the JWT.
+    """
     try:
         data = await request.json()
     except (UnicodeDecodeError, ValueError) as error:
         raise HTTPException(status_code=400, detail=f"invalid JSON body: {error}")
 
-    require_user(authorization, x_service_key)
-    context = data.get("context") or {}
+    token = _bearer(authorization)
+    principal = {**(data.get("principal") or {}), "token": token}
+    principal["user_id"] = require_user(authorization, x_service_key)
 
-    message = _query_text(data)
-    documents = _parse_documents(data)
-    if not message:
-        return {
-            "kind": "chat", "condition": "", "message": "", "answer": "",
-            "intake": None, "context": context, "sources": [], "documentTruncated": False,
-        }
+    profile = _fold_documents_into_profile(data.get("profile", ""), data.get("documents"))
 
-    # The safety scan sees the FULL text of every attached document, not the
-    # excerpts the query will be truncated to below — see _safety_result's
-    # docstring.
-    flagged = _safety_result(message, context, *(d["text"] for d in documents))
-    if flagged:
-        return flagged
-
-    if not config.is_graphrag_ready():
-        raise HTTPException(status_code=503, detail="service is not configured")
-
-    query, doc_truncated = _build_query(message, documents)
-
-    try:
-        body = await asyncio.to_thread(graphrag.answer, query)
-    except Exception as error:  # noqa: BLE001
-        print(f"[consult] GraphRAG call failed: {error}")
-        return {
-            "kind": "error", "condition": "", "message": "AI service unavailable, please try again.",
-            "answer": "AI service unavailable, please try again.",
-            "intake": None, "context": context, "sources": [], "documentTruncated": False,
-        }
-
-    answer_text = (body.get("answer") or "").strip()
-    if not answer_text:
-        return {
-            "kind": "error", "condition": "", "message": "AI service unavailable, please try again.",
-            "answer": "AI service unavailable, please try again.",
-            "intake": None, "context": context, "sources": [], "documentTruncated": False,
-        }
-
-    return {
-        "kind": "answer",
-        "condition": "",
-        "message": "",
-        "answer": answer_text,
-        "intake": None,
-        "context": context,
-        "sources": _sources_from_citations(body.get("citations")),
-        "documentTruncated": doc_truncated,
-    }
+    result = await run_consult_turn(
+        problem=data.get("problem", ""),
+        raw_context=data.get("context"),
+        answers=data.get("answers"),
+        free_text=data.get("freeText"),
+        profile=profile,
+        principal=principal,
+        conversation_id=data.get("conversationId"),
+    )
+    return result.model_dump()
 
 
 @app.post("/consult/stream")
@@ -400,65 +316,48 @@ async def consult_stream(
     """The same turn as POST /consult, delivered as Server-Sent Events.
 
     Two event types:
-      token: {"text": "..."}   a piece of GraphRAG's reply as it is written
-      done:  <same JSON /consult would have returned>
+      token: {"text": "..."}   a piece of a prose answer, as the model writes it
+      done:  <ConsultResult>   the identical JSON /consult would have returned
     """
     try:
         data = await request.json()
     except (UnicodeDecodeError, ValueError) as error:
         raise HTTPException(status_code=400, detail=f"invalid JSON body: {error}")
 
-    require_user(authorization, x_service_key)
-    context = data.get("context") or {}
-    message = _query_text(data)
-    documents = _parse_documents(data)
-
-    flagged = None if not message else _safety_result(
-        message, context, *(d["text"] for d in documents)
-    )
-    query, doc_truncated = _build_query(message, documents)
+    token = _bearer(authorization)
+    principal = {**(data.get("principal") or {}), "token": token}
+    principal["user_id"] = require_user(authorization, x_service_key)
+    profile = _fold_documents_into_profile(data.get("profile", ""), data.get("documents"))
 
     queue: asyncio.Queue = asyncio.Queue()
     loop = asyncio.get_running_loop()
 
-    def run_blocking() -> None:
-        try:
-            pieces: list[str] = []
-            for piece in graphrag.answer_stream(query):
-                pieces.append(piece)
-                loop.call_soon_threadsafe(queue.put_nowait, ("token", piece))
-            answer_text = "".join(pieces).strip()
-            result = {
-                "kind": "answer", "condition": "", "message": "", "answer": answer_text,
-                "intake": None, "context": context, "sources": [], "documentTruncated": doc_truncated,
-            }
-            loop.call_soon_threadsafe(queue.put_nowait, ("done", result))
-        except Exception as error:  # noqa: BLE001
-            print(f"[consult] GraphRAG stream failed: {error}")
-            loop.call_soon_threadsafe(
-                queue.put_nowait, ("error", "AI service unavailable, please try again.")
-            )
-        finally:
-            loop.call_soon_threadsafe(queue.put_nowait, None)
+    def on_token(piece: str) -> None:
+        loop.call_soon_threadsafe(queue.put_nowait, piece)
 
     async def run() -> None:
-        if not message:
-            await queue.put(("done", {
-                "kind": "chat", "condition": "", "message": "", "answer": "",
-                "intake": None, "context": context, "sources": [], "documentTruncated": False,
-            }))
+        try:
+            result = await run_consult_turn(
+                problem=data.get("problem", ""),
+                raw_context=data.get("context"),
+                answers=data.get("answers"),
+                free_text=data.get("freeText"),
+                profile=profile,
+                principal=principal,
+                on_token=on_token,
+                conversation_id=data.get("conversationId"),
+            )
+            await queue.put(("done", result.model_dump()))
+        except Exception as error:  # noqa: BLE001
+            print(f"[consult] stream turn failed: {error}")
+            await queue.put(("error", str(error)))
+        finally:
             await queue.put(None)
-            return
-        if flagged:
-            await queue.put(("done", flagged))
-            await queue.put(None)
-            return
-        if not config.is_graphrag_ready():
-            await queue.put(("error", "service is not configured"))
-            await queue.put(None)
-            return
-        await asyncio.to_thread(run_blocking)
 
+    # Cloudflare gives up on an origin that has sent NOTHING and returns 524.
+    # These are SSE COMMENTS — a line starting with ":" is ignored by every
+    # conforming reader — so they keep the connection demonstrably alive at
+    # no cost to the frontend.
     KEEPALIVE_SECONDS = 15
 
     async def events():
@@ -473,8 +372,11 @@ async def consult_stream(
                     continue
                 if item is None:
                     break
+                if isinstance(item, str):
+                    yield f"event: token\ndata: {json.dumps({'text': item})}\n\n"
+                    continue
                 kind, payload = item
-                yield f"event: {kind}\ndata: {json.dumps(payload if kind != 'token' else {'text': payload})}\n\n"
+                yield f"event: {kind}\ndata: {json.dumps(payload)}\n\n"
         finally:
             if not task.done():
                 task.cancel()
@@ -487,10 +389,9 @@ async def consult_stream(
 
 
 MAX_UPLOAD_BYTES = 20 * 1024 * 1024
-# Cap on what /upload hands back. documents.py's own _OCR_PAGE_LIMIT (10)
-# already bounds a scanned PDF; this is generous headroom above what ten
-# dense pages of OCR text produce, so the JSON response — and whatever the
-# frontend holds in memory for it — stays bounded rather than open-ended.
+# Cap on the `text` handed back in the response. Indexing (below) always uses
+# the FULL extracted text regardless of this cap — this only bounds what
+# round-trips over HTTP for a frontend that still folds it into `documents`.
 MAX_EXTRACTED_CHARS = 40_000
 
 
@@ -498,17 +399,19 @@ MAX_EXTRACTED_CHARS = 40_000
 async def upload(
     file: UploadFile = File(...),
     authorization: str = Header(default=""),
-    x_service_key: str = Header(default=""),
 ):
-    """Read a report and hand the text straight back. Nothing is stored.
+    """Read a report, index it for this user, and hand the text back too.
 
-    This is the whole feature: extract, return, forget. There is no per-user
-    document store any more — `require_user` is a COST gate only (OCR is not
-    free), not a step toward saving anything under the caller's identity. The
-    caller holds `text` and sends it back as `documentText` on a later
-    /consult call to ask about it; see _build_query.
+    Indexed so later questions can retrieve just the relevant chunk of a long
+    report (see `UploadedReportsRetriever`), not only the first ~1200
+    characters. `text` is still returned — unindexed callers (or a caller
+    still on yesterday's `documents: [...]` contract) keep working unchanged.
+
+    Requires a signed-in caller (see `config.REQUIRE_AUTH`) — an anonymous
+    upload still gets its text back but is not indexed (`user_id` is empty,
+    and `user_documents` fails closed on that).
     """
-    require_user(authorization, x_service_key)
+    user_id = require_user(authorization)
     filename = file.filename or "upload.bin"
     raw = await file.read()
     if len(raw) > MAX_UPLOAD_BYTES:
@@ -526,10 +429,61 @@ async def upload(
         Path(tmp_path).unlink(missing_ok=True)
 
     text = text or ""
+    indexed = 0
+    if user_id and text:
+        from src import user_documents
+
+        try:
+            indexed = await asyncio.to_thread(
+                user_documents.index_document, user_id, filename, text
+            )
+        except Exception as error:  # noqa: BLE001
+            # Extraction already succeeded — an embedding failure (bad or
+            # exhausted OpenRouter key, timeout) must not turn a working
+            # extraction into a 500. `indexed` stays 0, which is honest: it
+            # tells the caller retrieval over this document will not work,
+            # without pretending the whole upload failed.
+            print(f"[upload] indexing failed for {filename!r} ({type(error).__name__}): {error}")
+
     truncated = len(text) > MAX_EXTRACTED_CHARS
-    if truncated:
-        text = text[:MAX_EXTRACTED_CHARS]
-    return {"filename": filename, "chars": len(text), "text": text, "truncated": truncated}
+    response_text = text[:MAX_EXTRACTED_CHARS] if truncated else text
+    return {
+        "filename": filename,
+        "chars": len(response_text),
+        "text": response_text,
+        "truncated": truncated,
+        "indexed": indexed,
+    }
+
+
+@app.get("/documents")
+async def list_documents(authorization: str = Header(default="")):
+    """Filenames this caller has indexed. Empty when logged out."""
+    user_id = verify_token(_bearer(authorization))
+    if not user_id:
+        return {"documents": []}
+
+    from src import user_documents
+
+    names = await asyncio.to_thread(user_documents.list_documents, user_id)
+    return {"documents": names}
+
+
+@app.delete("/documents/{filename}")
+async def delete_document(filename: str, authorization: str = Header(default="")):
+    """Remove a document and everything embedded from it.
+
+    Deleting the file without deleting its chunks would leave the report
+    quietly answering questions after the user believed it was gone.
+    """
+    user_id = verify_token(_bearer(authorization))
+    if not user_id:
+        raise HTTPException(status_code=401, detail="login required")
+
+    from src import user_documents
+
+    await asyncio.to_thread(user_documents.remove_document, user_id, filename)
+    return {"ok": True, "filename": filename}
 
 
 # ======================================================================
@@ -537,11 +491,40 @@ async def upload(
 # ======================================================================
 @app.get("/health")
 def health():
-    return {
+    """Liveness, plus provider/model/retrieval status and remaining AI credit.
+
+    Cached and best-effort throughout: this is hit every minute by the
+    supervisor and must never be slower or less reliable than what it
+    reports on, so any one lookup failing is simply omitted.
+    """
+    from src.llm import _available_models, split_provider
+
+    chain = _available_models("")
+    head = chain[0] if chain else ""
+    provider, model = split_provider(head) if head else (config.LLM_PROVIDER, "")
+
+    from src.knowledge import alias_index_size as _alias_index_size
+    from src.retrieval import graphrag as _graphrag
+
+    payload = {
         "ok": True,
+        "llm_ready": config.is_llm_ready(),
         "graphrag_ready": config.is_graphrag_ready(),
-        "graphrag": graphrag.health(),
+        "graphrag": _graphrag.health(),
+        # Zero here means match_topics is blind, which makes GraphRAG's
+        # coverage gate refuse everything while looking perfectly healthy.
+        "alias_index_notes": _alias_index_size(),
+        "provider": provider,
+        "model": model,
+        # How many configured models are not currently cooling down. A drop
+        # here is the earliest visible sign of quota trouble.
+        "models_available": len(chain),
     }
+    balance = _openrouter_balance()
+    if balance is not None:
+        payload["ai_credit_usd"] = balance
+        payload["ai_credit_low"] = balance < 1.0
+    return payload
 
 
 @app.get("/whoami")
@@ -555,6 +538,24 @@ def whoami(authorization: str = Header(default="")):
     return {"verified": True, "sub": sub}
 
 
+@app.post("/extract")
+async def extract(request: Request, x_service_key: str = Header(default="")):
+    _check_service_key(x_service_key)
+    body = await request.json()
+    filename = body.get("filename", "upload.bin")
+    b64 = body.get("base64", "")
+    if not b64:
+        return {"text": ""}
+    raw = base64.b64decode(b64)
+    suffix = Path(filename).suffix or ".bin"
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+        tmp.write(raw)
+        tmp_path = tmp.name
+    text = extract_text(tmp_path)
+    Path(tmp_path).unlink(missing_ok=True)
+    return {"text": text}
+
+
 @app.post("/jobs/run")
 async def jobs_run(request: Request, x_service_key: str = Header(default="")):
     """Convex hands us a consultation job; we answer and webhook the result back."""
@@ -562,32 +563,37 @@ async def jobs_run(request: Request, x_service_key: str = Header(default="")):
     body = await request.json()
     job_id = body.get("jobId")
     data = body.get("input", {}) or {}
-    message = _query_text(data)
-
-    if not message:
-        await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": "empty problem"})
-        return {"accepted": True, "jobId": job_id}
-
-    flagged = _safety_result(message, {})
-    if flagged:
-        await _post_webhook({
-            "type": "job.result", "jobId": job_id,
-            "result": {"kind": flagged["kind"], "answer": flagged["answer"], "knowledge_used": ""},
-        })
-        return {"accepted": True, "jobId": job_id}
-
-    if not config.is_graphrag_ready():
-        await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": "GraphRAG not configured"})
-        return {"accepted": True, "jobId": job_id}
+    problem = data.get("problem", "")
+    profile = data.get("profile", "")
+    document_text = data.get("document_text", "")
+    if document_text:
+        profile = f"{profile}\n\nInfo from uploaded documents:\n{document_text}"
 
     try:
-        answer_body = await asyncio.to_thread(graphrag.answer, message)
-        await _post_webhook({
-            "type": "job.result", "jobId": job_id,
-            "result": {"kind": "answer", "answer": answer_body.get("answer") or "", "knowledge_used": ""},
-        })
+        result = await run_consult_turn(
+            problem=problem,
+            raw_context=None,
+            answers=None,
+            free_text=None,
+            profile=profile,
+        )
     except Exception as e:
         await _post_webhook({"type": "job.result", "jobId": job_id, "result": None, "error": str(e)})
+        return {"accepted": True, "jobId": job_id}
+
+    # Built FIELD BY FIELD, never `result.model_dump()`. The Convex `jobs`
+    # table accepts `v.any()` for this payload, so a dump would silently
+    # write the entire ConsultContext — including chat_history — into a
+    # table nobody expects to hold conversation text.
+    await _post_webhook({
+        "type": "job.result",
+        "jobId": job_id,
+        "result": {
+            "kind": result.kind,
+            "answer": result.answer,
+            "knowledge_used": "",
+        },
+    })
     return {"accepted": True, "jobId": job_id}
 
 

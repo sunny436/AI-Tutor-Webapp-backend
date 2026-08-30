@@ -1,31 +1,49 @@
 # ============================================================
-#  Python AI backend - a thin proxy in front of GraphRAG.
+#  Python AI backend - all free / open-source libraries.
 #  Install with:  pip install -r requirements.txt
 # ============================================================
 #
-# No LLM client, no vector database lives here any more. There is no local
-# model and no local knowledge base: every consultation answer comes from
-# GraphRAG's own /v1/answer, called directly over httpx. Document extraction
-# is the one local exception — see src/documents.py — because an uploaded
-# report's text is folded into a question, never stored or indexed.
+# Restored from the pre-GraphRAG-only architecture. GraphRAG is retrieval
+# only now (/v1/search) — a local LLM writes every final answer, and
+# memory/documents/knowledge are retrieved and assembled locally too.
+#
+# `langgraph`, `langchain` (the umbrella package) and `langchain-community`
+# are deliberately NOT here — grepped against every restored file's actual
+# imports and none of the three is used. `consult/graph.py` is plain async
+# orchestration, not a compiled graph.
 
-# ---- Web server ----
+# ---- Web server (this backend is a small web API) ----
 fastapi>=0.115.0
 uvicorn[standard]>=0.30.0
-httpx>=0.27.0           # calls GraphRAG's /v1/answer, and the Convex webhook
-python-multipart>=0.0.9 # FastAPI's form-data parser (also needed for /upload)
+httpx>=0.27.0            # GraphRAG /v1/search, the Convex webhook, Convex memory reads
+python-multipart>=0.0.9  # FastAPI's form-data parser (needed for /upload)
 
-# ---- Verifying Convex login tokens ----
-pyjwt[crypto]>=2.9.0    # checks the Convex JWT using public keys (JWKS)
+# ---- Verifying Convex login tokens (the "direct" path) ----
+pyjwt[crypto]>=2.9.0     # checks the Convex JWT using public keys (JWKS)
+
+# ---- Talking to the AI models ----
+# Ollima and OpenRouter both speak the OpenAI wire format, so ONE client
+# serves both — only the key and base_url differ (see src/llm.py `_build`).
+langchain-openai>=0.2.0
+langchain-core>=0.3.0    # message types (HumanMessage/SystemMessage), imported directly
+
+# ---- Ayurveda / Yoga knowledge search + per-user document retrieval (RAG) ----
+# NO local embedding model. Embeddings run on OpenRouter (config.EMBEDDING_MODEL) —
+# sentence-transformers would drag in torch, a multi-GB install on a 3.8 GB host,
+# for a model nothing loads any more.
+langchain-chroma>=0.1.4
+chromadb>=0.5.5
+langchain-text-splitters>=0.3.0  # chunks uploaded reports (src/user_documents.py)
 
 # ---- Reading uploaded medical documents ----
-# PyMuPDF rather than pdf2image for rasterising a scanned pdf: it renders in
-# process, where pdf2image shells out to poppler-utils, a system package that
-# would have to be installed on every host separately from pip.
 pypdf>=5.0.0
+# Rasterises a SCANNED pdf so it can be OCR'd - see _ocr_pdf in
+# src/documents.py. PyMuPDF rather than pdf2image because it renders in
+# process: pdf2image shells out to poppler-utils, a system package that
+# would have to be installed on every host separately from pip.
 pymupdf>=1.24.0
 pdfplumber>=0.11.0
-pytesseract>=0.3.13     # OCR for images and scanned PDFs (needs the free Tesseract program)
+pytesseract>=0.3.13     # OCR for images (needs the free Tesseract program)
 pillow>=10.4.0
 
 # ---- Helpers ----

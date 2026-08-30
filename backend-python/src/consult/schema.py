@@ -1,0 +1,228 @@
+"""
+consult/schema.py
+-----------------
+The wire contract between the AI backend and the dashboard.
+
+The whole point of the redesign lives here: instead of the model emitting one
+free-text question per turn ("What did you eat?" -> user types), it emits an
+`IntakePlan` — a set of questions with pre-written options the user simply clicks.
+
+Deliberately only three question `type`s. Every extra type is another renderer,
+another validator branch, and another way the model produces something the UI
+cannot draw. A 1-5 severity scale is just `single` with `display="scale"`: same
+data, different CSS.
+"""
+
+from __future__ import annotations
+
+from typing import Literal
+
+from pydantic import BaseModel, ConfigDict, Field
+
+# Caps applied by the repair layer. Generous enough for any real condition,
+# tight enough that a runaway model can't render 30 cards.
+MAX_QUESTIONS = 6
+MAX_OPTIONS = 8
+MAX_LABEL = 90
+MAX_OPTION_LABEL = 44
+MAX_CONDITION = 60
+
+
+class Option(BaseModel):
+    """One clickable chip."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    id: str
+    label: str
+    emoji: str | None = None
+    # Set by the planner on answers that warrant seeing a doctor (e.g. "blood in
+    # stool"). Selecting one escalates deterministically, instead of relying on
+    # keyword matching against text the model invented.
+    red_flag: bool = False
+
+
+class Question(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    id: str
+    label: str
+    hint: str | None = None
+    type: Literal["single", "multi", "text"] = "single"
+    # Rendering hint only — never affects validation or the prompt.
+    display: Literal["chips", "scale", "cards"] = "chips"
+    options: list[Option] = Field(default_factory=list)
+    max_select: int | None = None
+    # Everything is skippable. Forcing answers recreates the interrogation.
+    required: bool = False
+
+
+class IntakePlan(BaseModel):
+    model_config = ConfigDict(extra="ignore")
+
+    # Display label and retrieval hint ONLY. Nothing may branch on this value —
+    # the moment `if condition == "acidity"` appears, per-disease flows are back.
+    condition: str = ""
+    note: str = ""
+    questions: list[Question] = Field(default_factory=list)
+    # Decided during round 1 so a second round costs no extra planning call.
+    needs_second_round: bool = False
+
+
+class Answer(BaseModel):
+    """What the user picked for one question."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    options: list[str] = Field(default_factory=list)  # option ids
+    text: str | None = None
+
+
+class ChatTurn(BaseModel):
+    """One line of ordinary conversation, kept so replies follow on properly."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    role: Literal["user", "assistant"]
+    text: str
+
+
+# Enough for the assistant to see how the conversation is going, without letting
+# the context blob (which rides on every request) grow without bound.
+#
+# RAISED 10 -> 24. Since the intake cards were removed, this history IS the
+# clinical record - write_plan is fed render_history(). At 10 turns, and with
+# small talk sharing the window (remember_chat runs for greetings too), five
+# throwaway replies were enough to push every clinical fact out of view:
+#
+#     after turn  5   duration, trigger, bloating, belching
+#     after turn  8   duration GONE
+#     after turn  9   trigger GONE
+#     after turn 10   nothing left
+#
+# The plan was then written for a complaint whose details the model could no
+# longer see. Raising the COUNT is the fix, and it is cheap, because real user
+# messages are tiny - measured at 2-59 chars, median 23:
+#
+#     10 turns    779 tokens        24 turns   1870 tokens   (+1091)
+#
+# ~1091 extra input tokens is less than one knowledge note (1501 avg).
+#
+# Deliberately NOT raising state.MAX_NOTE_CHARS (400). Measured: it never fires
+# on user turns, and rework_answer reads `last_answer` (6000 chars), not this
+# history - so the assistant entries here only carry conversational continuity,
+# which 400 covers. Raising it to 800 would cost 3609 tokens for no benefit.
+MAX_CHAT_HISTORY = 24
+
+# The conversation state machine.
+#
+#   idle       nothing said yet
+#   greeted    hello exchanged — do NOT greet again
+#   casual     chatting, no health concern raised
+#   gathering  asking about the complaint IN PROSE, one or two questions a turn
+#   completed  plan delivered
+#
+# Transitions:
+#   idle/greeted/casual/completed --(typed message)--> routed by intent
+#   any --(health intent)--> gathering
+#   gathering --(enough detail)--> completed (the plan)
+#   any --(red flag)--> completed (escalation)
+#
+# RETIRED, BUT STILL ACCEPTED:
+#   collecting  answering generated question CARDS
+#   choosing    picking which parts of the plan they want
+#
+# Both are gone from the product — the consultation is a conversation now — but
+# they MUST stay in this Literal. `state.load_context` returns a FRESH context
+# whenever validation raises, so narrowing this would silently reset every
+# conversation that is mid-intake at deploy time: the user's half-finished
+# consultation would vanish and the assistant would greet them again. They are
+# mapped to `gathering` on load instead. Remove them only once no persisted blob
+# can still carry one.
+Phase = Literal[
+    "idle", "greeted", "casual", "gathering", "collecting", "choosing", "completed"
+]
+
+# Phases retired in the move to conversational gathering, mapped on load.
+LEGACY_PHASES = ("collecting", "choosing")
+
+# States where a typed message is the ongoing consultation rather than a new
+# message to be routed. The legacy two are kept so a conversation persisted
+# before the change keeps behaving correctly on its next turn.
+CONSULTING = ("gathering", "collecting", "choosing")
+
+
+class ConsultContext(BaseModel):
+    """Session state the client echoes back each turn.
+
+    Carries CONVERSATION state only — what was said in this chat and how far the
+    intake has got. The user's medical profile, past consultations and uploaded
+    reports are server-owned and fetched by the retrieval layer; they are never
+    accepted from the browser.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    # Bumped when the shape changes; an unknown version is discarded rather than
+    # crashing on an old blob persisted in Convex. v2 added the state machine and
+    # chat history.
+    v: int = 2
+    phase: Phase = "idle"
+    # True once a greeting has been exchanged, so the assistant never opens with
+    # "Namaste! How can I help?" twice in the same conversation.
+    greeted: bool = False
+    # Recent turns of ordinary conversation, so replies respond to what was
+    # actually said instead of restarting every message. Each turn is truncated.
+    chat_history: list[ChatTurn] = Field(default_factory=list)
+    # The last substantial answer, kept in FULL. `chat_history` truncates every
+    # turn, which is fine for "what were we talking about" but useless for
+    # "translate that into English" — a faithful rewrite needs the whole text.
+    last_answer: str = ""
+    # The language the conversation settled into: "english", "hinglish" or
+    # "devanagari". Sticky ON PURPOSE. Detecting per message looked reasonable
+    # until a follow-up carried no signal of its own — "tell me more" has no
+    # Hindi function words, so an English conversation silently flipped to
+    # Hinglish on the very next turn. Set once from the first real message, and
+    # changed only when the user actually asks for another language.
+    language: str = ""
+    round: int = 0
+    problem: str = ""
+    condition: str = ""
+    needs_second_round: bool = False
+    # Plans already issued, so submitted option ids can be resolved to labels
+    # server-side. Answers are keyed by question id, so re-answering overwrites.
+    asked: list[Question] = Field(default_factory=list)
+    answers: dict[str, Answer] = Field(default_factory=dict)
+    notes: list[str] = Field(default_factory=list)
+    # SHORT retrieval keywords accumulated while gathering — "gas", "after
+    # meals", "spicy food". Never sentences.
+    #
+    # This is what replaced the tapped option labels as the retrieval signal, and
+    # the shortness is the whole point. `state.search_query` builds the vector
+    # query from these, and its docstring records the measurement: appending the
+    # full collected text dropped an acidity query from 0.408 to 0.172, enough to
+    # start losing notes that genuinely match. Feeding the transcript here would
+    # reproduce exactly that.
+    #
+    # New in the conversational flow; absent from every older persisted blob,
+    # which is why it defaults empty rather than bumping the version.
+    symptoms: list[str] = Field(default_factory=list)
+
+
+class ConsultResult(BaseModel):
+    """One turn's response."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    # chat  = a conversational reply (greeting, "what can you do", an off-topic
+    #         question, or a general Ayurveda question) with no cards attached.
+    # error = the assistant could not run at all — quota exhausted, bad key,
+    #         provider down. Rendered as a warning, not as something the
+    #         assistant "said", so the user knows to retry rather than rephrase.
+    kind: Literal["chat", "intake", "answer", "escalation", "error"]
+    condition: str = ""
+    message: str = ""
+    intake: IntakePlan | None = None
+    answer: str = ""
+    context: ConsultContext = Field(default_factory=ConsultContext)
+    sources: list[dict] = Field(default_factory=list)

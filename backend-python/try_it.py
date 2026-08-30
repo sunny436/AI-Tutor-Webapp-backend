@@ -1,57 +1,59 @@
 """
 try_it.py
 ---------
-A quick LOCAL test so you can see the assistant working straight away,
+A quick LOCAL test so you can see the Ayurveda/Yoga AI working straight away,
 WITHOUT needing Convex, the dashboard, or the tunnel.
 
-Run it (after installing requirements and setting GRAPHRAG_* in .env):
+Run it (after installing requirements and setting the keys in .env):
     python try_it.py
 
-Exercises exactly what server.py does for one turn: the safety scan, then
-GraphRAG's own /v1/answer. There is no local model and no local knowledge
-base to test — GraphRAG's team owns retrieval and answer quality now.
+Repointed from the legacy LangGraph flow to `consult.run_turn` -- the same code
+path the website uses -- when that flow was deleted. It was the last caller.
 """
 
-import config
-from src import graphrag, safety
+import asyncio
+
+from src.consult import run_turn
 
 
 def main() -> None:
     print("=" * 55)
     print(" Ayurveda & Yoga Assistant - quick local test")
     print("=" * 55)
+    print("Type your problem. It will ask a couple of questions, then plan.\n")
 
-    if not config.is_graphrag_ready():
-        print("GRAPHRAG_ENABLED, GRAPHRAG_BASE_URL and GRAPHRAG_API_KEY must all be")
-        print("set in .env before this can answer anything.")
-        return
+    # A simple example profile so the answer is personalised.
+    profile = (
+        "Age: 29\nGender: female\nFood preference: vegetarian\n"
+        "Sleep: late\nWater intake: low\nStress: high"
+    )
 
     message = input("Describe your problem: ").strip()
-    if not message:
-        return
+    context = None
 
-    if safety.scan(message):
+    while True:
+        result = asyncio.run(
+            run_turn(
+                problem=message if context is None else "",
+                raw_context=context,
+                answers=None,
+                free_text=None if context is None else message,
+                profile=profile,
+            )
+        )
+        context = result.context.model_dump()
+
         print("\n" + "-" * 55)
-        print(safety.ESCALATION_MESSAGE)
+        print(result.answer or "(no reply)")
         print("-" * 55)
-        return
 
-    if safety.is_serious_condition(message):
-        print("\n" + "-" * 55)
-        print(safety.SERIOUS_CONDITION_MESSAGE)
-        print("-" * 55)
-        return
+        # `answer` is the plan; anything else is still gathering or chatting.
+        if result.kind in ("answer", "escalation", "error"):
+            break
 
-    print("\nAsking GraphRAG...")
-    try:
-        body = graphrag.answer(message)
-    except Exception as error:  # noqa: BLE001
-        print(f"GraphRAG could not answer: {error}")
-        return
-
-    print("\n" + "-" * 55)
-    print(body.get("answer") or "(no reply)")
-    print("-" * 55)
+        message = input("\nYour reply (blank to stop): ").strip()
+        if not message:
+            break
 
 
 if __name__ == "__main__":

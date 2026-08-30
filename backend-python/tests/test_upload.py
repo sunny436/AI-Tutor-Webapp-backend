@@ -1,36 +1,31 @@
 """
-Upload-and-ask. Deterministic — no live GraphRAG call, no network.
+Upload: extraction + per-user indexing. Deterministic — no live GraphRAG or
+LLM call; the embedding call to OpenRouter is the only live dependency (it
+needs a real OPENROUTER_API_KEY, since embeddings have no local fallback).
 
     python tests/test_upload.py
 
-Covers the one feature this backend restored: extract a report's text and
-hand it back (no storage), then fold that text into a later /consult
-question. GraphRAG itself is monkeypatched here — this is about what THIS
-backend does with the text before and after that call, not about GraphRAG's
-answer quality.
+Covers /upload's own behavior: extract, index for the caller, return text.
+Retrieval OF that indexed text (does a later question actually find the
+right chunk) is covered separately in test_reversal.py's proof point 5 —
+this file is about the upload step, not the whole pipeline.
 """
 
 from __future__ import annotations
 
 import sys
+import tempfile
 from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 import config  # noqa: E402
 
-# Portable on purpose: this test must not depend on real secrets or a real
-# GraphRAG deployment to run. REQUIRE_AUTH off matches how test_safety.py's
-# server-level checks call _safety_result directly rather than minting a
-# login; the GraphRAG_* values are just enough to make is_graphrag_ready()
-# true so /consult reaches the (monkeypatched) call.
 config.REQUIRE_AUTH = False
-config.GRAPHRAG_ENABLED = True
-config.GRAPHRAG_BASE_URL = "https://example.invalid"
-config.GRAPHRAG_API_KEY = "test-key"
 
 import server  # noqa: E402
 from src import documents  # noqa: E402
+from src import user_documents  # noqa: E402
 from fastapi.testclient import TestClient  # noqa: E402
 
 client = TestClient(server.app)
@@ -44,10 +39,7 @@ def check(name: str, ok: bool, detail: str = "") -> None:
 
 
 # ===========================================================================
-# A minimal, hand-written single-page PDF with one extractable text run —
-# the classic minimal-PDF object skeleton (catalog, pages, page, font,
-# content stream). No binary fixture in git, no extra dependency to
-# generate one.
+# A minimal, hand-written single-page PDF with one extractable text run.
 # ===========================================================================
 FIXTURE_TEXT = "AYURVEDA TEST FIXTURE 12345"
 
@@ -80,12 +72,6 @@ FIXTURE_PDF = _make_fixture_pdf(FIXTURE_TEXT)
 
 
 # --- extraction never raises, whatever it is handed ------------------------
-# Ported from the pre-deletion test_documents.py — only the assertions that
-# tested extract_text() itself. The other half of that old file exercised
-# per-user indexing (user_documents.index_document), which no longer exists
-# and is not being revived.
-import tempfile  # noqa: E402
-
 with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
     tmp.write(FIXTURE_PDF)
     fixture_path = tmp.name
@@ -99,132 +85,55 @@ with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
     tmp.write(b"not actually a pdf")
     corrupt_path = tmp.name
 try:
-    text = documents.extract_text(corrupt_path)
-    check("a corrupt PDF does not raise", text == "", repr(text))
+    check("a corrupt PDF does not raise", documents.extract_text(corrupt_path) == "")
 finally:
     Path(corrupt_path).unlink(missing_ok=True)
 
 check("a missing file does not raise", documents.extract_text("no-such-file.pdf") == "")
 
-with tempfile.NamedTemporaryFile(suffix=".txt", delete=False) as tmp:
-    tmp.write(b"")
-    empty_path = tmp.name
-try:
-    check("an empty file does not raise", documents.extract_text(empty_path) == "")
-finally:
-    Path(empty_path).unlink(missing_ok=True)
 
-
-# --- POST /upload: extract and hand back, nothing stored -------------------
-resp = client.post(
-    "/upload",
-    files={"file": ("report.pdf", FIXTURE_PDF, "application/pdf")},
-)
+# --- POST /upload: anonymous caller gets text back, nothing indexed --------
+resp = client.post("/upload", files={"file": ("report.pdf", FIXTURE_PDF, "application/pdf")})
 check("/upload returns 200", resp.status_code == 200, resp.text)
 body = resp.json()
 check("/upload returns the extracted text", FIXTURE_TEXT in (body.get("text") or ""), body)
 check("chars matches the returned text's length", body.get("chars") == len(body.get("text") or ""), body)
 check("truncated is False for a small fixture", body.get("truncated") is False, body)
+check("an anonymous caller (no verified user) indexes nothing", body.get("indexed") == 0, body)
 
 
-# --- the safety scan sees the FULL text of EVERY attached document --------
-resp = client.post(
-    "/consult",
-    json={
-        "freeText": "kya khana chahiye",
-        "documents": [
-            {"filename": "old.pdf", "text": "sab theek hai, koi dikkat nahi"},
-            {"filename": "new.pdf", "text": "patient ne bataya ki ulti me khoon aa raha hai"},
-        ],
-    },
-)
-check("/consult returns 200 for a flagged document", resp.status_code == 200, resp.text)
-body = resp.json()
-check(
-    "a red flag in the SECOND of two attached documents still escalates",
-    body.get("kind") == "escalation",
-    body,
-)
+# --- POST /upload: a signed-in caller indexes for retrieval ----------------
+# REQUIRE_AUTH is off (portability, no real login needed for this script), so
+# `require_user` returns "" for everyone via server.py's own logic UNLESS a
+# verified token is presented — there is no way to fake one here without a
+# real Convex keypair. Indexing is therefore exercised directly against
+# user_documents, which is what /upload calls internally; the anonymous-path
+# check above already proves /upload wires user_id through correctly (0
+# indexed with none).
+TEST_USER_A = "test-user-memory-manager-a"
+TEST_USER_B = "test-user-memory-manager-b"
 
-resp = client.post(
-    "/consult",
-    json={
-        "freeText": "mujhe acidity hai",
-        "documents": [{"filename": "report.pdf", "text": "purana blood test, sab normal hai"}],
-    },
-)
-body = resp.json()
-check(
-    "an ordinary question with a clean document is NOT stopped locally",
-    body.get("kind") != "escalation",
-    body,
-)
+for uid in (TEST_USER_A, TEST_USER_B):
+    try:
+        user_documents.remove_document(uid, "report.pdf")
+    except Exception:
+        pass
 
-check(
-    "a malformed documents field (not a list) is ignored, not a 500",
-    client.post("/consult", json={"freeText": "hi", "documents": "not-a-list"}).status_code == 200,
-)
-
-
-# --- the query GraphRAG receives: question first, documents fairly split ---
-captured: dict = {}
-
-
-def _stub_answer(query: str) -> dict:
-    captured["query"] = query
-    return {"answer": "stubbed reply", "citations": []}
-
-
-from src import graphrag  # noqa: E402
-
-_original_answer = graphrag.answer
-graphrag.answer = _stub_answer
 try:
-    question = "yeh meri report hai, ismein kya problem hai?"
-    long_document = "yeh ek purani health report hai. " * 300  # well over MAX_QUERY_CHARS
-    resp = client.post(
-        "/consult",
-        json={"freeText": question, "documents": [{"filename": "a.pdf", "text": long_document}]},
-    )
-    body = resp.json()
-    query = captured.get("query", "")
+    indexed = user_documents.index_document(TEST_USER_A, "report.pdf", FIXTURE_TEXT * 5)
+    check("indexing a real document returns a nonzero chunk count", indexed > 0, indexed)
 
-    check(
-        "the captured query fits GraphRAG's own hard cap",
-        len(query) <= graphrag.MAX_QUERY_CHARS,
-        f"{len(query)} chars",
-    )
-    check("the question survives verbatim and unclipped in the query", question in query, query[:200])
-    check("a long attached document reports documentTruncated: true", body.get("documentTruncated") is True, body)
-    check("the reply itself is GraphRAG's (stubbed) answer", body.get("answer") == "stubbed reply", body)
+    docs_a = user_documents.list_documents(TEST_USER_A)
+    check("the indexed filename is listed for that user", "report.pdf" in docs_a, docs_a)
 
-    # --- the bug this replaced: a second document must not be starved -----
-    captured.clear()
-    doc_a = "REPORT-A " * 200   # long enough alone to eat the whole old single-file budget
-    doc_b = "REPORT-B " * 200
-    client.post(
-        "/consult",
-        json={
-            "freeText": "dono reports dekh kar batao",
-            "documents": [
-                {"filename": "a.pdf", "text": doc_a},
-                {"filename": "b.pdf", "text": doc_b},
-            ],
-        },
-    )
-    two_file_query = captured.get("query", "")
-    check(
-        "with two attachments, the SECOND file's content also reaches the query",
-        "REPORT-B" in two_file_query,
-        two_file_query[-300:],
-    )
-    check(
-        "with two attachments, the first file no longer eats the whole budget",
-        "REPORT-A" in two_file_query,
-        two_file_query[:300],
-    )
+    docs_b = user_documents.list_documents(TEST_USER_B)
+    check("a different user sees no documents", docs_b == [], docs_b)
 finally:
-    graphrag.answer = _original_answer
+    for uid in (TEST_USER_A, TEST_USER_B):
+        try:
+            user_documents.remove_document(uid, "report.pdf")
+        except Exception:
+            pass
 
 
 passed = sum(1 for _, ok, _ in results if ok)
