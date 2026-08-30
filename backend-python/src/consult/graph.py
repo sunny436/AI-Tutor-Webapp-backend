@@ -139,6 +139,27 @@ _HELP_TYPE_SECTIONS: dict[str, list[str] | None] = {
     "complete": None,
 }
 
+
+def _sections_for(help_types: list[str]) -> list[str] | None:
+    """Union the section keys for every focus the user asked for.
+
+    `None` means "everything", which is exactly what `resolve_sections`
+    already does with an empty selection — so nothing chosen, and "complete"
+    appearing anywhere in the list, both correctly mean the full plan rather
+    than an empty one.
+
+    Ordering, de-duplication and force-including "When To See A Doctor" are
+    all left to `resolve_sections` / `ALWAYS_INCLUDED` (sections.py), which
+    already do exactly that.
+    """
+    if not help_types or "complete" in help_types:
+        return None
+    keys: list[str] = []
+    for help_type in help_types:
+        keys.extend(_HELP_TYPE_SECTIONS.get(help_type) or [])
+    return keys or None
+
+
 _GREETING_WORDS = re.compile(
     r"^\s*(?:h+i+|h+e+y+|h+e+l+o+|hii+|hlo|yo|hola|namaste|namaskar"
     r"|नमस्ते|नमस्कार|good\s*(?:morning|afternoon|evening|night)"
@@ -432,6 +453,33 @@ async def run_turn(
         # should keep pointing at a doctor. There is no wellness answer that
         # becomes appropriate again three messages later.
         return _escalate(context, "red-flag keyword", said=message or _typed_now)
+
+    # A FOCUS REPLY CAN ARRIVE IN EITHER FIELD, and which one is not the
+    # client's fault. docs/api-contract.md tells clients to send `problem`
+    # whenever `phase` is outside CONSULTING, and `asking_focus` is
+    # deliberately outside it (see schema.py) - so a CONTRACT-CONFORMANT
+    # client sends the focus reply as `problem`, while every in-repo caller
+    # (try_it.py, tests) happens to send `freeText`. That is why this survived
+    # the test suite and broke in production.
+    #
+    # Left alone, the front door below routes it as a brand new message:
+    # `route_message` returns `health`, the grounding guard downgrades it to
+    # `knowledge` because the reply carries no symptom word (router.py, logged
+    # as "health follow-up in an active conversation"), and it is answered from
+    # a THROWAWAY ConsultContext(problem=message) - so retrieval searched for
+    # "root cause and complete plan both" instead of the condition, the reply
+    # was generic onboarding text ending "...describe any specific health
+    # problems", `phase` was reset to "casual", and `help_type` stayed "".
+    # Observed in production on an acidity consultation that had already
+    # finished gathering.
+    #
+    # Normalising to `free_text` makes the `problem` shape take the EXACT path
+    # the `freeText` shape already takes and is already tested on, rather than
+    # adding a second branch that could drift from it. Deliberately after the
+    # safety scan above, which reads both fields, so escalation is unchanged.
+    if context.phase == "asking_focus" and message and not _typed_now:
+        free_text, message = message, ""
+
     if message:
 
         # Follow-ups are checked BEFORE classification and before any retrieval.
@@ -866,7 +914,14 @@ async def run_turn(
 
     # --- 1b. which sections they want, from their reply to the focus question
     if context.phase == "asking_focus":
-        context.help_type = await classify_focus(typed or message, context.language)
+        context.help_types = await classify_focus(typed or message, context.language)
+        # `help_type` (singular) stays populated for backward compatibility —
+        # see schema.py for why widening it in place would reset in-flight
+        # conversations. "complete" wins when present, since it is a superset
+        # of everything else; otherwise the first choice represents the turn.
+        context.help_type = (
+            "complete" if "complete" in context.help_types else context.help_types[0]
+        )
         # Entering the plan-writing branch this same turn — matches the
         # existing convention that "completed" means a plan is (about to be)
         # on screen, not literally that this exact turn already wrote one.
@@ -880,9 +935,14 @@ async def run_turn(
     # `resolve_sections(None)` -> DEFAULT_SECTIONS, so ALWAYS_INCLUDED —
     # "When To See A Doctor" — can never be dropped either way.
     chosen = context.answers.get(SECTIONS_QUESTION_ID)
+    # `help_types` is authoritative; `help_type` is the backward-compatible
+    # single value, read only for a context persisted before `help_types`
+    # existed. See schema.py.
+    help_types = context.help_types or (
+        [context.help_type] if context.help_type else []
+    )
     sections = resolve_sections(
-        _HELP_TYPE_SECTIONS.get(context.help_type)
-        or (chosen.options if chosen else None)
+        _sections_for(help_types) or (chosen.options if chosen else None)
     )
 
     pipeline, results = await _retrieve(context, principal, conversation_id)

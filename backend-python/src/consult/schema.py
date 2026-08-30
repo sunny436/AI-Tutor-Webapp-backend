@@ -218,7 +218,25 @@ class ConsultContext(BaseModel):
     # menu — see `classify_focus` in gathering.py and `_HELP_TYPE_SECTIONS`
     # in graph.py. "" before it's been asked/answered; one of root_cause,
     # remedies, yoga, diet, complete afterward.
+    #
+    # KEPT AS A STRING ON PURPOSE, and still populated, even though
+    # `help_types` below is now the authoritative field. `state.load_context`
+    # returns a FRESH context whenever validation raises, so widening this to
+    # a list would silently reset every conversation that is mid-flow at
+    # deploy time, carrying `help_type: "complete"` from the old shape — the
+    # same trap LEGACY_PHASES exists to avoid. Readers should prefer
+    # `help_types` and fall back to this.
     help_type: str = ""
+    # EVERY focus they asked for, not just the first. "root cause and complete
+    # plan both" and "yoga and diet" are both ordinary answers to the focus
+    # question, and collapsing them to one value silently dropped half of what
+    # was asked — "yoga and diet" became `complete` (all six sections) rather
+    # than the two requested. Empty before the focus question is answered.
+    #
+    # New field with a default rather than a version bump, the same
+    # no-migration precedent `symptoms`, `missing_info` and `help_type` each
+    # already use: absent from older persisted blobs, defaults empty.
+    help_types: list[str] = Field(default_factory=list)
 
 
 class ConsultResult(BaseModel):

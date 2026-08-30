@@ -299,6 +299,158 @@ async def _test_contract_shape():
 asyncio.run(_test_contract_shape())
 
 
+# ===========================================================================
+# 11. THE PRODUCTION SHAPE. docs/api-contract.md tells clients to send
+# `problem` whenever phase is outside CONSULTING, and `asking_focus` is
+# outside it - so a contract-conformant client sends the focus reply as
+# `problem`, not `freeText`. Every helper above (and try_it.py, and
+# test_evidence.py) sends `freeText`, which is why this shape reached
+# production unexercised: the reply was routed as a brand new message, got a
+# generic "I am an AI wellness assistant..." answer, phase was reset to
+# "casual", help_type stayed "", and the user was asked to describe the same
+# complaint again. Both shapes must now reach the plan.
+# ===========================================================================
+async def _test_focus_reply_as_problem():
+    turns = await run_to_focus("mujhe acidity ho rahi hai")
+    _, focus_context = turns[-1]
+    if focus_context.get("phase") != "asking_focus":
+        check("PRECONDITION: reached asking_focus", False, focus_context.get("phase"))
+        return
+
+    condition_before = focus_context.get("condition")
+    symptoms_before = list(focus_context.get("symptoms") or [])
+
+    # The focus reply, sent the way the documented contract says to send it.
+    result = await run_turn(
+        problem="root cause and complete plan both",
+        raw_context=focus_context,
+        answers=None,
+        free_text=None,
+        profile="",
+    )
+    final = result.context.model_dump()
+
+    check(
+        "a focus reply sent as `problem` produces the PLAN, not a chat reply",
+        result.kind == "answer",
+        f"kind={result.kind} phase={final.get('phase')}",
+    )
+    check(
+        "a focus reply sent as `problem` does NOT reset the phase to casual",
+        final.get("phase") == "completed",
+        final.get("phase"),
+    )
+    check(
+        "a focus reply sent as `problem` resolves a help_type",
+        bool(final.get("help_types")) and final.get("help_type") != "",
+        f"help_types={final.get('help_types')} help_type={final.get('help_type')!r}",
+    )
+    check(
+        "the condition survives a `problem`-shaped focus reply",
+        final.get("condition") == condition_before and condition_before,
+        f"before={condition_before!r} after={final.get('condition')!r}",
+    )
+    check(
+        "the gathered symptoms survive a `problem`-shaped focus reply",
+        list(final.get("symptoms") or []) == symptoms_before and symptoms_before,
+        f"before={symptoms_before} after={final.get('symptoms')}",
+    )
+    check(
+        "the answer is the sectioned plan, not generic onboarding prose",
+        looks_like_plan(result.answer),
+        result.answer[:160],
+    )
+    lowered = result.answer.lower()
+    check(
+        "the answer does NOT ask the user to describe their problem again",
+        not any(
+            phrase in lowered
+            for phrase in (
+                "describe any specific health problem",
+                "describe your health problem",
+                "what's troubling you",
+                "apni problem likhiye",
+                "apni samasya bataye",
+            )
+        ),
+        result.answer[-200:],
+    )
+
+
+asyncio.run(_test_focus_reply_as_problem())
+
+
+# ===========================================================================
+# 12. MULTI-FOCUS. Asking for two categories at once is an ordinary answer to
+# the focus question; collapsing it to one silently gave the user less than
+# they asked for ("yoga and diet" became the complete six-section plan).
+# ===========================================================================
+async def _test_multi_focus_yoga_and_diet():
+    turns = await run_full("mujhe acidity ho rahi hai", "yoga and diet dono bata do")
+    result, final = turns[-1]
+    if final.get("phase") != "completed":
+        check("PRECONDITION: multi-focus turn completed", False, final.get("phase"))
+        return
+
+    help_types = final.get("help_types") or []
+    check(
+        "'yoga and diet dono' resolves BOTH focuses, not just one",
+        set(help_types) == {"yoga", "diet"},
+        help_types,
+    )
+    wanted = {SECTION_LIBRARY["yoga"][0], SECTION_LIBRARY["food"][0]}
+    unwanted = {
+        SECTION_LIBRARY[k][0] for k in ("root_cause", "changes", "routine")
+    }
+    present = {h for h in wanted | unwanted if h in result.answer}
+    check(
+        "the multi-focus plan contains BOTH requested sections",
+        wanted <= present,
+        f"wanted={wanted} present={present}",
+    )
+    check(
+        "the multi-focus plan does NOT expand to the unrelated sections",
+        not (unwanted & present),
+        f"leaked={unwanted & present}",
+    )
+
+
+asyncio.run(_test_multi_focus_yoga_and_diet())
+
+
+async def _test_multi_focus_including_complete():
+    """"root cause and complete plan both" - complete is a superset, so this
+    must give the whole plan rather than only Root Cause."""
+    turns = await run_full("mujhe acidity ho rahi hai", "root cause and complete plan both")
+    result, final = turns[-1]
+    if final.get("phase") != "completed":
+        check("PRECONDITION: complete-superset turn completed", False, final.get("phase"))
+        return
+
+    help_types = final.get("help_types") or []
+    check(
+        "'root cause and complete plan both' captures BOTH requests",
+        "complete" in help_types and "root_cause" in help_types,
+        help_types,
+    )
+    check(
+        "'complete' wins for the legacy single-valued help_type",
+        final.get("help_type") == "complete",
+        final.get("help_type"),
+    )
+    present = [
+        key for key in SECTION_LIBRARY if SECTION_LIBRARY[key][0] in result.answer
+    ]
+    check(
+        "asking for root cause AND the complete plan yields the full plan",
+        len(present) >= 5,
+        f"sections present: {present}",
+    )
+
+
+asyncio.run(_test_multi_focus_including_complete())
+
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== intake: {passed}/{len(results)} passed =====")
 if passed != len(results):

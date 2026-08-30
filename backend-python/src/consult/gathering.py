@@ -183,7 +183,7 @@ async def gather(
 _VALID_HELP_TYPES = ("root_cause", "remedies", "yoga", "diet", "complete")
 
 
-def _classify_focus_sync(reply: str) -> str:
+def _classify_focus_sync(reply: str) -> list[str]:
     raw = llm_invoke(
         [HumanMessage(content=prompts.FOCUS_CLASSIFY_PROMPT.format(reply=reply))],
         temperature=0.0,
@@ -191,22 +191,43 @@ def _classify_focus_sync(reply: str) -> str:
         max_tokens=60,
     )
     parsed = extract_json(raw) or {}
-    help_type = str(parsed.get("help_type") or "").strip()
-    return help_type if help_type in _VALID_HELP_TYPES else "complete"
+
+    # Tolerate the old single-string shape as well as the list. The prompt
+    # asks for `help_types`, but a model that answers with the previous
+    # `help_type` key, or with a bare string, should still be understood
+    # rather than silently falling back to "complete".
+    raw_values = parsed.get("help_types")
+    if raw_values is None:
+        raw_values = parsed.get("help_type")
+    if isinstance(raw_values, str):
+        raw_values = [raw_values]
+    if not isinstance(raw_values, list):
+        return ["complete"]
+
+    kept: list[str] = []
+    for value in raw_values:
+        cleaned = str(value or "").strip().lower()
+        if cleaned in _VALID_HELP_TYPES and cleaned not in kept:
+            kept.append(cleaned)
+    return kept or ["complete"]
 
 
-async def classify_focus(reply: str, language: str = "") -> str:
+async def classify_focus(reply: str, language: str = "") -> list[str]:
     """Which of the five sections they want, from their free-text reply to
     the focus question (graph.py's `_FOCUS_QUESTION`).
 
-    Defaults to "complete" on ANY uncertainty — an unreachable model, a
-    malformed response, or a reply that genuinely names more than one
-    category or answers something else entirely. Same safe-default
-    precedent `resolve_sections(None)` already uses: "nothing selected"
-    means everything, never nothing.
+    Returns EVERY category asked for, because asking for two at once ("yoga
+    and diet", "root cause and complete plan both") is an ordinary answer to
+    that question, and returning only the first silently gave the user less
+    than they asked for.
+
+    Defaults to `["complete"]` on ANY uncertainty — an unreachable model, a
+    malformed response, or a reply that answers something else entirely. Same
+    safe-default precedent `resolve_sections(None)` already uses: "nothing
+    selected" means everything, never nothing.
     """
     try:
         return await asyncio.to_thread(_classify_focus_sync, reply)
     except Exception as error:  # noqa: BLE001
         print(f"[consult] focus classification failed: {error}")
-        return "complete"
+        return ["complete"]

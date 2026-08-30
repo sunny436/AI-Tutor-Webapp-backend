@@ -83,6 +83,18 @@ The backend tolerates either field regardless of phase (it will not crash or
 silently drop your message), but routing works correctly only when this
 convention is followed — a lenient parser is not the same as a stateless one.
 
+**`asking_focus` is the one exception, and it used to bite.** After gathering
+finishes, the assistant asks which part of the plan they want (root cause /
+remedies / yoga / diet / the complete plan) and `context.phase` becomes
+`asking_focus`. That phase is deliberately NOT in `CONSULTING`, so the rule
+above reads as "send `problem`" — and a client that did exactly that had its
+focus reply routed as a brand-new message: a generic "I am an AI wellness
+assistant…" answer, `phase` reset to `casual`, the chosen focus discarded, and
+the user asked to describe the same complaint again. **The backend now accepts
+the focus reply in either field** and normalises it, so both shapes work.
+`freeText` is still preferred for consistency with the rest of the
+consultation.
+
 #### Several attachments
 
 `documents` is how uploaded reports reach a question:

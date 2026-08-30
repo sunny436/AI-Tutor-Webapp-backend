@@ -222,18 +222,22 @@ Ayurveda consultation they want:
   - diet and food guidance
   - the complete plan (everything)
 
-Classify their reply into EXACTLY ONE of these five categories:
+Classify their reply into ONE OR MORE of these five categories:
 root_cause, remedies, yoga, diet, complete
 
-If the reply is unclear, asks for more than one category, or does not
-answer the question at all, choose "complete" — that is the safe default,
-not a guess.
+LIST EVERY CATEGORY THEY ASKED FOR, not just the first. People routinely
+ask for two ("yoga and diet", "root cause and complete plan both"), and
+dropping the second one gives them less than they asked for.
+
+If the reply is unclear or does not answer the question at all, return
+exactly ["complete"] — that is the safe default, not a guess. Use
+"complete" on its own whenever they want everything.
 
 --- THEIR REPLY ---
 {reply}
 
 Return ONLY this JSON, nothing else:
-{{"help_type": "root_cause" | "remedies" | "yoga" | "diet" | "complete"}}
+{{"help_types": ["root_cause" | "remedies" | "yoga" | "diet" | "complete"]}}
 """
 
 # Used to decide if we have enough information to give a good answer.
