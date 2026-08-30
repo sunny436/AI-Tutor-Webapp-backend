@@ -140,7 +140,8 @@ MAX_CHAT_HISTORY = 24
 # mapped to `gathering` on load instead. Remove them only once no persisted blob
 # can still carry one.
 Phase = Literal[
-    "idle", "greeted", "casual", "gathering", "collecting", "choosing", "completed"
+    "idle", "greeted", "casual", "gathering", "asking_focus",
+    "collecting", "choosing", "completed"
 ]
 
 # Phases retired in the move to conversational gathering, mapped on load.
@@ -207,6 +208,17 @@ class ConsultContext(BaseModel):
     # New in the conversational flow; absent from every older persisted blob,
     # which is why it defaults empty rather than bumping the version.
     symptoms: list[str] = Field(default_factory=list)
+    # What gathering still doesn't know, refreshed each turn — makes the
+    # model's already-implicit "what's missing" reasoning an observable piece
+    # of state, same short-keyword discipline as `symptoms`. Same
+    # no-version-bump precedent: absent from older blobs, defaults empty.
+    missing_info: list[str] = Field(default_factory=list)
+    # Which of the six sections they actually want, chosen conversationally
+    # once gathering is ready (phase="asking_focus") rather than from a card
+    # menu — see `classify_focus` in gathering.py and `_HELP_TYPE_SECTIONS`
+    # in graph.py. "" before it's been asked/answered; one of root_cause,
+    # remedies, yoga, diet, complete afterward.
+    help_type: str = ""
 
 
 class ConsultResult(BaseModel):

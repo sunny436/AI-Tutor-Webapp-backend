@@ -10,7 +10,15 @@ The consultation flow.
                                             replies <--------------+
                                                 |          one or two questions
                                                 v          a turn, until "ready"
-                                   retrieve -> plan (all sections)
+                                        ask what kind of help they want
+                                                |          conversational, not a menu
+                                                v          (_FOCUS_QUESTION, classify_focus)
+                                   retrieve -> plan (sections scoped to that choice)
+
+GATHERING NEVER JUMPS STRAIGHT TO AN ANSWER. "ready" ends the QUESTIONS, not
+the conversation — the very next thing is always the focus question
+(phase="asking_focus"), never retrieval. GraphRAG is not reached, and no
+plan is written, until that resolves to a `help_type`. See `_HELP_TYPE_SECTIONS`.
 
 NO CARDS. The consultation used to answer "mujhe gas ho rahi hai" with a
 five-card questionnaire and then a second card screen asking which parts of the
@@ -45,7 +53,7 @@ from typing import Callable
 import config
 from src import safety
 from src.consult import state as ctx_state
-from src.consult.gathering import MAX_GATHERING_ROUNDS, gather
+from src.consult.gathering import MAX_GATHERING_ROUNDS, classify_focus, gather
 from src.retrieval import graphrag
 # `write_plan` generates the final answer from whatever the Context Builder
 # assembled (memory + GraphRAG + local knowledge + uploaded reports). GraphRAG
@@ -93,6 +101,41 @@ SMALL_TALK_REPLIES = {
     # in front of them.
     "greeting": "Namaste! 🌿 Bataiye, apni takleef ke baare mein aur kya bata sakte hain?",
     "ack": "Theek hai 🙂 Jab taiyaar hon, thoda aur bata dijiye — phir main plan bana deta hoon.",
+}
+
+# The step between "gathering is ready" and "write the plan". Fixed strings,
+# not a model call — asking is templated, only the free-text REPLY needs
+# understanding (classify_focus). Deliberately conversational, not a menu:
+# GATHERING_PROMPT rule 3 already forbids "no menus of options to pick
+# from" for the same reason cards were removed everywhere else.
+_FOCUS_QUESTION = {
+    "hinglish": (
+        "Theek hai, {condition} ke baare mein samajh aa gaya. Ab bataiye — "
+        "kya jaanna chahenge: iska root cause, Ayurveda remedies, "
+        "yoga aur breathing, diet/lifestyle, ya poora plan (sab kuch)?"
+    ),
+    "english": (
+        "Alright, I have a good picture of your {condition} now. What would "
+        "you like to focus on — the root cause, Ayurveda remedies, "
+        "yoga & breathing, diet & lifestyle, or the complete plan?"
+    ),
+    "devanagari": (
+        "ठीक है, {condition} के बारे में समझ आ गया। अब बताइए — रूट कॉज़, "
+        "आयुर्वेदिक उपाय, योग व साँस, आहार, या पूरा प्लान?"
+    ),
+}
+
+# help_type -> which SECTION_LIBRARY keys to write. None means "everything"
+# (resolve_sections(None) -> DEFAULT_SECTIONS) — same table `classify_focus`
+# is told to choose from; "medicine information" was deliberately folded
+# into "remedies" rather than kept separate, since SYSTEM_RULES rule 2 still
+# forbids naming a drug or a dose regardless of what the user asks for.
+_HELP_TYPE_SECTIONS: dict[str, list[str] | None] = {
+    "root_cause": ["root_cause"],
+    "remedies": ["changes"],
+    "yoga": ["yoga"],
+    "diet": ["food"],
+    "complete": None,
 }
 
 _GREETING_WORDS = re.compile(
@@ -755,10 +798,13 @@ async def run_turn(
         return _escalate(context, "red-flag keyword")
 
     # --- 1. gather, in prose ----------------------------------------------
-    # Replaces the question cards AND the "what would you like in your plan?"
-    # step. Both were forms; this is a conversation. The user is never asked to
-    # pick from a list, and never has to, to reach a plan.
-    if context.phase != "completed":
+    # Replaces the question cards. This is a conversation, not a form, and the
+    # user is never asked to pick from a list to answer an intake question.
+    #
+    # `asking_focus` is deliberately excluded here too, alongside `completed`
+    # — it has already gathered enough and is waiting on a DIFFERENT question
+    # (which sections they want), not another intake round.
+    if context.phase not in ("completed", "asking_focus"):
         gathered = await gather(
             problem=context.problem,
             history=ctx_state.render_history(context),
@@ -772,6 +818,7 @@ async def run_turn(
 
         context.condition = gathered.condition or context.condition
         context.symptoms = ctx_state._merge_symptoms(context.symptoms, gathered.symptoms)
+        context.missing_info = gathered.missing_info
 
         # The second of the three replacements for the planner's red flags: the
         # model reading the conversation and saying so outright.
@@ -789,15 +836,44 @@ async def run_turn(
                 answer=gathered.reply,
                 context=context,
             )
-        # ready -> fall through and write the plan on this same turn.
+
+        # ready -> the intake QUESTIONS are done, but retrieval and the plan
+        # are not next yet. Ask what kind of help they want, conversationally
+        # (no menu — see _FOCUS_QUESTION), and wait for that reply before
+        # GraphRAG is ever reached.
+        context.phase = "asking_focus"
+        focus_question = _FOCUS_QUESTION.get(
+            context.language, _FOCUS_QUESTION["hinglish"]
+        ).format(condition=context.condition or "isse")
+        context = ctx_state.remember_chat(context, "", focus_question)
+        return ConsultResult(
+            kind="chat",
+            condition=context.condition,
+            message=focus_question,
+            answer=focus_question,
+            context=context,
+        )
+
+    # --- 1b. which sections they want, from their reply to the focus question
+    if context.phase == "asking_focus":
+        context.help_type = await classify_focus(typed or message, context.language)
+        # Entering the plan-writing branch this same turn — matches the
+        # existing convention that "completed" means a plan is (about to be)
+        # on screen, not literally that this exact turn already wrote one.
+        context.phase = "completed"
+        # falls through to "the plan" below, now scoped by help_type
 
     # --- 2. the plan -------------------------------------------------------
-    # Everyone gets the complete plan now. The section picker was the second card
-    # surface and is gone; `resolve_sections(None)` returns DEFAULT_SECTIONS, so
-    # ALWAYS_INCLUDED — "When To See A Doctor" — still cannot be dropped.
-    # `context.answers` is only ever populated on a pre-change conversation.
+    # Which sections to write: the conversational focus choice takes
+    # priority; `chosen.options` is kept only as a fallback for a context
+    # persisted mid-flow through the retired card-based "choosing" step.
+    # `resolve_sections(None)` -> DEFAULT_SECTIONS, so ALWAYS_INCLUDED —
+    # "When To See A Doctor" — can never be dropped either way.
     chosen = context.answers.get(SECTIONS_QUESTION_ID)
-    sections = resolve_sections(chosen.options if chosen else None)
+    sections = resolve_sections(
+        _HELP_TYPE_SECTIONS.get(context.help_type)
+        or (chosen.options if chosen else None)
+    )
 
     pipeline, results = await _retrieve(context, principal, conversation_id)
 

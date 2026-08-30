@@ -178,6 +178,7 @@ Return ONLY this JSON. No markdown fence, no commentary.
   "reply": "what you say to them, in {language}",
   "condition": "short English label for the complaint, e.g. Acidity",
   "symptoms": ["1-3 word keywords ONLY"],
+  "missing_info": ["1-3 word keywords ONLY, what you still don't know"],
   "red_flag": false,
   "ready": false
 }}
@@ -188,6 +189,42 @@ Return ONLY this JSON. No markdown fence, no commentary.
   - Include everything relevant from the whole conversation, not just this turn.
   - GOOD: ["gas", "after meals", "spicy food", "late dinner"]
   - BAD:  ["The user says they have had gas since yesterday after eating out"]
+
+"missing_info" RULES — same short-keyword discipline as "symptoms", but the
+OPPOSITE list: what you would still like to know before you feel "ready".
+This is what your own "reply" question is asking about, named as a keyword.
+Empty once "ready" is true.
+  - GOOD: ["duration", "triggers", "sleep"]
+  - BAD:  ["I don't know how long this has been going on"]
+"""
+
+# ---------------------------------------------------------------------------
+# The step between "gathering is ready" and "write the plan": which of the
+# six sections the person actually wants, asked conversationally (see
+# graph.py's _FOCUS_QUESTION — a fixed string, no model call) and classified
+# here from their free-text reply. Deliberately narrow — a single
+# classification call, not a conversation of its own.
+# ---------------------------------------------------------------------------
+FOCUS_CLASSIFY_PROMPT = """A wellness assistant asked the user which part of their
+Ayurveda consultation they want:
+  - the root cause of the problem
+  - Ayurveda remedies / lifestyle changes to manage it
+  - yoga and breathing exercises
+  - diet and food guidance
+  - the complete plan (everything)
+
+Classify their reply into EXACTLY ONE of these five categories:
+root_cause, remedies, yoga, diet, complete
+
+If the reply is unclear, asks for more than one category, or does not
+answer the question at all, choose "complete" — that is the safe default,
+not a guess.
+
+--- THEIR REPLY ---
+{reply}
+
+Return ONLY this JSON, nothing else:
+{{"help_type": "root_cause" | "remedies" | "yoga" | "diet" | "complete"}}
 """
 
 # Used to decide if we have enough information to give a good answer.
@@ -583,11 +620,14 @@ IF THE TRUSTED KNOWLEDGE BELOW IS EMPTY, OR SAYS "no relevant notes found":
 That marker is not knowledge. It is the system telling you the search found
 nothing, and it must be treated as an empty block, not as something to write
 around.
-  - SAY SO FIRST. Open Root Cause by stating plainly, in the language named
-    below, that your reference notes do not cover this particular problem, and
-    that what follows is general guidance rather than something from them.
-  - Then still write all six sections  -  but keep them general. Eat on time,
-    sleep enough, drink water, move daily, manage stress: that is fine.
+  - SAY SO FIRST, before your first section below. State plainly, in the
+    language named below, that your reference notes do not cover this
+    particular problem, and that what follows is general guidance rather
+    than something from them.
+  - Then still write EVERY section listed below (not six — only the ones
+    you were actually asked for; see the section list further down) — but
+    keep them general. Eat on time, sleep enough, drink water, move daily,
+    manage stress: that is fine.
   - Do NOT invent Ayurveda specifics. Name no herb, no churna, no branded
     preparation, no specific yoga sequence presented as a treatment for this
     problem, and do not attribute the problem to a named dosha as if it were an

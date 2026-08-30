@@ -72,19 +72,21 @@ _FALLBACK_QUESTION = {
 class Gathered:
     """One gathering turn's outcome."""
 
-    __slots__ = ("reply", "condition", "symptoms", "red_flag", "ready")
+    __slots__ = ("reply", "condition", "symptoms", "missing_info", "red_flag", "ready")
 
     def __init__(
         self,
         reply: str = "",
         condition: str = "",
         symptoms: list[str] | None = None,
+        missing_info: list[str] | None = None,
         red_flag: bool = False,
         ready: bool = False,
     ) -> None:
         self.reply = reply
         self.condition = condition
         self.symptoms = symptoms or []
+        self.missing_info = missing_info or []
         self.red_flag = red_flag
         self.ready = ready
 
@@ -133,6 +135,7 @@ def _gather_sync(
         reply=str(parsed.get("reply") or "").strip()[:MAX_REPLY_CHARS],
         condition=str(parsed.get("condition") or "").strip()[:80],
         symptoms=_clean_symptoms(parsed.get("symptoms")),
+        missing_info=_clean_symptoms(parsed.get("missing_info")),
         red_flag=bool(parsed.get("red_flag")),
         ready=bool(parsed.get("ready")),
     )
@@ -167,4 +170,43 @@ async def gather(
     if not result.reply and not result.ready:
         result.ready = True
 
+    # Enforced, not just prompted: "missing_info" describes what the NEXT
+    # question would ask about, so it means nothing once there is no next
+    # question. Same "enforce in code, don't just hope the model listens"
+    # pattern MAX_GATHERING_ROUNDS already uses above.
+    if result.ready:
+        result.missing_info = []
+
     return result
+
+
+_VALID_HELP_TYPES = ("root_cause", "remedies", "yoga", "diet", "complete")
+
+
+def _classify_focus_sync(reply: str) -> str:
+    raw = llm_invoke(
+        [HumanMessage(content=prompts.FOCUS_CLASSIFY_PROMPT.format(reply=reply))],
+        temperature=0.0,
+        json_mode=True,
+        max_tokens=60,
+    )
+    parsed = extract_json(raw) or {}
+    help_type = str(parsed.get("help_type") or "").strip()
+    return help_type if help_type in _VALID_HELP_TYPES else "complete"
+
+
+async def classify_focus(reply: str, language: str = "") -> str:
+    """Which of the five sections they want, from their free-text reply to
+    the focus question (graph.py's `_FOCUS_QUESTION`).
+
+    Defaults to "complete" on ANY uncertainty — an unreachable model, a
+    malformed response, or a reply that genuinely names more than one
+    category or answers something else entirely. Same safe-default
+    precedent `resolve_sections(None)` already uses: "nothing selected"
+    means everything, never nothing.
+    """
+    try:
+        return await asyncio.to_thread(_classify_focus_sync, reply)
+    except Exception as error:  # noqa: BLE001
+        print(f"[consult] focus classification failed: {error}")
+        return "complete"
