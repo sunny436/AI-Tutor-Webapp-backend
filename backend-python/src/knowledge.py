@@ -7,8 +7,23 @@ IMPORTANT (performance): the embedding model and the vector database are loaded
 ONCE and reused for every request. Earlier they were re-loaded on every message,
 which made each answer very slow. Now the first request warms them up and the
 rest are fast.
+
+`langchain_openai` is imported HERE, at module level, not lazily inside
+`get_embeddings()` (where it used to live). Measured: `import langchain_openai`
+alone costs ~13s the first time it happens in a process — almost certainly
+pydantic building the core validation schema for its model classes — and
+`OpenAIEmbeddings()` construction itself is fast (~1-2s) once that import has
+already paid its cost. A lazy import defers that 13s to the first real call
+into this module instead of to server startup, where `warm_up()` (server.py)
+is supposed to absorb it — and `warm_up()` swallows every exception silently,
+so a lazy import failing there would leave the cost sitting in wait for
+whichever real request happens to be first. Importing eagerly, alongside
+chromadb and langchain_chroma right below (which already load this way), means
+the cost lands at process-import time, before `warm_up()` even runs, not
+inside any request.
 """
 
+import itertools
 import re
 import threading
 import warnings
@@ -18,6 +33,8 @@ from pathlib import Path
 import chromadb
 import config
 from langchain_chroma import Chroma
+from langchain_core.embeddings import Embeddings
+from langchain_openai import OpenAIEmbeddings
 
 # The one collection this backend has. It was derived from a bot registry when
 # the backend was meant to host several chatbots; there is one Ayurveda chatbot,
@@ -140,8 +157,60 @@ def get_chroma_client() -> chromadb.ClientAPI:
     return _chroma_client
 
 
-def get_embeddings():
-    """The embedding client, built once and reused.
+class _PooledEmbeddings(Embeddings):
+    """Round-robins embed calls across a small pool of independent clients.
+
+    WHY THIS EXISTS, NOT JUST ONE CLIENT. `Chroma` caches whatever
+    `embedding_function` object it is given for the life of the vector store
+    (`get_vector_store` below caches the `Chroma` instance itself, per
+    collection) — so returning a fresh `OpenAIEmbeddings` per call from
+    `get_embeddings()` would not help; every search against an already-open
+    store keeps calling `.embed_query()` on the ONE object it was built with.
+    The pooling has to live INSIDE that one long-lived object instead.
+
+    MEASURED, NOT ASSUMED. One shared `OpenAIEmbeddings` (one underlying
+    `httpx`/`httpcore` connection pool) serializes CONCURRENT calls somewhere
+    in new-connection establishment: 6 concurrent `embed_query` calls through
+    one shared client took 13.46s total locally / 7.00s on the production VM,
+    even though every individual call completed in under a second once it
+    actually started — confirmed by isolating the network entirely (6
+    concurrent calls with 6 separate plain `httpx.Client`s: 0.97s total) and
+    by isolating the SDK client specifically (6 concurrent calls with 6
+    freshly-built `openai.OpenAI` clients: 3.00s total). A small pool of
+    independent clients, round-robined, gets the same result — measured 1.18s
+    for the same 6 concurrent calls across a 4-client pool — while each
+    individual client still keeps its own keep-alive connection warm for
+    ordinary, non-concurrent, sequential traffic (the common case).
+
+    This is exactly what was causing the intermittent local-knowledge-
+    retriever timeouts under concurrent GraphRAG load: GraphRAG's own HTTP
+    call doesn't block the embeddings call directly (different host,
+    different client) — simply having MORE THAN ONE embedding call in flight
+    at once (which concurrent GraphRAG+knowledge retrieval, or more than one
+    user's turn overlapping, both produce) was enough to trigger this.
+    """
+
+    def __init__(self, size: int) -> None:
+        self._clients = [_build_openai_embeddings() for _ in range(max(1, size))]
+        # A plain, unlocked counter. A rare race landing two concurrent calls
+        # on the same pool member just means slightly uneven distribution
+        # that turn, not a correctness problem — not worth a lock for a
+        # best-effort load spread.
+        self._counter = itertools.count()
+
+    def _client(self):
+        return self._clients[next(self._counter) % len(self._clients)]
+
+    def embed_documents(self, texts: list[str]) -> list[list[float]]:
+        return self._client().embed_documents(texts)
+
+    def embed_query(self, text: str) -> list[float]:
+        return self._client().embed_query(text)
+
+
+def _build_openai_embeddings():
+    """One real embeddings client. See `_PooledEmbeddings` for why several of
+    these, not one, are what `get_embeddings()` actually hands out.
 
     OPENROUTER, NOT THIS MACHINE. bge-m3 used to be downloaded and held in
     memory here — 1.9 GB on a 3.8 GB host, loaded before the first answer could
@@ -157,17 +226,53 @@ def get_embeddings():
     `check_embedding_ctx_length=False` because that pre-check tokenises with
     tiktoken, which is OpenAI's tokeniser and not bge-m3's. Letting it run would
     have it split text on the wrong boundaries for a model it does not describe.
+
+    `request_timeout=config.KNOWLEDGE_EMBED_TIMEOUT_S` IS LOAD-BEARING, not a
+    tuning knob. Leaving it unset does not mean "use the SDK's own sane
+    default" - langchain_openai defaults this field to None, and the openai
+    SDK treats an explicit `timeout=None` as "no timeout at all", not "use
+    mine". A stalled or slow OpenRouter response then blocks this call's
+    worker thread indefinitely, and the pipeline's own RETRIEVAL_TIMEOUT_S
+    cannot stop it - `asyncio.wait_for` only abandons the asyncio-side await,
+    it does not kill the thread. See KNOWLEDGE_EMBED_TIMEOUT_S in config.py
+    for how this was confirmed and reproduced.
+
+    `max_retries=1`, down from the openai SDK's own default of 2, for the
+    same reason. The SDK retries with exponential backoff BETWEEN each
+    attempt, so a genuinely slow call hitting the timeout above 2-3 times in
+    a row (its default) can cost far MORE than the timeout implies - measured
+    up to ~18s total for one embed call, comfortably past this pipeline's own
+    RETRIEVAL_TIMEOUT_S (8.0), which then abandons the await while the SDK
+    keeps retrying underneath it, still on the orphaned thread. `pipeline.py`
+    already treats one retriever failing as "degrade gracefully, don't fail
+    the consultation" (`_safe_retrieve`, and `search_knowledge_scored`'s own
+    `except Exception: return []`), so retrying heavily INSIDE one embed call
+    only works against that existing design - one retry is enough headroom
+    for a genuine one-off blip while keeping the realistic worst case
+    (timeout + backoff + retry) safely under RETRIEVAL_TIMEOUT_S.
+    """
+    return OpenAIEmbeddings(
+        model=config.EMBEDDING_MODEL,
+        api_key=config.OPENROUTER_API_KEY,
+        base_url=config.OPENROUTER_BASE_URL,
+        check_embedding_ctx_length=False,
+        request_timeout=config.KNOWLEDGE_EMBED_TIMEOUT_S,
+        max_retries=1,
+    )
+
+
+def get_embeddings():
+    """The embedding client, built once and reused.
+
+    Actually a small pool of clients behind one object — see
+    `_PooledEmbeddings`. Everything that held for "one client, cached and
+    reused" before still holds: this function still returns the SAME object
+    every time, callers are unaffected, and nothing has to change anywhere
+    else.
     """
     global _embeddings
     if _embeddings is None:
-        from langchain_openai import OpenAIEmbeddings
-
-        _embeddings = OpenAIEmbeddings(
-            model=config.EMBEDDING_MODEL,
-            api_key=config.OPENROUTER_API_KEY,
-            base_url=config.OPENROUTER_BASE_URL,
-            check_embedding_ctx_length=False,
-        )
+        _embeddings = _PooledEmbeddings(config.KNOWLEDGE_EMBED_POOL_SIZE)
     return _embeddings
 
 

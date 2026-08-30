@@ -115,6 +115,42 @@ REPORT_MIN_RELEVANCE = float(_get("REPORT_MIN_RELEVANCE", "0.30"))
 # so this is sized for that round trip, not for a warm local index.
 RETRIEVAL_TIMEOUT_S = float(_get("RETRIEVAL_TIMEOUT_S", "8.0"))
 
+# Bounds the embeddings HTTP call inside KnowledgeRetriever and
+# UploadedReportsRetriever (both share src/knowledge.py::get_embeddings()).
+#
+# CONFIRMED, not assumed: with no explicit timeout, langchain_openai defaults
+# `request_timeout` to None, and passing `timeout=None` to the openai SDK
+# does not mean "use its own default" - it means "disable timeouts entirely"
+# (verified directly: openai.OpenAI(timeout=None).timeout is None, versus
+# openai.OpenAI()'s own default of Timeout(connect=5.0, read=600, ...)). One
+# slow OpenRouter response could then block its worker thread indefinitely.
+# `asyncio.wait_for`'s own RETRIEVAL_TIMEOUT_S only abandons the ASYNCIO-side
+# await - it cannot and does not kill the underlying thread - so the call
+# kept running, unreleased, for however long the network actually took.
+# Reproduced: 6 concurrent full retrievals (knowledge + GraphRAG together)
+# all hit the full 8.0s ceiling, with the knowledge search for every one of
+# them still completing well after the pipeline had already given up on it.
+# Same "correctness cliff" class of bug GRAPHRAG_TIMEOUT_S already exists to
+# prevent for the other retriever - this is the same fix, for this one.
+#
+# 3.0, not close to RETRIEVAL_TIMEOUT_S: `KnowledgeRetriever._search` can
+# make TWO sequential embedding calls in the rare case the topic index and
+# the vector store disagree (a note deleted since ingest), so the worst case
+# must still land under RETRIEVAL_TIMEOUT_S (8.0) even doubled.
+KNOWLEDGE_EMBED_TIMEOUT_S = float(_get("KNOWLEDGE_EMBED_TIMEOUT_S", "3.0"))
+
+# How many independent embeddings clients src.knowledge._PooledEmbeddings
+# round-robins across. A SEPARATE issue from the timeout above, found while
+# reproducing the reported symptom: one SHARED client's underlying httpx
+# connection pool serializes concurrent embed calls somewhere in new-
+# connection establishment - measured, 6 concurrent calls through one client
+# took 13.46s total even though each individual call finished in under a
+# second, while the same 6 calls spread across a small pool of independent
+# clients took 1.18s. 6, because that comfortably covers a handful of
+# overlapping users/retrievers without holding open more idle keep-alive
+# connections than a 3.8 GB host should carry.
+KNOWLEDGE_EMBED_POOL_SIZE = int(_get("KNOWLEDGE_EMBED_POOL_SIZE", "6"))
+
 # Is the LOCAL Chroma retriever allowed to ground an answer? GraphRAG is the
 # authoritative Ayurveda source; this is the config-only rollback if it
 # regresses — no code deploy needed, the vector store stays on disk either
