@@ -26,6 +26,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 import config
 from src import prompts, safety
+from src.consult import evidence
 from src.consult.sections import SECTION_LIBRARY, render_section_spec
 from src.llm import invoke as llm_invoke
 from src.llm import stream as llm_stream
@@ -74,15 +75,29 @@ def _invoke(prompt: str, on_token: Callable[[str], None] | None = None) -> str:
 
 
 def _write_plan_sync(
-    knowledge: str, profile: str, details: str, sections: list[str], language: str
+    knowledge: str,
+    profile: str,
+    details: str,
+    sections: list[str],
+    language: str,
+    section_evidence: dict[str, bool] | None,
 ) -> str:
+    # The `or NO_KNOWLEDGE` fallback only applies when nothing computed
+    # per-section evidence — with it, the per-section [Evidence: ...] tags in
+    # `sections` are the authoritative signal, and the old whole-block marker
+    # text sitting inside `{knowledge}` would (a) contradict a section tagged
+    # SUPPORTED and (b) hand the model the words "knowledge base" to
+    # potentially echo back, exactly what rule 14 now forbids saying.
+    resolved_knowledge = (
+        knowledge if section_evidence is not None else (knowledge or NO_KNOWLEDGE)
+    )
     return _invoke(
         prompts.PLAN_PROMPT.format(
             system_rules=prompts.SYSTEM_RULES,
-            knowledge=knowledge or NO_KNOWLEDGE,
+            knowledge=resolved_knowledge,
             profile=profile or "No profile provided.",
             history=details,
-            sections=render_section_spec(sections),
+            sections=render_section_spec(sections, section_evidence),
             # Empty would leave the prompt naming no language at all, which is
             # the state that produced the bug. Say "the user's own language" so
             # the instruction still reads as an instruction.
@@ -92,7 +107,12 @@ def _write_plan_sync(
 
 
 async def write_plan(
-    knowledge: str, profile: str, details: str, sections: list[str], language: str = ""
+    knowledge: str,
+    profile: str,
+    details: str,
+    sections: list[str],
+    language: str = "",
+    section_evidence: dict[str, bool] | None = None,
 ) -> str:
     """Generate the consultation plan, limited to the requested sections.
 
@@ -100,10 +120,15 @@ async def write_plan(
     every other writing path already took it, and this is the path that produces
     the thing the user actually asked for - so the plan was the one reply that
     could come back in the wrong language after a flawless English intake.
+
+    `section_evidence` is `consult.evidence.evaluate_sections`'s output — which
+    of `sections` have real grounded material behind them. `None` (the
+    default) renders every section with no evidence tag, i.e. today's
+    behaviour, for any caller that hasn't adopted this.
     """
     try:
         answer = await asyncio.to_thread(
-            _write_plan_sync, knowledge, profile, details, sections, language
+            _write_plan_sync, knowledge, profile, details, sections, language, section_evidence
         )
     except Exception as error:  # noqa: BLE001
         print(f"[consult] plan generation failed: {error}")
@@ -111,6 +136,7 @@ async def write_plan(
 
     _warn_if_incomplete(answer, sections, language)
     _warn_if_medicine(answer)
+    _warn_if_leaked_terms(answer)
     return answer
 
 
@@ -128,6 +154,23 @@ def _warn_if_medicine(answer: str) -> None:
         print(
             f"[consult] plan mentions {found!r} - rule 2 permits Ayurvedic herbs "
             "by name but never a drug, a brand or a dose."
+        )
+
+
+def _warn_if_leaked_terms(answer: str) -> None:
+    """Say so in the log when a plan named its own retrieval system.
+
+    Same backstop role as `_warn_if_medicine` — `prompts.PLAN_PROMPT` rule 14
+    and the per-section evidence tags (`sections.render_section_spec`) are
+    what should prevent this; this only reports when they didn't, rather than
+    rewriting the answer. See consult/evidence.py::find_leaked_terms.
+    """
+    found = evidence.find_leaked_terms(answer)
+    if found:
+        print(
+            f"[consult] plan leaked internal terms {found!r} - rule 14 and the "
+            "per-section evidence tags should have kept these out of a "
+            "user-facing answer."
         )
 
 

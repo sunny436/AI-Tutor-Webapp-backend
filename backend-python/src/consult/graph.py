@@ -52,6 +52,7 @@ from typing import Callable
 
 import config
 from src import safety
+from src.consult import evidence
 from src.consult import state as ctx_state
 from src.consult.gathering import MAX_GATHERING_ROUNDS, classify_focus, gather
 from src.retrieval import graphrag
@@ -307,7 +308,7 @@ async def _retrieve(
 
 
 
-def knowledge_for_prompt(pipeline, results) -> str:
+def knowledge_for_prompt(pipeline, results, include_sentinel: bool = True) -> str:
     """The retrieved block, marked as UNGROUNDED when no reference material came back.
 
     `responder` decides whether to admit ignorance with `knowledge or NO_KNOWLEDGE`
@@ -331,6 +332,15 @@ def knowledge_for_prompt(pipeline, results) -> str:
     gives a user's own uploaded report its own, higher authority. Their text is
     still passed through -- it is context the model should read -- it just no
     longer suppresses the admission.
+
+    `include_sentinel=False` is for the ONE caller (the plan path in `run_turn`)
+    that now decides groundedness PER SECTION via `consult.evidence.
+    evaluate_sections`, using this same `results` list — the per-section
+    `[Evidence: ...]` tags in `sections.render_section_spec` already carry that
+    signal, so prepending this whole-block NO_KNOWLEDGE marker on top would just
+    contradict a section the evidence map marked SUPPORTED. Every other caller
+    (write_knowledge's continuation/document/general-question branches) keeps
+    the default and is unaffected.
     """
     block = pipeline.to_prompt_block(results)
     grounded = any(
@@ -338,7 +348,7 @@ def knowledge_for_prompt(pipeline, results) -> str:
         for result in results
         for chunk in result.chunks
     )
-    if grounded:
+    if grounded or not include_sentinel:
         return block
     return f"{NO_KNOWLEDGE}\n\n{block}" if block else NO_KNOWLEDGE
 
@@ -928,6 +938,16 @@ async def run_turn(
     # to a language model that reads prose; that one is an embedding lookup where
     # conversational filler measurably destroys relevance.
     #
+    # SECTION-LEVEL EVIDENCE EVALUATION. Which of the requested `sections`
+    # have real (priority 1: knowledge:, priority 2: graphrag:<file>)
+    # material behind them — reading the SAME `results` this turn already
+    # retrieved, no extra call. See consult/evidence.py for the hierarchy and
+    # why this replaced one whole-plan grounded/ungrounded flag: retrieval
+    # already truncates per note (VECTOR_TOP_K=4 against ~7 chunks/note), so
+    # a "complete" plan routinely has evidence for some sections and not
+    # others even when the note is correctly matched.
+    section_evidence = evidence.evaluate_sections(sections, results)
+
     # A LOCAL LLM WRITES THE PLAN, from whatever the Context Builder assembled
     # above — GraphRAG's retrieved passages/relationships, the local knowledge
     # fallback, memory, and uploaded reports, all already labeled by
@@ -937,11 +957,17 @@ async def run_turn(
         part for part in (ctx_state.render_history(context), ", ".join(context.symptoms)) if part
     )
     answer = await write_plan(
-        knowledge=knowledge_for_prompt(pipeline, results),
+        # `include_sentinel=False`: the per-section evidence tags above are
+        # now what tells the model which parts are grounded, so the old
+        # whole-block "no relevant notes found" marker would only contradict
+        # a section that IS supported and hand the model words rule 14 now
+        # forbids saying. See knowledge_for_prompt's docstring.
+        knowledge=knowledge_for_prompt(pipeline, results, include_sentinel=False),
         profile=profile,
         details=details,
         sections=sections,
         language=context.language,
+        section_evidence=section_evidence,
     )
 
     context.phase = "completed"

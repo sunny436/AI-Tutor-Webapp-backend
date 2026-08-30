@@ -112,13 +112,44 @@ def resolve_sections(selected: list[str] | None) -> list[str]:
     return [s for s in DEFAULT_SECTIONS if s in chosen]
 
 
-def render_section_spec(sections: list[str]) -> str:
-    """The '**Heading**\\n(what to write)' block the answer prompt asks for."""
-    return "\n\n".join(
-        f"{SECTION_LIBRARY[s][0]}\n({SECTION_LIBRARY[s][1]})"
-        for s in sections
-        if s in SECTION_LIBRARY
-    )
+_EVIDENCE_SUPPORTED = (
+    "[Evidence: SUPPORTED — grounded material for this section is in the "
+    "supplied knowledge above; use it as your primary source for this section.]"
+)
+_EVIDENCE_UNSUPPORTED = (
+    "[Evidence: NOT SUPPORTED for this section specifically. Write it using "
+    "only general, well-known, safe wellness guidance — no named herb, "
+    "churna, branded item, specific protocol, or dosha/causation claim "
+    "presented as sourced fact. Do not say why, and do not mention notes, "
+    "sources, or retrieval — write it the way a person would naturally "
+    "keep something general.]"
+)
+
+
+def render_section_spec(
+    sections: list[str], evidence: dict[str, bool] | None = None
+) -> str:
+    """The '**Heading**\\n(what to write)' block the answer prompt asks for.
+
+    `evidence`, when given, is `consult.evidence.evaluate_sections`'s output:
+    which of these sections have real (priority 1 or 2) grounded material
+    behind them. Each block then gets one extra bracketed line telling the
+    model whether to write this specific section from that evidence or keep
+    it general — see consult/evidence.py for why this is per-section rather
+    than one global instruction. `evidence=None` (the default) renders
+    exactly as before, for any caller that hasn't adopted evidence-awareness.
+    """
+    blocks = []
+    for s in sections:
+        if s not in SECTION_LIBRARY:
+            continue
+        heading, body = SECTION_LIBRARY[s]
+        block = f"{heading}\n({body})"
+        if evidence is not None:
+            tag = _EVIDENCE_SUPPORTED if evidence.get(s) else _EVIDENCE_UNSUPPORTED
+            block = f"{block}\n{tag}"
+        blocks.append(block)
+    return "\n\n".join(blocks)
 
 
 # How many of the six headings must be present before text counts as a plan.
