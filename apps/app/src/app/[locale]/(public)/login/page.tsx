@@ -59,7 +59,13 @@ const PROOF = [
   },
 ];
 
-export default function Page() {
+export default function Page({
+  searchParams,
+}: { searchParams?: { mode?: string } }) {
+  // Only "signup" is honoured. The other four modes are reached by switching
+  // inside the form, and accepting them from the URL would let a link drop
+  // someone straight onto "verify" or "reset" with no code to enter.
+  const initialMode = searchParams?.mode === "signup" ? "signUp" : "signIn";
   return (
     <div className="relative min-h-dvh w-full bg-background lg:grid lg:grid-cols-[1.05fr_1fr]">
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
@@ -183,7 +189,7 @@ export default function Page() {
           <h1 className="sr-only lg:hidden">Sign in</h1>
 
           <div className="flex flex-col items-center gap-4">
-            <AuthForm />
+            <AuthForm initialMode={initialMode} />
 
             <div className="flex w-72 max-w-full items-center gap-3 text-xs text-text-secondary">
               <span aria-hidden className="h-px flex-1 bg-border" />

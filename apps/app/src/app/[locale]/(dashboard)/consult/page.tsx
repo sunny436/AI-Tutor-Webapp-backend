@@ -680,11 +680,17 @@ function ConsultInner() {
                   <p className="font-display text-base font-semibold text-foreground">
                     Namaste
                   </p>
-                  <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
+                  {/* Every claim here has to be one the next five minutes keep.
+                      This promised questions "you can tap through" and a plan
+                      that shows "which ones it came from" — a card flow that was
+                      removed, and citations that are deliberately not rendered.
+                      Both were still being promised on the first screen of the
+                      consultation itself. */}
+                  <p className="mt-1.5 text-[0.9375rem] leading-[1.75] text-text-secondary">
                     Tell me what&apos;s troubling you — one line is enough, in English,
-                    Hindi or Hinglish. I&apos;ll ask a few questions you can tap through,
-                    then build a plan from the Ayurveda notes and show you which ones
-                    it came from.
+                    Hindi or Hinglish. I&apos;ll ask a couple of questions, then write you
+                    a plan: root cause, what to change, food, yoga and when to see a
+                    doctor.
                   </p>
 
                   {/* STARTERS, not a second paragraph explaining the first.

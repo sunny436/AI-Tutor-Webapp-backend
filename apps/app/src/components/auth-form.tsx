@@ -86,14 +86,25 @@ function safeRedirect(target: string | null): string {
   return target;
 }
 
-export function AuthForm() {
+/**
+ * `initialMode` comes from the server, not from reading the URL here.
+ *
+ * `/login?mode=signup` is what the landing page's "Get started" links to — a
+ * new visitor should land on the sign-up form rather than hunting for the
+ * switch beneath the sign-in one. Reading the param in an effect would paint
+ * sign-in first and swap, and reading it in a lazy `useState` initialiser would
+ * render one thing on the server and another on the client. The login page is a
+ * server component and already has `searchParams`, so it resolves this before
+ * anything renders.
+ */
+export function AuthForm({ initialMode = "signIn" }: { initialMode?: Mode } = {}) {
   const router = useRouter();
   const { signIn } = useAuthActions();
   const preflightSignIn = useAction(api.authStatus.preflightSignIn);
   const preflightSignUp = useAction(api.authStatus.preflightSignUp);
   const preflightReset = useAction(api.authStatus.preflightReset);
 
-  const [mode, setMode] = useState<Mode>("signIn");
+  const [mode, setMode] = useState<Mode>(initialMode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [code, setCode] = useState("");

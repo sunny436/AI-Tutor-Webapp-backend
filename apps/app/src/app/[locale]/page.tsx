@@ -41,10 +41,16 @@ import { currentUser } from "@/lib/current-user";
  * purpose — this page is not inside that group, so it does not inherit it. Both
  * call `currentUser()` and run the same two-line check, so they stay in step.
  */
-export default async function Root() {
+export default async function Root({
+  params,
+}: { params: { locale: string } }) {
   const user = await currentUser();
 
-  if (!user) return <Landing />;
+  // The locale goes to Landing so its calls to action can link to
+  // `/en/login` directly. Unprefixed `/login` is answered with a 307 to the
+  // prefixed path — a whole extra round trip through the tunnel before the
+  // page starts rendering, on the one click the site most wants people to make.
+  if (!user) return <Landing locale={params.locale} />;
   if (!user.username) redirect("/onboarding");
 
   return (

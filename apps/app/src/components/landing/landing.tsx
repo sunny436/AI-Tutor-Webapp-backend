@@ -46,8 +46,8 @@ const HOW = [
   },
   {
     step: "02",
-    title: "Tap through a few questions",
-    body: "Written for your specific problem, not a fixed questionnaire — acidity and hair fall get different questions.",
+    title: "Answer a few questions",
+    body: "Asked one or two at a time, in conversation. Written for your specific problem — acidity and hair fall get asked different things.",
   },
   {
     step: "03",
@@ -89,11 +89,26 @@ const FEATURES = [
   },
 ];
 
-function Nav() {
+/**
+ * Locale-prefixed paths for every link on this page.
+ *
+ * `next-international` runs with `urlMappingStrategy: "redirect"`, so a bare
+ * `/login` is answered with a 307 to `/en/login` — a full round trip through
+ * the tunnel, on the click this site most wants people to make. Measured at
+ * ~90ms of the 260ms it took to reach the login page.
+ *
+ * Building the href correctly costs nothing, so it is done here rather than
+ * paid for on every visit.
+ */
+function localePath(locale: string, path: string) {
+  return path === "/" ? `/${locale}` : `/${locale}${path}`;
+}
+
+function Nav({ locale }: { locale: string }) {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center gap-4 px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href={localePath(locale, "/")} className="flex items-center gap-2.5">
           <span
             aria-hidden
             className="grid h-8 w-8 place-items-center rounded-lg bg-brand text-brand-foreground"
@@ -131,10 +146,10 @@ function Nav() {
             <ThemeSwitcher />
           </div>
           <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
-            <Link href="/login">Sign in</Link>
+            <Link href={localePath(locale, "/login")}>Sign in</Link>
           </Button>
           <Button asChild size="sm">
-            <Link href="/login">Get started</Link>
+            <Link href={localePath(locale, "/login?mode=signup")}>Get started</Link>
           </Button>
         </div>
       </div>
@@ -142,7 +157,7 @@ function Nav() {
   );
 }
 
-export function Landing() {
+export function Landing({ locale }: { locale: string }) {
   return (
     <div className="relative min-h-dvh bg-background">
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
@@ -151,7 +166,7 @@ export function Landing() {
           visitors see — and the skip link needs a target. The nav sits outside
           it, which is what makes skipping past the nav mean anything. */}
       <div className="relative">
-        <Nav />
+        <Nav locale={locale} />
 
         <main id="main">
         {/* HERO */}
@@ -170,15 +185,15 @@ export function Landing() {
               </h1>
 
               <p className="mt-5 max-w-xl text-base leading-relaxed text-text-secondary">
-                Describe what&apos;s troubling you in one line. Tap through a few
-                questions written for your problem. Get a plan — root cause, food chart,
-                yoga, daily routine — drawn from a curated Ayurveda knowledge base, with
-                the notes it came from shown alongside it.
+                Describe what&apos;s troubling you in one line. Answer a few
+                questions as they are asked. Get a plan — root cause, food chart,
+                yoga, daily routine — drawn from a curated Ayurveda knowledge base
+                that is published in full for you to read.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg">
-                  <Link href="/login">
+                  <Link href={localePath(locale, "/login")}>
                     Start a consultation
                     <ArrowRight aria-hidden className="ml-2 h-4 w-4" />
                   </Link>
@@ -274,10 +289,10 @@ export function Landing() {
             <ol className="space-y-3">
               {[
                 "Your message",
-                "Questions chosen for your problem",
+                "Questions about your problem",
                 "Search the Ayurveda notes",
                 "Write the plan from what was found",
-                "Show the sources",
+                "Say so when nothing matches",
               ].map((label, index) => (
                 <li key={label} className="flex items-center gap-3">
                   <span
@@ -387,7 +402,7 @@ export function Landing() {
               One line is enough. It takes about a minute to get a plan you can act on.
             </p>
             <Button asChild size="lg" className="mt-7">
-              <Link href="/login">
+              <Link href={localePath(locale, "/login")}>
                 Start a consultation
                 <ArrowRight aria-hidden className="ml-2 h-4 w-4" />
               </Link>
@@ -430,7 +445,7 @@ export function Landing() {
                 Features
               </a>
               <Link
-                href="/login"
+                href={localePath(locale, "/login")}
                 className="text-sm text-text-secondary transition-colors hover:text-foreground"
               >
                 Sign in

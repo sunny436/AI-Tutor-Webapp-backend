@@ -186,9 +186,9 @@ export function DashboardHome() {
           </CardHeader>
           <CardContent className="pb-5">
             <p className="text-sm leading-relaxed text-text-secondary">
-              One line is enough — in English, Hindi or Hinglish. You&apos;ll get a few
-              quick questions to tap through, then a plan with its root cause, food
-              chart, yoga and daily routine.
+              One line is enough — in English, Hindi or Hinglish. You&apos;ll be asked a
+              couple of questions, then get a plan with its root cause, food chart,
+              yoga and daily routine.
             </p>
             <Button asChild className="mt-4">
               <Link href="/consult">
