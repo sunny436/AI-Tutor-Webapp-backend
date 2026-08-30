@@ -75,7 +75,22 @@
     --brand-soft: 150 26% 87%;
 
     /* 6px. A pharmacopoeia is set with crisp corners; 12px reads as a phone
-       app and undoes the printed-page reading before any type is set. */
+       app and undoes the printed-page reading before any type is set.
+
+       THE SCALE, because the app currently spreads across five radii with no
+       rule — rounded-lg 56 times, xl 53, md 24, 2xl 21, full 20 — and a radius
+       chosen per component is how a set of screens stops looking like one
+       product. Each step means something:
+
+         rounded-md   controls: buttons, inputs, selects, small icon buttons
+         rounded-lg   cards, list rows, panels sitting flat on the page
+         rounded-xl   raised or floating surfaces: popovers, sheets, dialogs
+         rounded-2xl  chat bubbles ONLY - the one place a soft, spoken shape is
+                      wanted, which is why it must not leak onto cards
+         rounded-full pills, badges, avatars, dots
+
+       Applied screen by screen as each is reworked rather than in one sweep,
+       so a radius change never lands in the same commit as a layout change. */
     --radius: 0.375rem;
 
     /* ---- semantic layer ----

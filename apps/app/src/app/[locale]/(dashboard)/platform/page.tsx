@@ -5,6 +5,7 @@ import { useWorkspace } from "@/lib/useWorkspace";
 import { api } from "@v1/backend/convex/_generated/api";
 import type { Id } from "@v1/backend/convex/_generated/dataModel";
 import { Button } from "@v1/ui/button";
+import { PageHeader, PageShell } from "@v1/ui/page-shell";
 import {
   useAction,
   useMutation,
@@ -33,7 +34,10 @@ function Card({
     </div>
   );
 }
-function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode }) {
+function Row({
+  left,
+  right,
+}: { left: React.ReactNode; right: React.ReactNode }) {
   return (
     <div className="flex items-center justify-between gap-2 px-4 py-2.5 text-sm">
       <span className="truncate font-mono text-foreground">{left}</span>
@@ -42,7 +46,9 @@ function Row({ left, right }: { left: React.ReactNode; right: React.ReactNode })
   );
 }
 function Empty({ children }: { children: React.ReactNode }) {
-  return <div className="px-4 py-4 text-sm text-text-secondary">{children}</div>;
+  return (
+    <div className="px-4 py-4 text-sm text-text-secondary">{children}</div>
+  );
 }
 type PageStatus =
   | "LoadingFirstPage"
@@ -59,7 +65,9 @@ function LoadMore({
   onLoadMore: () => void;
 }) {
   if (status === "LoadingMore") {
-    return <div className="px-4 py-2.5 text-sm text-text-secondary">Loading…</div>;
+    return (
+      <div className="px-4 py-2.5 text-sm text-text-secondary">Loading…</div>
+    );
   }
   if (status !== "CanLoadMore") return null;
   return (
@@ -107,47 +115,53 @@ export default function PlatformPage() {
 
   if (!current) {
     return (
-      <div className="p-8 text-sm text-text-secondary">Setting up your workspace…</div>
+      <PageShell width="wide">
+        <p className="text-sm text-text-secondary">
+          Setting up your workspace…
+        </p>
+      </PageShell>
     );
   }
 
   return (
-    <div className="flex h-full w-full bg-secondary px-6 py-8 dark:bg-black">
-      <div className="z-10 mx-auto w-full max-w-screen-xl space-y-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-medium text-foreground">Platform</h1>
-            <p className="text-sm text-text-secondary">
-              Multi-tenant: members, invites, usage, API keys, audit & events —
-              scoped to the selected workspace.
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <select
-              value={current}
-              onChange={(e) => select(e.target.value as Id<"workspaces">)}
-              className="rounded-md border border-border bg-card px-3 py-2 text-sm"
-            >
-              {workspaces.map((w) => (
-                <option key={w._id} value={w._id}>
-                  {w.name} ({w.role})
-                </option>
-              ))}
-            </select>
-            <Button
-              variant="outline"
-              onClick={async () => {
-                const name = window.prompt("New workspace name");
-                if (name) {
-                  select(await createWorkspace({ name }));
-                  toast.success("Workspace created");
-                }
-              }}
-            >
-              + Workspace
-            </Button>
-          </div>
-        </div>
+    // `PageShell`, like every other dashboard page. This one painted
+    // `bg-secondary … dark:bg-black` and hand-rolled its own `max-w-screen-xl`,
+    // so it was the only screen with a different ground under it — and the dark
+    // value was the pure black `globals.css` rejects by name for crushing every
+    // shadow, which is why `elev-*` did nothing here.
+    <PageShell width="wide">
+      <div className="space-y-6">
+        <PageHeader
+          title="Platform"
+          description="Members, invites, usage, API keys, audit and events — scoped to the selected workspace."
+          action={
+            <div className="flex items-center gap-2">
+              <select
+                value={current}
+                onChange={(e) => select(e.target.value as Id<"workspaces">)}
+                className="rounded-md border border-border bg-card px-3 py-2 text-sm"
+              >
+                {workspaces.map((w) => (
+                  <option key={w._id} value={w._id}>
+                    {w.name} ({w.role})
+                  </option>
+                ))}
+              </select>
+              <Button
+                variant="outline"
+                onClick={async () => {
+                  const name = window.prompt("New workspace name");
+                  if (name) {
+                    select(await createWorkspace({ name }));
+                    toast.success("Workspace created");
+                  }
+                }}
+              >
+                + Workspace
+              </Button>
+            </div>
+          }
+        />
 
         {myInvites && myInvites.length > 0 && (
           <div className="rounded-lg border border-info/25 bg-info-soft/60 p-4">
@@ -162,7 +176,10 @@ export default function PlatformPage() {
                 <span className="text-foreground">
                   {inv.workspaceName ?? "workspace"} · {inv.role}
                 </span>
-                <Button size="sm" onClick={() => acceptInvite({ inviteId: inv._id })}>
+                <Button
+                  size="sm"
+                  onClick={() => acceptInvite({ inviteId: inv._id })}
+                >
                   Accept
                 </Button>
               </div>
@@ -365,6 +382,6 @@ export default function PlatformPage() {
           </Card>
         </div>
       </div>
-    </div>
+    </PageShell>
   );
 }
