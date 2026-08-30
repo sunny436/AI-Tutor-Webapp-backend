@@ -23,7 +23,6 @@ import { useMutation, useQuery } from "convex/react";
 import {
   AlertTriangle,
   FileText,
-  Leaf,
   Loader2,
   Paperclip,
   SendHorizonal,
@@ -48,6 +47,11 @@ import type {
   PersistedConsultState,
 } from "@/lib/consult/types";
 import { AnswerSections } from "./_components/answer-sections";
+import {
+  AssistantBubble,
+  AssistantSheet,
+  UserBubble,
+} from "./_components/chat-bubble";
 // `AnswerSources` is deliberately NOT imported. The file stays on disk,
 // unreferenced, so restoring citations is one import and one line.
 // NOTE: `IntakePanel`, `QuestionCard` and `OptionChip` are deliberately NOT
@@ -120,6 +124,23 @@ type AttachedDocument = {
 };
 
 /**
+ * The retrieval budget the backend divides between the attachments.
+ *
+ *     budget = MAX_DOCUMENT_CHARS_IN_QUERY // len(documents)
+ *
+ * ONE budget, SHARED. Three reports get ~400 characters each, not 1,200 each —
+ * which is why the composer says how much of each is actually being read rather
+ * than implying whole reports are in play.
+ *
+ * DISPLAY ONLY. Nothing is trimmed against it: the cap is the backend's and a
+ * client that pre-trims is guessing at a budget it does not own. It is mirrored
+ * here purely to put a number in front of the reader, so if the backend changes
+ * it the sentence goes slightly stale and nothing breaks. Kept next to
+ * `documentsForWire` so the two are read together.
+ */
+const RETRIEVAL_BUDGET_CHARS = 1200;
+
+/**
  * Every attachment, in the shape the wire takes.
  *
  * NO JOINING, AND NO FILENAME HEADERS. Both used to happen here: the wire took a
@@ -140,23 +161,6 @@ type AttachedDocument = {
  * Nothing is trimmed: the caps belong to the backend, and a client that
  * pre-trims is guessing at a budget it does not own.
  */
-/**
- * The retrieval budget the backend divides between the attachments.
- *
- *     budget = MAX_DOCUMENT_CHARS_IN_QUERY // len(documents)
- *
- * ONE budget, SHARED. Three reports get ~400 characters each, not 1,200 each —
- * which is why the composer says how much of each is actually being read rather
- * than implying whole reports are in play.
- *
- * DISPLAY ONLY. Nothing is trimmed against it: the cap is the backend's and a
- * client that pre-trims is guessing at a budget it does not own. It is mirrored
- * here purely to put a number in front of the reader, so if the backend changes
- * it the sentence goes slightly stale and nothing breaks. Kept next to
- * `documentsForWire` so the two are read together.
- */
-const RETRIEVAL_BUDGET_CHARS = 1200;
-
 function documentsForWire(documents: AttachedDocument[]): ConsultDocument[] | undefined {
   if (!documents.length) return undefined;
   // `truncated` is deliberately not sent — it describes our extraction, and the
@@ -192,28 +196,6 @@ function newId() {
 // rendered before a navigation can never collide with one created after it.
 let turnSeq = 0;
 const nextTurnId = () => `turn_${++turnSeq}`;
-
-function BotBubble({ children }: { children: React.ReactNode }) {
-  return (
-    // No max-width here: the assistant's turn is the reading column and is
-    // constrained by the page, not by a bubble. Capping it at 94% left a ragged
-    // right edge that made long answers look like chat messages rather than
-    // written guidance.
-    <div className="flex animate-rise-in gap-3">
-      {/* `bg-brand`, not an emerald→teal gradient. The app had eight hand-rolled
-          copies of that gradient competing with the token-driven <Button> on the
-          same screens — two primary treatments, neither of which was the design
-          system's. */}
-      <span
-        aria-hidden
-        className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-brand text-brand-foreground elev-1"
-      >
-        <Leaf className="h-4 w-4" />
-      </span>
-      <div className="min-w-0 flex-1">{children}</div>
-    </div>
-  );
-}
 
 function ConsultInner() {
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -654,7 +636,13 @@ function ConsultInner() {
     // screen 48px taller than the space it had, and since this container is
     // overflow-hidden the composer went under the fold with no way to scroll to
     // it — the message box was simply unreachable on a phone.
-    <div className="relative h-[calc(100dvh-7rem)] w-full overflow-hidden bg-background md:h-[calc(100dvh-3.5rem)]">
+    // `--chrome-h` is declared in globals.css beside the Topbar and mobile-bar
+    // heights it comes from: 7rem on mobile, 3.5rem from `md` up. These were two
+    // hardcoded calc() values here, three files away from the components that
+    // decide them, and they have already been wrong once — a flat 3.5rem at both
+    // sizes made this container 48px taller than its space on a phone and, being
+    // overflow-hidden, put the composer under the fold with no way to reach it.
+    <div className="relative h-[calc(100dvh-var(--chrome-h))] w-full overflow-hidden bg-background">
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
       <div className="relative mx-auto flex h-full w-full max-w-3xl flex-col px-3 sm:px-5">
         <div
@@ -687,8 +675,8 @@ function ConsultInner() {
               offering any before then would just be guessing. */}
           {empty && (
             <div className="animate-rise-in">
-              <BotBubble>
-                <div className="rounded-2xl rounded-tl-md border border-border bg-card p-4 elev-1">
+              <AssistantBubble>
+                <AssistantSheet>
                   <p className="font-display text-base font-semibold text-foreground">
                     Namaste
                   </p>
@@ -719,22 +707,14 @@ function ConsultInner() {
                       </button>
                     ))}
                   </div>
-                </div>
-              </BotBubble>
+                </AssistantSheet>
+              </AssistantBubble>
             </div>
           )}
 
           {turns.map((turn) =>
             turn.who === "user" ? (
-              <div
-                key={turn.id}
-                // `break-words` is not decoration: a pasted URL or a long
-                // unbroken word would otherwise widen the bubble past the
-                // viewport and give the whole page a horizontal scrollbar.
-                className="ml-auto max-w-[85%] animate-rise-in whitespace-pre-wrap break-words rounded-2xl rounded-br-md bg-brand px-4 py-2.5 text-sm font-medium leading-relaxed text-brand-foreground elev-2 sm:max-w-[78%]"
-              >
-                {turn.text}
-              </div>
+              <UserBubble key={turn.id}>{turn.text}</UserBubble>
             ) : turn.kind === "error" ? (
               // A service failure, not a reply. Deliberately NOT in a chat bubble:
               // it isn't something the assistant said, and dressing it up as one
@@ -782,8 +762,8 @@ function ConsultInner() {
                 </div>
               </div>
             ) : (
-              <BotBubble key={turn.id}>
-                <div className="rounded-2xl rounded-tl-md border border-border bg-card p-3.5 elev-1">
+              <AssistantBubble key={turn.id}>
+                <AssistantSheet>
                   {turn.kind === "escalation" ? (
                     <div className="flex gap-2 text-sm text-destructive">
                       <ShieldAlert className="h-5 w-5 shrink-0" />
@@ -792,7 +772,7 @@ function ConsultInner() {
                   ) : turn.kind === "chat" ? (
                     // Conversational replies are prose, not a sectioned plan, so
                     // they render as plain paragraphs.
-                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-text-secondary">
+                    <p className="whitespace-pre-wrap text-[0.9375rem] leading-[1.75] text-text-secondary">
                       {turn.text}
                     </p>
                   ) : "streaming" in turn && turn.streaming ? (
@@ -800,7 +780,7 @@ function ConsultInner() {
                     // rather than through AnswerSections, because a half-written
                     // answer has no complete section headings to split on yet
                     // and would flicker between layouts as they appeared.
-                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-text-secondary">
+                    <p className="whitespace-pre-wrap text-[0.9375rem] leading-[1.75] text-text-secondary">
                       {turn.text}
                       <span
                         aria-hidden
@@ -826,8 +806,8 @@ function ConsultInner() {
                       one import plus one line — but nothing in the UI reveals
                       which notes an answer was built from. `answer-sources.tsx`
                       stays on disk, unreferenced. */}
-                </div>
-              </BotBubble>
+                </AssistantSheet>
+              </AssistantBubble>
             ),
           )}
 
@@ -853,8 +833,8 @@ function ConsultInner() {
               to go through i18n rather than hardcoded literals on a `[locale]`
               route. */}
           {busy && !answerArriving && (
-            <BotBubble>
-              <div className="inline-flex items-center rounded-2xl rounded-tl-md border border-border bg-card px-4 py-3 elev-1">
+            <AssistantBubble>
+              <AssistantSheet className="inline-flex items-center px-4 py-3">
                 {/* The surrounding log announces this once when it appears. No
                     nested live region — that would read it twice. The dots are
                     aria-hidden, so this line is the ONLY thing a screen reader
@@ -874,8 +854,8 @@ function ConsultInner() {
                     />
                   ))}
                 </span>
-              </div>
-            </BotBubble>
+              </AssistantSheet>
+            </AssistantBubble>
           )}
         </div>
 

@@ -168,7 +168,7 @@ function toBlocks(lines: string[]): Block[] {
 function Body({ lines }: { lines: string[] }) {
   const blocks = toBlocks(lines);
   return (
-    <div className="space-y-2">
+    <div className="space-y-3">
       {blocks.map((block, index) => {
         const key = `${block.kind}-${index}`;
         if (block.kind === "h") {
@@ -180,11 +180,11 @@ function Body({ lines }: { lines: string[] }) {
         }
         if (block.kind === "ul") {
           return (
-            <ul key={key} className="space-y-1.5">
+            <ul key={key} className="space-y-2">
               {block.items.map((item, i) => (
                 <li
                   key={`${i}-${item.slice(0, 16)}`}
-                  className="flex gap-2 text-sm leading-relaxed text-text-secondary"
+                  className="flex gap-2 text-[0.9375rem] leading-[1.75] text-text-secondary"
                 >
                   <span
                     aria-hidden
@@ -198,11 +198,11 @@ function Body({ lines }: { lines: string[] }) {
         }
         if (block.kind === "ol") {
           return (
-            <ol key={key} className="space-y-1.5">
+            <ol key={key} className="space-y-2">
               {block.items.map((item, i) => (
                 <li
                   key={`${i}-${item.slice(0, 16)}`}
-                  className="flex gap-2.5 text-sm leading-relaxed text-text-secondary"
+                  className="flex gap-2.5 text-[0.9375rem] leading-[1.75] text-text-secondary"
                 >
                   <span
                     aria-hidden
@@ -217,7 +217,7 @@ function Body({ lines }: { lines: string[] }) {
           );
         }
         return (
-          <p key={key} className="text-sm leading-relaxed text-text-secondary">
+          <p key={key} className="text-[0.9375rem] leading-[1.75] text-text-secondary">
             {inline(block.lines.join(" "))}
           </p>
         );
@@ -250,7 +250,7 @@ function parseSections(text: string) {
 
 export function AnswerSections({ text }: { text: string }) {
   return (
-    <div className="space-y-2.5">
+    <div className="space-y-3.5">
       {parseSections(text).map((section, index) => {
         const key = `${index}-${section.title ?? "intro"}`;
         if (!section.title) {

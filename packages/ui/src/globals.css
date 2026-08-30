@@ -130,6 +130,39 @@
        dark mode would get a WHITE veil — and not black, which reads as soot
        over warm paper. */
     --overlay: 36 24% 8%;
+
+    /**
+     * THE SIGNED-IN CHROME ABOVE A DASHBOARD PAGE.
+     *
+     * A full-height screen — the consultation is the only one today — has to
+     * subtract whatever sits above it, and the amount differs by breakpoint:
+     *
+     *   mobile     sidebar's own bar (h-14, md:hidden) + Topbar (h-14) = 7rem
+     *   md and up  that bar is hidden, so just the Topbar              = 3.5rem
+     *
+     * Those two numbers used to be written into the consult page as
+     * `h-[calc(100dvh-7rem)] md:h-[calc(100dvh-3.5rem)]`, three files away from
+     * the components that decide them. They have already been wrong once: the
+     * page subtracted a flat 3.5rem at both sizes, so on a phone it claimed 48px
+     * more height than it had and — being overflow-hidden — put the composer
+     * under the fold with no way to scroll to it. The message box was simply
+     * unreachable.
+     *
+     * Declared here so the numbers live beside the chrome that causes them. If
+     * Topbar or the mobile bar changes height, THIS IS THE ONE PLACE TO EDIT.
+     *
+     * A variable rather than making the shell `h-dvh overflow-hidden`: that
+     * would be cleaner, but it changes scrolling for all six dashboard pages to
+     * fix one, and the other five scroll correctly today.
+     */
+    --chrome-h: 7rem;
+  }
+
+  /* Tailwind's `md`. Must stay in step with the sidebar bar's `md:hidden`. */
+  @media (min-width: 768px) {
+    :root {
+      --chrome-h: 3.5rem;
+    }
   }
 
   .dark {
