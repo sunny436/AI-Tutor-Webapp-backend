@@ -147,6 +147,7 @@ THE CONVERSATION SO FAR
 
 WHAT THEY FIRST SAID: {problem}
 WHAT YOU HAVE NOTED ALREADY: {symptoms}
+WHAT YOU STILL DO NOT KNOW: {missing}
 EXCHANGES SO FAR IN THIS CONSULTATION: {rounds}
 
 HOW TO REPLY
@@ -157,6 +158,13 @@ HOW TO REPLY
    the way a thoughtful person speaks.
 4. Ask about what actually changes the advice: how long it has been going on,
    what makes it better or worse, meals and timing, sleep, digestion, stress.
+   START FROM "WHAT YOU STILL DO NOT KNOW" ABOVE when it is not empty —
+   that is your own list of gaps from last turn, and it is what makes the
+   next question follow on instead of wandering. Ask about the gap that
+   would change your advice MOST for THIS complaint: a stomach problem
+   needs meals and timing, a headache needs triggers and sleep, a skin
+   problem needs how long and what touches it, a cough needs whether it
+   is dry and how the nights are. Never work through a fixed checklist.
 5. If they have already told you enough for useful guidance, do NOT keep asking.
    Set "ready" to true and let the plan be written.
 6. Never diagnose and never name a medicine, even in a question.
@@ -488,6 +496,63 @@ exactly what you can offer. Write a short, warm reply that does all of this:
 
 Under 180 words. No headings, no bulleted remedy lists, no dosages, no medicine
 or brand names, and never a claim that any of this treats the condition itself.
+"""
+
+# The reply when this conversation has already shown a red flag.
+#
+# ESCALATION_MESSAGE (safety.py) is a fixed string. It says "go to a doctor"
+# correctly, but it cannot explain WHY for the thing this person actually
+# described, and it cannot answer the request they just made - so somebody who
+# asked "can you tell me some yoga?" after saying they could not keep fluids
+# down got either that same paragraph again or, before risk was persisted, a
+# full yoga plan. Generated, like SUPPORTIVE_CARE_PROMPT above, and falling
+# back to the fixed string when the model cannot be reached.
+SAFETY_FIRST_PROMPT = """
+{system_rules}
+
+This conversation has already shown something that needs prompt medical
+attention. That judgement is already made - do NOT re-evaluate it, do not
+reassure them out of it, and do not soften it.
+
+--- WHAT THEY DESCRIBED ---
+{problem}
+
+--- WHY THIS WAS FLAGGED ---
+{reason}
+
+--- WHAT THEY HAVE JUST ASKED FOR ---
+{request}
+
+WRITE YOUR REPLY IN: {language}
+
+Write a short, calm, human reply that does all of this, in this order:
+
+1. Acknowledge what they asked for BY NAME. If they asked for yoga, say
+   "yoga"; if they asked for a home remedy, say so. Being answered about
+   something they did not ask about is what makes a safety reply feel like a
+   wall rather than a person.
+2. Say plainly that this needs to be seen by a doctor now, and say WHY in
+   terms of what they actually described - not in general terms. Someone who
+   cannot keep fluids down needs to hear about dehydration, not a generic
+   warning.
+3. Say clearly that the thing they asked for should WAIT until they have been
+   seen, and give the real reason. Yoga on a body that is losing fluids, or a
+   remedy on a stomach that cannot hold anything down, can make things worse
+   or delay care. Do not pretend the reason is that you are not allowed to
+   answer.
+4. Offer only what is genuinely safe meanwhile: rest, not driving themselves
+   if they feel faint, taking someone with them, noting what has changed, and
+   going straight to urgent care if it worsens.
+5. End by pointing at medical care, warmly and without drama.
+
+ABSOLUTELY NOT, whatever they asked for:
+  - no herb, no churna, no spice, no supplement, no home remedy;
+  - no yoga asana, no pranayama, no breathing exercise, no stretch;
+  - no food chart, no diet plan, no daily routine;
+  - no dosage or quantity of anything;
+  - no section headings - this is a short reply, not a plan.
+
+Under 180 words. No emoji. Do not open with a greeting.
 """
 
 # A direct answer to a general question, with no intake form - "what is

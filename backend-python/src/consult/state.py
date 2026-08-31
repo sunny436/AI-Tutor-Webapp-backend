@@ -163,6 +163,14 @@ def carry_conversation(context: ConsultContext) -> dict:
         "chat_history": list(context.chat_history),
         "language": context.language,
         "round": context.round,
+        # RISK CROSSES THE RESET. A new complaint does not undo a red flag the
+        # person has already disclosed — somebody who said they cannot keep
+        # fluids down and then starts a consultation about their skin is still
+        # somebody who cannot keep fluids down. Without this the fresh
+        # ConsultContext would default `risk_level` back to "" and the
+        # conversation would quietly return to writing wellness plans.
+        "risk_level": context.risk_level,
+        "risk_reason": context.risk_reason,
     }
 
 
@@ -251,6 +259,26 @@ def selected_labels(context: ConsultContext) -> list[str]:
 
     labels.extend(context.notes)
     return labels
+
+
+def user_fragments(context: ConsultContext) -> list[str]:
+    """Only what the USER said — never the assistant's own words.
+
+    `safety_fragments` below deliberately includes the assistant's turns,
+    which is right for the red-flag keyword scan: those keywords are phrases
+    a person reports ("ulti me khoon aa raha hai"), and the assistant echoing
+    one back is still worth catching.
+
+    `is_serious_condition` is the opposite case and must NOT use that list.
+    It matches 42 bare condition NAMES on a word boundary — "cancer", "tb",
+    "hiv" — and the assistant says several of them routinely while explaining
+    when to see a doctor. Scanning its own output would make the assistant
+    diagnose the user with whatever it had just mentioned.
+    """
+    fragments = [context.problem, context.condition, *context.symptoms, *context.notes]
+    fragments.extend(t.text for t in context.chat_history if t.role == "user")
+    fragments.extend(selected_labels(context))
+    return [f for f in fragments if f]
 
 
 def safety_fragments(context: ConsultContext) -> list[str]:

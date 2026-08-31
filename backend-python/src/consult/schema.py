@@ -237,6 +237,37 @@ class ConsultContext(BaseModel):
     # no-migration precedent `symptoms`, `missing_info` and `help_type` each
     # already use: absent from older persisted blobs, defaults empty.
     help_types: list[str] = Field(default_factory=list)
+    # HAS THIS CONVERSATION HIT A RED FLAG? "" or "urgent".
+    #
+    # Risk used to be recomputed from scratch every turn by re-scanning the
+    # transcript (`state.safety_fragments`), and that lost the exact case it
+    # most needed to hold. Measured against production:
+    #
+    #   "I am vomiting 5+ times a day and I cannot keep fluids down"
+    #       -> escalation, correctly
+    #   "Can you tell me some yoga?"
+    #       -> a full sectioned plan
+    #
+    # The first turn escalated on `gathered.red_flag` — the MODEL's judgement,
+    # not the keyword scan, because `safety.RED_FLAG_KEYWORDS` holds phrases
+    # ("ulti me khoon") and matches nothing in that sentence. `red_flag` is a
+    # per-turn transient, so by the next turn nothing remembered, `phase`
+    # was "completed" (which skips gathering), and the turn fell through to
+    # write_plan.
+    #
+    # The transcript mechanism has three more holes this closes: escalations
+    # raised without `said` record nothing at all; MAX_CHAT_HISTORY evicts the
+    # triggering sentence after 24 turns; and remember_chat truncates a turn
+    # at 400 chars.
+    #
+    # STICKY ON PURPOSE. Nothing sets this back to "". Once a conversation has
+    # shown a red flag there is no wellness answer that becomes appropriate
+    # again three messages later — the same reasoning `_escalate` already
+    # documents for re-escalating on every following turn.
+    risk_level: str = ""
+    # Short label of what tripped it, so the reply can explain itself in
+    # natural language instead of repeating a fixed string.
+    risk_reason: str = ""
 
 
 class ConsultResult(BaseModel):

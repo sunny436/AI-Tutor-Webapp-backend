@@ -268,6 +268,52 @@ async def write_supportive_care(problem: str, language: str = "") -> str:
         return safety.SERIOUS_CONDITION_MESSAGE
 
 
+def _safety_first_sync(problem: str, request: str, reason: str, language: str) -> str:
+    return _invoke(
+        prompts.SAFETY_FIRST_PROMPT.format(
+            system_rules=prompts.SYSTEM_RULES,
+            problem=problem or "(not described in words)",
+            request=request or "(they did not ask for anything specific)",
+            reason=reason or "something in this conversation needs prompt medical attention",
+            language=language or "the same language the user wrote in",
+        )
+    )
+
+
+async def write_safety_first(
+    problem: str, request: str, reason: str = "", language: str = ""
+) -> str:
+    """The reply for a conversation that has already shown a red flag.
+
+    Generated rather than canned, for the same reason `write_supportive_care`
+    below is: `safety.ESCALATION_MESSAGE` is one fixed paragraph, so it cannot
+    explain why THIS person's situation needs looking at, and it cannot
+    respond to what they just asked for. Somebody who asked "can you tell me
+    some yoga?" after saying they could not keep fluids down deserves to hear
+    why yoga is the wrong thing right now — not the same paragraph again.
+
+    Falls back to `ESCALATION_MESSAGE` on ANY failure. That is the whole point
+    of keeping the fixed string: a model outage must still produce a safe,
+    correct reply, never silence and never a wellness plan.
+    """
+    try:
+        answer = await asyncio.to_thread(
+            _safety_first_sync, problem, request, reason, language
+        )
+    except Exception as error:  # noqa: BLE001
+        print(f"[consult] safety-first reply failed: {error}")
+        return safety.ESCALATION_MESSAGE
+
+    if not (answer or "").strip():
+        return safety.ESCALATION_MESSAGE
+    # A safety reply that names a herb or a dose is the worst possible version
+    # of this, so it is checked rather than assumed. Report-only, like
+    # everywhere else - see `_warn_if_medicine`.
+    _warn_if_medicine(answer)
+    _warn_if_leaked_terms(answer)
+    return answer
+
+
 def _write_knowledge_sync(
     question: str,
     knowledge: str,
@@ -299,9 +345,15 @@ async def write_knowledge(
     needing to know anything about transports or endpoints.
     """
     try:
-        return await asyncio.to_thread(
+        answer = await asyncio.to_thread(
             _write_knowledge_sync, question, knowledge, language, on_token
         )
+        # Same log-only backstops write_plan already runs. A general answer can
+        # name a drug or echo "knowledge base" just as easily as a plan can,
+        # and until now nothing would have said so.
+        _warn_if_medicine(answer)
+        _warn_if_leaked_terms(answer)
+        return answer
     except Exception as error:  # noqa: BLE001
         print(f"[consult] knowledge answer failed: {error}")
         return (

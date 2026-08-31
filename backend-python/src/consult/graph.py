@@ -65,6 +65,7 @@ from src.consult.responder import (
     rework_answer,
     write_knowledge,
     write_plan,
+    write_safety_first,
     write_supportive_care,
 )
 from src.knowledge import match_topics
@@ -248,6 +249,16 @@ def _escalate(
     `safety_fragments`, so every later turn re-escalates on it.
     """
     context.phase = "completed"
+    # THE RISK IS RECORDED AS STATE, not only as a sentence in the transcript.
+    #
+    # Three of the five call sites below pass no `said` at all, so the
+    # transcript mechanism this docstring describes records nothing for them —
+    # including `gathered.red_flag`, the model's own verdict, which is the one
+    # that catches a red flag no keyword covers. Setting it here means every
+    # escalation persists, whatever detected it and whatever was recorded.
+    # Deliberately never cleared; see `ConsultContext.risk_level`.
+    context.risk_level = "urgent"
+    context.risk_reason = reason or context.risk_reason or "a red flag in this conversation"
     if said:
         context = ctx_state.remember_chat(context, said, safety.ESCALATION_MESSAGE)
     if reason:
@@ -469,6 +480,56 @@ async def run_turn(
         # sentence rather than locking the conversation to a guess.
         context.language = detect_language(spoken)
 
+    # Both input fields, resolved once: the urgent gate below and the
+    # keyword scan under it each need to see whatever the user actually
+    # typed, in whichever field it arrived.
+    _typed_now = (free_text or "").strip()
+
+    # ONCE URGENT, ALWAYS URGENT — for the rest of this conversation.
+    #
+    # Placed BEFORE the keyword scan below, deliberately. A conversation that
+    # is already urgent does not need re-detecting — it needs answering. With
+    # the gate after the scan, any red flag expressible as a keyword re-fired
+    # `safety.scan` on every following turn (the transcript still holds it,
+    # see state.safety_fragments) and returned the fixed ESCALATION_MESSAGE
+    # forever, so "ulti me khoon" users never got the tailored reply at all —
+    # measured, Hinglish and Devanagari follow-ups both came back canned.
+    # The scan still runs for conversations not yet urgent, which is where it
+    # matters: first detection escalates, every turn after is answered.
+    # Past this point gathering, asking_focus,
+    # retrieval, write_plan and write_knowledge are all unreachable, which is
+    # what "safety takes priority over help_type, sections, retrieval, yoga,
+    # remedies and diet" means in code rather than in a prompt.
+    #
+    # This is the fix for the case that started it: after escalating on
+    # "vomiting 5+ times a day", the next turn "Can you tell me some yoga?"
+    # skipped gathering (phase="completed"), matched no red-flag keyword, and
+    # fell through to write_plan — which produced a full sectioned plan for
+    # somebody who could not keep fluids down.
+    #
+    # The reply is generated so it can name what they actually asked for and
+    # say why it should wait; it falls back to safety.ESCALATION_MESSAGE if
+    # the model is unreachable, so this can never fail open.
+    if context.risk_level == "urgent":
+        asked_for = message or _typed_now
+        print(f"[consult] safety-first reply (risk={context.risk_reason!r})")
+        reply = await write_safety_first(
+            problem=context.problem or context.condition,
+            request=asked_for,
+            reason=context.risk_reason,
+            language=context.language,
+        )
+        context = ctx_state.remember_chat(context, asked_for, reply)
+        # `escalation`, so the client keeps the warning styling it already
+        # gives the first one. Nothing about the contract changes.
+        return ConsultResult(
+            kind="escalation",
+            condition=context.condition,
+            message=reply,
+            answer=reply,
+            context=context,
+        )
+
     # ONE SCAN, ABOVE EVERYTHING, ON BOTH FIELDS.
     #
     # Two earlier attempts put this lower and both left holes. A red flag can
@@ -480,7 +541,6 @@ async def run_turn(
     #   problem="hii"                 freeText="khudkushi ka mann karta hai" -> answered
     #
     # `scan` takes varargs and skips empties, so one call covers every shape.
-    _typed_now = (free_text or "").strip()
     if safety.scan(message, _typed_now, *ctx_state.safety_fragments(context)):
         # THE TRANSCRIPT IS SCANNED HERE TOO, not just this message.
         #
@@ -496,6 +556,7 @@ async def run_turn(
         # should keep pointing at a doctor. There is no wellness answer that
         # becomes appropriate again three messages later.
         return _escalate(context, "red-flag keyword", said=message or _typed_now)
+
 
     # A FOCUS REPLY CAN ARRIVE IN EITHER FIELD, and which one is not the
     # client's fault. docs/api-contract.md tells clients to send `problem`
@@ -909,10 +970,20 @@ async def run_turn(
     # never becomes a five-card questionnaire and a food chart. Not an
     # escalation either - "go to hospital now" is the wrong answer to someone
     # who has been living with this for a year.
-    if safety.is_serious_condition(context.problem):
+    # Scanned over everything the USER has said, not just `context.problem`.
+    # A diagnosis disclosed three turns in ("actually I'm on dialysis") was
+    # missed entirely, because `problem` only ever holds the opening sentence.
+    # Deliberately `user_fragments`, not `safety_fragments`: the latter
+    # includes the assistant's own turns, and this matches bare condition
+    # names the assistant says routinely when explaining when to see a doctor.
+    _serious = next(
+        (f for f in ctx_state.user_fragments(context) if safety.is_serious_condition(f)),
+        "",
+    )
+    if _serious:
         context.phase = "completed"
-        print(f"[consult] serious condition disclosed: {context.problem[:60]!r}")
-        reply = await write_supportive_care(context.problem, context.language)
+        print(f"[consult] serious condition disclosed: {_serious[:60]!r}")
+        reply = await write_supportive_care(_serious, context.language)
         context = ctx_state.remember_chat(context, "", reply)
         return ConsultResult(
             kind="chat",
@@ -946,6 +1017,9 @@ async def run_turn(
             problem=context.problem,
             history=ctx_state.render_history(context),
             symptoms=context.symptoms,
+            # Last turn's own list of gaps, so the next question follows on
+            # instead of wandering. Populated every turn, never read until now.
+            missing_info=context.missing_info,
             # The conversation's sticky language, resolved above from what the
             # user actually typed. `context.problem` is the router's Latin
             # restatement, so this must not be re-detected from it.

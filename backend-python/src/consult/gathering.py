@@ -111,8 +111,10 @@ def _clean_symptoms(raw) -> list[str]:
 
 
 def _gather_sync(
-    problem: str, history: str, symptoms: list[str], language: str, rounds: int
+    problem: str, history: str, symptoms: list[str], language: str, rounds: int,
+    missing: list[str] | None = None,
 ) -> Gathered:
+    missing = missing or []
     raw = llm_invoke(
         [
             HumanMessage(
@@ -120,6 +122,7 @@ def _gather_sync(
                     problem=problem or "(not described)",
                     history=history or "(this is the first message)",
                     symptoms=", ".join(symptoms) or "(nothing yet)",
+                    missing=", ".join(missing) or "(nothing noted yet)",
                     language=language or "hinglish",
                     rounds=rounds,
                 )
@@ -146,13 +149,15 @@ async def gather(
     problem: str,
     history: str = "",
     symptoms: list[str] | None = None,
+    missing_info: list[str] | None = None,
     language: str = "",
     rounds: int = 0,
 ) -> Gathered:
     """Ask the next question, and report what has been understood so far."""
     try:
         result = await asyncio.to_thread(
-            _gather_sync, problem, history, list(symptoms or []), language, rounds
+            _gather_sync, problem, history, list(symptoms or []), language, rounds,
+            list(missing_info or []),
         )
     except Exception as error:  # noqa: BLE001
         print(f"[consult] gathering failed: {error}")
