@@ -11,6 +11,7 @@ import {
   Wind,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import type { HelpType } from "@/lib/consult/types";
 import type { ReactNode } from "react";
 
 /**
@@ -248,7 +249,49 @@ function parseSections(text: string) {
   return out;
 }
 
-export function AnswerSections({ text }: { text: string }) {
+/**
+ * The heading the reader sees, which is not always the one the backend wrote.
+ *
+ * When the reader asks for Ayurveda remedies, the backend narrows the plan to
+ * one section plus the mandatory doctor one — but that section is titled
+ * "Changes To Make", which is the right name inside a complete plan and the
+ * wrong one when it IS the answer. "Changes To Make" on its own reads as
+ * lifestyle advice; what was asked for was remedies.
+ *
+ * DISPLAY ONLY, and CONDITIONAL. The backend heading is untouched — renaming it
+ * at source would move a constant that responder.py, offline.py and
+ * looks_like_plan() all read, and looks_like_plan decides kind=answer versus
+ * kind=chat, which decides whether this component renders at all. It would also
+ * rename the section inside complete plans, where the original name is correct.
+ *
+ * So the rename happens here, only when `help_types` says remedies was asked
+ * for. A complete plan keeps "Changes To Make".
+ *
+ * One knock-on, checked rather than assumed: `styleFor` matches
+ * `includes("remedies")` before `includes("change")`, so the renamed section
+ * takes the HeartPulse icon instead of ClipboardCheck. Both are tone
+ * "standard", so the card is unchanged — and a heart is the better mark for a
+ * remedies section anyway.
+ */
+function displayTitle(title: string, helpTypes: HelpType[]): string {
+  if (!helpTypes.includes("remedies")) return title;
+  return title.trim().toLowerCase() === "changes to make"
+    ? "Ayurveda Remedies & Management"
+    : title;
+}
+
+export function AnswerSections({
+  text,
+  helpTypes = [],
+}: {
+  text: string;
+  /**
+   * Captured on the turn when it arrived, NOT read from the live context —
+   * relabelling an old answer with whatever focus is current now would put the
+   * wrong name on a plan the reader already read.
+   */
+  helpTypes?: HelpType[];
+}) {
   return (
     <div className="space-y-3.5">
       {parseSections(text).map((section, index) => {
@@ -258,7 +301,8 @@ export function AnswerSections({ text }: { text: string }) {
           if (section.body.every((line) => !line.trim())) return null;
           return <Body key={key} lines={section.body} />;
         }
-        const { Icon, tone } = styleFor(section.title);
+        const shown = displayTitle(section.title, helpTypes);
+        const { Icon, tone } = styleFor(shown);
         const style = SECTION_STYLES[tone];
         return (
           <section key={key} className={`rounded-xl border p-3.5 ${style.card}`}>
@@ -272,7 +316,7 @@ export function AnswerSections({ text }: { text: string }) {
               >
                 <Icon className="h-3.5 w-3.5" />
               </span>
-              {section.title}
+              {shown}
             </h3>
             <div className="pl-0.5">
               <Body lines={section.body} />

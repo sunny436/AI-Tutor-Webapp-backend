@@ -38,10 +38,11 @@ import {
   postConsultStream,
   uploadDocument,
 } from "@/lib/consult/client";
-import { CONSULTING } from "@/lib/consult/types";
+import { CONSULTING, helpTypesOf } from "@/lib/consult/types";
 import type {
   ConsultContext,
   ConsultDocument,
+  HelpType,
   ConsultResult,
   ConsultSource,
   PersistedConsultState,
@@ -95,6 +96,8 @@ type Turn = { id: string } & (
        * able to tell that from a plan written with the whole thing.
        */
       documentTruncated?: boolean;
+      /** What the reader asked this plan to cover, captured when it arrived. */
+      helpTypes?: HelpType[];
     }
 );
 
@@ -317,6 +320,7 @@ function ConsultInner() {
         text: message.content,
         sources: state?.sources,
         documentTruncated: state?.documentTruncated,
+        helpTypes: state?.helpTypes,
       });
     }
 
@@ -337,6 +341,9 @@ function ConsultInner() {
         sources: result.sources?.length ? result.sources : undefined,
         // `|| undefined` so a false never takes up room in every stored blob.
         documentTruncated: result.documentTruncated || undefined,
+        helpTypes: helpTypesOf(result.context).length
+          ? helpTypesOf(result.context)
+          : undefined,
       };
       saveMsg({
         sessionId: sid,
@@ -370,6 +377,7 @@ function ConsultInner() {
           text: result.answer,
           sources: result.sources,
           documentTruncated: result.documentTruncated,
+          helpTypes: helpTypesOf(result.context),
         },
       ];
     });
@@ -794,7 +802,7 @@ function ConsultInner() {
                       />
                     </p>
                   ) : (
-                    <AnswerSections text={turn.text} />
+                    <AnswerSections text={turn.text} helpTypes={turn.helpTypes} />
                   )}
                   {/* The report did not reach retrieval whole, so this plan was
                       written from part of it. Shown rather than swallowed: the

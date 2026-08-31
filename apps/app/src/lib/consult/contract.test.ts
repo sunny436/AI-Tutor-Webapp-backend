@@ -74,6 +74,7 @@ type Contract = {
   result_fields: string[];
   context_fields: string[];
   upload_fields: string[];
+  help_types: string[];
   caps: Record<string, number | string>;
 };
 
@@ -165,7 +166,16 @@ for (const field of [
   check(`ConsultResult.${field} is in the contract`, contract.result_fields.includes(field));
 }
 
-for (const field of ["phase", "chat_history", "language", "condition", "symptoms"]) {
+// `help_types` is read to label the remedies section, so it is asserted like
+// any other field the UI branches on rather than trusted to be there.
+for (const field of [
+  "phase",
+  "chat_history",
+  "language",
+  "condition",
+  "symptoms",
+  "help_types",
+]) {
   check(`ConsultContext.${field} is in the contract`, contract.context_fields.includes(field));
 }
 
@@ -230,6 +240,16 @@ check(
   "the prose source-namespace table agrees with the contract block",
   same(proseNamespaces, contract.source_namespaces),
   `prose=[${proseNamespaces}] block=[${contract.source_namespaces}]`,
+);
+
+// The focus values the UI maps to headings. A value the backend adds that the
+// UI does not know simply renders the backend's own heading, which is safe —
+// but the two lists drifting silently is not, so they are compared.
+const UI_HELP_TYPES = ["root_cause", "remedies", "yoga", "diet", "complete"];
+check(
+  "every help type the contract lists is known to the UI",
+  same(UI_HELP_TYPES, contract.help_types),
+  `ui=[${UI_HELP_TYPES}] doc=[${contract.help_types}]`,
 );
 
 // --- the caps a client must NOT re-implement -----------------------------------

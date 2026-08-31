@@ -371,8 +371,9 @@ reads, so they must not be allowed to drift.
     "sources",
     "documentTruncated"
   ],
-  "context_fields": ["phase", "chat_history", "language", "condition", "symptoms"],
+  "context_fields": ["phase", "chat_history", "language", "condition", "symptoms", "help_types", "help_type", "missing_info"],
   "upload_fields": ["filename", "chars", "text", "truncated"],
+  "help_types": ["root_cause", "remedies", "yoga", "diet", "complete"],
   "caps": {
     "upload_extract_chars": 40000,
     "consult_retrieval_chars_per_query": 1200,

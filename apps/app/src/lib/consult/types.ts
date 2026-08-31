@@ -99,6 +99,16 @@ export const CONSULTING: ConsultPhase[] = [
   "choosing",
 ];
 
+/**
+ * What the reader can ask the plan to focus on, chosen at `asking_focus`.
+ *
+ * `complete` is the whole six-section plan; the others narrow it. The backend
+ * resolves the choice to a section set and always adds the doctor section, so a
+ * narrowed plan is genuinely shorter on the wire — the client is not filtering
+ * anything and must not start.
+ */
+export type HelpType = "root_cause" | "remedies" | "yoga" | "diet" | "complete";
+
 export interface ConsultContext {
   v: number;
   phase: ConsultPhase;
@@ -115,6 +125,39 @@ export interface ConsultContext {
   asked: ConsultQuestion[];
   answers: Record<string, ConsultAnswer>;
   notes: string[];
+  /**
+   * What the reader asked the plan to cover.
+   *
+   * `help_types` is the current field and a LIST — "yoga aur diet dono" selects
+   * two. `help_type` is the legacy single string, still populated, with
+   * "complete" winning when present. Read the list, fall back to the string:
+   * see `helpTypesOf`.
+   *
+   * Both are optional because a conversation persisted before they existed still
+   * has to load.
+   */
+  help_types?: HelpType[];
+  help_type?: HelpType;
+  /** Detected language of the conversation. Server-owned; the UI does not set it. */
+  language?: string;
+  /** Symptoms gathered so far. Opaque to the UI. */
+  symptoms?: string[];
+  /** What the backend still wants to know. Opaque to the UI. */
+  missing_info?: string[];
+}
+
+/**
+ * The focus this answer was written for.
+ *
+ * The list wins over the legacy string, and an empty result means "no focus
+ * chosen" — which is not the same as "complete", and must not be treated as it.
+ */
+export function helpTypesOf(
+  context: ConsultContext | null | undefined,
+): HelpType[] {
+  if (!context) return [];
+  if (context.help_types?.length) return context.help_types;
+  return context.help_type ? [context.help_type] : [];
 }
 
 /**
@@ -264,6 +307,12 @@ export interface PersistedConsultState {
    * validates and still resumes.
    */
   documentTruncated?: boolean;
+  /**
+   * The focus this answer was written for, so a reopened chat labels its
+   * sections the way they were labelled when it was read. Without it, the
+   * live context would relabel an old plan with whatever focus is current.
+   */
+  helpTypes?: HelpType[];
 }
 
 export type Selection = Record<string, ConsultAnswer>;
