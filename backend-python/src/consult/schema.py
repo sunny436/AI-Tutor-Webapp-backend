@@ -153,6 +153,62 @@ LEGACY_PHASES = ("collecting", "choosing")
 CONSULTING = ("gathering", "collecting", "choosing")
 
 
+class PatientProfile(BaseModel):
+    """The long-lived clinical facts about a person, as THEY stated them.
+
+    USER-STATED FACTS ONLY. Nothing the model infers may be written here — not
+    a guessed diagnosis, not an Ayurveda interpretation, not a causal
+    assumption. "I have kidney disease" belongs here; "kidney disease is
+    causing the acidity" never does, because that is interpretation and the
+    next consultation would read it back as though the patient had said it.
+    The rule is kept structurally rather than by a provenance tag: the
+    extraction step returns only what was said, and `state.merge_profile`
+    writes only these keys.
+
+    Split deliberately from the consultation's own state. `symptoms`,
+    `condition` and `missing_info` describe THIS complaint and are meant to be
+    thrown away; everything here outlives it. Today's nausea is not a
+    long-term fact about a person, and storing it as one would have the
+    assistant asking about it months later.
+
+    `supplements` is separate from `medications` on purpose: SYSTEM_RULES
+    rule 2 treats a prescribed drug and a herb very differently, and the
+    safety check before suggesting anything needs to tell them apart.
+
+    Every list is bounded by `state.merge_profile` — this rides on every
+    request and is persisted per user, so it cannot be allowed to grow without
+    limit.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    age: str = ""
+    sex: str = ""
+    occupation: str = ""
+    lifestyle: list[str] = Field(default_factory=list)
+    # Diagnosed conditions only, never a suspicion.
+    conditions: list[str] = Field(default_factory=list)
+    medications: list[str] = Field(default_factory=list)
+    supplements: list[str] = Field(default_factory=list)
+    allergies: list[str] = Field(default_factory=list)
+    surgeries: list[str] = Field(default_factory=list)
+    family_history: list[str] = Field(default_factory=list)
+    # Asked only when the complaint or the profile makes it relevant.
+    reproductive: str = ""
+    updated_at: str = ""
+
+    def is_empty(self) -> bool:
+        """Nothing known yet — the caller has never told us anything."""
+        return not any(
+            (
+                self.age, self.sex, self.occupation, self.reproductive,
+                self.lifestyle, self.conditions, self.medications,
+                self.supplements, self.allergies, self.surgeries,
+                self.family_history,
+            )
+        )
+
+
 class ConsultContext(BaseModel):
     """Session state the client echoes back each turn.
 
@@ -268,6 +324,26 @@ class ConsultContext(BaseModel):
     # Short label of what tripped it, so the reply can explain itself in
     # natural language instead of repeating a fixed string.
     risk_reason: str = ""
+    # The long-lived clinical facts, loaded once per conversation from Convex
+    # and merged as the person says more. See `PatientProfile`.
+    #
+    # It rides in the context rather than being re-fetched per turn because
+    # the client already round-trips this blob and Convex already persists it
+    # (`consults.state`), so one load per conversation is all that is needed.
+    patient_profile: PatientProfile = Field(default_factory=PatientProfile)
+    # Whether the load has been attempted for this conversation. Separate from
+    # "is the profile empty", because a genuinely empty profile must not cause
+    # a refetch on every single turn.
+    profile_loaded: bool = False
+    # A serious diagnosed condition this person has disclosed, e.g. "cancer".
+    #
+    # Set ONCE, when it is first detected. Before this existed the serious
+    # branch re-derived the condition from the transcript on every turn and so
+    # re-fired forever: the user answered "AML, on chemotherapy" and received
+    # another supportive-care paragraph instead of a follow-up question, and
+    # no detail was ever collected. Holding it here lets the deep-dive run as
+    # a conversation — see `prompts.GATHERING_PROMPT`'s serious-condition mode.
+    serious_condition: str = ""
 
 
 class ConsultResult(BaseModel):

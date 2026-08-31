@@ -68,6 +68,7 @@ from src.consult.responder import (
     write_safety_first,
     write_supportive_care,
 )
+from src import patient_profile as profile_store
 from src.knowledge import match_topics
 from src.consult.router import (
     CONVERSATIONAL,
@@ -452,6 +453,24 @@ async def run_turn(
     """
     context = ctx_state.load_context(raw_context)
     message = (problem or "").strip()
+
+    # THE PROFILE, LOADED ONCE PER CONVERSATION.
+    #
+    # Not per turn: the client round-trips this blob and Convex already
+    # persists it (`consults.state`), so after the first load it rides along
+    # for free. `profile_loaded` is a separate flag from "the profile is
+    # empty" precisely so that a person with no stored profile does not cause
+    # a Convex round trip on every single turn.
+    #
+    # Fails soft to an empty profile - no verified user, feature off, Convex
+    # unconfigured, route not deployed yet. A backend running ahead of the
+    # Convex side therefore behaves exactly as it did before, with the profile
+    # confined to the live conversation.
+    if not context.profile_loaded:
+        context.patient_profile = await profile_store.load(
+            (principal or {}).get("user_id")
+        )
+        context.profile_loaded = True
 
     # Nothing was actually sent. Without this the empty string fell straight past
     # the router into the planner, which then started a consultation about "".
@@ -952,7 +971,22 @@ async def run_turn(
             # gathering.MAX_GATHERING_ROUNDS already makes: an assistant that
             # keeps asking forever is worse than one that answers with slightly
             # less detail.
-            context.round += 1
+            # ...but a QUESTION they asked is not one of our rounds.
+            #
+            # The counter exists to stop "bas yahi hai" x7 pinning the intake
+            # forever — an attempt to end the conversation without answering.
+            # Someone asking what Ayurveda is, or what this assistant does, is
+            # doing the opposite, and charging them an intake round for it
+            # means a curious person gets a thinner consultation.
+            #
+            # This surfaced when the transcript started carrying the user's
+            # gathering answers (see the `remember_chat` fix below): with more
+            # health context in the history, the router began classifying
+            # "Tell me something about Ayurveda" as `about` rather than
+            # `knowledge`, so it landed here instead of in the knowledge
+            # branch above and quietly started costing a round.
+            if aside.intent not in ("about", "other"):
+                context.round += 1
             context = ctx_state.remember_chat(context, typed, aside.reply)
             return ConsultResult(
                 kind="chat",
@@ -980,18 +1014,25 @@ async def run_turn(
         (f for f in ctx_state.user_fragments(context) if safety.is_serious_condition(f)),
         "",
     )
-    if _serious:
-        context.phase = "completed"
+    if _serious and not context.serious_condition:
+        # RECORDED ONCE, THEN THE CONVERSATION CONTINUES.
+        #
+        # This used to jump straight to `write_supportive_care` with
+        # phase="completed". Because `_serious` is re-derived from the
+        # transcript every turn, the branch then re-fired forever: the user
+        # answered "AML, chemotherapy chal rahi hai" and received the same
+        # supportive-care paragraph again. Nothing about the diagnosis was
+        # ever collected, so nothing reached the profile, the safety checks or
+        # the final answer.
+        #
+        # Holding it on the context turns it into a clinical deep-dive
+        # instead: `gather()` runs in SERIOUS_CONDITION_MODE, asking what type
+        # it is, what treatment is running and what is troubling them most,
+        # one or two questions at a time — and is forbidden from offering a
+        # remedy while it does. `write_supportive_care` still writes the
+        # guidance, but below, once there is something real to write it from.
+        context.serious_condition = _serious
         print(f"[consult] serious condition disclosed: {_serious[:60]!r}")
-        reply = await write_supportive_care(_serious, context.language)
-        context = ctx_state.remember_chat(context, "", reply)
-        return ConsultResult(
-            kind="chat",
-            condition=context.condition,
-            message=reply,
-            answer=reply,
-            context=context,
-        )
 
     # --- safety, over the WHOLE conversation ------------------------------
     # Widened deliberately. The planner's per-option `red_flag` markers were the
@@ -1020,6 +1061,12 @@ async def run_turn(
             # Last turn's own list of gaps, so the next question follows on
             # instead of wandering. Populated every turn, never read until now.
             missing_info=context.missing_info,
+            # What is already known, as prose. NOT a list of unfilled fields —
+            # see state.render_profile for why a queue would make this a form.
+            profile=ctx_state.render_profile(context.patient_profile),
+            # Non-empty turns this into the clinical deep-dive described in
+            # prompts.SERIOUS_CONDITION_MODE.
+            serious_condition=context.serious_condition,
             # The conversation's sticky language, resolved above from what the
             # user actually typed. `context.problem` is the router's Latin
             # restatement, so this must not be re-detected from it.
@@ -1031,20 +1078,102 @@ async def run_turn(
         context.symptoms = ctx_state._merge_symptoms(context.symptoms, gathered.symptoms)
         context.missing_info = gathered.missing_info
 
+        # Long-term facts they stated this turn. `merge_profile` decides what
+        # actually changed — scalars replace, lists merge, nothing is ever
+        # dropped for going unmentioned — and the save is skipped entirely
+        # when nothing did, which is the normal case.
+        if gathered.profile_facts:
+            context.patient_profile, profile_changed = ctx_state.merge_profile(
+                context.patient_profile, gathered.profile_facts
+            )
+            if profile_changed:
+                await profile_store.save(
+                    (principal or {}).get("user_id"), context.patient_profile
+                )
+
         # The second of the three replacements for the planner's red flags: the
         # model reading the conversation and saying so outright.
+        #
+        # A DIAGNOSED CONDITION IS NOT AN EMERGENCY, and the model conflates
+        # the two. safety.py keeps `scan` and `is_serious_condition` on
+        # separate tracks on purpose — "these are NOT emergencies, someone
+        # living with cancer for a year does not need 'go to hospital now'" —
+        # but `red_flag` fires on the word cancer anyway. Measured: "mujhe
+        # cancer ho gaya hai" escalated to sticky-urgent on the spot, so the
+        # clinical deep-dive below could never run and every later turn came
+        # back as a safety reply instead of a follow-up question.
+        #
+        # So the model's verdict is not honoured for a disclosure that the
+        # serious-condition track has already claimed AND that carries no
+        # emergency keyword of its own. "I have cancer" runs the deep-dive;
+        # "I have cancer and I'm vomiting blood" still escalates, because
+        # `safety.scan` catches the second half — as does any red flag raised
+        # later in the deep-dive.
         if gathered.red_flag:
-            return _escalate(context, "gathering flagged a red flag")
+            _emergency = safety.scan(*ctx_state.safety_fragments(context))
+            if not context.serious_condition or _emergency:
+                return _escalate(context, "gathering flagged a red flag")
+            print(
+                "[consult] gathering flagged a red flag, but this is a "
+                "disclosed serious condition with no emergency keyword — "
+                "continuing the clinical deep-dive rather than escalating"
+            )
 
         if not gathered.ready:
             context.phase = "gathering"
             context.round += 1
-            context = ctx_state.remember_chat(context, "", gathered.reply)
+            # RECORD WHAT THEY ANSWERED, not just what we asked.
+            #
+            # This passed "" for the user's side, so every answer given during
+            # gathering was dropped from `chat_history` — `add_note` kept it,
+            # but `render_history` (which is what the prompt actually reads)
+            # only reads the transcript. The model therefore saw its own
+            # questions and none of the replies, and asked the same thing
+            # again. Measured on the serious-condition deep-dive: "blood
+            # cancer hai" and "AML hai, chemotherapy chal rahi hai" were both
+            # answered and the next turn still asked "kis type ka cancer hai?"
+            # three times running. This is very likely also the long-standing
+            # duplicate-question flake in tests/test_intake.py.
+            #
+            # `typed` only, never `message`: the opening complaint is already
+            # recorded when the consultation starts, so including it here
+            # would double it.
+            context = ctx_state.remember_chat(context, typed, gathered.reply)
             return ConsultResult(
                 kind="chat",
                 condition=context.condition,
                 message=gathered.reply,
                 answer=gathered.reply,
+                context=context,
+            )
+
+        # A SERIOUS CONDITION NEVER REACHES THE PLAN PATH.
+        #
+        # Once the deep-dive has what it needs, the guidance is written by
+        # `write_supportive_care` — never by `write_plan`, so the six-section
+        # wellness plan remains impossible for a diagnosed serious condition.
+        # That guarantee predates this change and is not relaxed by it; what
+        # changed is only that the supportive reply is now built from the type,
+        # the treatment and the symptoms actually collected, instead of from
+        # the single sentence that first mentioned the diagnosis.
+        if context.serious_condition:
+            context.phase = "completed"
+            collected = "\n".join(
+                part
+                for part in (
+                    f"They have told you they have: {context.serious_condition}",
+                    ctx_state.render_profile(context.patient_profile),
+                    ctx_state.render_history(context),
+                )
+                if part
+            )
+            reply = await write_supportive_care(collected, context.language)
+            context = ctx_state.remember_chat(context, "", reply)
+            return ConsultResult(
+                kind="chat",
+                condition=context.condition,
+                message=reply,
+                answer=reply,
                 context=context,
             )
 
@@ -1243,6 +1372,14 @@ async def run_turn(
     details = "\n".join(
         part for part in (ctx_state.render_history(context), ", ".join(context.symptoms)) if part
     )
+    # The profile joins whatever the caller sent. `write_plan` has always
+    # taken a `profile` string that lands in PLAN_PROMPT's USER PROFILE block,
+    # so history reaches the final answer through plumbing that already
+    # existed. Rules 15 and 16 govern how it may be used: silently, only when
+    # it changes the advice, and never recited back.
+    _known = ctx_state.render_profile(context.patient_profile)
+    profile = f"{profile}\n\n{_known}".strip() if profile else _known
+
     answer = await write_plan(
         # `include_sentinel=False`: the per-section evidence tags above are
         # now what tells the model which parts are grounded, so the old

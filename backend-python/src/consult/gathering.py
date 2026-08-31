@@ -72,7 +72,10 @@ _FALLBACK_QUESTION = {
 class Gathered:
     """One gathering turn's outcome."""
 
-    __slots__ = ("reply", "condition", "symptoms", "missing_info", "red_flag", "ready")
+    __slots__ = (
+        "reply", "condition", "symptoms", "missing_info",
+        "profile_facts", "red_flag", "ready",
+    )
 
     def __init__(
         self,
@@ -80,6 +83,7 @@ class Gathered:
         condition: str = "",
         symptoms: list[str] | None = None,
         missing_info: list[str] | None = None,
+        profile_facts: dict | None = None,
         red_flag: bool = False,
         ready: bool = False,
     ) -> None:
@@ -87,6 +91,10 @@ class Gathered:
         self.condition = condition
         self.symptoms = symptoms or []
         self.missing_info = missing_info or []
+        # Long-term facts the person stated THIS turn. Extracted in the same
+        # JSON call as everything else, so a profile costs no extra latency
+        # and no second model round trip.
+        self.profile_facts = profile_facts or {}
         self.red_flag = red_flag
         self.ready = ready
 
@@ -112,7 +120,7 @@ def _clean_symptoms(raw) -> list[str]:
 
 def _gather_sync(
     problem: str, history: str, symptoms: list[str], language: str, rounds: int,
-    missing: list[str] | None = None,
+    missing: list[str] | None = None, profile: str = "", serious: str = "",
 ) -> Gathered:
     missing = missing or []
     raw = llm_invoke(
@@ -123,6 +131,11 @@ def _gather_sync(
                     history=history or "(this is the first message)",
                     symptoms=", ".join(symptoms) or "(nothing yet)",
                     missing=", ".join(missing) or "(nothing noted yet)",
+                    profile=profile or "(they have not told you anything about themselves yet)",
+                    serious=(
+                        prompts.SERIOUS_CONDITION_MODE.format(condition=serious)
+                        if serious else ""
+                    ),
                     language=language or "hinglish",
                     rounds=rounds,
                 )
@@ -139,6 +152,7 @@ def _gather_sync(
         condition=str(parsed.get("condition") or "").strip()[:80],
         symptoms=_clean_symptoms(parsed.get("symptoms")),
         missing_info=_clean_symptoms(parsed.get("missing_info")),
+        profile_facts=parsed.get("profile_facts") if isinstance(parsed.get("profile_facts"), dict) else {},
         red_flag=bool(parsed.get("red_flag")),
         ready=bool(parsed.get("ready")),
     )
@@ -150,6 +164,8 @@ async def gather(
     history: str = "",
     symptoms: list[str] | None = None,
     missing_info: list[str] | None = None,
+    profile: str = "",
+    serious_condition: str = "",
     language: str = "",
     rounds: int = 0,
 ) -> Gathered:
@@ -157,7 +173,7 @@ async def gather(
     try:
         result = await asyncio.to_thread(
             _gather_sync, problem, history, list(symptoms or []), language, rounds,
-            list(missing_info or []),
+            list(missing_info or []), profile, serious_condition,
         )
     except Exception as error:  # noqa: BLE001
         print(f"[consult] gathering failed: {error}")

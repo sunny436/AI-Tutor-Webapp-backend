@@ -23,10 +23,18 @@ from src.consult.schema import (
     ChatTurn,
     ConsultContext,
     IntakePlan,
+    PatientProfile,
     Question,
 )
 
 SUPPORTED_VERSION = 2
+# Profile caps. Same reasoning as MAX_SYMPTOMS below — this is persisted per
+# user and rides every request — but roomier, because a real person can
+# genuinely be on six medicines and these are not a vector query.
+MAX_PROFILE_ITEMS = 12
+MAX_PROFILE_ITEM_CHARS = 80
+# Scalars are short by nature ("34", "female", "software engineer").
+MAX_PROFILE_SCALAR_CHARS = 60
 # The blob rides on every request and is persisted to Convex, so keep it bounded.
 MAX_NOTES = 8
 MAX_NOTE_CHARS = 400
@@ -86,6 +94,108 @@ def _merge_symptoms(existing: list[str], incoming: list[str]) -> list[str]:
             seen.add(cleaned.lower())
             merged.append(cleaned)
     return merged[-MAX_SYMPTOMS:]
+
+
+_PROFILE_SCALARS = ("age", "sex", "occupation", "reproductive")
+_PROFILE_LISTS = (
+    "conditions", "medications", "supplements", "allergies",
+    "surgeries", "lifestyle", "family_history",
+)
+# Human labels for the prompt. The model never sees a field name.
+_PROFILE_LABELS = {
+    "age": "Age", "sex": "Sex", "occupation": "Work",
+    "reproductive": "Reproductive history",
+    "conditions": "Diagnosed conditions", "medications": "Current medicines",
+    "supplements": "Supplements/herbs", "allergies": "Allergies",
+    "surgeries": "Past surgeries/hospitalisations", "lifestyle": "Lifestyle",
+    "family_history": "Family history",
+}
+
+
+def merge_profile(
+    existing: PatientProfile, incoming: dict, removals: dict | None = None
+) -> tuple[PatientProfile, bool]:
+    """Fold newly stated facts into the profile. Returns (profile, changed).
+
+    SCALARS REPLACE. "Actually I am 30 now" must correct 29, not sit beside
+    it — an age that only ever grows a list is worse than useless.
+
+    LISTS MERGE, case-insensitively de-duplicated, reusing the same shape as
+    `_merge_symptoms` above. Someone who mentions a second allergy still has
+    the first one.
+
+    REMOVAL IS EXPLICIT ONLY. `removals` carries facts the user has directly
+    contradicted ("I'm not on metformin any more"). Nothing is ever dropped
+    because it merely stopped being mentioned: silence is not retraction, and
+    silently losing "penicillin allergy" is the worst bug this function could
+    have.
+
+    `changed` is returned so the caller can skip the Convex write on a turn
+    that revealed nothing — most turns reveal nothing.
+
+    Pure and side-effect free, so the rules above are unit-testable without a
+    model in the loop.
+    """
+    merged = existing.model_copy(deep=True)
+    changed = False
+
+    for key in _PROFILE_SCALARS:
+        value = str(incoming.get(key) or "").strip()[:MAX_PROFILE_SCALAR_CHARS]
+        if value and value.lower() != (getattr(merged, key) or "").lower():
+            setattr(merged, key, value)
+            changed = True
+
+    for key in _PROFILE_LISTS:
+        raw = incoming.get(key)
+        if not isinstance(raw, list):
+            continue
+        current = list(getattr(merged, key))
+        seen = {item.lower() for item in current}
+        for item in raw:
+            cleaned = str(item or "").strip().strip(".,;")[:MAX_PROFILE_ITEM_CHARS]
+            if cleaned and cleaned.lower() not in seen:
+                seen.add(cleaned.lower())
+                current.append(cleaned)
+                changed = True
+        if len(current) > MAX_PROFILE_ITEMS:
+            current = current[-MAX_PROFILE_ITEMS:]
+            changed = True
+        setattr(merged, key, current)
+
+    for key, values in (removals or {}).items():
+        if key not in _PROFILE_LISTS or not isinstance(values, list):
+            continue
+        drop = {str(v or "").strip().lower() for v in values if str(v or "").strip()}
+        if not drop:
+            continue
+        kept = [i for i in getattr(merged, key) if i.lower() not in drop]
+        if len(kept) != len(getattr(merged, key)):
+            setattr(merged, key, kept)
+            changed = True
+
+    return merged, changed
+
+
+def render_profile(profile: PatientProfile) -> str:
+    """What is already known, as prose for a prompt. Empty string when nothing.
+
+    DELIBERATELY NOT A FIELD QUEUE. The model is shown what it already knows
+    and left to work out what is still worth asking, exactly as it already
+    does for `missing_info`. Handing it a list of unfilled fields is what
+    turns a consultation into a form — it gets worked through in order.
+
+    Field names never appear; the labels are the words a person would use.
+    """
+    lines = []
+    for key in _PROFILE_SCALARS:
+        value = getattr(profile, key)
+        if value:
+            lines.append(f"{_PROFILE_LABELS[key]}: {value}")
+    for key in _PROFILE_LISTS:
+        values = getattr(profile, key)
+        if values:
+            lines.append(f"{_PROFILE_LABELS[key]}: {', '.join(values)}")
+    return "\n".join(lines)
 
 
 def remember_chat(
@@ -171,6 +281,14 @@ def carry_conversation(context: ConsultContext) -> dict:
         # conversation would quietly return to writing wellness plans.
         "risk_level": context.risk_level,
         "risk_reason": context.risk_reason,
+        # The person does not stop having diabetes because they started a
+        # consultation about their skin. Carried for the same reason risk is:
+        # a fresh ConsultContext would default it away and the assistant would
+        # ask everything again, which is precisely the form-filling experience
+        # the profile exists to remove.
+        "patient_profile": context.patient_profile.model_copy(deep=True),
+        "profile_loaded": context.profile_loaded,
+        "serious_condition": context.serious_condition,
     }
 
 
@@ -278,6 +396,11 @@ def user_fragments(context: ConsultContext) -> list[str]:
     fragments = [context.problem, context.condition, *context.symptoms, *context.notes]
     fragments.extend(t.text for t in context.chat_history if t.role == "user")
     fragments.extend(selected_labels(context))
+    # Conditions the person stated about themselves. A diagnosis given in
+    # passing during an earlier consultation is still a diagnosis, and it must
+    # reach `is_serious_condition` even after the sentence that carried it has
+    # been evicted from `chat_history` (MAX_CHAT_HISTORY = 24).
+    fragments.extend(context.patient_profile.conditions)
     return [f for f in fragments if f]
 
 

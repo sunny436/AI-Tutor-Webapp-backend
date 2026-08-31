@@ -158,6 +158,18 @@ KNOWLEDGE_EMBED_POOL_SIZE = int(_get("KNOWLEDGE_EMBED_POOL_SIZE", "6"))
 # silently answer with zero grounding.
 LOCAL_RAG_ENABLED = _get("LOCAL_RAG_ENABLED", "1") == "1"
 
+# Is the persistent patient profile on? When off, no profile is loaded or
+# saved and nothing extra is asked — the consultation behaves exactly as it
+# did before the profile existed.
+#
+# Default 1, but this is the rollback path that matters most in this feature:
+# it changes the first thing a new user is asked, and it depends on Convex
+# routes that live in the FRONTEND repo. A backend deployed before those exist
+# still works — `patient_profile.load` fails soft to an empty profile — but
+# this flag is the way to turn the questioning off outright without a deploy.
+# Same config-only rollback precedent as LOCAL_RAG_ENABLED above.
+PROFILE_ENABLED = _get("PROFILE_ENABLED", "1") == "1"
+
 # How many earlier turns of THIS conversation may be replayed to the model.
 MAX_CONTEXT_MESSAGES = int(_get("MAX_CONTEXT_MESSAGES", "12"))
 
