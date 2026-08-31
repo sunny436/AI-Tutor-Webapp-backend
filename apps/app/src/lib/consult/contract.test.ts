@@ -118,6 +118,7 @@ const TS_PHASES: ConsultPhase[] = [
   "greeted",
   "casual",
   "gathering",
+  "asking_focus",
   "collecting",
   "choosing",
   "completed",

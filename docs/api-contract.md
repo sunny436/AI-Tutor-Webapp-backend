@@ -68,8 +68,8 @@ duplicate labelling inside text that is already labelled.
 
 **`problem` vs `freeText` is the one thing that is easy to get wrong.**
 Send `freeText` when `context.phase` is one of `CONSULTING`
-(`gathering`, and the retired `collecting` / `choosing`); send `problem`
-otherwise. Getting it backwards makes every follow-up look like a brand-new
+(`gathering`, `asking_focus`, and the retired `collecting` / `choosing`); send
+`problem` otherwise. Getting it backwards makes every follow-up look like a brand-new
 complaint, and the consultation restarts instead of continuing.
 
 **The backend is stateless.** Whatever `context` it returns must be sent back on
@@ -344,10 +344,10 @@ reads, so they must not be allowed to drift.
 {
   "enums": {
     "kind": ["chat", "intake", "answer", "escalation", "error"],
-    "phase": ["idle", "greeted", "casual", "gathering", "collecting", "choosing", "completed"]
+    "phase": ["idle", "greeted", "casual", "gathering", "asking_focus", "collecting", "choosing", "completed"]
   },
   "phase_groups": {
-    "consulting": ["gathering", "collecting", "choosing"],
+    "consulting": ["gathering", "asking_focus", "collecting", "choosing"],
     "legacy": ["collecting", "choosing"]
   },
   "source_namespaces": ["knowledge", "report", "graphrag", "memory"],

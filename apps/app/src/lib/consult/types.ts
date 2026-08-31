@@ -61,6 +61,7 @@ export interface ChatTurn {
  *  greeted    hello exchanged — the assistant must not greet again
  *  casual     chatting, no health concern raised
  *  gathering  asking about the complaint in prose, a question or two at a time
+ *  asking_focus  asking which part of the plan they want
  *  completed  plan delivered
  *
  * `collecting` and `choosing` are RETIRED — they were the two card surfaces —
@@ -72,12 +73,31 @@ export type ConsultPhase =
   | "greeted"
   | "casual"
   | "gathering"
+  | "asking_focus"
   | "collecting"
   | "choosing"
   | "completed";
 
-/** Phases where a typed message continues the consultation rather than starting one. */
-export const CONSULTING: ConsultPhase[] = ["gathering", "collecting", "choosing"];
+/**
+ * Phases where a typed message continues the consultation rather than starting one.
+ *
+ * `asking_focus` was MISSING, and the omission had a cost. At that phase the
+ * backend has asked which part of the plan the reader wants; their reply is a
+ * continuation, so it belongs in `freeText`. Without the phase in this list the
+ * client sent it as `problem`, and the backend read it as a brand-new complaint
+ * and answered with generic onboarding text.
+ *
+ * The backend now accepts the focus reply in either field, so this is no longer
+ * load-bearing — but `freeText` is still the preferred one, and a client that
+ * relies on the other side being forgiving is one release away from the bug
+ * coming back.
+ */
+export const CONSULTING: ConsultPhase[] = [
+  "gathering",
+  "asking_focus",
+  "collecting",
+  "choosing",
+];
 
 export interface ConsultContext {
   v: number;
