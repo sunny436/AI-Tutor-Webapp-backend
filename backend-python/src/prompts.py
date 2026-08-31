@@ -229,9 +229,23 @@ LIST EVERY CATEGORY THEY ASKED FOR, not just the first. People routinely
 ask for two ("yoga and diet", "root cause and complete plan both"), and
 dropping the second one gives them less than they asked for.
 
-If the reply is unclear or does not answer the question at all, return
-exactly ["complete"] — that is the safe default, not a guess. Use
-"complete" on its own whenever they want everything.
+Use "complete" whenever they want everything ("poora plan", "sab kuch",
+"the complete plan", "everything").
+
+IF THE REPLY IS NOT AN ANSWER TO THIS QUESTION AT ALL, return exactly
+[] — an empty list. This matters as much as the categories do. People do
+not always answer the question in front of them: they ask something else
+("Tell me something about Ayurveda", "what is pitta?", "aap kaun ho?"),
+or say something unrelated. Those are NOT a request for the complete
+plan, and treating them as one produced a full six-section health plan in
+reply to somebody who had asked what Ayurveda is.
+
+An empty list means "they did not choose" — it does not mean "give them
+nothing". Something else decides what to do with the reply.
+
+Only return a category when the reply genuinely asks for that part of the
+consultation. When in doubt between a category and [], and the reply reads
+like a question rather than a choice, return [].
 
 --- THEIR REPLY ---
 {reply}

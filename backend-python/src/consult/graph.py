@@ -374,6 +374,49 @@ def knowledge_for_prompt(pipeline, results, include_sentinel: bool = True) -> st
     return f"{NO_KNOWLEDGE}\n\n{block}" if block else NO_KNOWLEDGE
 
 
+async def _answer_knowledge_mid_consultation(
+    context: ConsultContext,
+    question: str,
+    principal: dict | None,
+    conversation_id: str | None,
+    on_token: Callable[[str], None] | None = None,
+    document_question: bool = False,
+) -> ConsultResult:
+    """Answer a general question WITHOUT disturbing the open consultation.
+
+    The front-door knowledge branch cannot be reused here, because it ends with
+    `context.phase = "casual"` — which would abandon a consultation the user is
+    part-way through. Everything else is the same: a throwaway context is built
+    for retrieval so the search runs on the QUESTION, and the real context is
+    left holding its phase, condition, symptoms, round and help_type.
+
+    THE ROUND IS DELIBERATELY NOT ADVANCED. `MAX_GATHERING_ROUNDS` counts how
+    long we have been questioning this person; a question they asked US is not
+    one of our rounds, and burning one would end the intake early for somebody
+    who simply wanted to understand a word we used. This differs from the
+    small-talk branch, which DOES count — "bas yahi hai" is an attempt to end
+    the intake, so it has to move the counter or the intake never finishes.
+    """
+    question_context = ConsultContext(problem=question)
+    pipeline, results = await _retrieve(
+        question_context, principal, conversation_id, document_question=document_question
+    )
+    answer = await write_knowledge(
+        question, knowledge_for_prompt(pipeline, results), context.language, on_token
+    )
+    context = ctx_state.remember_chat(context, question, answer)
+    return ConsultResult(
+        # `chat`, not `answer`: this is prose, not the sectioned plan, and
+        # `looks_like_plan` decides how the client renders it.
+        kind="answer" if looks_like_plan(answer) else "chat",
+        condition=context.condition,
+        message=answer,
+        answer=answer,
+        context=context,
+        sources=pipeline.to_sources(results),
+    )
+
+
 async def run_turn(
     *,
     problem: str,
@@ -786,6 +829,42 @@ async def run_turn(
             )
             context = ctx_state.remember_chat(context, typed, "")
             free_text = None
+        elif aside.intent in ("knowledge", "document") and not aside.health_followup:
+            # A REAL QUESTION, ASKED MID-INTAKE. Answer it.
+            #
+            # `health_followup` is what keeps this from swallowing the intake.
+            # The router downgrades a health verdict to `knowledge` when the
+            # message carries no symptom word but the conversation is already
+            # about health — which is exactly what an ANSWER to a gathering
+            # question looks like ("bas itna hi hai", "2 din se"). Diverting
+            # those here stalled the intake completely: measured, five
+            # consecutive answers all came back as knowledge replies and the
+            # consultation never left `gathering`. See router.Route.
+            #
+            # This branch did not exist, and `knowledge` is not in
+            # CONVERSATIONAL, so the question fell through to `add_note` and
+            # `gather` below — it was filed as a symptom and answered with the
+            # NEXT INTAKE QUESTION. Reproduced live against production:
+            # "Tell me something about Ayurveda", asked during a gathering
+            # phase, came back "I understand. To get a clearer picture of your
+            # digestion, could you tell me if you are experiencing any changes
+            # in your bowel movements...". The user asked what Ayurveda is and
+            # was interrogated about their bowels.
+            #
+            # Not routed back through the front door on purpose: that path ends
+            # by setting phase="casual", which would silently abandon the
+            # consultation. The helper answers and leaves every piece of state
+            # exactly where it was, so the next turn carries on gathering.
+            return await _answer_knowledge_mid_consultation(
+                context,
+                typed,
+                principal,
+                conversation_id,
+                on_token,
+                document_question=(
+                    aside.intent == "document" or is_about_uploaded_document(typed)
+                ),
+            )
         elif aside.intent in CONVERSATIONAL and context.round < MAX_GATHERING_ROUNDS:
             # "hii", "thanks", "haan"  -  answer it and leave the intake standing,
             # but ONLY while the intake still has rounds left. At the ceiling this
@@ -914,7 +993,81 @@ async def run_turn(
 
     # --- 1b. which sections they want, from their reply to the focus question
     if context.phase == "asking_focus":
-        context.help_types = await classify_focus(typed or message, context.language)
+        spoken_focus = typed or message
+        chosen_focus = await classify_focus(spoken_focus, context.language)
+
+        if not chosen_focus:
+            # NOT A FOCUS SELECTION. They asked something else instead of
+            # choosing — a question of their own, an aside, small talk.
+            #
+            # This used to be impossible to see: `classify_focus` collapsed
+            # every non-answer to ["complete"], so "Tell me something about
+            # Ayurveda", typed at the focus question, wrote a full
+            # six-section acidity plan. Reproduced live against production
+            # before this fix (3,446 characters of plan in reply to a
+            # general question).
+            #
+            # Answer what they actually said, and STAY in `asking_focus` so
+            # the choice is still open. Nothing about the consultation is
+            # reset: condition, symptoms and round all stand.
+            aside = await route_message(
+                spoken_focus,
+                history=(
+                    f"(An open consultation about: {context.problem}. They have "
+                    "just been asked which part of the plan they want.)\n"
+                    f"{ctx_state.render_history(context)}"
+                ),
+                greeted=context.greeted,
+                language=context.language,
+            )
+            if aside.intent == "unavailable":
+                return ConsultResult(
+                    kind="error", message=aside.reply, answer=aside.reply, context=context
+                )
+            if aside.intent in ("knowledge", "document") and not aside.health_followup:
+                result = await _answer_knowledge_mid_consultation(
+                    context,
+                    spoken_focus,
+                    principal,
+                    conversation_id,
+                    on_token,
+                    document_question=(
+                        aside.intent == "document"
+                        or is_about_uploaded_document(spoken_focus)
+                    ),
+                )
+                # Re-ask, so the conversation does not stall waiting on a
+                # choice the user has stopped being prompted for.
+                nudge = _FOCUS_QUESTION.get(
+                    context.language, _FOCUS_QUESTION["hinglish"]
+                ).format(condition=context.condition or "isse")
+                combined = f"{result.answer}\n\n{nudge}"
+                result.context.phase = "asking_focus"
+                return ConsultResult(
+                    kind="chat",
+                    condition=context.condition,
+                    message=combined,
+                    answer=combined,
+                    context=result.context,
+                    sources=result.sources,
+                )
+            # Anything else (small talk, a refusal, an off-topic remark):
+            # reply if the router wrote one, then put the question back.
+            nudge = _FOCUS_QUESTION.get(
+                context.language, _FOCUS_QUESTION["hinglish"]
+            ).format(condition=context.condition or "isse")
+            reply = f"{aside.reply}\n\n{nudge}" if aside.reply else nudge
+            context = ctx_state.remember_chat(context, spoken_focus, reply)
+            context.phase = "asking_focus"
+            return ConsultResult(
+                kind="chat",
+                condition=context.condition,
+                message=reply,
+                answer=reply,
+                context=context,
+            )
+
+        context.help_types = chosen_focus
         # `help_type` (singular) stays populated for backward compatibility —
         # see schema.py for why widening it in place would reset in-flight
         # conversations. "complete" wins when present, since it is a superset

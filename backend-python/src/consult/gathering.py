@@ -202,6 +202,8 @@ def _classify_focus_sync(reply: str) -> list[str]:
     if isinstance(raw_values, str):
         raw_values = [raw_values]
     if not isinstance(raw_values, list):
+        # Unreadable shape — not the same thing as "they didn't choose". Fall
+        # back to the whole plan, as this has always done.
         return ["complete"]
 
     kept: list[str] = []
@@ -209,7 +211,16 @@ def _classify_focus_sync(reply: str) -> list[str]:
         cleaned = str(value or "").strip().lower()
         if cleaned in _VALID_HELP_TYPES and cleaned not in kept:
             kept.append(cleaned)
-    return kept or ["complete"]
+
+    # AN EMPTY LIST IS A REAL ANSWER, NOT A FAILURE, and must survive back to
+    # the caller. It means the model read the reply and decided it is not a
+    # choice at all — a question, an aside, something unrelated. This used to
+    # collapse to ["complete"], which is how "Tell me something about
+    # Ayurveda", typed at the focus question, produced a full six-section
+    # acidity plan instead of an answer. `graph.py` decides what to do with
+    # it; the one thing that must not happen is silently inventing a choice
+    # the user never made.
+    return kept
 
 
 async def classify_focus(reply: str, language: str = "") -> list[str]:
@@ -221,10 +232,17 @@ async def classify_focus(reply: str, language: str = "") -> list[str]:
     that question, and returning only the first silently gave the user less
     than they asked for.
 
-    Defaults to `["complete"]` on ANY uncertainty — an unreachable model, a
-    malformed response, or a reply that answers something else entirely. Same
-    safe-default precedent `resolve_sections(None)` already uses: "nothing
-    selected" means everything, never nothing.
+    Returns an EMPTY LIST when the reply is not an answer to the focus
+    question at all — a question of their own, an aside, something unrelated.
+    That is a verdict, not a failure, and the caller must handle it: `graph.py`
+    answers the reply and leaves the conversation in `asking_focus` rather
+    than picking a focus nobody asked for.
+
+    Still defaults to `["complete"]` for a genuine FAILURE — an unreachable
+    model or an unreadable response — because an outage should not dead-end
+    somebody who has already finished gathering. The distinction matters:
+    "the model says this isn't a choice" and "we could not ask the model" look
+    identical from the outside and must not behave identically.
     """
     try:
         return await asyncio.to_thread(_classify_focus_sync, reply)

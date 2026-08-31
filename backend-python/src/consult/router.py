@@ -600,6 +600,20 @@ class Route:
     intent: Intent
     reply: str = ""
     problem: str = ""
+    # True ONLY for the `health` -> `knowledge` downgrade below: a message with
+    # no symptom word and no "mujhe/I have", arriving while the CONVERSATION is
+    # already about health. That is somebody ANSWERING an intake question
+    # ("bas itna hi hai", "2 din se"), not somebody asking one.
+    #
+    # It still routes as `knowledge` — the front door's behaviour is unchanged,
+    # which is the whole point of a defaulted field. But `consult/graph.py`
+    # answers a genuine mid-consultation question as knowledge and lets an
+    # intake answer fall through to `gather`, and those two cases are
+    # indistinguishable from the intent alone. Guessing between them from the
+    # wording does not work: "bas itna hi hai, aap bata dijiye" and "Tell me
+    # something about Ayurveda" both lack a health signal. Marked at the one
+    # site that knows.
+    health_followup: bool = False
 
 
 # A second, hotter attempt used only when the first reply repeats the previous
@@ -848,7 +862,7 @@ async def route_message(
             # question changes.
             if has_health_signal(history):
                 print(f"[consult] health follow-up in an active conversation: {text[:60]!r}")
-                return Route(intent="knowledge")
+                return Route(intent="knowledge", health_followup=True)
             print(f"[consult] ignoring ungrounded health verdict for {text[:60]!r}")
             return Route(intent="casual", reply=_FALLBACK_REPLIES["casual"])
         # "Acidity kis par depend karta hai?" mentions a symptom but is a question
