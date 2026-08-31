@@ -31,6 +31,7 @@ import type * as jobs from "../jobs.js";
 import type * as memory from "../memory.js";
 import type * as notifications from "../notifications.js";
 import type * as orgs from "../orgs.js";
+import type * as patientProfile from "../patientProfile.js";
 import type * as seed from "../seed.js";
 import type * as sessions from "../sessions.js";
 import type * as subscriptions from "../subscriptions.js";
@@ -77,6 +78,7 @@ declare const fullApi: ApiFromModules<{
   memory: typeof memory;
   notifications: typeof notifications;
   orgs: typeof orgs;
+  patientProfile: typeof patientProfile;
   seed: typeof seed;
   sessions: typeof sessions;
   subscriptions: typeof subscriptions;

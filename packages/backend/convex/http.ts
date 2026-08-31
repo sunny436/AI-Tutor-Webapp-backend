@@ -126,4 +126,91 @@ http.route({
   }),
 });
 
+// --- Patient profile -------------------------------------------------------
+//
+// The long-lived clinical facts the Python backend keeps about a person. Both
+// routes follow `/backend/user-memory` above exactly: service-key guarded,
+// never reachable from a browser, and the `userId` is the subject of a JWT the
+// Python side has already verified (`server.require_user`). A caller holding
+// only the service key resolves to no user there and never reaches here.
+//
+// The key comparison is `!expected || supplied !== expected`, so an unset
+// server key denies everything rather than authorising it.
+
+http.route({
+  path: "/backend/patient-profile",
+  method: "POST",
+  handler: httpAction(async (ctx, req) => {
+    const json = (body: unknown, status: number) =>
+      new Response(JSON.stringify(body), {
+        status,
+        headers: { "content-type": "application/json" },
+      });
+
+    const expected = process.env.BACKEND_SERVICE_KEY ?? "";
+    const supplied = req.headers.get("x-service-key") ?? "";
+    if (!expected || supplied !== expected) {
+      return json({ error: "unauthorized" }, 401);
+    }
+
+    const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+    const userId = typeof body.userId === "string" ? body.userId : "";
+    // No identity, no profile. Fails closed to "we know nothing about you",
+    // which the backend treats as an empty profile.
+    if (!userId) return json({ profile: null }, 200);
+
+    try {
+      const row = await ctx.runQuery(internal.patientProfile.get, {
+        // biome-ignore lint/suspicious/noExplicitAny: id shape validated by Convex
+        userId: userId as any,
+      });
+      return json({ profile: row?.profile ?? null }, 200);
+    } catch {
+      // A malformed id must not surface as a 500, and a consultation must
+      // survive the profile being unavailable — the backend degrades to
+      // asking, rather than failing the turn.
+      return json({ profile: null }, 200);
+    }
+  }),
+});
+
+http.route({
+  path: "/backend/patient-profile/save",
+  method: "POST",
+  handler: httpAction(async (ctx, req) => {
+    const json = (body: unknown, status: number) =>
+      new Response(JSON.stringify(body), {
+        status,
+        headers: { "content-type": "application/json" },
+      });
+
+    const expected = process.env.BACKEND_SERVICE_KEY ?? "";
+    const supplied = req.headers.get("x-service-key") ?? "";
+    if (!expected || supplied !== expected) {
+      return json({ error: "unauthorized" }, 401);
+    }
+
+    const body = (await req.json().catch(() => ({}))) as Record<string, unknown>;
+    const userId = typeof body.userId === "string" ? body.userId : "";
+    const profile = typeof body.profile === "string" ? body.profile : "";
+    // A write with no identity is refused outright rather than dropped
+    // quietly: unlike a read, the caller believes something was stored.
+    if (!userId) return json({ error: "no user" }, 400);
+    // An empty body would blank someone's medical history. Nothing legitimate
+    // sends this — the backend only saves when a merge reported a change.
+    if (!profile) return json({ error: "empty profile" }, 400);
+
+    try {
+      const result = await ctx.runMutation(internal.patientProfile.upsert, {
+        // biome-ignore lint/suspicious/noExplicitAny: id shape validated by Convex
+        userId: userId as any,
+        profile,
+      });
+      return json({ saved: true, created: result.created }, 200);
+    } catch {
+      return json({ saved: false }, 200);
+    }
+  }),
+});
+
 export default http;

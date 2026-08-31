@@ -146,6 +146,26 @@ export default defineSchema({
     .index("by_user", ["userId"])
     .index("by_user_session", ["userId", "sessionId"]),
 
+  // The long-lived clinical facts a person has told the assistant about
+  // themselves: age, diagnosed conditions, current medicines, allergies.
+  // Written and read only by the Python AI backend, through the service-key
+  // routes in `http.ts` — see `patientProfile.ts`.
+  //
+  // ONE ROW PER USER. `by_user` is the only index because the only question
+  // ever asked of this table is "what do we know about this person", and a
+  // second row for the same user would mean two competing versions of their
+  // medical history.
+  //
+  // `profile` is a JSON STRING, exactly like `consults.state` above and for
+  // the same reason: the backend owns the shape (its `PatientProfile` model)
+  // and can add a field to it without a Convex schema migration. Convex never
+  // reads inside the blob, so there is nothing here to keep in sync with it.
+  patientProfiles: defineTable({
+    userId: v.id("users"),
+    profile: v.string(),
+    updatedAt: v.number(),
+  }).index("by_user", ["userId"]),
+
   // One row per conversation (for the sidebar's "Recent Chats": title + order).
   chatSessions: defineTable({
     userId: v.id("users"),
