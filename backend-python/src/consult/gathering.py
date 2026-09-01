@@ -42,6 +42,8 @@ write a plan out of nothing. Better to ask once more than to answer blind.
 
 from __future__ import annotations
 
+import re
+
 import asyncio
 
 from langchain_core.messages import HumanMessage
@@ -263,6 +265,45 @@ def _classify_focus_sync(reply: str) -> list[str]:
     return kept
 
 
+# AN EXPLICIT NARROWING, READ WITHOUT A MODEL.
+#
+# "sirf yoga bata do" is not a judgement call — the person has named the one
+# section they want and ruled out the rest in the same breath. This is the
+# deterministic reading used when the classifier cannot be reached, so an
+# outage cannot silently widen an answer somebody has already narrowed.
+#
+# Deliberately NARROW itself: it requires an exclusivity word, so "yoga bhi
+# batao" ("tell me yoga AS WELL") does not match — that one ADDS a section
+# and is the classifier's job.
+# WORD BOUNDARIES, and no "khali". Without \b, "just" matched inside "adjust";
+# and "khali" is the trap — "khali pet" ("on an empty stomach") is one of the
+# commonest phrases in an acidity consultation, so "khali pet me kya khana
+# chahiye" would have been read as "only tell me about food". An exclusivity
+# word has to be unambiguous to be worth acting on without a model.
+_ONLY = r"\b(?:sirf|serf|keval|kewal|only|just|bas)\b"
+_FOCUS_WORDS: tuple[tuple[str, str], ...] = (
+    ("yoga", r"yoga|asan|pranayam|saans|breath|exercise|vyayam"),
+    ("food", r"diet|food|khana|khaana|bhojan|ahar|aahar|chart|nutrition"),
+    ("root_cause", r"root\s*cause|karan|kaaran|wajah|vajah|reason|cause"),
+    ("routine", r"routine|dinacharya|din\s*charya|daily\s*schedule|schedule"),
+    ("changes", r"changes|badlav|lifestyle|habit|aadat"),
+    ("doctor", r"doctor|kab\s*milna|when\s*to\s*see"),
+)
+
+
+def explicit_focus(reply: str) -> list[str]:
+    """The sections a message narrows itself to, or [] when it names none.
+
+    Returns SECTION_LIBRARY keys, the same shape `classify_focus` returns.
+    """
+    text = (reply or "").lower()
+    if not re.search(_ONLY, text):
+        return []
+    found = [key for key, pattern in _FOCUS_WORDS if re.search(pattern, text)]
+    # "sirf" with no section named is "stop asking", not a narrowing.
+    return found
+
+
 async def classify_focus(reply: str, language: str = "") -> list[str]:
     """Which of the five sections they want, from their free-text reply to
     the focus question (graph.py's `_FOCUS_QUESTION`).
@@ -288,4 +329,20 @@ async def classify_focus(reply: str, language: str = "") -> list[str]:
         return await asyncio.to_thread(_classify_focus_sync, reply)
     except Exception as error:  # noqa: BLE001
         print(f"[consult] focus classification failed: {error}")
-        return ["complete"]
+        # WHEN WE COULD NOT ASK, READ THE SENTENCE OURSELVES.
+        #
+        # Returning ["complete"] here contradicted this function's own
+        # docstring two paragraphs up — "the model says this isn't a choice"
+        # and "we could not ask the model" must not behave identically — and
+        # the consequence was measured in the live browser: the gateway
+        # returned 502, this fell through to ["complete"], and somebody who
+        # had just typed "sirf yoga bata do" was handed all six sections
+        # including the Food Chart and Daily Routine they had explicitly
+        # excluded. Failing toward the WIDEST possible answer is the wrong
+        # direction to fail in: it overrides a stated preference, and it is
+        # the one reading the user has ruled out in so many words.
+        #
+        # `explicit_focus` only fires on an unambiguous narrowing ("sirf X",
+        # "only X", "bas X"). Anything less certain still falls through to
+        # ["complete"], which remains right for "no more questions".
+        return explicit_focus(reply) or ["complete"]

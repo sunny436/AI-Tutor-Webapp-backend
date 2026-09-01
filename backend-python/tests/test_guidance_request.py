@@ -356,6 +356,69 @@ for _text in CLEAN:
     )
 
 
+# ===========================================================================
+# AN OUTAGE MUST NOT WIDEN AN ANSWER THE READER NARROWED
+#
+# `classify_focus` returned ["complete"] on ANY exception, which contradicts
+# its own docstring ("we could not ask the model" and "the model says this is
+# not a choice" must not behave identically) and was measured in the live
+# browser: the gateway 502'd, the classifier fell through to "complete", and
+# somebody who had just typed "sirf yoga bata do" received all six sections —
+# including the Food Chart and Daily Routine they had ruled out in the same
+# sentence. Failing toward the WIDEST reading overrides a stated preference.
+# ===========================================================================
+from src.consult.gathering import explicit_focus  # noqa: E402
+from src.consult import gathering as _gathering  # noqa: E402
+
+NARROWINGS = [
+    ("sirf yoga bata do", ["yoga"]),
+    ("only diet chart chahiye", ["food"]),
+    ("bas root cause batao", ["root_cause"]),
+    ("keval yoga aur diet", ["yoga", "food"]),
+    ("just tell me the daily routine", ["routine"]),
+]
+for text, want in NARROWINGS:
+    check(f"an explicit narrowing is read without a model: {text!r}",
+          explicit_focus(text) == want, str(explicit_focus(text)))
+
+# IT MUST STAY NARROW ITSELF. "bhi" ADDS a section and is the classifier's
+# job; "poora plan" is the opposite of a narrowing; "sirf itna hi" names no
+# section at all and means "stop asking".
+# "khali pet" is "on an empty stomach", not "only food", and it is one of the
+# commonest phrases an acidity patient types. "adjust" contains "just". Both
+# are why the exclusivity words are word-bounded and why "khali" is not one.
+for text in ["yoga bhi batao", "aur diet bhi bata dijiye", "poora plan batao",
+             "sirf itna hi", "haan", "theek hai",
+             "khali pet me kya khana chahiye", "subah khali pet jyada hoti hai",
+             "mujhe diet adjust karni hai"]:
+    check(f"...and nothing else is mistaken for one: {text!r}",
+          explicit_focus(text) == [], str(explicit_focus(text)))
+
+
+async def _focus_survives_an_outage():
+    """The real failure: the classifier raises, the narrowing must survive."""
+    def _explode(_reply):
+        raise RuntimeError(
+            "Error code: 502 - unknown provider for model gemini-3.5-flash-low"
+        )
+
+    original = _gathering._classify_focus_sync
+    _gathering._classify_focus_sync = _explode
+    try:
+        narrowed = await _gathering.classify_focus("sirf yoga bata do")
+        widened = await _gathering.classify_focus("bas ab batao")
+    finally:
+        _gathering._classify_focus_sync = original
+
+    check("WHEN THE MODEL IS UNREACHABLE THE NARROWING IS STILL HONOURED",
+          narrowed == ["yoga"], str(narrowed))
+    check("...and a message that names no section still means the full plan",
+          widened == ["complete"], str(widened))
+
+
+asyncio.run(_focus_survives_an_outage())
+
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== guidance request: {passed}/{len(results)} passed =====")
 if passed != len(results):
