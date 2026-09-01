@@ -17,11 +17,30 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+# Windows redirects stdout as cp1252, and several test NAMES below are
+# Devanagari — so `print`ing a PASS raised UnicodeEncodeError and killed the
+# run partway through. The suite could not be run to completion on the
+# platform its own docstring tells you to run it on. Same reconfigure
+# `server.py` applies, for the same reason.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
+
 from src import safety  # noqa: E402
 from src.consult import run_turn  # noqa: E402
 from src.consult.schema import PatientProfile  # noqa: E402
 from src.consult.sections import SECTION_LIBRARY, looks_like_plan  # noqa: E402
 from src.consult.state import merge_profile, render_profile  # noqa: E402
+from src import prompts as _prompts  # noqa: E402
+
+# Read as TEXT, not imported: the assertion is that `run_turn` actually
+# hands the removals on, and importing the function cannot show that.
+_graph_source = (
+    Path(__file__).resolve().parents[1] / 'src' / 'consult' / 'graph.py'
+).read_text(encoding='utf-8')
 
 results: list[tuple[str, bool, str]] = []
 
@@ -86,6 +105,78 @@ check("SILENCE IS NOT RETRACTION — unmentioned facts survive",
 p, changed = merge_profile(p, {}, removals={"medications": ["metformin"]})
 check("an explicit contradiction removes the fact",
       changed and p.medications == [], p.medications)
+
+# ...AND NOTHING ELSE GOES WITH IT. Stopping a medicine does not end the
+# condition it was for, and must not touch an allergy. Verified live on
+# 2026-09-01 against the stored row: after "maine metformin band kar diya",
+# `medications` was [] while `conditions` still held the diabetes and
+# `allergies` still held the penicillin.
+check("a removal takes only what was named",
+      p.conditions == ["diabetes", "hypertension"], p.conditions)
+
+# THE WIRING, not just the merge. `merge_profile` has always taken `removals`
+# and for a long time NOTHING SUPPLIED ANY — the gathering prompt had no such
+# field, `Gathered` had no slot for it, and `graph.run_turn` passed only
+# `profile_facts`. So "maine metformin band kar diya" merged cleanly into
+# nothing and the drug stayed on the profile for good. These three assertions
+# are what would have caught that.
+from src.consult.gathering import Gathered as _Gathered  # noqa: E402
+check("Gathered carries profile_removals",
+      _Gathered(profile_removals={"medications": ["x"]}).profile_removals
+      == {"medications": ["x"]})
+check("the gathering prompt asks for profile_removals",
+      "profile_removals" in _prompts.GATHERING_PROMPT)
+check("run_turn passes removals through to merge_profile",
+      "removals=gathered.profile_removals" in _graph_source)
+
+# A DISEASE NAMED INSIDE A QUESTION IS NOT A DISCLOSURE.
+#
+# Found in the live browser on 2026-09-01 and then in the stored row: an
+# account whose ONLY mention of kidneys was "Kidney disease mein kaunsi herb
+# lo? Exact dose batao." came away with `conditions: ["kidney disease"]` on
+# its permanent profile. Every later consultation for that person would then
+# be shaped around a chronic illness they never claimed — and they would never
+# be told it was there.
+#
+# `is_personal_complaint` already draws this line correctly and was simply not
+# consulted at the merge. These pin both halves: the line itself, and the fact
+# that `run_turn` actually asks it before recording anything.
+from src.consult.router import is_personal_complaint as _personal  # noqa: E402
+
+for _q in ["Kidney disease mein kaunsi herb leni chahiye?",
+           "Diabetes ke liye kya khana chahiye?",
+           "thyroid ke liye kaunsa yoga karein?",
+           "PCOS me kya khana chahiye?",
+           "high bp ke liye kaunsa pranayama hai?"]:
+    check(f"a question about a condition is not a disclosure: {_q[:44]!r}",
+          not _personal(_q))
+
+# WHERE THE LINE ACTUALLY FALLS, recorded rather than assumed. "Chemotherapy
+# band karke Ayurveda le sakta hoon?" reads as personal and IS treated as one,
+# because it is a question about the asker's own treatment — "le sakta hoon",
+# "can I" — not about a topic. Someone asking whether they may stop their
+# chemotherapy is on chemotherapy. That is the opposite end of the same axis
+# as "kidney disease mein kaunsi herb lo", which is about the illness in the
+# abstract and mentions no self at all.
+#
+# Pinned deliberately: the tempting "fix" is to add "sakta hoon"/"sakte hain"
+# to the question markers, and that would misread ordinary complaints —
+# "raat ko so nahi sakta" is a person who cannot sleep, not a general enquiry.
+check("a first-person question about one's OWN treatment stays personal",
+      _personal("Chemotherapy band karke Ayurveda le sakta hoon?"))
+
+# ...while the ways people actually DO disclose must all still count, including
+# the bare answers to gathering questions that carry no "mujhe" at all.
+for _d in ["mujhe kidney disease hai",
+           "haan diabetes hai",
+           "Main 32 saal ka hoon. Mujhe sugar hai, metformin leta hoon.",
+           "penicillin se allergy hai",
+           "maine metformin band kar diya hai",
+           "2 hafte se hai"]:
+    check(f"a real disclosure still counts: {_d[:44]!r}", _personal(_d))
+
+check("run_turn refuses profile facts from a general question",
+      "not is_personal_complaint(spoken)" in _graph_source)
 
 p_over = PatientProfile()
 p_over, _ = merge_profile(p_over, {"conditions": [f"c{i}" for i in range(30)]})
@@ -203,19 +294,33 @@ asyncio.run(_test_serious_deep_dive())
 # 5. The gate must not over-fire: an ordinary complaint still reaches a plan.
 # ===========================================================================
 async def _test_low_risk_still_reaches_a_plan():
+    # TWO ROUTES ARE BOTH CORRECT HERE, and this used to insist on one.
+    #
+    # It drove the intake with "bas itna hi hai, aap bata dijiye" and asserted
+    # `phase == "asking_focus"`. That phrase now ENDS the intake outright — it
+    # is a person saying they have nothing more to add and asking to be told —
+    # so the turn goes straight to the plan and never passes through
+    # `asking_focus`. See router.asks_for_guidance_now: the browser showed that
+    # exact sentence being answered with the SAME question the previous turn
+    # had already asked.
+    #
+    # The check that matters was never the phase. It is that an ordinary,
+    # low-risk complaint is not blocked by the safety gate and does reach a
+    # real plan — so that is what is asserted, by whichever route.
     ctx = None
+    r = None
     msg = "mujhe khaana khane ke baad pet me jalan hoti hai"
     for _ in range(6):
         r = await turn(msg, ctx, as_problem=ctx is None)
         ctx = r.context.model_dump()
-        if ctx.get("phase") == "asking_focus":
+        if r.kind == "answer" or ctx.get("phase") == "asking_focus":
             break
         msg = "bas itna hi hai, aap bata dijiye"
-    check("an ordinary complaint still reaches asking_focus",
-          ctx.get("phase") == "asking_focus", ctx.get("phase"))
-    if ctx.get("phase") != "asking_focus":
-        return
-    r = await turn("poora plan batao", dict(ctx))
+    check("an ordinary complaint is never left stuck in the intake",
+          r.kind == "answer" or ctx.get("phase") == "asking_focus",
+          f"kind={r.kind} phase={ctx.get('phase')}")
+    if r.kind != "answer":
+        r = await turn("poora plan batao", dict(ctx))
     answer = r.answer or ""
     check("an ordinary complaint still gets a real plan",
           r.kind == "answer" and looks_like_plan(answer), r.kind)

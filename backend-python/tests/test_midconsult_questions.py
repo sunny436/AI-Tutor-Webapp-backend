@@ -28,6 +28,18 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+# Windows redirects stdout as cp1252, and several test NAMES below are
+# Devanagari — so `print`ing a PASS raised UnicodeEncodeError and killed the
+# run partway through. The suite could not be run to completion on the
+# platform its own docstring tells you to run it on. Same reconfigure
+# `server.py` applies, for the same reason.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
+
 from src.consult import run_turn  # noqa: E402
 from src.consult.sections import looks_like_plan  # noqa: E402
 
@@ -68,7 +80,18 @@ async def drive(opener: str, turns: int = 2, filler: str = "2 din se"):
     return context
 
 
-async def drive_to_focus(opener: str, filler: str = "bas itna hi hai, aap bata dijiye"):
+# THE FILLER IS A REAL ANSWER, not a request for the plan.
+#
+# It used to be "bas itna hi hai, aap bata dijiye". That sentence now ENDS the
+# intake and goes straight to the plan — it is a person saying they have
+# nothing more to add and asking to be told (router.asks_for_guidance_now,
+# added after the live browser showed it being answered with the SAME question
+# the previous turn had already asked). A helper whose job is to WALK the
+# intake as far as the focus question therefore has to reply the way somebody
+# still answering questions replies.
+_INTAKE_FILLER = "haan, thoda stress rehta hai aur khana time par nahi hota"
+
+async def drive_to_focus(opener: str, filler: str = _INTAKE_FILLER):
     context = None
     message = opener
     for _ in range(6):

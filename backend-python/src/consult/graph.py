@@ -72,6 +72,7 @@ from src import patient_profile as profile_store
 from src.knowledge import match_topics
 from src.consult.router import (
     CONVERSATIONAL,
+    asks_for_guidance_now,
     Route,
     detect_language,
     has_health_signal,
@@ -1054,6 +1055,22 @@ async def run_turn(
     # — it has already gathered enough and is waiting on a DIFFERENT question
     # (which sections they want), not another intake round.
     if context.phase not in ("completed", "asking_focus"):
+        # THE CURRENT MESSAGE GOES INTO THE TRANSCRIPT BEFORE IT IS ANSWERED.
+        #
+        # It used to be recorded only after `gather` had already run, so every
+        # prompt built in this turn read a history that stopped at the previous
+        # question — the answer being responded to was missing from it. The
+        # model, seeing its question and no reply, asked the same thing again.
+        #
+        # This one line is also what puts the user's last gathering answer into
+        # the transcript that `write_supportive_care` and the final plan read
+        # further down: those paths record only the assistant's side, so the
+        # message that ENDED the intake was previously dropped entirely.
+        #
+        # Idempotent — see `state.remember_user_message` for why the restart
+        # branch above makes that necessary.
+        context = ctx_state.remember_user_message(context, typed)
+
         gathered = await gather(
             problem=context.problem,
             history=ctx_state.render_history(context),
@@ -1082,9 +1099,53 @@ async def run_turn(
         # actually changed — scalars replace, lists merge, nothing is ever
         # dropped for going unmentioned — and the save is skipped entirely
         # when nothing did, which is the normal case.
-        if gathered.profile_facts:
+
+        # NOTHING ABOUT A PERSON IS LEARNED FROM A QUESTION ABOUT A TOPIC.
+        #
+        # "Kidney disease mein kaunsi herb lo?" names a disease, and the model
+        # duly reported `conditions: ["kidney disease"]` — for somebody who had
+        # simply asked a general question. Found in the live browser and then
+        # in the stored row: an account whose only mention of kidneys was that
+        # question came away with kidney disease on its permanent profile.
+        #
+        # That is the one thing the profile must never hold. It is not a
+        # transcript, it is the clinical background every FUTURE consultation
+        # is shaped by — which herbs get avoided, which questions get asked,
+        # what the final plan warns about. A wrong chronic condition there is
+        # durable and invisible, and the person never said it.
+        #
+        # `is_personal_complaint` already draws exactly this line and was
+        # simply never consulted here: it is False for "kidney disease mein
+        # kaunsi herb lo" and True for "haan diabetes hai", including the bare
+        # answers to gathering questions that carry no "mujhe" at all.
+        #
+        # A MISSED FACT IS RECOVERABLE AND A FABRICATED ONE IS NOT. If this
+        # drops something real ("diabetes hai, kya khana chahiye?" reads as a
+        # question), the statement is still in the transcript and the very next
+        # turn can pick it up. The opposite error cannot be undone by anything
+        # the user says, because they have no idea it happened.
+        #
+        # `spoken`, not `typed`: on the opening turn the message arrives as
+        # `problem` and `typed` is empty.
+        if gathered.profile_facts and not is_personal_complaint(spoken):
+            print(
+                "[consult] not recording profile facts from a general question: "
+                f"{spoken[:60]!r} -> {gathered.profile_facts}"
+            )
+            gathered.profile_facts = {}
+
+        # `profile_removals` is what makes "maine metformin band kar diya"
+        # take effect. `merge_profile` has always accepted removals and
+        # nothing ever passed any, so a stopped medicine stayed on the profile
+        # for good — every later turn, and every later consultation, went on
+        # shaping its advice around a drug the person no longer takes.
+        # Deliberately still `or` and not `and`: a turn that only retracts
+        # something must save just as surely as one that adds.
+        if gathered.profile_facts or gathered.profile_removals:
             context.patient_profile, profile_changed = ctx_state.merge_profile(
-                context.patient_profile, gathered.profile_facts
+                context.patient_profile,
+                gathered.profile_facts,
+                removals=gathered.profile_removals,
             )
             if profile_changed:
                 await profile_store.save(
@@ -1119,26 +1180,44 @@ async def run_turn(
                 "continuing the clinical deep-dive rather than escalating"
             )
 
+        # WHEN THEY ASK FOR IT OUTRIGHT, THE QUESTIONS ARE OVER.
+        #
+        # Placed here on purpose: strictly BELOW the red-flag check above, so
+        # "chest me dard ho raha hai, koi upay batao" still escalates and never
+        # reaches a plan, and strictly ABOVE `ready`, so it can end an intake
+        # the model wanted to continue.
+        #
+        # GATHERING_PROMPT already carries the rule ("true — they ask you to
+        # just give the advice") and the model does not reliably follow it.
+        # Reproduced in the live browser and again against `run_turn`: after
+        # three rounds about acidity, "poora plan batao" came back as two more
+        # questions — and they were the SAME two the previous turn had already
+        # asked, about sleep and bowels. See router.asks_for_guidance_now.
+        asked_outright = bool(typed) and asks_for_guidance_now(typed)
+        if asked_outright and not gathered.ready:
+            print(f"[consult] asked for guidance outright: {typed[:60]!r} — ending intake")
+            gathered.ready = True
+
         if not gathered.ready:
             context.phase = "gathering"
             context.round += 1
-            # RECORD WHAT THEY ANSWERED, not just what we asked.
+            # THE ASSISTANT'S SIDE ONLY — the user's is already recorded.
             #
-            # This passed "" for the user's side, so every answer given during
-            # gathering was dropped from `chat_history` — `add_note` kept it,
-            # but `render_history` (which is what the prompt actually reads)
-            # only reads the transcript. The model therefore saw its own
-            # questions and none of the replies, and asked the same thing
-            # again. Measured on the serious-condition deep-dive: "blood
-            # cancer hai" and "AML hai, chemotherapy chal rahi hai" were both
-            # answered and the next turn still asked "kis type ka cancer hai?"
-            # three times running. This is very likely also the long-standing
-            # duplicate-question flake in tests/test_intake.py.
+            # `remember_user_message` put the current message into the
+            # transcript before `gather` ran, so passing `typed` here as well
+            # would store it twice and read back as if they had repeated
+            # themselves.
             #
-            # `typed` only, never `message`: the opening complaint is already
-            # recorded when the consultation starts, so including it here
-            # would double it.
-            context = ctx_state.remember_chat(context, typed, gathered.reply)
+            # Recording the answer only at this point is what caused the
+            # duplicate questions: whatever the user said reached the
+            # transcript one full turn late, so `gather` saw its own question
+            # and no reply and asked the same thing again. Measured on the
+            # serious-condition deep-dive: "blood cancer hai" and "AML hai,
+            # chemotherapy chal rahi hai" were both answered and the next
+            # question came back byte-for-byte identical. This is very likely
+            # also the long-standing duplicate-question flake in
+            # tests/test_intake.py.
+            context = ctx_state.remember_chat(context, "", gathered.reply)
             return ConsultResult(
                 kind="chat",
                 condition=context.condition,
@@ -1177,22 +1256,44 @@ async def run_turn(
                 context=context,
             )
 
-        # ready -> the intake QUESTIONS are done, but retrieval and the plan
-        # are not next yet. Ask what kind of help they want, conversationally
-        # (no menu — see _FOCUS_QUESTION), and wait for that reply before
-        # GraphRAG is ever reached.
-        context.phase = "asking_focus"
-        focus_question = _FOCUS_QUESTION.get(
-            context.language, _FOCUS_QUESTION["hinglish"]
-        ).format(condition=context.condition or "isse")
-        context = ctx_state.remember_chat(context, "", focus_question)
-        return ConsultResult(
-            kind="chat",
-            condition=context.condition,
-            message=focus_question,
-            answer=focus_question,
-            context=context,
-        )
+        # THEY MAY HAVE ALREADY ANSWERED THE FOCUS QUESTION.
+        #
+        # "poora plan batao" is both the reason the intake stopped and the
+        # answer to "which part would you like?". Asking it back at somebody
+        # who has just said `poora plan` is the questionnaire feel this whole
+        # flow exists to remove, so the same sentence is read for a focus and,
+        # when it names one, the plan is written this turn instead.
+        #
+        # `["complete"]` when it names nothing in particular ("bas ab batao",
+        # "no more questions"): they asked to stop being questioned, and the
+        # full plan is the honest reading of that. Falling back to the focus
+        # question here would ask one more question of somebody who just said
+        # they did not want any.
+        if asked_outright:
+            context.help_types = await classify_focus(typed, context.language) or ["complete"]
+            context.help_type = (
+                "complete" if "complete" in context.help_types else context.help_types[0]
+            )
+            context.phase = "completed"
+            print(f"[consult] focus taken from the same message: {context.help_types}")
+            # Deliberately NOT returning — falls through to the plan below.
+        else:
+            # ready -> the intake QUESTIONS are done, but retrieval and the plan
+            # are not next yet. Ask what kind of help they want, conversationally
+            # (no menu — see _FOCUS_QUESTION), and wait for that reply before
+            # GraphRAG is ever reached.
+            context.phase = "asking_focus"
+            focus_question = _FOCUS_QUESTION.get(
+                context.language, _FOCUS_QUESTION["hinglish"]
+            ).format(condition=context.condition or "isse")
+            context = ctx_state.remember_chat(context, "", focus_question)
+            return ConsultResult(
+                kind="chat",
+                condition=context.condition,
+                message=focus_question,
+                answer=focus_question,
+                context=context,
+            )
 
     # --- 1b. which sections they want, from their reply to the focus question
     if context.phase == "asking_focus":

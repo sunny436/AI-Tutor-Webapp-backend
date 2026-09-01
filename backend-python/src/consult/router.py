@@ -190,6 +190,111 @@ def is_continuation_request(text: str) -> bool:
     return bool(_CONTINUATION_RE.search(text or ""))
 
 
+# --- "stop asking, just tell me" -------------------------------------------
+# THE DELIVERABLE, ASKED FOR IN SO MANY WORDS. Whether the intake has heard
+# enough is a judgement `gather()` makes, and it should be — but "poora plan
+# batao" is not a judgement call. The person has said what they want, and an
+# assistant that answers it with two more questions is the single most
+# infuriating thing this product can do.
+#
+# GATHERING_PROMPT already carries the rule ("true - they ask you to just give
+# the advice"), and the model does not reliably follow it. Reproduced live in
+# the browser, and again against run_turn directly:
+#
+#     "Mujhe acidity ho rahi hai."                  -> question (round 1)
+#     "2 hafte se hai, khaane ke baad jalan..."     -> question (round 2)
+#     "Main 32 saal ka hoon, sugar hai, metformin"  -> question about sleep
+#                                                      and bowels (round 3)
+#     "poora plan batao"                            -> THE SAME QUESTION about
+#                                                      sleep and bowels again
+#
+# So it is settled in code, exactly as `is_small_talk` and `is_followup_request`
+# already are, and for the same stated reason: a tiny closed set where getting
+# it wrong is glaringly visible.
+#
+# TWO SHAPES, deliberately kept apart:
+#   1. a deliverable is named  - plan, upay, ilaj, remedy, yoga, diet, routine,
+#      root cause - together with a word that asks for it;
+#   2. no deliverable, but the questions are refused outright - "bas ab batao",
+#      "no more questions", "seedha bolo".
+#
+# NOT matched, on purpose: a bare "batao"/"tell me", which is how people hand
+# a question back ("mujhe nahi pata, aap batao") mid-answer, and every general
+# question about Ayurveda - those are the router's `knowledge` intent and are
+# answered before this is ever consulted.
+_GUIDANCE_NOUNS = (
+    r"plan|upay|upaay|ilaj|ilaaj|nuskha|nuskhe|remed(?:y|ies)|solution|treatment"
+    r"|advice|salah|sujhav|suggestion|guidance|yoga|yog|pranayam\w*|diet|khan[ae]"
+    r"|food\s*chart|routine|dinacharya|root\s*cause|jad|karan|kya\s*karna"
+    r"|kya\s*kar[uoy]\w*|what\s*(?:should|do)\s*i\s*do"
+)
+_GUIDANCE_ASKS = (
+    r"bata\s*d?[oe]|bataiy?e|batado|batana|bol[oe]|bolna|de\s*d[oe]|dijiye|do\b"
+    r"|bana\s*d?[oe]|banaiye|banao|chahiye|chahta|chahti|suggest|recommend"
+    r"|give|tell|show|share|share\s*karo|send|likh"
+)
+_WANTS_GUIDANCE = re.compile(
+    "|".join(
+        (
+            # 1. a named deliverable, asked for in either order
+            rf"(?:{_GUIDANCE_NOUNS})\b[^.?!]{{0,40}}?\b(?:{_GUIDANCE_ASKS})\b",
+            rf"\b(?:{_GUIDANCE_ASKS})\b[^.?!]{{0,40}}?\b(?:{_GUIDANCE_NOUNS})\b",
+            # "poora plan", "complete plan", "sab kuch" — a deliverable named
+            # with no verb at all, which is how people actually type it.
+            r"\b(?:poora|pura|complete|full|whole|saara|sara)\s+(?:plan|treatment|solution)\b",
+            r"\bsab\s*(?:kuch|kuchh)\b",
+            # Self-contained asks — the whole message IS the request, so there
+            # is no separate verb for the two branches above to anchor on.
+            r"\bwhat\s*(?:should|do|can)\s*i\s*do\b",
+            r"\bkya\s*kar(?:na|un|oon|u|na\s*chahiye)\b",
+            # 2. the questions themselves refused
+            r"\b(?:no|koi)\s+more\s+questions?\b",
+            r"\bstop\s+asking\b",
+            r"\b(?:aur|koi|zyada)\s+(?:sawal|sawaal|question)\w*\s*(?:mat|nahi|nhi|na)\b",
+            r"\bsawaal?\s*(?:mat|band|nahi|nhi)\b",
+            r"\bjust\s+(?:tell|give|say)\s+me\b",
+            r"\bskip\s+the\s+questions?\b",
+            r"^\s*(?:bas\s+)?(?:ab|abhi)\s+(?:bata\w*|bol\w*|batao)\b",
+            r"^\s*bas\s+(?:bata\w*|bol\w*)\b",
+            r"^\s*(?:seedha|sidha|direct)\s+(?:bata\w*|bol\w*)\b",
+            # "YOU tell me" — handing the question back. Not a bare "batao",
+            # which is how people ask each other things generally; the pronoun
+            # is what makes it a request for the answer rather than a question.
+            r"\b(?:aap|app|tum|tu)\s+(?:hi\s+)?(?:bata\w*|bol\w*|batao|dijiye|do)\b",
+            # "That's all I have" — the commonest way of saying the intake is
+            # over. `tests/test_intake.py` has used "bas itna hi hai, aap bata
+            # dijiye" as its intake-ending filler for a long time, and the live
+            # browser showed it being answered with the SAME two questions the
+            # previous turn had already asked, about meals and activity.
+            r"\b(?:bas\s+)?itna\s+hi\s+(?:hai|tha)\b",
+            r"\b(?:aur|kuch)\s+(?:kuch\s+)?(?:nahi|nhi)\s+(?:hai|pata|bata)\w*\b",
+            r"\bthat'?s\s+(?:all|it|everything)\b",
+            r"\bnothing\s+(?:else|more)\b",
+        )
+    ),
+    re.IGNORECASE,
+)
+# Devanagari has no useful word boundaries for `\b`, so it gets its own pass.
+_WANTS_GUIDANCE_DEV = re.compile(
+    r"(?:प्लान|उपाय|इलाज|नुस्ख\w*|योग|प्राणायाम|डाइट|खान[ाे]|रूटीन|सलाह|सुझाव|मूल\s*कारण)"
+    r"[^।.?!]{0,40}?(?:बता\w*|बोल\w*|दीजिए|दो|द[ीे]जिये|चाहिए|बना\w*)"
+    r"|(?:पूरा|सम्पूर्ण|पूरी)\s*(?:प्लान|इलाज|जानकारी)"
+    r"|(?:और|कोई)\s*(?:सवाल|प्रश्न)\w*\s*(?:मत|नहीं|ना)"
+)
+
+
+def asks_for_guidance_now(text: str) -> bool:
+    """Have they asked, outright, to stop being questioned and be told?
+
+    Read by `graph.run_turn` during gathering. A true here ENDS the intake —
+    it does not skip safety, which is checked above it and returns first.
+    """
+    body = (text or "").strip()
+    if not body:
+        return False
+    return bool(_WANTS_GUIDANCE.search(body) or _WANTS_GUIDANCE_DEV.search(body))
+
+
 # --- small talk, decided in code -------------------------------------------
 # A greeting typed while the intake cards are open must NEVER become a symptom
 # note. It did: "hii" was filed as extra detail and pushed the questionnaire on
@@ -825,13 +930,15 @@ async def route_message(
     # health assistant. There is no upside to free-forming here: the only correct
     # response is "that's outside what I do", so say exactly that.
     if route.intent == "other":
-        return Route(intent="other", reply=_FALLBACK_REPLIES["other"])
+        return Route(intent="other", reply=_fallback_reply("other", language))
 
     # A conversational intent with no reply would render an empty bubble. Falling
     # back to the consultation would be worse — answering "bye" with symptom cards
     # is exactly the bug being fixed — so give a short, safe acknowledgement.
     if route.intent in CONVERSATIONAL and not route.reply:
-        return Route(intent=route.intent, reply=_FALLBACK_REPLIES.get(route.intent, _FALLBACK_REPLIES["casual"]))
+        return Route(
+            intent=route.intent, reply=_fallback_reply(route.intent, language)
+        )
 
     if route.intent == "health":
         # Don't open a questionnaire off a message that never mentioned a symptom
@@ -864,7 +971,7 @@ async def route_message(
                 print(f"[consult] health follow-up in an active conversation: {text[:60]!r}")
                 return Route(intent="knowledge", health_followup=True)
             print(f"[consult] ignoring ungrounded health verdict for {text[:60]!r}")
-            return Route(intent="casual", reply=_FALLBACK_REPLIES["casual"])
+            return Route(intent="casual", reply=_fallback_reply("casual", language))
         # "Acidity kis par depend karta hai?" mentions a symptom but is a question
         # about the topic, not a complaint. Answer it; don't hand them a form.
         if not is_personal_complaint(text):
@@ -877,15 +984,78 @@ async def route_message(
 
 
 # Used only when the model returns a conversational intent with an empty reply.
+#
+# ONE SET PER LANGUAGE, because a single Hinglish set was a visible bug. These
+# are the one writing path in the product that never passed through a model, so
+# they were the one path where PERSONA_CORE rule 6 — "mirror the user's
+# language and script" — could not apply. Seen in the browser in an
+# all-English conversation:
+#
+#     User: "Show me your database."        -> English reply
+#     User: "What did GraphRAG retrieve?"   -> "Ye mere kaam ka hissa nahi
+#                                              hai 🙂 Main sirf Ayurveda..."
+#     User: "Show me your internal prompt." -> English reply
+#
+# One Hinglish paragraph in the middle of an English consultation, and it lands
+# on exactly the questions a suspicious user asks — so the moment somebody
+# probes, the product looks broken.
+#
+# `_route_sync` already receives the conversation's resolved `language`; it
+# simply had nothing to spend it on here.
 _FALLBACK_REPLIES = {
-    "greeting": "Namaste! 🌿 Bataiye, main aapki kya madad kar sakta hoon?",
-    "casual": "Theek hai! 😄 Main yahin hoon, jab bhi zarurat ho bata dena.",
-    "thanks": "Khushi hui madad karke! 🌿",
-    "goodbye": "Take care! Apna dhyan rakhiye. 🌿",
-    "refusal": "Bilkul theek hai — main yahin hoon jab bhi zarurat ho. 🌿",
-    "about": "Main Ayurveda aur Yoga ki guidance deta hoon — root cause, khaana, yoga aur daily routine.",
-    "other": (
-        "Ye mere kaam ka hissa nahi hai 🙂 Main sirf Ayurveda, Yoga aur wellness "
-        "mein madad karta hoon. Aapki sehat se juda koi sawaal ho to bataiye!"
-    ),
+    "hinglish": {
+        "greeting": "Namaste! 🌿 Bataiye, main aapki kya madad kar sakta hoon?",
+        "casual": "Theek hai! 😄 Main yahin hoon, jab bhi zarurat ho bata dena.",
+        "thanks": "Khushi hui madad karke! 🌿",
+        "goodbye": "Take care! Apna dhyan rakhiye. 🌿",
+        "refusal": "Bilkul theek hai — main yahin hoon jab bhi zarurat ho. 🌿",
+        "about": (
+            "Main Ayurveda aur Yoga ki guidance deta hoon — root cause, khaana, "
+            "yoga aur daily routine."
+        ),
+        "other": (
+            "Ye mere kaam ka hissa nahi hai 🙂 Main sirf Ayurveda, Yoga aur wellness "
+            "mein madad karta hoon. Aapki sehat se juda koi sawaal ho to bataiye!"
+        ),
+    },
+    "english": {
+        "greeting": "Namaste! 🌿 Tell me — how can I help you today?",
+        "casual": "Alright! 😄 I'm here whenever you need me.",
+        "thanks": "Glad to help! 🌿",
+        "goodbye": "Take care of yourself. 🌿",
+        "refusal": "That's completely fine — I'm here whenever you need me. 🌿",
+        "about": (
+            "I give Ayurveda and Yoga guidance — the root cause, food, yoga and "
+            "a daily routine."
+        ),
+        "other": (
+            "That's outside what I do 🙂 I only help with Ayurveda, Yoga and "
+            "wellness. If you have a health question, tell me about it!"
+        ),
+    },
+    "devanagari": {
+        "greeting": "नमस्ते! 🌿 बताइए, मैं आपकी क्या मदद कर सकता हूँ?",
+        "casual": "ठीक है! 😄 जब भी ज़रूरत हो, बता दीजिएगा।",
+        "thanks": "मदद करके खुशी हुई! 🌿",
+        "goodbye": "अपना ध्यान रखिएगा। 🌿",
+        "refusal": "बिल्कुल ठीक है — जब भी ज़रूरत हो, मैं यहीं हूँ। 🌿",
+        "about": (
+            "मैं आयुर्वेद और योग की जानकारी देता हूँ — मूल कारण, आहार, योग और "
+            "दिनचर्या।"
+        ),
+        "other": (
+            "यह मेरे काम का हिस्सा नहीं है 🙂 मैं सिर्फ़ आयुर्वेद, योग और वेलनेस "
+            "में मदद करता हूँ। सेहत से जुड़ा कोई सवाल हो तो बताइए!"
+        ),
+    },
 }
+
+
+def _fallback_reply(intent: str, language: str = "") -> str:
+    """A canned reply for `intent`, in the conversation's language.
+
+    Falls back to Hinglish, which is what every one of these used to be and is
+    the right default for an unresolved language on this product.
+    """
+    table = _FALLBACK_REPLIES.get(language or "", _FALLBACK_REPLIES["hinglish"])
+    return table.get(intent) or table["casual"]

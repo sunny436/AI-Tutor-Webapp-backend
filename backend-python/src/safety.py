@@ -220,3 +220,57 @@ def names_medicine(text: str) -> str:
         if found:
             return found.group(0)
     return ""
+
+
+# A drug named as the CAUSE of what the person is complaining about.
+#
+# A different failure from `names_medicine`, and a worse one. That one catches
+# a medicine being recommended; this catches one being blamed. Rule 2 forbids
+# telling someone to stop a prescribed drug, and for a while nothing forbade
+# the sentence that actually makes them stop it — produced live and shown to a
+# user, in a plan for acidity written for somebody on metformin:
+#
+#     "Metformin lene ke baad ... acidity mehsoos hona ek common baat ho sakti
+#      hai ... metformin ka sevan ... is acidity aur jalan ka karan ho sakta hai"
+#
+# Hedged the whole way through, and the reader still hears "my tablet is doing
+# this to me".
+#
+# WINDOWED, not whole-text: the plan legitimately mentions the drug ("aap
+# metformin le rahe hain, isliye dhyan rakhna hoga") and separately uses causal
+# words about diet and timing. Only a causal phrase NEAR the drug name is a
+# finding. 90 characters is about one clause either side.
+_CAUSAL_WORDS = _re.compile(
+    r"\b(?:wajah|wajeh|karan|kaaran|karann|because|cause[sd]?|causing|due\s+to"
+    r"|leads?\s+to|led\s+to|responsible|trigger(?:s|ed|ing)?|side\s*effect"
+    r"|asar|prabhav|vajah)\b"
+    r"|(?:की\s*वजह|कारण|दुष्प्रभाव)"
+    # "X lene ke baad ye hota hai" carries no causal WORD at all and is the
+    # commonest way this is actually phrased — it was the exact sentence that
+    # reached a user. Anchored to a taking/starting verb on purpose: a bare
+    # "ke baad" would fire on "khane ke baad", which is ordinary diet advice.
+    r"|\b(?:lene|leni|liye|shuru\s+karne|start\s+karne)\s+ke\s+baad\b"
+    r"|\bafter\s+(?:taking|starting|you\s+start)\b"
+    r"|(?:लेने|शुरू\s*करने)\s*के\s*बाद",
+    _re.IGNORECASE,
+)
+_BLAME_WINDOW = 90
+
+
+def blames_medicine(text: str) -> str:
+    """A quote where a drug is named as the cause, or "" when clean.
+
+    Reports; never rewrites — the same contract `names_medicine` has, and for
+    the reason `responder._warn_if_medicine` states: a regex silently deleting
+    part of a health answer is a worse failure than the one it prevents. The
+    prevention is `prompts.PERSONA_CORE` rule 2; this is how we find out when
+    that did not hold.
+    """
+    body = text or ""
+    for drug in _DRUG_WORDS.finditer(body):
+        start = max(0, drug.start() - _BLAME_WINDOW)
+        end = min(len(body), drug.end() + _BLAME_WINDOW)
+        window = body[start:end]
+        if _CAUSAL_WORDS.search(window):
+            return window.strip()
+    return ""

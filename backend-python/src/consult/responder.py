@@ -155,6 +155,15 @@ def _warn_if_medicine(answer: str) -> None:
             f"[consult] plan mentions {found!r} - rule 2 permits Ayurvedic herbs "
             "by name but never a drug, a brand or a dose."
         )
+    # Louder, because it is worse. Naming a prescribed drug as the reason the
+    # person feels unwell is how an answer talks somebody off their treatment
+    # without ever using the word "stop". See safety.blames_medicine.
+    blamed = safety.blames_medicine(answer)
+    if blamed:
+        print(
+            "[consult] PLAN BLAMED A PRESCRIBED MEDICINE for the complaint - "
+            f"rule 2 forbids this outright: ...{blamed[:160]!r}..."
+        )
 
 
 def _warn_if_leaked_terms(answer: str) -> None:

@@ -222,6 +222,40 @@ def remember_chat(
     return context
 
 
+def remember_user_message(context: ConsultContext, text: str) -> ConsultContext:
+    """Record what the user just said BEFORE it is answered, not after.
+
+    `remember_chat` records a finished exchange, so it can only run once a
+    reply exists. Every prompt built earlier in the same turn therefore read a
+    transcript that stopped at the assistant's previous question — the user's
+    current message was simply not in it. `gather()` asked "kis type ka cancer
+    hai?", the user answered "blood cancer hai", and the next call to `gather`
+    still could not see that answer, so it asked the identical question again.
+    Measured in production on 2026-08-31: turns 1 and 2 of the deep-dive came
+    back byte-for-byte identical.
+
+    `add_note` did keep the text, but notes are not part of the transcript and
+    `render_history` — which is what the prompt actually reads — never showed
+    them.
+
+    IDEMPOTENT, AND THAT IS LOAD-BEARING. The new-complaint restart in
+    `graph.run_turn` already records the typed message and then falls through
+    to `gather` instead of returning, so an unguarded append would show that
+    message to the model twice and make it look like the user said it twice.
+    Compared against the same `[:400]` truncation `remember_chat` applies, so
+    a long message matches itself rather than slipping past the guard.
+    """
+    cleaned = (text or "").strip()[:400]
+    if not cleaned:
+        return context
+    last = context.chat_history[-1] if context.chat_history else None
+    if last is not None and last.role == "user" and last.text == cleaned:
+        return context
+    turns = [*context.chat_history, ChatTurn(role="user", text=cleaned)]
+    context.chat_history = turns[-MAX_CHAT_HISTORY:]
+    return context
+
+
 def render_history(context: ConsultContext) -> str:
     """The conversation so far, as the router prompt reads it."""
     if not context.chat_history:

@@ -10,11 +10,17 @@ the same funnel regardless of how much they had already said. Now the assistant
 asks one or two questions the way a person would, and keeps the thread.
 
 THIS IS NOT A SECOND ANSWER GENERATOR
-It asks questions; GraphRAG's /v1/answer writes the final plan, scoped to one
-note. Same relationship `router.py` already has —
-that one writes greetings and refusals the user reads, on the same single model
-chain. This uses `llm.invoke` exactly as both of them do: no second provider, no
-separate service, no vendor `/v1/answer`.
+It asks questions; `consult/responder.py::write_plan` writes the final plan.
+Same relationship `router.py` already has — that one writes greetings and
+refusals the user reads, on the same single model chain. This uses
+`llm.invoke` exactly as both of them do: no second provider, no separate
+service, no vendor `/v1/answer`.
+
+(This paragraph used to say GraphRAG's `/v1/answer` wrote the plan. It did,
+once. That endpoint was removed rather than left unused — see
+`retrieval/graphrag.py`'s module docstring for why — and GraphRAG now only
+retrieves, through `/v1/search`. Left uncorrected, a comment like that is an
+invitation to wire the vendor's own prose generation back in.)
 
 It also inherits `PERSONA_CORE` (see prompts.GATHERING_PROMPT), so the language
 rule, the never-name-a-medicine rule and the not-a-doctor rule apply to these
@@ -74,7 +80,7 @@ class Gathered:
 
     __slots__ = (
         "reply", "condition", "symptoms", "missing_info",
-        "profile_facts", "red_flag", "ready",
+        "profile_facts", "profile_removals", "red_flag", "ready",
     )
 
     def __init__(
@@ -84,6 +90,7 @@ class Gathered:
         symptoms: list[str] | None = None,
         missing_info: list[str] | None = None,
         profile_facts: dict | None = None,
+        profile_removals: dict | None = None,
         red_flag: bool = False,
         ready: bool = False,
     ) -> None:
@@ -95,6 +102,13 @@ class Gathered:
         # JSON call as everything else, so a profile costs no extra latency
         # and no second model round trip.
         self.profile_facts = profile_facts or {}
+        # Facts they have just TAKEN BACK — "maine metformin band kar diya".
+        # `state.merge_profile` has always accepted a `removals` argument and
+        # nothing ever supplied one, so a stopped medicine stayed on the
+        # profile for good and every later turn kept treating it as current.
+        # Removal stays explicit-only: silence is never a retraction, which is
+        # why this is a separate field and not an absence from `profile_facts`.
+        self.profile_removals = profile_removals or {}
         self.red_flag = red_flag
         self.ready = ready
 
@@ -153,6 +167,11 @@ def _gather_sync(
         symptoms=_clean_symptoms(parsed.get("symptoms")),
         missing_info=_clean_symptoms(parsed.get("missing_info")),
         profile_facts=parsed.get("profile_facts") if isinstance(parsed.get("profile_facts"), dict) else {},
+        profile_removals=(
+            parsed.get("profile_removals")
+            if isinstance(parsed.get("profile_removals"), dict)
+            else {}
+        ),
         red_flag=bool(parsed.get("red_flag")),
         ready=bool(parsed.get("ready")),
     )

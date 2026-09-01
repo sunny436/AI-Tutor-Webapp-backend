@@ -15,6 +15,18 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+# Windows redirects stdout as cp1252, and several test NAMES below are
+# Devanagari — so `print`ing a PASS raised UnicodeEncodeError and killed the
+# run partway through. The suite could not be run to completion on the
+# platform its own docstring tells you to run it on. Same reconfigure
+# `server.py` applies, for the same reason.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
+
 from src import safety  # noqa: E402
 from src.consult import evidence  # noqa: E402
 from src.consult.responder import write_plan  # noqa: E402
@@ -257,13 +269,25 @@ async def run_to_focus(opener: str, filler: str = "bas itna hi hai, aap bata dij
 
 
 async def _test_hinglish_plan_no_leak():
-    _, context = await run_to_focus("mujhe khaana khane ke baad pet me jalan hoti hai")
-    if context.get("phase") != "asking_focus":
-        check("Hinglish flow reaches asking_focus (precondition for this test)", False, context.get("phase"))
-        return
-    final = await run_turn(
-        problem="", raw_context=context, answers=None, free_text="poora plan bata dijiye", profile="",
-    )
+    # `run_to_focus` may now come back with the PLAN ALREADY WRITTEN rather
+    # than parked at `asking_focus`: its filler is "bas itna hi hai, aap bata
+    # dijiye", and that sentence ends the intake outright these days — the
+    # person has said they have nothing more to add and asked to be told. See
+    # `router.asks_for_guidance_now`.
+    #
+    # What this test is actually about is the finished Hinglish plan and
+    # whether it leaks internal terms, so either route is fine; only a turn
+    # that reached NEITHER is a failure.
+    final, context = await run_to_focus("mujhe khaana khane ke baad pet me jalan hoti hai")
+    if final.kind != "answer":
+        if context.get("phase") != "asking_focus":
+            check("Hinglish flow reaches a plan or the focus question",
+                  False, f"kind={final.kind} phase={context.get('phase')}")
+            return
+        final = await run_turn(
+            problem="", raw_context=context, answers=None,
+            free_text="poora plan bata dijiye", profile="",
+        )
     check(
         "Hinglish complete-plan reaches a real answer",
         final.kind == "answer",

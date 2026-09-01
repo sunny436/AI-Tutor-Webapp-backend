@@ -30,6 +30,18 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+# Windows redirects stdout as cp1252, and several test NAMES below are
+# Devanagari — so `print`ing a PASS raised UnicodeEncodeError and killed the
+# run partway through. The suite could not be run to completion on the
+# platform its own docstring tells you to run it on. Same reconfigure
+# `server.py` applies, for the same reason.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
+
 from src import safety  # noqa: E402
 from src.consult import run_turn  # noqa: E402
 from src.consult.sections import SECTION_LIBRARY, looks_like_plan  # noqa: E402
@@ -167,6 +179,16 @@ asyncio.run(_test_survives_restart_and_eviction())
 # 5. A red flag INTERRUPTS an open consultation, at gathering and at
 #    asking_focus, and context is not lost.
 # ===========================================================================
+# THE FILLER IS A REAL ANSWER, not a request for the plan.
+#
+# It used to be "bas itna hi hai, aap bata dijiye", which now ENDS the intake
+# and goes straight to the plan — the person has said they have nothing more
+# to add and asked to be told (router.asks_for_guidance_now). Both loops below
+# are trying to WALK the intake to a particular phase, so the reply has to be
+# the kind somebody still answering questions gives.
+_INTAKE_FILLER = "haan, thoda stress rehta hai aur khana time par nahi hota"
+
+
 async def _test_interrupts(stop_at: str):
     ctx = None
     msg = "mujhe halka sa sar dard hai"
@@ -175,7 +197,7 @@ async def _test_interrupts(stop_at: str):
         ctx = r.context.model_dump()
         if ctx.get("phase") == stop_at:
             break
-        msg = "bas itna hi hai, aap bata dijiye"
+        msg = _INTAKE_FILLER
     if ctx.get("phase") != stop_at:
         check(f"PRECONDITION: reached {stop_at}", False, ctx.get("phase"))
         return
@@ -232,7 +254,7 @@ async def _test_low_risk_unaffected():
             return
         if ctx.get("phase") == "asking_focus":
             break
-        msg = "bas itna hi hai, aap bata dijiye"
+        msg = _INTAKE_FILLER
     check("low-risk complaint reaches asking_focus with no risk flag",
           ctx.get("phase") == "asking_focus" and not ctx.get("risk_level"),
           f"phase={ctx.get('phase')} risk={ctx.get('risk_level')!r}")
