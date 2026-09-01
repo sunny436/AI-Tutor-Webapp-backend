@@ -189,12 +189,46 @@ def _signing_key(token: str):
     return signing_keys[0].key
 
 
+# Convex Auth puts BOTH ids in `sub`, joined by this character:
+#
+#     "m572jrdvnt10jr7d25e9nhke098dg7rv|js7cfyj9z922v5j2f7kbbkfhkd8dhhhb"
+#      \______________ user ___________/ \____________ session ________/
+#
+# Its own `getAuthUserId` is literally `identity.subject.split("|")[0]`
+# (@convex-dev/auth/dist/server/implementation/index.js), so this is the
+# library's format rather than a guess.
+TOKEN_SUB_CLAIM_DIVIDER = "|"
+
+
 def verify_token(token: str) -> str:
     """Return the Convex user id for a login token, or "" if it is not valid.
 
     This is the ONLY thing allowed to establish who is asking. A client's own
     `principal` claim is never trusted for anything that selects private
     data — a forged principal must buy nothing.
+
+    THE SESSION HALF OF `sub` IS DROPPED, and not dropping it broke every
+    feature that remembers anybody. The whole composite was returned as the
+    user id, which is wrong in two separate ways:
+
+      1. It is not a `v.id("users")`. Convex answered every
+         `patientProfile.get` and `patientProfile.upsert` with
+         `ArgumentValidationError`, `http.ts` caught it and returned
+         `{profile: null}` / `{saved: false}` with a 200, and
+         `patient_profile.py` — which fails soft on purpose — recorded
+         nothing. Silent, total, and permanent: the `patientProfiles` table
+         was still EMPTY after a consultation in which the user gave their
+         age, their diabetes and their metformin. Everything the product
+         promises about remembering a patient was dead.
+      2. THE SESSION ID CHANGES ON EVERY LOGIN. So even where an opaque
+         string is all that is needed — `user_documents` filters Chroma
+         chunks on exactly this value — a user's own uploaded reports became
+         unreachable the moment they signed out and back in, and re-uploading
+         wrote a second orphaned copy.
+
+    Isolation is unchanged: this is still the subject of a signature-verified
+    JWT, with one component removed. `""` on any failure, so a bad token buys
+    nothing.
     """
     if not token:
         return ""
@@ -207,7 +241,11 @@ def verify_token(token: str) -> str:
             algorithms=["RS256"],
             audience=config.CONVEX_AUDIENCE,
         )
-        return str(payload.get("sub") or "")
+        subject = str(payload.get("sub") or "")
+        # `split(...)[0]` and not a conditional strip: a subject with no
+        # divider is returned whole, which is what an issuer that does not use
+        # the composite form would send.
+        return subject.split(TOKEN_SUB_CLAIM_DIVIDER)[0]
     except Exception as error:  # noqa: BLE001
         detail = str(error)
         if "url" in detail.lower() or "fetch" in detail.lower():
