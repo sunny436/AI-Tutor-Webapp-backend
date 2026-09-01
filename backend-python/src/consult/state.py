@@ -16,7 +16,10 @@ arbitrary text into the answer prompt.
 
 from __future__ import annotations
 
+import datetime as _dt
+
 from src.consult.schema import (
+    Fact,
     LEGACY_PHASES,
     MAX_CHAT_HISTORY,
     Answer,
@@ -112,6 +115,13 @@ _PROFILE_LABELS = {
 }
 
 
+def _now() -> str:
+    """UTC date stamp. Date, not time: this records when a fact was last
+    confirmed, and hour-level precision would imply a certainty the source —
+    somebody mentioning it in conversation — does not have."""
+    return _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
+
+
 def merge_profile(
     existing: PatientProfile, incoming: dict, removals: dict | None = None
 ) -> tuple[PatientProfile, bool]:
@@ -150,12 +160,42 @@ def merge_profile(
         if not isinstance(raw, list):
             continue
         current = list(getattr(merged, key))
-        seen = {item.lower() for item in current}
+        seen = {f.value.lower(): f for f in current}
         for item in raw:
-            cleaned = str(item or "").strip().strip(".,;")[:MAX_PROFILE_ITEM_CHARS]
-            if cleaned and cleaned.lower() not in seen:
-                seen.add(cleaned.lower())
-                current.append(cleaned)
+            # Accept a bare string (what the extractor sends today) or a dict
+            # carrying provenance. Anything the model marked as its own
+            # inference is DROPPED, never stored — PatientProfile's rule is
+            # "user-stated facts only", and this is where it is enforced
+            # rather than merely documented.
+            if isinstance(item, dict):
+                value = str(item.get("value") or "").strip()
+                incoming_fact = {k: v for k, v in item.items() if k != "value"}
+            else:
+                value, incoming_fact = str(item or "").strip(), {}
+            value = value.strip(".,;")[:MAX_PROFILE_ITEM_CHARS]
+            if not value:
+                continue
+            if incoming_fact.get("source") == "inferred":
+                continue
+            existing_fact = seen.get(value.lower())
+            if existing_fact is None:
+                seen[value.lower()] = Fact(
+                    value=value,
+                    first_seen_at=_now(),
+                    last_confirmed_at=_now(),
+                    **{k: v for k, v in incoming_fact.items()
+                       if k in ("source", "confidence", "status")},
+                )
+                current.append(seen[value.lower()])
+                changed = True
+                continue
+            # ALREADY KNOWN. Saying it again is a re-confirmation, which is
+            # information: it is what stops a year-old "active" being read as
+            # though it were still fresh. A changed status is a real change.
+            existing_fact.last_confirmed_at = _now()
+            new_status = incoming_fact.get("status")
+            if new_status and new_status != existing_fact.status:
+                existing_fact.status = new_status
                 changed = True
         if len(current) > MAX_PROFILE_ITEMS:
             current = current[-MAX_PROFILE_ITEMS:]
@@ -168,12 +208,32 @@ def merge_profile(
         drop = {str(v or "").strip().lower() for v in values if str(v or "").strip()}
         if not drop:
             continue
-        kept = [i for i in getattr(merged, key) if i.lower() not in drop]
-        if len(kept) != len(getattr(merged, key)):
-            setattr(merged, key, kept)
+        # RETRACTION IS A STATUS CHANGE, NOT A DELETE.
+        #
+        # "maine metformin band kar diya" means the drug is HISTORICAL, not
+        # that it never happened. Deleting the row loses that they were on it,
+        # which is exactly the history a later interaction check wants. It is
+        # excluded from `active()`, so nothing reasons about it as current,
+        # and `render_profile` shows it as stopped.
+        touched = False
+        for fact in getattr(merged, key):
+            if fact.value.lower() in drop and fact.status != "historical":
+                fact.status = "historical"
+                fact.last_confirmed_at = _now()
+                touched = True
+        if touched:
             changed = True
 
     return merged, changed
+
+
+_STATUS_WORDS = {
+    "historical": "in the past, stopped",
+    "resolved": "resolved",
+    "uncertain": "not confirmed",
+    "contradicted": "they have since said otherwise",
+    "unknown": "unclear",
+}
 
 
 def render_profile(profile: PatientProfile) -> str:
@@ -192,9 +252,21 @@ def render_profile(profile: PatientProfile) -> str:
         if value:
             lines.append(f"{_PROFILE_LABELS[key]}: {value}")
     for key in _PROFILE_LISTS:
-        values = getattr(profile, key)
-        if values:
-            lines.append(f"{_PROFILE_LABELS[key]}: {', '.join(values)}")
+        facts = getattr(profile, key)
+        if not facts:
+            continue
+        # STATUS IS SHOWN ONLY WHEN IT CHANGES THE MEANING. "metformin" and
+        # "metformin (in the past, stopped)" must not read alike to the model —
+        # that is the whole point of tracking status — but tagging every active
+        # fact "(active)" would be noise in a block the prompt asks it to read
+        # as prose about a person.
+        rendered = [
+            f.value
+            if f.status == "active"
+            else f"{f.value} ({_STATUS_WORDS.get(f.status, f.status)})"
+            for f in facts
+        ]
+        lines.append(f"{_PROFILE_LABELS[key]}: {', '.join(rendered)}")
     return "\n".join(lines)
 
 
@@ -323,6 +395,15 @@ def carry_conversation(context: ConsultContext) -> dict:
         "patient_profile": context.patient_profile.model_copy(deep=True),
         "profile_loaded": context.profile_loaded,
         "serious_condition": context.serious_condition,
+        # EPISODES CROSS THE RESET, and that is the whole point of them.
+        #
+        # A new complaint builds a fresh ConsultContext, which is what used to
+        # throw the previous problem's reasoning away: someone who moved from
+        # acidity to a knee and back had to answer everything about the acidity
+        # again. The episode list carries what was learned about each problem,
+        # so switching topic costs nothing and coming back costs nothing.
+        "episodes": [e.model_copy(deep=True) for e in context.episodes],
+        "active_episode_id": context.active_episode_id,
     }
 
 
@@ -434,7 +515,10 @@ def user_fragments(context: ConsultContext) -> list[str]:
     # passing during an earlier consultation is still a diagnosis, and it must
     # reach `is_serious_condition` even after the sentence that carried it has
     # been evicted from `chat_history` (MAX_CHAT_HISTORY = 24).
-    fragments.extend(context.patient_profile.conditions)
+    # `.active(...)`, not every condition ever recorded: a RESOLVED cancer is
+    # not a serious condition disclosure today, and re-firing the deep-dive on
+    # it would answer a question the person is no longer asking.
+    fragments.extend(context.patient_profile.active("conditions"))
     return [f for f in fragments if f]
 
 

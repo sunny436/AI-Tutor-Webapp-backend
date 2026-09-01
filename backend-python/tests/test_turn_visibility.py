@@ -338,21 +338,27 @@ async def _test_safety_and_profile():
 
     # F — facts volunteered in passing still reach the profile.
     r = await _turn("mujhe diabetes hai aur metformin leta hoon, ab acidity ho rahi hai")
+    # Profile lists hold `Fact` dicts now (schema.Fact, P0-1) — value plus
+    # provenance — so the words are read out of `["value"]`.
     prof = r.context.model_dump()["patient_profile"]
+    _conds = [c["value"] for c in prof["conditions"]]
+    _meds = [m["value"] for m in prof["medications"]]
     check("F: a volunteered condition still reaches the profile",
-          any("diabet" in c.lower() for c in prof["conditions"]), prof["conditions"])
+          any("diabet" in c.lower() for c in _conds), _conds)
     check("F: a volunteered medicine still reaches the profile",
-          any("metformin" in m.lower() for m in prof["medications"]), prof["medications"])
+          any("metformin" in m.lower() for m in _meds), _meds)
 
     # F — and a fact given on a LATER turn is captured in that same turn,
     # which is the part the lag made unreliable.
     ctx = r.context.model_dump()
     r2 = await _turn("mujhe penicillin se allergy bhi hai", dict(ctx))
     prof2 = r2.context.model_dump()["patient_profile"]
+    _allerg = [a["value"] for a in prof2["allergies"]]
+    _conds2 = [c["value"] for c in prof2["conditions"]]
     check("F: a fact stated mid-consultation is captured in that turn",
-          any("penicillin" in a.lower() for a in prof2["allergies"])
-          or any("penicillin" in c.lower() for c in prof2["conditions"]),
-          prof2["allergies"])
+          any("penicillin" in a.lower() for a in _allerg)
+          or any("penicillin" in c.lower() for c in _conds2),
+          _allerg)
 
 
 asyncio.run(_test_safety_and_profile())

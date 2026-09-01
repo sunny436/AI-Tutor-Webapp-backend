@@ -17,7 +17,7 @@ from __future__ import annotations
 
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 # Caps applied by the repair layer. Generous enough for any real condition,
 # tight enough that a runaway model can't render 30 cards.
@@ -153,6 +153,68 @@ LEGACY_PHASES = ("collecting", "choosing")
 CONSULTING = ("gathering", "collecting", "choosing")
 
 
+# --- P0-1: provenance and time on every clinical fact -----------------------
+FactStatus = Literal[
+    "active", "historical", "resolved", "uncertain", "contradicted", "unknown"
+]
+FactSource = Literal["patient", "report", "clinician", "inferred"]
+
+
+class Fact(BaseModel):
+    """One clinical fact, with where it came from and when it was last true.
+
+    WHY A BARE STRING WAS NOT ENOUGH. `medications: ["pantoprazole"]` cannot
+    express "took it last year, stopped" — so a stopped drug read back exactly
+    like a current one, and every later turn shaped its advice around a
+    medicine the person no longer takes. `status` is what separates them, and
+    `last_confirmed_at` is what lets a reader judge whether "active" is still
+    a safe assumption a year later.
+
+    ACCEPTS A PLAIN STRING, on purpose. Profiles persisted before this existed
+    are JSON strings of `{"medications": ["metformin"]}` in Convex, and the
+    validator below turns each into `Fact(value="metformin", status="active")`.
+    So the stored shape can change with no migration and no data loss — the
+    same property `consults.state` relies on.
+
+    `source="inferred"` exists to be REFUSED by the profile writer, not to be
+    written: PatientProfile's docstring rule ("user-stated facts only") is now
+    checkable rather than merely stated. See `state.merge_profile`.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    value: str
+    source: FactSource = "patient"
+    confidence: float = 1.0
+    first_seen_at: str = ""
+    last_confirmed_at: str = ""
+    status: FactStatus = "active"
+
+    @field_validator("value")
+    @classmethod
+    def _trim(cls, v: str) -> str:
+        return (v or "").strip()
+
+    def __str__(self) -> str:  # so log lines and prompts read naturally
+        return self.value
+
+
+def _coerce_facts(raw):
+    """A list that may hold plain strings (v1) or Fact dicts (v2)."""
+    if not isinstance(raw, list):
+        return []
+    out = []
+    for item in raw:
+        if isinstance(item, Fact):
+            out.append(item)
+        elif isinstance(item, str):
+            if item.strip():
+                out.append(Fact(value=item))
+        elif isinstance(item, dict) and str(item.get("value", "")).strip():
+            out.append(Fact.model_validate(item))
+    return out
+
+
 class PatientProfile(BaseModel):
     """The long-lived clinical facts about a person, as THEY stated them.
 
@@ -185,17 +247,40 @@ class PatientProfile(BaseModel):
     age: str = ""
     sex: str = ""
     occupation: str = ""
-    lifestyle: list[str] = Field(default_factory=list)
+    lifestyle: list[Fact] = Field(default_factory=list)
     # Diagnosed conditions only, never a suspicion.
-    conditions: list[str] = Field(default_factory=list)
-    medications: list[str] = Field(default_factory=list)
-    supplements: list[str] = Field(default_factory=list)
-    allergies: list[str] = Field(default_factory=list)
-    surgeries: list[str] = Field(default_factory=list)
-    family_history: list[str] = Field(default_factory=list)
+    conditions: list[Fact] = Field(default_factory=list)
+    medications: list[Fact] = Field(default_factory=list)
+    supplements: list[Fact] = Field(default_factory=list)
+    allergies: list[Fact] = Field(default_factory=list)
+    surgeries: list[Fact] = Field(default_factory=list)
+    family_history: list[Fact] = Field(default_factory=list)
     # Asked only when the complaint or the profile makes it relevant.
     reproductive: str = ""
     updated_at: str = ""
+
+    @field_validator(
+        "lifestyle", "conditions", "medications", "supplements",
+        "allergies", "surgeries", "family_history",
+        mode="before",
+    )
+    @classmethod
+    def _accept_v1_strings(cls, raw):
+        """Read a profile written before facts carried provenance."""
+        return _coerce_facts(raw)
+
+    def values(self, key: str) -> list[str]:
+        """Just the words, for callers that do not care about provenance."""
+        return [f.value for f in getattr(self, key, []) or []]
+
+    def active(self, key: str) -> list[str]:
+        """Only what is true NOW — what a safety check must reason about.
+
+        `historical`, `resolved` and `contradicted` are deliberately excluded:
+        a drug someone stopped must not drive an interaction warning, and a
+        resolved condition must not shape today's advice.
+        """
+        return [f.value for f in getattr(self, key, []) or [] if f.status == "active"]
 
     def is_empty(self) -> bool:
         """Nothing known yet — the caller has never told us anything."""
@@ -207,6 +292,57 @@ class PatientProfile(BaseModel):
                 self.family_history,
             )
         )
+
+
+class Episode(BaseModel):
+    """One health concern, followed across every conversation it appears in.
+
+    Fields are the ones that change what is asked or advised next time. The
+    spec lists more; they are added when something reads them, because an
+    unread field on a model that rides on every request is pure cost.
+
+    `negative_findings` is as load-bearing as the positive ones: "no blood in
+    the stool" asked and answered is the reason not to ask again, and the
+    reason a later "actually there is some" is a change rather than a first
+    mention.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    episode_id: str
+    problem_name: str = ""
+    canonical_concepts: list[str] = Field(default_factory=list)
+    status: Literal["active", "improving", "resolved", "recurred", "dormant"] = "active"
+
+    onset: str = ""
+    duration: str = ""
+    severity: str = ""
+    frequency: str = ""
+    progression: str = ""
+    location: str = ""
+    character: str = ""
+
+    triggers: list[str] = Field(default_factory=list)
+    relieving_factors: list[str] = Field(default_factory=list)
+    associated_symptoms: list[str] = Field(default_factory=list)
+    negative_findings: list[str] = Field(default_factory=list)
+
+    red_flags_checked: list[str] = Field(default_factory=list)
+    red_flags_present: list[str] = Field(default_factory=list)
+
+    modern_differential: list[str] = Field(default_factory=list)
+    ayurveda_assessment: str = ""
+
+    questions_answered: list[str] = Field(default_factory=list)
+    important_unknowns: list[str] = Field(default_factory=list)
+
+    interventions_tried: list[str] = Field(default_factory=list)
+    response_to_interventions: list[str] = Field(default_factory=list)
+    tests_or_reports: list[str] = Field(default_factory=list)
+
+    first_seen_at: str = ""
+    last_discussed_at: str = ""
+    recurrences: int = 0
 
 
 class ConsultContext(BaseModel):
@@ -344,6 +480,12 @@ class ConsultContext(BaseModel):
     # no detail was ever collected. Holding it here lets the deep-dive run as
     # a conversation — see `prompts.GATHERING_PROMPT`'s serious-condition mode.
     serious_condition: str = ""
+
+    # --- P0-1: several health concerns at once -----------------------------
+    # `problem`/`condition` above stay the ACTIVE episode's view of itself, so
+    # every existing reader keeps working unchanged; this is the rest of them.
+    episodes: list[Episode] = Field(default_factory=list)
+    active_episode_id: str = ""
 
 
 class ConsultResult(BaseModel):

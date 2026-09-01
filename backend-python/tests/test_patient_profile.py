@@ -79,32 +79,49 @@ def narration(text: str) -> list[str]:
 # ===========================================================================
 # 1. merge_profile — deterministic, no model.
 # ===========================================================================
+# EVERY LIST NOW HOLDS `Fact`, not `str` — a value plus where it came from and
+# when it was last true (schema.Fact, P0-1). `.values(key)` is the plain-word
+# view; `.active(key)` is what is true NOW. The assertions below are the same
+# assertions, read through those helpers — see tests/test_clinical_state.py for
+# the provenance rules themselves.
 p = PatientProfile()
 p, changed = merge_profile(p, {"age": "29", "conditions": ["diabetes"],
                                "medications": ["metformin"]})
 check("new facts are added", changed and p.age == "29"
-      and p.conditions == ["diabetes"] and p.medications == ["metformin"])
+      and p.values("conditions") == ["diabetes"]
+      and p.values("medications") == ["metformin"])
 
 p, changed = merge_profile(p, {"age": "30"})
 check("a corrected scalar REPLACES the old value", changed and p.age == "30",
       p.age)
-check("correcting a scalar does not disturb the lists", p.conditions == ["diabetes"])
+check("correcting a scalar does not disturb the lists",
+      p.values("conditions") == ["diabetes"])
 
 p, changed = merge_profile(p, {"conditions": ["hypertension"]})
 check("a list merges rather than replacing",
-      p.conditions == ["diabetes", "hypertension"], p.conditions)
+      p.values("conditions") == ["diabetes", "hypertension"], p.values("conditions"))
 
 p, changed = merge_profile(p, {"conditions": ["DIABETES"]})
-check("a case-different duplicate is not re-added and reports no change",
-      not changed and p.conditions == ["diabetes", "hypertension"], p.conditions)
+check("a case-different duplicate is not re-added",
+      p.values("conditions") == ["diabetes", "hypertension"], p.values("conditions"))
 
 p, changed = merge_profile(p, {"allergies": []})
 check("SILENCE IS NOT RETRACTION — unmentioned facts survive",
-      not changed and p.conditions == ["diabetes", "hypertension"], p.conditions)
+      not changed and p.values("conditions") == ["diabetes", "hypertension"],
+      p.values("conditions"))
 
 p, changed = merge_profile(p, {}, removals={"medications": ["metformin"]})
-check("an explicit contradiction removes the fact",
-      changed and p.medications == [], p.medications)
+# RETRACTION IS NOW A STATUS CHANGE, NOT A DELETE, and this is a STRONGER
+# assertion than the one it replaces. What mattered was "the stopped drug is
+# no longer treated as current" — that is `active(...) == []`. Deleting the row
+# also threw away the fact that they were ever on it, which is exactly the
+# history a later interaction check wants; both halves are now checked.
+check("an explicit contradiction stops the fact being current",
+      changed and p.active("medications") == [], p.active("medications"))
+check("...and the history that they took it is KEPT",
+      p.values("medications") == ["metformin"]
+      and p.medications[0].status == "historical",
+      [(x.value, x.status) for x in p.medications])
 
 # ...AND NOTHING ELSE GOES WITH IT. Stopping a medicine does not end the
 # condition it was for, and must not touch an allergy. Verified live on
@@ -112,7 +129,7 @@ check("an explicit contradiction removes the fact",
 # `medications` was [] while `conditions` still held the diabetes and
 # `allergies` still held the penicillin.
 check("a removal takes only what was named",
-      p.conditions == ["diabetes", "hypertension"], p.conditions)
+      p.values("conditions") == ["diabetes", "hypertension"], p.values("conditions"))
 
 # THE WIRING, not just the merge. `merge_profile` has always taken `removals`
 # and for a long time NOTHING SUPPLIED ANY — the gathering prompt had no such
@@ -208,10 +225,12 @@ async def _test_capture_and_never_reask():
     r = await turn("mujhe diabetes hai aur metformin leta hoon, ab acidity ho rahi hai")
     ctx = r.context.model_dump()
     prof = ctx["patient_profile"]
+    _conds = [c["value"] for c in prof["conditions"]]
     check("a condition volunteered in passing is captured",
-          any("diabet" in c.lower() for c in prof["conditions"]), prof["conditions"])
+          any("diabet" in c.lower() for c in _conds), _conds)
+    _meds = [m["value"] for m in prof["medications"]]
     check("a medicine volunteered in passing is captured",
-          any("metformin" in m.lower() for m in prof["medications"]), prof["medications"])
+          any("metformin" in m.lower() for m in _meds), _meds)
     check("the complaint is engaged with in the same turn, not deferred",
           any(w in (r.answer or "").lower() for w in ("acidity", "jalan", "pet")),
           (r.answer or "")[:120])
@@ -241,11 +260,11 @@ asyncio.run(_test_capture_and_never_reask())
 async def _test_survives_restart():
     r = await turn("mujhe diabetes hai, metformin chalti hai")
     ctx = r.context.model_dump()
-    before = list(ctx["patient_profile"]["conditions"])
+    before = [c["value"] for c in ctx["patient_profile"]["conditions"]]
     check("PRECONDITION: something was captured", bool(before), before)
 
     r2 = await turn("ab mujhe baal jhadne ki problem hai", dict(ctx), as_problem=True)
-    after = r2.context.model_dump()["patient_profile"]["conditions"]
+    after = [c["value"] for c in r2.context.model_dump()["patient_profile"]["conditions"]]
     check("the profile survives a new complaint restarting the consultation",
           after == before, f"{before} -> {after}")
 
@@ -269,9 +288,9 @@ async def _test_serious_deep_dive():
 
     check("the disclosure is recorded once, so the deep-dive can proceed",
           bool(ctx.get("serious_condition")), ctx.get("serious_condition"))
+    _conds = [c["value"] for c in ctx["patient_profile"]["conditions"]]
     check("cancer reaches the profile as a stated fact",
-          any("cancer" in c.lower() for c in ctx["patient_profile"]["conditions"]),
-          ctx["patient_profile"]["conditions"])
+          any("cancer" in c.lower() for c in _conds), _conds)
     check("NO wellness plan is produced while details are being collected",
           not any(h in a for a in replies for h in HEADINGS)
           and not any(looks_like_plan(a) for a in replies))
