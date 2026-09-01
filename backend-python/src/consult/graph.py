@@ -55,7 +55,11 @@ from src import safety
 from src.consult import evidence
 from src.consult import state as ctx_state
 from src.clinical import episodes as clinical_episodes
+from src.clinical import claims as clinical_claims
 from src.clinical import evidence_class as clinical_evidence
+from src.clinical import history_schemas as clinical_history
+from src.clinical import reasoning as clinical_reasoning
+from src.clinical import timeline as clinical_timeline
 from src.clinical import gate as clinical_gate
 from src.clinical import triage as clinical_triage
 from src.consult.gathering import MAX_GATHERING_ROUNDS, classify_focus, gather
@@ -458,6 +462,12 @@ async def run_turn(
     """
     context = ctx_state.load_context(raw_context)
     message = (problem or "").strip()
+
+    # The phase as this turn FOUND it. Several branches below advance
+    # `context.phase` and then deliberately fall through, so a later branch
+    # asking "were we already past the plan?" cannot read the live value —
+    # it would see the phase this same turn had just set. See branch 1c.
+    _phase_on_entry = context.phase
 
     # THE PROFILE, LOADED ONCE PER CONVERSATION.
     #
@@ -1127,9 +1137,31 @@ async def run_turn(
         # match, so "ab mere ghutne me bhi dard hai" scored against the acidity
         # episode and the knee never got one of its own. Falls back to the
         # opener for the first turn, where they are the same thing.
-        context.episodes, _active, _is_new = clinical_episodes.select(
-            context.episodes, spoken or context.problem, context.condition
+        #
+        # AND ONLY WHEN THEY ACTUALLY NAMED A COMPLAINT. `select` opens a new
+        # episode whenever the text does not match an existing one, and most
+        # turns in a consultation name no complaint at all — "root cause kya
+        # hai bas", "poora plan batao", "2 mahine se ho raha hai", "haan".
+        # Measured: "root cause kya hai bas" minted an episode called
+        # "Digestive imbalance", stealing the active one from the acidity the
+        # person was actually discussing. A new episode starts with empty
+        # `associated_symptoms`, so the reasoner, the timeline and the
+        # already-tried list all lost the thread mid-consultation.
+        #
+        # `has_health_signal` is the deterministic helper that already draws
+        # this line for the router: false for focus replies and
+        # acknowledgements, true for "ab mere ghutne me bhi dard hai". When
+        # there is no episode yet, the opener always starts one.
+        _spoken_for_episode = spoken or context.problem
+        _current_episode = clinical_episodes.get(
+            context.episodes, context.active_episode_id
         )
+        if _current_episode is not None and not has_health_signal(_spoken_for_episode):
+            _active, _is_new = clinical_episodes.touch(_current_episode), False
+        else:
+            context.episodes, _active, _is_new = clinical_episodes.select(
+                context.episodes, _spoken_for_episode, context.condition
+            )
         context.active_episode_id = _active.episode_id
         if _is_new:
             print(f"[consult] new episode: {_active.problem_name!r}")
@@ -1431,6 +1463,44 @@ async def run_turn(
         context.phase = "completed"
         # falls through to "the plan" below, now scoped by help_type
 
+    # --- 1c. they changed their mind about what they wanted ----------------
+    #
+    # "ab yoga bhi batao", "actually sirf diet chahiye", "poora plan de do" —
+    # said AFTER a plan is already on screen. Without this the consultation
+    # regenerates whatever was asked for the first time, so somebody who
+    # narrows or widens their request gets the previous answer again and
+    # concludes the assistant did not hear them.
+    #
+    # `asks_for_guidance_now` gates the `classify_focus` call so an ordinary
+    # follow-up ("thanks", "explain that") never costs one. Only a genuinely
+    # DIFFERENT set replaces the old one — re-asking for the same thing is not
+    # a change of mind and must not reset anything.
+    # `_phase_on_entry`, NOT `context.phase`: branch 1a sets the phase to
+    # "completed" and deliberately falls through, so reading it here made
+    # "poora plan batao" — the very sentence 1a had just classified — get
+    # classified a SECOND time on the same turn. Two model calls for one
+    # message, and a "change of mind" derived from the message that started
+    # the plan. Only a plan already on screen when this turn began can be
+    # changed by it.
+    if _phase_on_entry == "completed" and typed and asks_for_guidance_now(typed):
+        _new_focus = await classify_focus(typed, context.language)
+        if _new_focus and set(_new_focus) != set(context.help_types or []):
+            _widening = "complete" in _new_focus
+            _adding = bool(re.search(r"\b(?:bhi|also|aur|and)\b", typed, re.IGNORECASE))
+            if _adding and not _widening:
+                # "yoga BHI batao" adds to what they already asked for; "sirf
+                # diet batao" replaces it. The difference is one word and it
+                # changes the whole answer.
+                _new_focus = sorted(set(_new_focus) | set(context.help_types or []))
+            print(
+                f"[consult] focus changed after the plan: "
+                f"{context.help_types} -> {_new_focus}"
+            )
+            context.help_types = _new_focus
+            context.help_type = (
+                "complete" if "complete" in _new_focus else _new_focus[0]
+            )
+
     # --- 2. the plan -------------------------------------------------------
     # Which sections to write: the conversational focus choice takes
     # priority; `chosen.options` is kept only as a fallback for a context
@@ -1527,6 +1597,59 @@ async def run_turn(
     _known = ctx_state.render_profile(context.patient_profile)
     profile = f"{profile}\n\n{_known}".strip() if profile else _known
 
+
+    # THE TWO READINGS, before anything is written.
+    #
+    # Runs ONLY here, on the path that produces a plan — never on a gathering
+    # turn, a greeting or a general question. Those do not need a differential,
+    # and a turn already costs 40-60s. Modern, Ayurveda and synthesis come back
+    # from ONE structured call with three separate schemas; see
+    # clinical/reasoning.py for why they share an invocation but not a shape.
+    #
+    # Fails EMPTY, never wrong: an unreachable model leaves the composer with
+    # less to work with rather than with a half-parsed assessment.
+    _active_ep = clinical_episodes.get(context.episodes, context.active_episode_id)
+    _reasoning = await clinical_reasoning.reason(
+        history=ctx_state.render_history(context),
+        profile=ctx_state.render_profile(context.patient_profile),
+        episode=(
+            f"{_active_ep.problem_name}: {', '.join(_active_ep.associated_symptoms[:6])}"
+            if _active_ep else context.condition
+        ),
+        guide=clinical_history.render_guide(
+            f"{context.problem} {context.condition} {' '.join(context.symptoms)}"
+        ),
+        triage=(_triage.risk_level if _triage else "GREEN"),
+    )
+    if _reasoning.ok:
+        _likely = [p.name for p in _reasoning.modern.possible_explanations][:3]
+        print(f"[reasoning] modern={_likely} ayurveda={_reasoning.ayurveda.presenting_pattern[:40]!r}"
+              f" conflicts={len(_reasoning.synthesis.safety_conflicts)}")
+
+    # PLACED AFTER THE REASONER because it reads its output. It sat before
+    # it at first, which raised UnboundLocalError on every plan turn — the
+    # exact class of bug a per-module test cannot see and the pipeline
+    # integration suite caught on its first run.
+    # WHAT THE COMPOSER MAY WRITE FROM.
+    #
+    # The reasoning block, what has already been tried, and what happened over
+    # time — appended to `details`, which is the prose channel `PLAN_PROMPT`
+    # already reads the conversation from. The composer's job is to
+    # COMMUNICATE this, not to invent medicine of its own; everything here has
+    # been through the reasoners and, below, the recommendation gate.
+    #
+    # `unhelpful` matters most of the three. Offering somebody the ginger tea
+    # that did nothing for them three months ago is the clearest possible
+    # signal that nobody was listening.
+    _already_tried = clinical_timeline.render_outcomes(
+        context.outcomes, context.active_episode_id
+    )
+    _history_line = clinical_timeline.render(context.timeline, context.active_episode_id)
+    _reasoning_block = _reasoning.render() if _reasoning.ok else ""
+    details = "\n\n".join(
+        part for part in (details, _history_line, _already_tried, _reasoning_block) if part
+    )
+
     # WHAT KIND OF EVIDENCE IS BEHIND THIS, in one line the model must obey.
     #
     # A sentence from the Caraka Samhita and a randomised trial arrive as the
@@ -1535,10 +1658,24 @@ async def run_turn(
     # classical description, which is the single most damaging thing this
     # product can say. `clinical/evidence_class.py` grades the sources and
     # returns the strongest wording the material actually supports.
-    _classes = clinical_evidence.classify_chunks(
-        [chunk for result in results for chunk in result.chunks]
-    )
+    _all_chunks = [chunk for result in results for chunk in result.chunks]
+    _classes = clinical_evidence.classify_chunks(_all_chunks)
     _evidence_line = clinical_evidence.describe(_classes)
+
+    # CLAIMS, not just passages. A retrieved paragraph carries an assertion, a
+    # suggestion and a warning in one blob, and the warning is the part a
+    # composer drops. Splitting them lets the contraindications be stated
+    # separately and lets two sources that disagree be shown disagreeing
+    # instead of one being silently preferred. See clinical/claims.py —
+    # GraphRAG is untouched and still retrieval-only.
+    _claims = clinical_claims.from_chunks(_all_chunks)
+    if _claims.claims:
+        _clash = _claims.contradictions()
+        print(
+            f"[claims] {len(_claims.claims)} claim(s), "
+            f"{len(_claims.contraindications)} contraindication(s), "
+            f"{len(_clash)} contradiction(s)"
+        )
 
     answer = await write_plan(
         # `include_sentinel=False`: the per-section evidence tags above are
@@ -1550,10 +1687,17 @@ async def run_turn(
         # rather than in a new parameter: `write_plan`'s signature is shared
         # with the legacy callers, and this is material about the material,
         # which is where the model already reads its sources from.
-        knowledge=(
-            _evidence_line
-            + "\n\n"
-            + knowledge_for_prompt(pipeline, results, include_sentinel=False)
+        # Three layers, strongest constraint first: how the evidence may be
+        # spoken about, the individual claims (contraindications ahead of
+        # suggestions), then the raw passages.
+        knowledge="\n\n".join(
+            part
+            for part in (
+                _evidence_line,
+                _claims.render(),
+                knowledge_for_prompt(pipeline, results, include_sentinel=False),
+            )
+            if part
         ),
         profile=profile,
         details=details,

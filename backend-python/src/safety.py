@@ -116,6 +116,15 @@ RED_FLAG_KEYWORDS += [
     # infant illness — an age, not a symptom, but decisive at this age
     "newborn", "naya janma", "mahine ka baccha", "mahine ki bacchi",
     "din ka baccha", "navjat",
+    # stroke — said as FUNCTION rather than as "weakness". "ek side ka haath
+    # kaam nahi kar raha" is the sentence people actually type, and none of
+    # the "kamzori" entries above match it. Narrow on purpose: a side or
+    # "achanak" is required, so chronic joint stiffness does not trip it.
+    "ek side ka haath kaam nahi", "ek taraf ka haath kaam nahi",
+    "ek side ka pair kaam nahi", "ek taraf ka pair kaam nahi",
+    "ek side kaam nahi kar raha", "ek taraf kaam nahi kar raha",
+    "achanak haath kaam nahi", "achanak pair kaam nahi",
+    "one side is not working", "one side stopped working",
 ]
 
 # Diagnosed conditions that are treated by a doctor, not managed with a food
@@ -179,9 +188,44 @@ _SERIOUS_RE = re.compile(
 )
 
 
+# A DISEASE NAMED INSIDE A FEAR IS NOT A DIAGNOSIS.
+#
+#     "mujhe darr lagta hai ki kahin cancer to nahi"
+#
+# is a worried person with acidity, and the keyword put them into the
+# serious-condition pathway: supportive care, no plan, and an answer to a
+# question they never asked. prompts.py has carried this rule for the model
+# since the intake fix ("A DISEASE NAMED INSIDE A QUESTION IS NOT A
+# DISCLOSURE"); the deterministic layer did not, so the keyword silently
+# overruled the model.
+#
+# The frame has to be recognised NARROWLY, because the cost of getting it
+# wrong in the other direction is missing a real disclosure. Both halves are
+# required: a worry word BEFORE the disease, and a hedge closing it AFTER.
+#
+#     "mujhe cancer hai, darr lagta hai"        -> disclosure (no worry BEFORE)
+#     "mujhe cancer hai, kya yoga kar sakta hoon?" -> disclosure (same)
+#     "kya mujhe cancer hai?"                   -> question
+#     "kahin cancer to nahi"                    -> question
+_WORRY_BEFORE = ("kahin", "shayad", "darr", "dar lagta", "kya", "could",
+                 "might", "maybe", "afraid", "worried", "scared", "lagta hai ki",
+                 "कहीं", "शायद", "डर", "क्या")
+_HEDGE_AFTER = ("to nahi", "to nahin", "to na ", "?", "तो नहीं", "hai kya")
+
+
+def _is_hypothetical(lowered: str, start: int, end: int) -> bool:
+    """Is the disease named at [start:end] a worry rather than a disclosure?"""
+    before = lowered[max(0, start - 40):start]
+    after = lowered[end:end + 30]
+    return (any(w in before for w in _WORRY_BEFORE)
+            and any(h in after for h in _HEDGE_AFTER))
+
+
 def is_serious_condition(text: str) -> bool:
     """A diagnosed condition this assistant must not build a wellness plan for."""
-    return bool(_SERIOUS_RE.search(text or ""))
+    lowered = (text or "").lower()
+    return any(not _is_hypothetical(lowered, m.start(), m.end())
+               for m in _SERIOUS_RE.finditer(lowered))
 
 
 # The message we show when a red flag is found.
@@ -194,10 +238,113 @@ ESCALATION_MESSAGE = (
 )
 
 
+# Practices a safety reply must not put in front of somebody who has just been
+# told to go to a doctor.
+#
+# WHY THE CATEGORY WORDS ARE HERE TOO. "pranayama" and "asana" are generic in
+# Hinglish — "koi pranayama na karein" means "do not do any breathing
+# exercise", which is a PROHIBITION and perfectly good advice. But a reader
+# skimming an alarming message takes the words they recognise, and a sentence
+# containing "pranayama" is one misreading away from being taken as a
+# suggestion. In an emergency reply the plain words ("yoga", "breathing
+# exercises") say the same thing with no such edge, so the Sanskrit terms are
+# simply not used. Cheap, and it removes the ambiguity entirely.
+_PRACTICE_WORDS = (
+    # named practices — actionable, and the real danger
+    "vajrasana", "pawanmuktasana", "pavanmuktasana", "bhujangasana",
+    "shavasana", "savasana", "balasana", "ushtrasana", "dhanurasana",
+    "setu bandha", "matsyendrasana", "halasana", "sarvangasana",
+    "anulom", "anulom vilom", "nadi shodhan", "kapalbhati", "kapalabhati",
+    "bhastrika", "bhramari", "shitali", "sheetali", "sheetkari",
+    "surya namaskar", "suryanamaskar",
+    # category words — see above
+    "pranayama", "pranayam", "asana", "aasana",
+)
+
+
+def names_practice(text: str) -> str:
+    """The first yoga/breathing practice named in `text`, or "" if clean.
+
+    Used by `responder.write_safety_first` to check its own output. Returns the
+    word rather than a bool so the retry can quote it back.
+    """
+    lowered = (text or "").lower()
+    return next((w for w in _PRACTICE_WORDS if w in lowered), "")
+
+
+# ---------------------------------------------------------------------------
+# SCRIPT MIXING. A transliteration keyboard produces half-Devanagari sentences,
+# and they are extremely common here:
+#
+#     "ulti me खून aa raha hai"          -> Latin list wants "khoon"
+#     "baby ko तेज बुखार hai"             -> Latin list wants "bukhar"
+#     "मेरे एक side का हाथ काम नहीं कर रहा"  -> neither list matches at all
+#
+# Every one of those was missed while the pure-Latin and pure-Devanagari
+# versions of the same sentence were caught, which left the person typing in
+# mixed script the LEAST protected. Exactly backwards.
+#
+# So a small map folds the decisive Devanagari medical words to the Hinglish
+# spelling the Latin table already uses, and the scan runs over both forms.
+# This is a spelling bridge for high-signal words, not a transliterator: every
+# entry here is a word whose presence changes the safety decision, because a
+# wrong entry costs a false alarm.
+_DEVANAGARI_TO_HINGLISH = {
+    "खून": "khoon", "उल्टी": "ulti", "बुखार": "bukhar", "सीने": "seene",
+    "छाती": "chaati", "दर्द": "dard", "साँस": "saans", "सांस": "saans",
+    "बेहोश": "behosh", "तेज़": "tez", "तेज": "tez", "सिरदर्द": "sir dard",
+    "सिर": "sir", "कमज़ोरी": "kamzori", "कमजोरी": "kamzori", "एक": "ek",
+    "तरफ": "taraf", "आधा": "aadha", "शरीर": "sharir", "हाथ": "haath",
+    "पैर": "pair", "काम": "kaam", "नहीं": "nahi", "में": "me", "का": "ka",
+    "महीने": "mahine", "हफ्ते": "hafte", "बच्चा": "baccha", "बच्चे": "bacche",
+    "बच्ची": "bacchi", "नवजात": "navjat", "मल": "mal", "शौच": "shauch",
+    "निकल": "nikal", "रुक": "ruk", "बहुत": "bahut", "अचानक": "achanak",
+    "सबसे": "sabse", "बुरा": "bura", "फट": "phat", "तकलीफ": "takleef",
+    "लेने": "lene", "मिर्गी": "mirgi", "खुदकुशी": "khudkushi",
+    "आत्महत्या": "aatmahatya", "दौरा": "daura", "उल्टियाँ": "ultiyan",
+}
+
+
+def _fold_scripts(lowered: str) -> str:
+    for devanagari, hinglish in _DEVANAGARI_TO_HINGLISH.items():
+        if devanagari in lowered:
+            lowered = lowered.replace(devanagari, hinglish)
+    return lowered
+
+
+# INFANT AGE, written either way round and in either script once folded.
+# A plain "month old" substring was the obvious shortcut and it is wrong:
+# "my 2 week old headache" would have become an emergency. Both an age AND a
+# word for a child are required, within sight of each other.
+_AGE = r"\d{1,2}\s*(?:month|months|week|weeks|day|days|mahine|mahina|hafte|din)"
+_CHILD = (r"(?:baby|babies|baccha|bacche|bachcha|bachche|bacchi|bachchi|"
+          r"newborn|navjat|infant|shishu)")
+_INFANT_RE = re.compile(
+    rf"{_AGE}[^.!?\n]{{0,40}}{_CHILD}|{_CHILD}[^.!?\n]{{0,40}}{_AGE}",
+    re.IGNORECASE,
+)
+
+
+# AND A SYMPTOM, not the age alone. A three-month-old with gas needs a
+# paediatrician, not an ambulance, and grading that RED is how a parent learns
+# to ignore the warning. The age is what turns an ordinary-sounding symptom
+# into an emergency, so both halves are required here.
+_INFANT_SYMPTOM = re.compile(
+    r"bukhar|fever|temperature|saans|breath|dood[h]?\s*nahi|feed(?:ing)?\s*nahi"
+    r"|not\s+feeding|sust|lethargic|jhatk|fits|daur[ae]|convuls|ulti|vomit"
+    r"|khoon|blood|dast|diarrh|dehydrat|pani\s+nahi|rota\s+nahi|neel[ai]|blue"
+    r"|jaag\s*nahi|beh(?:o|ō)sh|nahi\s+uth",
+    re.IGNORECASE,
+)
+
+
 def is_emergency(text: str) -> bool:
     """Return True if the message looks like a serious/emergency situation."""
     lowered = (text or "").lower()
-    return any(keyword in lowered for keyword in RED_FLAG_KEYWORDS)
+    folded = _fold_scripts(lowered)
+    if any(keyword in lowered or keyword in folded for keyword in RED_FLAG_KEYWORDS):
+        return True
+    return bool(_INFANT_RE.search(folded) and _INFANT_SYMPTOM.search(folded))
 
 
 def scan(*fragments: str) -> bool:
@@ -301,6 +448,35 @@ _CAUSAL_WORDS = _re.compile(
 _BLAME_WINDOW = 90
 
 
+# BLAME IS WIDER THAN NAMING. `_DRUG_WORDS` lists dosage forms and specific
+# drugs, because that is what `names_medicine` must not let through. But rule 2
+# is broken just as badly without naming anything:
+#
+#     "Aapki thyroid ki dawa hi is jalan ka karan hai"
+#
+# No brand, no dosage form, and the patient still hears "your prescription is
+# what is hurting you" from us. So blame detection reads the generic words too.
+# It can afford to, and `names_medicine` cannot: blame additionally requires a
+# causal word inside the window, while `names_medicine` fires on the word alone
+# and would flag every legitimate "apne doctor ki dawa jaari rakhiye".
+_GENERIC_MEDICINE = (r"dawa|dawai|dawaai|davai|dava|dawaiyan|goli|goliyan"
+                     r"|medicine|medicines|prescription|दवा|दवाई|गोली")
+_MEDICINE_REFERENCES = _re.compile(
+    "(?:" + _DRUG_WORDS.pattern + r")|\b(?:" + _GENERIC_MEDICINE + r")\b",
+    _re.IGNORECASE,
+)
+
+# ONE LEGITIMATE PAIRING HAS TO SURVIVE. Warning that a herb can change how a
+# prescribed medicine works is the opposite of blaming that medicine, and it is
+# the exact wording of the supportive-care message we ship ("chal rahi dawa ka
+# asar badha ya ghata deti hain"). Without this the guard fires on our own copy.
+_INTERACTION_CAVEAT = _re.compile(
+    r"asar\s+(?:badha|ghata|kam|zyada)|badha\s+ya\s+ghata"
+    r"|interact|interaction|effect\s+of\s+(?:your|the)\s+medicine",
+    _re.IGNORECASE,
+)
+
+
 def blames_medicine(text: str) -> str:
     """A quote where a drug is named as the cause, or "" when clean.
 
@@ -311,10 +487,10 @@ def blames_medicine(text: str) -> str:
     that did not hold.
     """
     body = text or ""
-    for drug in _DRUG_WORDS.finditer(body):
+    for drug in _MEDICINE_REFERENCES.finditer(body):
         start = max(0, drug.start() - _BLAME_WINDOW)
         end = min(len(body), drug.end() + _BLAME_WINDOW)
         window = body[start:end]
-        if _CAUSAL_WORDS.search(window):
+        if _CAUSAL_WORDS.search(window) and not _INTERACTION_CAVEAT.search(window):
             return window.strip()
     return ""

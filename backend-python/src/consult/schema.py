@@ -294,6 +294,49 @@ class PatientProfile(BaseModel):
         )
 
 
+class TimelineEvent(BaseModel):
+    """One dated thing that happened to this person.
+
+    `occurred_at` and `recorded_at` are separate on purpose: somebody says in
+    September that their surgery was in March, and a timeline that files it
+    under September is wrong about the only thing it exists to get right.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    kind: str = "symptom_started"
+    detail: str = ""
+    episode_id: str = ""
+    occurred_at: str = ""
+    recorded_at: str = ""
+    source: Literal["patient", "report", "clinician", "inferred"] = "patient"
+
+
+class Outcome(BaseModel):
+    """Something that was tried, and what came of it.
+
+    The field that matters is `patient_reported_effect`. Without it the
+    assistant offers the same advice to somebody who already tried it and got
+    nowhere, which is the clearest signal a product can send that nobody was
+    listening.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    intervention: str = ""
+    episode_id: str = ""
+    target_problem: str = ""
+    started_at: str = ""
+    stopped_at: str = ""
+    baseline_status: str = ""
+    follow_up_status: str = ""
+    patient_reported_effect: Literal["helped", "no_change", "worsened", "unknown"] = "unknown"
+    adverse_effects: str = ""
+    adherence: str = ""
+    reason_stopped: str = ""
+    confidence: float = 1.0
+
+
 class Episode(BaseModel):
     """One health concern, followed across every conversation it appears in.
 
@@ -486,6 +529,13 @@ class ConsultContext(BaseModel):
     # every existing reader keeps working unchanged; this is the rest of them.
     episodes: list[Episode] = Field(default_factory=list)
     active_episode_id: str = ""
+
+    # --- P2: what happened, and whether anything helped -------------------
+    # Both survive `chat_history` eviction, which is the point: "has this been
+    # getting worse?" and "did that work last time?" are questions the
+    # transcript stops being able to answer after 24 turns.
+    timeline: list[TimelineEvent] = Field(default_factory=list)
+    outcomes: list[Outcome] = Field(default_factory=list)
 
 
 class ConsultResult(BaseModel):

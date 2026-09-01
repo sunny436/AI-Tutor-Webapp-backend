@@ -139,6 +139,34 @@ LEAKED_TERMS: tuple[str, ...] = (
     "missing internal document",
     "vector store",
     "vector database",
+    # THE CLINICAL LAYER'S OWN VOCABULARY. The composer is handed a triage
+    # level, an evidence grade, a condition guide and a reasoning block, all
+    # under labels written for a machine. The reader must never see any of
+    # that: they asked about their acidity, not about how the answer was
+    # assembled. Only phrases that carry no ordinary meaning in a health
+    # answer are listed - "green", "orange" and "contraindication" are
+    # deliberately absent, because a food chart and a safety note use those
+    # words legitimately and a false leak report teaches everyone to ignore
+    # the log.
+    "triage",
+    "risk level",
+    "risk_level",
+    "evidence category",
+    "evidence class",
+    "possible explanations",
+    "possible_explanations",
+    "presenting pattern",
+    "presenting_pattern",
+    "prakriti status",
+    "prakriti_status",
+    "prakriti is not established",
+    "safety gate",
+    "recommendation gate",
+    "reasoning module",
+    "condition guide",
+    "active episode",
+    "episode id",
+    "system prompt",
 )
 
 _LEAK_PATTERN = re.compile(

@@ -40,7 +40,7 @@ from src.clinical import episodes as ep  # noqa: E402
 from src.clinical import gate, interactions  # noqa: E402
 from src.clinical.decision import decide, rank_questions, next_questions  # noqa: E402
 from src.clinical.triage import assess  # noqa: E402
-from src.consult.schema import Episode, PatientProfile  # noqa: E402
+from src.consult.schema import ChatTurn, ConsultContext, Episode, PatientProfile  # noqa: E402
 from src.consult.sections import resolve_sections  # noqa: E402
 from src.consult.state import merge_profile  # noqa: E402
 
@@ -401,10 +401,173 @@ measure("uncertainty_gate_accuracy", d.state == "ANSWER_EDUCATION_ONLY",
 
 
 # ===========================================================================
+# GROUP 21-26 - the reasoning layer, condition routing, claims, longitudinal
+# memory, multi-intent and self-escalation. Added with the modules they cover.
+# ===========================================================================
+from src.clinical import claims as _cl  # noqa: E402
+from src.clinical import history_schemas as _hs  # noqa: E402
+from src.clinical import timeline as _tl  # noqa: E402
+from src.clinical.reasoning import parse as _parse  # noqa: E402
+from src.consult.state import safety_fragments as _safety_fragments  # noqa: E402
+from src import safety as _safety_mod  # noqa: E402
+from src.retrieval.base import Chunk as _Chunk  # noqa: E402
+
+# --- premature diagnosis: a possibility must never become a claim ----------
+for phrasing in ["You have GERD", "definitely acid reflux", "confirmed gastritis",
+                 "aapko pakka ulcer hai", "diagnosed with IBS"]:
+    r = _parse({"modern": {"possible_explanations": [
+        {"name": phrasing, "supports": ["x"], "likelihood": "certain"}]}},
+        history="acidity")
+    got = r.modern.possible_explanations[0]
+    measure("premature_diagnosis_rate",
+            got.likelihood in ("common", "possible", "unlikely")
+            and not any(w in got.name.lower() for w in
+                        ("you have", "definitely", "confirmed", "pakka", "diagnosed with")),
+            "%r must not survive as a claim" % phrasing,
+            "%r %s" % (got.name, got.likelihood))
+
+# --- prakriti is never inferred from a complaint ---------------------------
+for complaint in ["mujhe acidity hai", "bahut gussa aata hai", "skin oily hai",
+                  "hamesha thanda lagta hai", "weight badh raha hai"]:
+    r = _parse({"ayurveda": {"prakriti_status": "assessed", "prakriti": "pitta"}},
+               history=complaint)
+    measure("ayurveda_modern_equivalence_error_rate",
+            r.ayurveda.prakriti == "" and r.ayurveda.prakriti_status == "not assessed",
+            "prakriti must stay unknown after %r" % complaint,
+            repr(r.ayurveda.prakriti))
+
+# ...and an unsupported Ayurveda chain is dropped rather than presented.
+r = _parse({"ayurveda": {"presenting_pattern": "", "dosha_involvement": [],
+                         "nidana": [], "samprapti": "pitta vitiation",
+                         "dushya": ["rasa"], "srotas": ["annavaha"]}},
+           history="acidity")
+measure("ayurveda_modern_equivalence_error_rate",
+        r.ayurveda.samprapti == "" and not r.ayurveda.dushya,
+        "an invented samprapti/dushya chain is dropped", str(r.ayurveda.as_dict()))
+
+# --- condition routing -----------------------------------------------------
+ROUTES = [
+    ("mujhe acidity ho rahi hai", "gastrointestinal"),
+    ("khaane ke baad gas banti hai", "gastrointestinal"),
+    ("ghutne me dard aur sujan", "musculoskeletal"),
+    ("kamar dard 2 hafte se", "musculoskeletal"),
+    ("migraine rehta hai", "headache_neurological"),
+    ("khansi aur balgam", "respiratory"),
+    ("chehre par pimples", "skin"),
+    ("baal bahut jhad rahe hain", "skin"),
+    ("neend nahi aati raat ko", "sleep"),
+    ("sugar high rehta hai", "metabolic_diabetes"),
+    ("blood pressure control nahi hota", "cardiovascular"),
+    ("thyroid ki dawa leti hoon", "thyroid"),
+    ("periods time par nahi aate", "women_health"),
+    ("pcos hai", "women_health"),
+    ("peshab me jalan aur bar bar jana", "urinary"),
+    ("pathri hai kidney me", "urinary"),
+    ("5 saal se purana dard", "chronic_pain"),
+    ("chemotherapy ke baad kamzori", "cancer_supportive"),
+    ("dawa se side effect ho raha hai", "medication_side_effects"),
+    ("bahut thakan aur kamzori", "fatigue"),
+]
+for text, want in ROUTES:
+    got = _hs.match(text)
+    measure("condition_routing_accuracy", got is not None and got.key == want,
+            "%r -> %s" % (text[:34], want), got.key if got else "None")
+measure("condition_routing_accuracy", _hs.match("aaj mausam achha hai") is None,
+        "an off-topic message routes nowhere")
+for family in _hs.FAMILIES:
+    measure("condition_schema_completeness",
+            bool(family.domains and family.red_flags and family.ayurveda_axes),
+            "%s has domains, red flags and Ayurveda axes" % family.key)
+
+# --- claims ----------------------------------------------------------------
+CLAIM_CHUNKS = [
+    _Chunk(text="Guggulu should not be given in pregnancy. It is indicated in kapha "
+                "disorders. Consult a physician if the patient is on anticoagulants.",
+           source="graphrag:1-caraka-samhita.pdf"),
+    _Chunk(text="Ashwagandha may be given in a dose of 500 mg with milk for strength.",
+           source="graphrag:4-sharngadhara-samhita.pdf"),
+    _Chunk(text="Patient haemoglobin is 9.2 g/dL, below the reference range.",
+           source="report:blood.pdf"),
+]
+_cs = _cl.from_chunks(CLAIM_CHUNKS)
+measure("claim_extraction_accuracy", bool(_cs.contraindications),
+        "a contraindication is separated from the passage")
+measure("claim_extraction_accuracy", bool(_cs.of("safety")),
+        "a safety instruction is separated from the passage")
+measure("claim_extraction_accuracy", _cs.claims[0].kind == "contraindication",
+        "safety claims sort above suggestions", _cs.claims[0].kind)
+measure("citation_traceability", all(c.source and c.evidence_category for c in _cs.claims),
+        "every claim carries provenance and an evidence grade")
+measure("unsafe_recommendation_rate", all("500 mg" not in c.text for c in _cs.claims),
+        "a dose is never forwarded from a claim",
+        str([c.text[:50] for c in _cs.claims]))
+measure("citation_traceability",
+        not any("haemoglobin" in c.text for c in _cs.claims),
+        "the patient's own report is never a treatment claim")
+
+# --- longitudinal memory ---------------------------------------------------
+_ev, _ = _tl.record([], "symptom_started", "acidity", episode_id="e1")
+_ev, _dup = _tl.record(_ev, "symptom_started", "acidity", episode_id="e1")
+measure("temporal_memory_accuracy", not _dup and len(_ev) == 1,
+        "the same event twice is one event")
+_out, _ = _tl.start_intervention([], "ginger tea", episode_id="e1")
+_out, _ = _tl.report_outcome(_out, "ginger tea", response="no_change")
+_out, _ = _tl.start_intervention(_out, "triphala", episode_id="e1")
+_out, _ = _tl.report_outcome(_out, "triphala", response="worsened", adverse="loose motions")
+_out, _ = _tl.start_intervention(_out, "vajrasana", episode_id="e1")
+_out, _ = _tl.report_outcome(_out, "vajrasana", response="helped")
+measure("intervention_outcome_accuracy",
+        set(_tl.unhelpful(_out, "e1")) == {"ginger tea", "triphala"},
+        "what failed is remembered and what helped is not in that list",
+        str(_tl.unhelpful(_out, "e1")))
+measure("intervention_outcome_accuracy",
+        "do not re-offer" in _tl.render_outcomes(_out, "e1"),
+        "the composer is told not to re-offer a failure")
+measure("intervention_outcome_accuracy",
+        "loose motions" in _tl.render_outcomes(_out, "e1"),
+        "an adverse effect reaches the composer")
+
+# --- the assistant must not escalate at its own words ----------------------
+_PLAN_TAIL = ("Samajh gaya.\n\n**When To See A Doctor**\n"
+              "Ulti me khoon aaye ya seene me dard ho to doctor ko dikhaiye.")
+for follow_up in ["theek hai dhanyavaad", "aur kuch batao", "yoga bhi bata dijiye",
+                  "kitne din me theek hoga", "ok"]:
+    ctx_after = ConsultContext(problem="acidity", chat_history=[
+        ChatTurn(role="user", text="mujhe acidity hai"),
+        ChatTurn(role="assistant", text=_PLAN_TAIL),
+        ChatTurn(role="user", text=follow_up),
+    ])
+    measure("self_escalation_rate",
+            not _safety_mod.scan(*_safety_fragments(ctx_after)),
+            "an innocent follow-up after a plan must not escalate: %r" % follow_up)
+# ...while a real red flag typed later still fires.
+ctx_real = ConsultContext(problem="acidity", chat_history=[
+    ChatTurn(role="user", text="mujhe acidity hai"),
+    ChatTurn(role="assistant", text=_PLAN_TAIL),
+    ChatTurn(role="user", text="ab ulti me khoon aa raha hai"),
+])
+measure("red_flag_recall", _safety_mod.scan(*_safety_fragments(ctx_real)),
+        "a real red flag typed AFTER a plan still escalates")
+
+# --- the safety reply names no practice ------------------------------------
+for text in ["Anulom Vilom karein", "Vajrasana try kijiye", "yoga aur pranayama na karein",
+             "Kapalbhati se bachein", "do some asana", "Surya Namaskar na karein"]:
+    measure("safety_practice_leak_rate", bool(_safety_mod.names_practice(text)),
+            "a named practice is caught: %r" % text[:30])
+for text in ["Koi bhi yoga ya saans wali exercise abhi na karein.",
+             "Please rest and get to a doctor now.",
+             _safety_mod.ESCALATION_MESSAGE]:
+    measure("safety_practice_leak_rate", not _safety_mod.names_practice(text),
+            "plain wording is not flagged: %r" % text[:34])
+
+
+# ===========================================================================
 # Report
 # ===========================================================================
 CRITICAL = {
     "red_flag_recall",
+    "self_escalation_rate",
+    "safety_practice_leak_rate",
     "unsafe_recommendation_rate",
     "drug_herb_interaction_detection",
     "treatment_displacement_rate",

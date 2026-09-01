@@ -91,6 +91,27 @@ _EXHAUSTED = (
     "pool timed out", "database error",
 )
 
+# THE REQUEST CAN NEVER SUCCEED AGAINST THIS MODEL, however long we wait — but
+# it says nothing about the others, so it must not be `fatal` either.
+#
+# Measured, live: the gateway lists `gemini-3.5-flash-low` in /models while its
+# upstream returns `400 unknown provider for model ... model_not_found`. That
+# arrives wrapped in a 502 envelope, so `_TRANSIENT` matched "502" and the
+# model was treated as a passing blip: three attempts and 2+4+6s of sleeps
+# burned on it EVERY turn, and it stayed permanently in the healthy set,
+# ranked ahead of a primary that was merely cooling down.
+#
+# Worse in the other direction: a bare `400 model_not_found` with no 502
+# envelope matched nothing at all and fell through to `fatal`, which RAISES —
+# so one wrong model name anywhere in the chain took down the whole service
+# instead of being skipped.
+#
+# Checked before both tables, because this envelope really does contain "502".
+_UNAVAILABLE = (
+    "model_not_found", "unknown provider", "does not exist", "no such model",
+    "not a valid model", "unsupported model", "invalid model",
+)
+
 # Groq states its own backoff: "Please try again in 6.913s" / "in 2m30.5s".
 _RETRY_AFTER = re.compile(r"try again in (?:(\d+)m)?([\d.]+)s")
 
@@ -213,9 +234,13 @@ def get_llm(
 
 
 def _classify(detail: str) -> str:
-    """`transient` (wait), `exhausted` (next model), or `fatal` (give up)."""
+    """`unavailable`, `transient` (wait), `exhausted` (next model), or `fatal`."""
     lowered = detail.lower()
-    # Checked first: a daily-limit message also contains "rate limit", so testing
+    # Checked FIRST: this provider reports a missing model inside a 502
+    # envelope, so both of the tables below would otherwise claim it.
+    if any(marker in lowered for marker in _UNAVAILABLE):
+        return "unavailable"
+    # Checked next: a daily-limit message also contains "rate limit", so testing
     # the transient markers first would sleep on an error that never clears.
     if any(marker in lowered for marker in _EXHAUSTED):
         return "exhausted"
@@ -256,19 +281,37 @@ def _available_models(pinned: str) -> list[str]:
     """
     now = time.monotonic()
     healthy = [name for name in MODEL_CHAIN if _cooldown.get(name, 0.0) <= now]
+    cooling = [name for name in MODEL_CHAIN if _cooldown.get(name, 0.0) > now]
 
+    # A COOLING MODEL IS DEMOTED, NEVER DROPPED.
+    #
+    # This used to return `others or [pinned]`, i.e. a model in cooldown was
+    # omitted entirely whenever ANY other model was nominally healthy. That is
+    # correct while the others work, and indefensible when they do not: with
+    # the primary cooling down and the only other chain entry structurally
+    # broken, every request failed without the primary being tried even once,
+    # and the process stayed that way until someone restarted it. Observed
+    # live — a restart, which does nothing but clear this dict, "fixed" it
+    # instantly, which is the whole proof that the cooldown was the fault.
+    #
+    # A cooldown is a guess about the future, and the cheapest way to find out
+    # it is wrong is to ask. So cooling models go LAST and are tried only after
+    # everything else has genuinely failed. `invoke` gives them a single
+    # attempt with no retry ladder, so the guess still saves the time it was
+    # meant to save on the turns where it is right.
     if pinned:
-        others = [name for name in healthy if name != pinned]
-        # Known-exhausted: skip it rather than burning a doomed request per turn.
-        # It comes back the moment its cooldown lapses, and it is still the
-        # last resort if nothing else is left.
-        if _cooldown.get(pinned, 0.0) > now:
-            return others or [pinned]
-        return [pinned, *others]
+        ordered = (
+            [pinned, *[n for n in healthy if n != pinned]]
+            if _cooldown.get(pinned, 0.0) <= now
+            else [*[n for n in healthy if n != pinned], pinned]
+        )
+        ordered += [n for n in cooling if n != pinned]
+    else:
+        ordered = [*healthy, *cooling]
 
-    # Everything is cooling down. Try them all anyway rather than fail without
-    # making a single request — a cooldown is a guess, not a fact.
-    return healthy or list(MODEL_CHAIN)
+    # dict.fromkeys: de-duplicate while keeping the order above. A pinned model
+    # that is also in MODEL_CHAIN would otherwise appear twice.
+    return list(dict.fromkeys(ordered)) or list(MODEL_CHAIN)
 
 
 def invoke(
@@ -295,10 +338,23 @@ def invoke(
 
     candidates = _available_models(model)
     for position, name in enumerate(candidates):
-        for attempt in range(1, MAX_ATTEMPTS + 1):
+        # A model still inside its cooldown is being PROBED, not relied on: it
+        # is only reached because everything else already failed, so it gets
+        # one attempt and no retry ladder. That bounds what the re-probe costs
+        # on a turn where the cooldown was right, while still letting the
+        # process discover on its own that the model came back.
+        probing = _cooldown.get(name, 0.0) > time.monotonic()
+        attempts = 1 if probing else MAX_ATTEMPTS
+        for attempt in range(1, attempts + 1):
             try:
                 client = get_llm(temperature, json_mode, model=name, max_tokens=max_tokens)
                 reply = client.invoke(messages)
+                if probing:
+                    # IT ANSWERED, so the cooldown was wrong and is dropped
+                    # here rather than waited out. This is the line that
+                    # removes the restart: the next turn puts this model back
+                    # at the front of the chain by itself.
+                    print(f"[llm] {name} answered while cooling down — cooldown cleared")
                 _cooldown.pop(name, None)
                 if position:
                     # SAY WHICH MODEL ACTUALLY ANSWERED, when it was not the one
@@ -347,6 +403,18 @@ def invoke(
                     print(
                         f"[llm] {name} is out of quota; retrying in {wait:.0f}s, "
                         "trying the next model meanwhile"
+                    )
+                    break
+
+                if kind == "unavailable":
+                    # Structural, and specific to THIS model. Waiting cannot
+                    # help, so there is no sleep here — but the others are
+                    # untouched, so this must not raise either. Cooling it
+                    # stops it outranking a model that is merely resting.
+                    _cooldown[name] = time.monotonic() + COOLDOWN_SECONDS
+                    print(
+                        f"[llm] {name} is not served by the provider "
+                        f"({detail[:80]}); skipping to the next model"
                     )
                     break
 

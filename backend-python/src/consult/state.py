@@ -404,6 +404,10 @@ def carry_conversation(context: ConsultContext) -> dict:
         # so switching topic costs nothing and coming back costs nothing.
         "episodes": [e.model_copy(deep=True) for e in context.episodes],
         "active_episode_id": context.active_episode_id,
+        # The timeline and what has been tried belong to the PERSON, not to
+        # one consultation, so a new complaint never resets them.
+        "timeline": [e.model_copy(deep=True) for e in context.timeline],
+        "outcomes": [o.model_copy(deep=True) for o in context.outcomes],
     }
 
 
@@ -547,7 +551,24 @@ def safety_fragments(context: ConsultContext) -> list[str]:
     # The transcript, both sides. The assistant's own turns are included on
     # purpose: it may have repeated back a symptom the user typed in a message
     # long since pushed out of the history window.
-    fragments.extend(turn.text for turn in context.chat_history)
+    # THE USER'S TURNS ONLY — the assistant's own words are not evidence about
+    # the patient, and scanning them made the product escalate at itself.
+    #
+    # The widening this function documents was from "the opening complaint" to
+    # "everything the person has said", and every example above is the user
+    # typing something. Including the assistant's side as well was an
+    # over-reach with a specific, reproducible consequence: EVERY plan ends
+    # with a "When To See A Doctor" section that lists red flags by name
+    # ("khoon aaye to...", "seene me dard ho to..."), that plan is stored in
+    # `chat_history`, and the next turn's scan found those words and escalated.
+    # So asking any follow-up after receiving a plan turned into "go to
+    # hospital now". Found by tests/test_pipeline_integration.py.
+    #
+    # This is the same trap `is_serious_condition` already documents one
+    # paragraph up — "scanning its own output would make the assistant
+    # diagnose the user with whatever it had just mentioned". It applies to
+    # `scan` for exactly the same reason; only `user_fragments` was guarded.
+    fragments.extend(turn.text for turn in context.chat_history if turn.role == "user")
     # Anything tapped in a consultation that predates the conversational flow.
     fragments.extend(selected_labels(context))
     return [f for f in fragments if f]

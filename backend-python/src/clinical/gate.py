@@ -93,24 +93,69 @@ def allowed_categories(risk_level: str) -> set[str]:
     return set(_ALLOWED_BY_LEVEL.get(risk_level, _ALLOWED_BY_LEVEL["GREEN"]))
 
 
-_HEADING_LINE = re.compile(r"^\s*\*\*(?P<heading>[^*]+)\*\*\s*$")
+# THE MODEL DOES NOT WRITE THE HEADING THE PROMPT ASKED FOR, EVERY TIME. Three
+# variants were produced live, and each one broke this gate in a different and
+# worse way than a leak:
+#
+#   "**Root Cause:**"      the colon is INSIDE the asterisks, so the heading
+#                          matched nothing in the library and EVERY section was
+#                          dropped — the reader got a plan with no content at
+#                          all, which is the failure this file's own docstring
+#                          calls the most destructive one possible.
+#   "## Root Cause"        not the bold form, so nothing was recognised as a
+#                          heading and NOTHING was dropped — this is the
+#                          section leak that made test_intake flaky.
+#   "**Yoga and Breathing**"  "and" for "&", so the section the reader
+#                          explicitly asked for was the one thrown away.
+#
+# So both sides are normalised through `_normalise_heading` before they are
+# compared, and the hash form is recognised too.
+_HEADING_LINE = re.compile(
+    r"^\s*(?:\*\*(?P<bold>[^*]+?)\*\*|#{1,4}\s*(?P<hash>.+?))\s*:?\s*$"
+)
+
+
+def _normalise_heading(text: str) -> str:
+    """The comparable form of a heading, whichever way it was written."""
+    cleaned = (text or "").strip()
+    cleaned = cleaned.strip("#").strip()
+    cleaned = cleaned.strip("*").strip()
+    cleaned = cleaned.rstrip(":").strip()
+    cleaned = cleaned.replace("&", " and ")
+    return " ".join(cleaned.lower().split())
+
+
+_KNOWN_HEADINGS = {
+    _normalise_heading(heading) for heading, *_rest in SECTION_LIBRARY.values()
+}
 
 
 def split_sections(answer: str) -> list[tuple[str, str]]:
     """[(heading or "", body)] — the preamble first, with an empty heading.
 
-    Matched on WHOLE LINES with the `**Bold**` form, exactly as
-    `sections.looks_like_plan` and the frontend's `answer-sections.tsx` do. A
-    heading quoted inside a sentence is not a section, and treating it as one
-    would cut an answer in half mid-paragraph.
+    Matched on WHOLE LINES, as `sections.looks_like_plan` and the frontend's
+    `answer-sections.tsx` do. A heading quoted inside a sentence is not a
+    section, and treating it as one would cut an answer in half mid-paragraph.
+
+    The `**Bold**` form is the one the prompt asks for and is always accepted.
+    A `## Heading` line is accepted ONLY when it names a section the library
+    knows: an unrecognised hash line is far more likely to be part of the
+    answer than a section boundary, and mis-splitting there would let this
+    function delete text nobody asked it to touch.
     """
     blocks: list[tuple[str, str]] = []
     heading, body = "", []
     for line in (answer or "").splitlines():
         found = _HEADING_LINE.match(line)
         if found:
+            raw = found.group("bold")
+            if raw is None:
+                raw = found.group("hash") or ""
+                if _normalise_heading(raw) not in _KNOWN_HEADINGS:
+                    body.append(line)
+                    continue
             blocks.append((heading, "\n".join(body).strip()))
-            heading, body = found.group("heading").strip(), []
+            heading, body = raw.strip(), []
         else:
             body.append(line)
     blocks.append((heading, "\n".join(body).strip()))
@@ -132,11 +177,17 @@ def enforce_sections(answer: str, wanted_keys: list[str]) -> tuple[str, list[str
     # returns it without them. Normalising both sides is not cosmetic — with
     # one side unstripped nothing ever matched and every section was dropped,
     # which is the most destructive possible failure of this function.
-    wanted = {
-        SECTION_LIBRARY[k][0].strip().strip("*").strip()
+    # normalised form -> the heading exactly as the library spells it, so a
+    # section that survives is also REWRITTEN into the canonical form. The
+    # frontend splits on `**Bold**`; leaving the model's "## Root Cause" in
+    # place would keep a section the reader asked for and still fail to
+    # render it as one.
+    canonical = {
+        _normalise_heading(SECTION_LIBRARY[k][0]): SECTION_LIBRARY[k][0]
         for k in wanted_keys
         if k in SECTION_LIBRARY
     }
+    wanted = set(canonical)
     if not wanted:
         return answer, []
     blocks = split_sections(answer)
@@ -149,8 +200,9 @@ def enforce_sections(answer: str, wanted_keys: list[str]) -> tuple[str, list[str
             if body:
                 kept.append(body)
             continue
-        if heading in wanted:
-            kept.append(f"**{heading}**\n{body}".rstrip())
+        normalised = _normalise_heading(heading)
+        if normalised in wanted:
+            kept.append(f"{canonical[normalised]}\n{body}".rstrip())
         else:
             dropped.append(heading)
     return "\n\n".join(part for part in kept if part).strip(), dropped

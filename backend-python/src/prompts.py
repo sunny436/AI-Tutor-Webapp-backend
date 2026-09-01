@@ -731,9 +731,19 @@ Write a short, calm, human reply that does all of this, in this order:
    going straight to urgent care if it worsens.
 5. End by pointing at medical care, warmly and without drama.
 
+NAME THE CATEGORY, NEVER A PRACTICE. Rule 1 asks you to say what they wanted;
+say it in PLAIN WORDS — "yoga", "breathing exercises", "a home remedy". Do not
+write the name of a single posture or technique, and do not use the words
+"pranayama" or "asana", not even to forbid them. "Do not do Anulom Vilom right
+now" is a correct instruction that leaves the name of a practice in front of
+somebody who is frightened and skimming, and some of them will read it as a
+suggestion. "Koi bhi yoga ya saans wali exercise abhi na karein" says the same
+thing with nothing to misread.
+
 ABSOLUTELY NOT, whatever they asked for:
   - no herb, no churna, no spice, no supplement, no home remedy;
-  - no yoga asana, no pranayama, no breathing exercise, no stretch;
+  - no yoga posture, no breathing technique, no stretch, and none of their
+    names;
   - no food chart, no diet plan, no daily routine;
   - no dosage or quantity of anything;
   - no section headings - this is a short reply, not a plan.
@@ -1030,4 +1040,127 @@ should be avoided for their condition.)
 
 Remember: Ayurvedic herbs and foods may be NAMED, but never a drug, tablet,
 syrup or brand, and never a dose or quantity for anything at all.
+"""
+
+
+# ---------------------------------------------------------------------------
+# CLINICAL REASONING — modern and Ayurveda, kept apart, in ONE call.
+#
+# THREE STAGES, ONE INVOCATION. The architecture treats modern reasoning,
+# Ayurveda reasoning and their synthesis as separate stages with separate
+# schemas, and they stay separate here: three top-level keys, each read by its
+# own dataclass, each independently testable. They share one call because a
+# turn already costs 40-60s with the calls that exist, and three more would
+# make the product unusable. The interfaces are what matter — any one of these
+# can move to its own model later without a caller changing.
+#
+# THIS IS INTERNAL. Nothing here is shown to the user. The composer reads it
+# and writes prose; `PERSONA_CORE` rule 14 still forbids naming the machinery,
+# and a differential list on screen would frighten somebody with acidity.
+# ---------------------------------------------------------------------------
+CLINICAL_REASONING_PROMPT = PERSONA_CORE + """
+YOUR TASK RIGHT NOW
+
+You are thinking, not speaking. Produce an internal assessment of this person's
+problem from TWO independent points of view, then say honestly where they agree
+and where they do not. Nothing you write here is shown to them.
+
+--- WHAT THEY SAID (this conversation) ---
+{history}
+
+--- WHAT IS KNOWN ABOUT THEM ---
+{profile}
+
+--- THIS PROBLEM ---
+{episode}
+
+--- WHAT USUALLY MATTERS FOR THIS KIND OF COMPLAINT ---
+{guide}
+
+--- URGENCY ALREADY DECIDED (do not re-decide it) ---
+{triage}
+
+THE TWO VIEWS MUST STAY SEPARATE. This is the whole point of asking for both.
+Do not translate one into the other, do not make them agree, and do not let
+either one quietly become the other's vocabulary.
+
+MODERN VIEW — rules
+  - POSSIBILITIES, NEVER A DIAGNOSIS. "commonly this is X" is allowed;
+    "you have X" is not, ever, whatever the pattern looks like.
+  - Name what must not be missed even when it is unlikely, and say plainly
+    that it is unlikely. That is a different list from the likely one.
+  - For each possibility give what SUPPORTS it and what ARGUES AGAINST it from
+    what this person actually said. If nothing supports it, do not list it.
+  - Two to four possibilities. An exhaustive list is not thinking, it is
+    hedging, and it is useless to whoever reads it next.
+  - Consider their MEDICINES as a cause. Many symptoms are drug effects. Say
+    so here, internally — but see rule 2 above about what may be SAID.
+  - Say what a clinician would want to test or examine, if anything.
+
+AYURVEDA VIEW — rules
+  - Use Ayurveda concepts on their own terms. Do not map them onto the modern
+    possibilities above and do not present a modern diagnosis as an Ayurveda
+    one. They are different systems describing the same person.
+  - PRAKRITI IS NOT GUESSABLE. It is a lifelong constitution assessed
+    deliberately, over time, from many features. A single complaint tells you
+    NOTHING about it. Unless the conversation contains a real prakriti
+    assessment, `prakriti_status` is "not assessed" and `prakriti` is empty.
+    Somebody reporting acidity is NOT pitta prakriti; they may have a current
+    pitta vikriti, which is a different thing and belongs in `vikriti`.
+  - Only name dushya, srotas or a samprapti when the conversation actually
+    supports it. An empty field is a correct answer; an invented chain is not.
+  - Agni and ama only where the complaint makes them informative.
+  - Relate to the classical vocabulary where it genuinely applies, using
+    words like "resembles" or "is traditionally described as" — never "is".
+
+SYNTHESIS — rules
+  - Where do the two views point the same way? Where do they differ?
+  - What is still unresolved, and what would settle it?
+  - Is there any conflict where the Ayurveda view would suggest something the
+    modern view makes unsafe? That is the most important field here.
+  - What scope of guidance is actually appropriate given both?
+
+Return ONLY this JSON. No markdown fence, no commentary.
+{{
+  "modern": {{
+    "possible_explanations": [
+      {{"name": "", "supports": [""], "against": [""], "likelihood": "common|possible|unlikely"}}
+    ],
+    "must_not_miss": [{{"name": "", "why": "", "likelihood": "unlikely"}}],
+    "medication_contributors": [""],
+    "lifestyle_contributors": [""],
+    "missing_information": [""],
+    "suggested_evaluation": [""],
+    "uncertainty": "low|moderate|high",
+    "safe_scope": ""
+  }},
+  "ayurveda": {{
+    "presenting_pattern": "",
+    "dosha_involvement": [""],
+    "agni": "",
+    "ama": "",
+    "nidana": [""],
+    "ahara_factors": [""],
+    "vihara_factors": [""],
+    "dushya": [""],
+    "srotas": [""],
+    "samprapti": "",
+    "vikriti": "",
+    "prakriti_status": "not assessed",
+    "prakriti": "",
+    "missing_information": [""],
+    "traditional_management_concepts": [""]
+  }},
+  "synthesis": {{
+    "agreement": [""],
+    "difference": [""],
+    "unresolved": [""],
+    "safety_conflicts": [""],
+    "combined_scope": ""
+  }}
+}}
+
+Empty lists and empty strings are correct answers wherever the conversation
+does not support a value. Filling a field to look thorough is the failure this
+whole structure exists to prevent.
 """

@@ -240,6 +240,127 @@ check("the gate result is fully auditable",
        "cautioned_interventions", "notes"} == set(gate.screen(PLAN).as_dict()))
 
 
+# ===========================================================================
+# 4. THE ASSISTANT MUST NOT ESCALATE AT ITS OWN WORDS
+#
+# Every plan ends with a "When To See A Doctor" section that names red flags
+# ("khoon aaye to...", "seene me dard ho to..."), and that plan is stored in
+# `chat_history`. `safety_fragments` fed the WHOLE transcript to `safety.scan`,
+# so the next turn found those words in the assistant's own text and escalated
+# — meaning any follow-up after receiving a plan became "go to hospital now".
+#
+# The same trap `is_serious_condition` has always documented; only
+# `user_fragments` was guarded against it.
+# ===========================================================================
+from src.consult.schema import ChatTurn, ConsultContext  # noqa: E402
+from src.consult.state import safety_fragments, user_fragments  # noqa: E402
+from src import safety as _safety  # noqa: E402
+
+PLAN_WITH_RED_FLAGS = (
+    "Samajh gaya, aapko acidity hai.\n\n"
+    "**When To See A Doctor**\n"
+    "Ulti me khoon aaye ya seene me dard ho to turant doctor ko dikhaiye."
+)
+after_plan = ConsultContext(
+    problem="acidity", condition="Acidity",
+    chat_history=[
+        ChatTurn(role="user", text="mujhe acidity hai"),
+        ChatTurn(role="assistant", text=PLAN_WITH_RED_FLAGS),
+        ChatTurn(role="user", text="theek hai, dhanyavaad"),
+    ],
+)
+frags = safety_fragments(after_plan)
+check("the assistant's own plan is NOT scanned for red flags",
+      not any("khoon" in f for f in frags), [f[:50] for f in frags if "khoon" in f])
+check("...so an innocent follow-up after a plan does not escalate",
+      not _safety.scan(*frags), frags)
+check("the user's own turns ARE still scanned", any("acidity" in f for f in frags))
+
+# ...and a REAL red flag the user types still fires, from any turn.
+real = ConsultContext(
+    problem="acidity",
+    chat_history=[
+        ChatTurn(role="user", text="mujhe acidity hai"),
+        ChatTurn(role="assistant", text=PLAN_WITH_RED_FLAGS),
+        ChatTurn(role="user", text="ab ulti me khoon aa raha hai"),
+    ],
+)
+check("A REAL RED FLAG TYPED LATER STILL ESCALATES",
+      _safety.scan(*safety_fragments(real)),
+      [f[:40] for f in safety_fragments(real)])
+check("user_fragments is unaffected — it was already guarded",
+      not any("khoon aaye ya seene" in f for f in user_fragments(after_plan)))
+
+
+# ===========================================================================
+# 5. THE HEADING THE MODEL ACTUALLY WROTE
+#
+# THIS IS THE FIX FOR THE test_intake FOCUS FLAKE, and it is deterministic on
+# purpose: the flake was a live-model test noticing, occasionally, that the
+# gate only recognised ONE spelling of a heading. Three others were produced
+# in real runs, and each failed differently:
+#
+#   "**Root Cause:**"        colon INSIDE the asterisks -> matched nothing in
+#                            the library, so EVERY section was dropped and the
+#                            reader got a plan with no content at all.
+#   "## Root Cause"          not the bold form -> nothing recognised, nothing
+#                            dropped: the section leak the flake reported.
+#   "**Yoga and Breathing**" "and" for "&" -> the one section the reader had
+#                            explicitly asked for was the one thrown away.
+#
+# Making the live test tolerant would have hidden all three. The gate is what
+# had to change, so the variants are pinned here where no model is involved.
+# ===========================================================================
+YOGA_ONLY = ["yoga"]
+HEADING_VARIANTS = [
+    ("the canonical form the prompt asks for",
+     "**Root Cause**\nPitta.\n\n**Yoga & Breathing**\nVajrasana.\n\n"
+     "**Food Chart**\nMoong dal."),
+    ("a colon inside the asterisks",
+     "**Root Cause:**\nPitta.\n\n**Yoga & Breathing:**\nVajrasana.\n\n"
+     "**Food Chart:**\nMoong dal."),
+    ("a colon after the asterisks",
+     "**Root Cause**:\nPitta.\n\n**Yoga & Breathing**:\nVajrasana."),
+    ("markdown hash headings",
+     "## Root Cause\nPitta.\n\n## Yoga & Breathing\nVajrasana.\n\n"
+     "## Food Chart\nMoong dal."),
+    ('"and" written out instead of "&"',
+     "**Root Cause**\nPitta.\n\n**Yoga and Breathing**\nVajrasana.\n\n"
+     "**Food Chart**\nMoong dal."),
+    ("a trailing space after the heading",
+     "**Root Cause** \nPitta.\n\n**Yoga & Breathing** \nVajrasana."),
+]
+for label, written in HEADING_VARIANTS:
+    kept, dropped = gate.enforce_sections(written, YOGA_ONLY)
+    check(f"the section the reader ASKED FOR survives: {label}",
+          "**Yoga & Breathing**" in kept and "Vajrasana" in kept, kept[:70])
+    check(f"...and the ones they did not ask for are gone: {label}",
+          "Root Cause" not in kept and "Food Chart" not in kept, kept[:70])
+    check(f"...and the kept heading is rewritten to the canonical form: {label}",
+          kept.count("**Yoga & Breathing**") == 1, kept[:70])
+
+# A HASH LINE THAT IS NOT A KNOWN SECTION IS NOT A SECTION BOUNDARY. Treating
+# it as one would let this function delete text nobody asked it to touch.
+kept, dropped = gate.enforce_sections(
+    "Namaste.\n\n## Kuch aur baatein\nye zaroori hai.\n\n"
+    "**Yoga & Breathing**\nVajrasana.", YOGA_ONLY)
+check("an unrecognised hash line is left alone, not dropped",
+      "ye zaroori hai" in kept and not dropped, f"{dropped} {kept[:60]}")
+
+# AND THE EMPTY-PLAN FAILURE ITSELF, pinned directly: whatever the spelling,
+# enforcing a section the answer contains must never return an answer with no
+# sections at all.
+for label, written in HEADING_VARIANTS:
+    kept, _dropped = gate.enforce_sections(written, YOGA_ONLY)
+    check(f"enforcement never empties a plan that HAS the section: {label}",
+          len(kept.strip()) > 20, repr(kept[:40]))
+
+# A conversational reply has no sections and must come back untouched.
+chat = "Namaste, bataiye kya pareshani hai?"
+check("a reply with no headings is returned unchanged",
+      gate.enforce_sections(chat, YOGA_ONLY) == (chat, []))
+
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== clinical safety: {passed}/{len(results)} passed =====")
 if passed != len(results):

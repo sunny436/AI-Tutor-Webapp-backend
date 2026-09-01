@@ -277,7 +277,20 @@ async def write_supportive_care(problem: str, language: str = "") -> str:
         return safety.SERIOUS_CONDITION_MESSAGE
 
 
-def _safety_first_sync(problem: str, request: str, reason: str, language: str) -> str:
+def _safety_first_sync(
+    problem: str, request: str, reason: str, language: str, avoid: str = ""
+) -> str:
+    # `avoid` quotes the offending word back on a retry. Same technique
+    # `router._route_sync` uses for a repeated reply, and for the same reason:
+    # naming what went wrong works where re-asking the same way does not.
+    correction = (
+        f"\n\nYOUR PREVIOUS ATTEMPT USED THE WORD \"{avoid}\". Do not use it, or "
+        "any other name of a yoga posture or breathing technique, anywhere in "
+        "the reply. Refer to what they asked for in plain words instead — "
+        "\"yoga\", \"breathing exercises\", \"a home remedy\"."
+        if avoid
+        else ""
+    )
     return _invoke(
         prompts.SAFETY_FIRST_PROMPT.format(
             system_rules=prompts.SYSTEM_RULES,
@@ -286,6 +299,7 @@ def _safety_first_sync(problem: str, request: str, reason: str, language: str) -
             reason=reason or "something in this conversation needs prompt medical attention",
             language=language or "the same language the user wrote in",
         )
+        + correction
     )
 
 
@@ -315,6 +329,42 @@ async def write_safety_first(
 
     if not (answer or "").strip():
         return safety.ESCALATION_MESSAGE
+
+    # A SAFETY REPLY MAY NOT NAME A PRACTICE, AND THIS IS ENFORCED RATHER THAN
+    # ASKED FOR.
+    #
+    # The prompt has a conflict built into it: rule 1 tells the model to
+    # acknowledge what they asked for BY NAME, so a request for yoga reliably
+    # produced "yoga aur pranayama abhi na karein" — a correct prohibition
+    # containing a word that, to somebody skimming an alarming message, reads
+    # like a suggestion. It failed about one run in three, which is exactly the
+    # rate at which a prompt rule is "mostly" followed.
+    #
+    # Retry once quoting the word back, then fall through to the fixed
+    # ESCALATION_MESSAGE. Unlike everywhere else in this file, this is NOT
+    # report-only: the fallback is a complete, safe, correct reply, so there is
+    # a good answer to fall back TO. `_warn_if_medicine` has no such luxury —
+    # dropping a plan would leave nothing.
+    named = safety.names_practice(answer)
+    if named:
+        print(f"[safety] reply named a practice ({named!r}); retrying once")
+        try:
+            retry = await asyncio.to_thread(
+                _safety_first_sync, problem, request, reason, language, named
+            )
+        except Exception as error:  # noqa: BLE001
+            print(f"[consult] safety-first retry failed: {error}")
+            retry = ""
+        still = safety.names_practice(retry)
+        if retry.strip() and not still:
+            answer = retry
+        else:
+            print(
+                f"[safety] retry still named a practice ({still!r}); "
+                "falling back to the fixed escalation message"
+            )
+            return safety.ESCALATION_MESSAGE
+
     # A safety reply that names a herb or a dose is the worst possible version
     # of this, so it is checked rather than assumed. Report-only, like
     # everywhere else - see `_warn_if_medicine`.
