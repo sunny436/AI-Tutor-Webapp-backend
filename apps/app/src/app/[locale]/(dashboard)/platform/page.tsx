@@ -26,7 +26,12 @@ function Card({
 }) {
   return (
     <div className="rounded-lg border border-border bg-card">
-      <div className="flex items-center justify-between gap-2 border-b border-border px-4 py-3">
+      {/* `flex-wrap`, because `action` is a whole invite form — an email
+          input, a role select and a button. Beside the title on one line that
+          is ~355px of content, so on a 390px phone the page itself scrolled
+          sideways (measured: scrollWidth 396 against clientWidth 375). Wrapping
+          costs nothing above `sm`, where it all fits on one line anyway. */}
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-3">
         <h2 className="text-sm font-medium text-foreground">{title}</h2>
         {action}
       </div>
@@ -192,7 +197,9 @@ export default function PlatformPage() {
             title="Members"
             action={
               <form
-                className="flex items-center gap-1"
+                // Wraps too, for the narrowest phones where even the form
+                // alone is wider than the card.
+                className="flex flex-wrap items-center gap-1"
                 onSubmit={async (e) => {
                   e.preventDefault();
                   if (!inviteEmail) return;
@@ -210,7 +217,7 @@ export default function PlatformPage() {
                   onChange={(e) => setInviteEmail(e.target.value)}
                   placeholder="email to invite"
                   type="email"
-                  className="w-40 rounded-md border border-border bg-background px-2 py-1 text-xs"
+                  className="w-40 max-w-full min-w-0 flex-1 rounded-md border border-border bg-background px-2 py-1 text-xs sm:flex-none"
                 />
                 <select
                   value={inviteRole}

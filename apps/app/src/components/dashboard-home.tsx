@@ -126,7 +126,9 @@ export function DashboardHome() {
         <Stat icon={FileText} label="Reports" value={stats?.files} hint="Uploaded by you" />
       </div>
 
-      <div className="mt-4 grid items-start gap-4 lg:grid-cols-[1.6fr_1fr]">
+      {/* `[&>*]:min-w-0` for the same reason as the grid below, where it is
+          explained — preventive here rather than a measured break. */}
+      <div className="mt-4 grid items-start gap-4 [&>*]:min-w-0 lg:grid-cols-[1.6fr_1fr]">
         <Card>
           <CardHeader className="pb-3">
             <CardTitle as="h2" className="text-sm font-semibold">
@@ -200,7 +202,18 @@ export function DashboardHome() {
         </Card>
       </div>
 
-      <div className="mt-4 grid items-start gap-4 lg:grid-cols-[1.6fr_1fr]">
+      {/* `[&>*]:min-w-0` is load-bearing, not tidying. A grid item's
+          automatic minimum size is its MIN-CONTENT width, so a column
+          cannot shrink below whatever its widest child insists on — and
+          the "Recent consultations" card insists on 430px, because each
+          row is a flex line of icon + title + date and only the title is
+          allowed to shrink. On a 390px phone that made the WHOLE PAGE
+          scroll sideways (measured: scrollWidth 446 against clientWidth
+          375, with a visible horizontal scrollbar under the dashboard).
+          Setting the items to `min-width: 0` lets the column take the
+          width it is given and the titles truncate, which is what the
+          `min-w-0 flex-1 truncate` on the title span was already for. */}
+      <div className="mt-4 grid items-start gap-4 [&>*]:min-w-0 lg:grid-cols-[1.6fr_1fr]">
         <Card>
           <CardHeader className="pb-3">
             <CardTitle as="h2" className="text-sm font-semibold">
