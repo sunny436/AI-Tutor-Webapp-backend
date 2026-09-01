@@ -54,6 +54,10 @@ import config
 from src import safety
 from src.consult import evidence
 from src.consult import state as ctx_state
+from src.clinical import episodes as clinical_episodes
+from src.clinical import evidence_class as clinical_evidence
+from src.clinical import gate as clinical_gate
+from src.clinical import triage as clinical_triage
 from src.consult.gathering import MAX_GATHERING_ROUNDS, classify_focus, gather
 from src.retrieval import graphrag
 # `write_plan` generates the final answer from whatever the Context Builder
@@ -1047,6 +1051,22 @@ async def run_turn(
     if safety.scan(*ctx_state.safety_fragments(context)):
         return _escalate(context, "red-flag keyword")
 
+    # THE GRADED VERDICT, computed here and used far below by the recommendation
+    # gate. Deliberately BEFORE retrieval and before the plan is written, so
+    # nothing GraphRAG returns can raise the ceiling on what may be offered.
+    #
+    # `_escalate` above still owns RED — this does not replace the emergency
+    # path, it adds the two rungs between "emergency" and "ordinary" that the
+    # boolean never had. See clinical/triage.py.
+    _triage = clinical_triage.assess(
+        ctx_state.user_fragments(context),
+        profile_conditions=context.patient_profile.active("conditions"),
+        profile_medications=context.patient_profile.active("medications"),
+        serious_condition=context.serious_condition,
+    )
+    if _triage.risk_level != "GREEN":
+        print(f"[triage] {_triage.risk_level}: {_triage.reason[:110]}")
+
     # --- 1. gather, in prose ----------------------------------------------
     # Replaces the question cards. This is a conversation, not a form, and the
     # user is never asked to pick from a list to answer an intake question.
@@ -1094,6 +1114,32 @@ async def run_turn(
         context.condition = gathered.condition or context.condition
         context.symptoms = ctx_state._merge_symptoms(context.symptoms, gathered.symptoms)
         context.missing_info = gathered.missing_info
+
+        # WHICH PROBLEM IS THIS? Deterministic, and it runs once the condition
+        # is known so the match has a real name to work with rather than the
+        # opening sentence. `problem`/`condition` stay exactly what they were —
+        # the active episode's view of itself — so every existing reader is
+        # untouched; the episode list is what lets a SECOND problem exist at
+        # the same time and survive a topic switch. See clinical/episodes.py.
+        # `spoken` (what they said THIS turn), not `context.problem`, which
+        # holds the opening sentence for the life of the consultation. Matching
+        # on the opener means every later turn still carries "acidity" into the
+        # match, so "ab mere ghutne me bhi dard hai" scored against the acidity
+        # episode and the knee never got one of its own. Falls back to the
+        # opener for the first turn, where they are the same thing.
+        context.episodes, _active, _is_new = clinical_episodes.select(
+            context.episodes, spoken or context.problem, context.condition
+        )
+        context.active_episode_id = _active.episode_id
+        if _is_new:
+            print(f"[consult] new episode: {_active.problem_name!r}")
+        # What has been learned about THIS problem lives on the episode, so it
+        # is still there after the conversation has moved on and come back.
+        _active.important_unknowns = list(context.missing_info)
+        for _symptom in context.symptoms:
+            if _symptom not in _active.associated_symptoms:
+                _active.associated_symptoms.append(_symptom)
+        del _active.associated_symptoms[:-12]
 
         # Long-term facts they stated this turn. `merge_profile` decides what
         # actually changed — scalars replace, lists merge, nothing is ever
@@ -1481,19 +1527,69 @@ async def run_turn(
     _known = ctx_state.render_profile(context.patient_profile)
     profile = f"{profile}\n\n{_known}".strip() if profile else _known
 
+    # WHAT KIND OF EVIDENCE IS BEHIND THIS, in one line the model must obey.
+    #
+    # A sentence from the Caraka Samhita and a randomised trial arrive as the
+    # same shape — text plus a filename — and are indistinguishable to a model
+    # that is handed both. That is how "research shows" ends up over a
+    # classical description, which is the single most damaging thing this
+    # product can say. `clinical/evidence_class.py` grades the sources and
+    # returns the strongest wording the material actually supports.
+    _classes = clinical_evidence.classify_chunks(
+        [chunk for result in results for chunk in result.chunks]
+    )
+    _evidence_line = clinical_evidence.describe(_classes)
+
     answer = await write_plan(
         # `include_sentinel=False`: the per-section evidence tags above are
         # now what tells the model which parts are grounded, so the old
         # whole-block "no relevant notes found" marker would only contradict
         # a section that IS supported and hand the model words rule 14 now
         # forbids saying. See knowledge_for_prompt's docstring.
-        knowledge=knowledge_for_prompt(pipeline, results, include_sentinel=False),
+        # The evidence-grade line rides at the TOP of the knowledge block
+        # rather than in a new parameter: `write_plan`'s signature is shared
+        # with the legacy callers, and this is material about the material,
+        # which is where the model already reads its sources from.
+        knowledge=(
+            _evidence_line
+            + "\n\n"
+            + knowledge_for_prompt(pipeline, results, include_sentinel=False)
+        ),
         profile=profile,
         details=details,
         sections=sections,
         language=context.language,
         section_evidence=section_evidence,
     )
+
+    # THE RECOMMENDATION GATE. Everything above this line PROPOSES; this is the
+    # only thing that disposes. It runs on the generated text, deterministically:
+    #
+    #   - keeps only the sections that were actually asked for. "sirf yoga
+    #     batao" returning the whole six-section plan was measured at roughly
+    #     one turn in three once retrieval got richer, and no amount of prompt
+    #     wording made it reliable;
+    #   - removes any intervention that is unsafe for THIS person, checked
+    #     against their ACTIVE medicines and conditions — `active(...)`, so a
+    #     drug they stopped never drives a warning;
+    #   - says plainly that something was left out, rather than silently
+    #     thinning the advice.
+    #
+    # See clinical/gate.py. `_triage` was computed before retrieval, so a
+    # GraphRAG passage cannot raise the ceiling it sets.
+    _gate = clinical_gate.screen(
+        answer,
+        risk_level=(_triage.risk_level if _triage else "GREEN"),
+        wanted_sections=sections,
+        medications=context.patient_profile.active("medications"),
+        conditions=context.patient_profile.active("conditions"),
+        allergies=context.patient_profile.active("allergies"),
+        language=context.language or "hinglish",
+    )
+    if _gate.dropped_sections or _gate.blocked_interventions or _gate.notes:
+        print(f"[gate] {_gate.as_dict()}")
+    if _gate.approved and _gate.answer.strip():
+        answer = _gate.answer
 
     context.phase = "completed"
     # Remember the plan too, so "explain this in English" works on it just as it

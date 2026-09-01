@@ -74,6 +74,50 @@ RED_FLAG_KEYWORDS += [
     "बेहोश", "मिर्गी", "खुदकुशी", "आत्महत्या",
 ]
 
+# GAPS FOUND BY THE SIMULATED-PATIENT BENCHMARK, not by a bug report.
+#
+# `tests/benchmark_patients.py` runs a population of emergency phrasings rather
+# than a handful, and five of fifteen came back GREEN. Every one of them is a
+# sentence a real user would type, and every one is an emergency:
+#
+#   "saans lene me bahut takleef ho rahi hai"   -> the list had "dikkat", not
+#                                                  "takleef", for the same thing
+#   "bahut zyada bleeding ho rahi hai"          -> only English "severe
+#                                                  bleeding" was covered
+#   "sudden weakness on one side of my body"    -> stroke; only "sudden
+#                                                  numbness" was covered
+#   "achanak bahut tez sar dard, sabse bura"    -> thunderclap headache; only
+#                                                  English "severe headache"
+#   "baccha 3 mahine ka hai aur tez bukhar"     -> fever in an infant
+#
+# The same lesson the Hinglish block above records, one layer further in: it is
+# not enough to cover the concept once in English, because the phrase people
+# reach for varies and a substring match does not generalise.
+RED_FLAG_KEYWORDS += [
+    # breathing — "takleef"/"pareshani" as well as "dikkat"
+    "saans lene me takleef", "saans lene mein takleef",
+    "saans lene me bahut takleef", "saans me takleef", "saans mein takleef",
+    "saans lene me pareshani", "saans ukhad", "haanf raha",
+    "साँस लेने में तकलीफ", "सांस लेने में तकलीफ",
+    # bleeding — Hinglish intensifiers
+    "zyada bleeding", "bahut bleeding", "bleeding ho rahi", "bleeding nahi ruk",
+    "khoon nahi ruk", "bahut khoon", "khoon bahut",
+    "खून नहीं रुक", "बहुत खून",
+    # stroke — weakness or drooping on one side
+    "weakness on one side", "one side of my body", "one side of the body",
+    "ek taraf kamzori", "ek side kamzori", "adha sharir", "aadha sharir",
+    "half of my body", "muh tedha", "face tedha",
+    "एक तरफ कमज़ोरी", "आधा शरीर",
+    # thunderclap / worst-ever headache
+    "worst headache", "sabse tez sar dard", "sabse bura sar dard",
+    "achanak tez sar dard", "achanak bahut tez sar dard",
+    "sar phat raha", "sar fat raha",
+    "सबसे तेज़ सिरदर्द", "अचानक तेज़ सिरदर्द",
+    # infant illness — an age, not a symptom, but decisive at this age
+    "newborn", "naya janma", "mahine ka baccha", "mahine ki bacchi",
+    "din ka baccha", "navjat",
+]
+
 # Diagnosed conditions that are treated by a doctor, not managed with a food
 # chart. These are NOT emergencies — someone living with cancer for a year does
 # not need "go to hospital now" — but building them a lifestyle plan as if it
