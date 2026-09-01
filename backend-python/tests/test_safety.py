@@ -20,6 +20,18 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 
+# Windows redirects stdout as cp1252, and several test NAMES below are
+# Devanagari — so `print`ing a PASS raised UnicodeEncodeError and killed the
+# run partway through. The suite could not be run to completion on the
+# platform its own docstring tells you to run it on. Same reconfigure
+# `server.py` applies, for the same reason.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
+
 from src import safety  # noqa: E402
 
 results: list[tuple[str, bool, str]] = []
