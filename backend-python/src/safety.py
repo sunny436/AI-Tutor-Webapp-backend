@@ -228,6 +228,41 @@ def is_serious_condition(text: str) -> bool:
                for m in _SERIOUS_RE.finditer(lowered))
 
 
+# ASKING FOR YOGA IS NOT ASKING TO STOP CHEMOTHERAPY, and the difference is the
+# whole of this function.
+#
+# Someone on treatment who asks "can you suggest some yoga" wants supportive
+# movement ALONGSIDE their care. Someone who asks "chemo band karke ayurveda le
+# lun?" wants to replace it. The first needs a gentle answer and a symptom
+# check; the second needs the displacement warning. Answering both with the
+# same paragraph is what produced the loop reported from production — the
+# warning was correct, and it was also the only thing the person ever got, on
+# every turn, however they rephrased.
+#
+# So the warning is attached to the REQUEST, not to the diagnosis. Narrow on
+# purpose: a replacement verb aimed at treatment, or an explicit swap phrase.
+_TREATMENT = (r"chemo\w*|kimo|radiation|radio\s*therapy|dialysis|insulin"
+              r"|treatment|ilaj|ilaaj|chikitsa|dawa|dawai|medicine|therapy"
+              r"|tablet|goli")
+_REPLACE_VERB = (r"band\s*kar|bnd\s*kar|chhod|chod|stop|quit|replace|instead"
+                 r"|skip|rok\s*d|ruk\s*ja|leave|discontinue|off\s*kar")
+_REPLACE_RE = re.compile(
+    # "chemo band kar dun", "stop my chemotherapy", "chemo chhod kar yoga"
+    rf"\b(?:{_TREATMENT})\b[^.?!]{{0,30}}?\b(?:{_REPLACE_VERB})"
+    rf"|\b(?:{_REPLACE_VERB})\w*\b[^.?!]{{0,30}}?\b(?:{_TREATMENT})\b"
+    # "yoga se theek ho jayega?", "ayurveda ki jagah", "instead of chemo"
+    rf"|\b(?:ki|ke)\s*(?:jagah|badle|bajay)\b"
+    rf"|\binstead\s+of\b"
+    rf"|\bonly\s+(?:yoga|ayurveda|herbs?)\b",
+    re.IGNORECASE,
+)
+
+
+def asks_to_replace_treatment(text: str) -> bool:
+    """Is this asking to STOP or SWAP a prescribed treatment, not add to it?"""
+    return bool(_REPLACE_RE.search(text or ""))
+
+
 # The message we show when a red flag is found.
 ESCALATION_MESSAGE = (
     "⚠️ **Please seek medical help right away.**\n\n"

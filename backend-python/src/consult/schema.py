@@ -523,6 +523,11 @@ class ConsultContext(BaseModel):
     # no detail was ever collected. Holding it here lets the deep-dive run as
     # a conversation — see `prompts.GATHERING_PROMPT`'s serious-condition mode.
     serious_condition: str = ""
+    # Has the standing position ("your doctor's treatment is the treatment")
+    # already been said to them once? Written the first time the supportive
+    # reply goes out, and read on every later turn so it is not said again.
+    # Defaulted, so a context stored before this existed simply opens once more.
+    supportive_opened: bool = False
 
     # --- P0-1: several health concerns at once -----------------------------
     # `problem`/`condition` above stay the ACTIVE episode's view of itself, so

@@ -75,6 +75,7 @@ from src.consult.responder import (
     write_plan,
     write_safety_first,
     write_supportive_care,
+    write_supportive_continue,
 )
 from src import patient_profile as profile_store
 from src.knowledge import match_topics
@@ -1324,7 +1325,29 @@ async def run_turn(
                 )
                 if part
             )
-            reply = await write_supportive_care(collected, context.language)
+            # OPEN ONCE, THEN MOVE.
+            #
+            # This branch used to call `write_supportive_care` on every turn,
+            # and that prompt is a FIRST-CONTACT reply: it re-acknowledges the
+            # diagnosis, restates that the doctor's treatment is the treatment,
+            # and asks again which kind of help they want. Reported from
+            # production: a chemotherapy patient asked for yoga, got that
+            # paragraph, rephrased, and got it again — 98% the same text. The
+            # warning was right; saying only the warning, forever, was not.
+            #
+            # Asking to STOP or SWAP treatment is the one case that must keep
+            # getting the displacement answer however many times it is asked,
+            # so it re-opens deliberately. Asking for support ALONGSIDE
+            # treatment progresses instead: symptom check, then conservative
+            # guidance. See safety.asks_to_replace_treatment.
+            _wants_replacement = safety.asks_to_replace_treatment(typed or message)
+            if context.supportive_opened and not _wants_replacement:
+                reply = await write_supportive_continue(
+                    collected, typed or message, context.language
+                )
+            else:
+                reply = await write_supportive_care(collected, context.language)
+                context.supportive_opened = True
             context = ctx_state.remember_chat(context, "", reply)
             return ConsultResult(
                 kind="chat",
@@ -1500,6 +1523,54 @@ async def run_turn(
             context.help_type = (
                 "complete" if "complete" in _new_focus else _new_focus[0]
             )
+
+    # A SERIOUS CONDITION NEVER REACHES THE PLAN PATH — ON ANY TURN.
+    #
+    # That guarantee was written once, inside the gathering branch above, and
+    # gathering is the ONLY place it held. Once `phase` became "completed" the
+    # flow arrived here instead, and nothing on this path asks whether the
+    # person has cancer: retrieval runs, claims are extracted, `write_plan`
+    # writes the six sections. A chemotherapy patient who asked "yoga bata do"
+    # after the deep-dive got a wellness plan.
+    #
+    # It stayed hidden because `asks_for_guidance_now` did not match the
+    # vowel-dropped Hinglish those patients actually type, so they looped in
+    # gathering rather than falling through. Fixing the matcher exposed it
+    # immediately — the same turn that stopped repeating produced a
+    # "**Yoga & Breathing**" section for a blood-cancer patient.
+    #
+    # So the guard belongs where the plan is decided, not where one branch
+    # happened to sit. An emergency is unaffected: `scan` runs earlier and
+    # returns before this point.
+    if context.serious_condition:
+        context.phase = "completed"
+        _collected = "\n".join(
+            part
+            for part in (
+                f"They have told you they have: {context.serious_condition}",
+                ctx_state.render_profile(context.patient_profile),
+                ctx_state.render_history(context),
+            )
+            if part
+        )
+        if context.supportive_opened and not safety.asks_to_replace_treatment(
+            typed or message
+        ):
+            reply = await write_supportive_continue(
+                _collected, typed or message, context.language
+            )
+        else:
+            reply = await write_supportive_care(_collected, context.language)
+            context.supportive_opened = True
+        print("[consult] serious condition: supportive reply, not a plan")
+        context = ctx_state.remember_chat(context, typed or message, reply)
+        return ConsultResult(
+            kind="chat",
+            condition=context.condition,
+            message=reply,
+            answer=reply,
+            context=context,
+        )
 
     # --- 2. the plan -------------------------------------------------------
     # Which sections to write: the conversational focus choice takes

@@ -255,6 +255,41 @@ def _supportive_sync(problem: str, language: str) -> str:
     )
 
 
+def _supportive_continue_sync(context: str, request: str, language: str) -> str:
+    return _invoke(
+        prompts.SUPPORTIVE_CONTINUE_PROMPT.format(
+            system_rules=prompts.SYSTEM_RULES,
+            context=context,
+            request=request,
+            language=language or "the same language the user wrote in",
+        )
+    )
+
+
+async def write_supportive_continue(
+    context: str, request: str, language: str = ""
+) -> str:
+    """The turns AFTER the standing position has been stated once.
+
+    `write_supportive_care` opens: it acknowledges the diagnosis and says that
+    the doctor's treatment is the treatment. Calling it again for every later
+    turn is what made the assistant repeat itself at somebody who was only
+    rephrasing the same request. This writes the reply that moves instead —
+    the symptom check first, then conservative guidance — and it is the only
+    difference between the two paths.
+
+    Falls back to the opening reply rather than to nothing: repeating is bad,
+    saying nothing useful in a serious conversation is worse.
+    """
+    try:
+        return await asyncio.to_thread(
+            _supportive_continue_sync, context, request, language
+        )
+    except Exception as error:  # noqa: BLE001
+        print(f"[consult] supportive-continue reply failed: {error}")
+        return await write_supportive_care(context, language)
+
+
 async def write_supportive_care(problem: str, language: str = "") -> str:
     """Reply to a serious diagnosed condition — cancer, TB, dialysis, transplant.
 

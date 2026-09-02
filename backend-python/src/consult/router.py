@@ -232,6 +232,14 @@ _GUIDANCE_ASKS = (
     r"bata\s*d?[oe]|bataiy?e|batado|batana|bol[oe]|bolna|de\s*d[oe]|dijiye|do\b"
     r"|bana\s*d?[oe]|banaiye|banao|chahiye|chahta|chahti|suggest|recommend"
     r"|give|tell|show|share|share\s*karo|send|likh"
+    # THE VOWEL PEOPLE DO NOT TYPE. Hinglish drops the schwa constantly —
+    # "btao", "bta do", "btaiye" for "batao", "bata do", "bataiye" — and none
+    # of the spellings above match any of them. Reported from production: a
+    # chemotherapy patient asked twice, "mujha yoga bta sakta ho" and then
+    # "koi yoga techniques btao mujha", and neither was recognised as a
+    # request. The intake never ended, so the same question came back verbatim
+    # both times and the conversation could not move.
+    r"|bta\s*d?[oe]|btao|btaiy?e|btana|bta\b|btay[ae]"
 )
 _WANTS_GUIDANCE = re.compile(
     "|".join(
