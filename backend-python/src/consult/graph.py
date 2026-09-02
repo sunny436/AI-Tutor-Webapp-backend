@@ -62,6 +62,7 @@ from src.clinical import reasoning as clinical_reasoning
 from src.clinical import timeline as clinical_timeline
 from src.clinical import gate as clinical_gate
 from src.clinical import interactions as clinical_interactions
+from src.clinical import rollout
 from src.clinical import triage as clinical_triage
 from src.consult.gathering import MAX_GATHERING_ROUNDS, classify_focus, gather
 from src.retrieval import graphrag
@@ -464,7 +465,7 @@ def _symptom_check_done(context) -> bool:
     )
 
 
-async def run_turn(
+async def _run_turn(
     *,
     problem: str,
     raw_context: dict | None,
@@ -1140,6 +1141,34 @@ async def run_turn(
     )
     if _triage.risk_level != "GREEN":
         print(f"[triage] {_triage.risk_level}: {_triage.reason[:110]}")
+
+    # A RED TRIAGE IS AN EMERGENCY, AND MUST ESCALATE HERE.
+    #
+    # This used to be computed and only printed, on the reasoning that
+    # `_escalate` above "still owns RED". But that call is `safety.scan` — the
+    # KEYWORD layer — and the two do not cover the same ground. "I am vomiting
+    # 5+ times a day and I cannot keep fluids down" matches no keyword, and
+    # `triage.assess` grades it RED with `needs_immediate_escalation=True`.
+    #
+    # What actually escalated it was the model's own red-flag signal inside
+    # `gather`, further down. So the emergency path for anything the keyword
+    # list does not name depended on a model call succeeding. Measured with
+    # every model call failing:
+    #
+    #   "seene mein tez dard ... saans nahi"     -> escalation   (keyword)
+    #   "vomiting 5+ ... cannot keep fluids down" -> kind=chat,
+    #        "Tell me a little more — how long has this been going on?"
+    #
+    # A person too dehydrated to keep water down was asked to elaborate. The
+    # graded verdict is deterministic and already says what to do, so it is
+    # honoured here rather than left to a network call.
+    #
+    # This does NOT widen escalation: RED is defined by triage.py as
+    # "Emergency care now. Nothing else takes priority.", and ORANGE/YELLOW
+    # are untouched — `safety_engine.behavior` forbids escalating every
+    # uncertain symptom, and this changes nothing below RED.
+    if _triage.needs_immediate_escalation:
+        return _escalate(context, f"triage RED: {_triage.reason}", message)
 
     # --- 1. gather, in prose ----------------------------------------------
     # Replaces the question cards. This is a conversation, not a form, and the
@@ -1894,3 +1923,64 @@ async def run_turn(
         context=context,
         sources=sources,
     )
+
+
+# ---------------------------------------------------------------------------
+# PHASE-8 — shadow evaluation.
+#
+# `_run_turn` above is the whole consultation and has twenty-one return points,
+# so the shadow hook goes HERE, around it, rather than being repeated at each
+# one. That placement is the point: whatever branch produced the answer, the
+# new pipeline gets to say what it would have done with the same message, and
+# the record carries the answer the reader actually got so the PHASE-4
+# validator can be measured against real output rather than fixtures.
+#
+# THIS MUST NOT BE ABLE TO CHANGE OR BREAK A TURN. `result` is computed first
+# and returned unchanged; the hook is off by default (CLINICAL_SHADOW_EVAL),
+# swallows its own errors internally, and is wrapped again here so that even
+# an unexpected failure in the observability path cannot reach a person asking
+# a health question.
+# ---------------------------------------------------------------------------
+async def run_turn(
+    *,
+    problem: str,
+    raw_context: dict | None,
+    answers: dict | None,
+    free_text: str | None,
+    profile: str = "",
+    principal: dict | None = None,
+    on_token: Callable[[str], None] | None = None,
+    conversation_id: str | None = None,
+) -> ConsultResult:
+    """Advance the consultation by one turn. See `_run_turn` for the flow."""
+    result = await _run_turn(
+        problem=problem,
+        raw_context=raw_context,
+        answers=answers,
+        free_text=free_text,
+        profile=profile,
+        principal=principal,
+        on_token=on_token,
+        conversation_id=conversation_id,
+    )
+    try:
+        message = (problem or free_text or "").strip()
+        if message:
+            context = result.context
+            rollout.shadow_turn(
+                message,
+                # The WHOLE conversation, not just this message: the
+                # sufficiency engine decides what is already known by reading
+                # it, so passing only the latest turn would make every fact
+                # look unasked and every question look necessary.
+                transcript=ctx_state.render_history(context) or message,
+                safety_status=("emergency" if context.risk_level == "urgent"
+                               else "none"),
+                answer=result.answer or "",
+                profile_medications=context.patient_profile.active("medications"),
+                conversation_id=conversation_id or "",
+                user_id=(principal or {}).get("user_id", ""),
+            )
+    except Exception as exc:  # noqa: BLE001
+        print(f"[rollout] shadow evaluation skipped: {exc}")
+    return result

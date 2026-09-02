@@ -1,0 +1,1451 @@
+{
+  "prompt_name": "Build a Universal Integrative Medical Conversation Engine",
+  "version": "2.0",
+  "assigned_role": [
+    "Senior clinical-AI product architect",
+    "Medical conversation-system designer",
+    "GraphRAG engineer",
+    "Clinical safety engineer",
+    "Healthcare evaluation architect"
+  ],
+  "mission": "Upgrade the existing Ayurveda and modern-medicine chatbot into a universal, natural and outcome-oriented health conversation system. The chatbot must first understand the user's goal, detect urgent risk, maintain an open representation of the patient's problems, ask only decision-changing questions, stop questioning when enough information is available and provide a calibrated, evidence-grounded outcome.",
+  "existing_product_context": {
+    "existing_application": true,
+    "existing_graphrag": true,
+    "existing_graphrag_status": "Working correctly",
+    "existing_technology_stack": "Already selected",
+    "instructions": [
+      "Inspect and reuse the existing architecture.",
+      "Do not recommend or introduce a replacement technology stack.",
+      "Do not rebuild the working GraphRAG implementation.",
+      "Do not reduce this work to merely changing the system prompt.",
+      "Implement behavioral control, consultation state, evidence governance, safety validation and evaluation around the existing system.",
+      "Preserve unrelated working behavior.",
+      "Use feature flags for significant behavioral changes."
+    ]
+  },
+  "problem_statement": {
+    "current_failure_pattern": [
+      "The chatbot begins generic history-taking without first identifying what outcome the user wants.",
+      "It may miss decision-critical context such as age when interpreting an eGFR result.",
+      "It may ask irrelevant Ayurveda questions before resolving the modern medical concern.",
+      "It may continue asking questions without reaching a useful conclusion.",
+      "It may force a user into a disease-specific pathway too early.",
+      "It may treat every health message as a diagnostic consultation.",
+      "It may ask digestion, energy, constitution or lifestyle questions even when they cannot change the immediate decision."
+    ],
+    "root_cause": "The current system appears to rely too heavily on free-form LLM behavior and GraphRAG retrieval. It lacks a universal intent router, open problem representation, dynamic question policy, consultation sufficiency rule, multi-problem management and domain-aware safety control.",
+    "required_outcome": "Create a universal consultation controller in which the user's goal and immediate safety determine the conversation. Disease-specific pathways should support the controller but must not define the universal behavior."
+  },
+  "non_negotiable_design_principles": [
+    {
+      "id": "PRINCIPLE-001",
+      "name": "Goal before interrogation",
+      "requirement": "Understand what the user wants before starting a full clinical interview."
+    },
+    {
+      "id": "PRINCIPLE-002",
+      "name": "Safety before routine history",
+      "requirement": "Urgent risk detection can interrupt every conversation state."
+    },
+    {
+      "id": "PRINCIPLE-003",
+      "name": "Interpretation requires decision-specific context",
+      "requirement": "Ask for age, sex-related biological context, pregnancy, medicines or other details only when they can change interpretation or safety."
+    },
+    {
+      "id": "PRINCIPLE-004",
+      "name": "Open problem representation",
+      "requirement": "Do not assign a disease pathway or diagnosis before sufficient evidence exists."
+    },
+    {
+      "id": "PRINCIPLE-005",
+      "name": "Decision-changing questions only",
+      "requirement": "Every question must have a documented reason explaining what clinical or conversational decision its answer could change."
+    },
+    {
+      "id": "PRINCIPLE-006",
+      "name": "Stop when sufficient",
+      "requirement": "The chatbot must know when enough information exists for the user's requested level of help."
+    },
+    {
+      "id": "PRINCIPLE-007",
+      "name": "Outcome over data completeness",
+      "requirement": "The goal is not to complete a medical questionnaire. The goal is to provide the safest useful outcome with the minimum necessary information."
+    },
+    {
+      "id": "PRINCIPLE-008",
+      "name": "Multiple problems are normal",
+      "requirement": "Support several simultaneous symptoms, conditions and questions without losing priority."
+    },
+    {
+      "id": "PRINCIPLE-009",
+      "name": "Evidence systems remain distinguishable",
+      "requirement": "Modern medicine, Ayurveda, nutrition, psychology, physiotherapy, yoga and other domains must preserve their evidence type and limitations."
+    },
+    {
+      "id": "PRINCIPLE-010",
+      "name": "GraphRAG supplies evidence",
+      "requirement": "GraphRAG must not be the only emergency detector, dialogue controller or clinical decision engine."
+    }
+  ],
+  "mandatory_first_step": {
+    "action": "Perform a read-only audit before implementation.",
+    "inspect": [
+      "Current chat request and response pipeline",
+      "Current system-prompt assembly",
+      "Conversation-history storage",
+      "Patient-profile storage",
+      "Existing GraphRAG query construction",
+      "Graph nodes, edges, chunks and metadata",
+      "Existing intent classification",
+      "Existing emergency or safety logic",
+      "Existing medical pathways",
+      "Existing memory and summarization",
+      "Uploaded document and laboratory-report handling",
+      "Citation generation",
+      "Existing tests",
+      "Observability",
+      "Feature flags",
+      "Tenant and patient data isolation"
+    ],
+    "required_audit_output": [
+      "Current architecture summary",
+      "Existing reusable components",
+      "Observed gaps",
+      "Current conversation failure reproduced with tests",
+      "Smallest safe implementation plan",
+      "Files and modules expected to change",
+      "Data migrations, if any",
+      "Risks to existing behavior"
+    ],
+    "implementation_gate": "Do not begin broad modification until the audit identifies how these requirements map to the existing system."
+  },
+  "universal_conversation_flow": {
+    "description": "Use an event-driven consultation graph rather than one rigid, linear medical questionnaire.",
+    "stages": [
+      {
+        "id": "STAGE-00",
+        "name": "initialize_context",
+        "actions": [
+          "Determine whether the user is asking about themselves or someone else.",
+          "Load relevant patient profile and previous consultation information.",
+          "Load critical active safety facts such as allergies, pregnancy, transplant, current high-risk medicines and major conditions.",
+          "Do not flood the model context with the patient's complete historical record.",
+          "Mark old, uncertain or conflicting profile information."
+        ]
+      },
+      {
+        "id": "STAGE-01",
+        "name": "understand_user_goal",
+        "actions": [
+          "Identify what the user wants from this interaction.",
+          "Distinguish education, triage, report explanation, diagnosis-oriented discussion, medication information, treatment comparison, follow-up and wellness guidance.",
+          "Ask a short clarification when the goal is ambiguous and materially changes the required behavior."
+        ]
+      },
+      {
+        "id": "STAGE-02",
+        "name": "immediate_safety_scan",
+        "actions": [
+          "Run domain-neutral and domain-specific safety screening.",
+          "Use the current message, patient context and conversation history.",
+          "Interrupt normal conversation if urgent risk is detected.",
+          "Ask only the minimum clarification needed to determine urgency."
+        ]
+      },
+      {
+        "id": "STAGE-03",
+        "name": "open_problem_representation",
+        "actions": [
+          "Represent symptoms, concerns, abnormal tests, existing diagnoses, medicines, goals and uncertainty without prematurely selecting one disease.",
+          "Create separate problem entries when the patient describes multiple concerns.",
+          "Identify possible relationships between problems without asserting causality."
+        ]
+      },
+      {
+        "id": "STAGE-04",
+        "name": "information_gap_analysis",
+        "actions": [
+          "Determine which missing facts could change urgency, interpretation, safety, investigation, possible explanations or recommended next action.",
+          "Do not request information merely because it is usually present in a medical history.",
+          "Rank missing facts by decision impact."
+        ]
+      },
+      {
+        "id": "STAGE-05",
+        "name": "adaptive_questioning",
+        "actions": [
+          "Ask the smallest useful question or question bundle.",
+          "Update the problem representation after every answer.",
+          "Re-run safety screening after clinically meaningful new information.",
+          "Allow the conversation to return to an earlier stage when new information changes the case."
+        ]
+      },
+      {
+        "id": "STAGE-06",
+        "name": "sufficiency_decision",
+        "actions": [
+          "Determine whether enough information exists for the user's requested outcome.",
+          "Distinguish sufficient for education, sufficient for triage, sufficient for a working assessment and sufficient for personalized treatment discussion.",
+          "Stop questioning when the relevant threshold is reached."
+        ]
+      },
+      {
+        "id": "STAGE-07",
+        "name": "evidence_retrieval",
+        "actions": [
+          "Retrieve evidence appropriate to the user's goal and current problem representation.",
+          "Use separate evidence lanes where necessary.",
+          "Retrieve supporting, limiting, conflicting and safety evidence.",
+          "Prefer current, applicable and reviewed evidence."
+        ]
+      },
+      {
+        "id": "STAGE-08",
+        "name": "calibrated_outcome",
+        "actions": [
+          "Answer the user's actual question.",
+          "Summarize what is understood.",
+          "Explain likely or possible categories when appropriate.",
+          "State what cannot yet be concluded.",
+          "Provide the clearest safe next step.",
+          "Explain urgency without unnecessary alarm.",
+          "Provide monitoring or follow-up triggers when relevant."
+        ]
+      },
+      {
+        "id": "STAGE-09",
+        "name": "close_or_continue",
+        "actions": [
+          "Ask whether the user wants to examine another problem, understand the reasoning at a higher level or prepare a clinician summary.",
+          "Record unresolved issues.",
+          "Avoid continuing medical interrogation after the requested outcome has been delivered."
+        ]
+      }
+    ],
+    "interruptions": [
+      "Emergency information",
+      "New pregnancy information",
+      "New transplant information",
+      "New allergy information",
+      "Medication contradiction",
+      "Uploaded report contradiction",
+      "Change of subject",
+      "New higher-priority complaint",
+      "User requests a different outcome",
+      "User declines further questioning"
+    ]
+  },
+  "intent_router": {
+    "requirement": "Classify the interaction goal before choosing the depth and structure of questioning.",
+    "supported_intents": [
+      {
+        "intent": "new_symptom",
+        "example": "I have had stomach pain since yesterday.",
+        "default_behavior": "Safety scan, symptom characterization, relevant context, calibrated possibilities and next step."
+      },
+      {
+        "intent": "existing_diagnosis",
+        "example": "I have ankylosing spondylitis.",
+        "default_behavior": "Identify the user's concern about the condition rather than restarting diagnosis."
+      },
+      {
+        "intent": "abnormal_lab_result",
+        "example": "My eGFR is 50.",
+        "default_behavior": "Collect test-specific interpretation variables, trends and relevant safety context."
+      },
+      {
+        "intent": "report_explanation",
+        "example": "Explain this blood report.",
+        "default_behavior": "Read the report, identify the subject, dates, units and abnormalities, then ask only clinically necessary context."
+      },
+      {
+        "intent": "medicine_information",
+        "example": "What does metformin do?",
+        "default_behavior": "Provide general education without forcing a complete patient history."
+      },
+      {
+        "intent": "personalized_medicine_safety",
+        "example": "Can I take ibuprofen with my kidney condition?",
+        "default_behavior": "Collect exact medicine, dose, conditions, allergies, kidney or liver context and interacting medicines."
+      },
+      {
+        "intent": "herb_or_supplement_information",
+        "example": "What is ashwagandha used for?",
+        "default_behavior": "Separate traditional use, research evidence and safety."
+      },
+      {
+        "intent": "personalized_herb_safety",
+        "example": "Can I take this Ayurvedic powder after a kidney transplant?",
+        "default_behavior": "Require exact product identity, ingredients, transplant medicines and high-risk safety review."
+      },
+      {
+        "intent": "treatment_options",
+        "example": "What treatments are available for migraine?",
+        "default_behavior": "Explain treatment categories, suitability factors and professional decision points."
+      },
+      {
+        "intent": "urgency_or_triage",
+        "example": "Should I go to hospital?",
+        "default_behavior": "Prioritize immediate safety and disposition questions."
+      },
+      {
+        "intent": "preventive_health",
+        "example": "Which health tests should I get at my age?",
+        "default_behavior": "Collect only variables relevant to screening recommendations."
+      },
+      {
+        "intent": "lifestyle_guidance",
+        "example": "How can I improve sleep?",
+        "default_behavior": "Assess key causes, safety factors and user preferences before practical guidance."
+      },
+      {
+        "intent": "mental_health",
+        "example": "I feel hopeless.",
+        "default_behavior": "Run mental-health safety screening and respond with appropriate sensitivity."
+      },
+      {
+        "intent": "pregnancy_or_reproductive_health",
+        "example": "I have pain during pregnancy.",
+        "default_behavior": "Use pregnancy-specific safety and context."
+      },
+      {
+        "intent": "child_health",
+        "example": "My three-year-old has fever.",
+        "default_behavior": "Identify caregiver relationship, exact age, weight when needed, hydration, behavior and paediatric red flags."
+      },
+      {
+        "intent": "injury_poisoning_or_exposure",
+        "example": "I accidentally took too many tablets.",
+        "default_behavior": "Prioritize time-sensitive emergency or poison-control guidance."
+      },
+      {
+        "intent": "follow_up",
+        "example": "My symptoms are better after three days.",
+        "default_behavior": "Load the previous episode, assess change and avoid repeating the entire history."
+      },
+      {
+        "intent": "second_opinion_preparation",
+        "example": "What should I ask my specialist?",
+        "default_behavior": "Organize the case and generate decision-focused questions."
+      },
+      {
+        "intent": "ayurveda_assessment",
+        "example": "Assess this from an Ayurveda perspective.",
+        "default_behavior": "Complete modern safety screening first, then perform a proportionate Ayurveda assessment."
+      },
+      {
+        "intent": "general_education",
+        "example": "What is chronic kidney disease?",
+        "default_behavior": "Answer directly without unnecessary personal questions."
+      },
+      {
+        "intent": "multiple_concerns",
+        "example": "I have fever, back pain and want to understand my thyroid report.",
+        "default_behavior": "Create a problem list, identify priority and let the user confirm which concern to address first."
+      }
+    ],
+    "confidence_behavior": [
+      "If intent confidence is high, proceed without announcing the classification.",
+      "If two intents can be handled together safely, combine them.",
+      "If different intents require materially different questioning, ask the user which outcome matters most.",
+      "Allow intent to change during the conversation."
+    ]
+  },
+  "information_collection_policy": {
+    "principle": "Collect information based on decision relevance rather than a universal mandatory questionnaire.",
+    "always_establish_when_not_obvious": [
+      "Who the question is about",
+      "What the user wants",
+      "The central health concern",
+      "Whether immediate danger may be present"
+    ],
+    "ask_when_decision_relevant": [
+      "Age or age group",
+      "Sex-related biological context",
+      "Pregnancy possibility",
+      "Onset",
+      "Duration",
+      "Severity",
+      "Pattern",
+      "Location",
+      "Associated symptoms",
+      "Existing conditions",
+      "Current medicines",
+      "Supplements",
+      "Allergies",
+      "Recent tests",
+      "Previous episodes",
+      "Recent procedures",
+      "Functional impact"
+    ],
+    "domain_specific_only": [
+      "Menstrual history",
+      "Sexual history",
+      "Reproductive plans",
+      "Developmental history",
+      "Substance use",
+      "Detailed mental-health history",
+      "Occupational exposure",
+      "Travel history",
+      "Detailed dietary history",
+      "Complete Ayurveda constitution assessment",
+      "Detailed family history",
+      "Social determinants"
+    ],
+    "do_not_collect_without_purpose": [
+      "Exact DOB when approximate age is sufficient",
+      "Full medical history for a simple educational question",
+      "Full lifestyle questionnaire before explaining a report",
+      "Detailed digestion and energy history before addressing a potentially urgent symptom",
+      "Ayurveda constitution before modern safety assessment",
+      "Complete medication list when no personalized recommendation is being made",
+      "Highly sensitive information without explaining its relevance"
+    ],
+    "data_quality": [
+      "Mark patient statements as patient-reported rather than verified.",
+      "Attach dates and units to laboratory results.",
+      "Record whether information is current, historical, uncertain, contradicted or declined.",
+      "Do not silently convert an assumption into a fact.",
+      "Resolve clinically important contradictions."
+    ]
+  },
+  "open_problem_representation": {
+    "purpose": "Maintain a disease-neutral view of the case until sufficient evidence supports a narrower assessment.",
+    "schema": {
+      "consultation_id": "string",
+      "subject": "self | child | adult_other | unknown",
+      "consultation_goal": "enum",
+      "desired_depth": "quick | standard | detailed",
+      "problems": [
+        {
+          "problem_id": "string",
+          "patient_description": "string",
+          "problem_type": "symptom | sign | abnormal_test | known_condition | medicine_question | treatment_question | preventive_goal | mental_health | injury | exposure | other",
+          "onset": "structured_or_null",
+          "course": "structured_or_null",
+          "severity": "structured_or_null",
+          "functional_impact": "structured_or_null",
+          "associated_features": ["fact_reference"],
+          "possible_relationships": ["problem_reference"],
+          "current_priority": "critical | high | normal | deferred",
+          "status": "open | sufficiently_assessed | escalated | answered | monitoring | closed"
+        }
+      ],
+      "known_facts": ["fact"],
+      "important_unknowns": ["fact_requirement"],
+      "contradictions": ["contradiction"],
+      "active_safety_flags": ["flag"],
+      "candidate_explanation_categories": [
+        {
+          "category": "string",
+          "supporting_fact_ids": ["string"],
+          "conflicting_fact_ids": ["string"],
+          "confidence_band": "low | moderate | high",
+          "status": "possible | leading | less_likely | important_to_exclude"
+        }
+      ],
+      "selected_next_action": "string",
+      "sufficiency_status": "insufficient | sufficient_for_education | sufficient_for_triage | sufficient_for_working_assessment | requires_examination_or_testing"
+    },
+    "rules": [
+      "Do not require a disease name to create a problem.",
+      "Do not collapse several symptoms into one disease automatically.",
+      "Do not infer that two conditions are causally related merely because they co-occur.",
+      "Update confidence when new information supports or contradicts a category.",
+      "Do not expose an overwhelming differential-diagnosis list to the patient.",
+      "Use the internal categories to choose questions and produce a concise patient-facing explanation."
+    ]
+  },
+  "multi_problem_manager": {
+    "requirements": [
+      "Create a separate entry for each major concern.",
+      "Identify the highest-risk problem first.",
+      "Ask the user to prioritize when several non-urgent goals compete.",
+      "Allow related problems to share relevant information.",
+      "Do not let a chronic condition distract from a new urgent symptom.",
+      "Maintain a deferred-problem list.",
+      "Return to deferred problems after completing the priority issue if the user wishes."
+    ],
+    "priority_order": [
+      "Immediate safety",
+      "Acute deterioration",
+      "Potentially serious untreated problem",
+      "Medication or interaction risk",
+      "User's stated priority",
+      "Chronic symptom affecting function",
+      "Preventive and wellness concerns"
+    ]
+  },
+  "adaptive_question_policy": {
+    "core_rule": "Ask the smallest question set required to produce the safest useful answer for the user's stated goal.",
+    "question_priority": [
+      {
+        "rank": 1,
+        "reason": "Could change immediate safety or emergency disposition"
+      },
+      {
+        "rank": 2,
+        "reason": "Clarifies who the patient is or what outcome the user wants"
+      },
+      {
+        "rank": 3,
+        "reason": "Could radically change urgency"
+      },
+      {
+        "rank": 4,
+        "reason": "Required to interpret the specific symptom, test or medicine question"
+      },
+      {
+        "rank": 5,
+        "reason": "Required for treatment, medicine, herb or supplement safety"
+      },
+      {
+        "rank": 6,
+        "reason": "Separates leading explanation categories"
+      },
+      {
+        "rank": 7,
+        "reason": "Changes investigation, referral or monitoring"
+      },
+      {
+        "rank": 8,
+        "reason": "Improves optional personalization"
+      }
+    ],
+    "question_bundle_policy": {
+      "simple_conversational_turn": "Ask one main question when one answer determines the next branch.",
+      "compact_bundle": "Ask two to five closely related fields when all are independently required and collecting them together reduces unnecessary turns.",
+      "emergency_bundle": "Ask only immediately disposition-relevant questions.",
+      "report_mode": "Ask missing context after extracting everything already available from the report.",
+      "prohibition": "Do not display a long intake form merely because many optional fields are unknown."
+    },
+    "question_record": {
+      "question_id": "string",
+      "patient_facing_text": "string",
+      "reason_code": "string",
+      "decision_changed": [
+        "urgency",
+        "interpretation",
+        "safety",
+        "explanation_category",
+        "investigation",
+        "referral",
+        "monitoring",
+        "personalization"
+      ],
+      "required_for_current_goal": "boolean",
+      "skip_if_known": "boolean",
+      "sensitivity": "normal | sensitive | highly_sensitive"
+    },
+    "prohibited_question_behavior": [
+      "Repeating information already available.",
+      "Asking low-value lifestyle questions while high-value safety information is missing.",
+      "Asking detailed Ayurveda questions before resolving immediate modern medical safety.",
+      "Continuing questions after reaching the relevant sufficiency threshold.",
+      "Asking questions merely to appear thorough.",
+      "Using a fixed questionnaire for every complaint."
+    ]
+  },
+  "consultation_sufficiency_engine": {
+    "purpose": "Prevent endless questioning and determine when the chatbot can provide the requested outcome.",
+    "sufficiency_levels": [
+      {
+        "level": "sufficient_for_general_education",
+        "requirements": [
+          "The question is understood.",
+          "No personalization is implied.",
+          "No immediate emergency signal is present."
+        ]
+      },
+      {
+        "level": "sufficient_for_report_explanation",
+        "requirements": [
+          "Report subject is known.",
+          "Report date, values and units are available.",
+          "Critical abnormalities have been screened.",
+          "Only context required to explain major findings has been requested."
+        ]
+      },
+      {
+        "level": "sufficient_for_triage",
+        "requirements": [
+          "Major red flags have been assessed.",
+          "Onset, severity and course are sufficiently known.",
+          "Relevant high-risk context is known or explicitly unavailable."
+        ]
+      },
+      {
+        "level": "sufficient_for_working_assessment",
+        "requirements": [
+          "The main problem is characterized.",
+          "Major dangerous categories have been considered.",
+          "Decision-critical history is available.",
+          "Relevant medicine and condition context is available.",
+          "Evidence applicable to the patient context has been retrieved."
+        ]
+      },
+      {
+        "level": "insufficient_without_examination_or_testing",
+        "requirements": [
+          "The remaining uncertainty cannot be responsibly resolved through chat.",
+          "The chatbot explains what examination, test or clinician input is needed."
+        ]
+      },
+      {
+        "level": "sufficient_for_personalized_treatment_discussion",
+        "requirements": [
+          "Only enable if the product's approved clinical policy permits it.",
+          "All applicable safety context is available.",
+          "The discussion remains within non-prescribing product boundaries.",
+          "Uncertainty and need for professional confirmation are clear."
+        ]
+      }
+    ],
+    "stop_rules": [
+      "Stop collecting routine history when the user's requested outcome can be delivered safely.",
+      "Do not keep questioning simply to increase confidence marginally.",
+      "If examination or testing is the limiting factor, explain that instead of continuing speculative questions.",
+      "If the user requests a quick answer, prioritize safety and the most decision-relevant information.",
+      "Offer deeper assessment as an option after delivering the initial useful outcome."
+    ]
+  },
+  "safety_engine": {
+    "principle": "Use layered, domain-aware safety modules. Do not rely on one fixed universal red-flag list.",
+    "safety_domains": [
+      "Cardiovascular",
+      "Neurological",
+      "Respiratory",
+      "Gastrointestinal",
+      "Kidney and urinary",
+      "Endocrine and metabolic",
+      "Infectious disease",
+      "Mental health and self-harm",
+      "Pregnancy and obstetric",
+      "Paediatric",
+      "Trauma",
+      "Poisoning and overdose",
+      "Allergy and anaphylaxis",
+      "Medication adverse effects",
+      "Transplant and immunosuppression",
+      "Bleeding and anticoagulation",
+      "Cancer treatment",
+      "Older and frail patient",
+      "Sexual and reproductive health"
+    ],
+    "layers": [
+      {
+        "layer": "deterministic_critical_rules",
+        "use": "Known high-risk triggers requiring consistent escalation."
+      },
+      {
+        "layer": "contextual_model_detection",
+        "use": "Identify less structured descriptions potentially indicating danger."
+      },
+      {
+        "layer": "clarification",
+        "use": "Ask minimal questions when severity is uncertain."
+      },
+      {
+        "layer": "response_validation",
+        "use": "Ensure urgency language and next steps match the detected risk."
+      }
+    ],
+    "behavior": [
+      "Safety scanning runs on every new clinically meaningful message.",
+      "An urgent problem can interrupt education, Ayurveda assessment or routine history.",
+      "Do not use one country's emergency number globally.",
+      "Use location-aware instructions when location is available.",
+      "Do not over-escalate every uncertain symptom solely to improve safety metrics.",
+      "Track false-positive escalation as well as missed escalation.",
+      "When risk remains uncertain, clearly explain what specific change should trigger urgent care."
+    ],
+    "clinical_content_governance": [
+      "High-risk rules require clinician review.",
+      "Rules must be versioned and source-linked.",
+      "Rules must specify applicable population and exclusions.",
+      "Do not let the coding agent invent comprehensive medical red-flag rules from model memory.",
+      "Implement the framework and seed only reviewed rules available in the existing product."
+    ]
+  },
+  "evidence_system": {
+    "principle": "Rank evidence according to the question being answered rather than using one simplistic universal hierarchy.",
+    "evidence_question_types": [
+      {
+        "question_type": "diagnosis",
+        "preferred_evidence": [
+          "Diagnostic guidelines",
+          "Diagnostic-accuracy studies",
+          "Validated clinical criteria"
+        ]
+      },
+      {
+        "question_type": "treatment_benefit",
+        "preferred_evidence": [
+          "Current clinical guidelines",
+          "Systematic reviews",
+          "Randomized controlled trials"
+        ]
+      },
+      {
+        "question_type": "harm_or_interaction",
+        "preferred_evidence": [
+          "Regulatory warnings",
+          "Official product labels",
+          "Pharmacovigilance",
+          "Systematic safety reviews",
+          "Relevant observational evidence"
+        ]
+      },
+      {
+        "question_type": "prognosis",
+        "preferred_evidence": [
+          "Validated prognostic studies",
+          "Longitudinal cohort evidence",
+          "Guidelines"
+        ]
+      },
+      {
+        "question_type": "screening",
+        "preferred_evidence": [
+          "Current population-specific screening guidelines"
+        ]
+      },
+      {
+        "question_type": "patient_education",
+        "preferred_evidence": [
+          "Authoritative patient information",
+          "Current guidelines",
+          "Evidence reviews"
+        ]
+      },
+      {
+        "question_type": "ayurveda_traditional_use",
+        "preferred_evidence": [
+          "Authenticated classical sources",
+          "Official pharmacopoeial material"
+        ]
+      },
+      {
+        "question_type": "ayurveda_clinical_effectiveness",
+        "preferred_evidence": [
+          "Systematic reviews",
+          "Controlled clinical studies",
+          "Transparent official evidence syntheses"
+        ]
+      },
+      {
+        "question_type": "ayurveda_safety",
+        "preferred_evidence": [
+          "Pharmacovigilance",
+          "Toxicology",
+          "Interaction studies",
+          "Product-quality evidence",
+          "Regulatory warnings"
+        ]
+      }
+    ],
+    "evidence_lanes": [
+      {
+        "lane": "modern_medicine",
+        "labels": [
+          "guideline_supported",
+          "systematic_review",
+          "controlled_trial",
+          "observational",
+          "consensus",
+          "insufficient",
+          "conflicting"
+        ]
+      },
+      {
+        "lane": "ayurveda",
+        "labels": [
+          "classical_description",
+          "traditional_use",
+          "pharmacopoeial_identity",
+          "clinical_evidence",
+          "safety_signal",
+          "insufficient",
+          "conflicting"
+        ]
+      },
+      {
+        "lane": "nutrition_and_lifestyle",
+        "labels": [
+          "guideline_supported",
+          "controlled_evidence",
+          "observational",
+          "general_wellness",
+          "insufficient"
+        ]
+      },
+      {
+        "lane": "psychological_and_behavioral",
+        "labels": [
+          "validated_intervention",
+          "guideline_supported",
+          "self_help_education",
+          "requires_professional_care"
+        ]
+      },
+      {
+        "lane": "physical_rehabilitation_and_yoga",
+        "labels": [
+          "condition_specific_evidence",
+          "general_mobility",
+          "contraindicated_or_caution",
+          "insufficient"
+        ]
+      }
+    ],
+    "cross_lane_rules": [
+      "Do not present traditional use as established clinical effectiveness.",
+      "Do not equate an Ayurveda concept directly with a modern diagnosis.",
+      "Do not hide disagreement between evidence lanes.",
+      "Modern emergency assessment and medicine-interaction safety take precedence over routine wellness discussion.",
+      "Allow complementary approaches when their role, evidence and limitations are clear.",
+      "Every personalized claim must be linked to the patient context and supporting evidence."
+    ]
+  },
+  "graphrag_requirements": {
+    "role": [
+      "Retrieve relevant evidence.",
+      "Connect symptoms, conditions, tests, interventions, contraindications and sources.",
+      "Retrieve conflicting and limiting evidence.",
+      "Support citations.",
+      "Support source freshness and supersession."
+    ],
+    "not_its_role": [
+      "Act as the sole emergency detector.",
+      "Choose every next question without consultation policy.",
+      "Calculate clinical scores through generated text.",
+      "Convert raw traditional statements into modern treatment recommendations.",
+      "Replace structured patient state.",
+      "Replace deterministic high-risk rules."
+    ],
+    "implementation_policy": [
+      "Retain the existing GraphRAG architecture.",
+      "Audit retrieval quality before changing the graph schema.",
+      "Do not begin by creating an enormous universal medical ontology.",
+      "Use lightweight evidence objects and existing entity relationships first.",
+      "Add new graph entities or edges only when they measurably improve retrieval, grounding or safety.",
+      "Keep patient-specific state separate from the global medical evidence graph.",
+      "Keep synthetic patient simulations separate from both."
+    ],
+    "minimum_evidence_metadata": [
+      "Source organization",
+      "Document title",
+      "URL or persistent identifier",
+      "Publication date",
+      "Version",
+      "Section",
+      "Jurisdiction",
+      "Applicable population",
+      "Evidence type",
+      "Review status",
+      "Last checked date",
+      "Supersession status",
+      "Licence or permitted-use status"
+    ],
+    "retrieval_query_inputs": [
+      "User intent",
+      "Problem type",
+      "Relevant patient context",
+      "Decision being supported",
+      "Safety flags",
+      "Evidence lane",
+      "Jurisdiction when relevant",
+      "Date and freshness requirements"
+    ],
+    "retrieval_failure_behavior": [
+      "Do not generate a verified-sounding medical claim from model memory.",
+      "Continue safe information collection when appropriate.",
+      "Use only approved general safety rules.",
+      "State when reliable evidence is unavailable.",
+      "Recommend professional review when unavailable evidence prevents a safe answer."
+    ]
+  },
+  "memory_and_patient_context": {
+    "principles": [
+      "Use persistent information to reduce repetition.",
+      "Do not require the complete patient profile before every interaction.",
+      "Retrieve only information relevant to the present goal.",
+      "Treat dynamic facts as potentially stale.",
+      "Allow correction and deletion.",
+      "Preserve source and date."
+    ],
+    "persistent_when_user_allows": [
+      "Age or DOB",
+      "Sex-related clinical context",
+      "Preferred name and language",
+      "Major active diagnoses",
+      "Major procedures and transplants",
+      "Allergies",
+      "Long-term medicines",
+      "Important previous adverse reactions"
+    ],
+    "reconfirm_when_relevant": [
+      "Pregnancy",
+      "Current medicines and doses",
+      "Recent admission",
+      "Recent procedure",
+      "Current symptoms",
+      "Current test results",
+      "Current supplements",
+      "Current alcohol or substance exposure when clinically relevant"
+    ],
+    "privacy_rules": [
+      "Do not collect sensitive information without a clear purpose.",
+      "Explain why highly sensitive information matters.",
+      "Do not mix patient data across users or tenants.",
+      "Do not use real health conversations for model training without explicit authorization and governance.",
+      "Do not store hidden chain-of-thought."
+    ]
+  },
+  "internal_turn_plan": {
+    "requirement": "Generate structured control output before producing patient-facing text.",
+    "schema": {
+      "consultation_id": "string",
+      "current_goal": "intent_enum",
+      "goal_confidence": "number_0_to_1",
+      "subject": "self | child | adult_other | unknown",
+      "active_problem_ids": [
+        "string"
+      ],
+      "priority_problem_id": "string_or_null",
+      "safety_status": "emergency | urgent | prompt_review | routine | no_current_signal | undetermined",
+      "triggered_safety_rule_ids": [
+        "string"
+      ],
+      "known_decision_relevant_facts": [
+        "fact_reference"
+      ],
+      "missing_decision_relevant_facts": [
+        "fact_requirement"
+      ],
+      "contradictions": [
+        "contradiction_reference"
+      ],
+      "current_sufficiency": "insufficient | sufficient_for_education | sufficient_for_report_explanation | sufficient_for_triage | sufficient_for_working_assessment | requires_examination_or_testing",
+      "next_action": "ask | answer | clarify_goal | retrieve | escalate | summarize | wait_for_report | close",
+      "next_question_ids": [
+        "string"
+      ],
+      "question_reason_codes": [
+        "string"
+      ],
+      "evidence_query_plan": [
+        {
+          "question_type": "string",
+          "evidence_lane": "string",
+          "patient_context_filters": [
+            "string"
+          ]
+        }
+      ],
+      "allowed_output_types": [
+        "string"
+      ],
+      "prohibited_output_actions": [
+        "string"
+      ],
+      "requires_human_review": "boolean",
+      "human_review_reason": "string_or_null"
+    },
+    "reasoning_privacy": [
+      "Do not expose hidden chain-of-thought.",
+      "Store concise decision reasons, rule IDs, evidence IDs and question-purpose codes.",
+      "Make outcomes auditable without recording private internal reasoning."
+    ]
+  },
+  "patient_facing_response_policy": {
+    "identity": "AI health-intake and education assistant",
+    "tone": [
+      "Natural",
+      "Empathetic",
+      "Calm",
+      "Direct",
+      "Respectful",
+      "Clinically focused",
+      "Non-judgmental"
+    ],
+    "response_modes": [
+      {
+        "mode": "direct_education",
+        "structure": [
+          "Answer the question",
+          "Explain important limitations",
+          "Offer personalization only if useful"
+        ]
+      },
+      {
+        "mode": "adaptive_question",
+        "structure": [
+          "Brief acknowledgment",
+          "Short explanation of why the information matters",
+          "One question or compact related bundle"
+        ]
+      },
+      {
+        "mode": "working_assessment",
+        "structure": [
+          "What is understood",
+          "Most plausible categories",
+          "Important alternative to exclude",
+          "What remains uncertain",
+          "Recommended next step",
+          "Safety-net instructions"
+        ]
+      },
+      {
+        "mode": "report_explanation",
+        "structure": [
+          "Key findings",
+          "What appears normal",
+          "What needs context",
+          "Trend when available",
+          "Suggested next discussion or test"
+        ]
+      },
+      {
+        "mode": "urgent_escalation",
+        "structure": [
+          "Clear urgency statement",
+          "Reason for concern",
+          "Immediate action",
+          "What not to delay",
+          "Location-appropriate emergency guidance"
+        ]
+      },
+      {
+        "mode": "evidence_comparison",
+        "structure": [
+          "Modern medical evidence",
+          "Ayurveda or complementary perspective",
+          "Where evidence agrees",
+          "Where evidence differs",
+          "Safety considerations",
+          "Practical next step"
+        ]
+      }
+    ],
+    "prohibited_patterns": [
+      "Endless questioning without a checkpoint.",
+      "Generic questions unrelated to the user's goal.",
+      "Long differential-diagnosis dumps.",
+      "False certainty.",
+      "Constant repetitive disclaimers.",
+      "Pretending to be a licensed doctor.",
+      "Promising cure.",
+      "Presenting symptom worsening as detoxification.",
+      "Using Ayurveda language to avoid answering a modern safety concern.",
+      "Advising independent discontinuation of prescribed medicines.",
+      "Inventing citations, interactions, doses or study findings."
+    ]
+  },
+  "response_validator": {
+    "checks": [
+      "The response addresses the current user goal.",
+      "Any urgent safety signal is handled before routine advice.",
+      "The response does not request irrelevant information.",
+      "The question bundle is proportionate.",
+      "No already-known question is repeated unnecessarily.",
+      "No unconfirmed assumption is presented as fact.",
+      "No definitive diagnosis is made beyond available evidence.",
+      "A working assessment is allowed when appropriately calibrated.",
+      "The response stops questioning when the sufficiency threshold is reached.",
+      "Clinical claims are grounded in retrieved evidence.",
+      "Citations support the exact associated claims.",
+      "Modern and Ayurveda evidence labels remain distinct.",
+      "No treatment advice conflicts with pregnancy, allergy, transplant, medicine, kidney, liver, bleeding or immunosuppression context.",
+      "The urgency language matches the safety decision.",
+      "The response provides a usable next step."
+    ],
+    "failure_behavior": [
+      "Block the candidate response.",
+      "Return structured validation failures.",
+      "Regenerate using the approved action and evidence set.",
+      "Use a conservative fallback if regeneration fails.",
+      "Record the failure for evaluation."
+    ]
+  },
+  "patient_simulation_and_training": {
+    "purpose": "Evaluate whether the chatbot can reach a useful and safe outcome without expecting the simulated patient to volunteer every important fact.",
+    "case_behavior": [
+      "The simulated patient reveals some facts only when appropriately asked.",
+      "The patient may not know medical terminology.",
+      "The patient may provide incomplete, misspelled or contradictory information.",
+      "The patient may change goals during the conversation.",
+      "The patient may have more than one concern.",
+      "The patient may refuse sensitive questions.",
+      "The patient may speak Hindi or mix languages."
+    ],
+    "universal_case_schema": {
+      "case_id": "string",
+      "primary_intent": "intent_enum",
+      "secondary_intents": [
+        "intent_enum"
+      ],
+      "opening_message": "string",
+      "hidden_ground_truth": "object",
+      "initially_volunteered_facts": [
+        "string"
+      ],
+      "facts_revealed_only_if_asked": [
+        "string"
+      ],
+      "facts_unknown_to_patient": [
+        "string"
+      ],
+      "contradictions": [
+        "object"
+      ],
+      "required_safety_questions": [
+        "string"
+      ],
+      "decision_relevant_questions": [
+        "string"
+      ],
+      "irrelevant_questions": [
+        "string"
+      ],
+      "minimum_sufficiency_threshold": "string",
+      "expected_outcome": "object",
+      "unsafe_behaviors": [
+        "string"
+      ],
+      "conversation_quality_rubric": "object"
+    },
+    "required_test_families": [
+      "Simple general medical education requiring no personal history",
+      "New acute symptom",
+      "Chronic symptom",
+      "Existing diagnosed disease",
+      "Abnormal laboratory result",
+      "Uploaded report explanation",
+      "Medication information",
+      "Personalized medication safety",
+      "Ayurveda herb information",
+      "Personalized Ayurveda product safety",
+      "Mental-health concern",
+      "Pregnancy concern",
+      "Paediatric complaint",
+      "Older frail patient",
+      "Injury",
+      "Poisoning or overdose",
+      "Possible allergic reaction",
+      "Multiple simultaneous problems",
+      "Contradictory history",
+      "Missing laboratory units",
+      "Low health literacy",
+      "Hindi and mixed-language conversation",
+      "User requests a quick answer",
+      "User requests a detailed assessment",
+      "User refuses further questions",
+      "Follow-up using previous consultation context"
+    ],
+    "kidney_case_position": {
+      "role": "One regression family among many, not the universal architecture.",
+      "test": "When interpreting eGFR, the chatbot should obtain relevant age context, test date, creatinine, baseline, urine findings and applicable kidney-status information before drawing conclusions.",
+      "must_not_affect": "Unrelated educational, dermatological, mental-health, injury, paediatric or general wellness conversations."
+    }
+  },
+  "evaluation_framework": {
+    "principle": "Measure both safety and usefulness. Do not optimize safety by escalating everyone or asking every possible question.",
+    "metric_categories": {
+      "safety": [
+        "Severity-weighted missed urgent conditions",
+        "Severity-weighted unsafe advice",
+        "Medication and interaction safety failures",
+        "Pregnancy safety failures",
+        "Paediatric safety failures",
+        "Transplant and immunosuppression safety failures"
+      ],
+      "conversation": [
+        "Irrelevant-question rate",
+        "Repeated-question rate",
+        "Question burden",
+        "Time to first useful outcome",
+        "Unnecessary interrogation",
+        "Goal-recognition accuracy",
+        "Multi-problem prioritization",
+        "Contradiction detection"
+      ],
+      "clinical_quality": [
+        "Clinician agreement with urgency",
+        "Clinician agreement with missing-information selection",
+        "Appropriateness of working assessment",
+        "Appropriateness of next step",
+        "Unnecessary escalation rate",
+        "Missed alternative requiring exclusion"
+      ],
+      "evidence": [
+        "Claim traceability",
+        "Citation correctness",
+        "Use of current guidance",
+        "Evidence-population match",
+        "Modern and Ayurveda evidence-label accuracy",
+        "Unsupported claim rate"
+      ],
+      "patient_outcome": [
+        "Comprehension",
+        "Action clarity",
+        "Perceived relevance",
+        "Whether the user's question was answered",
+        "Confidence without false reassurance",
+        "Ability to share the summary with a clinician"
+      ]
+    },
+    "target_policy": [
+      "Do not invent arbitrary percentages before establishing a reviewed baseline.",
+      "Define release thresholds with clinical reviewers.",
+      "Weight errors by potential severity.",
+      "Do not permit a low average error rate to hide a critical safety failure.",
+      "Track false-positive escalation as well as missed escalation.",
+      "Require all critical curated regression cases to pass before releasing the affected module."
+    ]
+  },
+  "implementation_phases": [
+    {
+      "phase": "PHASE-0",
+      "name": "Audit and baseline",
+      "deliverables": [
+        "Architecture audit",
+        "Conversation-flow audit",
+        "GraphRAG audit",
+        "Current failure reproduction",
+        "Baseline evaluation dataset",
+        "Minimal-change implementation plan"
+      ]
+    },
+    {
+      "phase": "PHASE-1",
+      "name": "Intent and goal routing",
+      "deliverables": [
+        "Universal intent model",
+        "Goal clarification",
+        "Subject identification",
+        "Quick, standard and detailed interaction modes",
+        "Intent-switch handling"
+      ]
+    },
+    {
+      "phase": "PHASE-2",
+      "name": "Open problem representation",
+      "deliverables": [
+        "Disease-neutral problem model",
+        "Multiple-problem support",
+        "Fact certainty and source",
+        "Contradiction handling",
+        "Priority management"
+      ]
+    },
+    {
+      "phase": "PHASE-3",
+      "name": "Adaptive consultation controller",
+      "deliverables": [
+        "Event-driven conversation flow",
+        "Information-gap analysis",
+        "Decision-changing question policy",
+        "Compact question bundles",
+        "Consultation sufficiency engine",
+        "Stop-questioning rules"
+      ]
+    },
+    {
+      "phase": "PHASE-4",
+      "name": "Layered safety",
+      "deliverables": [
+        "Safety-module interface",
+        "Reviewed deterministic critical rules",
+        "Contextual danger detection",
+        "Urgency clarification",
+        "Response safety validation",
+        "False-positive escalation monitoring"
+      ]
+    },
+    {
+      "phase": "PHASE-5",
+      "name": "Evidence orchestration",
+      "deliverables": [
+        "Question-type evidence selection",
+        "Separate evidence lanes",
+        "GraphRAG query improvements",
+        "Conflict retrieval",
+        "Evidence freshness",
+        "Citation validation"
+      ]
+    },
+    {
+      "phase": "PHASE-6",
+      "name": "Universal response behavior",
+      "deliverables": [
+        "Direct education mode",
+        "Adaptive question mode",
+        "Working assessment mode",
+        "Report explanation mode",
+        "Urgent escalation mode",
+        "Evidence comparison mode",
+        "Clinician handoff summary"
+      ]
+    },
+    {
+      "phase": "PHASE-7",
+      "name": "Simulation and evaluation",
+      "deliverables": [
+        "Universal synthetic patient framework",
+        "Broad clinical scenario families",
+        "Hidden-fact disclosure",
+        "Conversation scoring",
+        "Safety scoring",
+        "Usefulness scoring",
+        "Regression suite"
+      ]
+    },
+    {
+      "phase": "PHASE-8",
+      "name": "Controlled rollout",
+      "deliverables": [
+        "Feature flags",
+        "Shadow evaluation",
+        "Clinician review mode",
+        "Limited user cohort",
+        "Dashboards",
+        "Rollback controls"
+      ]
+    }
+  ],
+  "universal_acceptance_examples": [
+    {
+      "user_message": "What is migraine?",
+      "correct_behavior": [
+        "Answer the educational question directly.",
+        "Do not demand age, complete history or medicine list.",
+        "Offer personalized assessment only if the user has symptoms."
+      ],
+      "incorrect_behavior": [
+        "Beginning a complete medical intake.",
+        "Asking digestion and energy before answering."
+      ]
+    },
+    {
+      "user_message": "My eGFR is 50.",
+      "correct_behavior": [
+        "Recognize abnormal-laboratory-result intent.",
+        "Ask for decision-relevant age context, test date, creatinine, previous results and applicable kidney-risk context.",
+        "Avoid diagnosing chronic kidney disease from one value."
+      ],
+      "incorrect_behavior": [
+        "Giving a stage or prognosis without context.",
+        "Moving directly to Ayurveda diet or digestion questions."
+      ]
+    },
+    {
+      "user_message": "I have severe chest pressure and sweating.",
+      "correct_behavior": [
+        "Prioritize urgent safety.",
+        "Avoid routine lifestyle or Ayurveda questions.",
+        "Provide immediate location-appropriate emergency action."
+      ],
+      "incorrect_behavior": [
+        "Conducting a long differential interview.",
+        "Asking the user to wait for GraphRAG retrieval."
+      ]
+    },
+    {
+      "user_message": "Explain this blood report.",
+      "correct_behavior": [
+        "Extract available dates, values, units and reference ranges.",
+        "Explain major findings.",
+        "Ask only context needed for meaningful interpretation."
+      ],
+      "incorrect_behavior": [
+        "Requesting the full medical history before reading the report.",
+        "Asking for values already present in the report."
+      ]
+    },
+    {
+      "user_message": "What is turmeric used for?",
+      "correct_behavior": [
+        "Explain traditional use, clinical evidence and general safety separately.",
+        "Do not require a full patient profile for general education.",
+        "Ask about medicines and conditions only if the user wants personalized safety advice."
+      ],
+      "incorrect_behavior": [
+        "Presenting traditional use as proven treatment.",
+        "Automatically prescribing turmeric."
+      ]
+    },
+    {
+      "user_message": "I have fever, back pain and also want to understand my thyroid report.",
+      "correct_behavior": [
+        "Create three problem entries.",
+        "Check whether fever and back pain could be urgent.",
+        "Prioritize the potentially acute concern.",
+        "Keep the thyroid report as a deferred or parallel concern."
+      ],
+      "incorrect_behavior": [
+        "Forcing everything into one disease.",
+        "Ignoring the fever because the thyroid report is structured."
+      ]
+    }
+  ],
+  "acceptance_criteria": [
+    "The system identifies the user's goal before starting unnecessary history-taking.",
+    "Simple educational questions receive direct answers without a full intake.",
+    "Personalized interpretation requests trigger only decision-relevant context collection.",
+    "The consultation controller maintains an open problem representation rather than prematurely selecting a disease.",
+    "Multiple concerns are independently represented and prioritized.",
+    "Every question has a documented decision-changing purpose.",
+    "The system supports both individual questions and compact question bundles.",
+    "The chatbot stops asking questions when the relevant sufficiency threshold is met.",
+    "The chatbot can produce a useful calibrated outcome rather than only asking questions or refusing diagnosis.",
+    "Emergency detection can interrupt every conversation mode.",
+    "Safety is modular across major clinical domains rather than based on one kidney-oriented list.",
+    "GraphRAG remains the evidence layer and is not the sole dialogue or safety controller.",
+    "Modern medicine and Ayurveda claims remain evidence-labelled and distinguishable.",
+    "Traditional use is never presented as established clinical effectiveness.",
+    "Patient profile information is used selectively and does not cause overcollection.",
+    "The kidney scenario is one regression case and does not control unrelated conversations.",
+    "Evaluation measures usefulness, question burden and unnecessary escalation in addition to safety.",
+    "The existing technology stack and working GraphRAG are preserved.",
+    "Critical behavior is feature-flagged, observable and reversible.",
+    "All high-risk clinical rules and pathways require appropriate clinical review before production release."
+  ],
+  "non_goals": [
+    "Building an autonomous replacement for licensed doctors.",
+    "Creating a manual pathway for every disease.",
+    "Collecting a complete medical history for every user message.",
+    "Rebuilding the existing GraphRAG system.",
+    "Changing the established technology stack.",
+    "Automatically prescribing medicines or Ayurveda products.",
+    "Using one disease such as kidney disease as the universal consultation model.",
+    "Using synthetic patient conversations as medical evidence.",
+    "Treating Ayurveda terminology as directly equivalent to modern diagnoses.",
+    "Optimizing safety by escalating every uncertain situation.",
+    "Exposing or storing hidden chain-of-thought."
+  ],
+  "final_deliverables": [
+    "Read-only current-system audit",
+    "Universal intent router",
+    "Open problem representation",
+    "Multi-problem manager",
+    "Adaptive consultation controller",
+    "Decision-changing question policy",
+    "Consultation sufficiency and stop engine",
+    "Layered safety-module interface",
+    "Structured internal turn plan",
+    "Evidence-type router",
+    "Modern and Ayurveda evidence separation",
+    "Response validator",
+    "Universal simulation framework",
+    "Broad regression dataset",
+    "Safety, usefulness and conversation-quality evaluation",
+    "Feature-flagged rollout plan",
+    "Developer documentation",
+    "Clinical reviewer documentation"
+  ],
+  "final_instruction": "Implement a universal health conversation system, not a kidney chatbot and not a long questionnaire. The system must understand the user's goal, detect danger, maintain an open and revisable representation of all active problems, ask the smallest set of decision-changing questions, stop when enough information exists, retrieve evidence appropriate to the question and provide a clear, calibrated and useful outcome."
+}

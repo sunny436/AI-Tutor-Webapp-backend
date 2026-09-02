@@ -877,7 +877,13 @@ def _route_sync(
 _INFO_WORD = re.compile(
     r"\b(symptoms?|lakshan|lakshan[oe]n|signs?|causes?|kaaran|karan|reasons?"
     r"|benefits?|fayde|faayde|labh|side\s*effects?|nuksan|meaning|definition"
-    r"|types?|prakar|treatment\s+of|about)\b",
+    r"|types?|prakar|treatment\s+of|about)\b"
+    # DEVANAGARI. The Latin list covers "lakshan" and misses "लक्षण", so
+    # "माइग्रेन के लक्षण क्या हैं" — the same question, typed in the script the
+    # user actually uses — fell through to a symptom report and an intake.
+    # `\b` is useless against Devanagari, so these match without it.
+    r"|(लक्षण|कारण|वजह|फायदे|फ़ायदे|लाभ|नुकसान|दुष्प्रभाव|मतलब|अर्थ|प्रकार|"
+    r"जानकारी|के\s*बारे\s*में)",
     re.IGNORECASE,
 )
 _ABOUT_THEMSELVES = re.compile(

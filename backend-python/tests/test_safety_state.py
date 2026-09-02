@@ -269,6 +269,55 @@ async def _test_low_risk_unaffected():
 asyncio.run(_test_low_risk_unaffected())
 
 
+# ===========================================================================
+# ESCALATION SURVIVES A PROVIDER OUTAGE
+#
+# `HIGH_RISK` is not caught by the keyword list — `safety.scan` returns False
+# for it — so it escalates only because `triage.assess` grades it RED. That
+# grading is deterministic, but it is reached through a turn that makes several
+# model calls on the way, and nothing pinned what happens when those calls die.
+#
+# It matters because the outage case is exactly when a person is least likely
+# to get help elsewhere: an upstream failure must degrade to "go and get seen",
+# never to a chat reply that reads as reassurance. Found while investigating a
+# batch run where this complaint came back as `kind=chat`.
+# ===========================================================================
+async def _test_escalation_survives_outage():
+    from src import llm
+
+    def _dead(*a, **kw):
+        raise RuntimeError("simulated provider outage")
+
+    # `invoke` and `stream` are the two ways this codebase reaches a model.
+    # Both must be killed: patching an attribute the module does not have
+    # simulates nothing, and the test then proves nothing.
+    assert hasattr(llm, "invoke") and hasattr(llm, "stream")
+    saved_invoke, saved_stream = llm.invoke, llm.stream
+    llm.invoke = _dead
+    llm.stream = _dead
+    try:
+        for message, label in (
+            (HIGH_RISK, "triage-only red flag"),
+            ("mujhe seene mein tez dard ho raha hai aur saans nahi aa rahi",
+             "keyword red flag"),
+        ):
+            r = await turn(message)
+            check(f"outage: {label} STILL ESCALATES", r.kind == "escalation",
+                  f"kind={r.kind}")
+            check(f"outage: {label} still records urgent risk",
+                  r.context.model_dump().get("risk_level") == "urgent",
+                  r.context.model_dump().get("risk_level"))
+            check(f"outage: {label} still points at medical care",
+                  any(w in (r.answer or "").lower()
+                      for w in ("doctor", "hospital", "medical", "emergency")),
+                  (r.answer or "")[:80])
+    finally:
+        llm.invoke, llm.stream = saved_invoke, saved_stream
+
+
+asyncio.run(_test_escalation_survives_outage())
+
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== safety state: {passed}/{len(results)} passed =====")
 if passed != len(results):

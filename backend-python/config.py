@@ -182,6 +182,40 @@ DEBUG_RAG = _get("DEBUG_RAG", "0") == "1"
 # carries them, docs/graphrag-api.md, is git-ignored: it holds a live key
 # under its own instruction "KEEP SECRET. Do not commit to git."
 GRAPHRAG_ENABLED = _get("GRAPHRAG_ENABLED", "0") == "1"
+
+# ---------------------------------------------------------------------------
+# persona.txt implementation phases. Each is OFF until its own tests pass, per
+# `existing_product_context.instructions` ("Use feature flags for significant
+# behavioral changes") and acceptance criterion 19 ("Critical behavior is
+# feature-flagged, observable and reversible").
+#
+# Off means the phase computes and LOGS its verdict but does not change what
+# the user sees. That is deliberate: it lets the new controller be measured
+# against live traffic before it is allowed to steer any of it.
+# ---------------------------------------------------------------------------
+PHASE1_INTENT_ROUTER = _get("PHASE1_INTENT_ROUTER", "0") == "1"
+PHASE2_PROBLEM_MODEL = _get("PHASE2_PROBLEM_MODEL", "0") == "1"
+PHASE3_TURN_PLAN = _get("PHASE3_TURN_PLAN", "0") == "1"
+PHASE4_RESPONSE_VALIDATOR = _get("PHASE4_RESPONSE_VALIDATOR", "0") == "1"
+PHASE5_EVIDENCE_ORCHESTRATION = _get("PHASE5_EVIDENCE_ORCHESTRATION", "0") == "1"
+PHASE6_RESPONSE_MODES = _get("PHASE6_RESPONSE_MODES", "0") == "1"
+
+# PHASE-8, controlled rollout.
+#
+# CLINICAL_SHADOW_EVAL runs the new pipeline on real traffic and LOGS what it
+# would have done, without changing one byte of what the user sees. Off by
+# default too: shadow evaluation is cheap but not free, and it is switched on
+# deliberately when someone is ready to read the output.
+#
+# CLINICAL_COHORT_PERCENT gates who a live phase may affect. A phase flag on
+# with the cohort at 0 still means nobody — turning a flag on must never
+# silently mean "everybody".
+#
+# CLINICAL_PIPELINE_DISABLED is the rollback control: one switch that beats
+# every flag above, for the person who has to turn this off in a hurry.
+CLINICAL_SHADOW_EVAL = _get("CLINICAL_SHADOW_EVAL", "0") == "1"
+CLINICAL_COHORT_PERCENT = int(_get("CLINICAL_COHORT_PERCENT", "0") or 0)
+CLINICAL_PIPELINE_DISABLED = _get("CLINICAL_PIPELINE_DISABLED", "0") == "1"
 GRAPHRAG_BASE_URL = _get("GRAPHRAG_BASE_URL", "")
 GRAPHRAG_PROJECT_ID = _get("GRAPHRAG_PROJECT_ID", "")
 GRAPHRAG_API_KEY = _get("GRAPHRAG_API_KEY", "")

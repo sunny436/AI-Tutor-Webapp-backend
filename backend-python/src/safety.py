@@ -17,6 +17,14 @@ RED_FLAG_KEYWORDS = [
     # heart / breathing
     "chest pain", "can't breathe", "cannot breathe", "shortness of breath",
     "difficulty breathing", "heart attack",
+    # PRESSURE AND TIGHTNESS, not only "pain". This is how people describe a
+    # heart attack at least as often — "severe chest pressure and sweating" is
+    # the spec's own emergency example, and the table did not hold it.
+    "chest pressure", "pressure in my chest", "chest tightness",
+    "tightness in my chest", "chest heaviness", "heaviness in my chest",
+    "seene me dabav", "seene mein dabav", "chhati me dabav",
+    "seene me bhaari", "seene mein bhaari", "chhati bhaari",
+    "seene me jakdan", "सीने में दबाव", "छाती में दबाव",
     # stroke / neuro
     "stroke", "face drooping", "slurred speech", "sudden numbness",
     "severe headache", "loss of consciousness", "fainted", "unconscious",
@@ -373,11 +381,40 @@ _INFANT_SYMPTOM = re.compile(
 )
 
 
+# AN INTENSIFIER BETWEEN THE WORDS BREAKS A SUBSTRING MATCH.
+#
+# The list above holds "seene me dard", and people write "seene me TEZ dard".
+# Found by the PHASE-7 evaluation: "मुझे सीने में तेज़ दर्द हो रहा है" — chest
+# pain, stated plainly — matched no keyword and graded GREEN on the triage
+# ladder too. It escalated nowhere at all.
+#
+# Adding every permutation to a substring list is whack-a-mole, so the few
+# red flags that are BODY-PART + PAIN get a pattern that tolerates the words
+# people put in the middle. Deliberately small: only the concepts where an
+# intervening adjective is common and the miss is dangerous.
+_GAP = r"[^.?!\n]{0,18}"
+_RED_FLAG_PATTERNS = (
+    # chest pain / pressure, with or without an intensifier between
+    re.compile(r"\b(seene|seene?\s*mein?|chhati|chaati|chest)\b" + _GAP
+               + r"\b(dard|pain|dabav|pressure|jakdan|bhaari|heaviness|tightness)\b",
+               re.IGNORECASE),
+    # breathlessness with something between ("saans bilkul nahi aa rahi")
+    re.compile(r"\bsaans\b" + _GAP + r"\b(nahi|nhi|band|ruk)\b", re.IGNORECASE),
+    # blood in vomit/stool with an intervening word
+    re.compile(r"\b(ulti|vomit|stool|latrine|potty|tatti|shauch)\b" + _GAP
+               + r"\b(khoon|blood)\b", re.IGNORECASE),
+)
+
+
 def is_emergency(text: str) -> bool:
     """Return True if the message looks like a serious/emergency situation."""
     lowered = (text or "").lower()
     folded = _fold_scripts(lowered)
     if any(keyword in lowered or keyword in folded for keyword in RED_FLAG_KEYWORDS):
+        return True
+    # Patterns run on the FOLDED text too, so a Devanagari sentence is checked
+    # by the same rule as its Latin equivalent.
+    if any(p.search(lowered) or p.search(folded) for p in _RED_FLAG_PATTERNS):
         return True
     return bool(_INFANT_RE.search(folded) and _INFANT_SYMPTOM.search(folded))
 

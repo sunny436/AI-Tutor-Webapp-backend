@@ -127,6 +127,15 @@ _SOURCE_RULES: list[tuple[re.Pattern, str, str]] = [
     (re.compile(r"caraka|charaka|sushruta|susruta|ashtanga|astanga|hridaya|"
                 r"sharngadhara|sarngadhara|madhava.?nidana|bhaishajya|"
                 r"samhita|nighantu", re.I), "classical_primary_text", TRADITION),
+    # A MODERN clinical guideline, before the Ayurveda-guidance rule below.
+    # Without this, `hypertension-clinical-guideline.pdf` matches the bare word
+    # "guideline" there and gets introduced as "Standard Ayurveda guidance
+    # describes" — attributing a cardiology guideline to Ayurveda, which is the
+    # false-attribution `cross_lane_rules` exists to prevent. Kept narrow and
+    # unambiguous on purpose: the corpus's own AYUSH document is matched by
+    # `cross.?referral` below and is unaffected.
+    (re.compile(r"clinical.?guideline|practice.?guideline|who.?guideline|"
+                r"\bicmr\b|\bcdc\b", re.I), "clinical_guideline", MODERN),
     # Government / standardised guidance.
     (re.compile(r"cross.?referral|guideline|ministry|ayush|ccras|pharmacopoeia|"
                 r"standard.?treatment", re.I),
