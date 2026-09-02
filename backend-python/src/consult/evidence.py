@@ -148,6 +148,16 @@ LEAKED_TERMS: tuple[str, ...] = (
     # deliberately absent, because a food chart and a safety note use those
     # words legitimately and a false leak report teaches everyone to ignore
     # the log.
+    # The rest of the machinery, named the way it actually gets said. Note
+    # what is NOT here: a bare "profile". "lipid profile" and "thyroid
+    # profile" are real things a patient asks about, and a guard that fires
+    # on those is a guard that gets switched off.
+    "patient profile",
+    "your profile",
+    "database",
+    "retrieved chunk",
+    "retrieved",
+    "vector search",
     "triage",
     "risk level",
     "risk_level",

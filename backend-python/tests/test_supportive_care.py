@@ -142,7 +142,8 @@ def install(*, ready: bool = True):
         return ("Sunkar dukh hua. Aapka medical treatment hi mukhya chikitsa hai, "
                 "use band nahi karna. Main saath me madad kar sakta hoon.")
 
-    async def _continue(context, request, language=""):
+    async def _continue(context, request, language="", *, deliver=False):
+        CALLS.append("deliver" if deliver else "ask_symptoms")
         CALLS.append("write_supportive_continue")
         return ("Bahut gentle rakhte hain. Apni oncology team se confirm kar "
                 "lijiye ki halki activity abhi safe hai.")

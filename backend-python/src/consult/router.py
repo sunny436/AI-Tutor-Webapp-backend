@@ -857,6 +857,78 @@ def _route_sync(
     )
 
 
+# ASKING WHAT A CONDITION LOOKS LIKE IS NOT REPORTING THAT YOU HAVE IT.
+#
+# Reported from production. "What are the symptoms of acidity?" classified as
+# `knowledge` and got a straight answer, but the way people actually type it —
+#
+#     "symptoms of acidity"      "migraine ke symptoms"
+#     "acidity ke lakshan"       "causes of migraine"
+#
+# came back `health`, and a health verdict opens an intake. So a question about
+# a condition was answered with "how long have you had this?", which is the
+# questionnaire feel the whole conversational flow exists to remove.
+#
+# A bare noun phrase reads like somebody naming their problem, and the model is
+# not wrong to hesitate — so the decision is made here instead of asked of it.
+# Both halves are required: an INFORMATION word, and no sign that they are
+# talking about themselves. "mujhe acidity ke lakshan ho rahe hain" is a
+# complaint and stays one.
+_INFO_WORD = re.compile(
+    r"\b(symptoms?|lakshan|lakshan[oe]n|signs?|causes?|kaaran|karan|reasons?"
+    r"|benefits?|fayde|faayde|labh|side\s*effects?|nuksan|meaning|definition"
+    r"|types?|prakar|treatment\s+of|about)\b",
+    re.IGNORECASE,
+)
+_ABOUT_THEMSELVES = re.compile(
+    r"\b(mujhe|mujha|muje|mera|meri|mere|main|maine|hum|humein|hamein"
+    # NOT a bare "me": "tell me about X" and "explain it to me" are
+    # questions, not self-reports. "my" and the "i ..." forms carry the
+    # signal on their own.
+    r"|my|i\s+have|i\s+am|i'?ve|i'?m)\b"
+    r"|\b(ho\s*rah[ia]|hoti\s+hai|hota\s+hai|rehta\s+hai|rehti\s+hai)\b"
+    r"|(मुझे|मेरा|मेरी|मेरे|मैं)",
+    re.IGNORECASE,
+)
+
+
+def asks_for_information(text: str) -> bool:
+    """A question ABOUT a condition, rather than a report of having one."""
+    body = (text or "").strip()
+    if not body or len(body) > 160:
+        return False
+    if _ABOUT_THEMSELVES.search(body):
+        return False
+    return bool(_INFO_WORD.search(body))
+
+
+# "CAN I TAKE THIS?" IS NOT THE SAME QUESTION AS "WHAT IS THIS?"
+#
+# Both are knowledge questions and both get a knowledge answer, but only one of
+# them turns on what the person is already taking. Measured: somebody whose
+# profile held diabetes and metformin asked "Can I take Ashwagandha?" and got
+# "it depends on your individual health profile" - a true sentence that used
+# none of the profile it was talking about.
+#
+# So the ASK is detected here, and the caller decides what to do with the
+# person's own medicines and conditions. Deliberately about permission for
+# oneself: "what are the benefits of ashwagandha" stays a plain question.
+_PERSONAL_SAFETY_ASK = re.compile(
+    r"\b(can|should|may)\s+i\s+(take|use|have|try|drink|eat)\b"
+    r"|\bis\s+(it|this|that|\w+)\s+safe\s+for\s+me\b"
+    r"|\b(le|lena|leni|khana|kha)\s+sakta\s+h|\b(le|lena)\s+sakti\s+h"
+    r"|\bmere\s+liye\b[^?.]{0,20}\b(safe|theek|thik|sahi|surakshit)\b"
+    r"|\bmujhe\s+(lena|leni|khana)\s+chahiye\b"
+    r"|(मैं|मुझे)[^।?]{0,30}(ले सकता|ले सकती|लेना चाहिए)",
+    re.IGNORECASE,
+)
+
+
+def asks_if_safe_for_me(text: str) -> bool:
+    """Are they asking whether something is safe for THEM, not what it is?"""
+    return bool(_PERSONAL_SAFETY_ASK.search(text or ""))
+
+
 async def route_message(
     message: str,
     history: str = "",
@@ -879,6 +951,11 @@ async def route_message(
     path already took the resolved language; this one was the gap.
     """
     text = (message or "").strip()
+    # Decided before the model is asked: see `asks_for_information`. A bare
+    # "symptoms of acidity" is a question, and answering it with an intake is
+    # the failure this prevents.
+    if asks_for_information(text):
+        return Route(intent="knowledge", problem=text)
     if not text:
         # An empty send is not a health complaint; say nothing new.
         return Route(intent="casual", reply="")

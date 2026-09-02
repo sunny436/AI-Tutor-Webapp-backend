@@ -528,6 +528,11 @@ class ConsultContext(BaseModel):
     # reply goes out, and read on every later turn so it is not said again.
     # Defaulted, so a context stored before this existed simply opens once more.
     supportive_opened: bool = False
+    # Has the one symptom question ("fever, weakness, dizziness?") been asked?
+    # Once it has, the next turn DELIVERS. Left to the model, this decision
+    # drifted back into gathering — asking for the cancer subtype on the turn
+    # the person had just said they felt fine.
+    supportive_asked_symptoms: bool = False
 
     # --- P0-1: several health concerns at once -----------------------------
     # `problem`/`condition` above stay the ACTIVE episode's view of itself, so

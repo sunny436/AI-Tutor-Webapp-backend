@@ -201,6 +201,107 @@ async def _test_question_carrying_a_complaint():
 asyncio.run(_test_question_carrying_a_complaint())
 
 
+# ===========================================================================
+# A QUESTION ABOUT A CONDITION IS NOT A REPORT OF HAVING IT
+#
+# Reported from production. The full sentence worked and the way people
+# actually type it did not:
+#
+#   "What are the symptoms of acidity?"  -> knowledge, answered directly
+#   "symptoms of acidity"                -> HEALTH, and a health verdict opens
+#                                           an intake, so the reply was
+#                                           "could you tell me how long you
+#                                           have had this?"
+#
+# A bare noun phrase reads like somebody naming their problem, so the model
+# hesitated and guessed wrong. The decision is made in code now.
+# ===========================================================================
+from src.consult.router import asks_for_information  # noqa: E402
+
+INFORMATIONAL = [
+    "symptoms of acidity",
+    "migraine ke symptoms",
+    "acidity ke lakshan",
+    "causes of migraine",
+    "benefits of yoga",
+    "ashwagandha ke fayde",
+    "side effects of triphala",
+    "types of pranayama",
+    "meaning of dinacharya",
+]
+for text in INFORMATIONAL:
+    check(f"a question about a condition is informational: {text!r}",
+          asks_for_information(text), "")
+
+# THE OTHER HALF, and the one that must never break: somebody describing
+# their own problem is a complaint, even when they use the same nouns.
+COMPLAINTS = [
+    "mujhe acidity hai",
+    "mujhe acidity ke lakshan ho rahe hain",
+    "I have symptoms of acidity",
+    "my symptoms are getting worse",
+    "mera sar dard hota hai",
+    "मुझे माइग्रेन है",
+    "main pareshan hoon",
+    "I have migraine",
+]
+for text in COMPLAINTS:
+    check(f"...but describing your own problem is NOT: {text!r}",
+          not asks_for_information(text), "")
+
+
+# ===========================================================================
+# "CAN I TAKE THIS?" USES WHAT THEY ARE ALREADY TAKING
+#
+# Both "what is ashwagandha" and "can I take ashwagandha" are knowledge
+# questions, and the knowledge path had no interaction check at all. Measured:
+# a profile holding hypothyroidism and thyronorm answered "it depends on your
+# individual health profile" — a true sentence that used none of the profile
+# it was talking about.
+#
+# The detector below is what separates the two. It must stay narrow: turning
+# "what are the benefits of ashwagandha" into a personal safety consultation
+# is the over-personalisation this whole change is against.
+# ===========================================================================
+from src.consult.router import asks_if_safe_for_me  # noqa: E402
+
+PERMISSION = [
+    "Can I take Ashwagandha?",
+    "can i take triphala with my medicines",
+    "kya main ashwagandha le sakta hoon",
+    "mere liye ye safe hai kya",
+    "mere liye surakshit hai?",
+    "should I take this herb",
+    "क्या मैं अश्वगंधा ले सकता हूँ",
+]
+for text in PERMISSION:
+    check(f"a permission question is recognised: {text[:38]!r}",
+          asks_if_safe_for_me(text), "")
+
+NOT_PERMISSION = [
+    "What are the benefits of Ashwagandha?",
+    "what is ashwagandha",
+    "ashwagandha ke fayde",
+    "symptoms of acidity",
+    "mujhe acidity hai",
+    "what is Ayurveda?",
+]
+for text in NOT_PERMISSION:
+    check(f"...and a plain question is NOT: {text[:38]!r}",
+          not asks_if_safe_for_me(text), "")
+
+# The interaction table is what makes the answer personal, and it must still
+# say the same thing it says everywhere else in the product.
+from src.clinical import interactions as _ix  # noqa: E402
+
+_v = _ix.check("ashwagandha", medications=["thyronorm"])
+check("the thyroid clash is still caught for a permission question",
+      _v.blocked and _v.reasons, _v.as_dict())
+_safe = _ix.check("shatavari", medications=["metformin"])
+check("...and a herb with no clash is not blocked on a guess",
+      _safe.status == "safe", _safe.as_dict())
+
+
 passed = sum(1 for _, ok, _ in results if ok)
 print(f"\n===== general questions: {passed}/{len(results)} passed =====")
 if passed != len(results):

@@ -19,6 +19,8 @@ better input than the free-text paragraphs the old flow collected.
 
 from __future__ import annotations
 
+import re
+
 import asyncio
 from typing import Callable
 
@@ -255,19 +257,43 @@ def _supportive_sync(problem: str, language: str) -> str:
     )
 
 
-def _supportive_continue_sync(context: str, request: str, language: str) -> str:
+# Does this reply actually hand them something to do? A named technique, not
+# the word "yoga" - and not merely mentioned inside a question, which is how
+# the model kept passing a looser check while still asking for clinical detail.
+_PRACTICE_GIVEN = re.compile(
+    r"(pranayam|dirgha|anulom|bhramari|shavasana|deep breath|gehri saans|"
+    r"dheemi saans|belly breath|ankle|wrist|kalai|panj|stretch|walk|tehal|"
+    r"ghuma|rotation)",
+    re.IGNORECASE,
+)
+
+
+def _gives_a_practice(reply: str) -> bool:
+    """True when the reply names something to do OUTSIDE a question."""
+    body = reply or ""
+    # Drop every sentence that ends in a question mark, then look again.
+    statements = " ".join(
+        part for part in re.split(r"(?<=[.!?])\s+", body) if not part.strip().endswith("?")
+    )
+    return bool(_PRACTICE_GIVEN.search(statements))
+
+
+def _supportive_continue_sync(
+    context: str, request: str, language: str, directive: str
+) -> str:
     return _invoke(
         prompts.SUPPORTIVE_CONTINUE_PROMPT.format(
             system_rules=prompts.SYSTEM_RULES,
             context=context,
             request=request,
+            directive=directive,
             language=language or "the same language the user wrote in",
         )
     )
 
 
 async def write_supportive_continue(
-    context: str, request: str, language: str = ""
+    context: str, request: str, language: str = "", *, deliver: bool = False
 ) -> str:
     """The turns AFTER the standing position has been stated once.
 
@@ -282,9 +308,32 @@ async def write_supportive_continue(
     saying nothing useful in a serious conversation is worse.
     """
     try:
-        return await asyncio.to_thread(
-            _supportive_continue_sync, context, request, language
+        directive = (
+            prompts.SUPPORTIVE_GIVE_GUIDANCE if deliver
+            else prompts.SUPPORTIVE_ASK_SYMPTOMS
         )
+        reply = await asyncio.to_thread(
+            _supportive_continue_sync, context, request, language, directive
+        )
+        # RETRY ONCE IF IT ASKED INSTEAD OF ANSWERING.
+        #
+        # Same backstop `write_safety_first` uses for a named practice: the
+        # instruction is in the prompt, and the model still sometimes returns
+        # a question. On the turn where guidance is due that is the original
+        # complaint all over again - the person asked, and got asked back. So
+        # the output is checked and one blunter attempt is made.
+        if deliver and not _gives_a_practice(reply):
+            print("[consult] supportive reply asked instead of answering; retrying once")
+            retry = await asyncio.to_thread(
+                _supportive_continue_sync,
+                context,
+                request,
+                language,
+                prompts.SUPPORTIVE_GIVE_GUIDANCE + prompts.SUPPORTIVE_DELIVER_HARDER,
+            )
+            if _gives_a_practice(retry):
+                return retry
+        return reply
     except Exception as error:  # noqa: BLE001
         print(f"[consult] supportive-continue reply failed: {error}")
         return await write_supportive_care(context, language)

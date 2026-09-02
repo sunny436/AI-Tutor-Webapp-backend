@@ -519,6 +519,24 @@ for text in ARCHITECTURE:
     check(f"40. internal vocabulary is reported: {text[:38]!r}",
           bool(find_leaked_terms(text)), find_leaked_terms(text))
 
+# The rest of the machinery, named the way it actually gets said.
+for text in ["your patient profile indicates you have diabetes",
+             "based on my database, this is common",
+             "the retrieved chunk says amlapitta",
+             "vector search returned three passages",
+             "my retrieval found nothing on this"]:
+    check(f"40b. machinery named plainly is reported: {text[:36]!r}",
+          bool(find_leaked_terms(text)), find_leaked_terms(text))
+
+# AND THE WORD THAT MUST NOT BE BANNED. "lipid profile" and "thyroid profile"
+# are things patients genuinely ask about, so a bare "profile" is deliberately
+# absent from the table - a guard that fires on those gets switched off.
+for text in ["aapki lipid profile check karwaiye",
+             "thyroid profile normal hai",
+             "your blood report shows haemoglobin 9.2"]:
+    check(f"40c. real medical language is NOT reported: {text[:36]!r}",
+          not find_leaked_terms(text), find_leaked_terms(text))
+
 ORDINARY = [
     "Ashwagandha traditionally taakat ke liye use hoti hai",
     "Orange aur mausambi le sakte hain",

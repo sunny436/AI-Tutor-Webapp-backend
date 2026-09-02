@@ -61,6 +61,7 @@ from src.clinical import history_schemas as clinical_history
 from src.clinical import reasoning as clinical_reasoning
 from src.clinical import timeline as clinical_timeline
 from src.clinical import gate as clinical_gate
+from src.clinical import interactions as clinical_interactions
 from src.clinical import triage as clinical_triage
 from src.consult.gathering import MAX_GATHERING_ROUNDS, classify_focus, gather
 from src.retrieval import graphrag
@@ -82,6 +83,7 @@ from src.knowledge import match_topics
 from src.consult.router import (
     CONVERSATIONAL,
     asks_for_guidance_now,
+    asks_if_safe_for_me,
     Route,
     detect_language,
     has_health_signal,
@@ -439,6 +441,29 @@ async def _answer_knowledge_mid_consultation(
     )
 
 
+
+# HAS THE SYMPTOM QUESTION ALREADY BEEN ASKED?
+#
+# Read from the transcript rather than from a flag. A boolean on the context
+# is only as reliable as every client that round-trips it, and getting this
+# wrong repeats the one question the person has already answered — which is
+# the loop this whole change exists to remove. `chat_history` is what the UI
+# renders, so it is the one part of the context that cannot quietly go
+# missing.
+_SYMPTOM_ASK = re.compile(
+    r"(kamzori|bukhar|fever|chakkar|dizz|saans|bleeding|dard|pain|thakan|weak)"
+    r"[^?]{0,120}\?",
+    re.IGNORECASE,
+)
+
+
+def _symptom_check_done(context) -> bool:
+    return any(
+        turn.role == "assistant" and _SYMPTOM_ASK.search(turn.text or "")
+        for turn in context.chat_history
+    )
+
+
 async def run_turn(
     *,
     problem: str,
@@ -770,8 +795,46 @@ async def run_turn(
                     or is_about_uploaded_document(message)
                 ),
             )
+            # "CAN I TAKE THIS?" TURNS ON WHAT THEY ARE ALREADY TAKING.
+            #
+            # Both "what is ashwagandha" and "can I take ashwagandha" are
+            # knowledge questions, but only the second one depends on the
+            # person. Measured: a profile holding diabetes and metformin
+            # answered "it depends on your individual health profile" - true,
+            # and it used none of the profile it was talking about.
+            #
+            # So for a permission question the interaction table is consulted
+            # for THIS person and the verdict is handed to the writer as
+            # material. Everything else is unchanged: a plain "what is X"
+            # still gets a plain answer, and the profile stays out of it.
+            _knowledge = knowledge_for_prompt(pipeline, results)
+            if asks_if_safe_for_me(message):
+                _verdicts = clinical_interactions.screen_text(
+                    message,
+                    medications=context.patient_profile.active("medications"),
+                    conditions=context.patient_profile.active("conditions"),
+                    allergies=context.patient_profile.active("allergies"),
+                )
+                _relevant = [v for v in _verdicts if v.status != "safe"]
+                if _relevant:
+                    print(f"[interactions] permission question: {[v.as_dict() for v in _relevant]}")
+                    _lines = "\n".join(
+                        f"- {v.intervention}: {v.status}"
+                        + (f" - {'; '.join(v.reasons)}" if v.reasons else "")
+                        for v in _relevant
+                    )
+                    _knowledge = "\n\n".join(
+                        part
+                        for part in (
+                            _knowledge,
+                            "WHAT YOU ALREADY KNOW ABOUT THIS PERSON THAT CHANGES "
+                            "THE ANSWER (use it naturally, never recite it back "
+                            "as a record):\n" + _lines,
+                        )
+                        if part
+                    )
             answer = await write_knowledge(
-                message, knowledge_for_prompt(pipeline, results), context.language, on_token
+                message, _knowledge, context.language, on_token
             )
             context = ctx_state.remember_chat(context, message, answer)
             context.phase = "casual"
@@ -1342,8 +1405,17 @@ async def run_turn(
             # guidance. See safety.asks_to_replace_treatment.
             _wants_replacement = safety.asks_to_replace_treatment(typed or message)
             if context.supportive_opened and not _wants_replacement:
+                # ASK ONCE, THEN DELIVER - decided here, not by the model.
+                # Asked to choose, it drifted back into gathering: it wanted
+                # the cancer subtype and the treatment start date on the very
+                # turn the person had just said they felt fine.
+                _deliver = (
+                    context.supportive_asked_symptoms
+                    or _symptom_check_done(context)
+                )
+                context.supportive_asked_symptoms = True
                 reply = await write_supportive_continue(
-                    collected, typed or message, context.language
+                    collected, typed or message, context.language, deliver=_deliver
                 )
             else:
                 reply = await write_supportive_care(collected, context.language)
@@ -1556,8 +1628,12 @@ async def run_turn(
         if context.supportive_opened and not safety.asks_to_replace_treatment(
             typed or message
         ):
+            _deliver = (
+                context.supportive_asked_symptoms or _symptom_check_done(context)
+            )
+            context.supportive_asked_symptoms = True
             reply = await write_supportive_continue(
-                _collected, typed or message, context.language
+                _collected, typed or message, context.language, deliver=_deliver
             )
         else:
             reply = await write_supportive_care(_collected, context.language)
