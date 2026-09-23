@@ -172,3 +172,10 @@ async def test_fallback_end_to_end_through_chat(client, app):
 
         msg = await s.get(Message, events[-1][1]["message"]["id"])
     assert msg.metadata_["provider"] == "openrouter"
+
+
+def test_provider_error_details_are_redacted():
+    from app.llm.openai_compatible import map_error
+
+    leaked = map_error(RuntimeError("Incorrect API key provided: sk-proj-abcdefghijklmnopqrstuvwxyz123456"))
+    assert "abcdefghijklmnopqrstuvwxyz" not in str(leaked) and "[redacted]" in str(leaked)
