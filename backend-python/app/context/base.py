@@ -3,7 +3,7 @@
 Chat ─► ContextPipeline (0..n ContextProviders, concurrent, fail-soft) ─► LLM
 
 No provider is registered in the generic chatbot. A future feature (for example
-curriculum GraphRAG, or document search over pgvector) implements
+a curriculum knowledge-graph retriever, or document search over pgvector) implements
 `ContextProvider` and is returned from `resolve_assistant_config`; nothing else in
 the chat path changes.
 """
