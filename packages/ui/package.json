@@ -47,6 +47,7 @@
     "./switch": "./src/components/switch.tsx",
     "./dialog": "./src/components/dialog.tsx",
     "./scroll-area": "./src/components/scroll-area.tsx",
+    "./sheet": "./src/components/sheet.tsx",
     "./upload-input": "./src/components/upload-input.tsx",
     "./tailwind.config": "./tailwind.config.ts",
     "./postcss": "./postcss.config.js"

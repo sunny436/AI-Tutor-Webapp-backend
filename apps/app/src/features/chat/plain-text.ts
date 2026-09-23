@@ -1,0 +1,23 @@
+/**
+ * Roughly de-Markdown a reply for the screen-reader announcement.
+ *
+ * Only for `aria-live` text: the reply itself is rendered properly on screen and
+ * can be navigated in full. This just keeps the announcement from reading out
+ * asterisks, hashes and URLs.
+ */
+export function plainText(markdown: string, limit = 1000): string {
+  const text = markdown
+    .replace(/```[\s\S]*?```/g, " (code) ")
+    .replace(/`([^`]*)`/g, "$1")
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/^\s{0,3}#{1,6}\s+/gm, "")
+    .replace(/^\s*>\s?/gm, "")
+    .replace(/^\s*[-*+]\s+/gm, "")
+    .replace(/(\*\*|__|\*|_|~~)(.+?)\1/g, "$2")
+    .replace(/\$\$?([^$]+)\$\$?/g, "$1")
+    .replace(/\|/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return text.length > limit ? `${text.slice(0, limit).trimEnd()}…` : text;
+}
