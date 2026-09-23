@@ -4,7 +4,7 @@ import { Button } from "@v1/ui/button";
 import { Sparkles } from "lucide-react";
 import { memo } from "react";
 
-import { MessageContent } from "@/features/markdown/message-content";
+import { MessageContent } from "@/features/markdown/lazy-message-content";
 import type { ChatMessage } from "./chat-store";
 import { useChatEntry, useChatMessage, useStores } from "./chat-context";
 import { ErrorMessage } from "./error-message";

@@ -17,8 +17,10 @@ Each needs a change to the API contract first (details in
 
 ## In this app
 
-- **Bundle size.** The reply renderer (react-markdown, KaTeX, highlight.js)
-  ships with the chat. If it grows, load it with `next/dynamic`.
+- **Bundle size.** The reply renderer (react-markdown, KaTeX, highlight.js,
+  ~170 kB gzipped) already loads as its own chunk after the chat is
+  interactive. If it grows further, the next step is loading KaTeX and the
+  highlighter only for replies that contain maths or code.
 - **Next.js 15.** The app is on the latest 14.2 patch. A major upgrade (and
   nonce-based CSP, which would drop `'unsafe-inline'` for scripts) is a separate
   piece of work.

@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+import { preloadMessageContent } from "@/features/markdown/lazy-message-content";
 import { APP_NAME } from "@/lib/brand";
 import { Announcer } from "./announcer";
 import { useChatEntry, useConversations, useStores } from "./chat-context";
@@ -22,6 +23,10 @@ export function ChatView() {
   const { chat } = useStores();
   const [draftKey, setDraftKey] = useState(() => chat.freshDraftKey());
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Fetch the reply renderer now, alongside the messages, not when the first
+  // reply needs it.
+  useEffect(() => preloadMessageContent(), []);
 
   // Arriving at "/" after the held draft has been used ("New chat"): take a fresh one.
   useEffect(() => {
