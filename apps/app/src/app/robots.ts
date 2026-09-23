@@ -1,7 +1,5 @@
 import type { MetadataRoute } from "next";
 
-import { siteUrl } from "@/lib/seo";
-
 /**
  * OUTSIDE `[locale]`, deliberately.
  *
@@ -36,6 +34,5 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: `${siteUrl()}/sitemap.xml`,
   };
 }

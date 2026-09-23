@@ -63,19 +63,7 @@ const isAuthPage = createRouteMatcher([
   ...LOCALES.map((locale) => `/${locale}/login`),
 ]);
 
-const isMarketingPage = createRouteMatcher([
-  "/",
-  ...LOCALES.map((locale) => `/${locale}`),
-  // The published knowledge base. Public and never redirected, like `/` — these
-  // pages exist to be read by people who are not signed in and crawled by robots
-  // that never will be. A prefix match, because every note is its own URL.
-  //
-  // NOT added to the middleware `matcher` exclusion list below: these are real
-  // pages that want the locale prefix, unlike robots.txt and sitemap.xml, which
-  // must never acquire one.
-  "/library(.*)",
-  ...LOCALES.map((locale) => `/${locale}/library(.*)`),
-]);
+const isMarketingPage = createRouteMatcher(["/", ...LOCALES.map((locale) => `/${locale}`)]);
 
 const THIRTY_DAYS_SECONDS = 60 * 60 * 24 * 30;
 
