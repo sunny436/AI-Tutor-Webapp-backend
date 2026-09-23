@@ -1,0 +1,77 @@
+/*
+ * Syntax colours for rehype-highlight (highlight.js class names), drawn from the
+ * design tokens so code reads correctly in both themes and never introduces a
+ * raw palette colour (every token pair is contrast-checked in globals.css).
+ */
+
+.message-content .hljs-comment,
+.message-content .hljs-quote {
+  color: hsl(var(--text-secondary));
+  font-style: italic;
+}
+
+.message-content .hljs-keyword,
+.message-content .hljs-selector-tag,
+.message-content .hljs-literal,
+.message-content .hljs-section,
+.message-content .hljs-doctag {
+  color: hsl(var(--brand));
+}
+
+.message-content .hljs-string,
+.message-content .hljs-regexp,
+.message-content .hljs-addition,
+.message-content .hljs-attribute,
+.message-content .hljs-meta .hljs-string {
+  color: hsl(var(--success));
+}
+
+.message-content .hljs-number,
+.message-content .hljs-symbol,
+.message-content .hljs-bullet,
+.message-content .hljs-link {
+  color: hsl(var(--accent-warm));
+}
+
+.message-content .hljs-title,
+.message-content .hljs-title.function_,
+.message-content .hljs-title.class_,
+.message-content .hljs-built_in,
+.message-content .hljs-type {
+  color: hsl(var(--info));
+}
+
+.message-content .hljs-attr,
+.message-content .hljs-variable,
+.message-content .hljs-template-variable,
+.message-content .hljs-property,
+.message-content .hljs-params,
+.message-content .hljs-name,
+.message-content .hljs-selector-id,
+.message-content .hljs-selector-class {
+  color: hsl(var(--warning));
+}
+
+.message-content .hljs-meta,
+.message-content .hljs-deletion {
+  color: hsl(var(--destructive));
+}
+
+.message-content .hljs-emphasis {
+  font-style: italic;
+}
+
+.message-content .hljs-strong {
+  font-weight: 600;
+}
+
+/* Wide equations scroll inside the reply instead of widening the page. */
+.message-content .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+.message-content pre code {
+  font-family: var(--font-code, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
+}
