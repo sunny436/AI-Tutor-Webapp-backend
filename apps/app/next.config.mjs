@@ -9,21 +9,42 @@ import { withSentryConfig } from "@sentry/nextjs";
  * over plain HTTP — browsers ignore Strict-Transport-Security on non-HTTPS
  * responses — so the same config is correct in dev and in production.
  *
- * No Content-Security-Policy yet: this app loads Convex, Google sign-in and
- * Sentry, and a CSP written blind would break one of them silently. That needs
- * measuring real traffic first, so it is deliberately left out rather than
- * guessed at.
+ * CONTENT SECURITY POLICY. Everything this app loads now comes from its own
+ * origin: the API is reached through /api/v1 (never from the browser), fonts are
+ * self-hosted by next/font, KaTeX's fonts are bundled, and Sentry (when enabled)
+ * reports through the same-origin /monitoring tunnel. So connections, images,
+ * fonts and objects are locked to 'self'.
+ *
+ * Scripts and styles still allow 'unsafe-inline': Next 14 writes inline
+ * bootstrap scripts without nonces, and KaTeX and Radix use inline styles. The
+ * reply renderer never emits raw HTML (see features/markdown), which is the real
+ * XSS defence; this policy is the second line — it stops injected content from
+ * loading remote scripts or sending data anywhere but here. Dev adds
+ * 'unsafe-eval' and ws: for Fast Refresh only.
  */
+const isDev = process.env.NODE_ENV !== "production";
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob:",
+  "font-src 'self' data:",
+  `connect-src 'self'${isDev ? " ws: wss:" : ""}`,
+  "object-src 'none'",
+  "base-uri 'none'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+].join("; ");
+
 const securityHeaders = [
   // Two years, the minimum for preload lists, and applies to subdomains.
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
-  // Stops the browser guessing a response is HTML/JS when it is not — the trick
-  // behind most "upload a file, get XSS" bugs. Report uploads make this relevant.
+  // Stops the browser guessing a response is HTML/JS when it is not.
   { key: "X-Content-Type-Options", value: "nosniff" },
-  // Clickjacking: nobody may frame the dashboard.
+  // Clickjacking: nobody may frame the app (frame-ancestors below says the same).
   { key: "X-Frame-Options", value: "DENY" },
-  { key: "Content-Security-Policy", value: "frame-ancestors 'none'" },
-  // Do not leak the full path of a health page in the Referer header.
+  { key: "Content-Security-Policy", value: contentSecurityPolicy },
+  // Do not leak full paths (conversation ids) in the Referer header.
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   // Everything denied. microphone=(self) used to be here and was load-bearing:
   // voice input called getUserMedia({audio:true}), and denying it broke the mic
