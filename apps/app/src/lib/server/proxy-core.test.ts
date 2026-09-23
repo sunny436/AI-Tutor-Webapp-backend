@@ -227,11 +227,22 @@ describe("session cookie handling", () => {
     expect(del.headers.get("set-cookie")).toContain("Max-Age=0");
   });
 
-  test("any upstream 401 clears the cookie", async () => {
+  test("an upstream 401 `unauthorized` clears the cookie", async () => {
     const { fetchImpl } = upstream(() => json(401, { error: { code: "unauthorized", message: "expired" } }));
     const response = await run(browser("GET", "/v1/me"), "/v1/me", fetchImpl);
     expect(response.status).toBe(401);
     expect(response.headers.get("set-cookie")).toContain("Max-Age=0");
+  });
+
+  test("a wrong current password (401 invalid_credentials) does NOT sign the user out", async () => {
+    const { fetchImpl } = upstream(() => json(401, { error: { code: "invalid_credentials" } }));
+    const request = browser("POST", "/v1/auth/password/change", {
+      body: JSON.stringify({ currentPassword: "wrong", newPassword: "new-password-1" }),
+    });
+    const response = await run(request, "/v1/auth/password/change", fetchImpl);
+    expect(response.status).toBe(401);
+    expect(response.headers.get("set-cookie")).toBeNull();
+    expect(((await response.json()) as { error: { code: string } }).error.code).toBe("invalid_credentials");
   });
 });
 

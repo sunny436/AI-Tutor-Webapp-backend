@@ -225,10 +225,20 @@ export async function proxyRequest(request: Request, segments: string[], deps: P
 
   const responseHeaders = new Headers({ "Cache-Control": "no-store", "X-Request-ID": requestId });
 
-  // A 401 means the session is over, wherever it came from: drop the cookie.
+  // A 401 usually means the session is over — drop the cookie. EXCEPT
+  // `invalid_credentials`: the API also answers a wrong *current* password
+  // (change password, delete account) with 401, and signing someone out for a
+  // typo in a confirmation field would be absurd.
   if (upstream.status === 401) {
     if (timer) clearTimeout(timer);
-    await upstream.body?.cancel().catch(() => undefined);
+    let code = "unauthorized";
+    try {
+      const parsed = JSON.parse(await upstream.text()) as { error?: { code?: unknown } };
+      if (parsed.error?.code === "invalid_credentials") code = "invalid_credentials";
+    } catch {
+      // unreadable 401: treat as a lost session
+    }
+    if (code === "invalid_credentials") return envelope(401, code, requestId);
     return envelope(401, "unauthorized", requestId, { cookies: clearedSessionCookies(https) });
   }
 
