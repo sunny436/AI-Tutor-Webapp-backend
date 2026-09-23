@@ -10,6 +10,7 @@
     "format": "biome format --write .",
     "start": "next start -p 3000 -H 127.0.0.1",
     "typecheck": "tsc --noEmit",
+    "test": "bun test ./src/lib/api",
     "library:generate": "node scripts/generate-library.mjs",
     "prebuild": "node scripts/generate-library.mjs"
   },
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@sentry/nextjs": "^8",
+    "@types/bun": "^1.4.2",
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
