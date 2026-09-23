@@ -9,7 +9,7 @@
  *    `<body>`. That is also why it cannot inherit anything: importing
  *    `globals.css` here is the only way it gets styling at all.
  *
- * 2. It renders outside every provider — no ThemeProvider, no Convex, no
+ * 2. It renders outside every provider — no ThemeProvider, no chat stores, no
  *    Tailwind class from the app's stylesheet if that stylesheet is what broke.
  *
  * It previously rendered `<NextError statusCode={0} />`, Next's built-in error

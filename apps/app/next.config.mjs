@@ -38,7 +38,7 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@v1/ui", "@v1/backend"],
+  transpilePackages: ["@v1/ui"],
   /**
    * Where the build output goes. `.next` unless told otherwise.
    *
