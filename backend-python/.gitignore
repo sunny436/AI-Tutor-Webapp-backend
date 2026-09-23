@@ -1,20 +1,19 @@
 # Python
 __pycache__/
 *.py[cod]
-.venv/
+.pytest_cache/
+.ruff_cache/
+# Any virtualenv, including local backups such as .venv-old/
+.venv*/
 venv/
 env/
 
-# App settings & secrets (never commit your real keys!)
+# App settings & secrets (never commit real keys). Every local env file and its
+# backups are ignored; only the template is tracked.
 .env
+.env.*
+!.env.example
 
-# Data created while running
-data/app.db
-data/vector_store/
-uploads/*
-!uploads/.gitkeep
-
-# OS / editor junk
-.DS_Store
-.idea/
-.vscode/
+# Local data left behind by the retired stack (never tracked)
+data/
+logs/

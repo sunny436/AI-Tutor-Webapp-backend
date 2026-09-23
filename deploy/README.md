@@ -1,117 +1,26 @@
-# Deploying Ayurveda
+# Deploy (target configuration — not yet applied to production)
 
-Ubuntu 24.04. Everything runs under systemd; nothing needs a logged-in user,
-a desktop session, or a GUI application.
+Ubuntu 24.04, systemd, Docker for PostgreSQL. See [INFRASTRUCTURE.md](../INFRASTRUCTURE.md) for the
+layout and [docs/production-migration.md](../docs/production-migration.md) before touching a host
+that runs the legacy stack.
 
-## Rebuild from nothing
+```
+compose/docker-compose.yml         PostgreSQL 16 + pgvector (127.0.0.1:5432, named volume)
+systemd/aichat-postgres.service    starts the compose stack
+systemd/aichat-api.service         migrates, then runs the API on 127.0.0.1:4000
+systemd/aichat-web.service         the web app (frontend repository) on 127.0.0.1:3000
+systemd/aichat-pg-backup.{service,timer}   nightly pg_dump (backup.sh)
+env/{postgres,api,web}.env.example templates for /etc/aichat/*.env (chmod 600, never in git)
+cloudflared/config.yml.template    ingress: the web app hostname only
+install.sh                         idempotent provisioning; never writes secrets or imports data
+infra-check.sh                     read-only comparison of a host with INFRASTRUCTURE.md
+backup.sh                          pg_dump + rotation; restore instructions in its header
+```
 
-This is the path that matters. A fresh host, four steps:
+Fresh host:
 
 ```sh
-git clone https://github.com/akshat948/Ayurveda-Backend-.git /opt/ayurveda/Ayurveda-
-sudo bash /opt/ayurveda/Ayurveda-/deploy/install.sh     # stops: secrets missing
-# drop /etc/ayurveda/*.env in from the password manager
-sudo bash /opt/ayurveda/Ayurveda-/deploy/install.sh     # completes
+sudo BACKEND_REPO=<git url> bash deploy/install.sh    # stops and lists missing /etc/aichat/*.env
+# write /etc/aichat/postgres.env and api.env from deploy/env/
+sudo BACKEND_REPO=<git url> bash deploy/install.sh    # completes; enables postgres, api, backup timer
 ```
-
-Then follow the numbered steps it prints: admin key, auth keys, deployment
-variables, `convex deploy`, `convex import <backup>`, `bun run build`, start.
-
-`install.sh` is idempotent — re-run it after any change. It never writes
-secrets and never imports data, because both are things you want to do
-deliberately rather than as a side effect of provisioning.
-
-## What runs
-
-| Unit | Port | Notes |
-|---|---|---|
-| `convex.service` | 3210 / 3211 | database, via docker compose |
-| `ayurveda-backend.service` | 4000 | FastAPI, `MemoryMax=2600M` |
-| `ayurveda-frontend.service` | 3000 | `bun run start`, production build |
-| `cloudflared.service` | — | outbound tunnel |
-| `convex-backup.timer` | — | nightly 03:15, `Persistent=true` |
-
-```sh
-systemctl status convex ayurveda-backend ayurveda-frontend cloudflared
-journalctl -u ayurveda-backend -f
-```
-
-## Three things that bite
-
-**`NEXT_PUBLIC_*` is compiled in, not read at runtime.** Editing
-`/etc/ayurveda/frontend.env` and restarting keeps serving the old value. Always:
-
-```sh
-cd /opt/ayurveda/ayurveda-frontend/apps/app && bun run build
-systemctl restart ayurveda-frontend
-```
-
-**Never `docker compose down -v`.** The volume is the database. `convex.service`
-uses `stop` for exactly this reason.
-
-**`CONVEX_SITE_ORIGIN` is load-bearing twice.** It is the JWT issuer for
-`auth.config.ts`, and the Python backend builds
-`<site>/.well-known/jwks.json` from it to verify every login. Wrong value =
-sign-in appears to work, then every request 401s.
-
-## Memory
-
-3.8 GB plus 4 GB swap. The Python backend peaks near 2 GB loading bge-m3 and
-`next build` wants 1-2 GB, so **do not build while the backend is running** —
-stop it, build, start it. `MemoryMax` on each unit means a spike kills the
-process that caused it rather than letting the kernel pick a victim, which
-could otherwise be Convex.
-
-## Backups
-
-`convex-backup.timer`, nightly, 30 days retained, `/var/backups/convex`.
-Restore:
-
-```sh
-cd /opt/ayurveda/ayurveda-frontend/packages/backend
-node ../../node_modules/convex/bin/main.js import --replace <archive.zip>
-```
-
-The off-box copy in `deploy/backup.sh` is still commented out. Until it points
-at real storage, the archives share a disk with the database they exist to
-protect — which is not a backup.
-
-## Deploy keys
-
-Both repositories are private, so a fresh host needs read access before
-`install.sh` can clone anything. GitHub deploy keys are per-repository - one key
-cannot serve both - so each gets its own:
-
-```sh
-ssh-keygen -t ed25519 -f /root/.ssh/deploy_backend  -N "" -C deploy-backend@$(hostname)
-ssh-keygen -t ed25519 -f /root/.ssh/deploy_frontend -N "" -C deploy-frontend@$(hostname)
-```
-
-Add each `.pub` under the matching repository, Settings -> Deploy keys, with
-**write access unchecked** - this host only ever reads. Then
-`/root/.ssh/config` maps the two Host aliases the installer clones from:
-
-```
-Host github-backend
-  HostName github.com
-  User git
-  IdentityFile /root/.ssh/deploy_backend
-  IdentitiesOnly yes
-
-Host github-frontend
-  HostName github.com
-  User git
-  IdentityFile /root/.ssh/deploy_frontend
-  IdentitiesOnly yes
-```
-
-`IdentitiesOnly yes` matters: without it ssh offers every key it has and GitHub
-authenticates as whichever one it recognises first, which will be the wrong
-repository.
-
-## Secrets
-
-`/etc/ayurveda/*.env`, mode 600, root owned, never in git. Every variable is
-documented in `deploy/env/*.env.example`. These are not recoverable from the
-repository: `INSTANCE_SECRET`, the Convex admin key, `JWT_PRIVATE_KEY`, the Groq
-key and the SMTP password all need to live somewhere else as well.

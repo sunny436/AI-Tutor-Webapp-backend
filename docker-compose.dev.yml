@@ -1,0 +1,38 @@
+# Local development stack for the chat API. Not for production (see deploy/).
+#
+#   docker compose -f docker-compose.dev.yml up -d
+#
+# postgres  PostgreSQL 16 with the pgvector extension available. The API's
+#           Alembic migrations enable `vector`, `citext` and `pgcrypto`.
+# mailpit   Catches every email the API sends (sign-up and reset codes).
+#           Web UI: http://127.0.0.1:8025
+#
+# Both bind to 127.0.0.1 only. The credentials below are for local development
+# and must never be reused anywhere else.
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: aichat
+      POSTGRES_PASSWORD: aichat
+      POSTGRES_DB: aichat
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aichat -d aichat"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    restart: unless-stopped
+
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "127.0.0.1:1025:1025"
+      - "127.0.0.1:8025:8025"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
