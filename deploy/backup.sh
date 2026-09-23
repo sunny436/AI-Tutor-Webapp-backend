@@ -1,39 +1,32 @@
 #!/usr/bin/env bash
 #
-# Snapshot the self-hosted Convex deployment.
+# Nightly logical backup of the aichat PostgreSQL database (run by aichat-pg-backup.timer).
 #
-# A copy of the docker volume is NOT a substitute: it catches the database
-# mid-write and may not restore. `convex export` produces a consistent snapshot
-# that `convex import` accepts, and it includes file storage.
+#   pg_dump custom format, compressed; restore with:
+#   docker compose --env-file /etc/aichat/postgres.env -f deploy/compose/docker-compose.yml \
+#     exec -T postgres pg_restore -U "$POSTGRES_USER" -d "$POSTGRES_DB" --clean --if-exists < <file>.dump
 #
-# Restore:
-#   cd /opt/ayurveda/ayurveda-frontend/packages/backend
-#   node ../../node_modules/convex/bin/main.js import --replace <archive.zip>
+# A copy of the docker volume is not a backup: it can catch the database mid-write.
 set -euo pipefail
 
-BACKUP_DIR="${BACKUP_DIR:-/var/backups/convex}"
+: "${POSTGRES_USER:?}" "${POSTGRES_DB:?}"
+BACKUP_DIR="${BACKUP_DIR:-/var/backups/aichat}"
 KEEP_DAYS="${KEEP_DAYS:-30}"
-CONVEX_CLI="/opt/ayurveda/ayurveda-frontend/node_modules/convex/bin/main.js"
+COMPOSE=(docker compose --env-file /etc/aichat/postgres.env -f /opt/aichat/backend/deploy/compose/docker-compose.yml)
 
 mkdir -p "$BACKUP_DIR"
-out="$BACKUP_DIR/convex-$(date +%Y-%m-%d-%H%M%S).zip"
+chmod 700 "$BACKUP_DIR"
+out="$BACKUP_DIR/aichat-$(date +%Y-%m-%d-%H%M%S).dump"
 
-# --include-file-storage is not the default. Without it you get the tables and
-# none of the uploaded files - something you discover during a restore rather
-# than during a backup.
-node "$CONVEX_CLI" export --path "$out" --include-file-storage
+"${COMPOSE[@]}" exec -T postgres pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" --format=custom > "$out"
 
-# Fail loudly on an empty archive rather than reporting success and then
-# rotating away the last good copy below.
+# Fail loudly on an empty dump rather than rotating away the last good copy.
 if [ ! -s "$out" ]; then
-  echo "backup: export produced no data at $out" >&2
+  echo "backup: pg_dump produced no data at $out" >&2
   exit 1
 fi
 echo "backup: wrote $out ($(du -h "$out" | cut -f1))"
+find "$BACKUP_DIR" -name 'aichat-*.dump' -type f -mtime "+$KEEP_DAYS" -print -delete
 
-find "$BACKUP_DIR" -name 'convex-*.zip' -type f -mtime "+$KEEP_DAYS" -print -delete
-
-# An off-box copy is what makes this a real backup. Archives sitting on the same
-# disk as the database do not survive the failure they exist for. Point this at
-# real storage and uncomment.
-# rclone copy "$out" remote:ayurveda-convex/
+# Copy off the host for a real backup (a dump on the same disk does not survive the disk).
+# rclone copy "$out" remote:aichat-backups/

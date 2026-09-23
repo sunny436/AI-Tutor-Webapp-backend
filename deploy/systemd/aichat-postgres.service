@@ -1,0 +1,16 @@
+[Unit]
+Description=aichat PostgreSQL 16 + pgvector (docker compose)
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/aichat/backend
+ExecStart=/usr/bin/docker compose --env-file /etc/aichat/postgres.env -f deploy/compose/docker-compose.yml up -d --wait
+ExecStop=/usr/bin/docker compose --env-file /etc/aichat/postgres.env -f deploy/compose/docker-compose.yml stop
+TimeoutStartSec=180
+
+[Install]
+WantedBy=multi-user.target

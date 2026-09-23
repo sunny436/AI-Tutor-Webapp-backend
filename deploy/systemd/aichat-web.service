@@ -1,0 +1,18 @@
+[Unit]
+# The Next.js web app, built from the SEPARATE frontend repository.
+# Enable only after the frontend has been migrated to this API (see docs/production-migration.md).
+Description=aichat web app (Next.js)
+After=aichat-api.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/aichat/frontend/apps/app
+EnvironmentFile=/etc/aichat/web.env
+ExecStart=/root/.bun/bin/bun run start
+Restart=always
+RestartSec=5
+MemoryMax=900M
+
+[Install]
+WantedBy=multi-user.target

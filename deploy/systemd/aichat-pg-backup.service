@@ -1,0 +1,9 @@
+[Unit]
+Description=aichat nightly PostgreSQL backup (pg_dump)
+Requires=aichat-postgres.service
+After=aichat-postgres.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/aichat/postgres.env
+ExecStart=/opt/aichat/backend/deploy/backup.sh

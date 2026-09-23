@@ -1,66 +1,25 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv*/
 
-# dependencies
-node_modules
-.pnp
-.pnp.js
+# Local env files and their backups (only *.env.example templates are tracked)
+.env
+.env.*
+!.env.example
+!**/.env.example
 
-# testing
-coverage
+# Vendor credential briefs (kept local, never committed)
+docs/*rag-api.md
 
-# next.js
-.next/
-out/
-next-env.d.ts
-# Output of a verification build or dev server (NEXT_DIST_DIR=.next-verify,
-# .next-dev-verify), used to prove a change compiles and behaves without
-# rewriting the .next a running `next start` is serving.
-.next-*/
+# Local leftovers of the retired stack
+node_modules/
+.turbo/
+logs/
+apps/
 
-# expo
-.expo/
-dist/
-
-# production
-build
-
-# misc
+# OS / editors
 .DS_Store
 *.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env
-.env*.local
-
-# Vendor credential brief. Contains a LIVE GraphRAG API key and the internal CA,
-# under its own instruction "KEEP SECRET. Do not commit to git". It was untracked
-# but matched no ignore rule, so any `git add -A` would have committed it.
-# The key itself belongs in backend-python/.env, which is already ignored.
-docs/graphrag-api.md
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-
-# turbo
-.turbo
-
-# react-email
-.react-email
-packages/email/public
-!packages/email/public/.gitkeep
-!packages/email/.react-email/.gitkeep
-
-# Storybook
-storybook-static
-tailwind.css
-# runtime logs from scripts/production/start-all.ps1
-logs/
