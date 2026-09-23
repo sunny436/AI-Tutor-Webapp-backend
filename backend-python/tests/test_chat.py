@@ -394,7 +394,24 @@ async def test_logs_never_contain_the_question_or_document_text(client, app, cap
     await ingest_docs(app, {"quokka.md": KB_DOC})
     account = await register(client, app)
     await stream_chat(client, account["headers"], KB_QUESTION)
-    logged = " ".join(f"{r.getMessage()} {r.__dict__}" for r in caplog.records)
-    assert "rag.retrieval" in logged and "rag.graph" in logged  # the events are logged...
-    for secret in ("Aurelian", "Quokka", "7777", "telemetry"):
-        assert secret not in logged  # ...without query or document content
+    # Exactly what the JSON formatter writes: the message, the `extra` fields and any exception
+    # text. LogRecord internals (timestamps, thread ids) are excluded: a timestamp such as
+    # 1790167777.7 once matched "7777" and produced a false positive.
+    standard = set(logging.LogRecord("", 0, "", 0, "", (), None).__dict__) | {"message", "asctime"}
+    records = [
+        (
+            r.name,
+            r.levelname,
+            f"{r.getMessage()} { ({k: v for k, v in r.__dict__.items() if k not in standard}) } {r.exc_text or ''}",
+        )
+        for r in caplog.records
+    ]
+    names = {r.getMessage() for r in caplog.records}
+    assert {"rag.retrieval", "rag.graph"} <= names, sorted(names)  # the events are logged...
+    leaks = [
+        (name, level, blob[:400])
+        for name, level, blob in records
+        for secret in ("Aurelian", "Quokka", "telemetry", "port 7777")
+        if secret in blob
+    ]
+    assert leaks == []  # ...without query or document content (shows the offending record if not)
