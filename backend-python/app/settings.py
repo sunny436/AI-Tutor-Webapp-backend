@@ -85,17 +85,45 @@ class Settings(BaseSettings):
     llm_first_token_timeout_s: float = 60.0
     llm_total_timeout_s: float = 180.0
     llm_fake_token_delay_s: float = 0.0
+    # Total characters sent to the model per turn (system prompt + retrieved context +
+    # history + new message). Characters approximate tokens (~4 chars/token for English;
+    # Devanagari costs ~2.6x more tokens per character). See app/rag/context.py.
+    llm_max_input_chars: int = 48_000
 
     # ---- chat ----
     chat_max_message_chars: int = 16_000
     chat_history_max_messages: int = 50
-    chat_history_max_chars: int = 24_000
+    chat_history_max_chars: int = 24_000  # removed with the RAG context budget (step 5)
     chat_generations_per_minute: int = 20
     chat_generations_per_day: int = 500
     stream_keepalive_s: float = 15.0
     stream_stale_after_s: int = 300
     stream_cancel_poll_s: float = 1.0
-    context_timeout_s: float = 5.0
+    context_timeout_s: float = 5.0  # removed with app/context (step 5)
+
+    # ---- RAG (LangGraph + LangChain retriever over PostgreSQL/pgvector) ----
+    rag_enabled: bool = True
+    rag_top_k: int = 5
+    # Cosine similarity floor (0..1). Uncalibrated default: tune with scripts/eval_retrieval.py.
+    rag_min_score: float = 0.30
+    rag_max_context_chars: int = 8_000
+    rag_retrieval_timeout_s: float = 8.0
+    rag_hnsw_ef_search: int = 100
+    rag_chunk_size: int = 1_000
+    rag_chunk_overlap: int = 150
+    rag_max_document_bytes: int = 5 * 1024 * 1024
+
+    # ---- embeddings ----
+    # "openai_compatible" calls an OpenAI-compatible /embeddings API.
+    # "fake" is a deterministic keyword-hashing embedder for tests and offline development.
+    embedding_provider: Literal["openai_compatible", "fake"] = "openai_compatible"
+    embedding_base_url: str = "https://api.openai.com/v1"
+    embedding_api_key: SecretStr = SecretStr("")
+    embedding_model: str = "text-embedding-3-small"
+    # Must equal the pgvector column dimension (app/db/models.py EMBEDDING_DIMENSIONS).
+    embedding_dimensions: int = 1536
+    embedding_batch_size: int = 64
+    embedding_timeout_s: float = 20.0
 
     @property
     def cors_origins(self) -> list[str]:
@@ -117,6 +145,8 @@ class Settings(BaseSettings):
             problems.append("LLM_PROVIDER=fake is not allowed in production")
         if self.email_backend != "smtp":
             problems.append("EMAIL_BACKEND must be smtp in production")
+        if self.rag_enabled and self.embedding_provider == "fake":
+            problems.append("EMBEDDING_PROVIDER=fake is not allowed in production while RAG is enabled")
         if problems:
             raise RuntimeError("Unsafe production configuration: " + "; ".join(problems))
 

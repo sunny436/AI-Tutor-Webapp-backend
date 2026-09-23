@@ -16,6 +16,13 @@ pgvector>=0.3.6,<1.0
 # Security
 argon2-cffi>=23.1,<26.0
 
-# LLM providers (OpenAI-compatible APIs: Ollima, OpenRouter)
+# LLM and embedding providers (OpenAI-compatible APIs)
 openai>=1.55,<3.0
 httpx>=0.27,<1.0
+
+# RAG: LangChain abstractions (Document, Embeddings, BaseRetriever, text splitters)
+# and LangGraph orchestration. Vectors live in PostgreSQL via pgvector (above);
+# no other vector store is used.
+langchain-core>=1.6,<2.0
+langgraph>=1.2,<2.0
+langchain-text-splitters>=1.1,<2.0

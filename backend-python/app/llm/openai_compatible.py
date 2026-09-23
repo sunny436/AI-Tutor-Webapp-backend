@@ -30,14 +30,14 @@ from app.llm.base import (
 _SECRETISH = re.compile(r"[A-Za-z0-9_\-*.]{24,}")
 
 
-def _redact(text: str) -> str:
+def redact_secrets(text: str) -> str:
     """Some providers echo (partial) API keys in errors; logs must never carry them."""
     return _SECRETISH.sub("[redacted]", text)
 
 
 def map_error(error: BaseException) -> LLMError:
     """Translate SDK/transport exceptions into typed errors. Never leaks vendor text to users."""
-    detail = _redact(f"{type(error).__name__}: {str(error)[:300]}")
+    detail = redact_secrets(f"{type(error).__name__}: {str(error)[:300]}")
     if isinstance(error, LLMError):
         return error
     if isinstance(error, (openai.APITimeoutError, asyncio.TimeoutError, httpx.TimeoutException)):
