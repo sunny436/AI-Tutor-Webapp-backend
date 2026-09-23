@@ -8,8 +8,9 @@ export function ServiceUnavailable() {
   return (
     <main
       id="main"
+      tabIndex={-1}
       role="alert"
-      className="relative flex min-h-dvh w-full flex-col items-center justify-center gap-4 bg-background px-6 py-10 text-center"
+      className="relative flex min-h-dvh w-full flex-col items-center justify-center gap-4 bg-background px-6 py-10 text-center outline-none"
     >
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
       <div className="relative">

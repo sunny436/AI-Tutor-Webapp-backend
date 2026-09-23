@@ -9,7 +9,8 @@ export default function NotFound() {
   return (
     <main
       id="main"
-      className="relative flex min-h-dvh w-full flex-col items-center justify-center gap-4 bg-background px-6 py-10 text-center"
+      tabIndex={-1}
+      className="relative flex min-h-dvh w-full flex-col items-center justify-center gap-4 bg-background px-6 py-10 text-center outline-none"
     >
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
       <div className="absolute right-4 top-4">

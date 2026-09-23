@@ -28,7 +28,7 @@ export default async function AuthLayout({ children }: { children: ReactNode }) 
         </span>
         <ThemeSwitcher />
       </header>
-      <main id="main" className="relative flex flex-1 items-start justify-center px-4 pb-16 pt-6 sm:items-center sm:pt-0">
+      <main id="main" tabIndex={-1} className="relative flex flex-1 items-start justify-center px-4 pb-16 pt-6 sm:items-center sm:pt-0 outline-none">
         <div className="w-full max-w-sm rounded-2xl border border-border bg-card p-6 elev-1 sm:p-8">{children}</div>
       </main>
     </div>

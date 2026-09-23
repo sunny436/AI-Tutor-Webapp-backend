@@ -36,11 +36,17 @@ export function useStickToBottom(
   useEffect(() => {
     const element = scrollRef.current;
     if (!element) return;
+    let lastTop = element.scrollTop;
     const onScroll = () => {
-      const distance = element.scrollHeight - element.scrollTop - element.clientHeight;
-      const near = distance <= NEAR_BOTTOM_PX;
-      stick.current = near;
-      setAtBottom(near);
+      const top = element.scrollTop;
+      const near = element.scrollHeight - top - element.clientHeight <= NEAR_BOTTOM_PX;
+      // Only the reader moving UP lets go. A downward scroll that has not reached
+      // the end yet — "Jump to latest" smooth-scrolling while the reply keeps
+      // growing — must not, or it can land short of the end and stop following.
+      if (near) stick.current = true;
+      else if (top < lastTop) stick.current = false;
+      lastTop = top;
+      setAtBottom(stick.current);
     };
     element.addEventListener("scroll", onScroll, { passive: true });
     return () => element.removeEventListener("scroll", onScroll);

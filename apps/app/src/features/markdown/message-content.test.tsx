@@ -30,12 +30,14 @@ describe("Markdown rendering", () => {
     expect(html).toContain('href="https://auto.example.com"');
   });
 
-  test("GFM tables render as tables inside a scroll container", () => {
+  test("GFM tables render as tables inside one focusable scroll container", () => {
     const html = render("| a | b |\n|---|---|\n| 1 | 2 |");
     expect(html).toContain("<table");
     expect(html).toContain("<th");
     expect(html).toContain("<td");
-    expect(html).toContain("overflow-x-auto");
+    // Keyboard users can scroll a wide table, and there is one scroller, not two.
+    expect(html).toContain('tabindex="0" role="region" aria-label="Table"');
+    expect(html.match(/overflow-x-auto/g)).toHaveLength(1);
   });
 
   test("fenced code: language label, highlighting and a copy button", () => {
@@ -45,6 +47,8 @@ describe("Markdown rendering", () => {
     expect(html).toContain("hljs");
     expect(html).toContain('aria-label="Copy code"');
     expect(html).toContain(">ts<");
+    // A long line scrolls inside the block, so the block must take keyboard focus.
+    expect(html).toContain('<pre tabindex="0" role="region" aria-label="ts code"');
   });
 
   test("a fence without a language is still a block, not inline code", () => {

@@ -47,7 +47,15 @@ export function CodeBlock({
           <span>{copied ? "Copied" : "Copy"}</span>
         </button>
       </div>
-      <pre className="scrollbar-subtle overflow-x-auto p-3 text-[0.8125rem] leading-6">{children}</pre>
+      <pre
+        // biome-ignore lint/a11y/noNoninteractiveTabindex: a scrollable region must be keyboard-focusable to be scrollable
+        tabIndex={0}
+        role="region"
+        aria-label={language ? `${language} code` : "Code"}
+        className="scrollbar-subtle focus-ring-inset overflow-x-auto p-3 text-[0.8125rem] leading-6"
+      >
+        {children}
+      </pre>
     </div>
   );
 }

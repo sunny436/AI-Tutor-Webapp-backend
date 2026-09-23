@@ -134,9 +134,12 @@ const components: Components = {
     <blockquote className="my-3 border-l-2 border-border pl-4 text-text-secondary">{children}</blockquote>
   ),
   hr: () => <hr className="my-6 border-border" />,
+  // Table scrolls sideways inside its own focusable, bordered region.
   table: ({ children }) => (
-    <div className="scrollbar-subtle my-3 overflow-x-auto rounded-xl border border-border">
-      <Table className="min-w-full text-sm">{children}</Table>
+    <div className="my-3">
+      <Table label="Table" className="min-w-full text-sm">
+        {children}
+      </Table>
     </div>
   ),
   thead: ({ children }) => <TableHeader>{children}</TableHeader>,
