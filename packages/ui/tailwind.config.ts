@@ -171,7 +171,10 @@ const config = {
         xl: ["1.375rem", { lineHeight: "1.85rem", letterSpacing: "-0.01em" }],
         "2xl": ["1.75rem", { lineHeight: "2.1rem", letterSpacing: "-0.015em" }],
         "3xl": ["2.125rem", { lineHeight: "2.4rem", letterSpacing: "-0.02em" }],
-        "4xl": ["2.625rem", { lineHeight: "2.85rem", letterSpacing: "-0.022em" }],
+        "4xl": [
+          "2.625rem",
+          { lineHeight: "2.85rem", letterSpacing: "-0.022em" },
+        ],
         // The landing hero is the one heading in the product that fell through
         // to Tailwind's stock 3rem/1 with NO tracking, while every h2 below it
         // gets -0.02em — which is why the hero read looser than the sections

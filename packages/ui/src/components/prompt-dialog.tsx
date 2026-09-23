@@ -79,13 +79,18 @@ export function PromptDialog({
         >
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
-            {description && <DialogDescription>{description}</DialogDescription>}
+            {description && (
+              <DialogDescription>{description}</DialogDescription>
+            )}
           </DialogHeader>
 
           <div className="py-4">
             {/* A real <label>, associated by id. `prompt` has no equivalent, so
                 its text was never programmatically tied to its field. */}
-            <label htmlFor={fieldId} className="mb-1.5 block text-sm font-medium">
+            <label
+              htmlFor={fieldId}
+              className="mb-1.5 block text-sm font-medium"
+            >
               {label}
             </label>
             <Input

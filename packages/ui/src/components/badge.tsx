@@ -33,7 +33,8 @@ const badgeVariants = cva(
         // Provenance. The only variant using the warm accent, and it is
         // monospaced — a citation should read as data, not as a label someone
         // wrote. See the type roles in tailwind.config.ts.
-        source: "border-accent-warm/25 bg-accent-warm-soft font-mono text-accent-warm",
+        source:
+          "border-accent-warm/25 bg-accent-warm-soft font-mono text-accent-warm",
       },
     },
     defaultVariants: { variant: "neutral" },
@@ -45,7 +46,9 @@ export interface BadgeProps
     VariantProps<typeof badgeVariants> {}
 
 function Badge({ className, variant, ...props }: BadgeProps) {
-  return <span className={cn(badgeVariants({ variant }), className)} {...props} />;
+  return (
+    <span className={cn(badgeVariants({ variant }), className)} {...props} />
+  );
 }
 
 export { Badge, badgeVariants };

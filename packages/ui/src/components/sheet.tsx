@@ -20,7 +20,9 @@ const SheetDescription = DialogPrimitive.Description;
 
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & { side?: "left" | "right" }
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & {
+    side?: "left" | "right";
+  }
 >(({ className, children, side = "left", ...props }, ref) => (
   <DialogPrimitive.Portal>
     <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-overlay/55 backdrop-blur-[2px] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
@@ -41,4 +43,11 @@ const SheetContent = React.forwardRef<
 ));
 SheetContent.displayName = "SheetContent";
 
-export { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger };
+export {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetTitle,
+  SheetTrigger,
+};
