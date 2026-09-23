@@ -93,13 +93,11 @@ class Settings(BaseSettings):
     # ---- chat ----
     chat_max_message_chars: int = 16_000
     chat_history_max_messages: int = 50
-    chat_history_max_chars: int = 24_000  # removed with the RAG context budget (step 5)
     chat_generations_per_minute: int = 20
     chat_generations_per_day: int = 500
     stream_keepalive_s: float = 15.0
     stream_stale_after_s: int = 300
     stream_cancel_poll_s: float = 1.0
-    context_timeout_s: float = 5.0  # removed with app/context (step 5)
 
     # ---- RAG (LangGraph + LangChain retriever over PostgreSQL/pgvector) ----
     rag_enabled: bool = True

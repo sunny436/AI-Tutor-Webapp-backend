@@ -162,7 +162,11 @@ async def test_cancel_stops_generation_and_keeps_partial(slow_client, slow_app):
     account = await register(slow_client, slow_app)
     task = asyncio.create_task(stream_chat(slow_client, account["headers"], "long answer please"))
     streaming = await _wait_for_streaming(slow_app)
-    await asyncio.sleep(0.3)
+    llm = slow_app.state.llm
+    for _ in range(200):  # cancel only once the model has demonstrably produced tokens
+        if llm.emitted >= 3:
+            break
+        await asyncio.sleep(0.05)
     r = await slow_client.post(f"/v1/messages/{streaming.id}/cancel", headers=account["headers"])
     assert r.status_code == 200 and r.json()["status"] == "cancelled"
     response, events = await asyncio.wait_for(task, 10)

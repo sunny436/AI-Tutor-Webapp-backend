@@ -35,6 +35,9 @@ class FakeProvider:
         self.fail_before_first = fail_before_first
         self.fail_after = fail_after
         self.calls: list[list[ChatMessage]] = []
+        # Observability for tests: pieces produced so far, and streams that were closed.
+        self.emitted = 0
+        self.closed_streams = 0
 
     async def stream(self, messages: list[ChatMessage], options: GenerationOptions) -> LLMStream:
         self.calls.append(list(messages))
@@ -53,11 +56,17 @@ class FakeProvider:
                 current = ""
         if current:
             pieces.append(current)
-        for index, piece in enumerate(pieces):
-            if self.fail_after is not None and index == self.fail_after[0]:
-                raise self.fail_after[1]
-            if self.token_delay_s:
-                await asyncio.sleep(self.token_delay_s)
-            yield StreamPart(text=piece)
-        prompt_chars = sum(len(m.content) for m in messages)
-        yield StreamPart(usage=Usage(input_tokens=prompt_chars // 4, output_tokens=len(pieces)), finish_reason="stop")
+        try:
+            for index, piece in enumerate(pieces):
+                if self.fail_after is not None and index == self.fail_after[0]:
+                    raise self.fail_after[1]
+                if self.token_delay_s:
+                    await asyncio.sleep(self.token_delay_s)
+                self.emitted += 1
+                yield StreamPart(text=piece)
+            prompt_chars = sum(len(m.content) for m in messages)
+            yield StreamPart(
+                usage=Usage(input_tokens=prompt_chars // 4, output_tokens=len(pieces)), finish_reason="stop"
+            )
+        finally:
+            self.closed_streams += 1

@@ -22,16 +22,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db.models import Document, DocumentChunk, KnowledgeSource
 from app.db.session import Database
 from app.rag.errors import IngestionError, RetrievalError
+from app.rag.types import AccessScope
 
 _FILTER_KEY = re.compile(r"^[a-z0-9_]{1,64}$")
 _SCALARS = (str, int, float, bool)
-
-
-@dataclass(frozen=True)
-class AccessScope:
-    """Whose knowledge may be searched. user_id None = global sources only."""
-
-    user_id: uuid.UUID | None
 
 
 @dataclass(frozen=True)

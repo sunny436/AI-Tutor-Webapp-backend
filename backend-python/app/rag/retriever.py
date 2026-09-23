@@ -13,7 +13,8 @@ from pydantic import ConfigDict, Field
 
 from app.rag.embeddings import embedding_model_id
 from app.rag.errors import EmbeddingError
-from app.rag.store import AccessScope, KnowledgeStore
+from app.rag.store import KnowledgeStore
+from app.rag.types import AccessScope
 
 
 class PgVectorRetriever(BaseRetriever):

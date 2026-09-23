@@ -27,7 +27,8 @@ async def run(args: argparse.Namespace, cases: list[dict]) -> int:
     from app.db.session import Database
     from app.rag.embeddings import build_embeddings
     from app.rag.retriever import PgVectorRetriever
-    from app.rag.store import AccessScope, KnowledgeStore
+    from app.rag.store import KnowledgeStore
+    from app.rag.types import AccessScope
     from app.settings import get_settings
 
     settings = get_settings()

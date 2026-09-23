@@ -6,9 +6,10 @@ User ─┬─ UserSettings
       └─ UsageEvent
 EmailCode and AuthAttempt support sign-up, reset and throttling.
 
-Future AI-Tutor tables (student profiles, documents, chunks with pgvector
-embeddings) are added by new migrations; `metadata` JSONB columns on
-conversations and messages absorb per-feature data without schema churn.
+Knowledge base (RAG):
+KnowledgeSource (global, or private to owner_user_id) ── Document ── DocumentChunk (pgvector embedding)
+
+`metadata` JSONB columns absorb per-feature data without schema churn.
 """
 
 from __future__ import annotations

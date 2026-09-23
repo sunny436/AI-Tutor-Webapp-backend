@@ -1,16 +1,17 @@
-"""What the assistant is for a given turn: prompt, context sources and model.
+"""What the assistant is for a given turn: prompt, retrieval options and model.
 
-THE extension seam for future assistants (for example an AI tutor with a
-curriculum retriever and its own instructions). The generic chatbot returns the
-same configuration for everyone.
+THE extension seam for future assistants (for example a tutor with its own
+instructions and retrieval filters). The generic chatbot returns the same
+configuration for everyone. Retrieval options are chosen here, server-side; a
+client can never supply them.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from app.context.base import ContextProvider
 from app.db.models import Conversation, User
+from app.rag.graph import RetrievalOptions
 
 SYSTEM_PROMPT = """You are a helpful, knowledgeable general-purpose AI assistant.
 - Answer the user's question directly and clearly; explain concepts step by step when that helps.
@@ -24,7 +25,8 @@ SYSTEM_PROMPT = """You are a helpful, knowledgeable general-purpose AI assistant
 @dataclass(frozen=True)
 class AssistantConfig:
     system_prompt: str
-    context_providers: list[ContextProvider] = field(default_factory=list)
+    # None = no retrieval for this assistant. Defaults search every source the user may see.
+    retrieval: RetrievalOptions | None = field(default_factory=RetrievalOptions)
     model: str | None = None  # None = the provider's configured default
     temperature: float | None = None  # None = settings.llm_temperature
 

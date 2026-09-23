@@ -29,6 +29,7 @@ from app.settings import Settings
 ROOT = Path(__file__).resolve().parents[1]
 TEST_DATABASE_URL = os.environ.get("TEST_DATABASE_URL", "postgresql+asyncpg://aichat:aichat@127.0.0.1:5432/aichat_test")
 TABLES = (
+    "document_chunks, documents, knowledge_sources, "
     "usage_events, message_feedback, messages, conversations, auth_attempts, "
     "email_codes, auth_sessions, user_settings, users"
 )
@@ -45,6 +46,7 @@ def make_settings(**overrides) -> Settings:
         database_url=TEST_DATABASE_URL,
         email_backend="memory",
         llm_provider="fake",
+        embedding_provider="fake",
         secret_key="test-secret-key-that-is-long-enough-123456",
         argon2_time_cost=1,
         argon2_memory_kib=1024,
