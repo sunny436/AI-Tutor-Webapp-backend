@@ -1,65 +1,21 @@
-# ============================================================
-#  Python AI backend - all free / open-source libraries.
-#  Install with:  pip install -r requirements.txt
-# ============================================================
-#
-# Restored from the pre-GraphRAG-only architecture. GraphRAG is retrieval
-# only now (/v1/search) — a local LLM writes every final answer, and
-# memory/documents/knowledge are retrieved and assembled locally too.
-#
-# `langgraph`, `langchain` (the umbrella package) and `langchain-community`
-# are deliberately NOT here — grepped against every restored file's actual
-# imports and none of the three is used. `consult/graph.py` is plain async
-# orchestration, not a compiled graph.
+# Runtime dependencies of the chat API. Install with:
+#   python -m pip install -r requirements.txt
 
-# ---- Web server (this backend is a small web API) ----
-fastapi>=0.115.0
-uvicorn[standard]>=0.30.0
-httpx>=0.27.0            # GraphRAG /v1/search, the Convex webhook, Convex memory reads
-python-multipart>=0.0.9  # FastAPI's form-data parser (needed for /upload)
+# Web framework and server
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic[email]>=2.9,<3.0
+pydantic-settings>=2.5,<3.0
 
-# ---- Verifying Convex login tokens (the "direct" path) ----
-pyjwt[crypto]>=2.9.0     # checks the Convex JWT using public keys (JWKS)
+# PostgreSQL (the single source of truth) + pgvector
+sqlalchemy[asyncio]>=2.0.36,<2.1
+asyncpg>=0.30,<1.0
+alembic>=1.14,<2.0
+pgvector>=0.3.6,<1.0
 
-# ---- Talking to the AI models ----
-# Ollima and OpenRouter both speak the OpenAI wire format, so ONE client
-# serves both — only the key and base_url differ (see src/llm.py `_build`).
-#
-# EXACT pins below, not floors, for this whole langchain/chromadb cluster.
-# Not a style preference — a loose `chromadb>=0.5.5` is what let a fresh
-# install resolve chromadb 1.5.9, a major version langchain-chroma>=0.1.4's
-# OWN floor never anticipated. Verified 2026-08-30 via each installed
-# package's declared `Requires-Dist`, not guessed:
-#   langchain-chroma 1.1.0  wants  chromadb>=1.3.5,<2.0.0  and
-#                                  langchain-core>=1.1.3,<2.0.0
-#   langchain-openai 1.4.2  wants  langchain-core>=1.5.3,<2.0.0
-#   langchain-text-splitters 1.1.2  wants  langchain-core>=1.2.31,<2.0.0
-# The five below satisfy all of those simultaneously, and are the exact
-# versions this was tested against — see src/knowledge.py's
-# get_chroma_client() for the concurrency bug this pairing still needed a
-# code fix for, separate from the version question.
-langchain-openai==1.4.2
-langchain-core==1.5.3    # message types (HumanMessage/SystemMessage), imported directly
+# Security
+argon2-cffi>=23.1,<26.0
 
-# ---- Ayurveda / Yoga knowledge search + per-user document retrieval (RAG) ----
-# NO local embedding model. Embeddings run on OpenRouter (config.EMBEDDING_MODEL) —
-# sentence-transformers would drag in torch, a multi-GB install on a 3.8 GB host,
-# for a model nothing loads any more.
-langchain-chroma==1.1.0
-chromadb==1.5.9
-langchain-text-splitters==1.1.2  # chunks uploaded reports (src/user_documents.py)
-
-# ---- Reading uploaded medical documents ----
-pypdf>=5.0.0
-# Rasterises a SCANNED pdf so it can be OCR'd - see _ocr_pdf in
-# src/documents.py. PyMuPDF rather than pdf2image because it renders in
-# process: pdf2image shells out to poppler-utils, a system package that
-# would have to be installed on every host separately from pip.
-pymupdf>=1.24.0
-pdfplumber>=0.11.0
-pytesseract>=0.3.13     # OCR for images (needs the free Tesseract program)
-pillow>=10.4.0
-
-# ---- Helpers ----
-python-dotenv>=1.0.1
-pydantic>=2.9.0
+# LLM providers (OpenAI-compatible APIs: Ollima, OpenRouter)
+openai>=1.55,<3.0
+httpx>=0.27,<1.0

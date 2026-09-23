@@ -1,0 +1,30 @@
+# Tool configuration only (the service is not packaged).
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = [".venv*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "ASYNC", "S", "BLE"]
+ignore = [
+    "B008",   # FastAPI's Depends() in argument defaults is the framework's idiom
+    "S101",   # assert is fine in tests
+    "UP040",
+]
+
+[tool.ruff.lint.isort]
+known-third-party = ["alembic"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "BLE"]
+"scripts/**" = ["S", "BLE"]
+"alembic/**" = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_default_test_loop_scope = "session"
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["e2e: runs a real HTTP server against the test database"]
