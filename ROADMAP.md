@@ -1,72 +1,35 @@
-# Roadmap — frontend
+# Roadmap — web app
 
-Deferred work for the Next.js app and the Convex backend that serves it.
+Deferred work for this repository. The chat API keeps its own roadmap; anything
+about models, retrieval, prompts or the database belongs there.
 
-**The AI backend has its own roadmap.** Retrieval, prompts, safety rules, the
-GraphRAG document service, the Cloudflare tunnel and the self-hosted stacks live
-in the backend repository. Anything about `backend-python/` belongs there.
+## Waiting on the API
 
----
+Each needs a change to the API contract first (details in
+[`docs/frontend-api.md`](docs/frontend-api.md#known-gaps-in-the-contract)).
 
-## 1. Dashboard UX
+- **Show saved 👍/👎 after a reload.** Ratings save, but messages do not carry
+  them back. Needs `feedback` on each message in `GET …/messages`.
+- **A list of signed-in devices** in Settings, with sign-out per device. Today
+  there is only "Sign out other devices". Needs a sessions list endpoint.
+- **Search all conversations.** The sidebar filters the chats already loaded.
+  Needs a search parameter on `GET /v1/conversations`.
 
-Done: home overview with real stat cards and a 7-day chart · command palette (⌘K)
-· notifications centre · pagination on jobs/files/audit/events (20/page via
-`usePaginatedQuery`) · account security (change password, active sessions,
-delete account) · 404 page, error boundary, empty states.
+## In this app
 
-**Remaining:**
-
-- **Settings restructure.** Settings has only two sections (General · Billing).
-  Split into Profile · Security · Notifications · Team · Billing · API keys ·
-  Danger zone — moving the security cards out of General and the team/API-key
-  surfaces off `/platform`.
-- **Polish tail.** Loading skeletons, footer/version, help/docs link,
-  keyboard-shortcut hints.
-
-## 2. Auth and email
-
-- **Email** works over SMTP (`convex/email.ts` + `nodemailer`), pointed at
-  self-hosted Mailpit and verified. The code is still logged as a fallback, so
-  log-mode keeps working when SMTP is unset. For real outbound mail, point
-  `SMTP_*` at Resend or any provider — **no code change**.
-- **Google OAuth** — the button is **removed from the code**, not merely switched
-  off. The credentials are NOT the gap: `AUTH_GOOGLE_ID` and `AUTH_GOOGLE_SECRET`
-  were verified present on the Convex deployment, so the provider was registered
-  and working. **The redirect URI is the gap.** The callback lives on the
-  HTTP-actions origin, `https://ayur-convex-http.namahos.com/api/auth/callback/google`,
-  and that address only exists since Convex moved onto the Ubuntu VM — Google
-  Console still holds the previous one, so Google rejects the round trip before it
-  reaches us. Every click failed, and silently, because the handler discarded the
-  promise. **Restoring it is a Google Console round trip**, not an env-var fix:
-  update the authorised redirect URI, then restore the block from git. Full note
-  at the foot of `auth-form.tsx`.
-
-## 3. Performance (from the read-amplification audit)
-
-Both original findings are fixed; kept as a record of what the numbers were and
-what maintains them, because both regress silently.
-
-- `notifications.unreadCount` read **5001 rows** → now **10** (indexed
-  `by_user_read` + `take(10)`; the bell only needs 0..9 / "9+"). O(10) at any scale.
-- `dashboard.stats` no longer scans every row. A `counters` table is maintained
-  via `bump()` in `jobs.create`/`complete`, `files.saveFile`/`remove`, and member
-  add/remove. Was ~8001 rows per render on an 8k-job workspace. Drift-guarded by a
-  unit test and backfilled via `counters:backfillAll` — **if you add a new writer
-  to jobs, files or members, it must call `bump()`** or the counters silently drift.
-- Still open, low priority: `orgs.members` / `myWorkspaces` do an N+1 `ctx.db.get`
-  per row. Fine at team sizes; revisit only if memberships grow large.
-
-## 4. Audit backlog
-
-Both closed, kept for the record: **BUG-6** — internal seed/test functions gated
-behind `DEV_SEED=1` via `convex/devGuard.ts`. **BUG-8** — pagination, above.
+- **Bundle size.** The reply renderer (react-markdown, KaTeX, highlight.js)
+  ships with the chat. If it grows, load it with `next/dynamic`.
+- **Next.js 15.** The app is on the latest 14.2 patch. A major upgrade (and
+  nonce-based CSP, which would drop `'unsafe-inline'` for scripts) is a separate
+  piece of work.
+- **Browsers.** The end-to-end suite runs Chromium only. Add WebKit and Firefox
+  projects once they are installed on the CI machine.
+- **Extension points, not features yet.** The renderer's component map
+  (`features/markdown/message-content.tsx`) is where citations, diagrams or other
+  rich blocks would plug in.
 
 ## Notes
 
-- `NEXT_PUBLIC_CONVEX_URL` is **baked in at build time**, so a Convex URL change
-  needs a rebuild, not just a restart. This is why a tunnel restart currently
-  breaks the app.
-- `apps/app/src/content/library.json` is **generated in the backend repository**
-  and committed here. Treat it as read-only — content changes happen there.
-- Staging is yours; production promotion is done by the backend team.
+- `bun install` is run with Bun 1.3, but `package.json` still pins
+  `packageManager: bun@1.1.26`. Align them when CI is set up.
+- Production promotion is done by the backend team; nothing here deploys.
