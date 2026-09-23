@@ -3,7 +3,7 @@
 prepare (request transaction)                      generate (independent task)
 ───────────────────────────────                    ────────────────────────────────────
 load / create conversation (owned)                 load the conversation from PostgreSQL
-sweep stale `streaming` rows, 409 if one is live   run the LangGraph RAG graph (retrieve ->
+sweep stale `streaming` rows, 409 if one is live   run the LangGraph turn graph (retrieve ->
 per-user quota (usage_events)                        assemble -> generate), push token events
 insert user message + assistant placeholder        stop on cancel (event or DB flag)
 commit                                             persist content + status + retrieval summary

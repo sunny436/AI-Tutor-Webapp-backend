@@ -43,12 +43,12 @@ from app.settings import Settings
 
 log = get_logger("app.rag")
 
-__all__ = ["RagDependencies", "RagState", "RetrievalOptions", "build_rag_graph"]
+__all__ = ["RagDependencies", "TurnState", "RetrievalOptions", "build_rag_graph"]
 
 NODES = ("receive_query", "retrieve_context", "assemble_context", "generate_answer")
 
 
-class RagState(TypedDict, total=False):
+class TurnState(TypedDict, total=False):
     # inputs
     user_id: uuid.UUID | None
     conversation: list[ChatMessage]  # oldest first; the last item is the new user message
@@ -75,7 +75,7 @@ class RagDependencies:
 def build_rag_graph(deps: RagDependencies):
     settings = deps.settings
 
-    async def receive_query(state: RagState) -> dict:
+    async def receive_query(state: TurnState) -> dict:
         conversation = state.get("conversation") or []
         question = conversation[-1].content if conversation and conversation[-1].role == "user" else ""
         reason = None
@@ -90,7 +90,7 @@ def build_rag_graph(deps: RagDependencies):
         summary = {"status": "skipped", "reason": reason} if reason else {"status": "pending"}
         return {"question": question, "retrieval_summary": summary, "documents": []}
 
-    async def retrieve_context(state: RagState) -> dict:
+    async def retrieve_context(state: TurnState) -> dict:
         summary = dict(state["retrieval_summary"])
         if summary["status"] == "skipped":
             return {}
@@ -136,7 +136,7 @@ def build_rag_graph(deps: RagDependencies):
         )
         return {"documents": documents, "retrieval_summary": summary}
 
-    async def assemble_context(state: RagState) -> dict:
+    async def assemble_context(state: TurnState) -> dict:
         prompt = build_llm_messages(
             state["system_prompt"],
             state.get("conversation") or [],
@@ -166,7 +166,7 @@ def build_rag_graph(deps: RagDependencies):
         )
         return {"llm_messages": prompt.messages, "retrieval_summary": summary}
 
-    async def generate_answer(state: RagState) -> dict:
+    async def generate_answer(state: TurnState) -> dict:
         writer = get_stream_writer()
         stream = await deps.llm.stream(state["llm_messages"], state["generation"])
         writer({"event": "llm_started", "provider": stream.info.name, "model": stream.info.model})
@@ -186,7 +186,7 @@ def build_rag_graph(deps: RagDependencies):
         writer({"event": "llm_finished", "usage": usage, "finish_reason": finish_reason})
         return {"answer": "".join(pieces)}
 
-    graph = StateGraph(RagState)
+    graph = StateGraph(TurnState)
     for name, node in zip(NODES, (receive_query, retrieve_context, assemble_context, generate_answer), strict=True):
         graph.add_node(name, node)
     graph.add_edge(START, NODES[0])
