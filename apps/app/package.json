@@ -10,7 +10,8 @@
     "format": "biome format --write .",
     "start": "next start -p 3000 -H 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "test": "bun test ./src"
+    "test": "bun test ./src",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@v1/ui": "workspace:*",
@@ -30,6 +31,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
     "@sentry/nextjs": "^8",
     "@types/bun": "^1.4.2",
     "@types/node": "^22",
