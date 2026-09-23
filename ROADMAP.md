@@ -10,5 +10,10 @@
    `ContextProvider`, embeddings in pgvector, tutor-specific `AssistantConfig`, citations event.
    See the extension points in [docs/architecture.md](docs/architecture.md).
 
+RAG foundation (done on `rag-langgraph-pgvector`): LangGraph turn graph, LangChain retriever over
+pgvector, ingestion CLI, global/private knowledge sources — see [docs/rag.md](docs/rag.md).
+RAG follow-ups: a real embedding key + `eval_retrieval.py` calibration of `RAG_MIN_SCORE`; citations in
+the public API; PDF/DOCX parsing; pruning of removed files; query rewriting/reranking; project scoping.
+
 Technical follow-ups: LLM-generated conversation titles; staging environment; off-host backup copy;
 backend error reporting (Sentry/GlitchTip); a valid fallback LLM key.

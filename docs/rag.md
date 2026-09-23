@@ -1,0 +1,187 @@
+# Retrieval-augmented generation (RAG)
+
+Native, domain-neutral RAG: **LangGraph** orchestrates each chat turn, **LangChain** provides the
+document / embeddings / retriever / text-splitter abstractions, and **PostgreSQL + pgvector** is the
+only store. No external RAG service and no other vector database is used.
+
+## Dependency direction
+
+```
+FastAPI route ─► ChatService ─► LangGraph graph ─► LangChain retriever ─► KnowledgeStore ─► PostgreSQL/pgvector
+ (app/chat/router)  (app/chat/service)  (app/rag/graph)    (app/rag/retriever)   (app/rag/store)
+                                          │
+                                          └─► LLMProvider protocol (app/llm/base) ─► configured provider
+```
+
+- Routes never import retrieval code; ChatService imports only `app.rag.graph`; the graph imports no
+  provider, store or embeddings module; the store knows nothing about LangChain/LangGraph.
+- `app/main.py` is the composition root that wires concrete implementations.
+- Enforced by `tests/test_architecture_guards.py` (AST import rules).
+
+## The graph (`app/rag/graph.py`)
+
+```
+START → receive_query → retrieve_context → assemble_context → generate_answer → END
+```
+
+| Node | Does |
+|---|---|
+| `receive_query` | Takes the latest user message; decides whether retrieval is skipped (`disabled`, `not_requested`, `empty_query`, `embeddings_unconfigured`). |
+| `retrieve_context` | If the caller can see no chunks for the configured embedding model → skip (`empty_knowledge_base`, no embedding call). Otherwise builds the retriever for this turn and calls it, bounded by `RAG_RETRIEVAL_TIMEOUT_S`. Any failure → status `failed` + reason; the turn continues without context. |
+| `assemble_context` | Builds the LLM input under one character budget (below) and emits the retrieval summary. |
+| `generate_answer` | Streams from the `LLMProvider`; emits `token` events; closes the provider stream on success, error or cancellation. |
+
+Streaming: ChatService consumes `graph.astream(state, stream_mode="custom")` events
+`retrieval` → `llm_started` → `token`… → `llm_finished`. Cancelling the consumer (stop button, client
+disconnect) cancels the running node; nothing is generated afterwards. No retry policy: exactly one
+LLM generation per turn (the provider fallback only switches before the first token).
+
+Extension points (not implemented): query rewriting before `retrieve_context`, reranking after it,
+answer validation after `generate_answer` — each is a new node on an existing edge.
+
+## Schema (migration `0002_knowledge_base`)
+
+| Table | Key columns |
+|---|---|
+| `knowledge_sources` | `name` (unique), `owner_user_id` (NULL = **global**, else **private** to that user) |
+| `documents` | `source_id`, `uri` (unique per source), `title`, `content_hash`, `ingest_signature`, `metadata` |
+| `document_chunks` | `document_id`, `source_id` (denormalised), `ordinal`, `content`, `metadata`, `embedding vector(1536)`, `embedding_model` |
+
+Indexes on `document_chunks`: HNSW `embedding vector_cosine_ops`, btree `(source_id, embedding_model)`,
+GIN `metadata jsonb_path_ops`, unique `(document_id, ordinal)`.
+
+## Access model
+
+- Every search takes an `AccessScope(user_id)` built from the **verified session**. Allowed sources =
+  global sources + the caller's own private sources. `source_names` and `metadata_filter` can only
+  narrow that set.
+- Retrieval options come only from `resolve_assistant_config` (server side); chat requests cannot carry
+  filters (unknown fields are rejected).
+- **Global sources are visible to every signed-in user** — ingest only content suitable for all users.
+  The ingestion CLI makes visibility an explicit choice (`--global` or `--owner-email`).
+- Future project/workspace scoping: add a `project_id` (new migration) and extend `AccessScope`; the
+  retriever and graph do not change.
+
+## Ingestion (`app/rag/ingestion.py`, `scripts/ingest_documents.py`)
+
+```
+file ─► parse (.md/.markdown/.txt, UTF-8, ≤ RAG_MAX_DOCUMENT_BYTES, no NUL bytes, non-empty)
+     ─► chunk (RecursiveCharacterTextSplitter: RAG_CHUNK_SIZE / RAG_CHUNK_OVERLAP)
+     ─► embed ALL chunks (before any write)
+     ─► one transaction: upsert document (row lock) → delete its chunks → insert new chunks
+```
+
+- **Versioning:** `ingest_signature` = sha256(content, title, metadata, embedding model, dimension,
+  chunking). Unchanged signature → skipped, no embedding call. Any change → re-embedded and replaced.
+- **Atomicity:** an embedding or database failure rolls back; the previous version stays intact.
+- **Concurrency:** concurrent ingestion of the same `(source, uri)` serialises on the document row
+  lock; the last commit wins and chunks of two versions never mix.
+- Deleting: `--delete URI`. Files removed from a directory are not pruned automatically.
+- PDF/DOCX are not supported yet.
+
+```sh
+python scripts/ingest_documents.py --source handbook --global docs/handbook/
+python scripts/ingest_documents.py --source my-notes --owner-email me@example.com notes.md
+python scripts/ingest_documents.py --source handbook --global --metadata lang=en docs/handbook/
+python scripts/ingest_documents.py --source handbook --delete intro.md
+```
+
+## Embeddings (`app/rag/embeddings.py`)
+
+- Behind LangChain's `Embeddings` interface; nothing else knows the provider.
+- `openai_compatible`: `EMBEDDING_BASE_URL` / `EMBEDDING_MODEL` (default OpenAI
+  `text-embedding-3-small`, requested at `dimensions=1536`), batched, timed, redacted typed errors.
+- Every vector is checked for length 1536 and finite values. The app refuses to start if
+  `EMBEDDING_DIMENSIONS` ≠ the column dimension.
+- Chunks record `embedding_model`; retrieval searches only chunks of the configured model, so vector
+  spaces never mix. Changing the model makes old chunks invisible (a startup warning counts them) until
+  they are re-ingested — **nothing is re-embedded automatically**.
+- Changing the dimension requires a new migration and a full re-ingest.
+- `fake`: deterministic keyword hashing for tests/offline work. It measures shared vocabulary, **not
+  meaning**; refused in production.
+
+## Retrieval (`app/rag/retriever.py`, `app/rag/store.py`)
+
+`PgVectorRetriever` (a LangChain `BaseRetriever`, async only): blank query → `[]`; embed the query;
+resolve allowed source ids; then
+
+```sql
+WITH hits AS (
+  SELECT id, document_id, source_id, ordinal, content, metadata, embedding <=> :q AS distance
+  FROM document_chunks
+  WHERE embedding_model = :model AND source_id IN (:allowed) [AND metadata @> :filter]
+  ORDER BY embedding <=> :q LIMIT :k)
+SELECT hits.*, documents.title, documents.uri, knowledge_sources.name ... ORDER BY distance
+```
+
+run with `SET LOCAL hnsw.iterative_scan = strict_order` and `hnsw.ef_search = RAG_HNSW_EF_SEARCH`
+(pgvector ≥ 0.8) so filtered searches can stay on the HNSW index. Results below `RAG_MIN_SCORE`
+(cosine similarity) are dropped. The embedding column is never selected.
+
+Planner note: for small or highly selective sources PostgreSQL may prefer the `(source_id,
+embedding_model)` btree plus an exact sort — exact results, cheaper at that size. The query shape is
+proven HNSW-compatible by `test_search_query_can_use_the_hnsw_index`.
+
+Each `Document` carries `chunk_id, document_id, source_id, source, title, uri, ordinal, score,
+embedding_model, attributes` — everything a citation needs.
+
+## Context budget (`app/rag/context.py`)
+
+All sizes in characters (≈ 4 chars/token for English; Devanagari costs ~2.6× more tokens per char):
+
+1. system prompt — always
+2. latest user message — always
+3. retrieved chunks, whole, in rank order, until `RAG_MAX_CONTEXT_CHARS` (default 8,000); a chunk that
+   does not fit ends the context (never cut mid-chunk)
+4. earlier conversation, newest first, whole messages, until `LLM_MAX_INPUT_CHARS` (default 48,000)
+
+The context message tells the model the material may be incomplete or unrelated, to use it only when
+it directly answers, and never to invent sources. Blocks are numbered `[1]..[n]` in the same order as
+`messages.metadata.retrieval.sources`, so citations can be exposed later without changing RAG.
+
+## Failure behaviour
+
+| Situation | Result |
+|---|---|
+| `RAG_ENABLED=false`, no embedding key, empty knowledge base | retrieval skipped, no embedding call; normal reply |
+| embedding error / timeout, database unavailable, retrieval timeout | `failed` + reason; reply without context; persistence unaffected |
+| no chunk above `RAG_MIN_SCORE` | `empty`; reply without context |
+| LLM failure | existing typed error handling (`error` SSE event, partial text kept) |
+
+## Observability
+
+- Log `rag.retrieval`: status, reason, chunk count, top score, `embedding_ms`, `search_ms`, `total_ms`.
+- Log `rag.graph`: retrieval status, context sources/chars, prompt chars, history kept/dropped.
+- Log `ingest document`: status, chunks, duration.
+- The same summary is stored per reply in `messages.metadata.retrieval` (internal; not part of the
+  public API response).
+- Never logged: question text, document or chunk text, keys. (Tested.)
+- **Do not enable LangSmith tracing** (`LANGSMITH_*` / `LANGCHAIN_TRACING*`): it would send prompts and
+  documents to an external service.
+
+## Configuration
+
+`RAG_ENABLED, RAG_TOP_K, RAG_MIN_SCORE, RAG_MAX_CONTEXT_CHARS, RAG_RETRIEVAL_TIMEOUT_S,
+RAG_HNSW_EF_SEARCH, RAG_CHUNK_SIZE, RAG_CHUNK_OVERLAP, RAG_MAX_DOCUMENT_BYTES, LLM_MAX_INPUT_CHARS,
+EMBEDDING_PROVIDER, EMBEDDING_BASE_URL, EMBEDDING_API_KEY, EMBEDDING_MODEL, EMBEDDING_DIMENSIONS,
+EMBEDDING_BATCH_SIZE, EMBEDDING_TIMEOUT_S` — see `backend-python/.env.example`.
+
+## Local development and tests
+
+```sh
+docker compose -f docker-compose.dev.yml up -d
+cd backend-python && .venv\Scripts\python -m alembic upgrade head
+set EMBEDDING_PROVIDER=fake            # offline; or set EMBEDDING_API_KEY for real embeddings
+.venv\Scripts\python scripts\ingest_documents.py --source demo --global path\to\docs
+run_backend.bat                        # chat; replies store retrieval status/sources in metadata
+.venv\Scripts\python -m pytest tests\test_rag_*.py tests\test_architecture_guards.py
+```
+
+Calibrate `RAG_MIN_SCORE` with real embeddings: `python scripts/eval_retrieval.py --cases cases.jsonl`
+(`{"query": ..., "expected_uri": ...}` per line).
+
+## Verification status
+
+| Verified (tests / local runs) | NOT VERIFIED |
+|---|---|
+| schema, migrations, HNSW-compatible query, filters, access boundary, versioning, atomicity, concurrency, graph wiring, skip/failure paths, cancellation, logging hygiene — with a fake embedder | real OpenAI embeddings (no key configured); real retrieval relevance; `RAG_MIN_SCORE` calibration; performance at scale (≥ 100k chunks); production (untouched) |
