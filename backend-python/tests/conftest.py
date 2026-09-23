@@ -18,6 +18,7 @@ from pathlib import Path
 import asyncpg
 import httpx
 import pytest
+from langchain_core.embeddings import Embeddings
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import create_async_engine
 
@@ -161,3 +162,54 @@ async def stream_chat(client, headers, message: str, conversation_id: str | None
         body["conversationId"] = conversation_id
     response = await client.post("/v1/chat/stream", json=body, headers=headers)
     return response, parse_sse(response.text) if response.status_code == 200 else []
+
+
+# ------------------------------------------------------------------ RAG helpers
+class SpyEmbeddings(Embeddings):
+    """Wraps an Embeddings object; counts calls and can be switched to fail."""
+
+    def __init__(self, inner, model: str | None = None):
+        from app.rag.embeddings import embedding_model_id
+
+        self.inner = inner
+        self.model = model or embedding_model_id(inner)
+        self.dimensions = getattr(inner, "dimensions", 1536)
+        self.configured = True
+        self.calls = 0
+        self.fail_with = None
+
+    async def aembed_documents(self, texts):
+        self.calls += 1
+        if self.fail_with:
+            raise self.fail_with
+        return await self.inner.aembed_documents(texts)
+
+    async def aembed_query(self, text):
+        self.calls += 1
+        if self.fail_with:
+            raise self.fail_with
+        return await self.inner.aembed_query(text)
+
+    def embed_documents(self, texts):  # pragma: no cover - async app
+        return self.inner.embed_documents(texts)
+
+    def embed_query(self, text):  # pragma: no cover - async app
+        return self.inner.embed_query(text)
+
+
+async def ingest_docs(
+    app, docs: dict[str, str], *, source: str = "kb", owner_user_id=None, metadata=None, service=None
+):
+    """Ingest {uri: text} into a source through the real IngestionService."""
+    from app.rag.ingestion import IngestionService, parse_document
+
+    store = app.state.knowledge
+    service = service or IngestionService(store, app.state.embeddings, app.state.settings)
+    src = await store.get_or_create_source(source, owner_user_id=owner_user_id)
+    results = []
+    for uri, body in docs.items():
+        document = parse_document(
+            uri, body.encode("utf-8"), max_bytes=app.state.settings.rag_max_document_bytes, metadata=metadata
+        )
+        results.append(await service.ingest(src.id, document))
+    return src, results

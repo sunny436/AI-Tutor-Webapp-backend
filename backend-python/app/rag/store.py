@@ -100,6 +100,51 @@ class KnowledgeStore:
         except Exception as error:  # noqa: BLE001 - classified by the caller
             raise RetrievalError("database_unavailable", type(error).__name__) from error
 
+    async def apply_search_settings(self, session: AsyncSession) -> None:
+        """Keep filtered searches on the HNSW index (pgvector >= 0.8 iterative scans). Transaction-local."""
+        await session.execute(text(f"SET LOCAL hnsw.ef_search = {self.hnsw_ef_search}"))
+        await session.execute(text("SET LOCAL hnsw.iterative_scan = strict_order"))
+
+    @staticmethod
+    def search_statement(
+        vector: list[float],
+        embedding_model: str,
+        allowed_source_ids: list[uuid.UUID],
+        k: int,
+        metadata_filter: dict[str, Any] | None = None,
+    ):
+        """Nearest chunks inside the allowed sources; titles are joined for the k hits only.
+
+        The inner query orders by `embedding <=> :q` directly on document_chunks so the
+        HNSW index (vector_cosine_ops) can drive it; the embedding column is never selected.
+        """
+        hits = (
+            select(
+                DocumentChunk.id,
+                DocumentChunk.document_id,
+                DocumentChunk.source_id,
+                DocumentChunk.ordinal,
+                DocumentChunk.content,
+                DocumentChunk.metadata_.label("metadata"),
+                DocumentChunk.embedding.cosine_distance(vector).label("distance"),
+            )
+            .where(
+                DocumentChunk.embedding_model == embedding_model,
+                DocumentChunk.source_id.in_(allowed_source_ids),
+            )
+            .order_by(DocumentChunk.embedding.cosine_distance(vector))
+            .limit(k)
+        )
+        if metadata_filter:
+            hits = hits.where(DocumentChunk.metadata_.contains(metadata_filter))
+        hits = hits.cte("hits")
+        return (
+            select(hits, Document.title, Document.uri, KnowledgeSource.name.label("source_name"))
+            .join(Document, Document.id == hits.c.document_id)
+            .join(KnowledgeSource, KnowledgeSource.id == hits.c.source_id)
+            .order_by(hits.c.distance)
+        )
+
     async def search(
         self,
         scope: AccessScope,
@@ -117,34 +162,9 @@ class KnowledgeStore:
                 allowed = await self.allowed_source_ids(session, scope, source_names)
                 if not allowed:
                     return []
-                # Keep filtered searches on the HNSW index (pgvector >= 0.8 iterative scans).
-                await session.execute(text(f"SET LOCAL hnsw.ef_search = {self.hnsw_ef_search}"))
-                await session.execute(text("SET LOCAL hnsw.iterative_scan = strict_order"))
-                distance = DocumentChunk.embedding.cosine_distance(vector)
-                hits = (
-                    select(
-                        DocumentChunk.id,
-                        DocumentChunk.document_id,
-                        DocumentChunk.source_id,
-                        DocumentChunk.ordinal,
-                        DocumentChunk.content,
-                        DocumentChunk.metadata_.label("metadata"),
-                        distance.label("distance"),
-                    )
-                    .where(DocumentChunk.embedding_model == embedding_model, DocumentChunk.source_id.in_(allowed))
-                    .order_by(DocumentChunk.embedding.cosine_distance(vector))
-                    .limit(k)
-                )
-                if metadata_filter:
-                    hits = hits.where(DocumentChunk.metadata_.contains(metadata_filter))
-                hits = hits.cte("hits")
+                await self.apply_search_settings(session)
                 rows = (
-                    await session.execute(
-                        select(hits, Document.title, Document.uri, KnowledgeSource.name.label("source_name"))
-                        .join(Document, Document.id == hits.c.document_id)
-                        .join(KnowledgeSource, KnowledgeSource.id == hits.c.source_id)
-                        .order_by(hits.c.distance)
-                    )
+                    await session.execute(self.search_statement(vector, embedding_model, allowed, k, metadata_filter))
                 ).all()
         except RetrievalError:
             raise
