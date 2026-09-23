@@ -1,5 +1,5 @@
 {
-  "name": "ayurveda-frontend",
+  "name": "ai-chat-frontend",
   "private": true,
   "workspaces": ["packages/*", "apps/*", "tooling/*"],
   "scripts": {

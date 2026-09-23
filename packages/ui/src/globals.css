@@ -3,16 +3,14 @@
 @tailwind utilities;
 
 /**
- * Design tokens — "Materia Medica".
+ * Design tokens.
  *
  * THE DIRECTION
  *
- * This product is a materia medica: a curated body of notes about plants and
- * regimens, which it consults and then cites. So the interface is set as a
- * printed reference work rather than as an app — aged paper, ink, hairline
- * rules, numbered sections, marginalia. Nothing here is skeuomorphic; the
- * borrowed thing is the TYPOGRAPHIC DISCIPLINE of a pharmacopoeia, not its
- * texture.
+ * Most of what people do here is read long answers, so the interface is set
+ * like a well-made printed page rather than a dashboard: warm paper, ink,
+ * hairline rules, one green accent. Nothing is skeuomorphic; the borrowed thing
+ * is typographic discipline, not texture.
  *
  * WHAT DID NOT CHANGE
  *
@@ -26,15 +24,13 @@
  * Every foreground/background pair below was measured, not estimated: 46 pairs
  * across both themes, all clearing 4.5:1 for text and 3:1 for focus rings
  * (WCAG 1.4.11). The ratio is recorded beside each colour that carries text.
- * This is a health product, and the destructive token labels the "When To See
- * A Doctor" section of every plan — an unreadable value there is the worst
- * kind to get wrong.
+ * The destructive token carries error messages and "delete" confirmations —
+ * an unreadable value there is the worst kind to get wrong.
  */
 @layer base {
   :root {
-    /* Aged paper, not white. The whole surface is warm and slightly yellowed,
-       which is what lets the green read as botanical rather than as a UI
-       accent sitting on a screen. */
+    /* Warm paper, not white: easier on the eyes over a long reply, and it
+       lets the green read as ink rather than as a UI accent on a screen. */
     --background: 45 35% 93%;
     --foreground: 36 10% 10%; /* 15.27:1 on background */
 
@@ -74,7 +70,7 @@
     --brand-foreground: 45 40% 96%;
     --brand-soft: 150 26% 87%;
 
-    /* 6px. A pharmacopoeia is set with crisp corners; 12px reads as a phone
+    /* 6px. A printed page has crisp corners; 12px everywhere reads as a phone
        app and undoes the printed-page reading before any type is set.
 
        THE SCALE, because the app currently spreads across five radii with no
@@ -102,10 +98,10 @@
     --surface-2: 43 24% 86%;
     --text-secondary: 38 9% 34%; /* 6.13:1 page, 6.54:1 card, 5.86:1 surface */
 
-    /* Ochre. The SECOND accent, with exactly one job: provenance. Green acts,
-       ochre marks. It appears on the note filename and the relevance score and
-       never on a button, so the two never compete. 5.70:1 — the provenance
-       line is 12px, so it is held to the small-text bar, not the large one. */
+    /* Ochre. The SECOND accent, with exactly one job: marking where something
+       came from (a source, a reference). Green acts, ochre marks; it never
+       appears on a button, so the two never compete. 5.70:1 — such lines are
+       small, so it is held to the small-text bar, not the large one. */
     --accent-warm: 28 62% 33%;
     --accent-warm-soft: 38 45% 88%;
 
@@ -119,7 +115,8 @@
     --info: 205 42% 31%; /* 6.20:1 */
     --info-soft: 205 35% 89%;
 
-    /* Herbarium plate inks, in plate order. */
+    /* Chart series, in order: the brand green, then colours that hold their
+       contrast on the paper background. */
     --chart-1: 152 39% 30%;
     --chart-2: 28 62% 38%;
     --chart-3: 205 42% 34%;
@@ -130,39 +127,6 @@
        dark mode would get a WHITE veil — and not black, which reads as soot
        over warm paper. */
     --overlay: 36 24% 8%;
-
-    /**
-     * THE SIGNED-IN CHROME ABOVE A DASHBOARD PAGE.
-     *
-     * A full-height screen — the consultation is the only one today — has to
-     * subtract whatever sits above it, and the amount differs by breakpoint:
-     *
-     *   mobile     sidebar's own bar (h-14, md:hidden) + Topbar (h-14) = 7rem
-     *   md and up  that bar is hidden, so just the Topbar              = 3.5rem
-     *
-     * Those two numbers used to be written into the consult page as
-     * `h-[calc(100dvh-7rem)] md:h-[calc(100dvh-3.5rem)]`, three files away from
-     * the components that decide them. They have already been wrong once: the
-     * page subtracted a flat 3.5rem at both sizes, so on a phone it claimed 48px
-     * more height than it had and — being overflow-hidden — put the composer
-     * under the fold with no way to scroll to it. The message box was simply
-     * unreachable.
-     *
-     * Declared here so the numbers live beside the chrome that causes them. If
-     * Topbar or the mobile bar changes height, THIS IS THE ONE PLACE TO EDIT.
-     *
-     * A variable rather than making the shell `h-dvh overflow-hidden`: that
-     * would be cleaner, but it changes scrolling for all six dashboard pages to
-     * fix one, and the other five scroll correctly today.
-     */
-    --chrome-h: 7rem;
-  }
-
-  /* Tailwind's `md`. Must stay in step with the sidebar bar's `md:hidden`. */
-  @media (min-width: 768px) {
-    :root {
-      --chrome-h: 3.5rem;
-    }
   }
 
   .dark {
@@ -481,7 +445,7 @@
   /* REDUCED MOTION, APPLIED TO EVERYTHING — not just our own classes.
    *
    * Someone who sets this preference frequently does so because motion makes
-   * them ill. On a health product, honouring it for a few hand-written classes
+   * them ill. Honouring it for a few hand-written classes
    * and ignoring it for the rest of the interface is not a partial win. This
    * is why the new staggered page-load above is opt-out by default rather than
    * something that has to be remembered per screen.

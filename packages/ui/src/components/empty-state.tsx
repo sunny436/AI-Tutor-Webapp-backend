@@ -14,9 +14,8 @@ import { cn } from "../utils";
  *   action       the one thing to do next
  *
  * `action` is deliberately not optional-by-convention. An empty state without a
- * way forward is a dead end, and the ones already in this app are exactly that:
- * "No chats yet.", "No notifications" — true, unhelpful, and leaving the reader
- * to work out what to do. If a screen genuinely has no next step, pass `null`
+ * way forward is a dead end: "No chats yet." is true, unhelpful, and leaves the
+ * reader to work out what to do. If a screen genuinely has no next step, pass `null`
  * explicitly so it is a decision rather than an omission.
  *
  * ErrorState lives here too because it is the same object with a different

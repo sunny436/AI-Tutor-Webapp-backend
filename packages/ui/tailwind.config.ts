@@ -21,31 +21,26 @@ const config = {
     extend: {
       // THREE ROLES, AND WHY THE MAPPING HAS TO EXIST AT ALL
       //
-      // `[locale]/layout.tsx` has always loaded Geist Sans and Geist Mono and
-      // put `.variable` on <body>. But `.variable` only DEFINES the custom
-      // properties — it does not set `font-family` on anything. Nothing here
-      // mapped them either, and `globals.css` sets no font on `body`. So two
-      // font files were downloaded and parsed on every page load, and the whole
-      // product rendered in Tailwind's fallback stack (Segoe UI on Windows).
-      // Every `font-mono` in the app resolved to the stock monospace stack too.
+      // next/font's `.variable` only DEFINES a custom property — it does not set
+      // `font-family` on anything, and `globals.css` sets no font on `body`.
+      // Without this mapping every font file is downloaded and parsed and the
+      // app still renders in Tailwind's fallback stack (Segoe UI on Windows).
+      // The app's root layout defines the three variables.
       //
       // The roles are deliberate, not decorative:
       //
-      //   display  ECZAR. Headings and the six plan section titles. Drawn by
-      //            Vaibhav Singh for Devanagari first and Latin second, which
-      //            is the right way round for a product whose knowledge base
-      //            is romanised Hindi. It has real stroke contrast and a
-      //            slightly calligraphic axis, so a health answer reads as a
-      //            reference work rather than as a chat log.
+      //   display  ECZAR. Headings. Real stroke contrast and a slightly
+      //            calligraphic axis, so a page of answer reads as something
+      //            written rather than as a log.
       //
       //   sans     HANKEN GROTESK. Everything the interface says. A humanist
       //            grotesque with open apertures and a warm, slightly
-      //            irregular rhythm — it sits on aged paper without the
+      //            irregular rhythm — it sits on warm paper without the
       //            clinical flatness of a neo-grotesque.
       //
-      //   mono     MARTIAN MONO. Provenance ONLY — note filename and relevance
-      //            score — so a citation reads as data rather than as copy.
-      //            Wide and rectilinear, like a specimen label.
+      //   mono     The system monospace stack. Code is read at length in a
+      //            chat app, and the platform's own code face does that best,
+      //            with nothing to download.
       //
       // Explicitly NOT Inter, Roboto, or Space Grotesk. Those are where every
       // generated interface lands, and landing there would undo the point of
@@ -92,7 +87,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // The herbal accent, as a token rather than a hard-coded emerald shade.
+        // The green accent, as a token rather than a hard-coded emerald shade.
         // The existing emerald utility classes are the same family and are left
         // alone: rewriting 140 call sites would be churn with real regression
         // risk and no visible gain.
@@ -110,8 +105,8 @@ const config = {
         // decision currently hidden inside an opacity, which is why it drifts
         // (/45, /50, /60, /70 and /75 all appear, meaning the same thing).
         "text-secondary": "hsl(var(--text-secondary))",
-        // The second accent. Green acts, saffron marks: this is for provenance
-        // and highlights and never for a button, so the two never compete.
+        // The second accent. Green acts, ochre marks: this is for sources and
+        // highlights and never for a button, so the two never compete.
         "accent-warm": {
           DEFAULT: "hsl(var(--accent-warm))",
           soft: "hsl(var(--accent-warm-soft))",
