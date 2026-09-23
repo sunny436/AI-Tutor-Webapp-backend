@@ -3,7 +3,9 @@
 > **Status: prepared, not run. Nothing here may be executed on the production host without the
 > owner's explicit approval.** Production still runs the legacy stack described below.
 
-## What production runs today (legacy)
+## What production runs today (legacy — historical record)
+
+> Historical: this section describes retired code that is no longer in this repository (removed in PR #1). It is kept only so the cutover and rollback below make sense. It contains no credentials.
 
 The previous product in this repository was an Ayurveda health-consultation chatbot. Its last
 version is preserved at the git tag **`ayurveda-baseline`** (and on `main` of the original remote
