@@ -56,6 +56,15 @@ const nextConfig = {
   distDir: process.env.NEXT_DIST_DIR || ".next",
   // Do not advertise the framework version to scanners.
   poweredByHeader: false,
+  // The previous app lived under /en, /fr and /es, and the chat at /consult.
+  // Temporary redirects, so old bookmarks land somewhere sensible.
+  async redirects() {
+    return [
+      { source: "/:locale(en|fr|es)", destination: "/", permanent: false },
+      { source: "/:locale(en|fr|es)/:path*", destination: "/:path*", permanent: false },
+      { source: "/consult", destination: "/", permanent: false },
+    ];
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

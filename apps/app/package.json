@@ -10,7 +10,7 @@
     "format": "biome format --write .",
     "start": "next start -p 3000 -H 127.0.0.1",
     "typecheck": "tsc --noEmit",
-    "test": "bun test ./src/lib/api ./src/lib/server ./src/lib/safe-redirect.test.ts ./src/features"
+    "test": "bun test ./src"
   },
   "dependencies": {
     "@auth/core": "0.37.0",

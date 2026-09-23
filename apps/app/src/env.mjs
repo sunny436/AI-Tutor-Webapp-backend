@@ -1,26 +1,30 @@
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
+/**
+ * Validated at build (next.config.mjs imports this file).
+ *
+ * The app builds with NO configuration at all: the API address defaults to the
+ * loopback address the API binds to by contract (lib/server/config.ts), and
+ * nothing here is required. Matches the backend's deploy/env/web.env.example.
+ *
+ *   API_BASE_URL          server-only; where the chat API listens
+ *   NEXT_PUBLIC_SITE_URL  the public origin (absolute metadata URLs)
+ *   NEXT_PUBLIC_SENTRY_DSN optional; Sentry is only bundled when it is set
+ */
 export const env = createEnv({
-  shared: {
-    VERCEL_URL: z
-      .string()
-      .optional()
-      .transform((v) => (v ? `https://${v}` : undefined)),
-    PORT: z.coerce.number().default(3000),
+  server: {
+    API_BASE_URL: z.string().url().optional(),
   },
   client: {
-    NEXT_PUBLIC_CONVEX_URL: z.string(),
-    NEXT_PUBLIC_OPENPANEL_CLIENT_ID: z.optional(z.string()),
-    NEXT_PUBLIC_SENTRY_DSN: z.optional(z.string()),
+    NEXT_PUBLIC_SITE_URL: z.string().url().optional(),
+    NEXT_PUBLIC_SENTRY_DSN: z.string().optional(),
   },
   runtimeEnv: {
-    NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
-    NEXT_PUBLIC_OPENPANEL_CLIENT_ID:
-      process.env.NEXT_PUBLIC_OPENPANEL_CLIENT_ID,
+    API_BASE_URL: process.env.API_BASE_URL,
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
     NEXT_PUBLIC_SENTRY_DSN: process.env.NEXT_PUBLIC_SENTRY_DSN,
-    PORT: process.env.PORT,
-    VERCEL_URL: process.env.VERCEL_URL,
   },
+  emptyStringAsUndefined: true,
   skipValidation: !!process.env.CI || !!process.env.SKIP_ENV_VALIDATION,
 });
