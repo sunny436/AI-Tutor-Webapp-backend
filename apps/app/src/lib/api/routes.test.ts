@@ -1,0 +1,107 @@
+/**
+ * The route table must agree with the backend contract.
+ *
+ * `docs/backend-openapi.v1.json` is a verbatim copy of the backend repository's
+ * `docs/openapi.json` (which the backend regenerates from its code and tests for
+ * drift). When the backend changes a route or a request schema, refresh the copy;
+ * this suite then says exactly which frontend call no longer matches.
+ */
+
+import { describe, expect, test } from "bun:test";
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { ROUTES, type RouteKey, buildPath, matchRoute, splitRouteKey } from "./routes";
+
+type OpenApi = {
+  paths: Record<string, Record<string, { requestBody?: { content?: Record<string, { schema?: { $ref?: string } }> } }>>;
+  components: { schemas: Record<string, { properties?: Record<string, unknown>; required?: string[] }> };
+};
+
+const openapi = JSON.parse(
+  readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../../../../../docs/backend-openapi.v1.json"), "utf8"),
+) as OpenApi;
+
+const keys = Object.keys(ROUTES) as RouteKey[];
+const ID = "11111111-1111-4111-8111-111111111111";
+
+describe("route table vs backend contract", () => {
+  for (const key of keys) {
+    const { method, pattern } = splitRouteKey(key);
+    const spec = ROUTES[key] as { body?: string };
+
+    test(`${key} exists in the contract`, () => {
+      expect(openapi.paths[pattern]?.[method.toLowerCase()]).toBeDefined();
+    });
+
+    test(`${key} request body schema matches`, () => {
+      const operation = openapi.paths[pattern]?.[method.toLowerCase()];
+      const ref = operation?.requestBody?.content?.["application/json"]?.schema?.$ref;
+      const schemaName = ref?.split("/").pop();
+      expect(schemaName).toBe(spec.body as never);
+      if (schemaName) expect(openapi.components.schemas[schemaName]).toBeDefined();
+    });
+  }
+});
+
+/**
+ * The exact bodies `lib/api/*` sends, per schema. The API rejects unknown fields
+ * (422), so every key here must be a declared property, and every required
+ * property must be present.
+ */
+const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
+  SignupRequest: [{ email: "a@b.c", password: "x" }, { email: "a@b.c", password: "x", displayName: "A" }],
+  VerifyEmailRequest: [{ email: "a@b.c", code: "123456" }],
+  LoginRequest: [{ email: "a@b.c", password: "x" }],
+  ResendCodeRequest: [{ email: "a@b.c", purpose: "verify_email" }],
+  ForgotPasswordRequest: [{ email: "a@b.c" }],
+  ResetPasswordRequest: [{ email: "a@b.c", code: "123456", newPassword: "x" }],
+  ChangePasswordRequest: [{ currentPassword: "x", newPassword: "y" }],
+  UpdateMeRequest: [{ displayName: "A" }],
+  DeleteMeRequest: [{ password: "x" }],
+  RenameConversationRequest: [{ title: "T" }],
+  ChatRequest: [{ message: "hi" }, { conversationId: ID, message: "hi" }],
+  FeedbackRequest: [{ rating: "up" }],
+};
+
+describe("request bodies the client sends", () => {
+  for (const [schemaName, bodies] of Object.entries(SENT_BODIES)) {
+    test(`${schemaName} bodies use only declared fields`, () => {
+      const schema = openapi.components.schemas[schemaName];
+      expect(schema).toBeDefined();
+      const declared = Object.keys(schema?.properties ?? {});
+      for (const body of bodies) {
+        for (const field of Object.keys(body)) expect(declared).toContain(field);
+        for (const field of schema?.required ?? []) expect(Object.keys(body)).toContain(field);
+      }
+    });
+  }
+
+  test("every body schema in the route table is covered above", () => {
+    for (const key of keys) {
+      const body = (ROUTES[key] as { body?: string }).body;
+      if (body) expect(Object.keys(SENT_BODIES)).toContain(body);
+    }
+  });
+});
+
+describe("buildPath / matchRoute", () => {
+  test("fills UUID params and round-trips through matchRoute", () => {
+    const path = buildPath("GET /v1/conversations/{conversation_id}/messages", { conversation_id: ID });
+    expect(path).toBe(`/v1/conversations/${ID}/messages`);
+    expect(matchRoute("GET", path)?.key).toBe("GET /v1/conversations/{conversation_id}/messages");
+  });
+
+  test("rejects anything that is not a listed route", () => {
+    expect(matchRoute("GET", "/v1/me/settings")).toBeNull();
+    expect(matchRoute("POST", "/v1/chat")).toBeNull();
+    expect(matchRoute("DELETE", "/v1/conversations")).toBeNull();
+    expect(matchRoute("GET", "/health")).toBeNull();
+    expect(matchRoute("GET", "/v1/conversations/not-a-uuid")).toBeNull();
+    expect(matchRoute("GET", `/v1/conversations/${ID}/../../me`)).toBeNull();
+  });
+
+  test("buildPath refuses a non-UUID id", () => {
+    expect(() => buildPath("DELETE /v1/conversations/{conversation_id}", { conversation_id: "../me" })).toThrow();
+  });
+});

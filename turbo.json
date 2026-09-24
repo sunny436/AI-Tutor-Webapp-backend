@@ -8,10 +8,9 @@
     },
     "build": {
       "env": [
-        "RESEND_API_KEY",
-        "LOOPS_ENDPOINT",
-        "LOOPS_API_KEY",
-        "OPENPANEL_SECRET_KEY",
+        "NEXT_PUBLIC_SITE_URL",
+        "NEXT_PUBLIC_SENTRY_DSN",
+        "NEXT_DIST_DIR",
         "SENTRY_AUTH_TOKEN",
         "SENTRY_ORG",
         "SENTRY_PROJECT"

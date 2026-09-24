@@ -14,15 +14,13 @@ import {
 import { Input } from "./input";
 
 /**
- * Ask for one short string — a chat title, a workspace name, an API key label.
+ * Ask for one short string — a chat title, say.
  *
- * Replaces `window.prompt`, which the app uses in three places. Beyond the
- * blocking and styling problems described in `confirm-dialog.tsx`, prompt has
- * two of its own:
+ * Replaces `window.prompt`. Beyond the blocking and styling problems described
+ * in `confirm-dialog.tsx`, prompt has two of its own:
  *
  *   - No validation. It returns whatever was typed, including "" and 400
- *     characters of whitespace, and the caller has to re-check every time. The
- *     rename handler in the sidebar does; the workspace and API-key ones do not.
+ *     characters of whitespace, and every caller has to re-check it.
  *   - No label association, no error text, no `maxLength`. It is a text field
  *     with none of the affordances of a text field.
  *
@@ -79,13 +77,18 @@ export function PromptDialog({
         >
           <DialogHeader>
             <DialogTitle>{title}</DialogTitle>
-            {description && <DialogDescription>{description}</DialogDescription>}
+            {description && (
+              <DialogDescription>{description}</DialogDescription>
+            )}
           </DialogHeader>
 
           <div className="py-4">
             {/* A real <label>, associated by id. `prompt` has no equivalent, so
                 its text was never programmatically tied to its field. */}
-            <label htmlFor={fieldId} className="mb-1.5 block text-sm font-medium">
+            <label
+              htmlFor={fieldId}
+              className="mb-1.5 block text-sm font-medium"
+            >
               {label}
             </label>
             <Input

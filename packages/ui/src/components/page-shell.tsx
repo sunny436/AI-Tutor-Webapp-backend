@@ -5,24 +5,12 @@ import { cn } from "../utils";
 /**
  * One page background, one measure, one heading rhythm.
  *
- * WHAT IT REPLACES
+ * WHY IT EXISTS
  *
- * The app currently has FOUR different page backgrounds, none of which is the
- * `--background` token:
- *
- *   dashboard / files / jobs   `bg-gradient-to-br from-emerald-50 via-white
- *                               to-teal-50 dark:from-zinc-950 dark:via-black
- *                               dark:to-emerald-950/30`   (byte-identical, x3)
- *   login                      the same, with `dark:to-emerald-950/40`
- *   consult                    `.backdrop-wash` — the one designed for this
- *   platform / settings        nothing at all
- *
- * So the same product renders on three different grounds depending on which
- * link you clicked, and `globals.css` says `body { @apply bg-background }`
- * while every one of those overrides it. The dark variant is worse than
- * inconsistent: `dark:via-black` reintroduces the pure black that the token
- * comment in globals.css explicitly rejects, because it crushes every shadow and
- * makes elevation impossible to express.
+ * Pages that each choose their own background end up on several different
+ * grounds depending on which link was clicked — and ad-hoc gradients drift into
+ * pure black in dark mode, which the tokens in globals.css reject because it
+ * crushes every shadow and makes elevation impossible to express.
  *
  * `backdrop-wash` is the designed answer — two very low-opacity radial
  * gradients, sage from the top-left and saffron from the top-right, over the

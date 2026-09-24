@@ -9,7 +9,7 @@
  *    `<body>`. That is also why it cannot inherit anything: importing
  *    `globals.css` here is the only way it gets styling at all.
  *
- * 2. It renders outside every provider — no ThemeProvider, no Convex, no
+ * 2. It renders outside every provider — no ThemeProvider, no chat stores, no
  *    Tailwind class from the app's stylesheet if that stylesheet is what broke.
  *
  * It previously rendered `<NextError statusCode={0} />`, Next's built-in error
@@ -26,6 +26,8 @@
 import * as Sentry from "@sentry/nextjs";
 import { useEffect } from "react";
 
+import { APP_NAME } from "@/lib/brand";
+
 export default function GlobalError({
   error,
   reset,
@@ -40,7 +42,7 @@ export default function GlobalError({
   return (
     <html lang="en">
       <head>
-        <title>Something went wrong · Ayurveda</title>
+        <title>{`Something went wrong · ${APP_NAME}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body style={{ margin: 0 }}>
@@ -75,7 +77,7 @@ export default function GlobalError({
                 fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
               }}
             >
-              Ayurveda
+              {APP_NAME}
             </p>
             <h1
               style={{
@@ -88,12 +90,11 @@ export default function GlobalError({
             >
               Something went wrong
             </h1>
-            {/* No stack trace, no digest, no jargon — this screen is read by a
-                person trying to get help with their health, and the exception
-                has already gone to Sentry where it is useful. */}
+            {/* No stack trace, no digest, no jargon: the exception has already
+                gone to Sentry, where it is useful. */}
             <p style={{ margin: ".65rem 0 0", color: "var(--ge-soft)", lineHeight: 1.6 }}>
-              The page could not be loaded. Your consultations are saved and
-              nothing has been lost.
+              The page could not be loaded. Your chats are saved and nothing has
+              been lost.
             </p>
             <div
               style={{

@@ -1,152 +1,122 @@
-# Ayurveda — frontend
+# Assistant — web app
 
-The web app for an Ayurveda and Yoga consultation assistant. Next.js 14 (App
-Router), React 18, TypeScript, Tailwind 3, shadcn/Radix.
+A ChatGPT-style chat app: sign in, chat with an AI assistant, keep your
+conversations. Next.js 14 (App Router), React 18, TypeScript, Tailwind 3,
+Radix.
 
-This repository is the **frontend only**. The AI backend — prompts, retrieval,
-safety rules — lives elsewhere and is reached over HTTP. You do not need it to
-work on this.
+This repository is the **frontend only**. Accounts, conversations, messages and
+the model all live in the chat API, a separate repository (FastAPI +
+PostgreSQL). The browser never talks to that API directly: this app's own
+`/api/v1/*` routes forward to it — see [`docs/frontend-api.md`](docs/frontend-api.md).
 
 ---
 
 ## Run it
 
+You need [Bun](https://bun.sh) and the chat API running locally. The backend
+repository's README sets it up, with a fake LLM for offline work and Mailpit to
+catch sign-up and password-reset emails.
+
 ```bash
 bun install
-cp apps/app/.env.example apps/app/.env.local
-
-cd packages/backend && npx convex dev    # creates YOUR own free Convex project
-                                         # and prints NEXT_PUBLIC_CONVEX_URL
-
-bun dev
+bun dev          # http://localhost:3000
 ```
 
-**You do not need the Python backend.** The default
-`NEXT_PUBLIC_CONSULT_PROVIDER=mock` serves a canned conversation in-process — a
-greeting, a follow-up question, then a full six-section plan — with no API keys
-and no network.
+Open **`http://localhost:3000`**, not `127.0.0.1:3000`. Next.js rewrites
+127.0.0.1 to `localhost` in redirects, and the session cookie is per host name,
+so a session started on 127.0.0.1 is lost at the first redirect.
 
-**You do need Convex.** It stores login, chat history and settings, and the build
-fails without `NEXT_PUBLIC_CONVEX_URL`: it is validated in `src/env.mjs` and the
-client is constructed at module load, so there is no blank-value path. Use your
-own free project, never production.
+With no configuration the app expects the API at `http://127.0.0.1:4000`. To
+change anything, copy `apps/app/.env.example` to `apps/app/.env.local`:
 
-```
-NEXT_PUBLIC_CONSULT_PROVIDER=mock   # canned data, in-process   (default)
-NEXT_PUBLIC_CONSULT_PROVIDER=local  # a real Python backend
-```
-
-Switching between them is that one variable. No UI code changes.
+| Variable | Default | What it is |
+|---|---|---|
+| `API_BASE_URL` | `http://127.0.0.1:4000` | Where the chat API listens. **Server-only** — never prefix it with `NEXT_PUBLIC_` |
+| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | The app's public origin, for absolute URLs in metadata. Set it in production |
+| `NEXT_PUBLIC_SENTRY_DSN` | empty | Error reporting. Sentry is only bundled when this is set |
+| `NEXT_DIST_DIR` | `.next` | Build output directory (see below) |
 
 ---
 
-## The API contract
+## How it fits together
 
-[`docs/api-contract.md`](docs/api-contract.md) is the interface between this app
-and the backend. It is the only thing you should rely on.
+```
+apps/app/src/
+  app/                    routes: (auth) login/signup · (app) chat, /c/[id], settings · api/v1 (the BFF)
+  lib/api/                the client: typed routes, errors, SSE parser, auth/conversation/chat calls
+  lib/server/             server-only: the BFF proxy, session cookie, page gate, public origin
+  features/chat/          chat store (per conversation), message list, composer, streaming
+  features/conversations/ the sidebar's conversation list
+  features/markdown/      the reply renderer (GFM, code highlighting, KaTeX, sanitised)
+  components/             app shell, sidebar, auth form, settings
+packages/ui/              shared components and the design tokens
+docs/                     how the app uses the API; a copy of the API's OpenAPI schema
+```
 
-It is **hand-written**, and it is the whole contract. The generated
-`consult-contract.json` is gone: it came from the backend's `export_contract.py`,
-which read Pydantic models that the GraphRAG migration deleted, so no generated
-file is coming back.
-
-`contract.test.ts` reads the `json contract` block at the bottom of that document
-and fails if the TypeScript here stops matching it. It also parses the prose
-tables back out and checks them against the block, because a hand-written
-contract — unlike a generated one — can contradict itself.
-
-If that test goes red, the contract changed — talk to the backend team rather
-than editing types to make it pass. If you are the one changing the wire, edit
-the prose and the block in the same commit.
-
----
-
-## What you must not break
-
-Each of these is load-bearing and each has already caused a real failure. None is
-a style choice.
-
-**1. `problem` vs `freeText`.** Send `freeText` when `context.phase` is one of
-`CONSULTING`; send `problem` otherwise. Backwards, and every follow-up starts a
-brand-new consultation instead of continuing.
-
-**2. `context` must round-trip.** The backend is stateless. Whatever it returns,
-send back next turn. Drop it and the assistant greets the user again on every
-message.
-
-**3. No cards, chips or option pickers in the chat.** The consultation used to be
-a questionnaire; it is a conversation now, deliberately. Do not reintroduce a
-button-based flow.
-
-**4. Do not display per-answer citations.** The backend still returns `sources`
-and the components still exist, but nothing renders them, by decision. If that
-changes, the copy on the landing and login pages has to change with it — those
-pages currently make no claim about showing sources, and they must not start
-making one that is untrue.
-
-**5. Keep `id="main"`, the skip link, and `lang` driven by the route.** Three
-WCAG Level A failures were found by measurement and fixed. The dashboard sidebar
-renders fourteen links before `<main>`, so the skip link is not decoration.
-
-**6. Keep `form.w-72` and `w-64` on the auth forms.** The end-to-end tests use
-those exact classes to tell the password form from the one-time-code form.
-
-**7. Style through the design tokens** in `packages/ui/src/globals.css`, not raw
-colours. Every foreground/background pair in that palette is contrast-checked and
-clears 4.65:1. Hardcoded hex values silently break dark mode and accessibility.
-
----
-
-## The Library
-
-`/library` publishes the curated knowledge notes as public pages. They are read
-from `apps/app/src/content/library.json`, which is **generated** in the backend
-repository and committed here.
-
-Treat it as read-only: editing it by hand will be overwritten, and the backend's
-test fails if it stops matching the source notes. Content changes happen there.
-
-These pages are Hinglish and carry `lang="hi-Latn"`. That is deliberate — it is
-romanised Hindi, not English, and mislabelling it makes screen readers pronounce
-it as gibberish and search engines rank it for the wrong queries.
+- **Sessions.** The API's session token is kept in an httpOnly cookie that the
+  BFF sets and reads. Page JavaScript never sees it, and nothing about the
+  session is stored in `localStorage` or `sessionStorage`.
+- **History belongs to the API.** Sending a message posts only
+  `{conversationId?, message}`; the API stores both sides of the conversation.
+  The app keeps unsent drafts in memory, nothing else.
+- **Streaming.** Replies arrive as server-sent events through the BFF. Each
+  conversation streams independently, so switching chats never stops a reply,
+  and a token re-renders only the message it belongs to.
+- **Replies are rendered, never trusted.** The Markdown renderer shows raw HTML
+  as text, allows only `http`, `https` and `mailto` links, turns images into
+  links, and runs KaTeX with `trust: false`.
 
 ---
 
 ## Tests
 
 ```bash
-bun apps/app/src/lib/library.test.ts           # the published notes
-bun apps/app/src/lib/consult/client.test.ts    # where requests go, bot_id, mock
-bun apps/app/src/lib/consult/contract.test.ts  # TS still matches the backend
-bun apps/app/src/lib/consult/central.test.ts   # the alternate provider's reader
-
-cd apps/app && bun run typecheck && bun run lint
+cd apps/app
+bun run test        # unit tests (bun test): API client, SSE parser, BFF proxy, chat store, renderer…
+bun run typecheck
+bun run lint
 ```
 
-Browser suites live in the backend repository, because they need a running stack.
+**End-to-end** (Playwright, Chromium): a production build of this app on :3100
+against a **local** API on :4100 with the fake LLM, reading codes from Mailpit.
+It never runs against a remote API — the setup refuses any non-loopback address.
+
+```bash
+cd apps/app
+bunx playwright install chromium    # once
+bun run test:e2e
+```
+
+Start the API on :4100 first (see `apps/app/playwright.config.ts` for the
+environment it needs), or set `E2E_BACKEND_DIR` to the backend's
+`backend-python` directory and the suite starts it. Test accounts are
+`e2e-…@example.com` and delete themselves.
 
 ---
 
-## Layout
+## Building next to a running server
 
-```
-apps/app/          the Next.js application
-packages/ui/       shared components and the design tokens
-packages/backend/  Convex schema and functions
-tooling/           shared TypeScript configs
-docs/              the API contract
+`next build` rewrites `.next` in place, which breaks a `next start` serving from
+the same directory. To check that a change builds without touching it:
+
+```bash
+cd apps/app
+NEXT_DIST_DIR=.next-verify bun run build
 ```
 
 ---
 
-## What is next
+## What you must not break
 
-[`ROADMAP.md`](ROADMAP.md) is the deferred work for this repository. The AI
-backend keeps its own; anything about retrieval, prompts or safety lives there.
-
----
-
-## Deploys
-
-Staging is yours. **Production is not** — promoting a build to the live site is
-done by the backend team, gated on their regression suite. Merge freely here.
+- **No token in the browser.** Session tokens stay in the httpOnly cookie and
+  the BFF. Do not add an endpoint or a hook that hands one to page code.
+- **The BFF is an allowlist.** Add a route to `lib/api/routes.ts` only if it is
+  in the backend's contract; `routes.test.ts` checks that against
+  `docs/backend-openapi.v1.json`.
+- **Never send history, never re-send a message.** A failed or cut-off stream
+  is shown as failed and re-read; generating again is the user's choice
+  (Regenerate).
+- **No raw HTML in replies.** Do not add `rehype-raw` or loosen the sanitise
+  schema without a security review.
+- **Keep `id="main"` and the skip link** on every page, and style through the
+  design tokens in `packages/ui/src/globals.css` rather than raw colours.
