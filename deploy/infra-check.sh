@@ -35,7 +35,7 @@ done
 echo "health"
 curl -fsS "$API/health" >/dev/null && ok "api /health" || bad "api /health"
 curl -fsS "$API/ready"  >/dev/null && ok "api /ready (database reachable)" || bad "api /ready"
-curl -fsS -o /dev/null -w '%{http_code}' "$API/docs" | grep -q 404 && ok "api docs hidden" || bad "api docs exposed"
+curl -sS -o /dev/null -w '%{http_code}' "$API/docs" | grep -q 404 && ok "api docs hidden" || bad "api docs exposed"
 if [ "$web_enabled" -eq 1 ]; then
   curl -fsS -o /dev/null http://127.0.0.1:3000/ && ok "web app answers on :3000" || bad "web app not answering on :3000"
 fi
