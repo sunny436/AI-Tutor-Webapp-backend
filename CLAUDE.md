@@ -12,7 +12,9 @@ repository, and each commit is one release** of both halves:
   `apps/app`, `packages/ui`, `tooling/typescript`. `frontend/CLAUDE.md` has the frontend detail;
   Claude Code loads it when you work there.
 
-They are two processes, but they are tested, deployed and rolled back together.
+They are two processes, but they are tested, deployed and rolled back together. **AI Tutor is
+released as one application. Frontend and backend are never independently deployed to production.**
+Never add a command, script or unit that deploys only one half.
 
 History:
 - The frontend was a separate repository (`sunny436/AI-Tutor-Webapp-frontend`). It was imported with
@@ -29,7 +31,9 @@ bun run setup | dev | dev:backend | dev:frontend       # dev: Docker db + migrat
 bun run test          # backend pytest + frontend typecheck + unit tests (incl. the API contract test)
 bun run test:e2e      # Playwright + axe against an API on :4100 with the fake LLM (starts it from backend/)
 bun run lint | build | contract                        # contract: regenerate docs/openapi.json + frontend check
-bun run deploy | rollback                              # production (docs/deployment.md, docs/rollback.md)
+bun run deploy | rollback | status                     # production (docs/deployment.md, docs/rollback.md)
+bun run lock:backend  # after editing backend/requirements.txt: regenerate the hashed requirements.lock
+bun run rehearse      # the release model on a throwaway systemd container (Docker, ~45 min)
 ```
 
 Directly, in `backend/` (Windows paths; Linux `.venv/bin/python`):
@@ -113,16 +117,23 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 
 ## Deployment and production
 
-- **What gets deployed:** `bun run deploy` (`deploy/deploy.sh`) takes one commit on `main`, sends
-  `git archive` of it to the host, and runs that release's own `deploy/server/release.sh`.
-- **The release steps:** build into `/opt/aichat/releases/<commit>/` → migrations (only with
-  `--with-migrations`) → trial API :4101 and web :3001 on the real database, proving web → API →
-  database by request id → atomic `/opt/aichat/current` switch → restart API, then web → live
-  checks → automatic rollback on failure.
-- **Same commit, always:** the units run from `/opt/aichat/current`, so frontend and backend are
-  always the same commit.
-- **Rollback:** `bun run rollback` switches both back together. Details in `docs/deployment.md`,
-  `docs/rollback.md` and `deploy/README.md`.
+- **What gets deployed:** `bun run deploy` (`deploy/deploy.sh`) takes a commit of GitHub's `main`
+  (the tip by default) whose three CI jobs passed on that exact commit (`deploy/ci-gate.mjs`, fail
+  closed), sends `git archive` of it plus a file manifest to the host, and runs it there as a
+  detached systemd unit (`deploy/server/bootstrap.sh` → that release's `deploy/server/release.sh`).
+- **The release steps:** verify every file against the commit → build into
+  `/opt/aichat/releases/<commit>/` (backend from the hashed `requirements.lock`, frontend on the
+  pinned Node) → migrations (only with `--with-migrations`, after a backup) → trial API :4101 and
+  web :3001 on the real database, proving web → API → database by request id → switch: stop web,
+  flip `/opt/aichat/current`, restart API, start web (≈7–8 s outage, never mixed) → prove the
+  invariant → automatic rollback on failure.
+- **Release identity:** each release has a `RELEASE` file; the API's `/health` and the web app's
+  `/api/health` (loopback only) report it. `bun run status` checks pointer = both reported
+  releases = every process's release = files match the commit, and prints `INVARIANT OK`/`FAIL`.
+- **Pinned runtimes:** `.node-version` (the web app runs on Node, not Bun's runtime: Bun does not
+  signal a client disconnect, which breaks stop-on-leave), `.bun-version`, `backend/requirements.lock`.
+- **Rollback:** `bun run rollback` switches both back together, to the previously live release
+  (`LIVE-STACK`). Details in `docs/deployment.md`, `docs/rollback.md` and `deploy/README.md`.
 - **Host:** Ubuntu 24.04 VM `10.1.30.37` (`ssh root@10.1.30.37`). It has no GitHub access. The public
   site `ayur.namahos.com` goes through a Cloudflare Tunnel to web `127.0.0.1:3000`. The API is on
   `127.0.0.1:4100` (4000 is dev), and PostgreSQL is Docker on `127.0.0.1:5432`.
@@ -137,6 +148,8 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **Never, by hand:** edit a release, repoint `current` (except the emergency steps in
   `docs/rollback.md`), run migrations outside `release.sh`, `docker compose down -v`, or change
   `API_BASE_URL` in `web.env` (the frontend's default `:4000` is the old API on that host).
+- **Changing the deploy scripts:** prove it with `bun run rehearse`; the host scripts run from the
+  release being deployed, so a fix only takes effect with the release that contains it.
 
 ## Repo hygiene
 

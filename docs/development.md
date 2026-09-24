@@ -1,7 +1,8 @@
 # Local development
 
 One clone has everything: `backend/` (FastAPI) and `frontend/` (Next.js). Requirements: Python 3.12,
-[Bun](https://bun.sh) 1.3.x, Docker (Docker Desktop on Windows). Run the commands from the repository
+[Bun](https://bun.sh) 1.3.14 (`.bun-version`), Node 24 (`.node-version`; the end-to-end tests run the
+web app on Node, as production does), Docker (Docker Desktop on Windows). Run the commands from the repository
 root; on Windows use Git Bash or PowerShell.
 
 ## Set up and run
@@ -29,12 +30,14 @@ default it calls the API at `http://127.0.0.1:4000`.
 
 | Command (repository root) | What it runs |
 |---|---|
-| `bun run test` | backend pytest (own `aichat_test` database) + frontend typecheck and unit tests |
+| `bun run test` | backend pytest (own `aichat_test` database) + frontend typecheck and unit tests + the deploy gate's tests |
 | `bun run test:e2e` | Playwright + axe end-to-end: a production build on :3100 against an API on :4100 with the fake LLM, codes read from Mailpit. Starts the API from `backend/` unless one is already running. |
 | `bun run lint` | ruff check + format check, Biome |
 | `bun run build` | frontend production build + "is `docs/openapi.json` current?" |
 | `bun run contract` | regenerate `docs/openapi.json` from the backend, then the frontend contract test |
-| `bun run deploy` / `bun run rollback` | production ([deployment.md](deployment.md), [rollback.md](rollback.md)) |
+| `bun run lock:backend` | regenerate `backend/requirements.lock` (hashed pins, Linux + Python 3.12, in Docker) after changing `backend/requirements.txt` |
+| `bun run deploy` / `bun run rollback` / `bun run status` | production, always both halves together ([deployment.md](deployment.md), [rollback.md](rollback.md)) |
+| `bun run rehearse` | the release model end to end on a throwaway systemd container (Docker, ~45 min) |
 
 `scripts/run.mjs` implements them over the existing tools, so the underlying commands still work:
 in `backend/`, `.venv\Scripts\python -m pytest tests/test_chat.py` (Linux: `.venv/bin/python`); in
@@ -44,7 +47,17 @@ Don't run `bun install` at the repository root: the Bun workspace root is `front
 The backend suite creates and migrates its own database `aichat_test` (override with
 `TEST_DATABASE_URL`; the name must end in `_test`), truncates tables before each test, uses a fake
 LLM and an in-memory mailbox, and never touches the development database. CI (GitHub Actions) runs
-the backend and frontend jobs on every push and pull request.
+three jobs on every push and pull request: Backend (lint, contract, tests), Frontend (typecheck, lint,
+tests incl. contract, build) and Integration (end-to-end). A commit can only be deployed when all
+three passed on that exact commit.
+
+## Dependencies
+
+Production and CI install the backend from `backend/requirements.lock`: every package at one exact
+version with its hashes (`pip install --require-hashes`). `requirements.txt` holds the allowed
+ranges; after changing it, run `bun run lock:backend` and commit both (a test fails if they
+disagree). The frontend is locked by `frontend/bun.lock`. The runtimes are pinned by `.node-version`
+and `.bun-version`, which CI and every release use.
 
 ## Changing the API
 
