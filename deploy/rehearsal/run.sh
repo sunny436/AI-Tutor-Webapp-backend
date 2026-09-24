@@ -113,7 +113,7 @@ cat > /root/poll.sh <<'P'
 rel() { curl -fsS --max-time 2 "$1" 2>/dev/null | python3.12 -c 'import json,sys; print(json.load(sys.stdin).get("release") or "-")' 2>/dev/null || echo -; }
 while true; do echo "$(date +%s.%N) $(rel http://127.0.0.1:4100/health) $(rel http://127.0.0.1:3000/api/health)"; sleep 0.2; done
 P
-nohup bash /root/poll.sh > /root/poll.log 2>&1 &
+systemd-run --unit=rehearsal-poller --quiet -p StandardOutput=file:/root/poll.log -p StandardError=journal bash /root/poll.sh
 EOF
 
 # ------------------------------------------------------------------ helpers
@@ -240,10 +240,14 @@ for _ in $(seq 1 600); do [ "$(live)" = "$R6" ] && status_ok_on "$R6" s10 && bre
 if status_ok_on "$R6" s10; then pass "S10 killed the local deploy mid-way: the host finished it; $(short "$R6") live, invariant holds"; else fail "S10 (see $LOGS/s10.log)"; fi
 
 step "poller: did the web app and the API ever report different releases at the same moment?"
-ssh rehearsal 'kill $(pgrep -f /root/poll.sh) 2>/dev/null; cat /root/poll.log' > "$LOGS/poll.log"
+ssh rehearsal 'systemctl stop rehearsal-poller; cat /root/poll.log' > "$LOGS/poll.log"
 samples=$(awk '$2 != "-" && $3 != "-"' "$LOGS/poll.log" | wc -l)
 mixed=$(awk '$2 != "-" && $3 != "-" && $2 != $3' "$LOGS/poll.log" | wc -l)
 if [ "$mixed" = 0 ] && [ "$samples" -gt 100 ]; then pass "poller: $samples samples with both apps up, 0 with different releases"; else fail "poller: $mixed of $samples samples showed different releases"; fi
+# Every stretch (after the first release) in which either app did not answer: the switches' outages.
+echo "unavailable (seconds, one per switch or failed release): $(awk '{ up = ($2 != "-" && $3 != "-") }
+  up { if (down) printf "%.1f ", $1 - down; down = 0; seen = 1; next }
+  seen && !down { down = $1 }' "$LOGS/poll.log")"
 
 step "result"
 printf '%s\n' "${RESULTS[@]}"
