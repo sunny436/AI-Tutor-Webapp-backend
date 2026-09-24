@@ -1,7 +1,7 @@
 # API contract (v1)
 
 Machine-readable: [openapi.json](openapi.json) (generated from the code; a test fails if it drifts).
-Base URL: the API listens on `127.0.0.1:4000` and is called by the web app's server, not by browsers.
+Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100` in production, and is called by the web app's server, not by browsers.
 
 ## Conventions
 

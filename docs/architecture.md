@@ -7,7 +7,7 @@ Browser ──► Web app (Next.js, separate repository)
                │  server-side proxy; holds the session token in an httpOnly cookie
                │  Authorization: Bearer <token>, X-Request-ID, X-Forwarded-For
                ▼
-            Chat API (FastAPI, 127.0.0.1:4000)
+            Chat API (FastAPI, 127.0.0.1:4000 dev · 4100 prod)
                ├─ auth            users, sessions, email codes, throttling
                ├─ conversations   list/create/rename/delete, message history
                ├─ chat            ChatService + SSE + stop + regenerate + feedback + quotas

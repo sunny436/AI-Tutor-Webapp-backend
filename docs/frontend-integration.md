@@ -5,7 +5,7 @@ full contract is [api-contract.md](api-contract.md) / [openapi.json](openapi.jso
 
 ## 1. Call the API only from the web app's server
 
-The API binds to `127.0.0.1:4000` and has no public hostname. The web app exposes its own
+The API binds to `127.0.0.1:4000` (development) or `127.0.0.1:4100` (production, set through `API_BASE_URL`) and has no public hostname. The web app exposes its own
 same-origin routes (for example `/api/v1/*`) that forward to `API_BASE_URL`:
 
 - Read the session token from an **httpOnly, Secure, SameSite=Lax** cookie and send it as
