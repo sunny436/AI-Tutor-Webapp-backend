@@ -3,7 +3,7 @@
 # Nightly logical backup of the aichat PostgreSQL database (run by aichat-pg-backup.timer).
 #
 #   pg_dump custom format, compressed; restore with:
-#   docker compose --env-file /etc/aichat/postgres.env -f deploy/compose/docker-compose.yml \
+#   docker compose --env-file /etc/aichat/postgres.env -f /opt/aichat/shared/postgres/docker-compose.yml \
 #     exec -T postgres pg_restore -U "$POSTGRES_USER" -d "$POSTGRES_DB" --clean --if-exists < <file>.dump
 #
 # A copy of the docker volume is not a backup: it can catch the database mid-write.
@@ -12,7 +12,7 @@ set -euo pipefail
 : "${POSTGRES_USER:?}" "${POSTGRES_DB:?}"
 BACKUP_DIR="${BACKUP_DIR:-/var/backups/aichat}"
 KEEP_DAYS="${KEEP_DAYS:-30}"
-COMPOSE=(docker compose --env-file /etc/aichat/postgres.env -f /opt/aichat/backend/deploy/compose/docker-compose.yml)
+COMPOSE=(docker compose --env-file /etc/aichat/postgres.env -f /opt/aichat/shared/postgres/docker-compose.yml)
 
 mkdir -p "$BACKUP_DIR"
 chmod 700 "$BACKUP_DIR"

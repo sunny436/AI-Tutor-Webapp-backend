@@ -1,7 +1,9 @@
-# Production migration runbook — NOT EXECUTED
+# Production migration runbook (historical record)
 
-> **Status: prepared, not run.** The owner approved the cutover on 2026-09-24. It has to be run on
-> the host by someone with server access. Production still runs the legacy stack described below.
+> **Status: executed 2026-09-24.** `ayur.namahos.com` serves this application. Phases A and B below
+> were run then, from two repositories and two checkouts. Phase C (retiring the legacy stack) is
+> still pending. Deployment has since moved to one repository and release-based deploys: see
+> [deployment.md](deployment.md). The first release deploy on this host is described there.
 
 ## What production runs today (legacy — historical record)
 
@@ -130,31 +132,18 @@ Finally, update `INFRASTRUCTURE.md` to say production runs the new stack.
 ```sh
 # systemd-run loads api.env exactly as the API service does
 sudo systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env \
-  -p WorkingDirectory=/opt/aichat/backend/backend-python \
-  /opt/aichat/backend/backend-python/.venv/bin/python scripts/ingest_documents.py --source handbook --global /path/to/docs
+  -p WorkingDirectory=/opt/aichat/backend/backend \
+  /opt/aichat/backend/backend/.venv/bin/python scripts/ingest_documents.py --source handbook --global /path/to/docs
 ```
 
 Only ingest content suitable for every signed-in user when using `--global` (see [rag.md](rag.md)).
 
 ### Updates later
 
-Re-run the A5 command. It pulls both repositories, rebuilds, migrates and restarts the API, and
-restarts the web app once it is enabled.
-
-The production host has **no GitHub credentials**, since the repositories are private. Its checkouts
-were cloned from git bundles, so `origin` is a bundle file under `/root/aichat-bundles/`. To update,
-bundle the merged `main` on a workstation that can read GitHub, copy it over SSH and re-run A5:
-
-```sh
-# workstation, backend repository (`tutor` = Sunny's GitHub repo)
-git fetch tutor && git switch main && git merge --ff-only tutor/main && git bundle create backend.bundle main
-ssh root@10.1.30.37 'cat > /root/aichat-bundles/backend.bundle' < backend.bundle
-# workstation, frontend repository: the host tracks the branch name `deploy-main`
-git fetch tutor && git branch -f deploy-main tutor/main && git bundle create frontend.bundle deploy-main
-ssh root@10.1.30.37 'cat > /root/aichat-bundles/frontend.bundle' < frontend.bundle
-```
-
-A read-only deploy key per repository is the alternative to bundles.
+**Superseded.** Updates used to mean bundling each repository and re-running `install.sh`. Now there
+is one repository and one command: `bun run deploy` ([deployment.md](deployment.md)). The bundles in
+`/root/aichat-bundles/` and the checkouts `/opt/aichat/{backend,frontend}` are only needed until the
+first release deploy, and can then be removed.
 
 ## Rollback
 

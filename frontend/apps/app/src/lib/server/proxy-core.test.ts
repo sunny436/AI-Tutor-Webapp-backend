@@ -1,0 +1,361 @@
+import { describe, expect, test } from "bun:test";
+import { PLAIN_COOKIE, SECURE_COOKIE } from "./cookies";
+import { MAX_BODY_BYTES, proxyRequest } from "./proxy-core";
+
+const API = "http://127.0.0.1:4000";
+const APP = "https://chat.example.com";
+const CID = "11111111-1111-4111-8111-111111111111";
+const MID = "22222222-2222-4222-8222-222222222222";
+
+type Call = { url: string; init: RequestInit };
+
+function upstream(respond: (call: Call) => Response | Promise<Response>) {
+  const calls: Call[] = [];
+  const fetchImpl = (async (url: string, init: RequestInit) => {
+    const call = { url, init };
+    calls.push(call);
+    return respond(call);
+  }) as unknown as typeof fetch;
+  return { calls, fetchImpl };
+}
+
+const json = (status: number, body: unknown) =>
+  new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
+
+/** A browser request arriving through the Cloudflare tunnel (HTTPS at the edge). */
+function browser(
+  method: string,
+  path: string,
+  options: { body?: string; headers?: Record<string, string>; signal?: AbortSignal; cookie?: string | null } = {},
+): Request {
+  const headers = new Headers({
+    host: "chat.example.com",
+    "x-forwarded-proto": "https",
+    origin: APP,
+    "sec-fetch-site": "same-origin",
+    "user-agent": "TestBrowser/1.0",
+    ...(options.body !== undefined ? { "content-type": "application/json" } : {}),
+    ...options.headers,
+  });
+  if (options.cookie !== null) headers.set("cookie", options.cookie ?? `${SECURE_COOKIE}=tok123`);
+  // Next.js hands the route the internal URL (plain HTTP on loopback).
+  return new Request(`http://localhost:3000/api${path}`, {
+    method,
+    headers,
+    body: options.body,
+    signal: options.signal,
+  });
+}
+
+const segments = (path: string) => path.replace(/^\/v1\//, "").split("?")[0]?.split("/") ?? [];
+
+function run(request: Request, path: string, fetchImpl: typeof fetch, extra: Record<string, unknown> = {}) {
+  return proxyRequest(request, segments(path), {
+    apiBaseUrl: API,
+    fetchImpl,
+    requestId: () => "req1",
+    log: () => undefined,
+    ...extra,
+  });
+}
+
+describe("allowlist", () => {
+  test("unknown routes, wrong methods and non-UUID ids are 404 without calling the API", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    for (const [method, path] of [
+      ["GET", "/v1/me/settings"],
+      ["POST", "/v1/chat"],
+      ["DELETE", "/v1/conversations"],
+      ["GET", "/v1/conversations/not-a-uuid"],
+      ["GET", "/v1/../health"],
+    ] as const) {
+      const response = await run(browser(method, path), path, fetchImpl);
+      expect(response.status).toBe(404);
+    }
+    expect(calls.length).toBe(0);
+  });
+
+  test("forwards only allowlisted query params", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, { items: [], nextCursor: null }));
+    const path = "/v1/conversations?limit=30&cursor=abc&evil=1";
+    await run(browser("GET", path), "/v1/conversations", fetchImpl);
+    expect(calls[0]?.url).toBe(`${API}/v1/conversations?limit=30&cursor=abc`);
+  });
+});
+
+describe("CSRF", () => {
+  test("a mutation from another origin is refused", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    const request = browser("PATCH", `/v1/conversations/${CID}`, {
+      body: JSON.stringify({ title: "x" }),
+      headers: { origin: "https://evil.example" },
+    });
+    expect((await run(request, `/v1/conversations/${CID}`, fetchImpl)).status).toBe(403);
+    expect(calls.length).toBe(0);
+  });
+
+  test("a mutation with no Origin needs Sec-Fetch-Site: same-origin", async () => {
+    const { fetchImpl } = upstream(() => new Response(null, { status: 204 }));
+    const headers = new Headers({ host: "chat.example.com", "x-forwarded-proto": "https", cookie: `${SECURE_COOKIE}=t` });
+    const bare = new Request("http://localhost:3000/api/v1/auth/logout", { method: "POST", headers });
+    expect((await run(bare, "/v1/auth/logout", fetchImpl)).status).toBe(403);
+
+    headers.set("sec-fetch-site", "same-origin");
+    const sameSite = new Request("http://localhost:3000/api/v1/auth/logout", { method: "POST", headers });
+    expect((await run(sameSite, "/v1/auth/logout", fetchImpl)).status).toBe(204);
+  });
+
+  test("the public origin comes from the forwarded headers, not the internal URL", async () => {
+    const { fetchImpl } = upstream(() => new Response(null, { status: 204 }));
+    const request = browser("POST", "/v1/auth/logout", { headers: { origin: "http://localhost:3000" } });
+    expect((await run(request, "/v1/auth/logout", fetchImpl)).status).toBe(403);
+  });
+
+  test("a body route requires a JSON content type", async () => {
+    const { fetchImpl } = upstream(() => json(200, {}));
+    const request = browser("POST", "/v1/auth/login", {
+      body: "email=a",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+    });
+    expect((await run(request, "/v1/auth/login", fetchImpl)).status).toBe(415);
+  });
+});
+
+describe("size limit", () => {
+  test("bodies over 64 KB are refused before forwarding", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    const request = browser("POST", "/v1/chat/stream", {
+      body: JSON.stringify({ message: "x".repeat(MAX_BODY_BYTES + 1) }),
+    });
+    const response = await run(request, "/v1/chat/stream", fetchImpl);
+    expect(response.status).toBe(413);
+    expect(calls.length).toBe(0);
+  });
+});
+
+describe("session and identity", () => {
+  test("an authenticated route without the cookie is 401 without calling the API", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    const response = await run(browser("GET", "/v1/me", { cookie: null }), "/v1/me", fetchImpl);
+    expect(response.status).toBe(401);
+    expect(((await response.json()) as { error: { code: string } }).error.code).toBe("unauthorized");
+    expect(calls.length).toBe(0);
+  });
+
+  test("on HTTPS a planted plain cookie is not a session", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    const response = await run(browser("GET", "/v1/me", { cookie: `${PLAIN_COOKIE}=planted` }), "/v1/me", fetchImpl);
+    expect(response.status).toBe(401);
+    expect(calls.length).toBe(0);
+  });
+
+  test("forwards the bearer token, request id, user agent and the Cloudflare client IP only", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, { id: "u" }));
+    const request = browser("GET", "/v1/me", {
+      headers: { "cf-connecting-ip": "203.0.113.9", "x-forwarded-for": "6.6.6.6, 203.0.113.9" },
+    });
+    await run(request, "/v1/me", fetchImpl);
+    const sent = new Headers(calls[0]?.init.headers);
+    expect(sent.get("authorization")).toBe("Bearer tok123");
+    expect(sent.get("x-request-id")).toBe("req1");
+    expect(sent.get("user-agent")).toBe("TestBrowser/1.0");
+    expect(sent.get("x-forwarded-for")).toBe("203.0.113.9");
+    expect(sent.get("cookie")).toBeNull();
+    expect(sent.get("origin")).toBeNull();
+  });
+
+  test("a client-supplied X-Forwarded-For is never passed on", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    await run(browser("GET", "/v1/me", { headers: { "x-forwarded-for": "6.6.6.6" } }), "/v1/me", fetchImpl);
+    expect(new Headers(calls[0]?.init.headers).get("x-forwarded-for")).toBeNull();
+  });
+
+  test("an unauthenticated route never forwards a stale token", async () => {
+    const { calls, fetchImpl } = upstream(() => new Response(JSON.stringify({ status: "accepted" }), { status: 202 }));
+    await run(browser("POST", "/v1/auth/signup", { body: JSON.stringify({ email: "a@b.c", password: "x" }) }), "/v1/auth/signup", fetchImpl);
+    expect(new Headers(calls[0]?.init.headers).get("authorization")).toBeNull();
+  });
+});
+
+describe("session cookie handling", () => {
+  const signedIn = {
+    user: { id: "u1", email: "a@b.c", displayName: null, emailVerified: true, createdAt: "t" },
+    session: { token: "SECRET-TOKEN", expiresAt: new Date(Date.now() + 3_600_000).toISOString() },
+  };
+
+  test("login sets the httpOnly cookie and never returns the token", async () => {
+    const { fetchImpl } = upstream(() => json(200, signedIn));
+    const request = browser("POST", "/v1/auth/login", {
+      body: JSON.stringify({ email: "a@b.c", password: "p" }),
+      cookie: null,
+    });
+    const response = await run(request, "/v1/auth/login", fetchImpl);
+    const body = await response.text();
+    expect(response.status).toBe(200);
+    expect(body).not.toContain("SECRET-TOKEN");
+    expect(JSON.parse(body)).toEqual({ user: signedIn.user });
+    const cookie = response.headers.get("set-cookie") ?? "";
+    expect(cookie).toContain(`${SECURE_COOKIE}=SECRET-TOKEN`);
+    expect(cookie).toContain("HttpOnly");
+    expect(cookie).toContain("Secure");
+    expect(cookie).toContain("SameSite=Lax");
+  });
+
+  test("local plain HTTP gets the unprefixed, non-Secure cookie", async () => {
+    const { fetchImpl } = upstream(() => json(200, signedIn));
+    const request = new Request("http://127.0.0.1:3100/api/v1/auth/verify-email", {
+      method: "POST",
+      headers: {
+        host: "127.0.0.1:3100",
+        origin: "http://127.0.0.1:3100",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ email: "a@b.c", code: "123456" }),
+    });
+    const response = await run(request, "/v1/auth/verify-email", fetchImpl);
+    const cookie = response.headers.get("set-cookie") ?? "";
+    expect(cookie.startsWith(`${PLAIN_COOKIE}=SECRET-TOKEN`)).toBe(true);
+    expect(cookie).not.toContain("Secure");
+  });
+
+  test("logout and account deletion clear the cookie", async () => {
+    const { fetchImpl } = upstream(() => new Response(null, { status: 204 }));
+    const logout = await run(browser("POST", "/v1/auth/logout"), "/v1/auth/logout", fetchImpl);
+    expect(logout.headers.get("set-cookie")).toContain("Max-Age=0");
+    const del = await run(browser("DELETE", "/v1/me", { body: JSON.stringify({ password: "p" }) }), "/v1/me", fetchImpl);
+    expect(del.status).toBe(204);
+    expect(del.headers.get("set-cookie")).toContain("Max-Age=0");
+  });
+
+  test("an upstream 401 `unauthorized` clears the cookie", async () => {
+    const { fetchImpl } = upstream(() => json(401, { error: { code: "unauthorized", message: "expired" } }));
+    const response = await run(browser("GET", "/v1/me"), "/v1/me", fetchImpl);
+    expect(response.status).toBe(401);
+    expect(response.headers.get("set-cookie")).toContain("Max-Age=0");
+  });
+
+  test("a wrong current password (401 invalid_credentials) does NOT sign the user out", async () => {
+    const { fetchImpl } = upstream(() => json(401, { error: { code: "invalid_credentials" } }));
+    const request = browser("POST", "/v1/auth/password/change", {
+      body: JSON.stringify({ currentPassword: "wrong", newPassword: "new-password-1" }),
+    });
+    const response = await run(request, "/v1/auth/password/change", fetchImpl);
+    expect(response.status).toBe(401);
+    expect(response.headers.get("set-cookie")).toBeNull();
+    expect(((await response.json()) as { error: { code: string } }).error.code).toBe("invalid_credentials");
+  });
+});
+
+describe("errors", () => {
+  test("upstream envelopes keep code, requestId and field names — not backend wording", async () => {
+    const { fetchImpl } = upstream(() =>
+      json(422, {
+        error: {
+          code: "validation_error",
+          message: "internal wording",
+          requestId: "up1",
+          fields: [{ field: "password", reason: "String should have at least 8 characters" }],
+        },
+      }),
+    );
+    const request = browser("POST", "/v1/auth/signup", { body: JSON.stringify({ email: "a@b.c", password: "x" }) });
+    const response = await run(request, "/v1/auth/signup", fetchImpl);
+    const body = await response.text();
+    expect(response.status).toBe(422);
+    expect(body).not.toContain("internal wording");
+    expect(body).not.toContain("at least 8");
+    expect(JSON.parse(body)).toEqual({
+      error: { code: "validation_error", requestId: "req1", fields: [{ field: "password" }] },
+    });
+  });
+
+  test("a non-JSON upstream error still becomes an envelope", async () => {
+    const { fetchImpl } = upstream(() => new Response("<html>Bad gateway</html>", { status: 502 }));
+    const response = await run(browser("GET", "/v1/me"), "/v1/me", fetchImpl);
+    expect(response.status).toBe(502);
+    expect(((await response.json()) as { error: { code: string } }).error.code).toBe("service_unavailable");
+  });
+
+  test("an unreachable API is a 503 envelope", async () => {
+    const { fetchImpl } = upstream(() => {
+      throw new TypeError("ECONNREFUSED");
+    });
+    const response = await run(browser("GET", "/v1/me"), "/v1/me", fetchImpl);
+    expect(response.status).toBe(503);
+  });
+
+  test("a hung JSON call times out instead of hanging the page", async () => {
+    const { fetchImpl } = upstream(
+      ({ init }) =>
+        new Promise<Response>((_, reject) =>
+          init.signal?.addEventListener("abort", () => reject(new DOMException("aborted", "AbortError"))),
+        ),
+    );
+    const response = await run(browser("GET", "/v1/me"), "/v1/me", fetchImpl, { jsonTimeoutMs: 20 });
+    expect(response.status).toBe(503);
+  });
+});
+
+describe("streaming", () => {
+  test("SSE is passed through with no-buffering headers", async () => {
+    const { fetchImpl } = upstream(
+      () =>
+        new Response('event: token\ndata: {"text":"hi"}\n\n', {
+          status: 200,
+          headers: { "Content-Type": "text/event-stream" },
+        }),
+    );
+    const request = browser("POST", "/v1/chat/stream", { body: JSON.stringify({ message: "hi" }) });
+    const response = await run(request, "/v1/chat/stream", fetchImpl);
+    expect(response.headers.get("content-type")).toContain("text/event-stream");
+    expect(response.headers.get("x-accel-buffering")).toBe("no");
+    expect(await response.text()).toBe('event: token\ndata: {"text":"hi"}\n\n');
+  });
+
+  test("cancelling the browser side aborts the upstream request", async () => {
+    let upstreamSignal: AbortSignal | undefined;
+    const { fetchImpl } = upstream(({ init }) => {
+      upstreamSignal = init.signal ?? undefined;
+      return new Response(new ReadableStream({ start() {} }), {
+        status: 200,
+        headers: { "Content-Type": "text/event-stream" },
+      });
+    });
+    const request = browser("POST", `/v1/conversations/${CID}/regenerate/stream`);
+    const response = await run(request, `/v1/conversations/${CID}/regenerate/stream`, fetchImpl);
+    await response.body?.cancel();
+    expect(upstreamSignal?.aborted).toBe(true);
+  });
+
+  test("the browser disconnecting (request.signal) aborts the upstream request", async () => {
+    const browserSide = new AbortController();
+    let upstreamSignal: AbortSignal | undefined;
+    const { fetchImpl } = upstream(({ init }) => {
+      upstreamSignal = init.signal ?? undefined;
+      return new Response(new ReadableStream({ start() {} }), {
+        status: 200,
+        headers: { "Content-Type": "text/event-stream" },
+      });
+    });
+    const request = browser("POST", "/v1/chat/stream", {
+      body: JSON.stringify({ message: "hi" }),
+      signal: browserSide.signal,
+    });
+    await run(request, "/v1/chat/stream", fetchImpl);
+    browserSide.abort();
+    expect(upstreamSignal?.aborted).toBe(true);
+  });
+
+  test("a stream route answered with non-SSE content is not passed through", async () => {
+    const { fetchImpl } = upstream(() => json(200, { oops: true }));
+    const response = await run(browser("POST", `/v1/messages/${MID}/cancel`), `/v1/messages/${MID}/cancel`, fetchImpl);
+    // cancel is a JSON route: passes through normally
+    expect(response.status).toBe(200);
+    const stream = await run(
+      browser("POST", "/v1/chat/stream", { body: JSON.stringify({ message: "x" }) }),
+      "/v1/chat/stream",
+      fetchImpl,
+    );
+    expect(stream.status).toBe(502);
+  });
+});

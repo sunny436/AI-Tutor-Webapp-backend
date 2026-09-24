@@ -1,13 +1,14 @@
 [Unit]
-# The Next.js web app, built from the SEPARATE frontend repository.
-# Enable only after the frontend has been migrated to this API (see docs/production-migration.md).
+# Next.js web app of the ACTIVE RELEASE: /opt/aichat/current -> releases/<commit>, the same
+# directory aichat-api runs from, so frontend and backend are always the same commit.
+# It reaches the API through API_BASE_URL in /etc/aichat/web.env (http://127.0.0.1:4100).
 Description=aichat web app (Next.js)
 After=aichat-api.service network-online.target
 Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/aichat/frontend/apps/app
+WorkingDirectory=/opt/aichat/current/frontend/apps/app
 EnvironmentFile=/etc/aichat/web.env
 ExecStart=/root/.bun/bin/bun run start
 Restart=always

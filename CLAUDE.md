@@ -4,120 +4,145 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-The backend of a generic ChatGPT-style chatbot that will grow into an AI tutor: a FastAPI service in
-`backend-python/` on PostgreSQL 16 + pgvector (the only datastore). The Next.js web app lives in a
-**separate repository** (`AI Tutor- Frontend`) and is the API's only client, through its server-side proxy.
-The repo formerly held an Ayurveda chatbot; that code is only reachable at the git tag `ayurveda-baseline`.
+The whole ChatGPT-style chat application, which will grow into an AI tutor. There is **one
+repository, and each commit is one release** of both halves:
 
-Remotes: `tutor` = `sunny436/AI-Tutor-Webapp-backend` (PRs go to its `main`); `origin` = the old Ayurveda repo.
+- `backend/`: FastAPI API on PostgreSQL 16 + pgvector (the only datastore). It has its own Python 3.12 venv, ruff and pytest.
+- `frontend/`: Next.js 14 web app with its server-side proxy (BFF). It's a Bun + Turborepo workspace:
+  `apps/app`, `packages/ui`, `tooling/typescript`. `frontend/CLAUDE.md` has the frontend detail;
+  Claude Code loads it when you work there.
+
+They are two processes, but they are tested, deployed and rolled back together.
+
+History:
+- The frontend was a separate repository (`sunny436/AI-Tutor-Webapp-frontend`). It was imported with
+  its history into `frontend/`, and that repository is no longer used.
+- The backend formerly held an Ayurveda chatbot; that code is only at the tag `ayurveda-baseline`.
+- Remotes: `tutor` is `sunny436/AI-Tutor-Webapp-backend` (PRs go to its `main`); `origin` is the old Ayurveda repo.
 
 ## Commands
 
-Run from `backend-python/`. Windows paths shown; on Linux use `.venv/bin/python`.
+From the repository root (the implementation is `scripts/run.mjs`, a thin runner over each half's own tools):
 
 ```sh
-docker compose -f ../docker-compose.dev.yml up -d        # PostgreSQL+pgvector :5432, Mailpit :1025 / UI :8025
-.venv\Scripts\python -m pip install -r requirements-dev.txt
-.venv\Scripts\python -m alembic upgrade head
-.venv\Scripts\python -m uvicorn app.main:create_app --factory --port 4000   # or run_backend.bat
-
-.venv\Scripts\python -m pytest -o addopts="" -ra                  # full suite, as CI runs it (a few minutes)
-.venv\Scripts\python -m pytest tests/test_chat.py                  # one file
-.venv\Scripts\python -m pytest "tests/test_email.py::test_backend_selection"   # one test (or -k pattern)
-.venv\Scripts\python -m ruff check . && .venv\Scripts\python -m ruff format --check .
-.venv\Scripts\python scripts\export_openapi.py            # regenerate docs/openapi.json; CI runs it with --check
+bun run setup | dev | dev:backend | dev:frontend       # dev: Docker db + migrations, API :4000 + web :3000
+bun run test          # backend pytest + frontend typecheck + unit tests (incl. the API contract test)
+bun run test:e2e      # Playwright + axe against an API on :4100 with the fake LLM (starts it from backend/)
+bun run lint | build | contract                        # contract: regenerate docs/openapi.json + frontend check
+bun run deploy | rollback                              # production (docs/deployment.md, docs/rollback.md)
 ```
 
-- Tests need the dev compose stack. They drop, recreate and migrate their own database (`aichat_test`, override
-  with `TEST_DATABASE_URL`; the name **must** end in `_test`), and truncate all tables before each test. They use
-  a fake LLM, fake keyword-hash embeddings and an in-memory mailbox, so no network is needed.
-- When piping pytest/ruff output (e.g. `| tail`), check the exit code separately: a pipe hides failures.
-- Offline dev without API keys: `LLM_PROVIDER=fake`, `EMBEDDING_PROVIDER=fake`. Fake embeddings only measure
-  shared vocabulary; they prove plumbing, never retrieval quality.
-- Other scripts: `smoke_chat.py` (live end-to-end check against a running server + Mailpit; never point it at
-  production), `ingest_documents.py` (knowledge base; `--global` or `--owner-email` is mandatory),
-  `eval_retrieval.py` (calibrate `RAG_MIN_SCORE` with real embeddings).
+Directly, in `backend/` (Windows paths; Linux `.venv/bin/python`):
 
-## Architecture
+```sh
+.venv\Scripts\python -m pytest -o addopts="" -ra                              # as CI runs it
+.venv\Scripts\python -m pytest "tests/test_email.py::test_backend_selection"   # one test (or -k)
+```
 
-`app/main.py` `create_app(settings, *, llm, email_sender, embeddings)` is the **composition root**: the only place
-that wires the concrete LLM provider, embeddings, knowledge store, retriever and LangGraph graph. Tests inject fakes
-through it. Settings come from env (`backend-python/.env.example` lists all); `Settings.validate_for_env()` refuses
-unsafe production values (dev secrets, fake LLM/embeddings, memory email).
+Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. Or, in
+`frontend/apps/app`, `bun test src/lib/api/routes.test.ts`.
 
-**A chat turn** (`app/chat/service.py`) is split in two:
-1. *prepare* (inside the HTTP request's transaction): load or create the user's conversation, 409 if a reply is
-   already streaming, check quotas, insert the user message and an assistant placeholder, commit.
-2. *generate* (an independent asyncio task, registered in `app/chat/streams.py`): runs the LangGraph turn graph and
-   pushes SSE events (`meta` / `token` / `done` / `error`), then persists content, status and a retrieval summary.
-   Stop and client disconnect cancel the task (event or DB flag). PostgreSQL stays the source of truth for status.
+- **Where to install:** never run `bun install` at the repository root. The Bun workspace root is
+  `frontend/`, and the root `package.json` has no workspaces and no dependencies.
+- **Backend tests:** they need the dev compose stack. They drop, recreate and migrate their own
+  `aichat_test` database (the name **must** end in `_test`), truncate tables before each test, and
+  use a fake LLM, fake embeddings and an in-memory mailbox.
+- **Pipes hide failures:** when piping pytest/ruff/bun output (e.g. `| tail`), check the exit code separately.
+- **Offline dev:** `LLM_PROVIDER=fake` and `EMBEDDING_PROVIDER=fake`. Fake embeddings only measure
+  shared vocabulary, so they prove plumbing, not retrieval quality.
+- **Other backend scripts:**
+  - `smoke_chat.py`: live check against a running server; never point it at production.
+  - `ingest_documents.py`: knowledge base; `--global` or `--owner-email` is mandatory.
+  - `eval_retrieval.py`: retrieval quality.
+  - `migration_status.py`: schema vs code, as JSON.
 
-**The graph** (`app/rag/graph.py`): `receive_query → retrieve_context → assemble_context → generate_answer`.
-- Retrieval never fails a turn: it is skipped (disabled, no embedding key, empty knowledge base) or fails with a
-  reason code, and the reply proceeds without context.
-- Exactly one LLM generation per turn, with no graph retries. `FallbackProvider` (`app/llm/fallback.py`) switches
-  providers only **before the first token**.
-- `app/rag/context.py` builds the prompt under one deterministic character budget, in this order: system prompt →
-  latest message → whole chunks up to `RAG_MAX_CONTEXT_CHARS` → history, newest first, up to `LLM_MAX_INPUT_CHARS`.
-  Context blocks are numbered `[n]` in the same order as `messages.metadata.retrieval.sources`.
+## How the halves connect
 
-**Retrieval / RAG** (`docs/rag.md` is the reference):
-- `PgVectorRetriever` (LangChain `BaseRetriever`, async only) → `KnowledgeStore` (SQLAlchemy) → pgvector HNSW.
-- Every search takes `AccessScope(user_id)`. Allowed sources = global (`owner_user_id` NULL) plus the user's own.
-  `source_names` and `metadata_filter` can only narrow that set.
-- Retrieval options come only from `resolve_assistant_config` (`app/chat/assistant.py`), the extension seam for
-  tutor-specific prompts and filters. Chat requests reject unknown fields, so clients can never pass filters.
-- The embedding dimension is fixed at **1536** in three places kept in sync by a test: `EMBEDDING_DIMENSIONS` in
-  `app/db/models.py`, the `vector(1536)` column (migration `0002`), and the `EMBEDDING_DIMENSIONS` setting.
-  Chunks record `embedding_model`, and search only sees the configured model. Changing the model or dimension needs
-  a new migration plus an explicit re-ingest. Nothing is ever re-embedded automatically.
+**Browser → BFF → API.**
+- The browser only ever calls its own origin, `/api/v1/*`.
+- `frontend/apps/app/src/lib/server/proxy-core.ts` forwards the allowlist in `lib/api/routes.ts` to
+  `API_BASE_URL`, which is server-only. It adds `Authorization: Bearer <token>`; the token comes from the
+  httpOnly cookie `__Host-aichat_session`.
+- It enforces Origin on mutations, a 64 KB body limit and JSON bodies. It passes SSE through
+  unbuffered, and aborts upstream when the browser leaves, which the API treats as stop.
+- Server components call the API directly with `lib/server/backend.ts`. If the API is unreachable,
+  users see an outage screen, not a sign-out.
 
-**Enforced by `tests/test_architecture_guards.py`** (AST import rules; keep them passing):
-- `*/router.py` never imports `app.rag` or `pgvector`.
-- `app/chat/*` imports only `app.rag.graph` from `app.rag`, and never `langchain`, `langgraph` or `pgvector`.
-- `app/rag/graph.py` depends on abstractions only: no concrete LLM providers, no store, embeddings or retriever,
-  no SQLAlchemy.
-- `app/db/*` and `app/rag/store.py` never import LangChain or LangGraph.
-- No GraphRAG, Chroma, Pinecone, Weaviate or Qdrant anywhere. This is an owner decision: pgvector is the only
-  vector store.
+Never let the browser call the API, and never hand the token to page code.
 
-**Cross-cutting:**
-- Errors always use the envelope `{"error": {code, message, requestId}}` (`app/errors.py`).
-- Logs are JSON and must never contain message content, questions, document text or keys. A test checks this.
-- Auth (`app/auth/`) is email-code verification with server-side sessions and anti-enumeration: sign-up, resend and
-  forgot-password always return 202, and an unknown email costs the same argon2 time as a wrong password.
-- Email is pluggable through `EMAIL_BACKEND=smtp|ollastack|memory`. Ollastack is an HTTP API, not SMTP.
-- The DB driver is asyncpg on purpose: psycopg's async mode doesn't work on Windows' Proactor loop.
+**One contract.** `docs/openapi.json` is generated from the backend (`backend/scripts/export_openapi.py`).
+The frontend's `routes.test.ts` reads that file and fails if a proxied route or request field no
+longer exists. Change both halves in the same commit, then run `bun run contract`; CI checks that the
+file is current. A new endpoint for the browser must also be added to `routes.ts`.
 
-**Schema changes:** edit `app/db/models.py`, then add a hand-written Alembic revision.
-`tests/test_foundation.py` fails if the models and the migrated schema differ. After any API change, regenerate
-`docs/openapi.json`; the internal `messages.metadata.retrieval` is intentionally not exposed publicly.
+**Backend internals.**
+- **Composition root:** `backend/app/main.py` `create_app(settings, *, llm, email_sender, embeddings)`
+  wires everything; tests inject fakes through it. `Settings.validate_for_env()` refuses unsafe
+  production values.
+- **A chat turn** (`app/chat/service.py`): *prepare* runs in the request transaction (conversation,
+  409 if a reply is already streaming, quotas, user message + assistant placeholder). *Generate* runs
+  as an independent asyncio task registered in `app/chat/streams.py`. It runs the LangGraph graph
+  `receive_query → retrieve_context → assemble_context → generate_answer` (`app/rag/graph.py`), emits
+  SSE `meta`/`token`/`done`/`error`, and persists the result. Stop and disconnect cancel the task.
+- **One model call per turn:** there are no graph retries, and `FallbackProvider` switches providers
+  only before the first token.
+- **Retrieval never fails a turn:** it is skipped or fails with a reason code.
+- **Context budget** (`app/rag/context.py`): system prompt → latest message → whole chunks up to
+  `RAG_MAX_CONTEXT_CHARS` → history up to `LLM_MAX_INPUT_CHARS`.
+- **RAG** (`docs/rag.md`): `PgVectorRetriever` → `KnowledgeStore` → pgvector HNSW.
+  - Every search is scoped by `AccessScope(user_id)`: global sources plus the user's own.
+  - Retrieval options come only from `resolve_assistant_config` (`app/chat/assistant.py`), which is
+    the seam for tutor features.
+  - The embedding dimension is fixed at **1536** in three places, kept in sync by a test.
+  - Changing the model or dimension needs a migration plus a re-ingest.
+- **Enforced by `tests/test_architecture_guards.py`:**
+  - routers never import `app.rag` or pgvector;
+  - `app/chat/*` imports only `app.rag.graph`;
+  - `graph.py` depends on abstractions only;
+  - `app/db/*` and `store.py` never import LangChain or LangGraph;
+  - no GraphRAG, Chroma, Pinecone, Weaviate or Qdrant.
+- **Cross-cutting:**
+  - one error envelope `{"error": {code, message, requestId}}`;
+  - JSON logs that never contain message or document text, or keys;
+  - email-code auth with anti-enumeration;
+  - `EMAIL_BACKEND=smtp|ollastack|memory`;
+  - asyncpg on purpose (psycopg async fails on Windows' Proactor loop).
+- **Schema changes:** edit `app/db/models.py` and add a hand-written Alembic revision.
+  `tests/test_foundation.py` checks parity. Migrations must be backward compatible, because
+  production runs them before switching releases.
 
-## Production (single VM; changes need the owner's explicit approval)
+## Deployment and production
 
-- Ubuntu 24.04 VM at `10.1.30.37`, reached with `ssh root@10.1.30.37`. Public site: `ayur.namahos.com`, via a
-  Cloudflare Tunnel to the web app on `127.0.0.1:3000`.
-- Units: `aichat-postgres`, `aichat-api` (**`127.0.0.1:4100`** in prod; dev uses 4000), `aichat-web`,
-  `aichat-pg-backup.timer`. The legacy Ayurveda units (`ayurveda-backend`, `convex`) may still be running for
-  rollback.
-- Secrets live only in `/etc/aichat/*.env` (mode 600). The host has **no GitHub credentials**: code arrives as git
-  bundles in `/root/aichat-bundles/` (`docs/production-migration.md` has the exact update commands).
-- `deploy/install.sh` caveats:
-  - It rebuilds the frontend in place (`.next`), which breaks a live `aichat-web` mid-build.
-  - After it `git pull`s itself, the rest of that run still executes the old script.
-
-  Once the web app is live, prefer targeted steps (e.g. `systemctl restart aichat-api` after updating
-  `/opt/aichat/backend`).
-- Load env for one-off commands exactly as the service does:
-  `systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env ...`. Don't `source` the file in bash:
-  values such as `EMAIL_FROM` contain `<`.
-- Runbook and rollback: `docs/production-migration.md`. Layout: `INFRASTRUCTURE.md`, `deploy/README.md`.
+- **What gets deployed:** `bun run deploy` (`deploy/deploy.sh`) takes one commit on `main`, sends
+  `git archive` of it to the host, and runs that release's own `deploy/server/release.sh`.
+- **The release steps:** build into `/opt/aichat/releases/<commit>/` → migrations (only with
+  `--with-migrations`) → trial API :4101 and web :3001 on the real database, proving web → API →
+  database by request id → atomic `/opt/aichat/current` switch → restart API, then web → live
+  checks → automatic rollback on failure.
+- **Same commit, always:** the units run from `/opt/aichat/current`, so frontend and backend are
+  always the same commit.
+- **Rollback:** `bun run rollback` switches both back together. Details in `docs/deployment.md`,
+  `docs/rollback.md` and `deploy/README.md`.
+- **Host:** Ubuntu 24.04 VM `10.1.30.37` (`ssh root@10.1.30.37`). It has no GitHub access. The public
+  site `ayur.namahos.com` goes through a Cloudflare Tunnel to web `127.0.0.1:3000`. The API is on
+  `127.0.0.1:4100` (4000 is dev), and PostgreSQL is Docker on `127.0.0.1:5432`.
+- **Secrets:** only in `/etc/aichat/{api,web,postgres}.env` (mode 600). Load them for one-off
+  commands with `systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env ...`;
+  don't `source` them.
+- **The database is outside releases:** `/opt/aichat/shared/postgres`. Its Compose project and volume
+  names are pinned (`compose` / `compose_pgdata`); moving or renaming them would start an empty
+  database.
+- **Status:** production still runs the earlier two-checkout layout until the first release deploy
+  is approved (`INFRASTRUCTURE.md`). Production changes need the owner's explicit approval.
+- **Never, by hand:** edit a release, repoint `current` (except the emergency steps in
+  `docs/rollback.md`), run migrations outside `release.sh`, `docker compose down -v`, or change
+  `API_BASE_URL` in `web.env` (the frontend's default `:4000` is the old API on that host).
 
 ## Repo hygiene
 
-- `ollima.txt` and `ollastack.txt` in the repo root hold live provider keys. They are git-ignored; never print or
-  commit their contents.
-- `.claude/settings.local.json` is tracked but holds per-user permission rules. Don't commit local changes to it.
-- `.gitattributes` forces LF (`* text=auto eol=lf`), so shell scripts run on Linux.
-- On this Windows machine, Python's default encoding is cp1252. Pass `encoding="utf-8"` when reading or writing
-  files from scripts, and set `PYTHONIOENCODING=utf-8` when printing non-ASCII.
+- `ollima.txt` and `ollastack.txt` in the repository root hold live provider keys. They are
+  git-ignored; never print or commit their contents.
+- `.claude/settings.local.json` holds per-user permission rules. It is untracked and ignored.
+- `.gitattributes` forces LF (`* text=auto eol=lf`), for the shell scripts and for Biome.
+- On this Windows machine, Python's default encoding is cp1252. Pass `encoding="utf-8"` when
+  reading or writing files from scripts, and set `PYTHONIOENCODING=utf-8` when printing non-ASCII.

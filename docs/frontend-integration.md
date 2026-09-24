@@ -1,7 +1,8 @@
-# Integrating a web app (for the frontend repository)
+# How the web app uses the API
 
-The frontend lives in a separate repository. This is what it needs from this API; the
-full contract is [api-contract.md](api-contract.md) / [openapi.json](openapi.json).
+The web app lives in `frontend/` in this repository, and this is what it relies on from the API.
+The full contract is [api-contract.md](api-contract.md) / [openapi.json](openapi.json), which the
+frontend's `routes.test.ts` checks against on every commit.
 
 ## 1. Call the API only from the web app's server
 

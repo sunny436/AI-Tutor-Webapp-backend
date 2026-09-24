@@ -22,7 +22,7 @@ Open `GLITCHTIP_DOMAIN` in a browser, create the first (admin) account, an organ
 a project, then copy the project's DSN from its settings page.
 
 ## Wire the app
-Set in the web app's environment (frontend repository; baked at build time):
+Set in the web app's environment (`/etc/aichat/web.env`; baked into the next release's build):
 ```
 NEXT_PUBLIC_SENTRY_DSN=<the DSN above>
 # optional: NEXT_PUBLIC_SENTRY_TRACES_SAMPLE_RATE=0.1

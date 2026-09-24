@@ -1,13 +1,28 @@
 # Architecture
 
+## One repository, one release
+
+The whole application is one repository, and every commit is one complete, consistent version of it:
+
+| Folder | What | Tooling |
+|---|---|---|
+| `frontend/` | Next.js 14 web app + its server-side proxy (BFF), a Bun + Turborepo workspace (`apps/app`, `packages/ui`) | Bun 1.3.14, Biome, bun test, Playwright |
+| `backend/` | FastAPI chat API, SQLAlchemy async + Alembic, LangGraph/LangChain RAG | Python 3.12 venv, ruff, pytest |
+| `docs/openapi.json` | The API contract: generated from the backend, tested by the frontend (`routes.test.ts`) | `bun run contract` |
+| `deploy/` | One release-based deployment for both ([deployment.md](deployment.md), [rollback.md](rollback.md)) | bash, systemd |
+
+They stay two processes (a Node server and a Python server) because they are different runtimes with
+a narrow, tested HTTP contract between them, but they are **built, tested, deployed and rolled back
+together**: production runs both from one release directory, `/opt/aichat/current -> releases/<commit>`.
+
 ## Components
 
 ```
-Browser ──► Web app (Next.js, separate repository)
+Browser ──► Web app (Next.js, frontend/; 127.0.0.1:3000)
                │  server-side proxy; holds the session token in an httpOnly cookie
                │  Authorization: Bearer <token>, X-Request-ID, X-Forwarded-For
                ▼
-            Chat API (FastAPI, 127.0.0.1:4000 dev · 4100 prod)
+            Chat API (FastAPI, backend/; 127.0.0.1:4000 dev · 4100 prod)
                ├─ auth            users, sessions, email codes, throttling
                ├─ conversations   list/create/rename/delete, message history
                ├─ chat            ChatService + SSE + stop + regenerate + feedback + quotas
@@ -19,7 +34,10 @@ Browser ──► Web app (Next.js, separate repository)
                                                      Embeddings API: OpenAI-compatible (text-embedding-3-small)
 ```
 
-The API is never published to the internet; only the web app is. Nothing is stored
+The API is never published to the internet; only the web app is, through a Cloudflare Tunnel. The browser
+only talks to the web app's own origin (`/api/v1/*`); the proxy (`frontend/apps/app/src/lib/server/proxy-core.ts`)
+forwards an allowlist of routes with the session attached, checks Origin on mutations, streams SSE
+unbuffered and aborts upstream when the browser leaves ([frontend-integration.md](frontend-integration.md)). Nothing is stored
 outside PostgreSQL: no local files, no vector store on disk, no authoritative in-memory
 state (the in-process generation registry only speeds up stopping a reply; the database
 flag is authoritative).

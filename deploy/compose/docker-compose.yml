@@ -5,6 +5,11 @@
 #
 # Binds to 127.0.0.1 only. The volume IS the database: never `docker compose down -v`.
 # Backups: aichat-pg-backup.timer runs deploy/backup.sh (pg_dump) nightly.
+#
+# The project and volume names are PINNED to the values production already uses. Compose
+# would otherwise derive them from this folder's name, so moving or renaming the folder
+# would silently start a NEW, EMPTY database. Never change these two names.
+name: compose
 services:
   postgres:
     image: pgvector/pgvector:pg16
@@ -26,3 +31,4 @@ services:
 
 volumes:
   pgdata:
+    name: compose_pgdata
