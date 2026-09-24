@@ -153,7 +153,7 @@ ensure_node() {
 # Run a build step capped in memory and at low priority, so the kernel kills the build,
 # never the live services or PostgreSQL.
 build_step() {
-  systemd-run --scope --quiet -p MemoryMax="${AICHAT_BUILD_MEMORY_MAX:-2G}" -p Nice=10 -- "$@"
+  systemd-run --scope --quiet --nice=10 -p MemoryMax="${AICHAT_BUILD_MEMORY_MAX:-2G}" -- "$@"
 }
 
 # Switch production to a release. Order matters: the web app is stopped BEFORE the pointer
