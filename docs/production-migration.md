@@ -128,8 +128,10 @@ Finally, update `INFRASTRUCTURE.md` to say production runs the new stack.
 ### Optional — knowledge base (needs `EMBEDDING_API_KEY`)
 
 ```sh
-sudo bash -c 'cd /opt/aichat/backend/backend-python && set -a && . /etc/aichat/api.env && set +a &&
-  .venv/bin/python scripts/ingest_documents.py --source handbook --global /path/to/docs'
+# systemd-run loads api.env exactly as the API service does
+sudo systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env \
+  -p WorkingDirectory=/opt/aichat/backend/backend-python \
+  /opt/aichat/backend/backend-python/.venv/bin/python scripts/ingest_documents.py --source handbook --global /path/to/docs
 ```
 
 Only ingest content suitable for every signed-in user when using `--global` (see [rag.md](rag.md)).
