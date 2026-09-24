@@ -71,6 +71,7 @@ export default defineConfig({
         ]
       : []),
     {
+      // Node, the pinned runtime of production (.node-version); serve.mjs runs next with it.
       command: "node e2e/serve.mjs",
       url: `http://127.0.0.1:${APP_PORT}/login`,
       // A server already on :3100 is not ours to trust (wrong build, wrong API).
