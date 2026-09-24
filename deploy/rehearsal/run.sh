@@ -27,6 +27,9 @@ export MSYS_NO_PATHCONV=1
 native() { if command -v cygpath >/dev/null; then cygpath -w "$1"; else printf '%s' "$1"; fi; }
 
 WORK=$(mktemp -d)
+# On Windows, one spelling that bash and the native git both resolve to the same directory
+# (with MSYS_NO_PATHCONV, git would read /tmp/... as C:\tmp\...).
+if command -v cygpath >/dev/null; then WORK=$(cygpath -m "$WORK"); fi
 NAME=aichat-rehearsal
 PORT=${REHEARSAL_SSH_PORT:-2222}
 SOURCE="$WORK/source.git"
