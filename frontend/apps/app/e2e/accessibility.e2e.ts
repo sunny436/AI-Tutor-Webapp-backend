@@ -33,8 +33,10 @@ test("settings, and the delete-account dialog", async ({ page, account: _ }) => 
 
 test("the skip link goes to the page, then one Tab reaches the message box", async ({ page, account: _ }) => {
   await page.goto("/");
-  // Arrival focuses the composer on a desktop. Start from the top, as a fresh
+  // Arrival focuses the composer on a desktop (once hydrated; wait for it, or it
+  // takes focus back after the reset below). Then start from the top, as a fresh
   // visit does: focusing <body> moves the browser's Tab starting point there.
+  await expect(page.getByRole("textbox", { name: "Message" })).toBeFocused();
   await page.evaluate(() => {
     document.body.tabIndex = -1;
     document.body.focus();
