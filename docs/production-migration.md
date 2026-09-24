@@ -141,6 +141,21 @@ Only ingest content suitable for every signed-in user when using `--global` (see
 Re-run the A5 command. It pulls both repositories, rebuilds, migrates and restarts the API, and
 restarts the web app once it is enabled.
 
+The production host has **no GitHub credentials**, since the repositories are private. Its checkouts
+were cloned from git bundles, so `origin` is a bundle file under `/root/aichat-bundles/`. To update,
+bundle the merged `main` on a workstation that can read GitHub, copy it over SSH and re-run A5:
+
+```sh
+# workstation, backend repository (`tutor` = Sunny's GitHub repo)
+git fetch tutor && git switch main && git merge --ff-only tutor/main && git bundle create backend.bundle main
+ssh root@10.1.30.37 'cat > /root/aichat-bundles/backend.bundle' < backend.bundle
+# workstation, frontend repository: the host tracks the branch name `deploy-main`
+git fetch tutor && git branch -f deploy-main tutor/main && git bundle create frontend.bundle deploy-main
+ssh root@10.1.30.37 'cat > /root/aichat-bundles/frontend.bundle' < frontend.bundle
+```
+
+A read-only deploy key per repository is the alternative to bundles.
+
 ## Rollback
 
 - **During Phase B:** `sudo systemctl disable --now aichat-web.service && sudo systemctl start ayurveda-frontend.service`,
