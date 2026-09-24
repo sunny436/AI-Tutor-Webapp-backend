@@ -27,3 +27,6 @@ logs/
 
 # Per-user Claude Code permissions (local only)
 .claude/settings.local.json
+
+# Written into each production release by deploy/server/release.sh; never committed
+/RELEASE

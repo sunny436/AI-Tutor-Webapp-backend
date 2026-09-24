@@ -712,7 +712,7 @@
             "description": "Successful Response"
           }
         },
-        "summary": "Liveness: the process is up",
+        "summary": "Liveness: the process is up, and the release it runs",
         "tags": [
           "health"
         ]

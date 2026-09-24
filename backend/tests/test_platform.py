@@ -11,7 +11,7 @@ from tests.conftest import make_settings, register
 
 async def test_health_ready_and_request_id(client):
     r = await client.get("/health")
-    assert r.status_code == 200 and r.json() == {"status": "ok"}
+    assert r.status_code == 200 and r.json() == {"status": "ok", "release": "development"}
     assert len(r.headers["x-request-id"]) == 32
     r = await client.get("/ready", headers={"X-Request-ID": "trace-123"})
     assert r.status_code == 200 and r.json()["database"] is True
@@ -70,3 +70,16 @@ def test_production_refuses_unsafe_configuration():
 def test_production_hides_api_docs():
     app = create_app(make_settings(**PRODUCTION_LIKE))
     assert app.docs_url is None and app.openapi_url is None and app.redoc_url is None
+
+
+def test_release_is_read_from_the_release_root(tmp_path):
+    from app.health import RELEASE_FILE, read_release
+
+    # the file sits at the root of the release: backend/app/health.py -> ../../RELEASE
+    assert RELEASE_FILE.parent.name != "backend" and (RELEASE_FILE.parent / "backend").is_dir()
+    release = tmp_path / "RELEASE"
+    release.write_text("commit=0123456789abcdef0123456789abcdef01234567\nprepared=2026-09-24T00:00:00Z\n")
+    assert read_release(release) == "0123456789abcdef0123456789abcdef01234567"
+    assert read_release(tmp_path / "missing") == "development"
+    release.write_text("prepared=2026-09-24T00:00:00Z\n")
+    assert read_release(release) == "development"
