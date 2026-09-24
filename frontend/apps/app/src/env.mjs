@@ -6,7 +6,7 @@ import { z } from "zod";
  *
  * The app builds with NO configuration at all: the API address defaults to the
  * loopback address the API binds to by contract (lib/server/config.ts), and
- * nothing here is required. Matches the backend's deploy/env/web.env.example.
+ * nothing here is required. Matches deploy/env/web.env.example at the repository root.
  *
  *   API_BASE_URL          server-only; where the chat API listens
  *   NEXT_PUBLIC_SITE_URL  the public origin (absolute metadata URLs)

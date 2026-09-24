@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { defineConfig, devices } from "@playwright/test";
 
@@ -9,15 +10,18 @@ import { API_URL, APP_PORT, APP_URL, assertLoopback } from "./e2e/env";
  *
  *   bun run test:e2e
  *
- * The backend on :4100 is either already running (the global setup checks it) or
- * started here when E2E_BACKEND_DIR points at the backend's `backend-python`
- * directory. Either way it uses that checkout's own local .env (database, Mailpit),
- * with the overrides below on top.
+ * The backend on :4100 is reused if it is already running (the global setup checks
+ * it); otherwise it is started from this repository's `backend/` (or from
+ * E2E_BACKEND_DIR, if set), using that directory's local .env (database, Mailpit)
+ * with the overrides below on top. E2E_BACKEND_DIR=none never starts it.
  */
 assertLoopback("E2E_API_URL", API_URL);
 
-const backendDir = process.env.E2E_BACKEND_DIR;
 const python = process.platform === "win32" ? join(".venv", "Scripts", "python.exe") : join(".venv", "bin", "python");
+const repoBackend = join(__dirname, "..", "..", "..", "backend");
+const requested = process.env.E2E_BACKEND_DIR;
+const backendDir =
+  requested === "none" ? undefined : requested || (existsSync(join(repoBackend, python)) ? repoBackend : undefined);
 
 export default defineConfig({
   testDir: "./e2e",

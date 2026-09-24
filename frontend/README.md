@@ -87,9 +87,9 @@ bunx playwright install chromium    # once
 bun run test:e2e
 ```
 
-Start the API on :4100 first (see `apps/app/playwright.config.ts` for the
-environment it needs), or set `E2E_BACKEND_DIR` to the backend's
-`backend-python` directory and the suite starts it. Test accounts are
+The suite reuses an API already running on :4100, or starts one from this
+repository's `backend/` (it needs `backend/.venv`; see
+`apps/app/playwright.config.ts` for the environment it sets). Test accounts are
 `e2e-…@example.com` and delete themselves.
 
 ---
@@ -112,7 +112,7 @@ NEXT_DIST_DIR=.next-verify bun run build
   the BFF. Do not add an endpoint or a hook that hands one to page code.
 - **The BFF is an allowlist.** Add a route to `lib/api/routes.ts` only if it is
   in the backend's contract; `routes.test.ts` checks that against
-  `docs/backend-openapi.v1.json`.
+  `docs/openapi.json` at the repository root.
 - **Never send history, never re-send a message.** A failed or cut-off stream
   is shown as failed and re-read; generating again is the user's choice
   (Regenerate).

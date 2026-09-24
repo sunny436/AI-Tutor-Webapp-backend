@@ -7,8 +7,8 @@
  *     compiler rejects a call to a route that is not listed.
  *   - the BFF (`app/api/v1/[...path]`) forwards a request only when it matches an
  *     entry here. Anything else is a 404: the proxy is an allowlist, not a pipe.
- *   - `routes.test.ts` checks every entry against the vendored backend contract
- *     (`docs/backend-openapi.v1.json`), so a renamed or removed backend route fails
+ *   - `routes.test.ts` checks every entry against the backend contract
+ *     (`docs/openapi.json` at the repository root), so a renamed or removed backend route fails
  *     a test instead of failing in production.
  *
  * Least privilege: endpoints the UI does not use (`POST /v1/chat`, `POST

@@ -17,7 +17,7 @@ export default async function globalSetup(config: FullConfig): Promise<void> {
   const body = ready?.ok ? await ready.json().catch(() => null) : null;
   if (body?.status !== "ok") {
     throw new Error(
-      `The backend is not ready at ${API_URL}/ready. Start it with the fake LLM (see apps/app/playwright.config.ts), or set E2E_BACKEND_DIR so the suite starts it.`,
+      `The backend is not ready at ${API_URL}/ready. Start it with the fake LLM (see apps/app/playwright.config.ts), or create backend/.venv so the suite starts it (or set E2E_BACKEND_DIR).`,
     );
   }
 

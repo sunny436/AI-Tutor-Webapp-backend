@@ -1,8 +1,8 @@
 /**
  * Wire types for the chat API.
  *
- * Mirrors the backend contract vendored at `docs/backend-openapi.v1.json`
- * (source: the backend repository's `docs/openapi.json` / `docs/api-contract.md`).
+ * Mirrors the backend contract: `docs/openapi.json` and `docs/api-contract.md` at the
+ * repository root.
  * The backend is the source of truth; if the two disagree, this file is the bug.
  * `routes.test.ts` fails when a request type sends a field the contract does not
  * accept (the API rejects unknown fields with 422).

@@ -1,10 +1,10 @@
 /**
  * The route table must agree with the backend contract.
  *
- * `docs/backend-openapi.v1.json` is a verbatim copy of the backend repository's
- * `docs/openapi.json` (which the backend regenerates from its code and tests for
- * drift). When the backend changes a route or a request schema, refresh the copy;
- * this suite then says exactly which frontend call no longer matches.
+ * It reads the repository's single contract, `docs/openapi.json`, which the backend
+ * regenerates from its code (and CI checks for drift). A backend change to a route or
+ * a request schema therefore fails this suite in the same commit, naming the
+ * frontend call that no longer matches.
  */
 
 import { describe, expect, test } from "bun:test";
@@ -19,7 +19,7 @@ type OpenApi = {
 };
 
 const openapi = JSON.parse(
-  readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../../../../../docs/backend-openapi.v1.json"), "utf8"),
+  readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../../../../../../docs/openapi.json"), "utf8"),
 ) as OpenApi;
 
 const keys = Object.keys(ROUTES) as RouteKey[];

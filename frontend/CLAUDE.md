@@ -30,8 +30,8 @@ NEXT_DIST_DIR=.next-verify bun run build   # verify a build without touching .ne
 
 ```bash
 bunx playwright install chromium             # once
-bun run test:e2e                             # needs the API on :4100 (see playwright.config.ts for its env)
-E2E_BACKEND_DIR=<backend>/backend-python bun run test:e2e   # or let the suite start the API
+bun run test:e2e                             # reuses an API on :4100, else starts ../backend (needs backend/.venv)
+E2E_BACKEND_DIR=none bun run test:e2e        # never start the API; one must already be running
 bun run test:e2e e2e/journey.e2e.ts -g "journey"            # one spec / test (--list to preview)
 E2E_SKIP_BUILD=1 bun run test:e2e            # reuse the last .next-e2e build
 ```
@@ -47,7 +47,7 @@ The fake LLM replies `You said: <message>` word by word, so tests assert on echo
 - **401s:** clears the cookie on an upstream 401, **except** `invalid_credentials`, so a wrong password must not sign the user out.
 - **Streams and errors:** pipes SSE unbuffered, and a downstream cancel aborts upstream. It also re-wraps error envelopes to `{code, requestId, fields}`.
 
-Adding an endpoint means adding it to `ROUTES`. `routes.test.ts` fails unless the route and its request-body fields exist in `docs/backend-openapi.v1.json`, a vendored copy of the backend's `docs/openapi.json`; refresh it by copying that file over. The API contract is the backend's. `docs/frontend-api.md` lists the BFF behaviour and the known contract gaps: feedback isn't returned with messages, there's no sessions list, and there's no server-side search.
+Adding an endpoint means adding it to `ROUTES`. `routes.test.ts` fails unless the route and its request-body fields exist in the repository's `docs/openapi.json`, which the backend generates. The API contract is the backend's, and both live in this repository. `docs/frontend-api.md` lists the BFF behaviour and the known contract gaps: feedback isn't returned with messages, there's no sessions list, and there's no server-side search.
 
 **Client API layer (`lib/api/`).**
 - `http.ts`: `callRoute(key, …)`, which calls `/api` + path.
