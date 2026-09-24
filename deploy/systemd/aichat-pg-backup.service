@@ -6,4 +6,4 @@ After=aichat-postgres.service
 [Service]
 Type=oneshot
 EnvironmentFile=/etc/aichat/postgres.env
-ExecStart=/opt/aichat/backend/deploy/backup.sh
+ExecStart=/opt/aichat/shared/postgres/backup.sh

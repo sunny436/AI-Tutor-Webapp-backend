@@ -1,4 +1,7 @@
 [Unit]
+# PostgreSQL 16 + pgvector. NOT part of app releases: its compose file is installed once in
+# /opt/aichat/shared/postgres (deploy/server/install-units.sh). Project and volume names are
+# pinned in that file, so the same volume (compose_pgdata) is always used.
 Description=aichat PostgreSQL 16 + pgvector (docker compose)
 Requires=docker.service
 After=docker.service network-online.target
@@ -7,9 +10,9 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-WorkingDirectory=/opt/aichat/backend
-ExecStart=/usr/bin/docker compose --env-file /etc/aichat/postgres.env -f deploy/compose/docker-compose.yml up -d --wait
-ExecStop=/usr/bin/docker compose --env-file /etc/aichat/postgres.env -f deploy/compose/docker-compose.yml stop
+WorkingDirectory=/opt/aichat/shared/postgres
+ExecStart=/usr/bin/docker compose --env-file /etc/aichat/postgres.env -f docker-compose.yml up -d --wait
+ExecStop=/usr/bin/docker compose --env-file /etc/aichat/postgres.env -f docker-compose.yml stop
 TimeoutStartSec=180
 
 [Install]
