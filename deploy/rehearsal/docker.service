@@ -1,0 +1,12 @@
+[Unit]
+Description=Rehearsal stand-in for the Docker daemon (PostgreSQL runs natively here)
+Requires=postgresql.service
+After=postgresql.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/true
+
+[Install]
+WantedBy=multi-user.target
