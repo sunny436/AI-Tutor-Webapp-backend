@@ -86,6 +86,8 @@ cd "$ROOT/backend/backend-python"
 log "6/7  web app (build only)"
 if [ -n "$FRONTEND_REPO" ]; then
   [ -x "$BUN" ] || curl -fsSL https://bun.sh/install | BUN_INSTALL=/root/.bun bash -s "bun-v$BUN_VERSION" >/dev/null
+  # turbo looks up `bun` on PATH; sudo's secure_path and systemd do not include /root/.bun/bin.
+  export PATH="$(dirname "$BUN"):$PATH"
   cd "$ROOT/frontend"
   export TURBO_TELEMETRY_DISABLED=1 NEXT_TELEMETRY_DISABLED=1
   "$BUN" install --frozen-lockfile
