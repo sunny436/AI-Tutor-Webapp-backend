@@ -1,0 +1,106 @@
+"""Ollastack Agent Mail sender: request shape, failures, production settings, and the sign-up path."""
+
+from __future__ import annotations
+
+import json
+
+import httpx
+import pytest
+
+from app.auth.emails import EmailDeliveryError, OllastackEmailSender, SmtpEmailSender, build_email_sender
+from app.main import create_app
+from tests.conftest import make_settings
+from tests.test_platform import PRODUCTION_LIKE
+
+TOKEN = "olla-test-token-do-not-log"
+OLLASTACK = dict(email_backend="ollastack", ollastack_token=TOKEN, ollastack_mailbox_id="mbx_123")
+
+
+def sender_with(handler) -> tuple[OllastackEmailSender, list[httpx.Request]]:
+    seen: list[httpx.Request] = []
+
+    def record(request: httpx.Request) -> httpx.Response:
+        seen.append(request)
+        return handler(request)
+
+    client = httpx.AsyncClient(transport=httpx.MockTransport(record))
+    return OllastackEmailSender(make_settings(**OLLASTACK), http_client=client), seen
+
+
+def ok(request: httpx.Request) -> httpx.Response:
+    return httpx.Response(200, json={"success": True, "data": {"id": "msg_1", "deliveryStatus": "sent"}})
+
+
+async def test_sends_plain_text_from_the_configured_mailbox():
+    sender, seen = sender_with(ok)
+    await sender.send("user@example.com", "Your code", "Use this code: 123456")
+    (request,) = seen
+    assert request.method == "POST"
+    assert str(request.url) == "https://login.ollastack.com/api/mailboxes/mbx_123/send"
+    assert request.headers["authorization"] == f"Bearer {TOKEN}"
+    assert json.loads(request.content) == {
+        "to": "user@example.com",
+        "subject": "Your code",
+        "text": "Use this code: 123456",
+    }
+
+
+@pytest.mark.parametrize(
+    ("response", "expected"),
+    [
+        (httpx.Response(401, json={"error": {"code": "UNAUTHORIZED"}}), "HTTP 401, UNAUTHORIZED"),
+        (httpx.Response(500, text="upstream down"), "HTTP 500, no code"),
+        (httpx.Response(200, json={"success": False, "error": {"code": "QUOTA"}}), "HTTP 200, QUOTA"),
+        (httpx.Response(200, json={"success": True, "data": {"deliveryStatus": "failed"}}), "delivery status failed"),
+    ],
+)
+async def test_refused_or_failed_sends_raise_without_secrets(response, expected, caplog):
+    sender, _ = sender_with(lambda request: response)
+    with pytest.raises(EmailDeliveryError, match=expected) as info:
+        await sender.send("user@example.com", "Your code", "123456")
+    for text in [str(info.value), *(r.getMessage() + str(r.__dict__) for r in caplog.records)]:
+        assert TOKEN not in text and "user@example.com" not in text and "123456" not in text
+
+
+async def test_network_failure_raises_a_delivery_error():
+    def boom(request):
+        raise httpx.ConnectError("no route")
+
+    sender, _ = sender_with(boom)
+    with pytest.raises(EmailDeliveryError, match="unreachable"):
+        await sender.send("user@example.com", "Your code", "123456")
+
+
+def test_backend_selection():
+    assert isinstance(build_email_sender(make_settings(**OLLASTACK)), OllastackEmailSender)
+    assert isinstance(build_email_sender(make_settings(email_backend="smtp")), SmtpEmailSender)
+
+
+def test_production_accepts_ollastack_only_when_configured():
+    create_app(make_settings(**{**PRODUCTION_LIKE, **OLLASTACK}))
+    with pytest.raises(RuntimeError, match="OLLASTACK_TOKEN and OLLASTACK_MAILBOX_ID"):
+        create_app(make_settings(**{**PRODUCTION_LIKE, **OLLASTACK, "ollastack_mailbox_id": ""}))
+    with pytest.raises(RuntimeError, match="EMAIL_BACKEND must be smtp or ollastack"):
+        create_app(make_settings(**{**PRODUCTION_LIKE, "email_backend": "memory"}))
+
+
+async def test_signup_code_goes_out_through_ollastack(app, client):
+    sender, seen = sender_with(ok)
+    app.state.email_sender = sender
+    response = await client.post(
+        "/v1/auth/signup", json={"email": "gil@example.com", "password": "correct horse battery"}
+    )
+    assert response.status_code == 202
+    (request,) = seen
+    body = json.loads(request.content)
+    assert body["to"] == "gil@example.com" and "verification code" in body["subject"]
+    assert any(line.strip().isdigit() for line in body["text"].splitlines())
+
+
+async def test_signup_reports_503_when_ollastack_refuses(app, client):
+    sender, _ = sender_with(lambda request: httpx.Response(401, json={"error": {"code": "UNAUTHORIZED"}}))
+    app.state.email_sender = sender
+    response = await client.post(
+        "/v1/auth/signup", json={"email": "hal@example.com", "password": "correct horse battery"}
+    )
+    assert response.status_code == 503

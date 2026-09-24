@@ -56,7 +56,7 @@ class Settings(BaseSettings):
     argon2_parallelism: int = 2
 
     # ---- email ----
-    email_backend: Literal["smtp", "memory"] = "smtp"
+    email_backend: Literal["smtp", "ollastack", "memory"] = "smtp"
     email_from: str = "Assistant <no-reply@localhost>"
     smtp_host: str = "127.0.0.1"
     smtp_port: int = 1025
@@ -64,6 +64,10 @@ class Settings(BaseSettings):
     smtp_password: SecretStr = SecretStr("")
     smtp_starttls: bool = False
     smtp_ssl: bool = False
+    # Ollastack Agent Mail (EMAIL_BACKEND=ollastack): the mailbox sets the sender; EMAIL_FROM is unused.
+    ollastack_base_url: str = "https://login.ollastack.com"
+    ollastack_token: SecretStr = SecretStr("")
+    ollastack_mailbox_id: str = ""
 
     # ---- LLM ----
     # "openai_compatible" uses the primary (and optional fallback) provider below.
@@ -141,8 +145,12 @@ class Settings(BaseSettings):
             problems.append("DATABASE_URL uses the development credentials")
         if self.llm_provider == "fake":
             problems.append("LLM_PROVIDER=fake is not allowed in production")
-        if self.email_backend != "smtp":
-            problems.append("EMAIL_BACKEND must be smtp in production")
+        if self.email_backend not in ("smtp", "ollastack"):
+            problems.append("EMAIL_BACKEND must be smtp or ollastack in production")
+        if self.email_backend == "ollastack" and not (
+            self.ollastack_token.get_secret_value() and self.ollastack_mailbox_id
+        ):
+            problems.append("EMAIL_BACKEND=ollastack needs OLLASTACK_TOKEN and OLLASTACK_MAILBOX_ID")
         if self.rag_enabled and self.embedding_provider == "fake":
             problems.append("EMBEDDING_PROVIDER=fake is not allowed in production while RAG is enabled")
         if problems:

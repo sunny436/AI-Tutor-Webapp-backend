@@ -1,4 +1,4 @@
-"""Outgoing email. SMTP in every real environment (Mailpit locally); memory in tests."""
+"""Outgoing email: SMTP (Mailpit locally) or the Ollastack Agent Mail API; memory in tests."""
 
 from __future__ import annotations
 
@@ -7,6 +7,8 @@ import smtplib
 from dataclasses import dataclass, field
 from email.message import EmailMessage
 from typing import Protocol
+
+import httpx
 
 from app.logging import get_logger
 from app.settings import Settings
@@ -41,6 +43,51 @@ class SmtpEmailSender:
         await asyncio.to_thread(self._send_sync, message)
 
 
+class EmailDeliveryError(Exception):
+    """A provider refused or failed a message. The text never contains the token or the recipient."""
+
+
+class OllastackEmailSender:
+    """Sends from one Ollastack Agent Mail mailbox over HTTPS (EMAIL_BACKEND=ollastack).
+
+    The mailbox decides the sender address and display name; EMAIL_FROM is not used.
+    """
+
+    def __init__(self, settings: Settings, http_client: httpx.AsyncClient | None = None) -> None:
+        self.settings = settings
+        self._client = http_client
+
+    async def send(self, to: str, subject: str, body: str) -> None:
+        s = self.settings
+        url = f"{s.ollastack_base_url.rstrip('/')}/api/mailboxes/{s.ollastack_mailbox_id}/send"
+        headers = {"Authorization": f"Bearer {s.ollastack_token.get_secret_value()}"}
+        client = self._client or httpx.AsyncClient(timeout=15)
+        try:
+            response = await client.post(url, json={"to": to, "subject": subject, "text": body}, headers=headers)
+        except httpx.HTTPError as error:
+            raise EmailDeliveryError(f"ollastack unreachable ({type(error).__name__})") from None
+        finally:
+            if self._client is None:
+                await client.aclose()
+        try:
+            payload = response.json()
+        except ValueError:
+            payload = {}
+        if not isinstance(payload, dict):
+            payload = {}
+        if response.status_code >= 300 or not payload.get("success"):
+            error = payload.get("error")
+            code = error.get("code") if isinstance(error, dict) else None
+            log.warning("ollastack send rejected", extra={"status": response.status_code, "error_code": code})
+            raise EmailDeliveryError(
+                f"ollastack rejected the message (HTTP {response.status_code}, {code or 'no code'})"
+            )
+        status = (payload.get("data") or {}).get("deliveryStatus")
+        if status in ("failed", "bounced", "rejected"):
+            log.warning("ollastack delivery failed", extra={"delivery_status": status})
+            raise EmailDeliveryError(f"ollastack delivery status {status}")
+
+
 @dataclass
 class MemoryEmailSender:
     """Keeps sent mail in memory. Tests read codes from `outbox`."""
@@ -52,7 +99,11 @@ class MemoryEmailSender:
 
 
 def build_email_sender(settings: Settings) -> EmailSender:
-    return MemoryEmailSender() if settings.email_backend == "memory" else SmtpEmailSender(settings)
+    if settings.email_backend == "memory":
+        return MemoryEmailSender()
+    if settings.email_backend == "ollastack":
+        return OllastackEmailSender(settings)
+    return SmtpEmailSender(settings)
 
 
 def code_email(app_name: str, purpose: str, code: str, ttl_minutes: int) -> tuple[str, str]:

@@ -15,7 +15,7 @@ Browser ──► Web app (Next.js, separate repository)
                └─ llm             LLMProvider protocol → OpenAI-compatible providers
                ▼
             PostgreSQL 16 + pgvector (127.0.0.1:5432) — the single source of truth
-            SMTP (verification and reset codes)      LLM APIs: Ollima (primary), OpenRouter (fallback)
+            SMTP or Ollastack mail (codes)           LLM APIs: Ollima (primary), OpenRouter (fallback)
                                                      Embeddings API: OpenAI-compatible (text-embedding-3-small)
 ```
 
