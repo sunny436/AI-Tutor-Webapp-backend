@@ -2,6 +2,9 @@
 # Next.js web app of the ACTIVE RELEASE: /opt/aichat/current -> releases/<commit>, the same
 # directory aichat-api runs from, so frontend and backend are always the same commit.
 # It reaches the API through API_BASE_URL in /etc/aichat/web.env (http://127.0.0.1:4100).
+# ExecStart resolves the pointer ONCE and runs Next.js on the release's own pinned Node
+# (<release>/.node-version, installed by release.sh into /opt/aichat/runtime), the runtime the
+# release was built and validated with; never on whatever Node the system has.
 Description=aichat web app (Next.js)
 After=aichat-api.service network-online.target
 Wants=network-online.target
@@ -10,7 +13,7 @@ Wants=network-online.target
 Type=simple
 WorkingDirectory=/opt/aichat/current/frontend/apps/app
 EnvironmentFile=/etc/aichat/web.env
-ExecStart=/root/.bun/bin/bun run start
+ExecStart=/bin/sh -c 'R=$$(readlink -f /opt/aichat/current) && cd "$$R/frontend/apps/app" && PATH="/opt/aichat/runtime/node-v$$(cat "$$R/.node-version")-linux-x64/bin:$$PATH" exec /root/.bun/bin/bun run start'
 Restart=always
 RestartSec=5
 MemoryMax=900M

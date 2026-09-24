@@ -1,24 +1,23 @@
 #!/usr/bin/env bash
 #
 # Deploy ONE release (frontend + backend from the same commit) on the production host.
-# Started by deploy/deploy.sh, always from the release being deployed:
+# Only ever started by deploy/server/bootstrap.sh, which deploy/deploy.sh runs as a detached
+# systemd unit after checking that the commit is on GitHub's main and that CI passed on it.
 #
-#   bash /opt/aichat/releases/<commit>/deploy/server/release.sh <commit> [options]
-#
-#   --with-migrations     run pending database migrations (before the switch)
+#   --with-migrations     run pending database migrations (backup first, before the switch)
 #   --allow-older-schema  deploy code that is older than the database schema
 #   --prepare-only        build and validate, but do not switch production
 #
-# 1. prepare   build the release in its own directory: backend venv, frontend install + build.
-#              Nothing that serves users is touched.
-# 2. migrate   compare the release's migrations with the database. Pending migrations run only
-#              with --with-migrations, BEFORE the switch, while the current release keeps
-#              serving, so they must be backward compatible (docs/deployment.md).
-# 3. validate  start the release as trial copies on 127.0.0.1:4101 (API) and :3001 (web) against
-#              the production database, and prove web -> API -> database.
-# 4. switch    point /opt/aichat/current at the release and restart the API, then the web app
-#              (a few seconds). If the live checks fail, switch back to the previous release
-#              automatically.
+# 1. prepare   build the release in its own directory from its locked dependencies; nothing
+#              that serves users is touched
+# 2. migrate   compare the release's migrations with the database; pending ones run only with
+#              --with-migrations, after a fresh backup, while the current release keeps serving,
+#              so they must be backward compatible (docs/deployment.md)
+# 3. validate  start the release as trial copies on 127.0.0.1:4101 (API) and :3001 (web)
+#              against the production database; both must report this release and prove
+#              web -> API -> database
+# 4. switch    stop web, point /opt/aichat/current at the release, restart the API, start web,
+#              then prove the invariant; on failure switch back to the previous release
 set -euo pipefail
 . "$(dirname "$(readlink -f "$0")")/lib.sh"
 
@@ -37,9 +36,13 @@ DIR="$RELEASES/$REL"
 CAND_API=4101 CAND_WEB=3001
 CAND_ENV=/run/aichat-candidate-web.env
 
+[ "${AICHAT_VIA_DEPLOY:-}" = 1 ] || die "releases are deployed with 'bun run deploy' only; never run release.sh by hand"
 [ "$(id -u)" -eq 0 ] || die "run as root"
-exec 9>/run/aichat-deploy.lock
-flock -n 9 || die "another deploy or rollback is running"
+is_commit "$REL" || die "not a commit: $REL"
+if [ "${AICHAT_LOCKED:-}" != 1 ]; then
+  exec 9>/run/aichat-deploy.lock
+  flock -n 9 || die "another deploy or rollback is running"
+fi
 
 cleanup_candidates() {
   systemctl stop aichat-candidate-api aichat-candidate-web >/dev/null 2>&1 || true
@@ -50,54 +53,73 @@ trap cleanup_candidates EXIT
 
 log "release $REL"
 [ -d "$DIR/backend" ] && [ -d "$DIR/frontend" ] || die "$DIR is not an extracted release"
+[ -f "$DIR/MANIFEST" ] && [ -f "$DIR/CI.json" ] || die "$DIR has no MANIFEST/CI.json: deploy with 'bun run deploy'"
 for f in api.env web.env postgres.env; do [ -s "$SECRETS/$f" ] || die "missing $SECRETS/$f"; done
 # Without it the frontend falls back to its development default (:4000), which on this host
 # is not this API.
 grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' "$SECRETS/web.env" \
   || die "$SECRETS/web.env must set API_BASE_URL=http://127.0.0.1:4100"
+grep -qE '^NEXT_PUBLIC_SITE_URL=https?://.+' "$SECRETS/web.env" || die "$SECRETS/web.env must set NEXT_PUBLIC_SITE_URL"
 command -v python3.12 >/dev/null || die "python3.12 is not installed (run deploy/install.sh)"
 [ -x "$BUN" ] || die "bun is not installed at $BUN (run deploy/install.sh)"
+[ "$("$BUN" --version)" = "$(tr -d '[:space:]' < "$DIR/.bun-version")" ]   || die "bun $("$BUN" --version) is installed; this release is built with $(cat "$DIR/.bun-version") (run deploy/install.sh)"
 systemctl is-active --quiet aichat-postgres || die "aichat-postgres is not running"
 PREVIOUS=$(current_release)
 note "live now: ${PREVIOUS:-none (first release)}"
-[ "$PREVIOUS" != "$REL" ] || note "this release is already live; it will be rebuilt if needed and re-validated"
+note "CI: $(python3.12 -c 'import json,sys; d=json.load(open(sys.argv[1])); print("rehearsal (no CI)" if d.get("rehearsal") else ", ".join(j["name"].split(" (")[0] + " " + j["conclusion"] for j in d["jobs"]))' "$DIR/CI.json")"
+OPERATOR=$(python3.12 -c 'import json,sys; print(json.load(open(sys.argv[1])).get("operator", "unknown"))' "$DIR/CI.json")
 [ -f "$DIR/RELEASE" ] || printf 'commit=%s\nprepared=%s\n' "$REL" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$DIR/RELEASE"
+verify_release "$REL" || die "release $REL does not match its commit"
 
 # ---------------------------------------------------------------- 1. prepare
 log "1/4 prepare (in $DIR; production untouched)"
+if [ ! -f "$DIR/backend/.venv/.ready" ] || [ ! -f "$DIR/frontend/.ready" ]; then preflight_resources; fi
 if [ ! -f "$DIR/backend/.venv/.ready" ]; then
-  python3.12 -m venv "$DIR/backend/.venv"
-  "$DIR/backend/.venv/bin/python" -m pip install -q --upgrade pip
-  "$DIR/backend/.venv/bin/python" -m pip install -q -r "$DIR/backend/requirements.txt"
+  build_step python3.12 -m venv "$DIR/backend/.venv"
+  build_step "$DIR/backend/.venv/bin/python" -m pip install -q --require-hashes -r "$DIR/backend/requirements.lock"
+  "$DIR/backend/.venv/bin/python" -m pip check >/dev/null || die "backend dependencies are inconsistent"
   touch "$DIR/backend/.venv/.ready"
 fi
-note "backend venv ready"
-if [ ! -f "$DIR/frontend/.ready" ]; then
-  PATH="$(dirname "$BUN"):$PATH"
-  export PATH TURBO_TELEMETRY_DISABLED=1 NEXT_TELEMETRY_DISABLED=1
-  (cd "$DIR/frontend" && "$BUN" install --frozen-lockfile)
-  # NEXT_PUBLIC_* values are baked in at build time: build with production's web.env.
-  (cd "$DIR/frontend" && set -a && . "$SECRETS/web.env" && set +a && "$BUN" run build)
-  touch "$DIR/frontend/.ready"
+note "backend: locked dependencies installed (requirements.lock, hashes verified)"
+# The frontend is built and served on the release's pinned Node (.node-version), as in CI.
+ensure_node "$DIR"
+NODE_BIN=$(node_bin_of "$DIR")
+# NEXT_PUBLIC_* values are baked in at build time; changing them (or Node) requires a rebuild.
+BUILD_ENV=$( { grep -E '^NEXT_PUBLIC_' "$SECRETS/web.env"; cat "$DIR/.node-version"; } | sha256sum | cut -d' ' -f1)
+if [ "$(cat "$DIR/frontend/.ready" 2>/dev/null)" != "$BUILD_ENV" ]; then
+  export TURBO_TELEMETRY_DISABLED=1 NEXT_TELEMETRY_DISABLED=1
+  (cd "$DIR/frontend" && PATH="$NODE_BIN:$PATH" build_step "$BUN" install --frozen-lockfile)
+  (cd "$DIR/frontend/apps/app" && set -a && . "$SECRETS/web.env" && set +a     && PATH="$NODE_BIN:$PATH" build_step "$BUN" run build)
+  printf '%s' "$BUILD_ENV" > "$DIR/frontend/.ready"
 fi
-note "frontend built"
+note "frontend: built with Node $("$NODE_BIN/node" --version) and bun $("$BUN" --version)"
 
 # ---------------------------------------------------------------- 2. migrate
 log "2/4 database migrations"
 status=$(migration_status "$REL")
-note "database: $(json_field database <<<"$status") | this release: $(json_field head <<<"$status")"
+database=$(json_field database <<<"$status")
+head=$(json_field head <<<"$status")
 pending=$(json_field pending <<<"$status")
-if [ "$(json_field database_known <<<"$status")" != True ]; then
-  [ "$ALLOW_OLDER" = 1 ] || die "the database was migrated by a NEWER release than $REL. Deploying older code
+known=$(json_field database_known <<<"$status")
+note "database: $database | this release: $head"
+if [ "$known" != True ]; then
+  [ "$ALLOW_OLDER" = 1 ] || die "the database ($database) was migrated by a NEWER release than $REL. Deploying older code
       onto it is only safe if those migrations were backward compatible; re-run with --allow-older-schema."
   note "older code on a newer schema: allowed by --allow-older-schema"
 elif [ "$pending" != "[]" ]; then
   [ "$WITH_MIGRATIONS" = 1 ] || die "pending migrations $pending. They run BEFORE the switch while the current
       release keeps serving, so they must be backward compatible. Re-run with --with-migrations."
   [ "$PREPARE_ONLY" = 0 ] || die "--prepare-only never migrates; pending migrations: $pending"
+  systemctl start aichat-pg-backup.service || die "the backup before migrating failed; nothing was migrated"
+  backup=$(ls -1t /var/backups/aichat/aichat-*.dump 2>/dev/null | head -1)
+  note "backup before migrating: $backup"
   systemd-run --pipe --wait --collect --quiet -p EnvironmentFile="$SECRETS/api.env" \
     -p WorkingDirectory="$DIR/backend" "$DIR/backend/.venv/bin/python" -m alembic upgrade head
+  record "migrated $database -> $head for $REL (backup: $backup) by $OPERATOR"
   note "migrated: $pending"
+  if [ -n "$PREVIOUS" ]; then
+    check_chain "$WEB_PORT" aichat-api || note "WARNING: the live release fails its check after migrating"
+  fi
 else
   note "none pending"
 fi
@@ -108,13 +130,17 @@ cleanup_candidates
 systemd-run --unit=aichat-candidate-api --collect --quiet -p EnvironmentFile="$SECRETS/api.env" \
   -p WorkingDirectory="$DIR/backend" "$DIR/backend/.venv/bin/python" -m uvicorn app.main:create_app \
   --factory --host 127.0.0.1 --port "$CAND_API"
-wait_http "http://127.0.0.1:$CAND_API/ready" 60 || die "trial API not ready (journalctl -u aichat-candidate-api)"
+wait_http "http://127.0.0.1:$CAND_API/ready" 90 || die "trial API not ready (journalctl -u aichat-candidate-api)"
 note "trial API ready (database reachable, production settings accepted)"
 (umask 077 && sed "s#^API_BASE_URL=.*#API_BASE_URL=http://127.0.0.1:$CAND_API#" "$SECRETS/web.env" > "$CAND_ENV")
 systemd-run --unit=aichat-candidate-web --collect --quiet -p EnvironmentFile="$CAND_ENV" \
+  -p Environment="PATH=$NODE_BIN:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
   -p WorkingDirectory="$DIR/frontend/apps/app" "$BUN" x next start -p "$CAND_WEB" -H 127.0.0.1
-wait_http "http://127.0.0.1:$CAND_WEB/login" 90 || die "trial web app not answering (journalctl -u aichat-candidate-web)"
+wait_http "http://127.0.0.1:$CAND_WEB/login" 120 || die "trial web app not answering (journalctl -u aichat-candidate-web)"
 note "trial web app serves /login"
+[ "$(reported_release "http://127.0.0.1:$CAND_API/health")" = "$REL" ] || die "the trial API does not report release $REL"
+[ "$(reported_release "http://127.0.0.1:$CAND_WEB/api/health")" = "$REL" ] || die "the trial web app does not report release $REL"
+note "both trial copies report release $REL"
 check_chain "$CAND_WEB" aichat-candidate-api || die "trial web app could not reach the trial API"
 if systemd-run --pipe --wait --collect --quiet -p EnvironmentFile="$SECRETS/api.env" -p WorkingDirectory="$DIR/backend" \
   "$DIR/backend/.venv/bin/python" -c '
@@ -134,31 +160,33 @@ fi
 cleanup_candidates
 
 if [ "$PREPARE_ONLY" = 1 ]; then
-  record "validated $REL (not switched; live: ${PREVIOUS:-none})"
+  record "validated $REL (not switched; live: ${PREVIOUS:-none}) by $OPERATOR"
   log "validated; production unchanged (--prepare-only)"
   exit 0
 fi
 
 # ---------------------------------------------------------------- 4. switch
 log "4/4 switch production to $REL"
-STAMP=".before-$(date -u +%Y%m%d%H%M%S)"
-BACKUP_SUFFIX=$STAMP bash "$DIR/deploy/server/install-units.sh" "$DIR"
+verify_release "$REL" || die "release $REL changed during the deploy; production unchanged"
+STAMP=".before-$(date -u +%Y%m%d%H%M%S)"   # units replaced now are kept as <unit>$STAMP
+export STAMP
 if activate "$REL"; then
-  record "deployed $REL (previous: ${PREVIOUS:-none})"
-  systemctl enable --quiet aichat-api.service aichat-web.service  # start at boot (first release on a host)
+  push_live "$REL"
+  record "deployed $REL (previous: ${PREVIOUS:-none}) by $OPERATOR"
+  systemctl enable --quiet aichat-api.service aichat-web.service || note "(could not enable the units at boot)"
 else
   note "live checks FAILED on $REL"
   if [ -n "$PREVIOUS" ] && [ "$PREVIOUS" != "$REL" ]; then
     log "rolling back to $PREVIOUS"
     if activate "$PREVIOUS"; then
-      record "FAILED $REL, rolled back to $PREVIOUS"
+      record "FAILED $REL, rolled back to $PREVIOUS by $OPERATOR"
       die "release $REL failed its live checks; production is back on $PREVIOUS"
     fi
     record "FAILED $REL, rollback to $PREVIOUS ALSO failed"
     die "rollback to $PREVIOUS failed too: investigate now (journalctl -u aichat-api -u aichat-web)"
   fi
   # First release on a host that ran the old two-checkout layout: put back the unit files
-  # install-units.sh replaced a moment ago, and restart the old layout.
+  # activate() replaced a moment ago, and restart the old layout.
   restored=0
   for saved in /etc/systemd/system/aichat-*"$STAMP"; do
     [ -f "$saved" ] || continue
@@ -170,7 +198,7 @@ else
     rm -f "$CURRENT"
     systemctl daemon-reload
     systemctl restart aichat-api aichat-web
-    if wait_http "http://127.0.0.1:$API_PORT/ready" 60 && wait_http "http://127.0.0.1:$WEB_PORT/login" 90; then
+    if wait_http "http://127.0.0.1:$API_PORT/ready" 90 && wait_http "http://127.0.0.1:$WEB_PORT/login" 120; then
       record "FAILED $REL (first release), restored the previous units"
       die "release $REL failed its live checks; the previous setup is running again"
     fi
@@ -181,18 +209,16 @@ else
   die "release $REL failed its live checks and there is no previous release (see docs/rollback.md)"
 fi
 public=$(sed -n 's/^NEXT_PUBLIC_SITE_URL=//p' "$SECRETS/web.env")
-if [ -n "$public" ]; then
-  code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$public/login" || true)
-  note "public $public/login -> $code"
-fi
+code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$public/login" || true)
+if [ "$code" = 200 ]; then note "public $public/login -> 200"; else note "WARNING: public $public/login -> $code (tunnel/DNS?)"; fi
 
-# Keep the live release, the previous one and one more; delete older builds.
-keep="$REL ${PREVIOUS:-}"
-for old in $(find "$RELEASES" -mindepth 1 -maxdepth 1 -type d -regextype posix-extended   -regex '.*/[0-9a-f]{40}' -printf '%T@ %f
-' | sort -rn | awk '{print $2}'); do
+# Keep the live release and the two before it on the live stack (two rollbacks deep); delete
+# older builds. Never the live one.
+keep=$( { live_stack | tail -3; printf '%s\n' "$REL" "$PREVIOUS"; } | sort -u | tr '\n' ' ')
+while read -r old; do
   case " $keep " in *" $old "*) continue ;; esac
-  if [ "$(wc -w <<<"$keep")" -lt 3 ]; then keep="$keep $old"; continue; fi
-  rm -rf "${RELEASES:?}/$old" "$ROOT/incoming/$old.tar.gz"
+  rm -rf "${RELEASES:?}/$old"
   note "pruned old release $old"
-done
-log "live: $REL (previous: ${PREVIOUS:-none}). Roll back with: bash deploy/rollback.sh"
+done < <(find "$RELEASES" -mindepth 1 -maxdepth 1 -type d -regextype posix-extended -regex '.*/[0-9a-f]{40}' -printf '%f\n')
+find "$ROOT/incoming" -maxdepth 1 -type f -mtime +2 -delete 2>/dev/null || true
+log "live: $REL (previous: ${PREVIOUS:-none}). Status: bun run status. Roll back: bun run rollback"

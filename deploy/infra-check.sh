@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 #
-# Compare the host against the target described in INFRASTRUCTURE.md. Read-only.
+# Compare the host against INFRASTRUCTURE.md. Read-only.
 #   bash /opt/aichat/current/deploy/infra-check.sh
+#
+# First the release invariant (deploy/server/status.sh: frontend release == backend release ==
+# /opt/aichat/current, every process, the release's files == its commit), then the host.
 set -uo pipefail
 . "$(dirname "$(readlink -f "$0")")/server/lib.sh"
 fail=0
@@ -9,18 +12,10 @@ ok()  { printf '  ok    %s\n' "$*"; }
 bad() { printf '  FAIL  %s\n' "$*"; fail=1; }
 API="http://127.0.0.1:$API_PORT"
 
-echo "release"
-live=$(current_release)
-if [ -n "$live" ]; then
-  ok "live release $live"
-  same_release "$live" >/dev/null && ok "aichat-api and aichat-web run that same release" \
-    || bad "aichat-api and aichat-web do not both run $live"
-  [ -f "$HISTORY" ] && printf '  last  %s\n' "$(tail -1 "$HISTORY")"
-else
-  bad "/opt/aichat/current does not point at a release"
-fi
+bash "$(dirname "$(readlink -f "$0")")/server/status.sh" || fail=1
 
-echo "units"
+echo
+echo "services"
 for u in aichat-postgres.service aichat-api.service aichat-web.service aichat-pg-backup.timer; do
   systemctl is-active --quiet "$u" && ok "$u active" || bad "$u not active"
 done
@@ -35,8 +30,7 @@ for port in "$WEB_PORT" "$API_PORT" 5432; do
 done
 
 echo "health"
-curl -fsS "$API/health" >/dev/null && ok "api /health" || bad "api /health"
-curl -fsS "$API/ready"  >/dev/null && ok "api /ready (database reachable)" || bad "api /ready"
+curl -fsS "$API/ready" >/dev/null && ok "api /ready (database reachable)" || bad "api /ready"
 curl -sS -o /dev/null -w '%{http_code}' "$API/docs" | grep -q 404 && ok "api docs hidden" || bad "api docs exposed"
 curl -fsS -o /dev/null "http://127.0.0.1:$WEB_PORT/login" && ok "web app serves /login" || bad "web app not answering on :$WEB_PORT"
 check_chain "$WEB_PORT" aichat-api >/dev/null && ok "web -> API -> database" || bad "web app cannot reach the API"

@@ -13,6 +13,10 @@
  *   lint           ruff (check + format) + biome
  *   build          frontend production build + backend contract check
  *   contract       regenerate docs/openapi.json, then run the frontend contract test against it
+ *   lock:backend   regenerate backend/requirements.lock (hashed, Linux + Python 3.12, in Docker)
+ *
+ * Production has exactly two commands, both for the whole application: `bun run deploy` and
+ * `bun run rollback` (plus the read-only `bun run status`). There is no per-component deploy.
  */
 import { spawn, spawnSync } from "node:child_process";
 import { copyFileSync, existsSync } from "node:fs";
@@ -117,6 +121,7 @@ const tasks = {
       () => run("backend tests", python, ["-m", "pytest", "-o", "addopts=", "-q", "-ra"], backend),
       () => run("frontend typecheck", "bun", ["run", "typecheck"], frontend),
       () => run("frontend tests", "bun", ["run", "test"], frontend),
+      () => run("deploy gate tests", "bun", ["test", "deploy/tests"], root),
     ]);
   },
   "test:e2e"() {
@@ -137,6 +142,18 @@ const tasks = {
       () => run("API contract current", python, ["scripts/export_openapi.py", "--check"], backend),
       () => run("frontend build", "bun", ["run", "build"], frontend),
     ]);
+  },
+  "lock:backend"() {
+    // Production and CI run Linux + Python 3.12, and some dependencies differ per platform
+    // (uvloop), so the lock is always generated there, never on the developer's OS.
+    const script = [
+      "set -e",
+      "apt-get update -qq >/dev/null && apt-get install -y -qq python3.12 python3.12-venv >/dev/null",
+      "python3.12 -m venv /tmp/v && /tmp/v/bin/pip install -q 'pip-tools>=7.4,<8'",
+      "/tmp/v/bin/pip-compile -q --generate-hashes --strip-extras --no-emit-index-url --output-file=/tmp/lock requirements.txt",
+      "{ echo '# Exact, hashed runtime dependencies for production and CI (Linux, Python 3.12).'; echo '# Generated from requirements.txt by: bun run lock:backend   (do not edit by hand)'; grep -v '^#    pip-compile' /tmp/lock; } > requirements.lock",
+    ].join(" && ");
+    all([() => run("backend lock", "docker", ["run", "--rm", "-v", `${backend}:/b`, "-w", "/b", "ubuntu:24.04", "bash", "-c", script], root, { MSYS_NO_PATHCONV: "1" })]);
   },
   contract() {
     needVenv();
