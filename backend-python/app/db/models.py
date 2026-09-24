@@ -6,9 +6,10 @@ User ─┬─ UserSettings
       └─ UsageEvent
 EmailCode and AuthAttempt support sign-up, reset and throttling.
 
-Future AI-Tutor tables (student profiles, documents, chunks with pgvector
-embeddings) are added by new migrations; `metadata` JSONB columns on
-conversations and messages absorb per-feature data without schema churn.
+Knowledge base (RAG):
+KnowledgeSource (global, or private to owner_user_id) ── Document ── DocumentChunk (pgvector embedding)
+
+`metadata` JSONB columns absorb per-feature data without schema churn.
 """
 
 from __future__ import annotations
@@ -17,6 +18,7 @@ import uuid
 from datetime import datetime
 from typing import Any
 
+from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
     CheckConstraint,
     DateTime,
@@ -41,6 +43,10 @@ NOW = text("clock_timestamp()")
 MESSAGE_ROLES = ("user", "assistant", "system")
 MESSAGE_STATUSES = ("complete", "streaming", "cancelled", "error", "superseded")
 CODE_PURPOSES = ("verify_email", "reset_password")
+
+# The pgvector column dimension. settings.embedding_dimensions must equal it (checked at
+# startup); changing it needs a new migration and a re-ingest of every document.
+EMBEDDING_DIMENSIONS = 1536
 
 
 def _uuid_pk() -> Mapped[uuid.UUID]:
@@ -200,4 +206,84 @@ class UsageEvent(Base):
     latency_ms: Mapped[int | None] = mapped_column(Integer)
     ttft_ms: Mapped[int | None] = mapped_column(Integer)
     outcome: Mapped[str] = mapped_column(String(16), nullable=False)
+    created_at: Mapped[datetime] = _created()
+
+
+class KnowledgeSource(Base):
+    """A named collection of documents. owner_user_id NULL = global (every signed-in user)."""
+
+    __tablename__ = "knowledge_sources"
+    __table_args__ = (Index("ix_knowledge_sources_owner_user_id", "owner_user_id"),)
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    name: Mapped[str] = mapped_column(String(120), nullable=False, unique=True)
+    description: Mapped[str | None] = mapped_column(String(500))
+    owner_user_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE")
+    )
+    metadata_: Mapped[dict[str, Any]] = mapped_column(
+        "metadata", JSONB, nullable=False, server_default=text("'{}'::jsonb")
+    )
+    created_at: Mapped[datetime] = _created()
+    updated_at: Mapped[datetime] = _created()
+
+
+class Document(Base):
+    """One ingested document, identified by (source, uri). Re-ingesting replaces its chunks."""
+
+    __tablename__ = "documents"
+    __table_args__ = (UniqueConstraint("source_id", "uri"),)
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    source_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("knowledge_sources.id", ondelete="CASCADE"), nullable=False
+    )
+    uri: Mapped[str] = mapped_column(String(1000), nullable=False)
+    title: Mapped[str] = mapped_column(String(300), nullable=False)
+    content_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    # sha256 of content hash + embedding model + dimension + chunking parameters:
+    # a document is re-embedded whenever any of them changes, and only then.
+    ingest_signature: Mapped[str] = mapped_column(String(64), nullable=False)
+    metadata_: Mapped[dict[str, Any]] = mapped_column(
+        "metadata", JSONB, nullable=False, server_default=text("'{}'::jsonb")
+    )
+    created_at: Mapped[datetime] = _created()
+    updated_at: Mapped[datetime] = _created()
+
+
+class DocumentChunk(Base):
+    """A retrievable passage with its embedding. source_id is denormalised for index-friendly filtering."""
+
+    __tablename__ = "document_chunks"
+    __table_args__ = (
+        UniqueConstraint("document_id", "ordinal"),
+        Index("ix_document_chunks_source_model", "source_id", "embedding_model"),
+        Index(
+            "ix_document_chunks_embedding_hnsw",
+            "embedding",
+            postgresql_using="hnsw",
+            postgresql_ops={"embedding": "vector_cosine_ops"},
+        ),
+        Index(
+            "ix_document_chunks_metadata_gin",
+            "metadata",
+            postgresql_using="gin",
+            postgresql_ops={"metadata": "jsonb_path_ops"},
+        ),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    document_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("documents.id", ondelete="CASCADE"), nullable=False
+    )
+    source_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("knowledge_sources.id", ondelete="CASCADE"), nullable=False
+    )
+    ordinal: Mapped[int] = mapped_column(Integer, nullable=False)
+    content: Mapped[str] = mapped_column(Text, nullable=False)
+    metadata_: Mapped[dict[str, Any]] = mapped_column(
+        "metadata", JSONB, nullable=False, server_default=text("'{}'::jsonb")
+    )
+    embedding: Mapped[list[float]] = mapped_column(Vector(EMBEDDING_DIMENSIONS), nullable=False)
+    embedding_model: Mapped[str] = mapped_column(String(200), nullable=False)
     created_at: Mapped[datetime] = _created()

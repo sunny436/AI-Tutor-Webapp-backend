@@ -2,14 +2,15 @@
 
 prepare (request transaction)                      generate (independent task)
 ───────────────────────────────                    ────────────────────────────────────
-load / create conversation (owned)                 build prompt: system + context + history
-sweep stale `streaming` rows, 409 if one is live   stream from the LLM, push token events
-per-user quota (usage_events)                      stop on cancel (event or DB flag)
-insert user message + assistant placeholder        persist final content + status + usage
-commit                                             push `done` or `error`
+load / create conversation (owned)                 load the conversation from PostgreSQL
+sweep stale `streaming` rows, 409 if one is live   run the LangGraph turn graph (retrieve ->
+per-user quota (usage_events)                        assemble -> generate), push token events
+insert user message + assistant placeholder        stop on cancel (event or DB flag)
+commit                                             persist content + status + retrieval summary
 
 The browser only ever sends a conversation id and the new text. History, identity
-and message persistence are owned here, in PostgreSQL.
+and message persistence are owned here, in PostgreSQL. Retrieval and prompt assembly
+belong to the graph (app/rag/graph.py); this layer never touches embeddings or pgvector.
 """
 
 from __future__ import annotations
@@ -25,14 +26,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.chat.assistant import AssistantConfig, resolve_assistant_config
 from app.chat.streams import ActiveGenerations, ChatEvent, Generation
-from app.context.base import ContextRequest
-from app.context.pipeline import ContextPipeline, render_context
 from app.conversations.repository import DEFAULT_TITLE, ConversationRepository
 from app.conversations.router import conversation_out, message_out
 from app.db.models import Conversation, Message, UsageEvent, User
 from app.db.session import Database
 from app.errors import Conflict, NotFound, RateLimited, ValidationFailed
-from app.llm.base import ChatMessage, GenerationOptions, LLMError, LLMProvider, StreamPart
+from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
 from app.settings import Settings
 
@@ -94,10 +93,10 @@ class PreparedTurn:
 
 
 class ChatService:
-    def __init__(self, db: Database, settings: Settings, llm: LLMProvider, generations: ActiveGenerations) -> None:
+    def __init__(self, db: Database, settings: Settings, rag_graph, generations: ActiveGenerations) -> None:
         self.db = db
         self.settings = settings
-        self.llm = llm
+        self.rag_graph = rag_graph  # compiled LangGraph graph (app.rag.graph.build_rag_graph)
         self.generations = generations
 
     # ------------------------------------------------------------------ prepare
@@ -223,7 +222,12 @@ class ChatService:
         generation.task = asyncio.create_task(self._generate(turn, generation))
         return generation
 
-    async def _history(self, session: AsyncSession, conversation_id: uuid.UUID) -> list[ChatMessage]:
+    async def _conversation(self, session: AsyncSession, conversation_id: uuid.UUID) -> list[ChatMessage]:
+        """The last CHAT_HISTORY_MAX_MESSAGES usable messages, oldest first.
+
+        No size trimming here: the graph's context budget (app/rag/context.py) decides
+        what fits, so there is exactly one owner of the prompt size.
+        """
         rows = list(
             await session.scalars(
                 select(Message)
@@ -236,34 +240,7 @@ class ChatService:
                 .limit(self.settings.chat_history_max_messages)
             )
         )
-        history: list[ChatMessage] = []
-        budget = self.settings.chat_history_max_chars
-        for row in rows:  # newest first
-            if not row.content:
-                continue
-            if history and budget - len(row.content) < 0:
-                break
-            budget -= len(row.content)
-            history.append(ChatMessage(role=row.role, content=row.content))
-        history.reverse()
-        # A model expects the turn to start with a user message.
-        while history and history[0].role != "user":
-            history.pop(0)
-        return history
-
-    async def _build_prompt(self, turn: PreparedTurn) -> list[ChatMessage]:
-        async with self.db.sessionmaker() as session:
-            history = await self._history(session, turn.conversation.id)
-        messages = [ChatMessage("system", turn.config.system_prompt)]
-        if turn.config.context_providers:
-            query = next((m.content for m in reversed(history) if m.role == "user"), "")
-            blocks = await ContextPipeline(turn.config.context_providers, self.settings.context_timeout_s).gather(
-                ContextRequest(user_id=turn.user.id, conversation_id=turn.conversation.id, query=query)
-            )
-            context = render_context(blocks)
-            if context:
-                messages.append(ChatMessage("system", context))
-        return messages + history
+        return [ChatMessage(role=row.role, content=row.content) for row in reversed(rows) if row.content]
 
     async def _cancel_requested(self, message_id: uuid.UUID) -> bool:
         try:
@@ -319,6 +296,7 @@ class ChatService:
         status = "complete"
         error_code: str | None = None
         provider = model = None
+        retrieval_summary: dict | None = None
         options = GenerationOptions(
             model=turn.config.model,
             temperature=turn.config.temperature
@@ -327,30 +305,38 @@ class ChatService:
             max_output_tokens=self.settings.llm_max_output_tokens,
         )
         try:
-            messages = await self._build_prompt(turn)
-            ok, stream = await self._wait(self.llm.stream(messages, options), generation)
-            if not ok:
-                status = "cancelled"
-            else:
-                provider, model = stream.info.name, stream.info.model
-                parts = stream.parts.__aiter__()
-                try:
-                    while True:
-                        ok, part = await self._wait(_next(parts), generation)
-                        if not ok:
-                            status = "cancelled"
-                            break
-                        if part is None:
-                            break
-                        if part.text:
-                            if ttft_ms is None:
-                                ttft_ms = int((time.monotonic() - started) * 1000)
-                            pieces.append(part.text)
-                            await generation.queue.put(ChatEvent("token", {"text": part.text}))
-                        usage = part.usage or usage
-                        finish_reason = part.finish_reason or finish_reason
-                finally:
-                    await parts.aclose()
+            async with self.db.sessionmaker() as session:
+                conversation = await self._conversation(session, turn.conversation.id)
+            state = {
+                "user_id": turn.user.id,
+                "conversation": conversation,
+                "system_prompt": turn.config.system_prompt,
+                "retrieval": turn.config.retrieval,
+                "generation": options,
+            }
+            events = self.rag_graph.astream(state, stream_mode="custom").__aiter__()
+            try:
+                while True:
+                    ok, event = await self._wait(_next(events), generation)
+                    if not ok:
+                        status = "cancelled"  # cancelling the pending step cancelled the running node
+                        break
+                    if event is None:
+                        break
+                    kind = event.get("event")
+                    if kind == "token":
+                        if ttft_ms is None:
+                            ttft_ms = int((time.monotonic() - started) * 1000)
+                        pieces.append(event["text"])
+                        await generation.queue.put(ChatEvent("token", {"text": event["text"]}))
+                    elif kind == "llm_started":
+                        provider, model = event["provider"], event["model"]
+                    elif kind == "llm_finished":
+                        usage, finish_reason = event.get("usage"), event.get("finish_reason")
+                    elif kind == "retrieval":
+                        retrieval_summary = event["summary"]
+            finally:
+                await events.aclose()
         except LLMError as error:
             status, error_code = "error", error.code
             log.warning(
@@ -372,6 +358,8 @@ class ChatService:
             "outputTokens": usage.output_tokens if usage else None,
             "finishReason": finish_reason,
             "errorCode": error_code,
+            # Internal (not in the public allowlist): status, reason, sources in [n] order, timings.
+            "retrieval": retrieval_summary,
         }
         metadata = {k: v for k, v in metadata.items() if v is not None}
         log.info(
@@ -383,6 +371,7 @@ class ChatService:
                 "latency_ms": latency_ms,
                 "ttft_ms": ttft_ms,
                 "output_tokens": metadata.get("outputTokens"),
+                "retrieval_status": (retrieval_summary or {}).get("status"),
                 "message_id": str(turn.assistant_id),
             },
         )
@@ -457,9 +446,9 @@ class ChatService:
         return message.status
 
 
-async def _next(parts) -> StreamPart | None:
+async def _next(iterator):
     try:
-        return await parts.__anext__()
+        return await iterator.__anext__()
     except StopAsyncIteration:
         return None
 

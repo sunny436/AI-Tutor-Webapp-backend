@@ -48,37 +48,25 @@ async def test_database_unavailable_is_503_without_details():
             assert ready.status_code == 503 and ready.json()["database"] is False
 
 
+PRODUCTION_LIKE = dict(
+    app_env="production",
+    secret_key="s" * 40,
+    llm_provider="openai_compatible",
+    embedding_provider="openai_compatible",
+    email_backend="smtp",
+    database_url="postgresql+asyncpg://u:p@db/x",
+)
+
+
 def test_production_refuses_unsafe_configuration():
     with pytest.raises(RuntimeError, match="SECRET_KEY"):
-        create_app(
-            make_settings(
-                app_env="production",
-                secret_key="short",
-                llm_provider="openai_compatible",
-                email_backend="smtp",
-                database_url="postgresql+asyncpg://u:p@db/x",
-            )
-        )
-    with pytest.raises(RuntimeError, match="fake"):
-        create_app(
-            make_settings(
-                app_env="production",
-                secret_key="s" * 40,
-                llm_provider="fake",
-                email_backend="smtp",
-                database_url="postgresql+asyncpg://u:p@db/x",
-            )
-        )
+        create_app(make_settings(**{**PRODUCTION_LIKE, "secret_key": "short"}))
+    with pytest.raises(RuntimeError, match="LLM_PROVIDER=fake"):
+        create_app(make_settings(**{**PRODUCTION_LIKE, "llm_provider": "fake"}))
+    with pytest.raises(RuntimeError, match="EMBEDDING_PROVIDER=fake"):
+        create_app(make_settings(**{**PRODUCTION_LIKE, "embedding_provider": "fake"}))
 
 
 def test_production_hides_api_docs():
-    app = create_app(
-        make_settings(
-            app_env="production",
-            secret_key="s" * 40,
-            llm_provider="openai_compatible",
-            email_backend="smtp",
-            database_url="postgresql+asyncpg://u:p@db/x",
-        )
-    )
+    app = create_app(make_settings(**PRODUCTION_LIKE))
     assert app.docs_url is None and app.openapi_url is None and app.redoc_url is None

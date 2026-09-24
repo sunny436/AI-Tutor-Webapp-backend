@@ -162,7 +162,11 @@ async def test_cancel_stops_generation_and_keeps_partial(slow_client, slow_app):
     account = await register(slow_client, slow_app)
     task = asyncio.create_task(stream_chat(slow_client, account["headers"], "long answer please"))
     streaming = await _wait_for_streaming(slow_app)
-    await asyncio.sleep(0.3)
+    llm = slow_app.state.llm
+    for _ in range(200):  # cancel only once the model has demonstrably produced tokens
+        if llm.emitted >= 3:
+            break
+        await asyncio.sleep(0.05)
     r = await slow_client.post(f"/v1/messages/{streaming.id}/cancel", headers=account["headers"])
     assert r.status_code == 200 and r.json()["status"] == "cancelled"
     response, events = await asyncio.wait_for(task, 10)
@@ -276,3 +280,138 @@ async def test_per_user_generation_quota(fake_llm):
                 await client.delete(f"/v1/conversations/{c['id']}", headers=account["headers"])
             r = await client.post("/v1/chat/stream", json={"message": "hi"}, headers=account["headers"])
             assert r.status_code == 429
+
+
+# ------------------------------------------------------------------ RAG through the chat API
+KB_DOC = "# Aurelian Quokka protocol\n\nThe Aurelian Quokka protocol listens on port 7777 for telemetry."
+KB_QUESTION = "Which port does the Aurelian Quokka protocol use for telemetry?"
+
+
+async def _rag_app(**settings_overrides):
+    from app.auth.emails import MemoryEmailSender
+    from app.main import create_app
+    from app.rag.embeddings import KeywordHashEmbeddings
+    from tests.conftest import SpyEmbeddings
+
+    spy = SpyEmbeddings(KeywordHashEmbeddings(1536, model="fake:text-embedding-3-small"))
+    llm = FakeProvider()
+    application = create_app(
+        make_settings(**settings_overrides), llm=llm, email_sender=MemoryEmailSender(), embeddings=spy
+    )
+    return application, llm, spy
+
+
+async def _assistant_row(app, message_id):
+    async with app.state.db.sessionmaker() as s:
+        return await s.get(Message, message_id)
+
+
+async def test_chat_uses_the_knowledge_base_end_to_end(client, app, fake_llm):
+    from tests.conftest import ingest_docs
+
+    await ingest_docs(app, {"quokka.md": KB_DOC})
+    account = await register(client, app)
+    _, events = await stream_chat(client, account["headers"], KB_QUESTION)
+    done = events[-1][1]["message"]
+    prompt = fake_llm.calls[-1]
+    assert prompt[1].role == "system" and "[1] Aurelian Quokka protocol" in prompt[1].content
+    assert "port 7777" in prompt[1].content and prompt[-1].content == KB_QUESTION
+    row = await _assistant_row(app, done["id"])
+    retrieval = row.metadata_["retrieval"]
+    assert row.status == "complete" and retrieval["status"] == "ok" and retrieval["chunkCount"] >= 1
+    assert retrieval["sources"][0]["uri"] == "quokka.md" and retrieval["sources"][0]["title"]
+    assert "retrieval" not in done["metadata"]  # internal only: the public contract is unchanged
+
+
+async def test_embedding_outage_keeps_chat_working():
+    import httpx
+
+    from app.rag.errors import EmbeddingError
+    from tests.conftest import ingest_docs
+
+    application, _, spy = await _rag_app()
+    async with application.router.lifespan_context(application):
+        async with httpx.AsyncClient(transport=httpx.ASGITransport(app=application), base_url="http://t") as client:
+            await ingest_docs(application, {"quokka.md": KB_DOC})
+            spy.fail_with = EmbeddingError("embedding_unauthorized")
+            account = await register(client, application)
+            _, events = await stream_chat(client, account["headers"], KB_QUESTION)
+            assert events[-1][0] == "done" and events[-1][1]["message"]["status"] == "complete"
+            row = await _assistant_row(application, events[-1][1]["message"]["id"])
+            assert row.metadata_["retrieval"]["status"] == "failed"
+            assert row.metadata_["retrieval"]["reason"] == "embedding_unauthorized"
+
+
+async def test_rag_disabled_makes_no_embedding_calls():
+    import httpx
+
+    from tests.conftest import ingest_docs
+
+    application, llm, spy = await _rag_app(rag_enabled=False)
+    async with application.router.lifespan_context(application):
+        async with httpx.AsyncClient(transport=httpx.ASGITransport(app=application), base_url="http://t") as client:
+            await ingest_docs(application, {"quokka.md": KB_DOC})
+            calls_after_ingest = spy.calls
+            account = await register(client, application)
+            _, events = await stream_chat(client, account["headers"], KB_QUESTION)
+            assert events[-1][0] == "done" and spy.calls == calls_after_ingest
+            row = await _assistant_row(application, events[-1][1]["message"]["id"])
+            assert row.metadata_["retrieval"] == {
+                **row.metadata_["retrieval"],
+                "status": "skipped",
+                "reason": "disabled",
+            }
+            assert [m.role for m in llm.calls[-1]] == ["system", "user"]
+
+
+async def test_private_knowledge_is_scoped_to_its_owner_in_chat(client, app, fake_llm):
+    from sqlalchemy import select as sa_select
+
+    from app.db.models import User
+    from tests.conftest import ingest_docs
+
+    alice = await register(client, app)
+    bob = await register(client, app)
+    async with app.state.db.sessionmaker() as s:
+        alice_id = await s.scalar(sa_select(User.id).where(User.email == alice["email"]))
+    await ingest_docs(app, {"quokka.md": KB_DOC}, source="alice-private", owner_user_id=alice_id)
+
+    _, events = await stream_chat(client, bob["headers"], KB_QUESTION)
+    assert "7777" not in "".join(m.content for m in fake_llm.calls[-1])
+    bob_row = await _assistant_row(app, events[-1][1]["message"]["id"])
+    assert bob_row.metadata_["retrieval"]["reason"] == "empty_knowledge_base"
+
+    _, events = await stream_chat(client, alice["headers"], KB_QUESTION)
+    assert "7777" in fake_llm.calls[-1][1].content
+
+
+async def test_logs_never_contain_the_question_or_document_text(client, app, caplog):
+    import logging
+
+    from tests.conftest import ingest_docs
+
+    caplog.set_level(logging.DEBUG)
+    await ingest_docs(app, {"quokka.md": KB_DOC})
+    account = await register(client, app)
+    await stream_chat(client, account["headers"], KB_QUESTION)
+    # Exactly what the JSON formatter writes: the message, the `extra` fields and any exception
+    # text. LogRecord internals (timestamps, thread ids) are excluded: a timestamp such as
+    # 1790167777.7 once matched "7777" and produced a false positive.
+    standard = set(logging.LogRecord("", 0, "", 0, "", (), None).__dict__) | {"message", "asctime"}
+    records = [
+        (
+            r.name,
+            r.levelname,
+            f"{r.getMessage()} { ({k: v for k, v in r.__dict__.items() if k not in standard}) } {r.exc_text or ''}",
+        )
+        for r in caplog.records
+    ]
+    names = {r.getMessage() for r in caplog.records}
+    assert {"rag.retrieval", "rag.graph"} <= names, sorted(names)  # the events are logged...
+    leaks = [
+        (name, level, blob[:400])
+        for name, level, blob in records
+        for secret in ("Aurelian", "Quokka", "telemetry", "port 7777")
+        if secret in blob
+    ]
+    assert leaks == []  # ...without query or document content (shows the offending record if not)

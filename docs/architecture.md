@@ -11,11 +11,12 @@ Browser ──► Web app (Next.js, separate repository)
                ├─ auth            users, sessions, email codes, throttling
                ├─ conversations   list/create/rename/delete, message history
                ├─ chat            ChatService + SSE + stop + regenerate + feedback + quotas
-               ├─ context         ContextProvider pipeline (empty in the generic chatbot)
+               ├─ rag             LangGraph turn graph + LangChain retriever over pgvector (docs/rag.md)
                └─ llm             LLMProvider protocol → OpenAI-compatible providers
                ▼
             PostgreSQL 16 + pgvector (127.0.0.1:5432) — the single source of truth
             SMTP (verification and reset codes)      LLM APIs: Ollima (primary), OpenRouter (fallback)
+                                                     Embeddings API: OpenAI-compatible (text-embedding-3-small)
 ```
 
 The API is never published to the internet; only the web app is. Nothing is stored
@@ -32,6 +33,8 @@ users ─┬─ user_settings        preferences (JSONB, ≤ 4 KB)
        └─ usage_events         one per generation: provider, model, tokens, latency, outcome
 email_codes                    HMAC of 6-digit codes, 15-minute expiry, 5 attempts
 auth_attempts                  throttling counters (hashed email/IP)
+knowledge_sources ── documents ── document_chunks   RAG knowledge base; embedding vector(1536); sources are
+                                                    global (owner NULL) or private to one user
 ```
 
 `messages.status`: `complete` · `streaming` (being generated) · `cancelled` (stopped; partial text kept) ·
@@ -47,9 +50,11 @@ citations) without schema changes.
    still generating; enforce the per-user quota (from `usage_events`); insert the user message, an
    assistant placeholder (`streaming`) and a usage event; commit.
 2. **Generate** (independent asyncio task, so the result is persisted even if the client leaves):
-   build the prompt from PostgreSQL (system prompt, optional context, history window), stream from
-   the LLM, push `token` events, stop on cancel.
-3. **Finalize**: write content, status and metadata; update the usage event; emit `done` or `error`.
+   load the conversation from PostgreSQL and run the LangGraph graph
+   (`receive_query → retrieve_context → assemble_context → generate_answer`, see [rag.md](rag.md));
+   push `token` events; stop on cancel (cancelling the graph step cancels the LLM stream).
+3. **Finalize**: write content, status and metadata (including the internal retrieval summary);
+   update the usage event; emit `done` or `error`.
 
 The browser sends only `{conversationId, message}`; it never writes messages or sends history.
 
@@ -58,25 +63,17 @@ The browser sends only `{conversationId, message}`; it never writes messages or 
 | Need | Seam | Change required |
 |---|---|---|
 | Different instructions/model per feature | `app/chat/assistant.py::resolve_assistant_config` | return a different `AssistantConfig` |
-| Retrieval (curriculum knowledge graph, document search) | `app/context/base.py::ContextProvider` | implement `provide()`, return it from the config |
-| Citations in the UI | `ContextBlock.source` + `messages.metadata` + a new SSE event | additive; existing clients ignore unknown events |
+| Retrieval filters (source, subject, project, any metadata) | `AssistantConfig.retrieval` (`RetrievalOptions`) | set options in `resolve_assistant_config`; no RAG change |
+| A different retriever | `retriever_factory` in `app/main.py` (any LangChain `BaseRetriever`) | swap the factory |
+| Query rewriting / reranking / answer checks | new nodes in `app/rag/graph.py` | insert on an existing edge |
+| Citations in the UI | sources already stored in order in `messages.metadata.retrieval.sources` | add to the public metadata allowlist + an SSE event; existing clients ignore unknown events |
 | More LLM providers / routing | `app/llm/base.py::LLMProvider`, `FallbackProvider` | new provider class; compose |
 | Learner profile, subjects, progress | new tables in a new Alembic migration, keyed by `users.id` | additive |
-| Embeddings | pgvector (enabled by migration 0001) | see below |
+| Project/workspace-scoped knowledge | `AccessScope` + a `project_id` column | new migration; retriever and graph unchanged |
 
-### Vector data (pgvector)
+### Knowledge base and vectors
 
-The `vector` extension is enabled and verified (HNSW index + cosine search in `tests/test_foundation.py`).
-No vector tables exist yet because the embedding model and dimension are not chosen. The intended shape:
-
-```sql
-knowledge_sources (id, name, kind, metadata jsonb, created_at)
-documents         (id, source_id → knowledge_sources, title, uri, metadata jsonb, created_at)
-document_chunks   (id, document_id → documents, ordinal, content text, metadata jsonb,
-                   embedding vector(<dim>), created_at)
-CREATE INDEX ON document_chunks USING hnsw (embedding vector_cosine_ops);
-```
-
-A retrieval provider embeds the query (an `EmbeddingProvider` alongside `LLMProvider`), queries
-`document_chunks` with `ORDER BY embedding <=> :q LIMIT k` (plus metadata filters), and returns
-`ContextBlock`s. No other database or vector store is introduced.
+Implemented: PostgreSQL + pgvector hold sources, documents and chunks with `vector(1536)` embeddings
+(HNSW index), ingested by `scripts/ingest_documents.py` and searched by a LangChain retriever inside
+the LangGraph turn graph. Details, access model, failure behaviour and verification status:
+[rag.md](rag.md). No other database or vector store is used.

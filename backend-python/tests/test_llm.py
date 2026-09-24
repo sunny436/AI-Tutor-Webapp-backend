@@ -158,20 +158,24 @@ async def test_all_providers_failing_raises_last_error():
         ).stream(PROMPT, OPTS)
 
 
-async def test_fallback_end_to_end_through_chat(client, app):
-    from tests.conftest import register, stream_chat
+async def test_fallback_end_to_end_through_chat():
+    from app.auth.emails import MemoryEmailSender
+    from app.db.models import Message
+    from app.main import create_app
+    from tests.conftest import make_settings, register, stream_chat
 
-    app.state.chat.llm = FallbackProvider(
+    llm = FallbackProvider(
         [FakeProvider("ollima", fail_before_first=LLMUnavailable("down")), FakeProvider("openrouter")]
     )
-    account = await register(client, app)
-    _, events = await stream_chat(client, account["headers"], "hi")
-    assert events[-1][0] == "done" and events[-1][1]["message"]["content"] == "You said: hi"
-    async with app.state.db.sessionmaker() as s:
-        from app.db.models import Message
-
-        msg = await s.get(Message, events[-1][1]["message"]["id"])
-    assert msg.metadata_["provider"] == "openrouter"
+    app = create_app(make_settings(), llm=llm, email_sender=MemoryEmailSender())
+    async with app.router.lifespan_context(app):
+        async with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://t") as client:
+            account = await register(client, app)
+            _, events = await stream_chat(client, account["headers"], "hi")
+            assert events[-1][0] == "done" and events[-1][1]["message"]["content"] == "You said: hi"
+            async with app.state.db.sessionmaker() as s:
+                msg = await s.get(Message, events[-1][1]["message"]["id"])
+            assert msg.metadata_["provider"] == "openrouter"
 
 
 def test_provider_error_details_are_redacted():

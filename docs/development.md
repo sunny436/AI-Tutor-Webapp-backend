@@ -63,6 +63,17 @@ It signs up a throwaway account (code from Mailpit), streams a reply, stops a re
 regenerates, leaves feedback, renames, checks persisted history, and deletes the conversation and
 the account. Never point it at production.
 
+## Knowledge base (RAG)
+
+```sh
+set EMBEDDING_PROVIDER=fake     # offline keyword-hash embedder; or set EMBEDDING_API_KEY for real embeddings
+.venv\Scripts\python scripts\ingest_documents.py --source demo --global docs\my-notes
+```
+
+Without an embedding key (and not `fake`) retrieval is skipped and chat works normally. Each reply
+records `retrieval.status` in its message metadata (internal). See [rag.md](rag.md) — including what
+is not verified with the fake embedder.
+
 ## Adding a migration
 
 Change `app/db/models.py`, then `.venv\Scripts\python -m alembic revision -m "describe it"` and write

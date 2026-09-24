@@ -5,9 +5,10 @@ replies, and a PostgreSQL + pgvector data layer designed to grow into an AI tuto
 
 ```
 web app (separate repository) ──► FastAPI chat API ──► PostgreSQL 16 + pgvector
-      server-side proxy               (this repo)         (single source of truth)
+      server-side proxy               (this repo)         (single source of truth, incl. RAG vectors)
                                             │
-                                            └──► LLM providers (Ollima → OpenRouter fallback)
+                                            ├──► LangGraph turn graph + LangChain retriever
+                                            └──► LLM providers (Ollima → OpenRouter fallback), embeddings API
 ```
 
 | What | Where |
@@ -15,6 +16,7 @@ web app (separate repository) ──► FastAPI chat API ──► PostgreSQL 16
 | API service (FastAPI, SQLAlchemy async, Alembic) | [backend-python/](backend-python/) |
 | API contract (endpoints, SSE events, errors) | [docs/api-contract.md](docs/api-contract.md), [docs/openapi.json](docs/openapi.json) |
 | Architecture and extension points | [docs/architecture.md](docs/architecture.md) |
+| RAG: LangGraph + LangChain + pgvector | [docs/rag.md](docs/rag.md) |
 | How a web app integrates | [docs/frontend-integration.md](docs/frontend-integration.md) |
 | Local development and tests | [docs/development.md](docs/development.md) |
 | Target deployment | [deploy/](deploy/), [INFRASTRUCTURE.md](INFRASTRUCTURE.md) |

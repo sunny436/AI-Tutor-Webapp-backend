@@ -11,9 +11,6 @@ __pycache__/
 !.env.example
 !**/.env.example
 
-# Vendor credential briefs (kept local, never committed)
-docs/*rag-api.md
-
 # Local leftovers of the retired stack
 node_modules/
 .turbo/
