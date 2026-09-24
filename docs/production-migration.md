@@ -27,7 +27,7 @@ stack keeps serving users. Only port 3000 (the web app) is shared, and taking it
 | # | What | Status |
 |---|---|---|
 | 1 | Frontend migrated to this API | done: frontend PR #1, `288481f` |
-| 2 | **SMTP credentials** for production email | **required**: sign-up and login send email codes, so without SMTP nobody can sign in |
+| 2 | **Email**: SMTP credentials, or an Ollastack Agent Mail token + mailbox id (`EMAIL_BACKEND=ollastack`) | **required**: sign-up and login send email codes, so without email nobody can sign in |
 | 3 | Primary LLM key (`LLM_PRIMARY_API_KEY`) | required |
 | 4 | Fallback LLM key | optional; the OpenRouter key on record was rejected ("User not found"), so leave `LLM_FALLBACK_MODEL` empty until a valid key exists |
 | 5 | OpenAI embedding key (`EMBEDDING_API_KEY`) | optional: without it chat works and retrieval is skipped |
@@ -77,7 +77,7 @@ sed -e "s|^SECRET_KEY=.*|SECRET_KEY=$SK|" -e "s|<password>|$PW|" $T/api.env.exam
 cp $T/web.env.example /etc/aichat/web.env
 echo "written: /etc/aichat/{postgres,api,web}.env"'
 
-sudo nano /etc/aichat/api.env   # fill EMAIL_FROM, SMTP_*, LLM_PRIMARY_API_KEY, and EMBEDDING_API_KEY if available
+sudo nano /etc/aichat/api.env   # fill email (SMTP_* + EMAIL_FROM, or EMAIL_BACKEND=ollastack + OLLASTACK_*), LLM_PRIMARY_API_KEY, EMBEDDING_API_KEY if available
 sudo nano /etc/aichat/web.env   # NEXT_PUBLIC_SITE_URL=https://<app hostname>
 
 # A5. Install: Postgres, API on 127.0.0.1:4100, backups; builds the web app but does NOT start it
