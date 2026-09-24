@@ -83,7 +83,7 @@ migration_status() {
     "$RELEASES/$rel/backend/.venv/bin/python" scripts/migration_status.py
 }
 
-json_field() { python3 -c "import json,sys; print(json.loads(sys.stdin.read())[sys.argv[1]])" "$1"; }
+json_field() { python3.12 -c "import json,sys; print(json.loads(sys.stdin.read())[sys.argv[1]])" "$1"; }
 
 # Point `current` at a release atomically, then restart the API and the web app on it.
 activate() {
