@@ -22,7 +22,7 @@ done
 
 echo "network exposure (loopback only)"
 for port in "$WEB_PORT" "$API_PORT" 5432; do
-  if ss -ltnH "( sport = :$port )" | awk '{print $4}' | grep -qvE '^(127\.0\.0\.1|\[::1\]):'; then
+  if ss -ltnH "( sport = :$port )" | awk '{print $4}' | grep -vE '^(127\.0\.0\.1|\[::1\]):' >/dev/null; then
     bad "port $port listens beyond loopback"
   else
     ok "port $port bound to loopback"

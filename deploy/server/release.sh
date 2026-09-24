@@ -111,7 +111,7 @@ elif [ "$pending" != "[]" ]; then
       release keeps serving, so they must be backward compatible. Re-run with --with-migrations."
   [ "$PREPARE_ONLY" = 0 ] || die "--prepare-only never migrates; pending migrations: $pending"
   systemctl start aichat-pg-backup.service || die "the backup before migrating failed; nothing was migrated"
-  backup=$(ls -1t /var/backups/aichat/aichat-*.dump 2>/dev/null | head -1)
+  backup=$(ls -1t /var/backups/aichat/aichat-*.dump 2>/dev/null | sed -n 1p)
   note "backup before migrating: $backup"
   systemd-run --pipe --wait --collect --quiet -p EnvironmentFile="$SECRETS/api.env" \
     -p WorkingDirectory="$DIR/backend" "$DIR/backend/.venv/bin/python" -m alembic upgrade head \

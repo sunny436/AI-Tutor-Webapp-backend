@@ -247,5 +247,5 @@ if [ "$mixed" = 0 ] && [ "$samples" -gt 100 ]; then pass "poller: $samples sampl
 
 step "result"
 printf '%s\n' "${RESULTS[@]}"
-if printf '%s\n' "${RESULTS[@]}" | grep -q '^FAIL'; then exit 1; fi
+if printf '%s\n' "${RESULTS[@]}" | grep '^FAIL' >/dev/null; then exit 1; fi
 echo "ALL PASS"

@@ -53,7 +53,7 @@ MAIN=$(git rev-parse refs/deploy/main)
 SHA=$(git rev-parse --verify "${REF:-$MAIN}^{commit}")
 # Only commits OF main are releases: the tip, or an earlier point of main's own history. Commits
 # that were merged into main from branches (or imported histories) are not complete releases.
-git rev-list --first-parent "$MAIN" | grep -qx "$SHA" || stop "$SHA is not a commit of main (only main's own commits are released)"
+git rev-list --first-parent "$MAIN" | grep -x "$SHA" >/dev/null || stop "$SHA is not a commit of main (only main's own commits are released)"
 if [ "$SHA" != "$MAIN" ]; then
   [ "$OLDER" = 1 ] || stop "$SHA is older than main ($MAIN). To go back, use 'bun run rollback'; to redeploy an older commit on purpose, add --older."
 fi

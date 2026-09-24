@@ -54,7 +54,7 @@ done
 chmod 600 "$SECRETS"/*.env
 
 log "5/5 units and database"
-if ! systemctl is-active --quiet aichat-postgres.service && ss -ltnH "( sport = :5432 )" | grep -q .; then
+if ! systemctl is-active --quiet aichat-postgres.service && ss -ltnH "( sport = :5432 )" | grep . >/dev/null; then
   ss -ltnpH "( sport = :5432 )" >&2
   die "port 5432 is in use by another process (above); aichat-postgres needs it"
 fi

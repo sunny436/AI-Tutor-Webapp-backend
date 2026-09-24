@@ -66,7 +66,7 @@ check_chain() {
   fi
   rm -f "$headers" "$body"
   for ((i = 0; i < 10; i++)); do
-    if journalctl -u "$api_unit" --since "-5 min" -o cat --no-pager 2>/dev/null | grep -q "$rid"; then
+    if journalctl -u "$api_unit" --since "-5 min" -o cat --no-pager 2>/dev/null | grep -F "$rid" >/dev/null; then
       note "chain ok: web :$port -> $api_unit -> database (request $rid)"
       return 0
     fi
