@@ -130,8 +130,8 @@ Finally, update `INFRASTRUCTURE.md` to say production runs the new stack.
 ```sh
 # systemd-run loads api.env exactly as the API service does
 sudo systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env \
-  -p WorkingDirectory=/opt/aichat/backend/backend-python \
-  /opt/aichat/backend/backend-python/.venv/bin/python scripts/ingest_documents.py --source handbook --global /path/to/docs
+  -p WorkingDirectory=/opt/aichat/backend/backend \
+  /opt/aichat/backend/backend/.venv/bin/python scripts/ingest_documents.py --source handbook --global /path/to/docs
 ```
 
 Only ingest content suitable for every signed-in user when using `--global` (see [rag.md](rag.md)).

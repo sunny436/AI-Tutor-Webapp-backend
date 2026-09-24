@@ -1,4 +1,4 @@
-# backend-python — the chat API
+# backend — the chat API
 
 FastAPI service. PostgreSQL + pgvector is the only datastore.
 

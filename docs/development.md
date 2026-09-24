@@ -15,7 +15,7 @@ docker compose -f docker-compose.dev.yml up -d
 ## 2. Install and configure
 
 ```sh
-cd backend-python
+cd backend
 py -3.12 -m venv .venv
 .venv\Scripts\python -m pip install -r requirements-dev.txt
 copy .env.example .env

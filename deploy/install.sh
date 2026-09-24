@@ -78,7 +78,7 @@ done
 chmod 600 "$SECRETS_DIR"/*.env
 
 log "5/7  API (python)"
-cd "$ROOT/backend/backend-python"
+cd "$ROOT/backend/backend"
 [ -d .venv ] || python3.12 -m venv .venv
 .venv/bin/python -m pip install -q --upgrade pip
 .venv/bin/python -m pip install -q -r requirements.txt

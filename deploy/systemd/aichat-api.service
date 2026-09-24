@@ -7,10 +7,10 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/aichat/backend/backend-python
+WorkingDirectory=/opt/aichat/backend/backend
 EnvironmentFile=/etc/aichat/api.env
-ExecStartPre=/opt/aichat/backend/backend-python/.venv/bin/python -m alembic upgrade head
-ExecStart=/opt/aichat/backend/backend-python/.venv/bin/python -m uvicorn app.main:create_app --factory --host 127.0.0.1 --port 4100 --proxy-headers --forwarded-allow-ips 127.0.0.1
+ExecStartPre=/opt/aichat/backend/backend/.venv/bin/python -m alembic upgrade head
+ExecStart=/opt/aichat/backend/backend/.venv/bin/python -m uvicorn app.main:create_app --factory --host 127.0.0.1 --port 4100 --proxy-headers --forwarded-allow-ips 127.0.0.1
 Restart=always
 RestartSec=5
 # In-flight replies are persisted as 'cancelled' on shutdown; give them a moment.

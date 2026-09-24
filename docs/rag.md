@@ -164,13 +164,13 @@ it directly answers, and never to invent sources. Blocks are numbered `[1]..[n]`
 `RAG_ENABLED, RAG_TOP_K, RAG_MIN_SCORE, RAG_MAX_CONTEXT_CHARS, RAG_RETRIEVAL_TIMEOUT_S,
 RAG_HNSW_EF_SEARCH, RAG_CHUNK_SIZE, RAG_CHUNK_OVERLAP, RAG_MAX_DOCUMENT_BYTES, LLM_MAX_INPUT_CHARS,
 EMBEDDING_PROVIDER, EMBEDDING_BASE_URL, EMBEDDING_API_KEY, EMBEDDING_MODEL, EMBEDDING_DIMENSIONS,
-EMBEDDING_BATCH_SIZE, EMBEDDING_TIMEOUT_S` — see `backend-python/.env.example`.
+EMBEDDING_BATCH_SIZE, EMBEDDING_TIMEOUT_S` — see `backend/.env.example`.
 
 ## Local development and tests
 
 ```sh
 docker compose -f docker-compose.dev.yml up -d
-cd backend-python && .venv\Scripts\python -m alembic upgrade head
+cd backend && .venv\Scripts\python -m alembic upgrade head
 set EMBEDDING_PROVIDER=fake            # offline; or set EMBEDDING_API_KEY for real embeddings
 .venv\Scripts\python scripts\ingest_documents.py --source demo --global path\to\docs
 run_backend.bat                        # chat; replies store retrieval status/sources in metadata

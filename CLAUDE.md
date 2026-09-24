@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this repo is
 
 The backend of a generic ChatGPT-style chatbot that will grow into an AI tutor: a FastAPI service in
-`backend-python/` on PostgreSQL 16 + pgvector (the only datastore). The Next.js web app lives in a
+`backend/` on PostgreSQL 16 + pgvector (the only datastore). The Next.js web app lives in a
 **separate repository** (`AI Tutor- Frontend`) and is the API's only client, through its server-side proxy.
 The repo formerly held an Ayurveda chatbot; that code is only reachable at the git tag `ayurveda-baseline`.
 
@@ -13,7 +13,7 @@ Remotes: `tutor` = `sunny436/AI-Tutor-Webapp-backend` (PRs go to its `main`); `o
 
 ## Commands
 
-Run from `backend-python/`. Windows paths shown; on Linux use `.venv/bin/python`.
+Run from `backend/`. Windows paths shown; on Linux use `.venv/bin/python`.
 
 ```sh
 docker compose -f ../docker-compose.dev.yml up -d        # PostgreSQL+pgvector :5432, Mailpit :1025 / UI :8025
@@ -42,7 +42,7 @@ docker compose -f ../docker-compose.dev.yml up -d        # PostgreSQL+pgvector :
 
 `app/main.py` `create_app(settings, *, llm, email_sender, embeddings)` is the **composition root**: the only place
 that wires the concrete LLM provider, embeddings, knowledge store, retriever and LangGraph graph. Tests inject fakes
-through it. Settings come from env (`backend-python/.env.example` lists all); `Settings.validate_for_env()` refuses
+through it. Settings come from env (`backend/.env.example` lists all); `Settings.validate_for_env()` refuses
 unsafe production values (dev secrets, fake LLM/embeddings, memory email).
 
 **A chat turn** (`app/chat/service.py`) is split in two:
