@@ -12,13 +12,13 @@
 | Unit | Listens | What |
 |---|---|---|
 | `aichat-postgres.service` | 127.0.0.1:5432 | PostgreSQL 16 + pgvector via `deploy/compose/docker-compose.yml`; the only datastore |
-| `aichat-api.service` | 127.0.0.1:4000 | FastAPI chat API; runs `alembic upgrade head` before start; `MemoryMax=900M` |
+| `aichat-api.service` | 127.0.0.1:4100 | FastAPI chat API; runs `alembic upgrade head` before start; `MemoryMax=900M`. Port 4100 (not the development 4000) so it can run beside the legacy API during the cutover |
 | `aichat-web.service` | 127.0.0.1:3000 | Next.js web app from the frontend repository (enabled after its migration) |
 | `aichat-pg-backup.timer` | – | nightly `pg_dump` to `/var/backups/aichat`, 30-day retention (`deploy/backup.sh`) |
 | `cloudflared` | outbound | publishes **only the web app hostname** (`deploy/cloudflared/config.yml.template`) |
 
 ```
-user ──► Cloudflare ──► cloudflared ──► web app :3000 ──(loopback)──► API :4000 ──► PostgreSQL :5432
+user ──► Cloudflare ──► cloudflared ──► web app :3000 ──(loopback)──► API :4100 ──► PostgreSQL :5432
 ```
 
 Nothing but the web app is reachable from outside the host. Secrets live in `/etc/aichat/*.env`

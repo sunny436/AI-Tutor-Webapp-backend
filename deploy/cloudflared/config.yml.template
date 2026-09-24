@@ -2,7 +2,7 @@
 # Rendered to /etc/cloudflared/config.yml. Contains no secrets: the tunnel's
 # credentials live in the file referenced below, outside this repository.
 #
-# ONLY the web app is published. The chat API (127.0.0.1:4000) and PostgreSQL
+# ONLY the web app is published. The chat API (127.0.0.1:4100) and PostgreSQL
 # (127.0.0.1:5432) are never exposed: the web app's server calls the API over
 # loopback. Replace TUNNEL_ID and APP_HOSTNAME before use.
 tunnel: TUNNEL_ID

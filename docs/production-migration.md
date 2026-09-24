@@ -1,33 +1,39 @@
 # Production migration runbook — NOT EXECUTED
 
-> **Status: prepared, not run. Nothing here may be executed on the production host without the
-> owner's explicit approval.** Production still runs the legacy stack described below.
+> **Status: prepared, not run.** The owner approved the cutover on 2026-09-24. It has to be run on
+> the host by someone with server access. Production still runs the legacy stack described below.
 
 ## What production runs today (legacy — historical record)
 
 > Historical: this section describes retired code that is no longer in this repository (removed in PR #1). It is kept only so the cutover and rollback below make sense. It contains no credentials.
 
 The previous product in this repository was an Ayurveda health-consultation chatbot. Its last
-version is preserved at the git tag **`ayurveda-baseline`** (and on `main` of the original remote
-until this branch is merged). On the single Ubuntu VM it runs:
+version is preserved at the git tag **`ayurveda-baseline`** and on `main` of the original remote.
+On the single Ubuntu VM it runs:
 
 | Legacy unit | Role | Replaced by |
 |---|---|---|
 | `convex.service` (self-hosted Convex in Docker, ports 3210/3211) | auth, users, chats, patient profiles | `aichat-postgres.service` (PostgreSQL 16 + pgvector) |
-| `ayurveda-backend.service` (FastAPI `server.py`, port 4000) | consultation engine, local ChromaDB, GraphRAG client | `aichat-api.service` (this API) |
-| `ayurveda-frontend.service` (Next.js, port 3000) | web app on Convex | `aichat-web.service` (after the frontend migration) |
+| `ayurveda-backend.service` (FastAPI `server.py`, port 4000) | consultation engine, local ChromaDB, GraphRAG client | `aichat-api.service` (this API, port **4100**) |
+| `ayurveda-frontend.service` (Next.js, port 3000) | web app on Convex | `aichat-web.service` (port 3000) |
 | `convex-backup.timer` (Convex export) | backups | `aichat-pg-backup.timer` (`pg_dump`) |
 | cloudflared: app, API, Convex and Convex-HTTP hostnames | public ingress | cloudflared: **app hostname only** |
 
-## Preconditions (all required)
+The new API uses port 4100, so the whole new stack can be installed and checked while the legacy
+stack keeps serving users. Only port 3000 (the web app) is shared, and taking it over is the switch.
 
-1. The **frontend repository** has been migrated to this API (see
-   [frontend-integration.md](frontend-integration.md)); the current web app speaks the legacy API
-   and Convex and will not work against this backend.
-2. Owner decision on existing accounts (below).
-3. SMTP credentials for production email (today they live in the Convex deployment's environment).
-4. A valid fallback LLM key (the OpenRouter key on record was rejected with 401 "User not found").
-5. A fresh Convex export stored off the host, as the rollback copy.
+## Preconditions
+
+| # | What | Status |
+|---|---|---|
+| 1 | Frontend migrated to this API | done: frontend PR #1, `288481f` |
+| 2 | **SMTP credentials** for production email | **required**: sign-up and login send email codes, so without SMTP nobody can sign in |
+| 3 | Primary LLM key (`LLM_PRIMARY_API_KEY`) | required |
+| 4 | Fallback LLM key | optional; the OpenRouter key on record was rejected ("User not found"), so leave `LLM_FALLBACK_MODEL` empty until a valid key exists |
+| 5 | OpenAI embedding key (`EMBEDDING_API_KEY`) | optional: without it chat works and retrieval is skipped |
+| 6 | Read access for the host to both GitHub repositories | required if they are private: a read-only deploy key per repository, or a read-only fine-grained token. Never put a token inside a clone URL, where it would be saved in `.git/config` |
+| 7 | Owner decision on existing accounts (below) | default: fresh start |
+| 8 | A fresh Convex export stored **off the host** | required (rollback copy) |
 
 ## Existing data — decision required
 
@@ -40,23 +46,107 @@ until this branch is merged). On the single Ubuntu VM it runs:
   Python's `hashlib.scrypt` can verify — this would need a small legacy-hash verifier that rehashes
   to argon2id on first login, plus an import script. Neither exists yet by design.
 
-## Cutover steps (for when approved)
+## Cutover
 
-1. `sudo bash /opt/aichat/backend/deploy/install.sh` with `BACKEND_REPO` set, after writing
-   `/etc/aichat/postgres.env` and `/etc/aichat/api.env` from `deploy/env/*.example`.
-   This starts PostgreSQL and the API on loopback; the legacy stack keeps serving users.
-2. `bash deploy/infra-check.sh`; run `scripts/smoke_chat.py` against the API **on the host** with a
-   throwaway account and a test SMTP target (not real users' mailboxes).
-3. Deploy the migrated frontend with `/etc/aichat/web.env`; stop `ayurveda-frontend.service`,
-   start `aichat-web.service` (port 3000 is shared, so this is the switch-over moment).
-4. Update cloudflared from `deploy/cloudflared/config.yml.template` (app hostname only) and reload.
-   Remove the legacy API and Convex hostnames.
-5. Stop and disable `ayurveda-backend.service`, `convex.service`, `convex-backup.timer`.
-   **Keep the Convex docker volume and backups** (rollback + pending data decision).
-6. Update `INFRASTRUCTURE.md` to describe the new production state.
+All commands run on the VM as a sudo-capable user.
+
+### Phase A — install beside the legacy stack (users unaffected)
+
+```sh
+# A1. Look before touching anything
+systemctl list-units 'ayurveda-*' 'convex*' 'aichat-*' 'cloudflared*' --no-pager
+sudo ss -ltnp | grep -E ':(3000|4000|4100|5432)\b'   # 4100 and 5432 must be free (install.sh checks too)
+free -h; df -h /                                      # the web build needs about 2 GB of free RAM
+
+# A2. Rollback copy of the legacy data: run the legacy backup once and copy the result OFF the host
+sudo systemctl start convex-backup.service
+systemctl cat convex-backup.service                   # shows where the export was written
+
+# A3. Code (needs precondition 6)
+sudo git clone https://github.com/sunny436/AI-Tutor-Webapp-backend.git /opt/aichat/backend
+
+# A4. Secrets: generated on the host and never printed. Refuses to overwrite existing files.
+sudo bash -c '
+set -euo pipefail; umask 077; mkdir -p /etc/aichat; chmod 700 /etc/aichat
+for f in postgres.env api.env web.env; do [ ! -e /etc/aichat/$f ] || { echo "exists: /etc/aichat/$f"; exit 1; }; done
+T=/opt/aichat/backend/deploy/env
+PW=$(openssl rand -hex 24)
+SK=$(openssl rand -base64 48 | tr -d "\n/+=")
+sed "s|^POSTGRES_PASSWORD=.*|POSTGRES_PASSWORD=$PW|" $T/postgres.env.example > /etc/aichat/postgres.env
+sed -e "s|^SECRET_KEY=.*|SECRET_KEY=$SK|" -e "s|<password>|$PW|" $T/api.env.example > /etc/aichat/api.env
+cp $T/web.env.example /etc/aichat/web.env
+echo "written: /etc/aichat/{postgres,api,web}.env"'
+
+sudo nano /etc/aichat/api.env   # fill EMAIL_FROM, SMTP_*, LLM_PRIMARY_API_KEY, and EMBEDDING_API_KEY if available
+sudo nano /etc/aichat/web.env   # NEXT_PUBLIC_SITE_URL=https://<app hostname>
+
+# A5. Install: Postgres, API on 127.0.0.1:4100, backups; builds the web app but does NOT start it
+sudo BACKEND_REPO=https://github.com/sunny436/AI-Tutor-Webapp-backend.git \
+     FRONTEND_REPO=https://github.com/sunny436/AI-Tutor-Webapp-frontend.git \
+     bash /opt/aichat/backend/deploy/install.sh
+
+# A6. Check the new stack while the legacy site keeps serving
+bash /opt/aichat/backend/deploy/infra-check.sh      # "no backup in the last 2 days" is expected on day one
+journalctl -u aichat-api -n 30 --no-pager           # JSON logs; look for errors
+# Optional: try the built web app on a spare port, then stop it with Ctrl+C
+sudo bash -c 'cd /opt/aichat/frontend/apps/app && set -a && . /etc/aichat/web.env && set +a && /root/.bun/bin/bun x next start -p 3100 -H 127.0.0.1'
+#   (second terminal) curl -sI http://127.0.0.1:3100/login | head -1   → HTTP/1.1 200
+```
+
+Stop here if anything fails. Nothing public has changed yet.
+
+### Phase B — the switch (seconds of downtime)
+
+```sh
+# Prepare the tunnel config first (template: deploy/cloudflared/config.yml.template):
+# the app hostname must point at http://127.0.0.1:3000 exactly. The new app listens on 127.0.0.1
+# only, so `localhost` (may resolve to ::1) or the VM's IP would not reach it.
+sudo cp /etc/cloudflared/config.yml /etc/cloudflared/config.yml.legacy
+sudo cp /etc/cloudflared/config.yml /etc/cloudflared/config.yml.new
+sudo nano /etc/cloudflared/config.yml.new            # app hostname → http://127.0.0.1:3000; remove the API and Convex hostnames
+
+# Switch
+sudo systemctl stop ayurveda-frontend.service
+sudo systemctl enable --now aichat-web.service
+curl -sI http://127.0.0.1:3000/login | head -1       # → HTTP/1.1 200
+sudo cp /etc/cloudflared/config.yml.new /etc/cloudflared/config.yml && sudo systemctl restart cloudflared
+```
+
+Then, in a browser on the public URL, sign up with a real address, confirm the email code arrives,
+chat, stop a reply, regenerate, and sign out and back in. Run `infra-check.sh` again.
+
+### Phase C — retire the legacy stack (after the new site has run cleanly, e.g. a day)
+
+```sh
+sudo systemctl disable --now ayurveda-backend.service convex-backup.timer convex.service
+sudo systemctl disable ayurveda-frontend.service
+# KEEP the Convex docker volume and its backups: rollback + the pending data decision.
+```
+
+Finally, update `INFRASTRUCTURE.md` to say production runs the new stack.
+
+### Optional — knowledge base (needs `EMBEDDING_API_KEY`)
+
+```sh
+# systemd-run loads api.env exactly as the API service does
+sudo systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env \
+  -p WorkingDirectory=/opt/aichat/backend/backend-python \
+  /opt/aichat/backend/backend-python/.venv/bin/python scripts/ingest_documents.py --source handbook --global /path/to/docs
+```
+
+Only ingest content suitable for every signed-in user when using `--global` (see [rag.md](rag.md)).
+
+### Updates later
+
+Re-run the A5 command. It pulls both repositories, rebuilds, migrates and restarts the API, and
+restarts the web app once it is enabled.
 
 ## Rollback
 
-Until step 5, rollback is: stop `aichat-web.service`, start `ayurveda-frontend.service`, restore the
-previous cloudflared config. After step 5, also start `convex.service` and `ayurveda-backend.service`
-(`git checkout ayurveda-baseline` in the legacy checkout). No legacy data is modified by the cutover.
+- **During Phase B:** `sudo systemctl disable --now aichat-web.service && sudo systemctl start ayurveda-frontend.service`,
+  then `sudo cp /etc/cloudflared/config.yml.legacy /etc/cloudflared/config.yml && sudo systemctl restart cloudflared`.
+  The legacy API and Convex are still running, so the old site is back at once.
+- **After Phase C:** also `sudo systemctl enable --now convex.service ayurveda-backend.service convex-backup.timer`
+  (`git checkout ayurveda-baseline` in the legacy checkout if its code was changed).
+- The cutover modifies no legacy data. The new stack can stay installed during a rollback; it uses
+  ports 4100 and 5432, not the legacy ones.
