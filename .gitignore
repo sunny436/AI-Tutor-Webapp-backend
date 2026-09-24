@@ -19,8 +19,11 @@ ollastack.txt
 node_modules/
 .turbo/
 logs/
-apps/
+/apps/
 
 # OS / editors
 .DS_Store
 *.pem
+
+# Per-user Claude Code permissions (local only)
+.claude/settings.local.json
