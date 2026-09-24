@@ -37,7 +37,7 @@ def main() -> int:
         print("openapi.json is current")
         return 0
     TARGET.parent.mkdir(parents=True, exist_ok=True)
-    TARGET.write_text(rendered, encoding="utf-8")
+    TARGET.write_text(rendered, encoding="utf-8", newline="\n")  # LF on every OS, like the repository
     print(f"wrote {TARGET}")
     return 0
 
