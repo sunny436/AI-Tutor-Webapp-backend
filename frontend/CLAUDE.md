@@ -86,9 +86,12 @@ Adding an endpoint means adding it to `ROUTES`. `routes.test.ts` fails unless th
 
 ## Production
 
-A single Ubuntu VM behind a Cloudflare Tunnel.
-- **Web app:** `ayur.namahos.com` → `aichat-web.service` on 127.0.0.1:3000 (`bun run start` in `/opt/aichat/frontend/apps/app`, env `/etc/aichat/web.env`).
-- **API:** `aichat-api` on 127.0.0.1:4100.
-- **Runbooks:** `docs/production-migration.md` and `INFRASTRUCTURE.md` in the backend repo describe the host, the cutover and rollback.
+This app ships in the same release as the API (one commit, one deploy; see the root `CLAUDE.md`,
+`docs/deployment.md` and `docs/rollback.md`). A single Ubuntu VM behind a Cloudflare Tunnel:
+- **Web app:** `ayur.namahos.com` → `aichat-web.service` on 127.0.0.1:3000 (`bun run start` in
+  `/opt/aichat/current/frontend/apps/app`, env `/etc/aichat/web.env`).
+- **API:** `aichat-api` on 127.0.0.1:4100, from the same release directory. `API_BASE_URL` in
+  `web.env` must stay `http://127.0.0.1:4100`.
+- **Builds:** each release is built in its own directory (`/opt/aichat/releases/<commit>`), never in
+  place under the running app. `NEXT_PUBLIC_*` values are baked in at build time from `web.env`.
 - **Legacy stack:** the old Ayurveda stack (`ayurveda-*`, `convex`) is still installed there for rollback.
-- **Rebuilding:** never rebuild `.next` in place under the running app. Build into `NEXT_DIST_DIR` and then switch.

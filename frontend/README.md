@@ -4,18 +4,20 @@ A ChatGPT-style chat app: sign in, chat with an AI assistant, keep your
 conversations. Next.js 14 (App Router), React 18, TypeScript, Tailwind 3,
 Radix.
 
-This repository is the **frontend only**. Accounts, conversations, messages and
-the model all live in the chat API, a separate repository (FastAPI +
-PostgreSQL). The browser never talks to that API directly: this app's own
+This folder is the **frontend** of the application repository. Accounts,
+conversations, messages and the model all live in the chat API next to it,
+[`../backend`](../backend) (FastAPI + PostgreSQL). Both ship together in one
+release. The browser never talks to the API directly: this app's own
 `/api/v1/*` routes forward to it — see [`docs/frontend-api.md`](docs/frontend-api.md).
 
 ---
 
 ## Run it
 
-You need [Bun](https://bun.sh) and the chat API running locally. The backend
-repository's README sets it up, with a fake LLM for offline work and Mailpit to
-catch sign-up and password-reset emails.
+You need [Bun](https://bun.sh) and the chat API running locally. From the
+repository root, `bun run setup` and then `bun run dev` start both (with Mailpit
+to catch sign-up and password-reset emails; see `../docs/development.md`). To run
+only this app:
 
 ```bash
 bun install
