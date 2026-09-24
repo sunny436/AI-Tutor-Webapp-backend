@@ -1,0 +1,22 @@
+{
+  "name": "ai-chat-frontend",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*", "tooling/*"],
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev --parallel",
+    "start": "turbo start --filter=@v1/app",
+    "test": "turbo test --parallel",
+    "format": "biome format --write .",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@t3-oss/env-nextjs": "^0.11.1",
+    "turbo": "2.1.1",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "bun@1.1.26",
+  "version": "0.0.1"
+}
