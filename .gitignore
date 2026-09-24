@@ -26,6 +26,10 @@ yarn-error.log*
 .env
 .env*.local
 
+# Local notes that hold tokens (Ollastack, Ollima). Never commit them.
+ollastack.txt
+ollima.txt
+
 .vercel
 *.tsbuildinfo
 .turbo
