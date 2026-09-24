@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The web app for "Assistant", a ChatGPT-style chat product: Next.js 14 App Router, React 18, TypeScript, Tailwind, Radix, in a Bun + Turborepo monorepo (`apps/app` is the app, `packages/ui` the design system). **Frontend only.** Accounts, conversations, messages and the LLM all live in the chat API: FastAPI + PostgreSQL/pgvector, in a separate repo (locally `../AI Tutor- Backend`). The app was converted from an Ayurveda chatbot that ran on Convex. No Convex, i18n or Ayurveda code remains, apart from a `/consult` → `/` legacy redirect.
 
-Git: push to the `tutor` remote (`sunny436/AI-Tutor-Webapp-frontend`). `origin` (akshat948) is the retired original. `ollastack.txt` and `ollima.txt` in the repo root hold tokens and are gitignored. Never add them.
+Git: this folder is part of the single application repository (see the root `CLAUDE.md`); commit and push from there. The old frontend repository (`sunny436/AI-Tutor-Webapp-frontend`) is no longer used. `ollastack.txt` and `ollima.txt` in the repository root hold tokens and are gitignored. Never add them.
 
 ## Commands
 
