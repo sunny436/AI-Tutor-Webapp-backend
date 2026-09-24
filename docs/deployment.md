@@ -112,7 +112,8 @@ ssh root@<host> bash /root/aichat-setup/deploy/install.sh     # lists the secret
 
 It installs Python 3.12, the pinned Bun and Node, leaves an existing Docker alone, creates
 `/opt/aichat/{releases,incoming,shared,runtime}`, installs the units and starts PostgreSQL and the
-nightly backup. Then `bun run deploy`.
+nightly backup. Then `bun run deploy -- --with-migrations` (a new database is empty, so the first
+release has every migration pending; without the flag it stops before the switch).
 
 ## The first release deploy on the current production host
 

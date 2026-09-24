@@ -114,7 +114,8 @@ elif [ "$pending" != "[]" ]; then
   backup=$(ls -1t /var/backups/aichat/aichat-*.dump 2>/dev/null | head -1)
   note "backup before migrating: $backup"
   systemd-run --pipe --wait --collect --quiet -p EnvironmentFile="$SECRETS/api.env" \
-    -p WorkingDirectory="$DIR/backend" "$DIR/backend/.venv/bin/python" -m alembic upgrade head
+    -p WorkingDirectory="$DIR/backend" "$DIR/backend/.venv/bin/python" -m alembic upgrade head \
+    || die "the migration failed (backup: $backup); nothing was switched"
   record "migrated $database -> $head for $REL (backup: $backup) by $OPERATOR"
   note "migrated: $pending"
   if [ -n "$PREVIOUS" ]; then

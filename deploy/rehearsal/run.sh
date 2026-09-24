@@ -139,7 +139,8 @@ short() { printf '%s' "${1:0:7}"; }
 git -C "$WT" push -q -f "$SOURCE" HEAD:refs/heads/main
 R1=$(git -C "$WT" rev-parse HEAD)
 step "S0 first release: $(short "$R1")"
-deploy > "$LOGS/s0.log" 2>&1 && status_ok_on "$R1" s0 && pass "S0 first release live; frontend == backend == $(short "$R1")" || fail "S0 first release (see $LOGS/s0.log)"
+# A new host's database is empty, so its first release has every migration pending.
+deploy --with-migrations > "$LOGS/s0.log" 2>&1 && status_ok_on "$R1" s0 && pass "S0 first release live (empty database migrated after a backup); frontend == backend == $(short "$R1")" || fail "S0 first release (see $LOGS/s0.log)"
 
 step "S1 frontend-only change"
 R2=$(advance "frontend-only change" sh -c 'printf "\n// rehearsal: frontend-only change\n" >> frontend/apps/app/src/lib/brand.ts')
