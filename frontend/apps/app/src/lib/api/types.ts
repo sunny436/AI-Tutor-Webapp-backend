@@ -8,6 +8,8 @@
  * accept (the API rejects unknown fields with 422).
  */
 
+import { CONTRACT } from "./contract.gen";
+
 export type Uuid = string;
 /** ISO-8601 timestamp, as sent by the API. */
 export type Timestamp = string;
@@ -39,10 +41,10 @@ export type ChangePasswordRequest = { currentPassword: string; newPassword: stri
 export type UpdateMeRequest = { displayName?: string | null };
 export type DeleteMeRequest = { password: string };
 
-/** The backend's password rule (auth/schemas.py): 8–128 characters, nothing else. */
-export const PASSWORD_MIN = 8;
-export const PASSWORD_MAX = 128;
-export const DISPLAY_NAME_MAX = 80;
+/** The backend's password rule, from the contract (contract.gen.ts). */
+export const PASSWORD_MIN = CONTRACT.SignupRequest.password.minLength;
+export const PASSWORD_MAX = CONTRACT.SignupRequest.password.maxLength;
+export const DISPLAY_NAME_MAX = CONTRACT.UpdateMeRequest.displayName.maxLength;
 /** Email codes are six digits. */
 export const CODE_LENGTH = 6;
 
@@ -58,7 +60,7 @@ export type Conversation = {
 export type ConversationPage = { items: Conversation[]; nextCursor: string | null };
 
 export type RenameConversationRequest = { title: string };
-export const TITLE_MAX = 120;
+export const TITLE_MAX = CONTRACT.RenameConversationRequest.title.maxLength;
 
 /**
  * `superseded` exists server-side (a reply replaced by regenerate) but is never
@@ -95,8 +97,8 @@ export type MessagePage = { items: Message[]; nextCursor: string | null };
 // -------------------------------------------------------------------- chat
 
 export type ChatRequest = { conversationId?: Uuid | null; message: string };
-/** The API rejects longer messages (chat/schemas.py: 1–16,000 characters). */
-export const MESSAGE_MAX = 16_000;
+/** The API rejects longer messages (the contract's ChatRequest.message). */
+export const MESSAGE_MAX = CONTRACT.ChatRequest.message.maxLength;
 
 export type CancelResult = { status: string };
 

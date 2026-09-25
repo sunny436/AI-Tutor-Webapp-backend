@@ -12,7 +12,7 @@
  *   test:e2e       Playwright end-to-end (starts the API from backend/ if none is running on :4100)
  *   lint           ruff (check + format) + biome
  *   build          frontend production build + backend contract check
- *   contract       regenerate docs/openapi.json, then run the frontend contract test against it
+ *   contract       regenerate docs/openapi.json and the web app's contract.gen.ts, then test both
  *   lock:backend   regenerate backend/requirements.lock (hashed, Linux + Python 3.12, in Docker)
  *
  * Production has exactly two commands, both for the whole application: `bun run deploy` and
@@ -159,7 +159,8 @@ const tasks = {
     needVenv();
     all([
       () => run("regenerate docs/openapi.json", python, ["scripts/export_openapi.py"], backend),
-      () => run("frontend contract test", "bun", ["test", "src/lib/api/routes.test.ts"], app),
+      () => run("regenerate the web app's contract.gen.ts", "bun", ["scripts/gen-contract.ts"], app),
+      () => run("frontend contract tests", "bun", ["test", "src/lib/api/routes.test.ts", "src/lib/api/contract.gen.test.ts"], app),
     ]);
   },
 };

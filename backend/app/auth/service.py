@@ -254,6 +254,9 @@ class AuthService:
         if not valid:
             raise InvalidCredentials("The password is incorrect.")
         await self.db.execute(delete(User).where(User.id == user.id))  # cascades to all user data
+        # Codes are keyed by address, not by user, so the cascade misses them. A reset code left
+        # behind would still work on a new account registered with the same address.
+        await self.db.execute(delete(EmailCode).where(EmailCode.email == user.email))
         await self.db.commit()
 
     async def get_settings(self, user_id: uuid.UUID) -> UserSettings | None:
