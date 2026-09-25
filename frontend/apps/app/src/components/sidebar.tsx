@@ -5,18 +5,23 @@ import { PromptDialog } from "@v1/ui/prompt-dialog";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@v1/ui/tooltip";
 import { cn } from "@v1/ui/utils";
-import { LogOut, MessageSquare, PanelLeftClose, PanelLeftOpen, Pencil, Plus, Search, Settings, Sparkles, Trash2 } from "lucide-react";
+import { Flame, LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2, Zap } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { type ReactElement, useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 
 import { useConversations, useStores } from "@/features/chat/chat-context";
+import { STUDENT_STATS } from "@/features/learning-hub/demo-data";
 import { logout } from "@/lib/api/auth";
 import { describeError } from "@/lib/api/errors";
 import type { Conversation } from "@/lib/api/types";
 import { TITLE_MAX } from "@/lib/api/types";
 import { APP_NAME } from "@/lib/brand";
+import { BrandLockup, BrandMark } from "./brand/brand-mark";
+import { isActive, visibleNavItems } from "./nav-items";
+import { PreviewBadge } from "./preview-badge";
+import { usePreview } from "./preview-context";
 import { ThemeSwitcher } from "./theme-switcher";
 import { useUser } from "./user-context";
 
@@ -49,17 +54,27 @@ export function useCollapsedSidebar() {
   return { collapsed, toggle };
 }
 
+/** In the collapsed rail a control is an icon only, so it names itself on hover and focus. */
+function RailTip({ label, collapsed, children }: { label: string; collapsed: boolean; children: ReactElement }) {
+  if (!collapsed) return children;
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>{children}</TooltipTrigger>
+      <TooltipContent side="right">{label}</TooltipContent>
+    </Tooltip>
+  );
+}
+
 /**
- * New chat, the conversation list, and the account. Rendered in the desktop rail
- * and inside the mobile drawer (`onNavigate` closes the drawer).
+ * The brand, "Ask New Doubt", the Learning Hub, the chat list ("Recent Doubts")
+ * and the account. Rendered in the desktop rail and inside the mobile drawer
+ * (`onNavigate` closes the drawer). The collapse control lives in the header.
  */
 export function SidebarContent({
   collapsed = false,
-  onToggleCollapse,
   onNavigate,
 }: {
   collapsed?: boolean;
-  onToggleCollapse?: () => void;
   onNavigate?: () => void;
 }) {
   const pathname = usePathname();
@@ -67,6 +82,7 @@ export function SidebarContent({
   const { chat, conversations } = useStores();
   const list = useConversations();
   const { user } = useUser();
+  const preview = usePreview();
   const active = activeConversationId(pathname);
   const [search, setSearch] = useState("");
   const [renaming, setRenaming] = useState<Conversation | null>(null);
@@ -117,186 +133,279 @@ export function SidebarContent({
     window.location.assign("/login");
   };
 
-  const newChat = (
-    <Link
-      href="/"
-      onClick={onNavigate}
-      aria-label={collapsed ? "New chat" : undefined}
-      className={cn(
-        "focus-ring flex items-center justify-center gap-2 rounded-xl bg-brand font-semibold text-brand-foreground elev-1 transition hover:brightness-110",
-        collapsed ? "h-10 w-10 self-center" : "px-3 py-2.5 text-sm",
-      )}
-    >
-      <Plus aria-hidden className="h-4 w-4" />
-      {!collapsed && "New chat"}
-    </Link>
-  );
+  const name = user.displayName || user.email;
 
   return (
-    <div className={cn("flex h-full flex-col border-r border-border bg-surface", collapsed ? "w-16" : "w-72 max-w-full")}>
-      <div className={cn("flex h-14 shrink-0 items-center border-b border-border", collapsed ? "justify-center px-2" : "gap-2.5 px-4")}>
-        <Link href="/" onClick={onNavigate} className="focus-ring flex items-center gap-2.5 rounded-lg">
-          <span aria-hidden className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-brand text-brand-foreground">
-            <Sparkles className="h-4 w-4" />
-          </span>
-          {collapsed ? (
-            <span className="sr-only">{APP_NAME}</span>
-          ) : (
-            <span className="font-display text-sm font-semibold text-foreground">{APP_NAME}</span>
-          )}
-        </Link>
-      </div>
+    <div
+      className={cn(
+        "flex h-full flex-col border-r border-border bg-card transition-[width] duration-300 ease-in-out",
+        collapsed ? "w-20" : "w-72 max-w-full",
+      )}
+    >
+      <div className="scrollbar-subtle flex min-h-0 flex-1 flex-col overflow-y-auto">
+        <div className={cn("flex shrink-0 items-center border-b border-border/70", collapsed ? "justify-center p-4" : "p-5")}>
+          <Link href="/" onClick={onNavigate} className="focus-ring rounded-2xl">
+            {collapsed ? (
+              <>
+                <BrandMark size={44} className="rounded-2xl shadow-md shadow-brand/20" />
+                <span className="sr-only">{APP_NAME}</span>
+              </>
+            ) : (
+              <BrandLockup />
+            )}
+          </Link>
+        </div>
 
-      <div className="flex shrink-0 flex-col px-3 pt-3">
-        {collapsed ? (
-          <Tooltip>
-            <TooltipTrigger asChild>{newChat}</TooltipTrigger>
-            <TooltipContent side="right">New chat</TooltipContent>
-          </Tooltip>
-        ) : (
-          newChat
-        )}
-      </div>
-
-      {collapsed ? (
-        <div className="min-h-0 flex-1" />
-      ) : (
-        <nav aria-labelledby="chats-heading" className="mt-4 flex min-h-0 flex-1 flex-col">
-          <div className="flex items-center justify-between px-4 pb-1.5">
-            <h2 id="chats-heading" className="text-2xs font-semibold uppercase tracking-wider text-text-secondary">
-              Chats
-            </h2>
-          </div>
-          {list.items.length > 5 && (
-            <div className="relative mx-3 mb-1.5">
-              <Search aria-hidden className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-text-secondary" />
-              <input
-                value={search}
-                onChange={(event) => setSearch(event.target.value)}
-                placeholder="Search chats"
-                aria-label="Search chats"
-                className="focus-field h-8 w-full rounded-lg border border-border bg-background pl-8 pr-2 text-sm placeholder:text-text-secondary"
-              />
+        {preview && !collapsed && (
+          <div className="mx-4 mt-4 flex items-center justify-between gap-2 rounded-2xl border border-accent-warm/25 bg-gradient-to-r from-accent-warm-soft to-brand-soft p-3">
+            <div className="flex min-w-0 items-center gap-2">
+              <span aria-hidden className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-streak text-white shadow-sm">
+                <Flame className="h-4 w-4 fill-current" />
+              </span>
+              <div className="min-w-0">
+                <p className="flex items-center gap-1.5 text-xs font-bold text-foreground">
+                  {STUDENT_STATS.streakDays} Day Streak <PreviewBadge />
+                </p>
+                <p className="truncate text-2xs text-text-secondary">Keep learning daily!</p>
+              </div>
             </div>
-          )}
-          <div className="scrollbar-subtle min-h-0 flex-1 overflow-y-auto px-3 pb-3">
-            {list.status === "loading" && list.items.length === 0 ? (
-              <SkeletonGroup label="Loading chats" className="space-y-1.5 pt-1">
-                {[0, 1, 2, 3].map((row) => (
-                  <Skeleton key={row} className="h-8 w-full rounded-lg" />
-                ))}
-              </SkeletonGroup>
-            ) : list.status === "error" && list.items.length === 0 ? (
-              <div className="px-1 py-3 text-sm text-text-secondary">
-                <p>Couldn't load your chats.</p>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-lg border border-brand/15 bg-card px-2 py-1 text-xs font-black text-brand shadow-sm">
+              <Zap aria-hidden className="h-3.5 w-3.5 fill-current" />
+              {STUDENT_STATS.xp} XP
+            </span>
+          </div>
+        )}
+
+        <div className={cn("shrink-0", collapsed ? "flex justify-center px-3 py-4" : "px-4 py-4")}>
+          <RailTip label="Ask New Doubt" collapsed={collapsed}>
+            <Link
+              href="/"
+              onClick={onNavigate}
+              aria-label={collapsed ? "Ask New Doubt" : undefined}
+              className={cn(
+                "focus-ring group flex items-center justify-center gap-2 rounded-xl bg-brand font-semibold text-brand-foreground shadow-md shadow-brand/20 transition hover:bg-brand-hover active:scale-[0.98]",
+                collapsed ? "h-11 w-11" : "w-full px-4 py-3 text-sm",
+              )}
+            >
+              <Plus aria-hidden className="h-5 w-5 transition-transform motion-safe:group-hover:rotate-90" />
+              {!collapsed && "Ask New Doubt"}
+            </Link>
+          </RailTip>
+        </div>
+
+        <nav aria-labelledby="hub-heading" className={cn("shrink-0 space-y-1", collapsed ? "px-3" : "px-3")}>
+          <h2
+            id="hub-heading"
+            className={cn(
+              "mb-2 px-3 text-2xs font-bold uppercase tracking-wider text-text-secondary",
+              collapsed && "sr-only",
+            )}
+          >
+            Learning Hub
+          </h2>
+          {visibleNavItems(preview).map((item) => {
+            const Icon = item.icon;
+            const current = isActive(item, pathname);
+            return (
+              <RailTip key={item.id} label={item.label} collapsed={collapsed}>
+                <Link
+                  href={item.href}
+                  onClick={onNavigate}
+                  aria-current={current ? "page" : undefined}
+                  aria-label={collapsed ? item.label : undefined}
+                  className={cn(
+                    "focus-ring relative flex items-center rounded-xl text-left transition-all",
+                    collapsed ? "mx-auto h-11 w-11 justify-center" : "w-full gap-3 px-3 py-2.5",
+                    current
+                      ? "bg-brand font-semibold text-brand-foreground shadow-md shadow-brand/20"
+                      : "text-text-secondary hover:bg-surface-2 hover:text-foreground",
+                  )}
+                >
+                  <span
+                    aria-hidden
+                    className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg", current ? "bg-brand-foreground/15" : item.accent)}
+                  >
+                    <Icon className="h-[18px] w-[18px]" />
+                  </span>
+                  {!collapsed && (
+                    <span className="min-w-0 flex-1">
+                      <span className="block text-sm font-medium leading-tight">{item.label}</span>
+                      <span className={cn("block truncate text-2xs", current ? "text-brand-foreground/85" : "text-text-secondary")}>
+                        {item.description}
+                      </span>
+                    </span>
+                  )}
+                  {current && !collapsed && <span aria-hidden className="h-6 w-1.5 shrink-0 rounded-full bg-brand-foreground" />}
+                </Link>
+              </RailTip>
+            );
+          })}
+        </nav>
+
+        {collapsed ? (
+          <div className="min-h-0 flex-1" />
+        ) : (
+          <nav aria-labelledby="chats-heading" className="mt-5 flex min-h-[10rem] flex-1 flex-col">
+            <div className="flex items-center justify-between px-6 pb-2">
+              <h2 id="chats-heading" className="text-2xs font-bold uppercase tracking-wider text-text-secondary">
+                Recent Doubts
+              </h2>
+            </div>
+            {list.items.length > 5 && (
+              <div className="relative mx-4 mb-2">
+                <Search aria-hidden className="pointer-events-none absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-text-secondary" />
+                <input
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder="Search chats"
+                  aria-label="Search chats"
+                  className="focus-field h-9 w-full rounded-xl border border-input bg-surface pl-8 pr-2 text-sm placeholder:text-text-secondary focus-visible:bg-card"
+                />
+              </div>
+            )}
+            <div className="px-3 pb-3">
+              {list.status === "loading" && list.items.length === 0 ? (
+                <SkeletonGroup label="Loading chats" className="space-y-1.5 pt-1">
+                  {[0, 1, 2, 3].map((row) => (
+                    <Skeleton key={row} className="h-9 w-full rounded-xl" />
+                  ))}
+                </SkeletonGroup>
+              ) : list.status === "error" && list.items.length === 0 ? (
+                <div className="px-3 py-3 text-sm text-text-secondary">
+                  <p>Couldn't load your chats.</p>
+                  <button
+                    type="button"
+                    onClick={() => void conversations.refresh()}
+                    className="focus-ring mt-1 rounded text-sm font-medium text-brand underline underline-offset-2"
+                  >
+                    Try again
+                  </button>
+                </div>
+              ) : visible.length === 0 ? (
+                <p className="px-3 py-3 text-sm text-text-secondary">
+                  {list.items.length === 0 ? "Your chats will appear here." : "No chat matches that."}
+                </p>
+              ) : (
+                <ul className="space-y-0.5">
+                  {visible.map((item) => {
+                    const isActive = item.id === active;
+                    return (
+                      <li
+                        key={item.id}
+                        className={cn(
+                          "group flex items-center gap-1 rounded-xl transition-colors",
+                          isActive ? "bg-brand-soft font-medium text-brand" : "text-text-secondary hover:bg-surface-2 hover:text-foreground",
+                        )}
+                      >
+                        <Link
+                          href={`/c/${item.id}`}
+                          onClick={onNavigate}
+                          aria-current={isActive ? "page" : undefined}
+                          className="focus-ring-inset flex h-9 min-w-0 flex-1 items-center gap-2.5 rounded-xl px-3 text-sm"
+                        >
+                          <MessageSquare aria-hidden className="h-3.5 w-3.5 shrink-0 opacity-70" />
+                          <span className="truncate">{item.title}</span>
+                        </Link>
+                        {/* Always visible on touch; on hover/focus with a pointer. */}
+                        <span className="flex shrink-0 items-center gap-0.5 pr-1 opacity-100 transition-opacity md:opacity-0 md:focus-within:opacity-100 md:group-hover:opacity-100">
+                          <button
+                            type="button"
+                            onClick={() => setRenaming(item)}
+                            aria-label={`Rename “${item.title}”`}
+                            className="focus-ring-inset grid h-7 w-7 place-items-center rounded-lg transition-colors hover:bg-foreground/10"
+                          >
+                            <Pencil aria-hidden className="h-3.5 w-3.5" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setDeleting(item)}
+                            aria-label={`Delete “${item.title}”`}
+                            className="focus-ring-inset grid h-7 w-7 place-items-center rounded-lg text-destructive transition-colors hover:bg-destructive/10"
+                          >
+                            <Trash2 aria-hidden className="h-3.5 w-3.5" />
+                          </button>
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+              {list.nextCursor && !search && (
                 <button
                   type="button"
-                  onClick={() => void conversations.refresh()}
-                  className="focus-ring mt-1 rounded text-sm underline underline-offset-2 hover:text-foreground"
+                  onClick={() => void conversations.loadMore().catch((error) => toast.error(describeError(error).message))}
+                  disabled={list.loadingMore}
+                  className="focus-ring mt-2 w-full rounded-xl px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground disabled:opacity-50"
                 >
-                  Try again
+                  {list.loadingMore ? "Loading…" : "Load more"}
                 </button>
-              </div>
-            ) : visible.length === 0 ? (
-              <p className="px-1 py-3 text-sm text-text-secondary">
-                {list.items.length === 0 ? "Your chats will appear here." : "No chat matches that."}
-              </p>
-            ) : (
-              <ul className="space-y-0.5">
-                {visible.map((item) => {
-                  const isActive = item.id === active;
-                  return (
-                    <li
-                      key={item.id}
-                      className={cn(
-                        "group flex items-center gap-1 rounded-lg transition-colors",
-                        isActive ? "bg-brand-soft text-brand" : "text-text-secondary hover:bg-surface-2",
-                      )}
-                    >
-                      <Link
-                        href={`/c/${item.id}`}
-                        onClick={onNavigate}
-                        aria-current={isActive ? "page" : undefined}
-                        className="focus-ring-inset flex h-9 min-w-0 flex-1 items-center gap-2 rounded-lg px-2.5 text-sm"
-                      >
-                        <MessageSquare aria-hidden className="h-3.5 w-3.5 shrink-0 opacity-60" />
-                        <span className="truncate">{item.title}</span>
-                      </Link>
-                      {/* Always visible on touch; on hover/focus with a pointer. */}
-                      <span className="flex shrink-0 items-center gap-0.5 pr-1 opacity-100 transition-opacity md:opacity-0 md:focus-within:opacity-100 md:group-hover:opacity-100">
-                        <button
-                          type="button"
-                          onClick={() => setRenaming(item)}
-                          aria-label={`Rename “${item.title}”`}
-                          className="focus-ring-inset grid h-7 w-7 place-items-center rounded-md transition-colors hover:bg-foreground/10"
-                        >
-                          <Pencil aria-hidden className="h-3.5 w-3.5" />
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setDeleting(item)}
-                          aria-label={`Delete “${item.title}”`}
-                          className="focus-ring-inset grid h-7 w-7 place-items-center rounded-md text-destructive transition-colors hover:bg-destructive/10"
-                        >
-                          <Trash2 aria-hidden className="h-3.5 w-3.5" />
-                        </button>
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-            )}
-            {list.nextCursor && !search && (
-              <button
-                type="button"
-                onClick={() => void conversations.loadMore().catch((error) => toast.error(describeError(error).message))}
-                disabled={list.loadingMore}
-                className="focus-ring mt-2 w-full rounded-lg px-2 py-1.5 text-sm text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground disabled:opacity-50"
-              >
-                {list.loadingMore ? "Loading…" : "Load more"}
-              </button>
-            )}
-          </div>
-        </nav>
-      )}
-
-      <div className={cn("shrink-0 border-t border-border p-3", collapsed && "px-2")}>
-        {!collapsed && (
-          <div className="mb-2.5 min-w-0 px-1">
-            <p className="truncate text-sm font-medium text-foreground">{user.displayName || user.email}</p>
-            {user.displayName && <p className="truncate text-xs text-text-secondary">{user.email}</p>}
-          </div>
+              )}
+            </div>
+          </nav>
         )}
-        <div className={cn("flex items-center gap-1", collapsed ? "flex-col" : "justify-between")}>
-          <Link
-            href="/settings"
-            onClick={onNavigate}
-            aria-label="Settings"
-            aria-current={pathname === "/settings" ? "page" : undefined}
-            className="focus-ring grid h-8 w-8 place-items-center rounded-lg text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground"
+      </div>
+
+      <div className={cn("shrink-0 border-t border-border bg-surface p-3", collapsed && "px-2")}>
+        <div className={cn("flex items-center gap-3", collapsed && "justify-center")}>
+          <span
+            aria-hidden
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-tr from-streak to-accent-warm text-lg font-bold text-white shadow-sm"
           >
-            <Settings aria-hidden className="h-4 w-4" />
-          </Link>
+            {name.charAt(0).toUpperCase()}
+          </span>
+          {!collapsed && (
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-bold text-foreground">{name}</p>
+              {preview ? (
+                <p className="flex items-center gap-1 truncate text-xs text-text-secondary">
+                  <span className="font-semibold text-brand">{STUDENT_STATS.grade}</span>
+                  <span aria-hidden>•</span>
+                  <span>{STUDENT_STATS.board}</span>
+                  <PreviewBadge className="ml-1" />
+                </p>
+              ) : (
+                user.displayName && <p className="truncate text-xs text-text-secondary">{user.email}</p>
+              )}
+            </div>
+          )}
+        </div>
+        <div
+          className={cn(
+            "mt-3 flex items-center gap-1 border-t border-border pt-3 text-xs",
+            collapsed ? "flex-col" : "justify-between",
+          )}
+        >
+          <RailTip label="Settings" collapsed={collapsed}>
+            <Link
+              href="/settings"
+              onClick={onNavigate}
+              aria-label={collapsed ? "Settings" : undefined}
+              aria-current={pathname === "/settings" ? "page" : undefined}
+              className={cn(
+                "focus-ring flex items-center gap-1.5 rounded-lg font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground aria-[current=page]:text-brand",
+                collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",
+              )}
+            >
+              <Settings aria-hidden className="h-4 w-4" />
+              {!collapsed && "Settings"}
+            </Link>
+          </RailTip>
           {!collapsed && <ThemeSwitcher />}
-          {onToggleCollapse && (
+          <RailTip label="Log out" collapsed={collapsed}>
             <button
               type="button"
-              onClick={onToggleCollapse}
-              aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-              className="focus-ring hidden h-8 w-8 place-items-center rounded-lg text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground md:grid"
+              onClick={signOut}
+              disabled={signingOut}
+              aria-label={collapsed ? "Log out" : undefined}
+              className={cn(
+                "focus-ring flex items-center gap-1.5 rounded-lg font-medium text-destructive transition-colors hover:bg-destructive/10 disabled:opacity-50",
+                collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",
+              )}
             >
-              {collapsed ? <PanelLeftOpen aria-hidden className="h-4 w-4" /> : <PanelLeftClose aria-hidden className="h-4 w-4" />}
+              <LogOut aria-hidden className="h-4 w-4" />
+              {!collapsed && "Log out"}
             </button>
-          )}
-          <button
-            type="button"
-            onClick={signOut}
-            disabled={signingOut}
-            aria-label="Log out"
-            className="focus-ring grid h-8 w-8 place-items-center rounded-lg text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground disabled:opacity-50"
-          >
-            <LogOut aria-hidden className="h-4 w-4" />
-          </button>
+          </RailTip>
         </div>
       </div>
 

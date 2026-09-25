@@ -176,7 +176,7 @@ test("a user's whole journey", async ({ page, context }) => {
 
   let second = "";
   await test.step("start a second chat", async () => {
-    await page.getByRole("link", { name: "New chat" }).click();
+    await page.getByRole("link", { name: "Ask New Doubt" }).click();
     await expect(page).toHaveURL("/");
     await expect(page.getByRole("heading", { name: "How can I help?" })).toBeVisible();
     await sendAndWait(page, "A second chat");
