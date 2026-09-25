@@ -1,0 +1,16 @@
+#!/bin/sh
+# Rehearsal stand-in for the Docker CLI: production runs PostgreSQL with docker compose; the
+# rehearsal host runs it natively, so `compose up` starts that and the backup's `exec pg_dump`
+# runs pg_dump directly. Anything else is refused loudly.
+case "$*" in
+  *compose*" up "*)
+    systemctl start postgresql
+    for _ in $(seq 1 30); do pg_isready -q -h 127.0.0.1 && exit 0; sleep 1; done
+    exit 1 ;;
+  *compose*" stop"*) exit 0 ;;
+  *compose*" exec "*pg_dump*)
+    PGPASSWORD="$POSTGRES_PASSWORD" exec pg_dump -h 127.0.0.1 -U "$POSTGRES_USER" -d "$POSTGRES_DB" --format=custom ;;
+  "--version") echo "Docker version 29.x (rehearsal stub)" ;;
+  "info" | "compose version") exit 0 ;;
+  *) echo "docker stub: unsupported: $*" >&2; exit 1 ;;
+esac

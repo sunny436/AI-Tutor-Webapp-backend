@@ -4,6 +4,9 @@ A ChatGPT-style AI chat app with accounts, conversations and streamed replies, b
 AI tutor. **One repository, one commit, one release:** the web app and the API live here together
 and are tested, deployed and rolled back together.
 
+> **AI Tutor is released as one application. Frontend and backend are never independently
+> deployed to production.**
+
 ```
 Browser ──► Cloudflare ──► frontend/  Next.js web app + server-side proxy (BFF)   127.0.0.1:3000
                                  │  httpOnly session cookie → Authorization: Bearer
@@ -25,14 +28,24 @@ Browser ──► Cloudflare ──► frontend/  Next.js web app + server-side 
 
 ## Quick start
 
-Needs Python 3.12, [Bun](https://bun.sh) 1.3.x and Docker.
+Needs Python 3.12, [Bun](https://bun.sh) 1.3.14 (`.bun-version`), Node 24 (`.node-version`, used by
+the end-to-end tests and in production) and Docker.
 
 ```sh
 bun run setup     # backend venv + dependencies, frontend dependencies
 bun run dev       # database + migrations, API on :4000, web app on http://localhost:3000
 bun run test      # backend + frontend tests, including the API contract
-bun run deploy    # production: one release built from one commit (docs/deployment.md)
 ```
+
+## Releasing
+
+```sh
+bun run deploy    # the tip of main, only if CI passed on that exact commit (docs/deployment.md)
+bun run status    # which release production runs; both apps must report the same commit
+bun run rollback  # both apps back to the previous release, together (docs/rollback.md)
+```
+
+Those three are the only production commands.
 
 ## History
 

@@ -1,21 +1,34 @@
 #!/usr/bin/env bash
 #
-# Roll production back, frontend and backend together. From the repository root:
+# Roll production back: the web app AND the API return to the same earlier release together.
+# There is no way to roll back one without the other. From the repository root:
 #
-#   bun run rollback                          # to the release that was live before this one
-#   bun run rollback -- --to <commit>         # to a specific kept release
-#   bash deploy/rollback.sh --allow-older-schema
+#   bun run rollback                          undo the last switch (again: one release further back)
+#   bun run rollback -- --to <commit>         to a specific kept release
+#   bun run rollback -- --allow-older-schema  when the release being left migrated the schema
+#   (--yes skips the typed confirmation; --host <user@host>, default root@10.1.30.37)
 #
-# Runs deploy/server/rollback.sh of the release that is live now. See docs/rollback.md.
+# Runs the live release's deploy/server/rollback.sh in a detached systemd unit, so a dropped
+# connection cannot interrupt it. See docs/rollback.md.
 set -euo pipefail
 HOST=${DEPLOY_HOST:-root@10.1.30.37}
-ARGS=()
+ARGS=() YES=0
 while [ $# -gt 0 ]; do
   case "$1" in
     --host) HOST=${2:?--host needs a value}; shift 2 ;;
     --to) ARGS+=("$1" "${2:?--to needs a commit}"); shift 2 ;;
     --allow-older-schema) ARGS+=("$1"); shift ;;
+    --yes) YES=1; shift ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done
-ssh "$HOST" bash /opt/aichat/current/deploy/server/rollback.sh "${ARGS[@]}"
+LIVE=$(ssh "$HOST" 'r=$(readlink -f /opt/aichat/current 2>/dev/null) && basename "$r"' || true)
+[ -n "$LIVE" ] || { echo "STOP: $HOST has no live release (/opt/aichat/current)" >&2; exit 1; }
+echo "  Roll back $HOST from $LIVE (frontend and backend together) ${ARGS[*]:-to the previous release}"
+if [ "$YES" != 1 ]; then
+  read -r -p "  Type 'rollback' to continue: " answer
+  [ "$answer" = rollback ] || { echo "STOP: not confirmed" >&2; exit 1; }
+fi
+UNIT="aichat-rollback-$(date -u +%Y%m%dT%H%M%S)"
+# shellcheck disable=SC2029  # expanded here on purpose
+ssh "$HOST" "journalctl -f -n0 -o cat -u $UNIT & J=\$!; systemd-run --unit=$UNIT --quiet --wait --collect -p Environment=HOME=/root -p Environment=AICHAT_VIA_DEPLOY=1 bash /opt/aichat/current/deploy/server/rollback.sh ${ARGS[*]:-}; rc=\$?; sleep 2; kill \$J 2>/dev/null; exit \$rc"

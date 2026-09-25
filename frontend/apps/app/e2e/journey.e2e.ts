@@ -160,7 +160,13 @@ test("a user's whole journey", async ({ page, context }) => {
     await item.getByRole("button", { name: /^Rename/ }).click();
     const dialog = page.getByRole("dialog", { name: "Rename chat" });
     await dialog.getByLabel("Name").fill("Renamed by E2E");
+    // The rename shows at once (optimistic); wait for it to be saved before reloading, or the
+    // reload cancels the request and the old name comes back.
+    const renamed = page.waitForResponse(
+      (response) => response.url().endsWith(`/conversations/${first}`) && response.request().method() === "PATCH",
+    );
     await dialog.getByRole("button", { name: "Rename" }).click();
+    expect((await renamed).status()).toBe(200);
     await expect(page.locator(`nav a[href="/c/${first}"]`)).toHaveText("Renamed by E2E");
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Renamed by E2E");
     await expect(page).toHaveTitle(/^Renamed by E2E · /);

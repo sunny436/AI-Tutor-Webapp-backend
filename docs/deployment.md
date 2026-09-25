@@ -1,78 +1,108 @@
 # Deployment
 
-One repository, one commit, one release. A deployment ships the frontend **and** the backend built
-from the same commit, validates them before users see them, and keeps the previous release for a
-one-command rollback ([rollback.md](rollback.md)).
+> **AI Tutor is released as one application. Frontend and backend are never independently
+> deployed to production.**
+
+One repository, one `main`, one commit, one release, one deploy command, one rollback. Every
+production release is identified by one immutable commit SHA, and production runs the web app
+and the API from that same release, at all times.
 
 ```
-git commit ─► PR ─► merge to main (CI: backend + frontend + contract)
-                         │
-            bun run deploy    (workstation: deploy/deploy.sh)
-                         │  git archive <commit> ──ssh──► host
-                         ▼
- /opt/aichat/releases/<commit>/        1 prepare   backend venv, frontend install + build
-                                       2 migrate   only if pending, only with --with-migrations
-                                       3 validate  trial API :4101 + web :3001 on the real database
-                                       4 switch    /opt/aichat/current -> releases/<commit>
-                                                   restart API, then web; live checks
-                                                   failed? back to the previous release, automatically
+feature branch ─► PR ─► main ─► CI on that exact commit: Backend + Frontend + Integration
+                                        │
+                           bun run deploy   (workstation)
+                                        │  CI gate · git archive <commit> + file manifest ──ssh──►
+                                        ▼
+ /opt/aichat/releases/<commit>/   systemd unit aichat-deploy-<commit>-<id> (detached)
+    verify   every file == the commit (git blob hashes)
+    prepare  backend from requirements.lock (hashes) · frontend on the pinned Node
+    migrate  only with --with-migrations, after a fresh backup
+    validate trial API :4101 + web :3001 on the real database: both report <commit>,
+             web -> API -> database proven by request id
+    switch   stop web · /opt/aichat/current -> <commit> · restart API · start web
+             prove: pointer == API release == web release == every process's release
+             failed? -> the previous release, automatically
 ```
 
-## What is guaranteed
+## The guarantees, and what enforces them
 
-| Guarantee | How |
+| Guarantee | Enforced by |
 |---|---|
-| Frontend and backend are always the same commit | Both systemd units run from `/opt/aichat/current` (one symlink). `infra-check.sh` verifies both processes run from the same release directory. |
-| Only commits from `main` reach production | `deploy.sh` refuses a commit that is not on the GitHub remote's `main` (`--allow-unpushed` is for emergencies). |
-| Nothing live is touched until the release is proven | The release is built in its own directory, then started as trial copies on 127.0.0.1:4101 / :3001 against the production database. A request is sent through the trial web app, and the trial API's log must show the same request id: web → API → database. |
-| A bad release does not stay live | After the switch the same checks run on the live ports; if they fail, `current` goes back to the previous release automatically. |
-| The database is never reset | PostgreSQL is not part of releases. Its compose file lives in `/opt/aichat/shared/postgres`, and project and volume names are pinned (`compose` / `compose_pgdata`). |
-| Secrets never enter git or a release | They live in `/etc/aichat/*.env` on the host and are shared by all releases. |
+| Frontend and backend always run the same commit | Both units run from `/opt/aichat/current`, resolved once at start. Every switch stops the web app **before** the pointer moves and starts it **after** the API runs the new release, so an old web app never serves against a new API or the reverse. Afterwards the deploy proves pointer = API-reported release = web-reported release = the release of every `aichat-api` / `aichat-web` process, or rolls back. |
+| Only approved commits reach production | `deploy.sh` fetches `main` from the pinned repository URL, accepts only commits of `main`'s own history, and requires GitHub CI **success for that exact commit** on all three jobs (`deploy/ci-gate.mjs`, fail closed). Branch protection is not available on this repository's plan; this gate is the enforcement. |
+| A release is exactly its commit | `git archive` of the commit, never a working tree. Every file is checked against the commit's `git ls-tree` hashes on arrival, before the switch, on rollback and by `bun run status`. |
+| What CI tested is what runs | The backend installs `backend/requirements.lock` (every package pinned, hashes required); the frontend is built and served on the release's `.node-version` Node; Bun is `.bun-version`. CI uses the same three files. |
+| Nothing live changes until the release is proven | Build, migrations check and trial copies all happen before the switch; any failure stops there (fail closed). |
+| A bad release does not stay live | Live checks after the switch; on failure the previous release is restored automatically. |
+| A deploy cannot be interrupted half-way | The host side runs as a detached systemd unit; losing SSH or pressing Ctrl+C on the workstation does not stop it. One deploy or rollback at a time (lock). |
+| Production is never starved by a build | Free disk and memory are checked first; builds run in a memory-capped, low-priority scope, so the kernel kills the build, not production or PostgreSQL. |
+| The database is never reset or rolled back | PostgreSQL is not part of releases (`/opt/aichat/shared/postgres`, pinned names `compose` / `compose_pgdata`). Migrations need an explicit flag and a successful backup first. |
+
+## Release identity: what is running
+
+```sh
+bun run status        # read-only; exits 1 unless "INVARIANT OK"
+```
+
+```
+release
+  ok    /opt/aichat/current -> 3f2a…
+        backend  (aichat-api) reports release=3f2a…   processes run: 3f2a…
+        frontend (aichat-web) reports release=3f2a…   processes run: 3f2a…   runtime: …/node-v24.19.0-linux-x64/bin/node
+  ok    every aichat-api and aichat-web process runs 3f2a…
+  ok    frontend release == backend release == 3f2a…
+  ok    web runs the release's pinned Node
+integrity
+  ok    files verified: all 270 files match the commit
+units …
+INVARIANT OK: frontend and backend both run release 3f2a…
+```
+
+Each app reports the release it runs: the API at `GET /health` and the web app at
+`GET /api/health` (`{"status": "ok", "release": "<commit>"}`), read from the `RELEASE` file of the
+release the process started from. The web app shows it to local requests only; through Cloudflare
+the public site answers `{"status": "ok"}` without the commit.
 
 ## Deploying
 
 From the repository root, on a workstation that can read the GitHub repository and SSH to the host
-(`root@10.1.30.37` by default; Git Bash works on Windows):
+(Git Bash works on Windows):
 
 ```sh
-bun run deploy                                    # the tip of main on GitHub
-bun run deploy -- --ref <commit>                  # a specific commit (must be on main)
-bun run deploy -- --with-migrations               # the release has pending migrations
-bun run deploy -- --prepare-only                  # build + validate on the host, do not switch
-DEPLOY_HOST=root@other-host bun run deploy        # another host
+bun run deploy                                     # the tip of main (the normal case)
+bun run deploy -- --with-migrations                # the release has pending migrations
+bun run deploy -- --prepare-only                   # build + validate on the host, do not switch
+bun run deploy -- --ref <commit> --older           # an older commit of main (prefer bun run rollback)
 ```
 
-Deploy commits whose CI run on GitHub passed. The script prints each phase, and ends with
-`live: <commit> (previous: <commit>)`. Every deploy, failure and rollback is appended to
-`/opt/aichat/releases/HISTORY`. The host keeps the live release, the previous one and one more;
-older builds are deleted.
-
-Check a host at any time (read-only):
-
-```sh
-ssh root@10.1.30.37 bash /opt/aichat/current/deploy/infra-check.sh
-```
-
-### Migrations
-
-A release's migrations run **before** the switch, while the current release keeps serving. So a
-migration must work with the code that is live when it runs (expand/contract): add columns and
-tables, backfill, and only drop what the previous release no longer uses, in a later release. A
-release with pending migrations stops at step 2 until you pass `--with-migrations`. Deploying code
-that is older than the database schema needs `--allow-older-schema`. `backend/scripts/migration_status.py`
-reports where the database stands for any code version.
+It shows the release, its CI result and what is live, and asks you to type the first 7 characters
+of the commit (`--yes` for automation). The full log is in the journal (`journalctl -u
+aichat-deploy-*`) and in `/opt/aichat/releases/<commit>/deploy-<id>.log`; every deploy,
+migration, failure and rollback is appended to `/opt/aichat/releases/HISTORY`.
 
 ### Downtime
 
-Validation happens before anything live changes. The switch restarts the API and then the web app,
-so during those seconds users see "temporarily unavailable" and a reply that is being generated is
-saved as cancelled. Measured in the production-layout rehearsal: page loads under 1 s; requests
-that reach the API about 7 s (mostly API start-up).
+Validation happens before anything live changes. The switch itself makes the whole site
+unavailable for a few seconds (about 7–8 s: the web app is down while the API restarts), which is
+the price of never serving a mixed pair. A reply being generated at that moment is saved as
+cancelled.
+
+### Migrations
+
+- A release's migrations run **before** the switch, while the current release still serves, so
+  every migration must work with the code that is live when it runs (expand/contract: add, then
+  backfill, then drop only what the previous release no longer uses, in a later release).
+- Pending migrations stop the deploy unless `--with-migrations` is given; then a backup
+  (`aichat-pg-backup`) must succeed first, and the migration is recorded in `HISTORY` with the
+  backup file.
+- Deploying or rolling back to code older than the schema needs `--allow-older-schema`, and is only
+  safe for backward-compatible migrations. The database is never rolled back automatically; to undo
+  a schema change, write a new migration.
+- `backend/scripts/migration_status.py` reports where the database stands for any code version.
 
 ## One-time host preparation
 
-Only for a new host (the current production host already has all of this). Copy the repository
-there once and run the installer:
+Only for a new host. Copy the repository there once and run the installer:
 
 ```sh
 git archive --format=tar.gz HEAD | ssh root@<host> 'mkdir -p /root/aichat-setup && tar -xzf - -C /root/aichat-setup'
@@ -80,65 +110,73 @@ ssh root@<host> bash /root/aichat-setup/deploy/install.sh     # lists the secret
 # write /etc/aichat/{postgres,api,web}.env from deploy/env/*.example (chmod 600), then run it again
 ```
 
-It installs Python 3.12 and Bun 1.3.14, leaves an existing Docker alone, creates
-`/opt/aichat/{releases,incoming,shared}`, installs the systemd units and starts PostgreSQL and the
-nightly backup. Then `bun run deploy` from a workstation. The Cloudflare Tunnel is configured
-separately (`deploy/cloudflared/config.yml.template`: the web app hostname only).
+It installs Python 3.12, the pinned Bun and Node, leaves an existing Docker alone, creates
+`/opt/aichat/{releases,incoming,shared,runtime}`, installs the units and starts PostgreSQL and the
+nightly backup. Then `bun run deploy -- --with-migrations` (a new database is empty, so the first
+release has every migration pending; without the flag it stops before the switch).
 
-## The first deploy on the current production host
+## The first release deploy on the current production host
 
-Production still runs the older layout: two checkouts, `/opt/aichat/backend` and `/opt/aichat/frontend`.
-The first `bun run deploy` moves it to releases. It needs the owner's explicit approval.
+Production still runs the older two-checkout layout (`/opt/aichat/backend` and
+`/opt/aichat/frontend`, from two repositories and two commits). The first `bun run deploy` moves it
+to releases. **It needs the owner's explicit approval.**
 
-- **It changes:** the four systemd units (the replaced ones are kept as `*.before-<time>`),
-  `/opt/aichat/current`, and `/opt/aichat/shared/postgres`.
-- **It does not change:** the database container (not restarted; the pinned names keep the same volume
-  when it next starts), `/etc/aichat/*.env`, the old checkouts (left in place), the legacy services
-  or the Cloudflare configuration.
-- **If it fails**, `release.sh` puts the old unit files back and restarts the old layout by itself.
-  This was rehearsed on a copy of the production layout.
-- **Afterwards**, once the new layout has run for a few days, `/opt/aichat/backend`, `/opt/aichat/frontend`
-  and `/root/aichat-bundles` can be deleted by hand.
+- **It changes:** the systemd units (the replaced ones are kept as `*.before-<time>`),
+  `/opt/aichat/current`, `/opt/aichat/shared/postgres`, `/opt/aichat/runtime` (the pinned Node).
+- **It does not change:** the database container (not restarted; the pinned names keep the same
+  volume), `/etc/aichat/*.env`, the old checkouts (left in place, unused), the legacy services or
+  Cloudflare.
+- **If it fails**, it restores the old unit files and restarts the old layout by itself (rehearsed).
+- **Afterwards**, once the release layout has run for a few days, delete `/opt/aichat/backend`,
+  `/opt/aichat/frontend` and `/root/aichat-bundles` (they are only a trap: running their old
+  `install.sh` would bring back two independently deployed checkouts; `bun run status` reports them).
 
 ## Environment variables
 
-All production values live in `/etc/aichat/*.env` (root, mode 600). Templates are in `deploy/env/`.
-For local development use `backend/.env` (from `backend/.env.example`) and
-`frontend/apps/app/.env.local` (from `.env.example`).
+All production values live in `/etc/aichat/*.env` (root, mode 600), shared by every release and
+never in git. Templates: `deploy/env/`. Local development: `backend/.env` and
+`frontend/apps/app/.env.local`.
 
 | File | Variable | Used by | When | Secret |
 |---|---|---|---|---|
-| `web.env` | `API_BASE_URL` | frontend server (BFF, server components) | runtime | no. **The link to the backend**: must be `http://127.0.0.1:4100` (the frontend's default `:4000` is the development port; `release.sh` refuses a web.env without it) |
-| `web.env` | `NEXT_PUBLIC_SITE_URL` | frontend (metadata URLs) | **build time** (baked into the release build) | no |
+| `web.env` | `API_BASE_URL` | frontend server (BFF, server components) | runtime | no. **The link to the backend**: must be `http://127.0.0.1:4100`; a release refuses anything else |
+| `web.env` | `NEXT_PUBLIC_SITE_URL` | frontend (metadata URLs) | **build time** (baked into the release build; required) | no |
 | `web.env` | `NEXT_PUBLIC_SENTRY_DSN` | frontend error reporting, only bundled if set | build time | no (public DSN) |
-| `api.env` | `SECRET_KEY` | backend (HMAC of email codes) | runtime | **yes** |
-| `api.env` | `DATABASE_URL` | backend | runtime | **yes** (contains the password) |
-| `api.env` | `APP_ENV`, `APP_NAME`, `LOG_LEVEL`, `TRUST_FORWARDED_FOR`, `ALLOWED_ORIGINS`, `MAX_BODY_BYTES` | backend | runtime | no |
-| `api.env` | `EMAIL_BACKEND`, `EMAIL_FROM`, `SMTP_HOST/PORT/STARTTLS/SSL`, `OLLASTACK_BASE_URL`, `OLLASTACK_MAILBOX_ID` | backend email | runtime | no |
+| `api.env` | `SECRET_KEY`, `DATABASE_URL` | backend | runtime | **yes** |
 | `api.env` | `SMTP_USERNAME`, `SMTP_PASSWORD`, `OLLASTACK_TOKEN` | backend email | runtime | **yes** |
-| `api.env` | `LLM_*` names, base URLs, models, timeouts | backend | runtime | no |
 | `api.env` | `LLM_PRIMARY_API_KEY`, `LLM_FALLBACK_API_KEY`, `EMBEDDING_API_KEY` | backend | runtime | **yes** |
-| `api.env` | `RAG_*`, `EMBEDDING_*` (other), `CHAT_*`, `STREAM_*`, auth limits | backend | runtime | no |
-| `postgres.env` | `POSTGRES_USER`, `POSTGRES_DB`, `BACKUP_DIR`, `KEEP_DAYS` | database, backup | runtime | no |
+| `api.env` | `APP_ENV`, `APP_NAME`, `EMAIL_*`, `SMTP_HOST/PORT/…`, `OLLASTACK_BASE_URL/MAILBOX_ID`, `LLM_*` names/URLs/models, `RAG_*`, `EMBEDDING_*` (other), `CHAT_*`, `STREAM_*`, limits | backend | runtime | no |
 | `postgres.env` | `POSTGRES_PASSWORD` | database, backup | runtime | **yes** |
+| `postgres.env` | `POSTGRES_USER`, `POSTGRES_DB`, `BACKUP_DIR`, `KEEP_DAYS` | database, backup | runtime | no |
 
-Changing a runtime value: edit the file, then `systemctl restart aichat-api` (or `aichat-web`).
-Changing a build-time value (`NEXT_PUBLIC_*`): edit `web.env`, then deploy (the frontend is rebuilt
-for the next release; the live build keeps the old value).
+A runtime value takes effect on the next restart of the service; a build-time value
+(`NEXT_PUBLIC_*`) on the next deploy (the release is rebuilt when they change).
 
 ## Changing the database container on purpose
 
 `install-units.sh` never replaces `/opt/aichat/shared/postgres/docker-compose.yml`. If a release
 changes `deploy/compose/docker-compose.yml`, the deploy prints a warning. Apply it deliberately:
-take a backup (`systemctl start aichat-pg-backup`), copy the new file into
-`/opt/aichat/shared/postgres/`, then `systemctl restart aichat-postgres aichat-api`. This causes a
-short outage. Never change the pinned `name: compose` or the volume name `compose_pgdata`.
+take a backup (`systemctl start aichat-pg-backup`), copy the file into `/opt/aichat/shared/postgres/`,
+then `systemctl restart aichat-postgres aichat-api` (a short outage). Never change the pinned
+`name: compose` or the volume name `compose_pgdata`.
 
-## Never do by hand
+## Proving the model: `bun run rehearse`
 
-- Edit files inside `/opt/aichat/releases/*`: releases are immutable. Fix it in git and deploy.
-- Point `/opt/aichat/current` somewhere by hand, except in the emergency steps in [rollback.md](rollback.md).
-- Run migrations outside `release.sh` (the API unit deliberately does not migrate on start).
-- Rename the compose project or volume, or run `docker compose down -v`.
+A throwaway Ubuntu 24.04 container with real systemd, PostgreSQL + pgvector and SSH, prepared by
+`install.sh`, on which the real `deploy.sh`, `rollback.sh` and `status.sh` run through
+frontend-only, backend-only and combined releases, a broken build, a broken backend, a failed live
+check, double rollback, migration guards, every bypass and a killed SSH connection, while a poller
+checks that the two apps never report different releases. Local only (Docker, about 45 minutes).
+
+## Never do this
+
+- **Deploy the frontend or the backend on its own.** There is no command for it and there never
+  will be; a change to either half is released as a new commit of the whole application.
+- Run `release.sh` or `rollback.sh` by hand (they refuse), edit files inside
+  `/opt/aichat/releases/*` (verified against the commit; a changed release is refused), or point
+  `/opt/aichat/current` somewhere by hand except in the emergency steps of [rollback.md](rollback.md).
+- Deploy a commit that is not on `main`, or whose CI did not pass (refused).
+- Run migrations outside a deploy, rename the compose project or volume, or `docker compose down -v`.
 - Put a secret in the repository, or change `API_BASE_URL` in `web.env`.
-- Use the old deployment (git bundles, `install.sh` with `BACKEND_REPO`/`FRONTEND_REPO`): it no longer exists.
+- Use the retired deployment (git bundles, `install.sh` with `BACKEND_REPO`/`FRONTEND_REPO`, the
+  old frontend repository): it no longer exists.
