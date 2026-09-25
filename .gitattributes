@@ -3,3 +3,6 @@
 *.png binary
 *.jpg binary
 *.ico binary
+
+# Byte-exact test fixtures (the frozen legacy tutor prompt): never convert line endings.
+backend/tests/fixtures/** -text

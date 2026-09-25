@@ -29,11 +29,9 @@ from app.settings import Settings
 
 ROOT = Path(__file__).resolve().parents[1]
 TEST_DATABASE_URL = os.environ.get("TEST_DATABASE_URL", "postgresql+asyncpg://aichat:aichat@127.0.0.1:5432/aichat_test")
-TABLES = (
-    "document_chunks, documents, knowledge_sources, "
-    "usage_events, message_feedback, messages, conversations, auth_attempts, "
-    "email_codes, auth_sessions, user_settings, users"
-)
+# Every application table is emptied before each test: found from the schema, not listed by
+# hand, so a table added by a later migration cannot leak rows from one test into the next.
+ALL_TABLES = text("SELECT tablename FROM pg_tables WHERE schemaname = 'public' AND tablename <> 'alembic_version'")
 PASSWORD = "correct horse battery"
 
 
@@ -94,7 +92,8 @@ def database() -> str:
 async def clean_tables(database):
     engine = create_async_engine(database)
     async with engine.begin() as conn:
-        await conn.execute(text(f"TRUNCATE {TABLES} CASCADE"))
+        names = (await conn.execute(ALL_TABLES)).scalars().all()
+        await conn.execute(text("TRUNCATE " + ", ".join(f'"{name}"' for name in names) + " CASCADE"))
     await engine.dispose()
 
 
