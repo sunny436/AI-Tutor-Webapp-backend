@@ -50,9 +50,13 @@ export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
         // note on selectTriggerVariants in packages/ui/src/components/select.tsx
         // for why an override here is a breakpoint hazard.
         size="sm"
-        className={cn("border-border bg-surface-2", triggerClass)}
+        // `w-auto`: the trigger is `w-full` by default, which stretched this
+        // control across the sign-in header. `!flex`: the trigger clamps its
+        // first span to one line with a vertical box, which stacked the icon
+        // above the label.
+        className={cn("w-auto shrink-0 border-border bg-surface-2", triggerClass)}
       >
-        <span className="flex items-center gap-2">
+        <span className="!flex items-center gap-2 whitespace-nowrap">
           {shown === "light" ? (
             <Sun aria-hidden className="h-[14px] w-[14px]" />
           ) : shown === "dark" ? (

@@ -26,7 +26,7 @@
 import * as Sentry from "@sentry/nextjs";
 import { useEffect } from "react";
 
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, BRAND } from "@/lib/brand";
 
 export default function GlobalError({
   error,
@@ -47,11 +47,11 @@ export default function GlobalError({
       </head>
       <body style={{ margin: 0 }}>
         <style>{`
-          :root { color-scheme: light dark; --ge-bg:#F3F0E7; --ge-fg:#1C1A17;
-                  --ge-soft:#5F594F; --ge-line:#D5D0C3; --ge-brand:#2C6349; }
+          :root { color-scheme: light dark; --ge-bg:#F8FAFC; --ge-fg:#1E293B;
+                  --ge-soft:#56657A; --ge-line:#E2E8F0; --ge-brand:#4F46E5; --ge-on-brand:#FFFFFF; }
           @media (prefers-color-scheme: dark) {
-            :root { --ge-bg:#171512; --ge-fg:#EDE9DE; --ge-soft:#B1ABA0;
-                    --ge-line:#38342E; --ge-brand:#65B38C; }
+            :root { --ge-bg:#0A0F1C; --ge-fg:#E2E8F0; --ge-soft:#94A3B8;
+                    --ge-line:#243044; --ge-brand:#818CF8; --ge-on-brand:#0A0F1C; }
           }
         `}</style>
         <main
@@ -67,14 +67,22 @@ export default function GlobalError({
           }}
         >
           <div style={{ maxWidth: "27rem", textAlign: "center" }}>
+            {/* The brand mark (lib/brand.ts): a plain image, which paints even when the stylesheet is what broke. */}
+            <img
+              src={BRAND.markSrc}
+              alt=""
+              width={56}
+              height={56}
+              style={{ display: "block", margin: "0 auto 1.1rem", borderRadius: "1rem" }}
+            />
             <p
               style={{
                 margin: 0,
                 fontSize: ".72rem",
                 letterSpacing: ".14em",
                 textTransform: "uppercase",
+                fontWeight: 700,
                 color: "var(--ge-brand)",
-                fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
               }}
             >
               {APP_NAME}
@@ -84,8 +92,8 @@ export default function GlobalError({
                 margin: ".6rem 0 0",
                 fontSize: "1.6rem",
                 lineHeight: 1.2,
-                fontWeight: 600,
-                fontFamily: 'ui-serif, Georgia, "Times New Roman", serif',
+                fontWeight: 800,
+                fontFamily: 'ui-serif, Georgia, Cambria, "Times New Roman", serif',
               }}
             >
               Something went wrong
@@ -111,12 +119,12 @@ export default function GlobalError({
                 style={{
                   cursor: "pointer",
                   border: 0,
-                  borderRadius: ".6rem",
+                  borderRadius: ".75rem",
                   padding: ".62rem 1.1rem",
                   fontSize: ".92rem",
                   fontWeight: 600,
                   background: "var(--ge-brand)",
-                  color: "var(--ge-bg)",
+                  color: "var(--ge-on-brand)",
                 }}
               >
                 Try again
@@ -124,7 +132,7 @@ export default function GlobalError({
               <a
                 href="/"
                 style={{
-                  borderRadius: ".6rem",
+                  borderRadius: ".75rem",
                   padding: ".62rem 1.1rem",
                   fontSize: ".92rem",
                   fontWeight: 600,

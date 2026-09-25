@@ -20,7 +20,7 @@ import { cn } from "../utils";
 const badgeVariants = cva(
   // `whitespace-nowrap` because these sit in table cells and flex rows where a
   // two-word status would otherwise wrap and change the row height.
-  "inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md border px-2 py-0.5 text-xs font-medium",
+  "inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-lg border px-2 py-0.5 text-xs font-semibold",
   {
     variants: {
       variant: {

@@ -28,7 +28,7 @@ function Skeleton({
   return (
     <div
       aria-hidden
-      className={cn("animate-soft-pulse rounded-md bg-surface-2", className)}
+      className={cn("animate-soft-pulse rounded-lg bg-surface-2", className)}
       {...props}
     />
   );

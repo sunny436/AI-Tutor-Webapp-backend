@@ -1,9 +1,11 @@
 "use client";
 
 import { Button } from "@v1/ui/button";
-import { Sparkles } from "lucide-react";
+import { cn } from "@v1/ui/utils";
 import { memo } from "react";
 
+import { BrandMark } from "@/components/brand/brand-mark";
+import { useUser } from "@/components/user-context";
 import { MessageContent } from "@/features/markdown/lazy-message-content";
 import type { ChatMessage } from "./chat-store";
 import { useChatEntry, useChatMessage, useStores } from "./chat-context";
@@ -34,16 +36,49 @@ export const MessageRow = memo(function MessageRow({
   );
 });
 
+const timeFormat = new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit" });
+
+/**
+ * When a message was written, as a clock time. Fixed once rendered — a label
+ * that ticks ("1 min ago") would re-render messages that are not streaming.
+ */
+function MessageTime({ value, className }: { value: string; className?: string }) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return (
+    <time dateTime={value} className={cn("mt-1.5 block text-right text-2xs", className)}>
+      {timeFormat.format(date)}
+    </time>
+  );
+}
+
+/** The student's initial, in the warm gradient. Their name is on screen elsewhere. */
+function UserAvatar() {
+  const { user } = useUser();
+  const name = user.displayName || user.email;
+  return (
+    <span
+      aria-hidden
+      className="mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gradient-to-tr from-streak to-accent-warm text-sm font-bold text-white shadow-sm"
+    >
+      {name.charAt(0).toUpperCase()}
+    </span>
+  );
+}
+
 export function UserMessage({ message }: { message: ChatMessage }) {
   return (
-    <article aria-label="You" className="flex justify-end">
+    <article aria-label="You" className="flex justify-end gap-3">
       <div
-        className={`max-w-[85%] whitespace-pre-wrap break-words rounded-2xl rounded-br-md bg-brand px-4 py-2.5 text-[0.9375rem] leading-relaxed text-brand-foreground sm:max-w-[78%] ${
-          message.pending ? "opacity-80" : ""
-        }`}
+        className={cn(
+          "min-w-0 max-w-[85%] whitespace-pre-wrap break-words rounded-2xl rounded-tr-none bg-brand px-4 py-3 text-[0.9375rem] font-medium leading-relaxed text-brand-foreground shadow-sm shadow-brand/20 sm:max-w-[75%]",
+          message.pending && "opacity-80",
+        )}
       >
         {message.content}
+        <MessageTime value={message.createdAt} className="text-brand-foreground/85" />
       </div>
+      <UserAvatar />
     </article>
   );
 }
@@ -85,36 +120,36 @@ function AssistantMessage({
 
   return (
     <article aria-label="Assistant" aria-busy={streaming} className="group flex gap-3">
-      <span
-        aria-hidden
-        className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-brand-soft text-brand"
-      >
-        <Sparkles className="h-4 w-4" />
-      </span>
-      <div className="min-w-0 flex-1 pt-0.5">
-        {message.content ? (
-          <>
-            <MessageContent content={message.content} />
-            {live && streaming && <StreamingCaret />}
-          </>
-        ) : live && streaming ? (
-          <StreamingIndicator />
-        ) : null}
+      <BrandMark size={36} className="mt-1 rounded-xl" />
+      <div className="min-w-0 flex-1">
+        {(message.content || (live && streaming) || phase === "stopping" || message.status === "cancelled" || elsewhere) && (
+          <div className="w-fit max-w-full rounded-2xl rounded-tl-none border border-border bg-card px-4 py-3 elev-1">
+            {message.content ? (
+              <>
+                <MessageContent content={message.content} />
+                {live && streaming && <StreamingCaret />}
+              </>
+            ) : live && streaming ? (
+              <StreamingIndicator />
+            ) : null}
 
-        {phase === "stopping" && <p className="mt-1 text-2xs text-text-secondary">Stopping…</p>}
-        {message.status === "cancelled" && <p className="mt-1 text-2xs text-text-secondary">Stopped</p>}
-        {elsewhere && (
-          <div className="mt-1 flex items-center gap-2 text-2xs text-text-secondary">
-            <span>Still being written in another tab.</span>
-            <Button
-              type="button"
-              size="sm"
-              variant="ghost"
-              className="h-7 px-2 text-2xs"
-              onClick={() => message.conversationId && void chat.reload(message.conversationId)}
-            >
-              Refresh
-            </Button>
+            {phase === "stopping" && <p className="mt-1 text-2xs text-text-secondary">Stopping…</p>}
+            {message.status === "cancelled" && <p className="mt-1 text-2xs font-medium text-text-secondary">Stopped</p>}
+            {elsewhere && (
+              <div className="mt-1 flex items-center gap-2 text-2xs text-text-secondary">
+                <span>Still being written in another tab.</span>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="ghost"
+                  className="h-7 px-2 text-2xs"
+                  onClick={() => message.conversationId && void chat.reload(message.conversationId)}
+                >
+                  Refresh
+                </Button>
+              </div>
+            )}
+            {!streaming && message.content && <MessageTime value={message.createdAt} className="text-text-secondary" />}
           </div>
         )}
         {message.status === "error" && (

@@ -6,9 +6,11 @@ import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 
 import { AppShell } from "@/components/app-shell";
+import { PreviewProvider } from "@/components/preview-context";
 import { ServiceUnavailable } from "@/components/service-unavailable";
 import { UserProvider } from "@/components/user-context";
 import { ChatProvider } from "@/features/chat/chat-context";
+import { previewEnabled } from "@/lib/preview";
 import { safeRedirect } from "@/lib/safe-redirect";
 import { getCurrentUser, getInitialConversations } from "@/lib/server/session";
 
@@ -20,6 +22,8 @@ import { getCurrentUser, getInitialConversations } from "@/lib/server/session";
  *   unreachable  → an outage screen, NOT a sign-out
  *   ok           → the app, with the user and the first page of chats already
  *                  loaded, so the sidebar is filled on first paint
+ *
+ * Also decides, per request, whether preview UI may render (lib/preview.ts).
  */
 export default async function AppLayout({ children }: { children: ReactNode }) {
   const [session, conversations] = await Promise.all([getCurrentUser(), getInitialConversations()]);
@@ -31,10 +35,12 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
   if (session.status !== "ok") return <ServiceUnavailable />;
 
   return (
-    <UserProvider user={session.data}>
-      <ChatProvider initialConversations={conversations.status === "ok" ? conversations.data : null}>
-        <AppShell>{children}</AppShell>
-      </ChatProvider>
-    </UserProvider>
+    <PreviewProvider enabled={previewEnabled()}>
+      <UserProvider user={session.data}>
+        <ChatProvider initialConversations={conversations.status === "ok" ? conversations.data : null}>
+          <AppShell>{children}</AppShell>
+        </ChatProvider>
+      </UserProvider>
+    </PreviewProvider>
   );
 }

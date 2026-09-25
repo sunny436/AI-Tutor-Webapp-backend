@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { defineConfig, devices } from "@playwright/test";
 
-import { API_URL, APP_PORT, APP_URL, assertLoopback } from "./e2e/env";
+import { API_URL, APP_PORT, APP_URL, PREVIEW_PORT, PREVIEW_URL, assertLoopback } from "./e2e/env";
 
 /**
  * End-to-end tests: a production build of this app against a LOCAL backend with
@@ -43,8 +43,10 @@ export default defineConfig({
     screenshot: "only-on-failure",
   },
   projects: [
-    { name: "desktop", use: { ...devices["Desktop Chrome"] }, testIgnore: /mobile\.e2e\.ts$/ },
+    { name: "desktop", use: { ...devices["Desktop Chrome"] }, testIgnore: /(mobile|preview)\.e2e\.ts$/ },
     { name: "mobile", use: { ...devices["Pixel 7"] }, testMatch: /mobile\.e2e\.ts$/ },
+    // The same build with PREVIEW_FEATURES=1 (e2e/serve.mjs).
+    { name: "preview", use: { ...devices["Desktop Chrome"], baseURL: PREVIEW_URL }, testMatch: /preview\.e2e\.ts$/ },
   ],
   webServer: [
     ...(backendDir
@@ -81,6 +83,7 @@ export default defineConfig({
       stdout: "pipe",
       env: {
         PORT: String(APP_PORT),
+        PREVIEW_PORT: String(PREVIEW_PORT),
         NEXT_DIST_DIR: ".next-e2e",
         API_BASE_URL: API_URL,
         NEXT_PUBLIC_SITE_URL: APP_URL,

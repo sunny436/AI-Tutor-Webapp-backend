@@ -19,39 +19,18 @@ const config = {
       },
     },
     extend: {
-      // THREE ROLES, AND WHY THE MAPPING HAS TO EXIST AT ALL
+      // TWO FACES, both the platform's own: nothing to download, and each
+      // device shows the face its reader is used to.
       //
-      // next/font's `.variable` only DEFINES a custom property — it does not set
-      // `font-family` on anything, and `globals.css` sets no font on `body`.
-      // Without this mapping every font file is downloaded and parsed and the
-      // app still renders in Tailwind's fallback stack (Segoe UI on Windows).
-      // The app's root layout defines the three variables.
-      //
-      // The roles are deliberate, not decorative:
-      //
-      //   display  ECZAR. Headings. Real stroke contrast and a slightly
-      //            calligraphic axis, so a page of answer reads as something
-      //            written rather than as a log.
-      //
-      //   sans     HANKEN GROTESK. Everything the interface says. A humanist
-      //            grotesque with open apertures and a warm, slightly
-      //            irregular rhythm — it sits on warm paper without the
-      //            clinical flatness of a neo-grotesque.
-      //
-      //   mono     The system monospace stack. Code is read at length in a
-      //            chat app, and the platform's own code face does that best,
-      //            with nothing to download.
-      //
-      // Explicitly NOT Inter, Roboto, or Space Grotesk. Those are where every
-      // generated interface lands, and landing there would undo the point of
-      // the direction before a single colour is applied.
-      //
-      // `departure` was here before and pointed at `--font-departure-mono`,
-      // which is defined nowhere and used by no class. Starter leftover, gone.
+      //   display  SERIF. Headings: a textbook's voice for the things a
+      //            student reads first.
+      //   sans     Everything the interface says.
+      //   mono     `--font-mono`, set by the app's root layout: the system code
+      //            face, because code is read at length in a tutor's answers.
       fontFamily: {
-        sans: ["var(--font-ui)", ...defaultTheme.fontFamily.sans],
+        sans: defaultTheme.fontFamily.sans,
         mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
-        display: ["var(--font-display)", ...defaultTheme.fontFamily.serif],
+        display: defaultTheme.fontFamily.serif,
       },
       colors: {
         border: "hsl(var(--border))",
@@ -87,14 +66,12 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // The green accent, as a token rather than a hard-coded emerald shade.
-        // The existing emerald utility classes are the same family and are left
-        // alone: rewriting 140 call sites would be churn with real regression
-        // risk and no visible gain.
+        // The acting colour (indigo). See globals.css.
         brand: {
           DEFAULT: "hsl(var(--brand))",
           foreground: "hsl(var(--brand-foreground))",
           soft: "hsl(var(--brand-soft))",
+          hover: "hsl(var(--brand-hover))",
         },
         // A raised pane when `card` is already the thing sitting on it.
         surface: {
@@ -105,12 +82,31 @@ const config = {
         // decision currently hidden inside an opacity, which is why it drifts
         // (/45, /50, /60, /70 and /75 all appear, meaning the same thing).
         "text-secondary": "hsl(var(--text-secondary))",
-        // The second accent. Green acts, ochre marks: this is for sources and
-        // highlights and never for a button, so the two never compete.
+        // Marks rather than acts (streaks, highlights, sources): never a button,
+        // so it never competes with the brand.
         "accent-warm": {
           DEFAULT: "hsl(var(--accent-warm))",
           soft: "hsl(var(--accent-warm-soft))",
         },
+        // The learning tools' own colours. Named for the colour, not the tool,
+        // so a renamed tool does not rename a token.
+        "accent-purple": {
+          DEFAULT: "hsl(var(--accent-purple))",
+          foreground: "hsl(var(--accent-purple-foreground))",
+          soft: "hsl(var(--accent-purple-soft))",
+        },
+        "accent-pink": {
+          DEFAULT: "hsl(var(--accent-pink))",
+          soft: "hsl(var(--accent-pink-soft))",
+        },
+        // Text on the brand gradient (`.bg-hero`, `.bg-hero-deep`).
+        hero: {
+          foreground: "hsl(var(--hero-foreground))",
+          muted: "hsl(var(--hero-muted))",
+          deep: "hsl(var(--hero-deep-from))",
+        },
+        // Decorative fill behind the streak's flame; never text.
+        streak: "hsl(var(--streak))",
         success: {
           DEFAULT: "hsl(var(--success))",
           soft: "hsl(var(--success-soft))",
@@ -138,43 +134,20 @@ const config = {
         },
       },
       borderRadius: {
-        // xl and 2xl added so surfaces can differ in softness by role — a page
-        // panel should not have the same corner as a chip inside it.
+        // With --radius at 0.5rem these equal Tailwind's own steps (md 6, lg 8,
+        // xl 12, 2xl 16). By role: controls are `xl`, cards and bubbles `2xl`,
+        // banners `3xl`, pills and avatars-that-are-dots `full`.
         "2xl": "calc(var(--radius) + 8px)",
         xl: "calc(var(--radius) + 4px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      // Tailwind's own type scale, plus one step below `xs` for the smallest
+      // labels (badges, timestamps). Small sizes get a little positive tracking
+      // so they stay legible.
       fontSize: {
-        // A tighter scale than Tailwind's default, with line heights and tracking
-        // set per size. Headings get negative tracking (large type looks loose
-        // without it); body keeps generous leading because this app is read, not
-        // scanned.
-        // Small sizes get POSITIVE tracking: at 11-12px on a textured warm
-        // ground, letters set tight fill in and stop resolving.
         "2xs": ["0.6875rem", { lineHeight: "1rem", letterSpacing: "0.02em" }],
-        xs: ["0.75rem", { lineHeight: "1.15rem", letterSpacing: "0.01em" }],
-        sm: ["0.8125rem", { lineHeight: "1.4rem" }],
-        // Generous leading: this product is READ, not scanned, and a plan runs
-        // to six sections.
-        base: ["0.9375rem", { lineHeight: "1.7rem" }],
-        // The display sizes step harder than the stock scale. Eczar has real
-        // stroke contrast, and contrast needs size to show — a timid jump
-        // wastes the face and leaves headings looking like bold body text.
-        lg: ["1.125rem", { lineHeight: "1.75rem", letterSpacing: "-0.005em" }],
-        xl: ["1.375rem", { lineHeight: "1.85rem", letterSpacing: "-0.01em" }],
-        "2xl": ["1.75rem", { lineHeight: "2.1rem", letterSpacing: "-0.015em" }],
-        "3xl": ["2.125rem", { lineHeight: "2.4rem", letterSpacing: "-0.02em" }],
-        "4xl": [
-          "2.625rem",
-          { lineHeight: "2.85rem", letterSpacing: "-0.022em" },
-        ],
-        // The landing hero is the one heading in the product that fell through
-        // to Tailwind's stock 3rem/1 with NO tracking, while every h2 below it
-        // gets -0.02em — which is why the hero read looser than the sections
-        // under it. Tracking continues the scale's progression (-.025 -> -.03).
-        "5xl": ["3.25rem", { lineHeight: "1.05", letterSpacing: "-0.025em" }],
       },
       maxWidth: {
         // One comfortable measure for conversation, used by the chat column so

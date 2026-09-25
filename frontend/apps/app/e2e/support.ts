@@ -48,15 +48,18 @@ export const SAME_ORIGIN = { Origin: APP_URL };
 /**
  * A fresh, verified account, signed in within `page`'s browser context: the
  * session cookie lands in the context's jar exactly as it does for a browser.
+ *
+ * Always through the main server (APP_URL), whose Origin these requests carry.
+ * The cookie is per host, not per port, so it signs in the preview server too.
  */
 export async function createAccount(page: Page, tag = "user"): Promise<{ email: string; password: string }> {
   const email = uniqueEmail(tag);
-  const signup = await page.request.post("/api/v1/auth/signup", {
+  const signup = await page.request.post(`${APP_URL}/api/v1/auth/signup`, {
     data: { email, password: PASSWORD, displayName: "E2E" },
     headers: SAME_ORIGIN,
   });
   expect(signup.status(), "signup").toBe(202);
-  const verify = await page.request.post("/api/v1/auth/verify-email", {
+  const verify = await page.request.post(`${APP_URL}/api/v1/auth/verify-email`, {
     data: { email, code: await mailCode(email, "verify") },
     headers: SAME_ORIGIN,
   });
@@ -66,7 +69,7 @@ export async function createAccount(page: Page, tag = "user"): Promise<{ email: 
 
 /** Delete the account signed in within `page`'s context, if it still exists. */
 export async function deleteAccount(page: Page, password = PASSWORD): Promise<void> {
-  await page.request.delete("/api/v1/me", { data: { password }, headers: SAME_ORIGIN }).catch(() => undefined);
+  await page.request.delete(`${APP_URL}/api/v1/me`, { data: { password }, headers: SAME_ORIGIN }).catch(() => undefined);
 }
 
 type Fixtures = {
@@ -130,6 +133,34 @@ export function conversationIdOf(page: Page): string {
   const id = /\/c\/([0-9a-f-]{36})$/.exec(new URL(page.url()).pathname)?.[1];
   if (!id) throw new Error(`not on a conversation: ${page.url()}`);
   return id;
+}
+
+/**
+ * One turn through the real API, exactly as the chat sends it (`{conversationId?,
+ * message}`), read to the end of its stream. Returns the conversation's id. For
+ * setting up state quickly — a test of the chat itself sends through the page.
+ */
+export async function seedTurn(page: Page, message: string, conversationId?: string): Promise<string> {
+  const response = await page.request.post(`${APP_URL}/api/v1/chat/stream`, {
+    data: conversationId ? { conversationId, message } : { message },
+    headers: SAME_ORIGIN,
+  });
+  expect(response.status(), "chat/stream").toBe(200);
+  const body = await response.text();
+  expect(body, "the turn finished").toContain("event: done");
+  const meta = body.split("\n\n").find((frame) => frame.startsWith("event: meta"));
+  const id = JSON.parse(meta?.split("\ndata: ")[1] ?? "{}").conversationId as string | undefined;
+  if (!id) throw new Error("no meta event in the stream");
+  return id;
+}
+
+/** The chat links in the sidebar's list. */
+export const chatLinks = (page: Page) => page.locator("nav[aria-labelledby='chats-heading'] a[href^='/c/']");
+
+/** No sideways scrolling of the page itself (wide content must scroll inside its own box). */
+export async function expectNoHorizontalOverflow(page: Page): Promise<void> {
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(overflow, `horizontal overflow on ${page.url()}`).toBeLessThanOrEqual(0);
 }
 
 /** A message the fake LLM takes ~4 s to echo: long enough to stop, switch or reload mid-reply. */

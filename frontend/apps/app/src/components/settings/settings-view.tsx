@@ -23,7 +23,7 @@ function LabeledInput({
   const id = useId();
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-medium text-foreground">
+      <label htmlFor={id} className="text-sm font-bold text-foreground">
         {label}
       </label>
       <Input id={id} className="w-full sm:w-80" {...props} />
@@ -70,7 +70,7 @@ function Profile() {
           onChange={(event) => setName(event.target.value)}
         />
       </CardContent>
-      <CardFooter className="justify-end rounded-b-xl bg-surface">
+      <CardFooter className="justify-end rounded-b-2xl bg-surface">
         <Button type="submit" size="sm" disabled={pending || name.trim() === (user.displayName ?? "")}>
           {pending ? "Saving…" : "Save"}
         </Button>
@@ -154,7 +154,7 @@ function Password() {
           </p>
         )}
       </CardContent>
-      <CardFooter className="justify-end rounded-b-xl bg-surface">
+      <CardFooter className="justify-end rounded-b-2xl bg-surface">
         <Button type="submit" size="sm" disabled={pending}>
           {pending ? "Saving…" : "Change password"}
         </Button>
@@ -183,7 +183,7 @@ function Sessions() {
         <CardTitle as="h3">Other devices</CardTitle>
         <CardDescription>Sign out everywhere except this browser.</CardDescription>
       </CardHeader>
-      <CardFooter className="justify-end rounded-b-xl bg-surface">
+      <CardFooter className="justify-end rounded-b-2xl bg-surface">
         <Button type="button" size="sm" variant="outline" onClick={signOutOthers} disabled={pending}>
           {pending ? "Signing out…" : "Sign out other devices"}
         </Button>
@@ -220,7 +220,7 @@ function DeleteAccount() {
         <CardTitle as="h3">Delete account</CardTitle>
         <CardDescription>Permanently deletes your account and every chat in it. This cannot be undone.</CardDescription>
       </CardHeader>
-      <CardFooter className="justify-end rounded-b-xl border-destructive/20 bg-destructive/10">
+      <CardFooter className="justify-end rounded-b-2xl border-destructive/20 bg-destructive/5">
         <Button type="button" size="sm" variant="destructive" onClick={() => setOpen(true)}>
           Delete account
         </Button>
@@ -243,7 +243,7 @@ function DeleteAccount() {
               <DialogDescription>Enter your password to confirm. All of your chats will be deleted.</DialogDescription>
             </DialogHeader>
             <div className="py-4">
-              <label htmlFor={fieldId} className="mb-1.5 block text-sm font-medium">
+              <label htmlFor={fieldId} className="mb-1.5 block text-sm font-bold">
                 Password
               </label>
               <Input
@@ -287,7 +287,7 @@ export function SettingsView() {
         <SettingsSection title="Appearance" description="Light, dark, or follow your system.">
           <Card>
             <CardContent className="flex items-center justify-between gap-4 pt-6">
-              <span className="text-sm text-foreground">Theme</span>
+              <span className="text-sm font-bold text-foreground">Theme</span>
               <ThemeSwitcher />
             </CardContent>
           </Card>

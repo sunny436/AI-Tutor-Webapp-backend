@@ -3,191 +3,207 @@
 @tailwind utilities;
 
 /**
- * Design tokens.
+ * Design tokens: PadhAI.
  *
  * THE DIRECTION
  *
- * Most of what people do here is read long answers, so the interface is set
- * like a well-made printed page rather than a dashboard: warm paper, ink,
- * hairline rules, one green accent. Nothing is skeuomorphic; the borrowed thing
- * is typographic discipline, not texture.
+ * A study companion for school students: clear, friendly and bright, never
+ * childish. Cool slate neutrals, white cards on a near-white page, and ONE
+ * acting colour, indigo, with violet only as the second stop of a gradient.
+ * Headings are set in a serif, which gives a textbook's authority; everything
+ * the interface itself says is in the platform's own sans. Corners are soft
+ * (8-16px) and shadows are short and cool.
  *
  * WHAT DID NOT CHANGE
  *
- * `--primary` is still this codebase's main TEXT colour, used ~160 times as
- * `text-primary/80` and friends. It is a near-black in light and a near-white
- * in dark, and it is NOT the brand. Turning it into the accent — the obvious
- * move when re-skinning — would turn every paragraph green.
+ * The NAMES. Every token and utility below existed before this palette and is
+ * referenced across the app; only the values moved, so no call site had to.
+ * `--primary` is still the main TEXT colour (near-black in light, near-white in
+ * dark) and NOT the brand. Turning it into the accent would turn every
+ * paragraph indigo.
  *
  * CONTRAST
  *
- * Every foreground/background pair below was measured, not estimated: 46 pairs
- * across both themes, all clearing 4.5:1 for text and 3:1 for focus rings
- * (WCAG 1.4.11). The ratio is recorded beside each colour that carries text.
- * The destructive token carries error messages and "delete" confirmations —
- * an unreadable value there is the worst kind to get wrong.
+ * Every foreground/background pair below was measured, not estimated, in both
+ * themes, and each clears 4.5:1 for text and 3:1 for focus rings (WCAG 1.4.11).
+ * The ratio is recorded beside each colour that carries text. Two rules follow
+ * from the measurements:
+ *   - Text on a brand fill may be translucent down to /80 and no further (/75
+ *     measures 4.24:1 in light and 4.25:1 in dark).
+ *   - Slate-400 and slate-500, the usual "secondary grey", fail on slate-50/100.
+ *     `--text-secondary` sits between slate-500 and slate-600 for that reason.
  */
 @layer base {
   :root {
-    /* Warm paper, not white: easier on the eyes over a long reply, and it
-       lets the green read as ink rather than as a UI accent on a screen. */
-    --background: 45 35% 93%;
-    --foreground: 36 10% 10%; /* 15.27:1 on background */
+    /* Slate-50 page, white cards on it. */
+    --background: 210 40% 98%;
+    --foreground: 217 32.6% 17.5%; /* 13.98:1 on background, 14.63:1 on card */
 
-    /* A card is a fresher sheet laid ON the page, so it is LIGHTER than the
-       ground it sits on — the opposite of the usual dark-card convention. */
-    --card: 44 40% 96.5%;
-    --card-foreground: 36 10% 10%; /* 16.31:1 */
-    --popover: 44 40% 96.5%;
-    --popover-foreground: 36 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 217 32.6% 17.5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 32.6% 17.5%;
 
-    /* TEXT, not brand. See the note above. 14.85:1 */
-    --primary: 36 10% 11%;
-    --primary-foreground: 45 35% 95%;
+    /* TEXT, not brand. See the note above. 17.06:1 */
+    --primary: 222 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 44 24% 88%;
-    --secondary-foreground: 36 12% 16%; /* 11.24:1 */
-    --muted: 44 20% 89%;
-    --muted-foreground: 38 9% 38%; /* 5.21:1 */
-    --accent: 44 26% 87%;
-    --accent-foreground: 36 12% 16%; /* 11.04:1 */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 215 25% 26.7%; /* 9.45:1 */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 19.3% 34.5%; /* 6.92:1 on muted, 7.58:1 on card */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47.4% 11.2%; /* 16.30:1 */
 
-    /* Madder red — the pigment, not a stock UI alert. 6.27:1 as text on the
-       page, 6.70:1 on a card, and 6.63:1 carrying its own foreground as a
-       filled button. */
-    --destructive: 8 58% 38%;
-    --destructive-foreground: 45 35% 96%;
+    /* Rose, a shade deeper than rose-600, which measures 4.49:1 on the page.
+       5.02:1 on the page, 5.25:1 on a card and as a filled button. */
+    --destructive: 348 79.7% 46.3%;
+    --destructive-foreground: 0 0% 100%;
 
-    /* Rules and edges are printed hairlines: visible, never heavy. 1.36:1 is
-       deliberate — a border that reaches text contrast reads as a box. */
-    --border: 42 18% 80%;
-    --input: 42 18% 80%;
-    --ring: 152 39% 30%; /* 5.59:1 on page, 5.97:1 on card */
+    /* Slate-200 hairlines. */
+    --border: 214 31.8% 91.4%;
+    --input: 214 31.8% 91.4%;
+    --ring: 239 83.5% 66.7%; /* 4.27:1 on page, 4.47:1 on card */
 
-    /* Oxidised copper green — the colour this product ACTS with. 6.17:1 as
-       text on the page, 5.43:1 on its own soft tint, 6.53:1 as a button. */
-    --brand: 152 39% 28%;
-    --brand-foreground: 45 40% 96%;
-    --brand-soft: 150 26% 87%;
+    /* Indigo-600: the colour this product ACTS with. 6.01:1 as text on the
+       page, 5.62:1 on its soft tint, 6.29:1 carrying white as a button. */
+    --brand: 243 75.4% 58.6%;
+    --brand-foreground: 0 0% 100%;
+    --brand-soft: 226 100% 96.7%;
+    --brand-hover: 245 57.9% 50.6%; /* 7.90:1 with white */
 
-    /* 6px. A printed page has crisp corners; 12px everywhere reads as a phone
-       app and undoes the printed-page reading before any type is set.
-
-       THE SCALE, because the app currently spreads across five radii with no
-       rule — rounded-lg 56 times, xl 53, md 24, 2xl 21, full 20 — and a radius
-       chosen per component is how a set of screens stops looking like one
-       product. Each step means something:
-
-         rounded-md   controls: buttons, inputs, selects, small icon buttons
-         rounded-lg   cards, list rows, panels sitting flat on the page
-         rounded-xl   raised or floating surfaces: popovers, sheets, dialogs
-         rounded-2xl  chat bubbles ONLY - the one place a soft, spoken shape is
-                      wanted, which is why it must not leak onto cards
-         rounded-full pills, badges, avatars, dots
-
-       Applied screen by screen as each is reworked rather than in one sweep,
-       so a radius change never lands in the same commit as a layout change. */
-    --radius: 0.375rem;
+    --radius: 0.5rem;
 
     /* ---- semantic layer ----
-       `surface` is a slightly deeper sheet — where a raised pane goes when
-       `card` is already taken by the thing sitting on it. `text-secondary`
-       names what the codebase otherwise spells as an opacity on `--primary`,
-       which is a colour decision hidden inside a number. */
-    --surface: 44 30% 91%;
-    --surface-2: 43 24% 86%;
-    --text-secondary: 38 9% 34%; /* 6.13:1 page, 6.54:1 card, 5.86:1 surface */
+       `surface` is a well inside a card (inputs, list rows); `surface-2` is
+       one step deeper, for hover and skeletons. `text-secondary` names what
+       would otherwise be spelt as an opacity on `--primary`. */
+    --surface: 210 40% 98%;
+    --surface-2: 210 40% 96.1%;
+    --text-secondary: 215 17.3% 40.8%; /* 5.67:1 page, 5.94:1 card, 5.42:1 surface-2, 5.31:1 brand-soft */
 
-    /* Ochre. The SECOND accent, with exactly one job: marking where something
-       came from (a source, a reference). Green acts, ochre marks; it never
-       appears on a button, so the two never compete. 5.70:1 — such lines are
-       small, so it is held to the small-text bar, not the large one. */
-    --accent-warm: 28 62% 33%;
-    --accent-warm-soft: 38 45% 88%;
+    /* Orange. Marks rather than acts: streaks and highlights, never a button. */
+    --accent-warm: 17 88.3% 40.4%; /* 4.88:1 on its soft, 5.18:1 on card */
+    --accent-warm-soft: 33 100% 96.5%;
 
     /* Status, kept distinct from the brand on purpose: "this worked" and "this
-       is our colour" are different statements, and using one colour for both
-       leaves no way to say the first. */
-    --success: 152 40% 27%; /* 5.68:1 on its soft */
-    --success-soft: 150 28% 87%;
-    --warning: 32 68% 30%; /* 5.50:1 */
-    --warning-soft: 40 55% 88%;
-    --info: 205 42% 31%; /* 6.20:1 */
-    --info-soft: 205 35% 89%;
+       is our colour" are different statements. */
+    --success: 163 93.5% 24.3%; /* 5.21:1 on its soft */
+    --success-soft: 152 81% 95.9%;
+    --warning: 26 90.5% 37.1%; /* 4.84:1 */
+    --warning-soft: 48 100% 96.1%;
+    --info: 224 76.3% 48%; /* 6.16:1 */
+    --info-soft: 214 100% 96.9%;
 
-    /* Chart series, in order: the brand green, then colours that hold their
-       contrast on the paper background. */
-    --chart-1: 152 39% 30%;
-    --chart-2: 28 62% 38%;
-    --chart-3: 205 42% 34%;
-    --chart-4: 68 34% 32%;
-    --chart-5: 8 48% 42%;
+    /* The learning tools' own colours, one per tool, as in the product's
+       navigation. Purple also fills the study-plan button. */
+    --accent-purple: 271 81.3% 55.9%; /* 5.02:1 on its soft, 5.38:1 carrying white */
+    --accent-purple-foreground: 0 0% 100%;
+    --accent-purple-soft: 270 100% 98%;
+    --accent-pink: 335 77.6% 42%; /* 5.53:1 on its soft */
+    --accent-pink-soft: 327 73.3% 97.1%;
 
-    /* The scrim behind a modal. Not `bg-foreground/x` — that token inverts, so
-       dark mode would get a WHITE veil — and not black, which reads as soot
-       over warm paper. */
-    --overlay: 36 24% 8%;
+    /* The brand gradient (logo tile, hero banners, flashcards), and a deeper
+       one for large banners. Deep in BOTH themes, so white text on it holds
+       its contrast whatever the page does: 5.70:1 at its lightest stop;
+       `hero-muted` 4.63:1. */
+    --hero-from: 243 75.4% 58.6%;
+    --hero-to: 262 83.3% 57.8%;
+    --hero-deep-from: 242 47.4% 34.3%;
+    --hero-deep-to: 274 65.6% 32%;
+    --hero-foreground: 0 0% 100%;
+    --hero-muted: 226 100% 93.9%;
+
+    /* Amber fill behind the streak's flame. Decorative only, never text. */
+    --streak: 38 92.1% 50.2%;
+
+    /* Chart series, in order: the brand, then colours that hold their
+       contrast on the page. */
+    --chart-1: 243 75.4% 58.6%;
+    --chart-2: 262 83.3% 57.8%;
+    --chart-3: 161 93.5% 30.4%;
+    --chart-4: 32 94.6% 43.7%;
+    --chart-5: 333 71.4% 50.6%;
+
+    /* The scrim behind a modal. Not `bg-foreground/x`, which inverts, so dark
+       mode would get a WHITE veil. */
+    --overlay: 222 47.4% 11.2%;
   }
 
   .dark {
-    /* The same reference work read by lamplight. Deep ink-brown rather than
-       neutral charcoal, so the paper warmth survives the inversion. */
-    --background: 36 12% 8%;
-    --foreground: 44 28% 90%; /* 15.01:1 */
+    /* Deep blue-slate, not black: black crushes every shadow, so elevation
+       could no longer be expressed. */
+    --background: 223 47.4% 7.5%;
+    --foreground: 214 31.8% 91.4%; /* 15.51:1 */
 
-    --card: 36 11% 11%;
-    --card-foreground: 44 28% 90%; /* 13.88:1 */
-    --popover: 36 11% 11%;
-    --popover-foreground: 44 28% 90%;
+    --card: 222 47.4% 11.2%;
+    --card-foreground: 214 31.8% 91.4%; /* 14.48:1 */
+    --popover: 222 47.4% 11.2%;
+    --popover-foreground: 214 31.8% 91.4%;
 
-    --primary: 44 28% 92%; /* 15.63:1 */
-    --primary-foreground: 36 12% 9%;
+    --primary: 210 40% 96.1%; /* 17.46:1 */
+    --primary-foreground: 222 47.4% 11.2%;
 
-    --secondary: 36 10% 16%;
-    --secondary-foreground: 44 26% 90%; /* 11.79:1 */
-    --muted: 36 10% 16%;
-    --muted-foreground: 40 10% 64%; /* 7.56:1 */
-    --accent: 36 10% 19%;
-    --accent-foreground: 44 26% 90%; /* 10.55:1 */
+    --secondary: 217 32.6% 17.5%;
+    --secondary-foreground: 214 31.8% 91.4%; /* 11.87:1 */
+    --muted: 217 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%; /* 5.71:1 */
+    --accent: 217 32.6% 17.5%;
+    --accent-foreground: 210 40% 96.1%; /* 13.35:1 */
 
-    /* Lightened well past the light-mode value: madder at 38% lightness on an
-       8% ground is unreadable. 5.71:1 as text, 5.28:1 on a card. */
-    --destructive: 8 62% 62%;
-    --destructive-foreground: 36 14% 9%;
+    --destructive: 351 94.5% 71.4%; /* 7.11:1 text, 6.63:1 on a card */
+    --destructive-foreground: 223 47.4% 7.5%;
 
-    --border: 36 9% 20%;
-    --input: 36 9% 20%;
-    --ring: 150 34% 52%; /* 6.82:1 page, 6.31:1 card */
+    --border: 218 30.8% 20.4%;
+    --input: 218 30.8% 20.4%;
+    --ring: 234 89.5% 73.9%; /* 6.41:1 page, 5.98:1 card */
 
-    --brand: 150 34% 55%; /* 7.30:1 text, 5.26:1 on soft, 7.11:1 as button */
-    --brand-foreground: 36 14% 9%;
-    --brand-soft: 150 20% 17%;
+    /* Indigo-400 with DARK text on it. One indigo cannot do both jobs here:
+       any shade dark enough to carry white fails as text on this ground.
+       6.41:1 as text, 5.15:1 on its soft, 6.41:1 as a button. */
+    --brand: 234 89.5% 73.9%;
+    --brand-foreground: 223 47.4% 7.5%;
+    --brand-soft: 236 41.2% 20%;
+    --brand-hover: 230 93.5% 81.8%;
 
-    /* Not inverted mechanically. On a dark ground the SOFT variants have to be
-       dim tints rather than pale washes, and the foregrounds have to lose
-       saturation or they vibrate against the surface — which is exactly what a
-       naive inversion produces. */
-    --surface: 36 11% 13%;
-    --surface-2: 36 10% 17%;
-    --text-secondary: 40 10% 66%; /* 8.00:1 page, 7.40:1 card */
+    --surface: 222 41.5% 12.7%;
+    --surface-2: 217 32.6% 17.5%;
+    --text-secondary: 215 20.2% 65.1%; /* 7.46:1 page, 6.96:1 card, 5.71:1 surface-2 */
 
-    --accent-warm: 34 62% 60%; /* 7.99:1 */
-    --accent-warm-soft: 30 26% 16%;
+    --accent-warm: 27 96% 61%; /* 7.40:1 */
+    --accent-warm-soft: 23 44.8% 11.4%;
 
-    --success: 150 36% 56%; /* 5.90:1 */
-    --success-soft: 150 22% 15%;
-    --warning: 38 66% 58%; /* 6.63:1 */
-    --warning-soft: 36 26% 15%;
-    --info: 203 46% 62%; /* 5.64:1 */
-    --info-soft: 203 26% 16%;
+    /* Soft variants are dim tints, not pale washes, and foregrounds lighten:
+       a naive inversion vibrates against the surface. */
+    --success: 158 64.4% 51.6%; /* 7.97:1 */
+    --success-soft: 163 52.7% 10.8%;
+    --warning: 43 96.4% 56.3%; /* 9.52:1 */
+    --warning-soft: 43 58.5% 10.4%;
+    --info: 213 93.9% 67.8%; /* 6.43:1 */
+    --info-soft: 219 60.5% 14.9%;
 
-    --chart-1: 150 34% 55%;
-    --chart-2: 34 62% 58%;
-    --chart-3: 203 46% 60%;
-    --chart-4: 68 34% 56%;
-    --chart-5: 8 56% 62%;
+    --accent-purple: 270 95.2% 75.3%; /* 6.37:1 on its soft, 7.24:1 with dark text */
+    --accent-purple-foreground: 223 47.4% 7.5%;
+    --accent-purple-soft: 265 43.6% 15.3%;
+    --accent-pink: 329 85.5% 70.2%; /* 6.50:1 */
+    --accent-pink-soft: 316 41.9% 12.2%;
 
-    --overlay: 36 30% 3%;
+    --hero-from: 245 57.9% 50.6%; /* white 7.90:1 */
+    --hero-to: 263 70% 50.4%; /* white 7.10:1 */
+    --hero-deep-from: 244 47.1% 20%;
+    --hero-deep-to: 274 86.9% 21%;
+    --hero-foreground: 0 0% 100%;
+    --hero-muted: 226 100% 93.9%; /* 5.77:1 at the lightest stop */
+
+    --streak: 38 92.1% 50.2%;
+
+    --chart-1: 234 89.5% 73.9%;
+    --chart-2: 255 91.7% 76.3%;
+    --chart-3: 158 64.4% 51.6%;
+    --chart-4: 43 96.4% 56.3%;
+    --chart-5: 329 85.5% 70.2%;
+
+    --overlay: 229 84% 4.9%;
   }
 }
 
@@ -197,14 +213,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Kerning and ligatures on, plus old-style figures: a reference work sets
-       numerals that sit ON the baseline rather than standing above it like a
-       spreadsheet. */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    font-variant-numeric: oldstyle-nums;
   }
-  /* Tabular contexts want the opposite — counts are read down a column. */
+  /* Tabular contexts read counts down a column. */
   table {
     font-variant-numeric: tabular-nums;
   }
@@ -212,119 +224,91 @@
 
 @layer utilities {
   /**
-   * Elevation.
-   *
-   * A sheet of paper on a stack casts a short, hard-edged shadow, not the wide
-   * soft bloom of a floating card. These are tight and ink-tinted, and each
-   * carries a 1px contact line, so a raised surface reads as lying ON the page
-   * rather than hovering over it.
+   * Elevation. Short, cool shadows tinted with the slate of the text, so a
+   * raised card reads as lifted off the page rather than smudged onto it.
    */
   .elev-1 {
-    box-shadow:
-      0 1px 0 0 hsl(42 18% 74% / 0.55),
-      0 1px 2px -1px hsl(36 24% 12% / 0.1);
+    box-shadow: 0 1px 2px 0 hsl(222 47% 11% / 0.06);
   }
   .elev-2 {
     box-shadow:
-      0 1px 0 0 hsl(42 18% 72% / 0.6),
-      0 2px 6px -2px hsl(36 24% 12% / 0.14);
+      0 4px 6px -1px hsl(222 47% 11% / 0.07),
+      0 2px 4px -2px hsl(222 47% 11% / 0.06);
   }
   .elev-3 {
     box-shadow:
-      0 1px 0 0 hsl(42 18% 70% / 0.6),
-      0 8px 22px -8px hsl(36 24% 12% / 0.22);
+      0 20px 25px -5px hsl(222 47% 11% / 0.12),
+      0 8px 10px -6px hsl(222 47% 11% / 0.08);
   }
   .dark .elev-1 {
-    box-shadow:
-      0 1px 0 0 hsl(36 10% 24% / 0.7),
-      0 1px 2px -1px hsl(0 0% 0% / 0.5);
+    box-shadow: 0 1px 2px 0 hsl(0 0% 0% / 0.4);
   }
   .dark .elev-2 {
     box-shadow:
-      0 1px 0 0 hsl(36 10% 26% / 0.7),
-      0 2px 6px -2px hsl(0 0% 0% / 0.55);
+      0 4px 6px -1px hsl(0 0% 0% / 0.45),
+      0 2px 4px -2px hsl(0 0% 0% / 0.35);
   }
   .dark .elev-3 {
     box-shadow:
-      0 1px 0 0 hsl(36 10% 28% / 0.7),
-      0 8px 22px -8px hsl(0 0% 0% / 0.6);
+      0 20px 25px -5px hsl(0 0% 0% / 0.55),
+      0 8px 10px -6px hsl(0 0% 0% / 0.45);
   }
 
   /**
-   * The page ground: laid paper.
-   *
-   * Two very faint repeating gradients at an angle to each other give the
-   * irregular grain of a laid sheet, plus one wide warm pool so the surface is
-   * not evenly lit. No image and no data URI — three gradients, nothing to
-   * decode, nothing to download.
+   * The page ground behind sign-in and the error screens: two faint pools of
+   * the brand's own colours, indigo from the top left and violet from the top
+   * right. No image, nothing to download.
    *
    * Fixed and pointer-events-none at the call site, so it never participates
    * in layout or interaction.
    */
   .backdrop-wash {
     background-image:
-      repeating-linear-gradient(
-        94deg,
-        hsl(36 24% 30% / 0.022) 0px,
-        hsl(36 24% 30% / 0.022) 1px,
-        transparent 1px,
-        transparent 4px
-      ),
-      repeating-linear-gradient(
-        4deg,
-        hsl(36 24% 30% / 0.016) 0px,
-        hsl(36 24% 30% / 0.016) 1px,
-        transparent 1px,
-        transparent 6px
+      radial-gradient(
+        60rem 40rem at 12% -10%,
+        hsl(var(--hero-from) / 0.1),
+        transparent 60%
       ),
       radial-gradient(
-        70rem 46rem at 18% -8%,
-        hsl(40 50% 60% / 0.1),
-        transparent 62%
+        50rem 34rem at 92% -6%,
+        hsl(var(--hero-to) / 0.08),
+        transparent 60%
       );
   }
   .dark .backdrop-wash {
     background-image:
-      repeating-linear-gradient(
-        94deg,
-        hsl(44 30% 70% / 0.016) 0px,
-        hsl(44 30% 70% / 0.016) 1px,
-        transparent 1px,
-        transparent 4px
-      ),
-      repeating-linear-gradient(
-        4deg,
-        hsl(44 30% 70% / 0.012) 0px,
-        hsl(44 30% 70% / 0.012) 1px,
-        transparent 1px,
-        transparent 6px
+      radial-gradient(
+        60rem 40rem at 12% -10%,
+        hsl(var(--hero-from) / 0.16),
+        transparent 60%
       ),
       radial-gradient(
-        70rem 46rem at 18% -8%,
-        hsl(40 40% 50% / 0.07),
-        transparent 62%
+        50rem 34rem at 92% -6%,
+        hsl(var(--hero-to) / 0.12),
+        transparent 60%
       );
   }
 
-  /**
-   * A printed rule — the line that separates sections in a reference work.
-   * Denser at the ends than in the middle, which is what makes it read as set
-   * type rather than as a div edge.
-   */
-  .rule-printed {
+  /** The brand gradient as a fill, and its deeper banner version. */
+  .bg-hero {
     background-image: linear-gradient(
-      90deg,
-      hsl(var(--border)) 0%,
-      hsl(var(--border) / 0.35) 22%,
-      hsl(var(--border) / 0.35) 78%,
-      hsl(var(--border)) 100%
+      to top right,
+      hsl(var(--hero-from)),
+      hsl(var(--hero-to))
+    );
+  }
+  .bg-hero-deep {
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--hero-deep-from)),
+      hsl(var(--hero-deep-to))
     );
   }
 
   /**
    * FOCUS. One intent, three geometries.
    *
-   * `--ring` is the acting green, and it clears 3:1 against both the page and
+   * `--ring` is the acting indigo, and it clears 3:1 against both the page and
    * a card — the WCAG 1.4.11 bar for a non-text indicator.
    */
   .focus-ring {
@@ -339,7 +323,7 @@
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset focus-visible:ring-offset-0;
   }
 
-  /* Windows otherwise renders a 17px grey slab against warm paper. */
+  /* Windows otherwise renders a 17px grey slab beside the transcript. */
   .scrollbar-subtle {
     scrollbar-width: thin;
     scrollbar-color: hsl(var(--border)) transparent;
@@ -362,8 +346,7 @@
     background-clip: content-box;
   }
 
-  /* One assistant message settling into place, like ink taking to paper.
-     Short and small on purpose — longer reads as a transition rather than an
+  /* One assistant message settling into place. Short and small on purpose — longer reads as a transition rather than an
      arrival. */
   @keyframes rise-in {
     from {

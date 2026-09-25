@@ -22,10 +22,8 @@ import type { ReactNode } from "react";
  * cards inside step down to `h3`, so the document outline finally matches what
  * the page looks like. That is why `Card`'s `CardTitle` takes an `as` prop.
  *
- * `.rule-printed` for the divider rather than a plain border: it is the rule
- * this design system already draws for separating parts of a reference work —
- * denser at the ends than the middle, so it reads as set type rather than a div
- * edge. It had zero call sites before this.
+ * The divider is a hairline in the border colour, the same weight as a card's
+ * edge, so the section reads as one group rather than as another box.
  */
 export function SettingsSection({
   title,
@@ -47,7 +45,7 @@ export function SettingsSection({
     <section className="flex flex-col gap-4">
       <div>
         <h2
-          className={`font-display text-lg font-semibold tracking-tight ${
+          className={`font-display text-xl font-bold tracking-tight ${
             tone === "danger" ? "text-destructive" : "text-foreground"
           }`}
         >
@@ -58,7 +56,7 @@ export function SettingsSection({
             {description}
           </p>
         )}
-        <div aria-hidden className="rule-printed mt-3 h-px w-full" />
+        <div aria-hidden className="mt-3 h-px w-full bg-border" />
       </div>
       <div className="flex flex-col gap-4">{children}</div>
     </section>

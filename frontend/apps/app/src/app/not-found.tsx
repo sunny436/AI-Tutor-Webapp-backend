@@ -1,6 +1,7 @@
 import { Button } from "@v1/ui/button";
 import Link from "next/link";
 
+import { BrandMark } from "@/components/brand/brand-mark";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 
 export const metadata = { title: "Page not found" };
@@ -17,11 +18,12 @@ export default function NotFound() {
         <ThemeSwitcher />
       </div>
       <div className="relative">
-        <p className="font-mono text-sm uppercase tracking-widest text-brand">404</p>
-        <h1 className="mt-2 font-display text-3xl font-semibold tracking-tight text-foreground">
+        <BrandMark size={56} className="mx-auto mb-5 rounded-2xl shadow-lg shadow-brand/25" />
+        <p className="text-sm font-bold uppercase tracking-widest text-brand">404</p>
+        <h1 className="mt-2 font-display text-3xl font-black tracking-tight text-foreground">
           This page could not be found
         </h1>
-        <p className="mt-2 max-w-md text-sm leading-relaxed text-text-secondary">
+        <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-text-secondary">
           The link may be out of date, or the page may have moved.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">

@@ -1,21 +1,16 @@
 import "@v1/ui/globals.css";
 import { TooltipProvider } from "@v1/ui/tooltip";
-import { cn } from "@v1/ui/utils";
 import type { Metadata, Viewport } from "next";
-import { Eczar, Hanken_Grotesk } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import type { CSSProperties, ReactNode } from "react";
 import { Toaster } from "sonner";
 
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, BRAND } from "@/lib/brand";
 import { siteUrl } from "@/lib/site";
 
-// Self-hosted at build time by next/font: no request leaves the browser for them.
-const display = Eczar({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-display", display: "swap" });
-const ui = Hanken_Grotesk({ subsets: ["latin"], variable: "--font-ui", display: "swap" });
-
-// Code is read a lot in a chatbot: the system monospace face (no download) reads
-// better at length than a wide display mono.
+// Every face is the platform's own (tailwind.config.ts in packages/ui): nothing
+// to download. Code is read a lot in a tutor's answers, and the system monospace
+// face reads better at length than a wide display mono.
 const fonts = {
   "--font-mono": 'ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace',
 } as CSSProperties;
@@ -23,23 +18,25 @@ const fonts = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: { default: APP_NAME, template: `%s · ${APP_NAME}` },
-  description: `${APP_NAME} — a chat assistant.`,
+  description: BRAND.description,
   applicationName: APP_NAME,
+  // The one brand asset (lib/brand.ts), so the tab icon changes with the logo.
+  icons: { icon: { url: BRAND.markSrc, type: "image/svg+xml" } },
   // A private app: nothing here is for search engines.
   robots: { index: false, follow: false },
 };
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#F3F0E7" },
-    { media: "(prefers-color-scheme: dark)", color: "#171512" },
+    { media: "(prefers-color-scheme: light)", color: "#F8FAFC" },
+    { media: "(prefers-color-scheme: dark)", color: "#0A0F1C" },
   ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(ui.variable, display.variable, "font-sans antialiased")} style={fonts}>
+      <body className="font-sans antialiased" style={fonts}>
         {/* WCAG 2.4.1: every page's main region carries id="main". */}
         <a
           href="#main"

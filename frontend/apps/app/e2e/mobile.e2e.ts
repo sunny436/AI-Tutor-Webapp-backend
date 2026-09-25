@@ -38,7 +38,7 @@ test("on a phone: the drawer, the composer, and no sideways scrolling", async ({
     await expect(drawer).toBeVisible();
     // (Outside the open modal everything is aria-hidden, so find it by selector.)
     await expect(page.locator("button[aria-label='Open menu']")).toHaveAttribute("aria-expanded", "true");
-    await expect(drawer.getByRole("link", { name: "New chat" })).toBeVisible();
+    await expect(drawer.getByRole("link", { name: "Ask New Doubt" })).toBeVisible();
     await expectAccessible(page);
     await page.keyboard.press("Escape");
     await expect(drawer).toBeHidden();
@@ -49,7 +49,7 @@ test("on a phone: the drawer, the composer, and no sideways scrolling", async ({
     const conversation = new URL(page.url()).pathname;
     await page.getByRole("button", { name: "Open menu" }).click();
     const drawer = page.getByRole("dialog", { name: "Navigation" });
-    await drawer.getByRole("link", { name: "New chat" }).click();
+    await drawer.getByRole("link", { name: "Ask New Doubt" }).click();
     await expect(drawer).toBeHidden();
     await expect(page).toHaveURL("/");
 
