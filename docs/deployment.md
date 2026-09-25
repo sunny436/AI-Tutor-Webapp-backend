@@ -99,6 +99,9 @@ cancelled.
   safe for backward-compatible migrations. The database is never rolled back automatically; to undo
   a schema change, write a new migration.
 - `backend/scripts/migration_status.py` reports where the database stands for any code version.
+- Today every client ships in the same release as the API. Once a client is released on its own (an
+  app-store build), a migration and the API change it serves must also keep the **oldest supported
+  client** working, not only the previous release ([api-contract.md](api-contract.md#compatibility-and-versioning)).
 
 ## One-time host preparation
 

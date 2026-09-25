@@ -99,3 +99,33 @@ data: {"code":"llm_unavailable|llm_timeout|llm_bad_request|service_unavailable|i
 
 `GET /health` → `{"status":"ok"}` · `GET /ready` → `{"status","database"}` (503 when the database is down).
 Interactive docs at `/docs` exist only when `APP_ENV=development`.
+
+## Compatibility and versioning
+
+Today the only client (the web app) ships in the same release as the API, so it is always current.
+Write every change as if it were not: a native client will keep running older versions for months.
+
+- **Additive within v1:** new endpoints, new optional request fields, new response fields, new enum
+  values and new SSE event types. Clients ignore unknown fields and events, and treat an unknown enum
+  value as "something newer" rather than an error.
+- **Breaking:** removing, renaming or retyping a path, field or enum value; making a field required;
+  changing a status code, an error code or what a field means. A breaking change gets a new endpoint
+  or a `/v2` path, and the old one keeps working while any supported client still uses it. Never
+  repurpose an existing field.
+- **The contract file** is regenerated from the code (`bun run contract`); CI fails if it is stale,
+  and fails if a route or request field the web app proxies disappears. CI does not detect breaking
+  changes yet: read the `docs/openapi.json` diff of every PR with the rules above.
+- **Resources, not screens:** responses describe conversations, messages, users and settings, not
+  what one page shows. A screen composes resources; an endpoint is not added for one layout.
+
+## Client obligations
+
+What every client (the web app today) must do, so no client re-implements a rule differently:
+
+- Send only `{conversationId?, message}`: never history, never a user id (identity comes from the session).
+- Never re-send a message after an interrupted stream. Re-read `GET /v1/conversations/{id}/messages`:
+  the server either finished the reply or recorded how it ended.
+- Stop a reply with `POST /v1/messages/{id}/cancel`. Closing the stream connection also stops it
+  (see "Clients" in [architecture.md](architecture.md)).
+- Ignore unknown SSE events and unknown fields.
+- Decide on the error `code`; show your own text, with `message` only as a safe fallback.
