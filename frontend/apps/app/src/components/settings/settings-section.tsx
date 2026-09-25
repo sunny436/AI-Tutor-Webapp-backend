@@ -45,7 +45,7 @@ export function SettingsSection({
     <section className="flex flex-col gap-4">
       <div>
         <h2
-          className={`font-display text-lg font-semibold tracking-tight ${
+          className={`font-display text-xl font-bold tracking-tight ${
             tone === "danger" ? "text-destructive" : "text-foreground"
           }`}
         >

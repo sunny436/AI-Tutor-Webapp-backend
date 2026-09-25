@@ -15,13 +15,13 @@ const RESEND_COOLDOWN_SECONDS = 30;
 // 16 px below `sm`: iOS Safari zooms the page when a focused field is smaller,
 // and the zoom does not undo itself.
 const inputClass =
-  "h-11 w-full rounded-lg border border-input bg-background px-3 text-base outline-none transition-colors placeholder:text-text-secondary focus:border-brand/60 focus:ring-2 focus:ring-brand/20 sm:h-10 sm:text-sm";
+  "h-11 w-full rounded-xl border border-input bg-surface px-3 text-base font-medium text-foreground outline-none transition-all placeholder:text-text-secondary focus:border-brand focus:bg-card focus:ring-4 focus:ring-brand/10 sm:h-11 sm:text-sm";
 
 function Field({ label, children, hint }: { label: string; children: (id: string) => ReactNode; hint?: string }) {
   const id = useId();
   return (
     <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-medium text-foreground">
+      <label htmlFor={id} className="text-sm font-bold text-foreground">
         {label}
       </label>
       {children(id)}
@@ -219,7 +219,7 @@ export function AuthForm({
     <button
       type="button"
       onClick={onClick}
-      className="focus-ring rounded text-sm text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground"
+      className="focus-ring rounded text-sm font-medium text-brand underline-offset-2 transition-colors hover:text-brand-hover hover:underline"
     >
       {label}
     </button>
@@ -230,7 +230,7 @@ export function AuthForm({
       type="button"
       onClick={resend}
       disabled={cooldown > 0 || pending || !email}
-      className="focus-ring rounded text-sm text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground disabled:no-underline disabled:opacity-50"
+      className="focus-ring rounded text-sm font-medium text-brand underline-offset-2 transition-colors hover:text-brand-hover hover:underline disabled:text-text-secondary disabled:no-underline"
     >
       {cooldown > 0 ? `Resend code in ${cooldown}s` : "Resend code"}
     </button>
@@ -269,7 +269,7 @@ export function AuthForm({
           {link("Forgot password?", () => switchTo("forgot"))}
           <a
             href={`/signup${redirectTo !== "/" ? `?redirect=${encodeURIComponent(redirectTo)}` : ""}`}
-            className="focus-ring rounded text-sm text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground"
+            className="focus-ring rounded text-sm font-medium text-brand underline-offset-2 transition-colors hover:text-brand-hover hover:underline"
           >
             Create an account
           </a>
@@ -302,7 +302,7 @@ export function AuthForm({
           {link("I have a code", () => switchTo("verify"))}
           <a
             href={`/login${redirectTo !== "/" ? `?redirect=${encodeURIComponent(redirectTo)}` : ""}`}
-            className="focus-ring rounded text-sm text-text-secondary underline underline-offset-2 transition-colors hover:text-foreground"
+            className="focus-ring rounded text-sm font-medium text-brand underline-offset-2 transition-colors hover:text-brand-hover hover:underline"
           >
             Have an account? Sign in
           </a>
@@ -358,18 +358,18 @@ export function AuthForm({
   return (
     <div className="w-full">
       <div className="mb-6">
-        <h1 className="font-display text-2xl font-semibold tracking-tight text-foreground">{TITLES[mode].title}</h1>
+        <h1 className="font-display text-2xl font-black tracking-tight text-foreground">{TITLES[mode].title}</h1>
         <p className="mt-1 text-sm text-text-secondary">{TITLES[mode].lead}</p>
       </div>
       <form onSubmit={onSubmit} className="flex flex-col gap-4">
         {form}
         {info && !error && (
-          <p role="status" className="rounded-lg bg-info-soft px-3 py-2 text-sm text-info">
+          <p role="status" className="rounded-xl border border-info/20 bg-info-soft px-3 py-2 text-sm text-info">
             {info}
           </p>
         )}
         {error && (
-          <p role="alert" className="rounded-lg bg-destructive/5 px-3 py-2 text-sm font-medium text-destructive">
+          <p role="alert" className="rounded-xl border border-destructive/25 bg-destructive/5 px-3 py-2 text-sm font-medium text-destructive">
             {error}
           </p>
         )}
