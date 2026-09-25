@@ -55,8 +55,12 @@ so it is a last resort (header of `deploy/backup.sh`).
 
 On a host that still ran the two-checkout layout, there is no previous release. If the first
 release fails its live checks, the deploy restores the unit files it replaced (kept as
-`/etc/systemd/system/aichat-*.before-<time>`) and restarts the old layout. If you ever need to do
-that by hand:
+`/etc/systemd/system/aichat-*.before-<time>`) and restarts the old layout.
+
+Production made that move on 2026-09-25 (units saved as `aichat-*.before-20260925052156`; the old
+checkouts are still in place). Until a second release has been deployed there, `bun run rollback`
+has no earlier release, and going back to the old layout is the manual restore below. If you ever
+need it:
 
 ```sh
 cd /etc/systemd/system

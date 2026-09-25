@@ -143,8 +143,11 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **The database is outside releases:** `/opt/aichat/shared/postgres`. Its Compose project and volume
   names are pinned (`compose` / `compose_pgdata`); moving or renaming them would start an empty
   database.
-- **Status:** production still runs the earlier two-checkout layout until the first release deploy
-  is approved (`INFRASTRUCTURE.md`). Production changes need the owner's explicit approval.
+- **Status:** production runs the release layout since 2026-09-25 (first release `a353815`,
+  `INFRASTRUCTURE.md`). The pre-release leftovers (old checkouts `/opt/aichat/{backend,frontend}`,
+  `/root/aichat-bundles`, units saved as `aichat-*.before-20260925052156`, the legacy Ayurveda
+  services) are kept for rollback until the owner approves their removal; don't touch them.
+  Production changes need the owner's explicit approval.
 - **Never, by hand:** edit a release, repoint `current` (except the emergency steps in
   `docs/rollback.md`), run migrations outside `release.sh`, `docker compose down -v`, or change
   `API_BASE_URL` in `web.env` (the frontend's default `:4000` is the old API on that host).

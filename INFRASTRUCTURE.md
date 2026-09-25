@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | Target (this repository) | One Ubuntu 24.04 host under systemd: PostgreSQL 16 + pgvector, the API and the web app, deployed as **one release** per commit of `main` with successful CI. Described below, in [deploy/](deploy/) and in [docs/deployment.md](docs/deployment.md). |
-| Production today | `ayur.namahos.com` serves this application (since 2026-09-24), still from the earlier two-checkout layout (`/opt/aichat/backend`, `/opt/aichat/frontend`). Moving it to the release layout is the first `bun run deploy` ([deployment.md](docs/deployment.md#the-first-release-deploy-on-the-current-production-host)) and needs the owner's approval. The legacy Ayurveda services still run beside it for rollback ([production-migration.md](docs/production-migration.md)). |
+| Production today | `ayur.namahos.com` serves this application from the release layout described below, since 2026-09-25 (first release `a353815`, deployed with `bun run deploy`; before that, from 2026-09-24, it ran from two separate checkouts). What the move left in place for rollback, until the owner approves removing it: [deployment.md](docs/deployment.md#the-move-from-the-two-checkout-layout-2026-09-25). The legacy Ayurveda services still run beside it ([production-migration.md](docs/production-migration.md)). |
 
 ## Layout
 
