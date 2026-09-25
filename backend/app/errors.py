@@ -25,12 +25,16 @@ class AppError(Exception):
     message = "The request could not be processed."
     retryable = False
 
-    def __init__(self, message: str | None = None, *, code: str | None = None) -> None:
+    def __init__(
+        self, message: str | None = None, *, code: str | None = None, fields: list[dict] | None = None
+    ) -> None:
         super().__init__(message or self.message)
         if message:
             self.message = message
         if code:
             self.code = code
+        # Field paths and machine-readable reasons, like a request validation error: never values.
+        self.fields = fields
 
 
 class Unauthorized(AppError):
@@ -55,6 +59,23 @@ class NotFound(AppError):
 
 class Conflict(AppError):
     status_code, code, message = 409, "conflict", "The request conflicts with the current state."
+
+
+class VersionConflict(AppError):
+    """A write named a version that is no longer current: someone (another tab or device)
+    changed the resource first. The client reloads and re-applies its change."""
+
+    status_code, code, message = 409, "version_conflict", "This was changed elsewhere. Reload and try again."
+
+    def __init__(self, current: dict | None = None) -> None:
+        super().__init__()
+        # The resource as it is now (the same body a GET returns), so the client can rebase
+        # its own pending changes without another request.
+        self.current = current
+
+
+class UnsupportedMediaType(AppError):
+    status_code, code, message = 415, "unsupported_media_type", "This file type is not supported."
 
 
 class RateLimited(AppError):
@@ -103,7 +124,10 @@ def _response(status: int, code: str, message: str, **extra) -> JSONResponse:
 def install_error_handlers(app: FastAPI) -> None:
     @app.exception_handler(AppError)
     async def _app_error(_: Request, error: AppError) -> JSONResponse:
-        return _response(error.status_code, error.code, error.message)
+        extra: dict = {"fields": error.fields} if error.fields else {}
+        if getattr(error, "current", None) is not None:
+            extra["current"] = error.current
+        return _response(error.status_code, error.code, error.message, **extra)
 
     @app.exception_handler(RequestValidationError)
     async def _validation(_: Request, error: RequestValidationError) -> JSONResponse:

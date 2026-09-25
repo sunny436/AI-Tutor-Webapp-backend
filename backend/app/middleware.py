@@ -25,9 +25,14 @@ class _BodyTooLarge(Exception):
 
 
 class RequestContextMiddleware:
-    def __init__(self, app: ASGIApp, max_body_bytes: int) -> None:
+    def __init__(
+        self, app: ASGIApp, max_body_bytes: int, body_limits: dict[tuple[str, str], int] | None = None
+    ) -> None:
         self.app = app
         self.max_body_bytes = max_body_bytes
+        # (method, path) -> a larger limit for the few routes that take files. Everything else
+        # keeps max_body_bytes.
+        self.body_limits = body_limits or {}
 
     async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
         if scope["type"] != "http":
@@ -49,9 +54,10 @@ class RequestContextMiddleware:
                 message["headers"] = [*message["headers"], (b"x-request-id", request_id.encode())]
             await send(message)
 
+        limit = self.body_limits.get((scope.get("method", ""), scope.get("path", "")), self.max_body_bytes)
         try:
             declared = headers.get("content-length")
-            if declared and declared.isdigit() and int(declared) > self.max_body_bytes:
+            if declared and declared.isdigit() and int(declared) > limit:
                 await self._too_large(send_wrapper)
                 return
 
@@ -61,7 +67,7 @@ class RequestContextMiddleware:
                 message = await receive()
                 if message["type"] == "http.request":
                     received["bytes"] += len(message.get("body", b""))
-                    if received["bytes"] > self.max_body_bytes:
+                    if received["bytes"] > limit:
                         raise _BodyTooLarge
                 return message
 

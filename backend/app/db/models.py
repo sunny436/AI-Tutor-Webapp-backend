@@ -25,6 +25,7 @@ from sqlalchemy import (
     ForeignKey,
     Index,
     Integer,
+    LargeBinary,
     SmallInteger,
     String,
     Text,
@@ -42,7 +43,7 @@ NOW = text("clock_timestamp()")
 
 MESSAGE_ROLES = ("user", "assistant", "system")
 MESSAGE_STATUSES = ("complete", "streaming", "cancelled", "error", "superseded")
-CODE_PURPOSES = ("verify_email", "reset_password")
+CODE_PURPOSES = ("verify_email", "reset_password", "change_email")
 
 # The pgvector column dimension. settings.embedding_dimensions must equal it (checked at
 # startup); changing it needs a new migration and a re-ingest of every document.
@@ -67,6 +68,30 @@ class User(Base):
     display_name: Mapped[str | None] = mapped_column(String(80))
     created_at: Mapped[datetime] = _created()
     updated_at: Mapped[datetime] = _created()
+    # Incremented by every change to the identity profile; writes must name the version they
+    # read (optimistic concurrency), so a stale form cannot silently overwrite a newer edit.
+    profile_version: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    timezone: Mapped[str | None] = mapped_column(String(64))  # IANA name, set by the user
+    avatar_hash: Mapped[str | None] = mapped_column(String(32))  # names the current photo; None = no photo
+    password_changed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class UserAvatar(Base):
+    """The profile photo, re-encoded server-side (WebP, at most 64 KB). See app/auth/avatar.py."""
+
+    __tablename__ = "user_avatars"
+    __table_args__ = (
+        CheckConstraint("octet_length(image) <= 65536", name="image_size"),
+        CheckConstraint("content_type = 'image/webp'", name="content_type"),
+    )
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    image: Mapped[bytes] = mapped_column(LargeBinary, nullable=False)
+    content_type: Mapped[str] = mapped_column(String(32), nullable=False)
+    hash: Mapped[str] = mapped_column(String(32), nullable=False)
+    updated_at: Mapped[datetime] = _created()
 
 
 class UserSettings(Base):
@@ -81,7 +106,10 @@ class UserSettings(Base):
 
 class AuthSession(Base):
     __tablename__ = "auth_sessions"
-    __table_args__ = (Index("ix_auth_sessions_user_id", "user_id"),)
+    __table_args__ = (
+        Index("ix_auth_sessions_user_id", "user_id"),
+        Index("ix_auth_sessions_expires_at", "expires_at"),
+    )
 
     id: Mapped[uuid.UUID] = _uuid_pk()
     user_id: Mapped[uuid.UUID] = mapped_column(
@@ -99,7 +127,9 @@ class EmailCode(Base):
     __tablename__ = "email_codes"
     __table_args__ = (
         CheckConstraint(f"purpose in {CODE_PURPOSES}", name="purpose"),
+        CheckConstraint("purpose <> 'change_email' OR user_id IS NOT NULL", name="change_email_user"),
         Index("ix_email_codes_email_purpose", "email", "purpose"),
+        Index("ix_email_codes_user_id", "user_id"),
     )
 
     id: Mapped[uuid.UUID] = _uuid_pk()
@@ -110,6 +140,8 @@ class EmailCode(Base):
     attempts: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
     consumed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = _created()
+    # Set only for change_email: the code moves THIS user's account to `email` (the new address).
+    user_id: Mapped[uuid.UUID | None] = mapped_column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"))
 
 
 class AuthAttempt(Base):

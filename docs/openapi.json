@@ -28,6 +28,19 @@
         "title": "AuthResult",
         "type": "object"
       },
+      "AvatarOut": {
+        "properties": {
+          "url": {
+            "title": "Url",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "title": "AvatarOut",
+        "type": "object"
+      },
       "CancelOut": {
         "properties": {
           "status": {
@@ -211,6 +224,49 @@
           "password"
         ],
         "title": "DeleteMeRequest",
+        "type": "object"
+      },
+      "EmailChangeRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "newEmail": {
+            "format": "email",
+            "title": "Newemail",
+            "type": "string"
+          },
+          "password": {
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Password",
+            "type": "string"
+          }
+        },
+        "required": [
+          "newEmail",
+          "password"
+        ],
+        "title": "EmailChangeRequest",
+        "type": "object"
+      },
+      "EmailConfirmRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "pattern": "^\\d{6}$",
+            "title": "Code",
+            "type": "string"
+          },
+          "newEmail": {
+            "format": "email",
+            "title": "Newemail",
+            "type": "string"
+          }
+        },
+        "required": [
+          "newEmail",
+          "code"
+        ],
+        "title": "EmailConfirmRequest",
         "type": "object"
       },
       "FeedbackOut": {
@@ -402,6 +458,39 @@
         "title": "MessagePage",
         "type": "object"
       },
+      "ProfileSet": {
+        "additionalProperties": false,
+        "description": "Fields to set. A field absent here is left unchanged; `null` is not a value (use `reset`).",
+        "properties": {
+          "displayName": {
+            "anyOf": [
+              {
+                "maxLength": 80,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Displayname"
+          },
+          "timezone": {
+            "anyOf": [
+              {
+                "maxLength": 64,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timezone"
+          }
+        },
+        "title": "ProfileSet",
+        "type": "object"
+      },
       "RenameConversationRequest": {
         "additionalProperties": false,
         "properties": {
@@ -468,6 +557,77 @@
           "newPassword"
         ],
         "title": "ResetPasswordRequest",
+        "type": "object"
+      },
+      "SessionInfo": {
+        "description": "A signed-in device, with safe metadata only (app/auth/devices.py).",
+        "properties": {
+          "createdAt": {
+            "format": "date-time",
+            "title": "Createdat",
+            "type": "string"
+          },
+          "current": {
+            "title": "Current",
+            "type": "boolean"
+          },
+          "device": {
+            "title": "Device",
+            "type": "string"
+          },
+          "expiresAt": {
+            "format": "date-time",
+            "title": "Expiresat",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "ipMasked": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ipmasked"
+          },
+          "lastSeenAt": {
+            "format": "date-time",
+            "title": "Lastseenat",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "current",
+          "device",
+          "ipMasked",
+          "createdAt",
+          "lastSeenAt",
+          "expiresAt"
+        ],
+        "title": "SessionInfo",
+        "type": "object"
+      },
+      "SessionListOut": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/SessionInfo"
+            },
+            "title": "Items",
+            "type": "array"
+          }
+        },
+        "required": [
+          "items"
+        ],
+        "title": "SessionListOut",
         "type": "object"
       },
       "SessionOut": {
@@ -569,6 +729,37 @@
         "title": "UpdateMeRequest",
         "type": "object"
       },
+      "UpdateProfileRequest": {
+        "additionalProperties": false,
+        "description": "The one PATCH shape (docs/api-contract.md): `set` replaces the listed fields, `reset`\nreturns fields to their defaults (both of these become empty), anything else is unchanged.\n`version` must be the profileVersion the client read; otherwise 409 version_conflict.",
+        "properties": {
+          "reset": {
+            "items": {
+              "enum": [
+                "displayName",
+                "timezone"
+              ],
+              "type": "string"
+            },
+            "maxItems": 2,
+            "title": "Reset",
+            "type": "array"
+          },
+          "set": {
+            "$ref": "#/components/schemas/ProfileSet"
+          },
+          "version": {
+            "minimum": 0.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "title": "UpdateProfileRequest",
+        "type": "object"
+      },
       "UpdateSettingsRequest": {
         "additionalProperties": false,
         "properties": {
@@ -586,6 +777,16 @@
       },
       "UserOut": {
         "properties": {
+          "avatar": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AvatarOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "createdAt": {
             "format": "date-time",
             "title": "Createdat",
@@ -614,6 +815,34 @@
             "format": "uuid",
             "title": "Id",
             "type": "string"
+          },
+          "passwordChangedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Passwordchangedat"
+          },
+          "profileVersion": {
+            "description": "Send it back with PATCH /v1/me/profile.",
+            "title": "Profileversion",
+            "type": "integer"
+          },
+          "timezone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timezone"
           }
         },
         "required": [
@@ -621,7 +850,11 @@
           "email",
           "displayName",
           "emailVerified",
-          "createdAt"
+          "createdAt",
+          "profileVersion",
+          "timezone",
+          "avatar",
+          "passwordChangedAt"
         ],
         "title": "UserOut",
         "type": "object"
@@ -949,6 +1182,28 @@
         ]
       }
     },
+    "/v1/auth/sessions": {
+      "get": {
+        "description": "The account's signed-in devices, most recently used first. Only a device label and a\nmasked network leave the server, never the raw IP address or user agent.",
+        "operationId": "list_sessions_v1_auth_sessions_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionListOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "List Sessions",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
     "/v1/auth/sessions/revoke-others": {
       "post": {
         "operationId": "revoke_others_v1_auth_sessions_revoke_others_post",
@@ -958,6 +1213,43 @@
           }
         },
         "summary": "Revoke Others",
+        "tags": [
+          "auth"
+        ]
+      }
+    },
+    "/v1/auth/sessions/{session_id}": {
+      "delete": {
+        "description": "Signs one other device out. The current device signs out with POST /v1/auth/logout.",
+        "operationId": "revoke_session_v1_auth_sessions__session_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "session_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Revoke Session",
         "tags": [
           "auth"
         ]
@@ -1522,6 +1814,8 @@
         ]
       },
       "patch": {
+        "deprecated": true,
+        "description": "Superseded by PATCH /v1/me/profile, which is versioned; kept for existing clients.",
         "operationId": "update_me_v1_me_patch",
         "requestBody": {
           "content": {
@@ -1556,6 +1850,248 @@
           }
         },
         "summary": "Update Me",
+        "tags": [
+          "auth",
+          "me"
+        ]
+      }
+    },
+    "/v1/me/avatar": {
+      "delete": {
+        "operationId": "delete_my_avatar_v1_me_avatar_delete",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Delete My Avatar",
+        "tags": [
+          "auth",
+          "me"
+        ]
+      },
+      "get": {
+        "description": "Content-addressed: cacheable forever only when `v` names the current photo. Any other\n`v` (a replaced or removed photo) is a 404 that is never cached, so an old URL can never\nbe served new bytes.",
+        "operationId": "get_my_avatar_v1_me_avatar_get",
+        "parameters": [
+          {
+            "description": "The hash in `avatar.url` from GET /v1/me.",
+            "in": "query",
+            "name": "v",
+            "required": true,
+            "schema": {
+              "description": "The hash in `avatar.url` from GET /v1/me.",
+              "pattern": "^[0-9a-f]{32}$",
+              "title": "V",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "image/webp": {
+                "schema": {
+                  "format": "binary",
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get My Avatar",
+        "tags": [
+          "auth",
+          "me"
+        ]
+      },
+      "put": {
+        "description": "Upload a profile photo as the raw request body (JPEG, PNG or WebP, up to\nAVATAR_MAX_BYTES). It is stored as a 256 px WebP without metadata (app/auth/avatar.py).",
+        "operationId": "put_my_avatar_v1_me_avatar_put",
+        "requestBody": {
+          "content": {
+            "image/jpeg": {
+              "schema": {
+                "format": "binary",
+                "type": "string"
+              }
+            },
+            "image/png": {
+              "schema": {
+                "format": "binary",
+                "type": "string"
+              }
+            },
+            "image/webp": {
+              "schema": {
+                "format": "binary",
+                "type": "string"
+              }
+            }
+          },
+          "required": true,
+          "x-max-bytes": 5242880
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Put My Avatar",
+        "tags": [
+          "auth",
+          "me"
+        ]
+      }
+    },
+    "/v1/me/email/change": {
+      "post": {
+        "description": "Sends a code to the new address. Always 202, whether or not the address is free.",
+        "operationId": "request_email_change_v1_me_email_change_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailChangeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcceptedOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Request Email Change",
+        "tags": [
+          "auth",
+          "me"
+        ]
+      }
+    },
+    "/v1/me/email/confirm": {
+      "post": {
+        "description": "Moves the account to the new address and signs out every other device.",
+        "operationId": "confirm_email_change_v1_me_email_confirm_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmailConfirmRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Confirm Email Change",
+        "tags": [
+          "auth",
+          "me"
+        ]
+      }
+    },
+    "/v1/me/profile": {
+      "patch": {
+        "description": "Versioned edit of the identity profile: `{version, set, reset}` (docs/api-contract.md).\nA stale version answers 409 version_conflict with the current profile in `error.current`.",
+        "operationId": "update_my_profile_v1_me_profile_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update My Profile",
         "tags": [
           "auth",
           "me"

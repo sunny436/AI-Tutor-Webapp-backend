@@ -1,6 +1,8 @@
 """User isolation: another user's resources behave exactly like missing ones (404)."""
 
-from tests.conftest import register, stream_chat
+import uuid
+
+from tests.conftest import PASSWORD, image_bytes, last_code, register, stream_chat
 
 
 async def test_other_users_resources_are_404(client, app):
@@ -33,6 +35,34 @@ async def test_other_users_resources_are_404(client, app):
     assert (await client.get("/v1/conversations", headers=b)).json()["items"] == []
     mine = await client.get(f"/v1/conversations/{cid}/messages", headers=alice["headers"])
     assert mine.status_code == 200 and len(mine.json()["items"]) == 2
+
+
+async def test_identity_data_is_per_user(client, app):
+    """Photo, devices and email-change codes: Bob's session reaches only Bob's own."""
+    alice = await register(client, app)
+    bob = await register(client, app)
+    a, b = alice["headers"], bob["headers"]
+    photo = await client.put("/v1/me/avatar", content=image_bytes(), headers={**a, "Content-Type": "image/png"})
+    photo_url = photo.json()["avatar"]["url"]
+    alice_session = (await client.get("/v1/auth/sessions", headers=a)).json()["items"][0]["id"]
+    new_email = f"moved-{uuid.uuid4().hex[:8]}@example.com"
+    await client.post("/v1/me/email/change", json={"newEmail": new_email, "password": PASSWORD}, headers=a)
+    code = last_code(app, new_email)
+
+    assert (await client.get(photo_url, headers=b)).status_code == 404  # only ever the caller's own photo
+    revoke = await client.delete(f"/v1/auth/sessions/{alice_session}", headers=b)
+    assert revoke.status_code == 404 and revoke.json()["error"]["code"] == "not_found"
+    assert alice_session not in (await client.get("/v1/auth/sessions", headers=b)).text
+    # A code sent for Alice's change cannot move Bob's account to that address.
+    stolen = await client.post("/v1/me/email/confirm", json={"newEmail": new_email, "code": code}, headers=b)
+    assert stolen.status_code == 400 and stolen.json()["error"]["code"] == "invalid_code"
+    assert (await client.get("/v1/me", headers=b)).json()["email"] == bob["email"]
+
+    # Alice's data is untouched, and her code still works for her.
+    assert (await client.get(photo_url, headers=a)).status_code == 200
+    assert (await client.get("/v1/me", headers=a)).status_code == 200
+    mine = await client.post("/v1/me/email/confirm", json={"newEmail": new_email, "code": code}, headers=a)
+    assert mine.status_code == 200 and mine.json()["email"] == new_email
 
 
 async def test_client_supplied_identity_fields_are_rejected(client, app):

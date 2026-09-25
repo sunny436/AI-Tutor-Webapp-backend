@@ -17,10 +17,19 @@
  *               let anyone choose the IP that sign-in throttling counts.
  *   STREAMS     SSE is passed through unbuffered. When the browser goes away the
  *               upstream request is aborted, which the API treats as "stop".
- *   ERRORS      Error envelopes keep `code`, `requestId` and field names only; backend
- *               wording never reaches the page (the UI has its own copy per code).
+ *   ERRORS      Error envelopes keep `code`, `requestId`, field names and their
+ *               machine-readable reasons only; backend wording never reaches the page
+ *               (the UI has its own copy per code). A `version_conflict` also keeps
+ *               `current`: the caller's own resource as it is now.
  *   SIZE        Request bodies are capped at the API's own 64 KB limit before any
  *               forwarding.
+ *   FILES       A route with `upload` takes a raw file instead of JSON: only its listed
+ *               content types, only up to its own cap, read only once the session
+ *               cookie is known to be there. A route with `file` answers with bytes of
+ *               its listed types; the API's cache headers pass only when they are
+ *               `private` (a browser may keep a content-addressed photo, a shared
+ *               cache never), and the file can never run as a page (nosniff, a
+ *               sandboxing CSP).
  *
  * Pure (no Next.js imports) so it is unit-tested directly.
  */
@@ -41,11 +50,16 @@ export type ProxyDeps = {
   log?: (line: string) => void;
 };
 
+type FieldError = { field: string; reason?: string };
+
+/** A machine-readable reason (`too_small`, `string_too_long`), never a sentence. */
+const REASON = /^[a-z][a-z0-9_]{0,63}$/;
+
 function envelope(
   status: number,
   code: string,
   requestId: string,
-  extra: { fields?: { field: string }[]; cookies?: string[] } = {},
+  extra: { fields?: FieldError[]; current?: object; cookies?: string[] } = {},
 ): Response {
   const headers = new Headers({
     "Content-Type": "application/json",
@@ -55,6 +69,7 @@ function envelope(
   for (const cookie of extra.cookies ?? []) headers.append("Set-Cookie", cookie);
   const error: Record<string, unknown> = { code, requestId };
   if (extra.fields?.length) error.fields = extra.fields;
+  if (extra.current) error.current = extra.current;
   return new Response(JSON.stringify({ error }), { status, headers });
 }
 
@@ -101,10 +116,10 @@ export function isSameOrigin(request: Request): boolean {
 }
 
 /** Read a body, refusing more than `limit` bytes without buffering the excess. */
-async function readBody(request: Request, limit: number): Promise<string | "too_large"> {
+async function readBody(request: Request, limit: number): Promise<Uint8Array | "too_large"> {
   const declared = Number(request.headers.get("content-length") ?? "");
   if (Number.isFinite(declared) && declared > limit) return "too_large";
-  if (!request.body) return "";
+  if (!request.body) return new Uint8Array(0);
   const reader = request.body.getReader();
   const chunks: Uint8Array[] = [];
   let size = 0;
@@ -124,7 +139,12 @@ async function readBody(request: Request, limit: number): Promise<string | "too_
     bytes.set(chunk, offset);
     offset += chunk.byteLength;
   }
-  return new TextDecoder().decode(bytes);
+  return bytes;
+}
+
+/** `image/png; charset=x` → `image/png`. */
+function mediaType(value: string | null): string {
+  return (value ?? "").split(";")[0]?.trim().toLowerCase() ?? "";
 }
 
 /** Pass an upstream stream through; cancelling ours aborts theirs. */
@@ -163,20 +183,28 @@ export async function proxyRequest(request: Request, segments: string[], deps: P
     return envelope(403, "forbidden", requestId);
   }
 
-  let body: string | undefined;
-  if (spec.body) {
+  const token = readSessionToken(request.headers.get("cookie"), https);
+  if (spec.auth && !token) {
+    return envelope(401, "unauthorized", requestId, { cookies: clearedSessionCookies(https) });
+  }
+
+  let body: string | Uint8Array | undefined;
+  let bodyType: string | undefined;
+  if (spec.upload) {
+    bodyType = mediaType(request.headers.get("content-type"));
+    if (!spec.upload.types.includes(bodyType)) return envelope(415, "unsupported_media_type", requestId);
+    const read = await readBody(request, spec.upload.maxBytes);
+    if (read === "too_large") return envelope(413, "payload_too_large", requestId);
+    body = read;
+  } else if (spec.body) {
     const type = request.headers.get("content-type") ?? "";
     if (!type.toLowerCase().startsWith("application/json")) {
       return envelope(415, "validation_error", requestId);
     }
     const read = await readBody(request, MAX_BODY_BYTES);
     if (read === "too_large") return envelope(413, "payload_too_large", requestId);
-    body = read;
-  }
-
-  const token = readSessionToken(request.headers.get("cookie"), https);
-  if (spec.auth && !token) {
-    return envelope(401, "unauthorized", requestId, { cookies: clearedSessionCookies(https) });
+    body = new TextDecoder().decode(read);
+    bodyType = "application/json";
   }
 
   const incoming = new URL(request.url);
@@ -189,10 +217,10 @@ export async function proxyRequest(request: Request, segments: string[], deps: P
   const target = `${deps.apiBaseUrl}${path}${search ? `?${search}` : ""}`;
 
   const headers = new Headers({
-    Accept: spec.stream ? "text/event-stream" : "application/json",
+    Accept: spec.stream ? "text/event-stream" : spec.file ? spec.file.types.join(", ") : "application/json",
     "X-Request-ID": requestId,
   });
-  if (body !== undefined) headers.set("Content-Type", "application/json");
+  if (body !== undefined && bodyType) headers.set("Content-Type", bodyType);
   if (spec.auth && token) headers.set("Authorization", `Bearer ${token}`);
   const ip = clientIp(request.headers);
   if (ip) headers.set("X-Forwarded-For", ip);
@@ -254,6 +282,29 @@ export async function proxyRequest(request: Request, segments: string[], deps: P
     return new Response(passThrough(upstream.body, abort), { status: 200, headers: responseHeaders });
   }
 
+  if (spec.file && upstream.ok) {
+    const type = mediaType(upstream.headers.get("content-type"));
+    let bytes: ArrayBuffer;
+    try {
+      if (!spec.file.types.includes(type)) throw new Error("unexpected content type");
+      bytes = await upstream.arrayBuffer();
+    } catch {
+      await upstream.body?.cancel().catch(() => undefined);
+      log(`[bff] ${key} upstream file refused ${requestId}`);
+      return envelope(502, "service_unavailable", requestId);
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
+    const cache = upstream.headers.get("cache-control") ?? "";
+    responseHeaders.set("Cache-Control", /^\s*private\b/i.test(cache) ? cache : "no-store");
+    responseHeaders.set("Content-Type", type);
+    responseHeaders.set("X-Content-Type-Options", "nosniff");
+    responseHeaders.set("Content-Security-Policy", "default-src 'none'; sandbox");
+    const etag = upstream.headers.get("etag");
+    if (etag) responseHeaders.set("ETag", etag);
+    return new Response(bytes, { status: 200, headers: responseHeaders });
+  }
+
   let text: string;
   try {
     text = await upstream.text();
@@ -266,21 +317,29 @@ export async function proxyRequest(request: Request, segments: string[], deps: P
 
   if (!upstream.ok) {
     let code = codeForStatus(upstream.status);
-    let fields: { field: string }[] | undefined;
+    let fields: FieldError[] | undefined;
+    let current: object | undefined;
     try {
-      const parsed = JSON.parse(text) as { error?: { code?: unknown; fields?: unknown } };
+      const parsed = JSON.parse(text) as { error?: { code?: unknown; fields?: unknown; current?: unknown } };
       if (typeof parsed.error?.code === "string") code = parsed.error.code;
       if (Array.isArray(parsed.error?.fields)) {
-        fields = parsed.error.fields
-          .map((entry) => (entry as { field?: unknown }).field)
-          .filter((field): field is string => typeof field === "string")
-          .map((field) => ({ field }));
+        fields = parsed.error.fields.flatMap((entry) => {
+          const { field, reason } = entry as { field?: unknown; reason?: unknown };
+          if (typeof field !== "string") return [];
+          return typeof reason === "string" && REASON.test(reason) ? [{ field, reason }] : [{ field }];
+        });
+      }
+      // A version conflict carries the caller's own resource as it is now, so the page can
+      // re-apply its edit without another round trip. Nothing else passes.
+      const latest = parsed.error?.current;
+      if (code === "version_conflict" && latest && typeof latest === "object" && !Array.isArray(latest)) {
+        current = latest;
       }
     } catch {
       // non-JSON error body: the status says enough
     }
     if (upstream.status >= 500) log(`[bff] ${key} ${upstream.status} ${requestId}`);
-    return envelope(upstream.status, code, requestId, { fields });
+    return envelope(upstream.status, code, requestId, { fields, current });
   }
 
   if (spec.session === "issue") {

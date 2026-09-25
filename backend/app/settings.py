@@ -9,7 +9,7 @@ from __future__ import annotations
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import SecretStr
+from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # Placeholder for development only; validate_for_env() refuses it in production.
@@ -51,9 +51,17 @@ class Settings(BaseSettings):
     signup_attempts_per_ip: int = 20  # per auth_window_minutes
     code_requests_per_email: int = 5  # per auth_window_minutes
     auth_window_minutes: int = 15
+    email_change_requests_per_user: int = 3  # per auth_window_minutes
     argon2_time_cost: int = 3
     argon2_memory_kib: int = 64 * 1024
     argon2_parallelism: int = 2
+
+    # ---- profile photo ----
+    # The upload is the original file (JPEG/PNG/WebP); the stored photo is a 256 px WebP.
+    # The web app's proxy caps uploads at the default (docs/openapi.json `x-max-bytes`), so
+    # raising this alone changes nothing for browsers.
+    avatar_max_bytes: int = Field(default=5 * 1024 * 1024, ge=64 * 1024, le=20 * 1024 * 1024)
+    avatar_uploads_per_user: int = 10  # per auth_window_minutes
 
     # ---- email ----
     email_backend: Literal["smtp", "ollastack", "memory"] = "smtp"

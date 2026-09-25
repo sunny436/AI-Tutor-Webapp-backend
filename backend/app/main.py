@@ -10,12 +10,14 @@ the knowledge store, the LangChain retriever and the LangGraph graph together.
 
 from __future__ import annotations
 
+import asyncio
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from langchain_core.embeddings import Embeddings
 
+from app.auth.avatar import AVATAR_DECODES
 from app.auth.emails import EmailSender, build_email_sender
 from app.auth.router import router as auth_router
 from app.auth.security import Passwords
@@ -130,6 +132,7 @@ def create_app(
     app.state.email_sender = email_sender or build_email_sender(settings)
     app.state.passwords = Passwords(settings)
     app.state.generations = ActiveGenerations()
+    app.state.avatar_decodes = asyncio.Semaphore(AVATAR_DECODES)
 
     install_error_handlers(app)
     if settings.cors_origins:
@@ -140,7 +143,11 @@ def create_app(
             allow_methods=["GET", "POST", "PATCH", "PUT", "DELETE"],
             allow_headers=["Authorization", "Content-Type", "X-Request-ID"],
         )
-    app.add_middleware(RequestContextMiddleware, max_body_bytes=settings.max_body_bytes)
+    app.add_middleware(
+        RequestContextMiddleware,
+        max_body_bytes=settings.max_body_bytes,
+        body_limits={("PUT", "/v1/me/avatar"): settings.avatar_max_bytes},
+    )
 
     app.include_router(health_router)
     app.include_router(auth_router)

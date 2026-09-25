@@ -107,14 +107,44 @@ def build_email_sender(settings: Settings) -> EmailSender:
 
 
 def code_email(app_name: str, purpose: str, code: str, ttl_minutes: int) -> tuple[str, str]:
+    # Every purpose is named: an unknown one must fail loudly, not borrow another's wording.
     if purpose == "verify_email":
         subject = f"Your {app_name} verification code"
         intro = f"Use this code to verify your email address for {app_name}:"
-    else:
+    elif purpose == "reset_password":
         subject = f"Your {app_name} password reset code"
         intro = f"Use this code to reset your {app_name} password:"
+    elif purpose == "change_email":
+        subject = f"Your {app_name} email change code"
+        intro = f"Use this code to make this address the email of your {app_name} account:"
+    else:
+        raise ValueError(f"no email text for code purpose {purpose!r}")
     body = (
         f"{intro}\n\n    {code}\n\n"
         f"The code expires in {ttl_minutes} minutes. If you did not request it, ignore this email."
     )
     return subject, body
+
+
+def mask_email(address: str) -> str:
+    """`ab***@example.com`: enough for the owner to recognise, not enough to copy."""
+    local, _, domain = address.partition("@")
+    return f"{local[:2]}***@{domain}"
+
+
+def email_in_use_email(app_name: str) -> tuple[str, str]:
+    return (
+        f"Someone tried to use your email address on {app_name}",
+        f"Another {app_name} account asked to change its email to this address, which already belongs "
+        "to your account. Nothing was changed. If you did not expect this, you can ignore this email.",
+    )
+
+
+def email_changed_email(app_name: str, new_address: str) -> tuple[str, str]:
+    return (
+        f"The email address of your {app_name} account was changed",
+        f"The email address of your {app_name} account was changed to {mask_email(new_address)}, and "
+        "every other device was signed out.\n\n"
+        "If you did not do this, someone knows your password: reset it from the sign-in page with the "
+        "new address, or contact support from the app.",
+    )
