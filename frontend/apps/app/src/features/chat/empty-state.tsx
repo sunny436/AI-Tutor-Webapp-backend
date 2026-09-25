@@ -44,14 +44,16 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   return (
     <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col justify-between gap-8 px-3 py-6 sm:px-6 sm:py-8">
       <div>
-        <div className="mb-8 text-center">
+        {/* Compact on phones: the transcript opens scrolled to its end, so what
+            does not fit is cut from the top, where the heading is. */}
+        <div className="mb-6 text-center sm:mb-8">
           <span
             aria-hidden
-            className="bg-hero mx-auto mb-4 grid h-16 w-16 place-items-center rounded-2xl text-hero-foreground shadow-lg shadow-brand/25"
+            className="bg-hero mx-auto mb-4 hidden h-16 w-16 place-items-center rounded-2xl text-hero-foreground shadow-lg shadow-brand/25 sm:grid"
           >
             <Sparkles className="h-8 w-8" />
           </span>
-          <h2 className="font-display text-2xl font-black text-foreground">How can I help your studies today?</h2>
+          <h2 className="font-display text-xl font-black text-foreground sm:text-2xl">How can I help your studies today?</h2>
           <p className="mx-auto mt-2 max-w-md text-sm text-text-secondary">
             Ask doubts, practice board questions, or get instant step-by-step math and science solutions.
           </p>
@@ -63,7 +65,7 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
               <button
                 type="button"
                 onClick={() => void chat.send(chatKey, item.prompt)}
-                className="focus-ring group w-full rounded-2xl border border-border bg-card p-4 text-left elev-1 transition-all hover:border-brand/50 hover:elev-2"
+                className="focus-ring group w-full rounded-2xl border border-border bg-card p-3.5 text-left elev-1 transition-all hover:border-brand/50 hover:elev-2 sm:p-4"
               >
                 <span className="mb-1 flex items-center justify-between gap-2">
                   <span className="text-sm font-bold text-foreground transition-colors group-hover:text-brand">

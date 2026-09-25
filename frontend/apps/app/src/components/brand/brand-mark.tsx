@@ -15,6 +15,9 @@ export function BrandMark({ size = 40, className }: { size?: number; className?:
       width={size}
       height={size}
       draggable={false}
+      // Explicit size: Tailwind's base sets `img { height: auto }`, and in a
+      // stretching flex row the image then grew to the row's height.
+      style={{ width: size, height: size }}
       className={cn("shrink-0 select-none", className)}
     />
   );

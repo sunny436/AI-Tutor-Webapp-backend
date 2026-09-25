@@ -157,15 +157,14 @@ export function SidebarContent({
         </div>
 
         {preview && !collapsed && (
-          <div className="mx-4 mt-4 flex items-center justify-between gap-2 rounded-2xl border border-accent-warm/25 bg-gradient-to-r from-accent-warm-soft to-brand-soft p-3">
+          <div className="relative mx-4 mt-5 flex items-center justify-between gap-2 rounded-2xl border border-accent-warm/25 bg-gradient-to-r from-accent-warm-soft to-brand-soft p-3">
+            <PreviewBadge className="absolute -top-2 right-3" />
             <div className="flex min-w-0 items-center gap-2">
               <span aria-hidden className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-streak text-white shadow-sm">
                 <Flame className="h-4 w-4 fill-current" />
               </span>
               <div className="min-w-0">
-                <p className="flex items-center gap-1.5 text-xs font-bold text-foreground">
-                  {STUDENT_STATS.streakDays} Day Streak <PreviewBadge />
-                </p>
+                <p className="whitespace-nowrap text-xs font-bold text-foreground">{STUDENT_STATS.streakDays} Day Streak</p>
                 <p className="truncate text-2xs text-text-secondary">Keep learning daily!</p>
               </div>
             </div>
@@ -382,7 +381,7 @@ export function SidebarContent({
               aria-label={collapsed ? "Settings" : undefined}
               aria-current={pathname === "/settings" ? "page" : undefined}
               className={cn(
-                "focus-ring flex items-center gap-1.5 rounded-lg font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground aria-[current=page]:text-brand",
+                "focus-ring flex items-center gap-1.5 whitespace-nowrap rounded-lg font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground aria-[current=page]:text-brand",
                 collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",
               )}
             >
@@ -398,7 +397,7 @@ export function SidebarContent({
               disabled={signingOut}
               aria-label={collapsed ? "Log out" : undefined}
               className={cn(
-                "focus-ring flex items-center gap-1.5 rounded-lg font-medium text-destructive transition-colors hover:bg-destructive/10 disabled:opacity-50",
+                "focus-ring flex items-center gap-1.5 whitespace-nowrap rounded-lg font-medium text-destructive transition-colors hover:bg-destructive/10 disabled:opacity-50",
                 collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",
               )}
             >
