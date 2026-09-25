@@ -8,7 +8,7 @@ import { SoonLabel, ToolPage } from "./tool-page";
 /** Summarizer (preview): the input, and one summary of the kind it would make. */
 export function SummarizerView() {
   return (
-    <ToolPage>
+    <ToolPage label="Summarizer">
       <section className="space-y-4 rounded-2xl border border-border bg-card p-5 elev-1 sm:p-6">
         <div>
           <h2 className="text-lg font-bold text-foreground">Chapter Summarizer</h2>

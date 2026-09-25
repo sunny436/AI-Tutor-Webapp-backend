@@ -8,7 +8,7 @@ import { SoonLabel, ToolPage } from "./tool-page";
 /** Homework Helper (preview): where a photo would go, and one worked example. */
 export function HomeworkView() {
   return (
-    <ToolPage>
+    <ToolPage label="Homework Helper">
       <section className="rounded-3xl border-2 border-dashed border-brand/30 bg-brand-soft/40 p-6 text-center sm:p-8">
         <span aria-hidden className="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-2xl bg-brand-soft text-brand">
           <UploadCloud className="h-8 w-8" />

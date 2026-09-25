@@ -10,18 +10,29 @@ const WIDTHS = { narrow: "max-w-3xl", default: "max-w-4xl", wide: "max-w-6xl" } 
  * scroll), a measure, and — first, above everything — the notice that what
  * follows is sample data. These pages exist only with preview features on
  * (lib/preview.ts); the notice is what keeps even a preview honest.
+ *
+ * The scroll area is a named, focusable region: a page whose only controls are
+ * disabled ("Soon") would otherwise give a keyboard no way to scroll it.
  */
 export function ToolPage({
+  label,
   width = "default",
   className,
   children,
 }: {
+  label: string;
   width?: keyof typeof WIDTHS;
   className?: string;
   children: ReactNode;
 }) {
   return (
-    <div className="scrollbar-subtle h-full overflow-y-auto">
+    <div
+      // biome-ignore lint/a11y/noNoninteractiveTabindex: a scrollable region must be keyboard-focusable to be scrollable
+      tabIndex={0}
+      role="region"
+      aria-label={label}
+      className="scrollbar-subtle focus-ring-inset h-full overflow-y-auto"
+    >
       <div className={cn("mx-auto flex w-full flex-col gap-6 px-4 py-6 sm:px-6", WIDTHS[width], className)}>
         <p
           role="note"

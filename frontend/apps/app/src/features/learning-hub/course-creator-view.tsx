@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@v1/ui/button";
 import { Input } from "@v1/ui/input";
 import { Sparkles } from "lucide-react";
@@ -11,7 +13,7 @@ const selectClass =
 /** Course Creator (preview): the study-plan form; generating a plan is not built yet. */
 export function CourseCreatorView() {
   return (
-    <ToolPage width="narrow">
+    <ToolPage label="Course Creator" width="narrow">
       <section className="space-y-6 rounded-2xl border border-border bg-card p-5 elev-1 sm:p-6">
         <div className="text-center">
           <span

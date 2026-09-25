@@ -22,7 +22,7 @@ export function FlashcardsView() {
   };
 
   return (
-    <ToolPage width="narrow" className="items-center">
+    <ToolPage label="Flashcards" width="narrow" className="items-center">
       <div className="text-center">
         <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand">
           Flashcard {index + 1} of {FLASHCARDS.length}

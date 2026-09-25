@@ -15,7 +15,7 @@ export function CoursesView() {
   if (!selected) return null;
 
   return (
-    <ToolPage width="wide">
+    <ToolPage label="My Courses" width="wide">
       <section className="bg-hero-deep relative overflow-hidden rounded-3xl p-6 text-hero-foreground shadow-xl sm:p-8">
         <div className="relative max-w-2xl">
           <span className="mb-3 inline-block rounded-full bg-hero-foreground/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider">
