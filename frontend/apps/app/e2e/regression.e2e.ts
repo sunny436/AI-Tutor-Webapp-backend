@@ -7,9 +7,11 @@ import {
   createAccount,
   deleteAccount,
   expect,
+  lastReply,
   replies,
   seedTurn,
   test,
+  waitForIdle,
 } from "./support";
 
 /**
@@ -183,4 +185,14 @@ test("an unknown page shows the not-found screen, with a way back", async ({ pag
   await page.getByRole("link", { name: "Start a new chat" }).click();
   await expect(page).toHaveURL("/");
   await expect(composer(page)).toBeVisible();
+});
+
+test("a suggested question is sent as an ordinary message", async ({ page, account: _ }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: /^Quadratic Formula/ }).click();
+  await expect(page).toHaveURL(/\/c\/[0-9a-f-]{36}$/);
+  await waitForIdle(page);
+  await expect(page.getByRole("article", { name: "You" })).toHaveText(/Give me the Quadratic Formula/);
+  await expect(lastReply(page)).toContainText("You said: Give me the Quadratic Formula");
+  await expect(chatLinks(page)).toHaveCount(1);
 });

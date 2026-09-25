@@ -42,10 +42,10 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
   if (status === "not_found") {
     body = (
       <div className="flex flex-1 flex-col items-center justify-center px-6 py-12 text-center">
-        <span aria-hidden className="mb-3 grid h-11 w-11 place-items-center rounded-xl bg-surface-2 text-text-secondary">
-          <MessageSquareOff className="h-5 w-5" />
+        <span aria-hidden className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-surface-2 text-text-secondary">
+          <MessageSquareOff className="h-6 w-6" />
         </span>
-        <h2 className="font-display text-lg font-semibold text-foreground">This chat isn't available</h2>
+        <h2 className="font-display text-xl font-bold text-foreground">This chat isn't available</h2>
         <p className="mt-1 max-w-sm text-sm text-text-secondary">It may have been deleted, or it belongs to another account.</p>
         <Button asChild size="sm" className="mt-4">
           <Link href="/">Start a new chat</Link>
@@ -56,7 +56,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
     const description = describeCode(entry?.loadError?.code, entry?.loadError?.requestId);
     body = (
       <div role="alert" className="flex flex-1 flex-col items-center justify-center px-6 py-12 text-center">
-        <h2 className="font-display text-lg font-semibold text-foreground">{description.title}</h2>
+        <h2 className="font-display text-xl font-bold text-foreground">{description.title}</h2>
         <p className="mt-1 max-w-sm text-sm text-text-secondary">{description.message}</p>
         {entry?.conversationId && (
           <Button
@@ -73,17 +73,17 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
     );
   } else if ((status === "loading" || status === "idle") && order.length === 0) {
     body = (
-      <SkeletonGroup label="Loading conversation" className="mx-auto w-full max-w-3xl space-y-6 px-3 py-6 sm:px-5">
+      <SkeletonGroup label="Loading conversation" className="mx-auto w-full max-w-4xl space-y-6 px-3 py-6 sm:px-6">
         <Skeleton className="ml-auto h-10 w-2/5 rounded-2xl" />
         <Skeleton className="h-24 w-4/5 rounded-2xl" />
         <Skeleton className="ml-auto h-10 w-1/3 rounded-2xl" />
       </SkeletonGroup>
     );
   } else if (order.length === 0) {
-    body = <ChatEmptyState />;
+    body = <ChatEmptyState chatKey={chatKey} />;
   } else {
     body = (
-      <div className="mx-auto w-full max-w-3xl space-y-6 px-3 py-6 sm:px-5">
+      <div className="mx-auto w-full max-w-4xl space-y-5 px-3 py-6 sm:px-6">
         {entry?.nextCursor && (
           <div className="flex justify-center">
             <Button type="button" variant="ghost" size="sm" onClick={loadOlder} disabled={entry.loadingOlder}>
@@ -109,7 +109,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
         <button
           type="button"
           onClick={() => scrollToBottom("smooth")}
-          className="focus-ring absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium text-foreground elev-2 transition hover:bg-surface-2"
+          className="focus-ring absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-brand elev-2 transition hover:bg-brand-soft"
         >
           <ArrowDown aria-hidden className="h-3.5 w-3.5" />
           Jump to latest

@@ -53,7 +53,7 @@ test("a user's whole journey", async ({ page, context }) => {
     await page.getByLabel("Code").fill(await mailCode(email, "verify"));
     await page.getByRole("button", { name: "Verify email" }).click();
     await expect(page).toHaveURL("/");
-    await expect(page.getByRole("heading", { name: "How can I help?" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "How can I help your studies today?" })).toBeVisible();
   });
 
   await test.step("the session is an httpOnly cookie the page cannot read", async () => {
@@ -178,7 +178,7 @@ test("a user's whole journey", async ({ page, context }) => {
   await test.step("start a second chat", async () => {
     await page.getByRole("link", { name: "Ask New Doubt" }).click();
     await expect(page).toHaveURL("/");
-    await expect(page.getByRole("heading", { name: "How can I help?" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "How can I help your studies today?" })).toBeVisible();
     await sendAndWait(page, "A second chat");
     second = conversationIdOf(page);
     expect(second).not.toBe(first);

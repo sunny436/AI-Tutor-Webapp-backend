@@ -51,7 +51,7 @@ test("sign-in and sign-up pages", async ({ page }) => {
 
 test("the chat, empty and with a reply, in light and dark", async ({ page, account: _ }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: "How can I help?" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "How can I help your studies today?" })).toBeVisible();
   await expectAccessible(page);
 
   await sendAndWait(page, "A **table**:\n\n| a | b |\n| - | - |\n| 1 | 2 |\n\n```ts\nconst x = 1;\n```\n\n$e^{i\\pi} + 1 = 0$");
@@ -153,7 +153,10 @@ test("the chat dialogs keep focus inside, close on Escape and give focus back", 
   });
 });
 
-test("the skip link goes to the page, then one Tab reaches the message box", async ({ page, account: _ }) => {
+test("the skip link goes to the page, then Tab reaches the suggestions and the message box", async ({
+  page,
+  account: _,
+}) => {
   await page.goto("/");
   // Arrival focuses the composer on a desktop (once hydrated; wait for it, or it
   // takes focus back after the reset below). Then start from the top, as a fresh
@@ -169,6 +172,11 @@ test("the skip link goes to the page, then one Tab reaches the message box", asy
   await expect(skip).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main")).toBeFocused();
+  // A new chat offers four suggested questions first, in reading order, then the box.
+  await page.keyboard.press("Tab");
+  await expect(page.getByRole("button", { name: /^Explain Photosynthesis/ })).toBeFocused();
+  for (let step = 0; step < 3; step += 1) await page.keyboard.press("Tab");
+  await expect(page.getByRole("button", { name: /^French Revolution Recapped/ })).toBeFocused();
   await page.keyboard.press("Tab");
   await expect(page.getByRole("textbox", { name: "Message" })).toBeFocused();
 });
