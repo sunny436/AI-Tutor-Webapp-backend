@@ -8,7 +8,7 @@ from typing import Any, Literal
 
 from pydantic import EmailStr, Field, field_validator, model_validator
 
-from app.schemas import ApiModel, RequestModel
+from app.schemas import ApiModel, RequestModel, check_set_reset
 
 Password = Field(min_length=8, max_length=128)
 Code = Field(pattern=r"^\d{6}$")
@@ -131,14 +131,7 @@ class UpdateProfileRequest(RequestModel):
 
     @model_validator(mode="after")
     def _one_meaning_per_field(self) -> UpdateProfileRequest:
-        explicit = self.set.model_fields_set
-        if any(value is None for name, value in self.set if name in explicit):
-            raise ValueError("null is not a value in `set`; list the field in `reset` instead")
-        named = {ProfileSet.model_fields[name].alias or name for name in explicit}
-        if named & set(self.reset):
-            raise ValueError("a field cannot be both set and reset")
-        if len(set(self.reset)) != len(self.reset):
-            raise ValueError("a field is listed twice in `reset`")
+        check_set_reset(self.set, self.reset)
         return self
 
 

@@ -29,6 +29,7 @@ from app.db.models import EMBEDDING_DIMENSIONS
 from app.db.session import Database
 from app.errors import install_error_handlers
 from app.health import router as health_router
+from app.learning.router import router as learning_router
 from app.llm.base import LLMProvider
 from app.llm.factory import build_llm
 from app.logging import configure_logging, get_logger
@@ -38,6 +39,7 @@ from app.rag.graph import RagDependencies, build_rag_graph
 from app.rag.retriever import PgVectorRetriever
 from app.rag.store import KnowledgeStore
 from app.rag.types import AccessScope, RetrievalOptions
+from app.ratelimit import SlidingWindowLimiter
 from app.settings import Settings, get_settings
 
 log = get_logger("app")
@@ -133,6 +135,7 @@ def create_app(
     app.state.passwords = Passwords(settings)
     app.state.generations = ActiveGenerations()
     app.state.avatar_decodes = asyncio.Semaphore(AVATAR_DECODES)
+    app.state.tutor_preview_limiter = SlidingWindowLimiter(limit=60, window_s=60)
 
     install_error_handlers(app)
     if settings.cors_origins:
@@ -153,4 +156,5 @@ def create_app(
     app.include_router(auth_router)
     app.include_router(conversations_router)
     app.include_router(chat_router)
+    app.include_router(learning_router)
     return app

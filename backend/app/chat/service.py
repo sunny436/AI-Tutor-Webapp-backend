@@ -31,6 +31,7 @@ from app.conversations.router import conversation_out, message_out
 from app.db.models import Conversation, Message, UsageEvent, User
 from app.db.session import Database
 from app.errors import Conflict, NotFound, RateLimited, ValidationFailed
+from app.learning.context import read_student_context
 from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
 from app.settings import Settings
@@ -180,11 +181,12 @@ class ChatService:
         await session.flush()
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
+        student = await read_student_context(session, user.id)
         await session.commit()
         await session.refresh(conversation)
         await session.refresh(user_message)
         return PreparedTurn(
-            user, conversation, user_message, assistant.id, resolve_assistant_config(user, conversation)
+            user, conversation, user_message, assistant.id, resolve_assistant_config(user, conversation, student)
         )
 
     async def prepare_regenerate(self, session: AsyncSession, user: User, conversation_id: uuid.UUID) -> PreparedTurn:
@@ -204,6 +206,7 @@ class ChatService:
         last.status = "superseded"
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
+        student = await read_student_context(session, user.id)
         await session.commit()
         await session.refresh(conversation)
         return PreparedTurn(
@@ -211,7 +214,7 @@ class ChatService:
             conversation,
             None,
             assistant.id,
-            resolve_assistant_config(user, conversation),
+            resolve_assistant_config(user, conversation, student),
             replaces_message_id=last.id,
         )
 

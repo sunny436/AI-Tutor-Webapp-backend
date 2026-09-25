@@ -102,6 +102,25 @@ def test_dependency_direction():
         assert not {m for m in _imports(module) if m.startswith(("langchain", "langgraph"))}, module.name
 
 
+def test_the_learning_domain_is_reached_only_through_its_public_modules():
+    """Other domains read a student's context (app.learning.context) and render the tutor's
+    instructions (app.learning.tutor); only the composition root mounts its router. Nothing
+    else reaches into Learning's tables or service, and Learning depends on no other domain."""
+    app_dir = BACKEND / "app"
+    public = {"app.learning.context", "app.learning.tutor"}
+    for module in app_dir.rglob("*.py"):
+        if app_dir / "learning" in module.parents:
+            continue
+        allowed = public | ({"app.learning.router"} if module.name == "main.py" else set())
+        reached = {m for m in _imports(module) if m.startswith("app.learning")}
+        assert reached <= allowed, (module.relative_to(app_dir), reached - allowed)
+    for module in app_dir.joinpath("learning").glob("*.py"):
+        other_domains = {
+            m for m in _imports(module) if m.startswith(("app.chat", "app.conversations", "app.rag", "app.llm"))
+        }
+        assert not other_domains, (module.name, other_domains)
+
+
 async def test_embedding_dimension_matches_everywhere(database):
     assert Settings(_env_file=None).embedding_dimensions == EMBEDDING_DIMENSIONS == 1536
     engine = create_async_engine(database)

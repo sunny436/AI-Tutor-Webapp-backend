@@ -20,6 +20,7 @@ PUBLIC = {
     ("POST", "/v1/auth/resend-code"): "before signing in",
     ("POST", "/v1/auth/password/forgot"): "before signing in",
     ("POST", "/v1/auth/password/reset"): "signs in",
+    ("GET", "/v1/catalog/academic"): "the same reference data for everyone, needed before sign-up is complete",
 }
 
 PARAMETER = re.compile(r"\{[^}]+\}")

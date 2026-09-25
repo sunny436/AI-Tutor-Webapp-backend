@@ -1,6 +1,67 @@
 {
   "components": {
     "schemas": {
+      "AcademicCatalogOut": {
+        "properties": {
+          "academicYears": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogEntryOut"
+            },
+            "title": "Academicyears",
+            "type": "array"
+          },
+          "boardStates": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogEntryOut"
+            },
+            "title": "Boardstates",
+            "type": "array"
+          },
+          "boards": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogEntryOut"
+            },
+            "title": "Boards",
+            "type": "array"
+          },
+          "grades": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogEntryOut"
+            },
+            "title": "Grades",
+            "type": "array"
+          },
+          "mediums": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogEntryOut"
+            },
+            "title": "Mediums",
+            "type": "array"
+          },
+          "subjects": {
+            "items": {
+              "$ref": "#/components/schemas/CatalogEntryOut"
+            },
+            "title": "Subjects",
+            "type": "array"
+          },
+          "version": {
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version",
+          "grades",
+          "boards",
+          "boardStates",
+          "mediums",
+          "academicYears",
+          "subjects"
+        ],
+        "title": "AcademicCatalogOut",
+        "type": "object"
+      },
       "AcceptedOut": {
         "properties": {
           "status": {
@@ -52,6 +113,29 @@
           "status"
         ],
         "title": "CancelOut",
+        "type": "object"
+      },
+      "CatalogEntryOut": {
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "deprecated": {
+            "title": "Deprecated",
+            "type": "boolean"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "name",
+          "deprecated"
+        ],
+        "title": "CatalogEntryOut",
         "type": "object"
       },
       "ChangePasswordRequest": {
@@ -362,6 +446,824 @@
         "title": "HTTPValidationError",
         "type": "object"
       },
+      "LearnerProfileOut": {
+        "properties": {
+          "academicYear": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Academicyear"
+          },
+          "board": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Board"
+          },
+          "boardState": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Boardstate"
+          },
+          "dailyActiveMinutesGoal": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dailyactiveminutesgoal"
+          },
+          "grade": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grade"
+          },
+          "longTermGoal": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Longtermgoal"
+          },
+          "mainGoal": {
+            "anyOf": [
+              {
+                "enum": [
+                  "board_exams",
+                  "competitive_exam",
+                  "better_marks",
+                  "understand_concepts",
+                  "homework_help",
+                  "other"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maingoal"
+          },
+          "medium": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Medium"
+          },
+          "preferredStudyTime": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "\"HH:MM\", 24-hour, in the user's time zone.",
+            "title": "Preferredstudytime"
+          },
+          "shortTermGoal": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shorttermgoal"
+          },
+          "targetExam": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Targetexam"
+          },
+          "targetScorePercent": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Targetscorepercent"
+          },
+          "updatedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updatedat"
+          },
+          "version": {
+            "description": "Send it back with PATCH /v1/learning/profile.",
+            "title": "Version",
+            "type": "integer"
+          },
+          "weakTopics": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Weaktopics",
+            "type": "array"
+          },
+          "weeklyActiveMinutesGoal": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weeklyactiveminutesgoal"
+          }
+        },
+        "required": [
+          "version",
+          "grade",
+          "board",
+          "boardState",
+          "medium",
+          "academicYear",
+          "mainGoal",
+          "targetExam",
+          "targetScorePercent",
+          "weakTopics",
+          "dailyActiveMinutesGoal",
+          "weeklyActiveMinutesGoal",
+          "preferredStudyTime",
+          "shortTermGoal",
+          "longTermGoal",
+          "updatedAt"
+        ],
+        "title": "LearnerProfileOut",
+        "type": "object"
+      },
+      "LearnerProfileSet": {
+        "additionalProperties": false,
+        "description": "Fields to set. Absent fields are unchanged; `null` is not a value (use `reset`).",
+        "properties": {
+          "academicYear": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "minLength": 1,
+                "pattern": "^[a-z0-9_]+$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Academicyear"
+          },
+          "board": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "minLength": 1,
+                "pattern": "^[a-z0-9_]+$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Board"
+          },
+          "boardState": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "minLength": 1,
+                "pattern": "^[a-z0-9_]+$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Only with board `state`.",
+            "title": "Boardstate"
+          },
+          "dailyActiveMinutesGoal": {
+            "anyOf": [
+              {
+                "maximum": 720.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dailyactiveminutesgoal"
+          },
+          "grade": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "minLength": 1,
+                "pattern": "^[a-z0-9_]+$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grade"
+          },
+          "longTermGoal": {
+            "anyOf": [
+              {
+                "maxLength": 280,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Longtermgoal"
+          },
+          "mainGoal": {
+            "anyOf": [
+              {
+                "enum": [
+                  "board_exams",
+                  "competitive_exam",
+                  "better_marks",
+                  "understand_concepts",
+                  "homework_help",
+                  "other"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maingoal"
+          },
+          "medium": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "minLength": 1,
+                "pattern": "^[a-z0-9_]+$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Medium"
+          },
+          "preferredStudyTime": {
+            "anyOf": [
+              {
+                "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Preferredstudytime"
+          },
+          "shortTermGoal": {
+            "anyOf": [
+              {
+                "maxLength": 280,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shorttermgoal"
+          },
+          "targetExam": {
+            "anyOf": [
+              {
+                "maxLength": 80,
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Targetexam"
+          },
+          "targetScorePercent": {
+            "anyOf": [
+              {
+                "maximum": 100.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Targetscorepercent"
+          },
+          "weakTopics": {
+            "anyOf": [
+              {
+                "items": {
+                  "maxLength": 60,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "maxItems": 10,
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weaktopics"
+          },
+          "weeklyActiveMinutesGoal": {
+            "anyOf": [
+              {
+                "maximum": 5040.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weeklyactiveminutesgoal"
+          }
+        },
+        "title": "LearnerProfileSet",
+        "type": "object"
+      },
+      "LearningPreferencesOut": {
+        "properties": {
+          "answerMode": {
+            "enum": [
+              "auto",
+              "direct",
+              "hints_first",
+              "socratic"
+            ],
+            "title": "Answermode",
+            "type": "string"
+          },
+          "askBeforeAnswer": {
+            "enum": [
+              "auto",
+              "on",
+              "off"
+            ],
+            "title": "Askbeforeanswer",
+            "type": "string"
+          },
+          "difficulty": {
+            "enum": [
+              "auto",
+              "easy",
+              "medium",
+              "hard"
+            ],
+            "title": "Difficulty",
+            "type": "string"
+          },
+          "explanationLevel": {
+            "enum": [
+              "auto",
+              "simple",
+              "standard",
+              "detailed"
+            ],
+            "title": "Explanationlevel",
+            "type": "string"
+          },
+          "highlightKeyConcepts": {
+            "enum": [
+              "auto",
+              "on",
+              "off"
+            ],
+            "title": "Highlightkeyconcepts",
+            "type": "string"
+          },
+          "language": {
+            "enum": [
+              "auto",
+              "english",
+              "hindi",
+              "hinglish"
+            ],
+            "title": "Language",
+            "type": "string"
+          },
+          "mistakeCorrection": {
+            "enum": [
+              "auto",
+              "gentle",
+              "direct"
+            ],
+            "title": "Mistakecorrection",
+            "type": "string"
+          },
+          "pace": {
+            "enum": [
+              "auto",
+              "slow",
+              "steady",
+              "fast"
+            ],
+            "title": "Pace",
+            "type": "string"
+          },
+          "personality": {
+            "enum": [
+              "auto",
+              "friendly",
+              "encouraging",
+              "professional"
+            ],
+            "title": "Personality",
+            "type": "string"
+          },
+          "practiceQuestions": {
+            "enum": [
+              "auto",
+              "on",
+              "off"
+            ],
+            "title": "Practicequestions",
+            "type": "string"
+          },
+          "realWorldExamples": {
+            "enum": [
+              "auto",
+              "more",
+              "fewer"
+            ],
+            "title": "Realworldexamples",
+            "type": "string"
+          },
+          "responseLength": {
+            "enum": [
+              "auto",
+              "short",
+              "medium",
+              "long"
+            ],
+            "title": "Responselength",
+            "type": "string"
+          },
+          "stepByStep": {
+            "enum": [
+              "auto",
+              "on",
+              "off"
+            ],
+            "title": "Stepbystep",
+            "type": "string"
+          },
+          "updatedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updatedat"
+          },
+          "version": {
+            "description": "Send it back with PATCH /v1/learning/preferences.",
+            "title": "Version",
+            "type": "integer"
+          },
+          "visualExplanations": {
+            "enum": [
+              "auto",
+              "more",
+              "fewer"
+            ],
+            "title": "Visualexplanations",
+            "type": "string"
+          }
+        },
+        "required": [
+          "version",
+          "language",
+          "explanationLevel",
+          "pace",
+          "difficulty",
+          "realWorldExamples",
+          "visualExplanations",
+          "personality",
+          "responseLength",
+          "answerMode",
+          "stepByStep",
+          "askBeforeAnswer",
+          "practiceQuestions",
+          "mistakeCorrection",
+          "highlightKeyConcepts",
+          "updatedAt"
+        ],
+        "title": "LearningPreferencesOut",
+        "type": "object"
+      },
+      "LearningPreferencesSet": {
+        "additionalProperties": false,
+        "description": "Fields to set. `auto` (the default) adds nothing to what the tutor is told.",
+        "properties": {
+          "answerMode": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "direct",
+                  "hints_first",
+                  "socratic"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Answermode"
+          },
+          "askBeforeAnswer": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "on",
+                  "off"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Askbeforeanswer"
+          },
+          "difficulty": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "easy",
+                  "medium",
+                  "hard"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Difficulty"
+          },
+          "explanationLevel": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "simple",
+                  "standard",
+                  "detailed"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Explanationlevel"
+          },
+          "highlightKeyConcepts": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "on",
+                  "off"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Highlightkeyconcepts"
+          },
+          "language": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "english",
+                  "hindi",
+                  "hinglish"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Language"
+          },
+          "mistakeCorrection": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "gentle",
+                  "direct"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mistakecorrection"
+          },
+          "pace": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "slow",
+                  "steady",
+                  "fast"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pace"
+          },
+          "personality": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "friendly",
+                  "encouraging",
+                  "professional"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Personality"
+          },
+          "practiceQuestions": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "on",
+                  "off"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Practicequestions"
+          },
+          "realWorldExamples": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "more",
+                  "fewer"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Realworldexamples"
+          },
+          "responseLength": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "short",
+                  "medium",
+                  "long"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Responselength"
+          },
+          "stepByStep": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "on",
+                  "off"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Stepbystep"
+          },
+          "visualExplanations": {
+            "anyOf": [
+              {
+                "enum": [
+                  "auto",
+                  "more",
+                  "fewer"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Visualexplanations"
+          }
+        },
+        "title": "LearningPreferencesSet",
+        "type": "object"
+      },
       "LoginRequest": {
         "additionalProperties": false,
         "properties": {
@@ -505,6 +1407,31 @@
           "title"
         ],
         "title": "RenameConversationRequest",
+        "type": "object"
+      },
+      "ReplaceSubjectsRequest": {
+        "additionalProperties": false,
+        "description": "The whole list, in the order to show it. Replaces the stored list.",
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/SubjectIn"
+            },
+            "maxItems": 15,
+            "title": "Items",
+            "type": "array"
+          },
+          "version": {
+            "minimum": 0.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version",
+          "items"
+        ],
+        "title": "ReplaceSubjectsRequest",
         "type": "object"
       },
       "ResendCodeRequest": {
@@ -708,6 +1635,226 @@
           "password"
         ],
         "title": "SignupRequest",
+        "type": "object"
+      },
+      "SubjectIn": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "maxLength": 40,
+            "minLength": 1,
+            "pattern": "^[a-z0-9_]+$",
+            "title": "Code",
+            "type": "string"
+          },
+          "isPriority": {
+            "default": false,
+            "title": "Ispriority",
+            "type": "boolean"
+          },
+          "needsImprovement": {
+            "default": false,
+            "title": "Needsimprovement",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code"
+        ],
+        "title": "SubjectIn",
+        "type": "object"
+      },
+      "SubjectOut": {
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "isPriority": {
+            "title": "Ispriority",
+            "type": "boolean"
+          },
+          "needsImprovement": {
+            "title": "Needsimprovement",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code",
+          "isPriority",
+          "needsImprovement"
+        ],
+        "title": "SubjectOut",
+        "type": "object"
+      },
+      "SubjectsOut": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/SubjectOut"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "version": {
+            "description": "Send it back with PUT /v1/learning/subjects.",
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version",
+          "items"
+        ],
+        "title": "SubjectsOut",
+        "type": "object"
+      },
+      "TutorPreviewOut": {
+        "properties": {
+          "instructions": {
+            "description": "Exactly what the student's settings add to the tutor's instructions; empty when nothing.",
+            "title": "Instructions",
+            "type": "string"
+          },
+          "maxChars": {
+            "title": "Maxchars",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "instructions",
+          "maxChars"
+        ],
+        "title": "TutorPreviewOut",
+        "type": "object"
+      },
+      "TutorPreviewRequest": {
+        "additionalProperties": false,
+        "description": "Unsaved edits to preview. Each part given replaces or overlays what is stored: `profile`\nand `preferences` fields override the stored ones, `subjects` replaces the stored list.\nNothing is saved.",
+        "properties": {
+          "preferences": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LearningPreferencesSet"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "profile": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/LearnerProfileSet"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "subjects": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/SubjectIn"
+                },
+                "maxItems": 15,
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subjects"
+          }
+        },
+        "title": "TutorPreviewRequest",
+        "type": "object"
+      },
+      "UpdateLearnerProfileRequest": {
+        "additionalProperties": false,
+        "description": "`{version, set, reset}` (docs/api-contract.md, \"Versioned edits\").",
+        "properties": {
+          "reset": {
+            "items": {
+              "enum": [
+                "grade",
+                "board",
+                "boardState",
+                "medium",
+                "academicYear",
+                "mainGoal",
+                "targetExam",
+                "targetScorePercent",
+                "weakTopics",
+                "dailyActiveMinutesGoal",
+                "weeklyActiveMinutesGoal",
+                "preferredStudyTime",
+                "shortTermGoal",
+                "longTermGoal"
+              ],
+              "type": "string"
+            },
+            "maxItems": 14,
+            "title": "Reset",
+            "type": "array"
+          },
+          "set": {
+            "$ref": "#/components/schemas/LearnerProfileSet"
+          },
+          "version": {
+            "minimum": 0.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "title": "UpdateLearnerProfileRequest",
+        "type": "object"
+      },
+      "UpdateLearningPreferencesRequest": {
+        "additionalProperties": false,
+        "description": "`{version, set, reset}`; `reset` returns a field to `auto`.",
+        "properties": {
+          "reset": {
+            "items": {
+              "enum": [
+                "language",
+                "explanationLevel",
+                "pace",
+                "difficulty",
+                "realWorldExamples",
+                "visualExplanations",
+                "personality",
+                "responseLength",
+                "answerMode",
+                "stepByStep",
+                "askBeforeAnswer",
+                "practiceQuestions",
+                "mistakeCorrection",
+                "highlightKeyConcepts"
+              ],
+              "type": "string"
+            },
+            "maxItems": 14,
+            "title": "Reset",
+            "type": "array"
+          },
+          "set": {
+            "$ref": "#/components/schemas/LearningPreferencesSet"
+          },
+          "version": {
+            "minimum": 0.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "title": "UpdateLearningPreferencesRequest",
         "type": "object"
       },
       "UpdateMeRequest": {
@@ -1337,6 +2484,29 @@
         ]
       }
     },
+    "/v1/catalog/academic": {
+      "get": {
+        "description": "The values a learner profile may use. Public and the same for everyone: cache it by its\nETag (`If-None-Match` answers 304). Codes are permanent; `deprecated` ones are shown but can\nno longer be chosen anew.",
+        "operationId": "academic_catalog_v1_catalog_academic_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCatalogOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Academic Catalog",
+        "tags": [
+          "learning",
+          "catalog"
+        ]
+      }
+    },
     "/v1/chat": {
       "post": {
         "operationId": "chat_complete_v1_chat_post",
@@ -1756,6 +2926,231 @@
         "summary": "Replace the last reply with a new one (Server-Sent Events)",
         "tags": [
           "chat"
+        ]
+      }
+    },
+    "/v1/learning/preferences": {
+      "get": {
+        "operationId": "get_learning_preferences_v1_learning_preferences_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearningPreferencesOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Learning Preferences",
+        "tags": [
+          "learning"
+        ]
+      },
+      "patch": {
+        "description": "Versioned edit: `{version, set, reset}`; `reset` returns a preference to `auto`.",
+        "operationId": "update_learning_preferences_v1_learning_preferences_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLearningPreferencesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearningPreferencesOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Learning Preferences",
+        "tags": [
+          "learning"
+        ]
+      }
+    },
+    "/v1/learning/profile": {
+      "get": {
+        "operationId": "get_learner_profile_v1_learning_profile_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearnerProfileOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Learner Profile",
+        "tags": [
+          "learning"
+        ]
+      },
+      "patch": {
+        "description": "Versioned edit: `{version, set, reset}` (docs/api-contract.md). Catalog codes must exist;\na deprecated one may only be kept. `boardState` needs board `state`.",
+        "operationId": "update_learner_profile_v1_learning_profile_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLearnerProfileRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearnerProfileOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Learner Profile",
+        "tags": [
+          "learning"
+        ]
+      }
+    },
+    "/v1/learning/subjects": {
+      "get": {
+        "operationId": "get_subjects_v1_learning_subjects_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubjectsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Subjects",
+        "tags": [
+          "learning"
+        ]
+      },
+      "put": {
+        "description": "Replaces the whole list; its order is the order to show. Versioned like a PATCH.",
+        "operationId": "replace_subjects_v1_learning_subjects_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReplaceSubjectsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubjectsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Replace Subjects",
+        "tags": [
+          "learning"
+        ]
+      }
+    },
+    "/v1/learning/tutor-preview": {
+      "post": {
+        "description": "What the tutor would be told with these (unsaved) edits: the same function the chat\nuses, so the preview cannot differ from a real conversation. Nothing is saved.",
+        "operationId": "tutor_preview_v1_learning_tutor_preview_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TutorPreviewRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TutorPreviewOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Tutor Preview",
+        "tags": [
+          "learning"
         ]
       }
     },

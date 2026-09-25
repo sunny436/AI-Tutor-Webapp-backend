@@ -106,7 +106,9 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   wires everything; tests inject fakes through it. `Settings.validate_for_env()` refuses unsafe
   production values.
 - **A chat turn** (`app/chat/service.py`): *prepare* runs in the request transaction (conversation,
-  409 if a reply is already streaming, quotas, user message + assistant placeholder). *Generate* runs
+  409 if a reply is already streaming, quotas, user message + assistant placeholder, and the student's
+  learning context, which `app/learning/tutor.py` turns into instructions after the frozen system
+  prompt; nothing set means no instructions). *Generate* runs
   as an independent asyncio task registered in `app/chat/streams.py`. It runs the LangGraph graph
   `receive_query → retrieve_context → assemble_context → generate_answer` (`app/rag/graph.py`), emits
   SSE `meta`/`token`/`done`/`error`, and persists the result. Stop and disconnect cancel the task.

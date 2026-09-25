@@ -70,6 +70,15 @@ export const ROUTES = {
   "POST /v1/me/email/confirm": { auth: true, body: "EmailConfirmRequest" },
   "DELETE /v1/me": { auth: true, body: "DeleteMeRequest", session: "clear" },
 
+  "GET /v1/catalog/academic": { auth: false },
+  "GET /v1/learning/profile": { auth: true },
+  "PATCH /v1/learning/profile": { auth: true, body: "UpdateLearnerProfileRequest" },
+  "GET /v1/learning/subjects": { auth: true },
+  "PUT /v1/learning/subjects": { auth: true, body: "ReplaceSubjectsRequest" },
+  "GET /v1/learning/preferences": { auth: true },
+  "PATCH /v1/learning/preferences": { auth: true, body: "UpdateLearningPreferencesRequest" },
+  "POST /v1/learning/tutor-preview": { auth: true, body: "TutorPreviewRequest" },
+
   "GET /v1/conversations": { auth: true, query: ["limit", "cursor"] },
   "GET /v1/conversations/{conversation_id}": { auth: true },
   "PATCH /v1/conversations/{conversation_id}": { auth: true, body: "RenameConversationRequest" },
