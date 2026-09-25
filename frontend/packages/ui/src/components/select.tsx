@@ -25,12 +25,12 @@ const SelectValue = SelectPrimitive.Value;
  * it appears on. A real variant keeps the override from ever being needed.
  */
 const selectTriggerVariants = cva(
-  "flex w-full items-center justify-between gap-2 whitespace-nowrap rounded-lg border border-input bg-background transition-colors hover:border-brand/40 focus-field data-[placeholder]:text-text-secondary disabled:cursor-not-allowed disabled:opacity-60 [&>span]:line-clamp-1",
+  "flex w-full items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-input bg-surface font-medium transition-colors hover:border-brand/40 focus-field data-[placeholder]:text-text-secondary disabled:cursor-not-allowed disabled:opacity-60 [&>span]:line-clamp-1",
   {
     variants: {
       size: {
         default: "h-10 px-3 text-sm",
-        sm: "h-8 px-2 text-xs",
+        sm: "h-8 rounded-lg px-2 text-xs",
       },
     },
     defaultVariants: { size: "default" },
@@ -144,13 +144,13 @@ const SelectItem = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <SelectPrimitive.Item
     ref={ref}
-    // `rounded-md` is the nesting rule, not a guess: Content is `rounded-xl`
-    // (16px) with `p-1.5` (6px), so an item's corner is 10px = `md`.
+    // `rounded-lg` is the nesting rule, not a guess: Content is `rounded-xl`
+    // (12px) with `p-1.5` (6px), so an item's corner is about 8px = `lg`.
     //
     // No focus ring here. Radix drives these with roving focus and
     // `data-highlighted`; a ring would double up with the highlight.
     className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded-md py-2 pl-2.5 pr-8 text-sm outline-none transition-colors focus:bg-surface-2 focus:text-foreground data-[state=checked]:font-medium data-[state=checked]:text-brand data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      "relative flex w-full cursor-default select-none items-center rounded-lg py-2 pl-2.5 pr-8 text-sm outline-none transition-colors focus:bg-surface-2 focus:text-foreground data-[state=checked]:font-medium data-[state=checked]:text-brand data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className,
     )}
     {...props}

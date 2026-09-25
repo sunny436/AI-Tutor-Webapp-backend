@@ -78,7 +78,7 @@ const DialogContent = React.forwardRef<
       >
         <OpenerTracker store={opener} />
         {children}
-        <DialogPrimitive.Close className="absolute right-3.5 top-3.5 grid h-8 w-8 place-items-center rounded-lg text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground focus-ring disabled:pointer-events-none">
+        <DialogPrimitive.Close className="absolute right-3.5 top-3.5 grid h-8 w-8 place-items-center rounded-xl text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground focus-ring disabled:pointer-events-none">
           <X className="h-4 w-4" />
           <span className="sr-only">Close</span>
         </DialogPrimitive.Close>
@@ -123,7 +123,7 @@ const DialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-      "font-display text-lg font-semibold leading-tight tracking-tight text-foreground",
+      "text-lg font-bold leading-tight tracking-tight text-foreground",
       className,
     )}
     {...props}

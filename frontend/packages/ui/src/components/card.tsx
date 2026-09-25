@@ -36,14 +36,14 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     <div
       ref={ref}
       className={cn(
-        "rounded-xl border border-border bg-card text-card-foreground",
-        variant === "raised" && "elev-1",
+        "rounded-2xl border border-border bg-card text-card-foreground elev-1",
+        variant === "raised" && "elev-2",
         variant === "interactive" &&
           // `motion-safe:` rather than a bare hover transform: the global
           // reduced-motion rule kills the transition, but the transform itself
           // would still snap. This removes the movement entirely for anyone who
           // asked for less of it, and keeps the border/shadow feedback.
-          "elev-1 transition-[box-shadow,border-color,transform] duration-200 hover:border-brand/30 hover:elev-2 motion-safe:hover:-translate-y-0.5 focus-within:border-brand/40",
+          "transition-[box-shadow,border-color,transform] duration-200 hover:border-brand/40 hover:elev-2 motion-safe:hover:-translate-y-0.5 focus-within:border-brand/40",
         className,
       )}
       {...props}
@@ -76,10 +76,7 @@ const CardTitle = React.forwardRef<
 >(({ className, as: Tag = "h3", ...props }, ref) => (
   <Tag
     ref={ref}
-    className={cn(
-      "font-display text-lg font-semibold tracking-tight",
-      className,
-    )}
+    className={cn("text-lg font-bold tracking-tight", className)}
     {...props}
   />
 ));
