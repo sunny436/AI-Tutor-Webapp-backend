@@ -34,6 +34,7 @@ from app.llm.base import LLMProvider
 from app.llm.factory import build_llm
 from app.logging import configure_logging, get_logger
 from app.middleware import RequestContextMiddleware
+from app.progress.router import router as progress_router
 from app.rag.embeddings import build_embeddings, embedding_model_id, is_configured
 from app.rag.graph import RagDependencies, build_rag_graph
 from app.rag.retriever import PgVectorRetriever
@@ -136,6 +137,8 @@ def create_app(
     app.state.generations = ActiveGenerations()
     app.state.avatar_decodes = asyncio.Semaphore(AVATAR_DECODES)
     app.state.tutor_preview_limiter = SlidingWindowLimiter(limit=60, window_s=60)
+    # One active minute a minute is all a client reports; a little slack for retries.
+    app.state.activity_limiter = SlidingWindowLimiter(limit=6, window_s=60)
 
     install_error_handlers(app)
     if settings.cors_origins:
@@ -157,4 +160,5 @@ def create_app(
     app.include_router(conversations_router)
     app.include_router(chat_router)
     app.include_router(learning_router)
+    app.include_router(progress_router)
     return app

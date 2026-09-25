@@ -134,6 +134,29 @@ version, and every edit sends the version it read. One shape, for every such res
   nothing that identifies the student (name, email, photo) is ever included. The preview returns this block,
   computed by the same function the chat uses.
 
+## Progress: active time in PadhAI
+
+| Method | Path | Body | Success |
+|---|---|---|---|
+| POST | `/v1/progress/activity` | – | `{credited, date}`: one active minute; 6 reports per minute at most |
+| GET | `/v1/progress?days=14` | – (`days` 7–90) | `{timezone, timezoneIsDefault, today, thisWeek, streak, goals, days}` |
+
+- **What is measured:** time active in PadhAI, not study time. A client reports a minute while PadhAI is open and
+  visible and the student interacted with it (or a reply was streaming) within the last two minutes. The server
+  credits at most one minute per UTC minute per user: other tabs and devices reporting the same minute get
+  `credited: false`. A student can inflate their own number; it is never compared with anyone else's.
+- **Questions** are counted when the chat accepts a message; regenerating a reply is not a new question.
+- **Days** are the student's: their `timezone` (`PATCH /v1/me/profile`), or the server's `DEFAULT_TIMEZONE`
+  (`Asia/Kolkata`) until they choose one (`timezoneIsDefault: true`). A change of time zone doesn't rewrite
+  past days. Weeks start on Monday.
+- **Streak:** a day is active with at least one minute or one question. `currentDays` counts active days up to
+  today, or up to yesterday while today has none yet; `longestDays` is the best run so far. Streaks start at
+  the release that introduced them (no backfill).
+- **Goals** are the daily and weekly active-minute goals from the learner profile; `dailyMet`/`weeklyMet` are
+  null without a goal.
+- `today`/`days[]`: `{date, activeMinutes, questions}`; `days` lists the last `days` days, oldest first,
+  including days without activity.
+
 ## Conversations
 
 | Method | Path | Notes |

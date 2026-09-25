@@ -34,6 +34,7 @@ from app.errors import Conflict, NotFound, RateLimited, ValidationFailed
 from app.learning.context import read_student_context
 from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
+from app.progress.activity import record_question
 from app.settings import Settings
 
 log = get_logger("app.chat")
@@ -179,6 +180,7 @@ class ChatService:
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
         await session.flush()
+        await record_question(session, user.id, user.timezone, self.settings.default_timezone)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
         student = await read_student_context(session, user.id)

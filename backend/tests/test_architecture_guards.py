@@ -121,6 +121,23 @@ def test_the_learning_domain_is_reached_only_through_its_public_modules():
         assert not other_domains, (module.name, other_domains)
 
 
+def test_the_progress_domain_is_reached_only_through_its_public_module():
+    """Chat records questions through app.progress.activity; only the composition root mounts the
+    router. Progress reads the goals through Learning's public module and nothing else of another
+    domain."""
+    app_dir = BACKEND / "app"
+    for module in app_dir.rglob("*.py"):
+        if app_dir / "progress" in module.parents:
+            continue
+        allowed = {"app.progress.activity"} | ({"app.progress.router"} if module.name == "main.py" else set())
+        reached = {m for m in _imports(module) if m.startswith("app.progress")}
+        assert reached <= allowed, (module.relative_to(app_dir), reached - allowed)
+    for module in app_dir.joinpath("progress").glob("*.py"):
+        reached = {m for m in _imports(module) if m.startswith(("app.chat", "app.conversations", "app.rag", "app.llm"))}
+        reached |= {m for m in _imports(module) if m.startswith("app.learning") and m != "app.learning.context"}
+        assert not reached, (module.name, reached)
+
+
 async def test_embedding_dimension_matches_everywhere(database):
     assert Settings(_env_file=None).embedding_dimensions == EMBEDDING_DIMENSIONS == 1536
     engine = create_async_engine(database)

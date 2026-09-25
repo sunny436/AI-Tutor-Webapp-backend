@@ -89,6 +89,19 @@ async def test_learning_data_is_per_user(client, app):
     assert (await client.get("/v1/learning/subjects", headers=a)).json()["items"][0]["code"] == "physics"
 
 
+async def test_progress_is_per_user(client, app):
+    alice = await register(client, app)
+    bob = await register(client, app)
+    await stream_chat(client, alice["headers"], "A question of Alice's")
+    assert (await client.post("/v1/progress/activity", headers=alice["headers"])).json()["credited"] is True
+    # Bob's minute is his own, even in the minute Alice was just credited.
+    assert (await client.post("/v1/progress/activity", headers=bob["headers"])).json()["credited"] is True
+    theirs = (await client.get("/v1/progress", headers=bob["headers"])).json()
+    assert (theirs["today"]["questions"], theirs["today"]["activeMinutes"]) == (0, 1)
+    mine = (await client.get("/v1/progress", headers=alice["headers"])).json()
+    assert (mine["today"]["questions"], mine["today"]["activeMinutes"]) == (1, 1)
+
+
 async def test_client_supplied_identity_fields_are_rejected(client, app):
     account = await register(client, app)
     r = await client.post(

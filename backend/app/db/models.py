@@ -2,6 +2,7 @@
 
 User ─┬─ UserSettings
       ├─ LearnerProfile, LearnerSubject, LearningPreferences   (app/learning)
+      ├─ ActivityDay   active time and questions per local day   (app/progress)
       ├─ AuthSession
       ├─ Conversation ── Message ── MessageFeedback
       └─ UsageEvent
@@ -16,13 +17,14 @@ KnowledgeSource (global, or private to owner_user_id) ── Document ── Doc
 from __future__ import annotations
 
 import uuid
-from datetime import datetime, time
+from datetime import date, datetime, time
 from typing import Any
 
 from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
     Boolean,
     CheckConstraint,
+    Date,
     DateTime,
     ForeignKey,
     Index,
@@ -214,6 +216,28 @@ class LearningPreferences(Base):
     mistake_correction: Mapped[str] = _choice()
     highlight_key_concepts: Mapped[str] = _choice()
     updated_at: Mapped[datetime] = _created()
+
+
+class ActivityDay(Base):
+    """Time active in PadhAI and questions asked, per day in the student's time zone.
+
+    Active time is credited a minute at a time: at most one minute per UTC minute per user
+    (`last_minute_utc`), however many tabs or devices report it (app/progress/activity.py).
+    """
+
+    __tablename__ = "activity_days"
+    __table_args__ = (
+        CheckConstraint("active_seconds BETWEEN 0 AND 86400", name="active_seconds"),
+        CheckConstraint("questions >= 0", name="questions"),
+    )
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    local_date: Mapped[date] = mapped_column(Date, primary_key=True)
+    active_seconds: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    questions: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    last_minute_utc: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class AuthSession(Base):
