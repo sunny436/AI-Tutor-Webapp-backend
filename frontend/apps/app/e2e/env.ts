@@ -3,6 +3,7 @@
  * so a run never touches a dev server, a real deployment or real data:
  *
  *   app      next start on :3100, built into .next-e2e        (e2e/serve.mjs)
+ *   preview  the same build on :3101 with PREVIEW_FEATURES=1  (e2e/serve.mjs)
  *   API      the backend on :4100 with the fake LLM           (see playwright.config.ts)
  *   Mailpit  the backend's local mail catcher, for sign-up and reset codes
  *
@@ -12,6 +13,8 @@
  */
 export const APP_PORT = 3100;
 export const APP_URL = `http://localhost:${APP_PORT}`;
+export const PREVIEW_PORT = 3101;
+export const PREVIEW_URL = `http://localhost:${PREVIEW_PORT}`;
 export const API_URL = process.env.E2E_API_URL ?? "http://127.0.0.1:4100";
 export const MAILPIT_URL = process.env.E2E_MAILPIT_URL ?? "http://127.0.0.1:8025";
 

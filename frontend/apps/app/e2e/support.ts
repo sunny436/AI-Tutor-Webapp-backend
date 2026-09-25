@@ -48,15 +48,18 @@ export const SAME_ORIGIN = { Origin: APP_URL };
 /**
  * A fresh, verified account, signed in within `page`'s browser context: the
  * session cookie lands in the context's jar exactly as it does for a browser.
+ *
+ * Always through the main server (APP_URL), whose Origin these requests carry.
+ * The cookie is per host, not per port, so it signs in the preview server too.
  */
 export async function createAccount(page: Page, tag = "user"): Promise<{ email: string; password: string }> {
   const email = uniqueEmail(tag);
-  const signup = await page.request.post("/api/v1/auth/signup", {
+  const signup = await page.request.post(`${APP_URL}/api/v1/auth/signup`, {
     data: { email, password: PASSWORD, displayName: "E2E" },
     headers: SAME_ORIGIN,
   });
   expect(signup.status(), "signup").toBe(202);
-  const verify = await page.request.post("/api/v1/auth/verify-email", {
+  const verify = await page.request.post(`${APP_URL}/api/v1/auth/verify-email`, {
     data: { email, code: await mailCode(email, "verify") },
     headers: SAME_ORIGIN,
   });
@@ -66,7 +69,7 @@ export async function createAccount(page: Page, tag = "user"): Promise<{ email: 
 
 /** Delete the account signed in within `page`'s context, if it still exists. */
 export async function deleteAccount(page: Page, password = PASSWORD): Promise<void> {
-  await page.request.delete("/api/v1/me", { data: { password }, headers: SAME_ORIGIN }).catch(() => undefined);
+  await page.request.delete(`${APP_URL}/api/v1/me`, { data: { password }, headers: SAME_ORIGIN }).catch(() => undefined);
 }
 
 type Fixtures = {
@@ -138,7 +141,7 @@ export function conversationIdOf(page: Page): string {
  * setting up state quickly — a test of the chat itself sends through the page.
  */
 export async function seedTurn(page: Page, message: string, conversationId?: string): Promise<string> {
-  const response = await page.request.post("/api/v1/chat/stream", {
+  const response = await page.request.post(`${APP_URL}/api/v1/chat/stream`, {
     data: conversationId ? { conversationId, message } : { message },
     headers: SAME_ORIGIN,
   });

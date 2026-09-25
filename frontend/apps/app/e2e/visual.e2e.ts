@@ -1,7 +1,7 @@
 import { join } from "node:path";
 import type { Locator, Page, Route } from "@playwright/test";
 
-import { APP_URL } from "./env";
+import { PREVIEW_URL } from "./env";
 import { LONG_MESSAGE, composer, expect, lastReply, seedTurn, send, stopButton, test, waitForIdle } from "./support";
 
 /**
@@ -23,7 +23,6 @@ const WIDTHS = [390, 768, 1280];
 const THEMES = ["light", "dark"] as const;
 const HEIGHT = 860;
 const MD = 768;
-const PREVIEW_URL = APP_URL.replace(/:\d+$/, ":3101");
 const TOOL_PAGES = ["courses", "homework", "summarizer", "course-creator", "flashcards"];
 
 const MARKDOWN = [
