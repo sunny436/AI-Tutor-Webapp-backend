@@ -1,6 +1,7 @@
 """PostgreSQL schema: the single source of truth for all application data.
 
 User ─┬─ UserSettings
+      ├─ LearnerProfile, LearnerSubject, LearningPreferences   (app/learning)
       ├─ AuthSession
       ├─ Conversation ── Message ── MessageFeedback
       └─ UsageEvent
@@ -15,11 +16,12 @@ KnowledgeSource (global, or private to owner_user_id) ── Document ── Doc
 from __future__ import annotations
 
 import uuid
-from datetime import datetime
+from datetime import datetime, time
 from typing import Any
 
 from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
+    Boolean,
     CheckConstraint,
     DateTime,
     ForeignKey,
@@ -29,10 +31,11 @@ from sqlalchemy import (
     SmallInteger,
     String,
     Text,
+    Time,
     UniqueConstraint,
     text,
 )
-from sqlalchemy.dialects.postgresql import CITEXT, JSONB, UUID
+from sqlalchemy.dialects.postgresql import ARRAY, CITEXT, JSONB, UUID
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -44,6 +47,28 @@ NOW = text("clock_timestamp()")
 MESSAGE_ROLES = ("user", "assistant", "system")
 MESSAGE_STATUSES = ("complete", "streaming", "cancelled", "error", "superseded")
 CODE_PURPOSES = ("verify_email", "reset_password", "change_email")
+
+# What a student can tell the tutor (app/learning). Every preference has a neutral "auto"
+# that adds no instruction, so a student who sets nothing gets the tutor everyone gets.
+MAIN_GOALS = ("board_exams", "competitive_exam", "better_marks", "understand_concepts", "homework_help", "other")
+PREFERENCE_CHOICES: dict[str, tuple[str, ...]] = {
+    # Learning preferences
+    "language": ("auto", "english", "hindi", "hinglish"),
+    "explanation_level": ("auto", "simple", "standard", "detailed"),
+    "pace": ("auto", "slow", "steady", "fast"),
+    "difficulty": ("auto", "easy", "medium", "hard"),
+    "real_world_examples": ("auto", "more", "fewer"),
+    "visual_explanations": ("auto", "more", "fewer"),
+    # AI tutor
+    "personality": ("auto", "friendly", "encouraging", "professional"),
+    "response_length": ("auto", "short", "medium", "long"),
+    "answer_mode": ("auto", "direct", "hints_first", "socratic"),
+    "step_by_step": ("auto", "on", "off"),
+    "ask_before_answer": ("auto", "on", "off"),
+    "practice_questions": ("auto", "on", "off"),
+    "mistake_correction": ("auto", "gentle", "direct"),
+    "highlight_key_concepts": ("auto", "on", "off"),
+}
 
 # The pgvector column dimension. settings.embedding_dimensions must equal it (checked at
 # startup); changing it needs a new migration and a re-ingest of every document.
@@ -101,6 +126,93 @@ class UserSettings(Base):
         UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
     )
     preferences: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, server_default=text("'{}'::jsonb"))
+    updated_at: Mapped[datetime] = _created()
+
+
+class LearnerProfile(Base):
+    """What a student tells the tutor about their studies. Codes come from the academic catalog
+    (app/learning/catalog.py); free text is length-limited and reaches the model only as quoted
+    information, never as instructions (app/learning/tutor.py)."""
+
+    __tablename__ = "learner_profiles"
+    __table_args__ = (
+        CheckConstraint(f"main_goal IN {MAIN_GOALS}", name="main_goal"),
+        CheckConstraint("target_score_percent BETWEEN 0 AND 100", name="target_score_percent"),
+        CheckConstraint("daily_active_minutes_goal BETWEEN 0 AND 720", name="daily_active_minutes_goal"),
+        CheckConstraint("weekly_active_minutes_goal BETWEEN 0 AND 5040", name="weekly_active_minutes_goal"),
+        CheckConstraint("cardinality(weak_topics) <= 10", name="weak_topics"),
+        CheckConstraint("board_state IS NULL OR board = 'state'", name="board_state"),
+    )
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    # Two independently edited resources, two versions (optimistic concurrency).
+    version: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    subjects_version: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    grade: Mapped[str | None] = mapped_column(String(40))
+    board: Mapped[str | None] = mapped_column(String(40))
+    board_state: Mapped[str | None] = mapped_column(String(40))
+    medium: Mapped[str | None] = mapped_column(String(40))
+    academic_year: Mapped[str | None] = mapped_column(String(40))
+    main_goal: Mapped[str | None] = mapped_column(String(40))
+    target_exam: Mapped[str | None] = mapped_column(String(80))
+    target_score_percent: Mapped[int | None] = mapped_column(SmallInteger)
+    weak_topics: Mapped[list[str]] = mapped_column(ARRAY(String(60)), nullable=False, server_default=text("'{}'"))
+    daily_active_minutes_goal: Mapped[int | None] = mapped_column(SmallInteger)
+    weekly_active_minutes_goal: Mapped[int | None] = mapped_column(SmallInteger)
+    preferred_study_time: Mapped[time | None] = mapped_column(Time)
+    short_term_goal: Mapped[str | None] = mapped_column(String(280))
+    long_term_goal: Mapped[str | None] = mapped_column(String(280))
+    updated_at: Mapped[datetime] = _created()
+
+
+class LearnerSubject(Base):
+    __tablename__ = "learner_subjects"
+    __table_args__ = (
+        UniqueConstraint("user_id", "position"),
+        CheckConstraint("position BETWEEN 0 AND 29", name="position"),
+    )
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    subject_code: Mapped[str] = mapped_column(String(40), primary_key=True)
+    position: Mapped[int] = mapped_column(SmallInteger, nullable=False)
+    is_priority: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    needs_improvement: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+
+
+def _choice() -> Mapped[str]:
+    return mapped_column(String(20), nullable=False, server_default=text("'auto'"))
+
+
+class LearningPreferences(Base):
+    """How the student wants to be taught. Typed columns, one per concept, each with a CHECK."""
+
+    __tablename__ = "learning_preferences"
+    __table_args__ = tuple(
+        CheckConstraint(f"{column} IN {choices}", name=column) for column, choices in PREFERENCE_CHOICES.items()
+    )
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    version: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    language: Mapped[str] = _choice()
+    explanation_level: Mapped[str] = _choice()
+    pace: Mapped[str] = _choice()
+    difficulty: Mapped[str] = _choice()
+    real_world_examples: Mapped[str] = _choice()
+    visual_explanations: Mapped[str] = _choice()
+    personality: Mapped[str] = _choice()
+    response_length: Mapped[str] = _choice()
+    answer_mode: Mapped[str] = _choice()
+    step_by_step: Mapped[str] = _choice()
+    ask_before_answer: Mapped[str] = _choice()
+    practice_questions: Mapped[str] = _choice()
+    mistake_correction: Mapped[str] = _choice()
+    highlight_key_concepts: Mapped[str] = _choice()
     updated_at: Mapped[datetime] = _created()
 
 

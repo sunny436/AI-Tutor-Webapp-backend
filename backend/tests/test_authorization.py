@@ -65,6 +65,30 @@ async def test_identity_data_is_per_user(client, app):
     assert mine.status_code == 200 and mine.json()["email"] == new_email
 
 
+async def test_learning_data_is_per_user(client, app):
+    """Learner profile, subjects, preferences and the tutor preview only ever use the caller's own."""
+    alice = await register(client, app)
+    bob = await register(client, app)
+    a, b = alice["headers"], bob["headers"]
+    await client.patch("/v1/learning/profile", json={"version": 0, "set": {"targetExam": "Alice exam"}}, headers=a)
+    await client.put("/v1/learning/subjects", json={"version": 0, "items": [{"code": "physics"}]}, headers=a)
+    await client.patch("/v1/learning/preferences", json={"version": 0, "set": {"pace": "fast"}}, headers=a)
+
+    assert (await client.get("/v1/learning/profile", headers=b)).json()["targetExam"] is None
+    assert (await client.get("/v1/learning/subjects", headers=b)).json() == {"version": 0, "items": []}
+    assert (await client.get("/v1/learning/preferences", headers=b)).json()["pace"] == "auto"
+    assert (await client.post("/v1/learning/tutor-preview", json={}, headers=b)).json()["instructions"] == ""
+
+    # Bob's writes land on Bob's rows, at Bob's versions, and leave Alice's alone.
+    assert (
+        await client.patch("/v1/learning/profile", json={"version": 0, "set": {"grade": "class_6"}}, headers=b)
+    ).status_code == 200
+    assert (await client.put("/v1/learning/subjects", json={"version": 0, "items": []}, headers=b)).status_code == 200
+    mine = (await client.get("/v1/learning/profile", headers=a)).json()
+    assert (mine["targetExam"], mine["grade"], mine["version"]) == ("Alice exam", None, 1)
+    assert (await client.get("/v1/learning/subjects", headers=a)).json()["items"][0]["code"] == "physics"
+
+
 async def test_client_supplied_identity_fields_are_rejected(client, app):
     account = await register(client, app)
     r = await client.post(

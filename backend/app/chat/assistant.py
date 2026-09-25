@@ -1,9 +1,12 @@
 """What the assistant is for a given turn: prompt, retrieval options and model.
 
 THE extension seam for future assistants (for example a tutor with its own
-instructions and retrieval filters). The generic chatbot returns the same
-configuration for everyone. Retrieval options are chosen here, server-side; a
+instructions and retrieval filters). Retrieval options are chosen here, server-side; a
 client can never supply them.
+
+The system prompt is the frozen SYSTEM_PROMPT, followed by what the student's own settings add
+(app/learning/tutor.py) when they add anything. A student who has set nothing gets exactly
+SYSTEM_PROMPT (tests/test_legacy_tutor.py).
 """
 
 from __future__ import annotations
@@ -11,6 +14,8 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from app.db.models import Conversation, User
+from app.learning.context import StudentContext
+from app.learning.tutor import build_tutor_instructions
 from app.rag.graph import RetrievalOptions
 
 SYSTEM_PROMPT = """You are a helpful, knowledgeable general-purpose AI assistant.
@@ -31,5 +36,12 @@ class AssistantConfig:
     temperature: float | None = None  # None = settings.llm_temperature
 
 
-def resolve_assistant_config(user: User | None, conversation: Conversation | None) -> AssistantConfig:
-    return AssistantConfig(system_prompt=SYSTEM_PROMPT)
+def system_prompt_for(student: StudentContext | None) -> str:
+    instructions = build_tutor_instructions(student)
+    return f"{SYSTEM_PROMPT}\n\n{instructions}" if instructions else SYSTEM_PROMPT
+
+
+def resolve_assistant_config(
+    user: User | None, conversation: Conversation | None, student: StudentContext | None = None
+) -> AssistantConfig:
+    return AssistantConfig(system_prompt=system_prompt_for(student))

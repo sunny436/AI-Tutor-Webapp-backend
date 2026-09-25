@@ -73,6 +73,14 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
         headers=headers,
     )
     assert change.status_code == 202, change.text
+    learning = [  # learner profile, subjects, preferences
+        ("PATCH", "/v1/learning/profile", {"version": 0, "set": {"grade": "class_10", "targetExam": "Boards"}}),
+        ("PUT", "/v1/learning/subjects", {"version": 0, "items": [{"code": "mathematics", "isPriority": True}]}),
+        ("PATCH", "/v1/learning/preferences", {"version": 0, "set": {"pace": "slow"}}),
+    ]
+    for method, url, body in learning:
+        response = await client.request(method, url, json=body, headers=headers)
+        assert response.status_code == 200, (url, response.text)
     assert last_code(app, account["email"])
 
     before = await _rows_referencing(database, user_id, account["email"])

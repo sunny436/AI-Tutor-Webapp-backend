@@ -95,13 +95,44 @@ version, and every edit sends the version it read. One shape, for every such res
 ```
 
 - `set` replaces the listed fields (a list replaces the whole list). A field not listed is unchanged.
-- `reset` returns the listed fields to their defaults (for the profile: empty).
+- `reset` returns the listed fields to their defaults (empty, or `auto` for a learning preference).
 - 422 for an unknown field, `null` inside `set` (use `reset`), a field in both, or a field twice.
 - An edit that changes nothing (`set` and `reset` empty) answers 200 and keeps the version.
 - Otherwise the version must be current: the edit applies and the version goes up by one, or it is
   refused whole with 409 `version_conflict`, whose `current` is the resource as it is now. The client
   applies its own pending change to `current` and sends it again, or asks the person.
 - The answer is always the whole resource.
+
+## Learning: what the tutor knows about the student
+
+| Method | Path | Body | Success |
+|---|---|---|---|
+| GET | `/v1/catalog/academic` | – | the catalog (below). **No session needed**; `ETag`, `If-None-Match` → 304 |
+| GET / PATCH | `/v1/learning/profile` | PATCH [versioned](#versioned-edits) | the learner profile |
+| GET / PUT | `/v1/learning/subjects` | PUT `{version, items: [{code, isPriority, needsImprovement}]}` (≤ 15, replaces the list; order = display order) | `{version, items}` |
+| GET / PATCH | `/v1/learning/preferences` | PATCH [versioned](#versioned-edits) | the preferences |
+| POST | `/v1/learning/tutor-preview` | `{profile?, subjects?, preferences?}`: unsaved edits over what is stored | `{instructions, maxChars}`; nothing is saved; 60 per minute |
+
+- **Learner profile:** `{version, grade, board, boardState, medium, academicYear, mainGoal, targetExam (≤ 80),
+  targetScorePercent (0–100), weakTopics (≤ 10 × 60), dailyActiveMinutesGoal (0–720),
+  weeklyActiveMinutesGoal (0–5040), preferredStudyTime ("HH:MM"), shortTermGoal (≤ 280), longTermGoal (≤ 280),
+  updatedAt}`. Nothing else about the student (no date of birth, gender, phone, school or country) is asked for.
+  - `grade`, `board`, `boardState`, `medium` and `academicYear` are catalog codes: an unknown code is 422
+    `unknown_code`. `boardState` needs `board: "state"` (422 `requires_state_board`).
+  - Free text is stored on one line: runs of whitespace become one space; control characters are removed.
+- **Preferences:** `language`, `explanationLevel`, `pace`, `difficulty`, `realWorldExamples`, `visualExplanations`,
+  `personality`, `responseLength`, `answerMode`, `stepByStep`, `askBeforeAnswer`, `practiceQuestions`,
+  `mistakeCorrection`, `highlightKeyConcepts`. Each is an enum whose default, `auto`, tells the tutor nothing.
+- **The catalog** `{version, grades, boards, boardStates, mediums, academicYears, subjects}` lists
+  `{code, name, deprecated}`. Codes are permanent. A `deprecated` code is still listed and still accepted while
+  a profile keeps it, but can't be chosen anew (422 `deprecated`). Every content change bumps `version` and the
+  ETag; clients refetch when the version they hold is older.
+- **What the tutor is told** (`app/learning/tutor.py`): the frozen system prompt, plus a block that describes the
+  student (catalog names; their own text only in quotes, as information, never as instructions) and lists one fixed
+  sentence per preference that isn't `auto`. A student with nothing set, or everything on `auto`, gets exactly the
+  tutor everyone got before. The block is capped at `maxChars` (6,000 characters, far above the worst case);
+  nothing that identifies the student (name, email, photo) is ever included. The preview returns this block,
+  computed by the same function the chat uses.
 
 ## Conversations
 

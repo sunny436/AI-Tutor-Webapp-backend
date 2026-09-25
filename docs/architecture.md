@@ -23,7 +23,9 @@ Browser ──► Web app (Next.js, frontend/; 127.0.0.1:3000)
                │  Authorization: Bearer <token>, X-Request-ID, X-Forwarded-For
                ▼
             Chat API (FastAPI, backend/; 127.0.0.1:4000 dev · 4100 prod)
-               ├─ auth            users, sessions, email codes, throttling
+               ├─ auth            users, sessions, email codes, throttling, profile photo, devices
+               ├─ learning        academic catalog, learner profile, subjects, learning preferences,
+               │                  and what they add to the tutor's instructions (app/learning/tutor.py)
                ├─ conversations   list/create/rename/delete, message history
                ├─ chat            ChatService + SSE + stop + regenerate + feedback + quotas
                ├─ rag             LangGraph turn graph + LangChain retriever over pgvector (docs/rag.md)
@@ -46,6 +48,10 @@ flag is authoritative).
 
 ```
 users ─┬─ user_settings        preferences (JSONB, ≤ 4 KB)
+       ├─ user_avatars         the profile photo: a re-encoded 256 px WebP, ≤ 64 KB
+       ├─ learner_profiles     class, board, medium, goals, weak topics (catalog codes + short text), versioned
+       ├─ learner_subjects     ordered subject list with priority / needs-improvement flags
+       ├─ learning_preferences how the student wants to be taught; typed columns, each `auto` by default
        ├─ auth_sessions        SHA-256 of a random 256-bit token; 30-day sliding expiry
        ├─ conversations ── messages ── message_feedback
        └─ usage_events         one per generation: provider, model, tokens, latency, outcome
