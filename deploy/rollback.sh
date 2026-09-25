@@ -22,7 +22,7 @@ while [ $# -gt 0 ]; do
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
 done
-LIVE=$(ssh "$HOST" 'r=$(readlink -f /opt/aichat/current 2>/dev/null) && basename "$r"' || true)
+LIVE=$(ssh "$HOST" 'r=$(readlink -e /opt/aichat/current 2>/dev/null) && case "$r" in /opt/aichat/releases/*) basename "$r" ;; esac' || true)
 [ -n "$LIVE" ] || { echo "STOP: $HOST has no live release (/opt/aichat/current)" >&2; exit 1; }
 echo "  Roll back $HOST from $LIVE (frontend and backend together) ${ARGS[*]:-to the previous release}"
 if [ "$YES" != 1 ]; then

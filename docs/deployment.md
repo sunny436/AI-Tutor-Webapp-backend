@@ -115,21 +115,25 @@ It installs Python 3.12, the pinned Bun and Node, leaves an existing Docker alon
 nightly backup. Then `bun run deploy -- --with-migrations` (a new database is empty, so the first
 release has every migration pending; without the flag it stops before the switch).
 
-## The first release deploy on the current production host
+## The move from the two-checkout layout (2026-09-25)
 
-Production still runs the older two-checkout layout (`/opt/aichat/backend` and
-`/opt/aichat/frontend`, from two repositories and two commits). The first `bun run deploy` moves it
-to releases. **It needs the owner's explicit approval.**
+Until 2026-09-25 production ran two checkouts (`/opt/aichat/backend` and `/opt/aichat/frontend`,
+from two repositories and two commits). The first `bun run deploy` (release `a353815`, approved by
+the owner) moved it to releases: a trial deploy (`--prepare-only`) first, then the switch, with
+4.2 s of measured downtime and no moment in which the two apps ran different releases.
 
-- **It changes:** the systemd units (the replaced ones are kept as `*.before-<time>`),
-  `/opt/aichat/current`, `/opt/aichat/shared/postgres`, `/opt/aichat/runtime` (the pinned Node).
-- **It does not change:** the database container (not restarted; the pinned names keep the same
-  volume), `/etc/aichat/*.env`, the old checkouts (left in place, unused), the legacy services or
-  Cloudflare.
-- **If it fails**, it restores the old unit files and restarts the old layout by itself (rehearsed).
-- **Afterwards**, once the release layout has run for a few days, delete `/opt/aichat/backend`,
-  `/opt/aichat/frontend` and `/root/aichat-bundles` (they are only a trap: running their old
-  `install.sh` would bring back two independently deployed checkouts; `bun run status` reports them).
+- **It changed:** the systemd units, `/opt/aichat/current`, `/opt/aichat/shared/postgres`,
+  `/opt/aichat/runtime` (the pinned Node).
+- **It did not change:** the database container (not restarted; the pinned names keep the same
+  volume), `/etc/aichat/*.env`, the legacy services or Cloudflare.
+- **Left in place for rollback**, unused: the old checkouts, `/root/aichat-bundles`, and the
+  replaced units, saved as `/etc/systemd/system/aichat-*.before-20260925052156`. Until a second
+  release has been deployed, `bun run rollback` has no earlier release to return to; going back
+  means restoring those units ([rollback.md](rollback.md#the-first-release-on-the-old-layout)).
+- **Afterwards**, once the release layout has proven stable and the owner approves, delete the old
+  checkouts, `/root/aichat-bundles` and the saved units (the checkouts are a trap: running their
+  old `install.sh` would bring back two independently deployed checkouts; `bun run status` reports
+  them).
 
 ## Environment variables
 

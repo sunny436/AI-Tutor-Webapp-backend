@@ -128,7 +128,7 @@ advance() { # message, then an edit command run inside the worktree; prints the 
 }
 deploy() { DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/deploy.sh --yes "$@"; }
 rollback() { bash deploy/rollback.sh --yes "$@"; }
-live() { ssh rehearsal 'r=$(readlink -f /opt/aichat/current 2>/dev/null) && basename "$r"'; }
+live() { ssh rehearsal 'r=$(readlink -e /opt/aichat/current 2>/dev/null) && case "$r" in /opt/aichat/releases/*) basename "$r" ;; esac'; }
 status_ok_on() { # the invariant holds, on release $1
   bash deploy/status.sh > "$LOGS/status-$2.log" 2>&1 && grep -q "INVARIANT OK: frontend and backend both run release $1" "$LOGS/status-$2.log"
 }
