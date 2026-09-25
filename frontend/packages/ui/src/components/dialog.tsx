@@ -28,28 +28,64 @@ const DialogOverlay = React.forwardRef<
 ));
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
 
+/**
+ * Remembers what had focus when the dialog opened.
+ *
+ * Radix gives focus back to a `<DialogTrigger>` on close, but most dialogs here
+ * are opened from state (a chat row's Rename, "Delete account") and have no
+ * trigger, so focus fell to <body> and a keyboard user was thrown back to the
+ * top of the page. Captured while RENDERING the dialog's mount: by the time an
+ * effect or ref runs, an `autoFocus` field inside has already taken focus.
+ */
+function OpenerTracker({
+  store,
+}: { store: React.MutableRefObject<HTMLElement | null> }) {
+  const [opener] = React.useState(() =>
+    typeof document === "undefined" ? null : document.activeElement,
+  );
+  React.useLayoutEffect(() => {
+    store.current =
+      opener instanceof HTMLElement && opener !== document.body ? opener : null;
+  }, [opener, store]);
+  return null;
+}
+
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-  <DialogPortal>
-    <DialogOverlay />
-    <DialogPrimitive.Content
-      ref={ref}
-      className={cn(
-        "fixed left-[50%] top-[50%] z-50 grid w-[calc(100%-2rem)] max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 rounded-2xl border border-border bg-card p-6 elev-3 max-h-[calc(100dvh-2rem)] overflow-y-auto scrollbar-subtle duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]",
-        className,
-      )}
-      {...props}
-    >
-      {children}
-      <DialogPrimitive.Close className="absolute right-3.5 top-3.5 grid h-8 w-8 place-items-center rounded-lg text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground focus-ring disabled:pointer-events-none">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-      </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
-  </DialogPortal>
-));
+>(({ className, children, onCloseAutoFocus, ...props }, ref) => {
+  const opener = React.useRef<HTMLElement | null>(null);
+  return (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        onCloseAutoFocus={(event) => {
+          onCloseAutoFocus?.(event);
+          if (event.defaultPrevented) return;
+          const target = opener.current;
+          // No opener, or it is gone (a deleted row): Radix's default applies.
+          if (target?.isConnected) {
+            event.preventDefault();
+            target.focus();
+          }
+        }}
+        className={cn(
+          "fixed left-[50%] top-[50%] z-50 grid w-[calc(100%-2rem)] max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 rounded-2xl border border-border bg-card p-6 elev-3 max-h-[calc(100dvh-2rem)] overflow-y-auto scrollbar-subtle duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]",
+          className,
+        )}
+        {...props}
+      >
+        <OpenerTracker store={opener} />
+        {children}
+        <DialogPrimitive.Close className="absolute right-3.5 top-3.5 grid h-8 w-8 place-items-center rounded-lg text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground focus-ring disabled:pointer-events-none">
+          <X className="h-4 w-4" />
+          <span className="sr-only">Close</span>
+        </DialogPrimitive.Close>
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  );
+});
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 const DialogHeader = ({

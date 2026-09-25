@@ -132,6 +132,34 @@ export function conversationIdOf(page: Page): string {
   return id;
 }
 
+/**
+ * One turn through the real API, exactly as the chat sends it (`{conversationId?,
+ * message}`), read to the end of its stream. Returns the conversation's id. For
+ * setting up state quickly — a test of the chat itself sends through the page.
+ */
+export async function seedTurn(page: Page, message: string, conversationId?: string): Promise<string> {
+  const response = await page.request.post("/api/v1/chat/stream", {
+    data: conversationId ? { conversationId, message } : { message },
+    headers: SAME_ORIGIN,
+  });
+  expect(response.status(), "chat/stream").toBe(200);
+  const body = await response.text();
+  expect(body, "the turn finished").toContain("event: done");
+  const meta = body.split("\n\n").find((frame) => frame.startsWith("event: meta"));
+  const id = JSON.parse(meta?.split("\ndata: ")[1] ?? "{}").conversationId as string | undefined;
+  if (!id) throw new Error("no meta event in the stream");
+  return id;
+}
+
+/** The chat links in the sidebar's list. */
+export const chatLinks = (page: Page) => page.locator("nav[aria-labelledby='chats-heading'] a[href^='/c/']");
+
+/** No sideways scrolling of the page itself (wide content must scroll inside its own box). */
+export async function expectNoHorizontalOverflow(page: Page): Promise<void> {
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+  expect(overflow, `horizontal overflow on ${page.url()}`).toBeLessThanOrEqual(0);
+}
+
 /** A message the fake LLM takes ~4 s to echo: long enough to stop, switch or reload mid-reply. */
 export const LONG_MESSAGE = Array.from({ length: 80 }, (_, index) => `w${index + 1}`).join(" ");
 

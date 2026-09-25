@@ -1,4 +1,44 @@
-import { expect, expectAccessible, lastReply, sendAndWait, test } from "./support";
+import type { Page } from "@playwright/test";
+
+import { expect, expectAccessible, lastReply, seedTurn, sendAndWait, test } from "./support";
+
+/**
+ * What the element that has focus looks like, compared with the same element
+ * unfocused: a focus indicator is anything focus changes in its ring, outline or
+ * border — on the element, or on the form it sits in (the composer draws its ring
+ * on the form, not the textarea). Transitions are switched off while measuring,
+ * or a ring caught mid-animation reads as no ring at all.
+ */
+async function describeFocus(page: Page) {
+  return page.evaluate(() => {
+    const element = document.activeElement as HTMLElement;
+    const targets = [element, element.closest("form")].filter((node): node is HTMLElement => node instanceof HTMLElement);
+    const saved = targets.map((target) => target.style.getPropertyValue("transition"));
+    for (const target of targets) target.style.setProperty("transition", "none", "important");
+    const look = () =>
+      targets
+        .map((target) => {
+          const style = getComputedStyle(target);
+          return [style.boxShadow, style.outlineStyle, style.outlineWidth, style.outlineColor, style.borderColor].join("|");
+        })
+        .join("§");
+    const focused = look();
+    element.blur();
+    const unfocused = look();
+    element.focus();
+    targets.forEach((target, index) => {
+      if (saved[index]) target.style.setProperty("transition", saved[index]);
+      else target.style.removeProperty("transition");
+    });
+    const box = element.getBoundingClientRect();
+    return {
+      label: element.getAttribute("aria-label") || element.textContent?.trim().slice(0, 40) || element.tagName,
+      indicated: focused !== unfocused,
+      onScreen: box.width > 0 && box.height > 0 && box.bottom > 0 && box.right > 0 && box.top < innerHeight && box.left < innerWidth,
+      isComposer: element.tagName === "TEXTAREA" && element.id.startsWith("composer-"),
+    };
+  });
+}
 
 test("sign-in and sign-up pages", async ({ page }) => {
   await page.goto("/login");
@@ -26,9 +66,87 @@ test("settings, and the delete-account dialog", async ({ page, account: _ }) => 
   await page.goto("/settings");
   await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
   await expectAccessible(page);
-  await page.getByRole("button", { name: "Delete account" }).click();
-  await expect(page.getByRole("dialog", { name: "Delete your account?" })).toBeVisible();
+  const trigger = page.getByRole("button", { name: "Delete account" });
+  await trigger.focus();
+  await page.keyboard.press("Enter");
+  const dialog = page.getByRole("dialog", { name: "Delete your account?" });
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByLabel("Password")).toBeFocused();
   await expectAccessible(page);
+  await page.keyboard.press("Escape");
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+});
+
+test("every control reached by Tab shows where focus is", async ({ page, account: _ }) => {
+  await seedTurn(page, "A chat, so the list has rows and row actions");
+  await page.goto("/");
+  await expect(page.getByRole("textbox", { name: "Message" })).toBeFocused();
+  await page.evaluate(() => {
+    document.body.tabIndex = -1;
+    document.body.focus();
+    document.body.removeAttribute("tabindex");
+  });
+  const reached: string[] = [];
+  for (let step = 0; step < 40; step += 1) {
+    await page.keyboard.press("Tab");
+    const focus = await describeFocus(page);
+    reached.push(focus.label);
+    expect(focus.onScreen, `"${focus.label}" is on screen when focused`).toBe(true);
+    expect(focus.indicated, `"${focus.label}" shows a focus indicator`).toBe(true);
+    if (focus.isComposer) break;
+  }
+  expect(reached.length, `Tab reached the message box: ${reached.join(" → ")}`).toBeLessThan(40);
+});
+
+test("the collapsed rail names its controls on keyboard focus", async ({ page, account: _ }) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "Collapse sidebar" }).click();
+  await page.getByRole("link", { name: "New chat" }).focus();
+  await expect(page.getByRole("tooltip")).toContainText("New chat");
+  await expectAccessible(page);
+});
+
+test("the chat dialogs keep focus inside, close on Escape and give focus back", async ({ page, account: _ }) => {
+  const id = await seedTurn(page, "A chat to open dialogs on");
+  await page.goto("/");
+  const item = page.locator("li", { has: page.locator(`a[href="/c/${id}"]`) });
+  const staysInside = async (name: string) => {
+    for (let step = 0; step < 6; step += 1) {
+      await page.keyboard.press("Tab");
+      const inside = await page
+        .getByRole("dialog", { name })
+        .evaluate((dialog) => dialog.contains(document.activeElement));
+      expect(inside, `focus stays inside "${name}"`).toBe(true);
+    }
+  };
+
+  await test.step("rename: focus starts in the field", async () => {
+    const trigger = item.getByRole("button", { name: /^Rename/ });
+    await trigger.focus();
+    await page.keyboard.press("Enter");
+    const dialog = page.getByRole("dialog", { name: "Rename chat" });
+    await expect(dialog.getByLabel("Name")).toBeFocused();
+    await expectAccessible(page);
+    await staysInside("Rename chat");
+    await page.keyboard.press("Escape");
+    await expect(dialog).toBeHidden();
+    await expect(trigger).toBeFocused();
+  });
+
+  await test.step("delete: focus starts on Cancel, never on the destructive button", async () => {
+    const trigger = item.getByRole("button", { name: /^Delete/ });
+    await trigger.focus();
+    await page.keyboard.press("Enter");
+    const dialog = page.getByRole("dialog", { name: "Delete this chat?" });
+    await expect(dialog.getByRole("button", { name: "Cancel" })).toBeFocused();
+    await expectAccessible(page);
+    await staysInside("Delete this chat?");
+    await page.keyboard.press("Escape");
+    await expect(dialog).toBeHidden();
+    await expect(trigger).toBeFocused();
+    await expect(page.locator(`nav a[href="/c/${id}"]`)).toBeVisible();
+  });
 });
 
 test("the skip link goes to the page, then one Tab reaches the message box", async ({ page, account: _ }) => {
