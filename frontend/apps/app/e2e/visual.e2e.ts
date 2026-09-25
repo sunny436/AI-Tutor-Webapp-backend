@@ -148,8 +148,9 @@ test("signed in: the chat, its states, dialogs, settings and the 404", async ({ 
     await row.getByRole("button", { name: /^Rename/ }).click();
     await expect(page.getByRole("dialog", { name: "Rename chat" })).toBeVisible();
     await shot("dialog-rename");
-    await page.keyboard.press("Escape");
-    if (width < MD) await page.keyboard.press("Escape");
+    // Start clean rather than unwinding nested dialogs (a dialog over the drawer) key by key.
+    await page.goto("/");
+    await expect(composer(page)).toBeVisible();
 
     const again = await openList(page, width);
     await again
@@ -158,8 +159,8 @@ test("signed in: the chat, its states, dialogs, settings and the 404", async ({ 
       .click();
     await expect(page.getByRole("dialog", { name: "Delete this chat?" })).toBeVisible();
     await shot("dialog-delete-chat");
-    await page.keyboard.press("Escape");
-    if (width < MD) await page.keyboard.press("Escape");
+    await page.goto("/");
+    await expect(composer(page)).toBeVisible();
 
     if (width < MD) {
       await openList(page, width);
