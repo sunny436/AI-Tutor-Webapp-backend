@@ -73,6 +73,26 @@
         "title": "AcceptedOut",
         "type": "object"
       },
+      "ActivityOut": {
+        "properties": {
+          "credited": {
+            "description": "False when this minute had already been credited (another tab or device).",
+            "title": "Credited",
+            "type": "boolean"
+          },
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          }
+        },
+        "required": [
+          "credited",
+          "date"
+        ],
+        "title": "ActivityOut",
+        "type": "object"
+      },
       "AuthResult": {
         "properties": {
           "session": {
@@ -431,6 +451,63 @@
           "email"
         ],
         "title": "ForgotPasswordRequest",
+        "type": "object"
+      },
+      "GoalsOut": {
+        "properties": {
+          "dailyActiveMinutes": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dailyactiveminutes"
+          },
+          "dailyMet": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Null when there is no goal.",
+            "title": "Dailymet"
+          },
+          "weeklyActiveMinutes": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weeklyactiveminutes"
+          },
+          "weeklyMet": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weeklymet"
+          }
+        },
+        "required": [
+          "dailyActiveMinutes",
+          "weeklyActiveMinutes",
+          "dailyMet",
+          "weeklyMet"
+        ],
+        "title": "GoalsOut",
         "type": "object"
       },
       "HTTPValidationError": {
@@ -1393,6 +1470,100 @@
         "title": "ProfileSet",
         "type": "object"
       },
+      "ProgressDayOut": {
+        "properties": {
+          "activeMinutes": {
+            "title": "Activeminutes",
+            "type": "integer"
+          },
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          },
+          "questions": {
+            "title": "Questions",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "date",
+          "activeMinutes",
+          "questions"
+        ],
+        "title": "ProgressDayOut",
+        "type": "object"
+      },
+      "ProgressOut": {
+        "properties": {
+          "days": {
+            "description": "The last `days` days, oldest first, including days without activity.",
+            "items": {
+              "$ref": "#/components/schemas/ProgressDayOut"
+            },
+            "title": "Days",
+            "type": "array"
+          },
+          "goals": {
+            "$ref": "#/components/schemas/GoalsOut"
+          },
+          "streak": {
+            "$ref": "#/components/schemas/StreakOut"
+          },
+          "thisWeek": {
+            "$ref": "#/components/schemas/ProgressWeekOut"
+          },
+          "timezone": {
+            "description": "The time zone that decides which day is today.",
+            "title": "Timezone",
+            "type": "string"
+          },
+          "timezoneIsDefault": {
+            "description": "True until the user chooses a time zone (PATCH /v1/me/profile).",
+            "title": "Timezoneisdefault",
+            "type": "boolean"
+          },
+          "today": {
+            "$ref": "#/components/schemas/ProgressDayOut"
+          }
+        },
+        "required": [
+          "timezone",
+          "timezoneIsDefault",
+          "today",
+          "thisWeek",
+          "streak",
+          "goals",
+          "days"
+        ],
+        "title": "ProgressOut",
+        "type": "object"
+      },
+      "ProgressWeekOut": {
+        "properties": {
+          "activeMinutes": {
+            "title": "Activeminutes",
+            "type": "integer"
+          },
+          "questions": {
+            "title": "Questions",
+            "type": "integer"
+          },
+          "startDate": {
+            "description": "The Monday of the current week, in the student's time zone.",
+            "format": "date",
+            "title": "Startdate",
+            "type": "string"
+          }
+        },
+        "required": [
+          "startDate",
+          "activeMinutes",
+          "questions"
+        ],
+        "title": "ProgressWeekOut",
+        "type": "object"
+      },
       "RenameConversationRequest": {
         "additionalProperties": false,
         "properties": {
@@ -1635,6 +1806,25 @@
           "password"
         ],
         "title": "SignupRequest",
+        "type": "object"
+      },
+      "StreakOut": {
+        "properties": {
+          "currentDays": {
+            "description": "Consecutive active days up to today (or yesterday, before today's first).",
+            "title": "Currentdays",
+            "type": "integer"
+          },
+          "longestDays": {
+            "title": "Longestdays",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "currentDays",
+          "longestDays"
+        ],
+        "title": "StreakOut",
         "type": "object"
       },
       "SubjectIn": {
@@ -3726,6 +3916,76 @@
         "tags": [
           "chat",
           "feedback"
+        ]
+      }
+    },
+    "/v1/progress": {
+      "get": {
+        "description": "Active time in PadhAI and questions asked: today, this week, the streak and the goals.",
+        "operationId": "get_progress_v1_progress_get",
+        "parameters": [
+          {
+            "description": "How many recent days to list.",
+            "in": "query",
+            "name": "days",
+            "required": false,
+            "schema": {
+              "default": 14,
+              "description": "How many recent days to list.",
+              "maximum": 90,
+              "minimum": 7,
+              "title": "Days",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProgressOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Progress",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/activity": {
+      "post": {
+        "description": "Report one active minute: PadhAI is open and visible, and the student interacted with it\n(or a reply was streaming) within the last two minutes. Credited at most once per minute,\nhowever many tabs or devices report it.",
+        "operationId": "report_activity_v1_progress_activity_post",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ActivityOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Report Activity",
+        "tags": [
+          "progress"
         ]
       }
     }

@@ -78,6 +78,8 @@ export const ROUTES = {
   "GET /v1/learning/preferences": { auth: true },
   "PATCH /v1/learning/preferences": { auth: true, body: "UpdateLearningPreferencesRequest" },
   "POST /v1/learning/tutor-preview": { auth: true, body: "TutorPreviewRequest" },
+  "POST /v1/progress/activity": { auth: true },
+  "GET /v1/progress": { auth: true, query: ["days"] },
 
   "GET /v1/conversations": { auth: true, query: ["limit", "cursor"] },
   "GET /v1/conversations/{conversation_id}": { auth: true },

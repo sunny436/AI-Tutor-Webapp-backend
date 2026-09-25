@@ -1,8 +1,10 @@
-"""What the tutor may know about a student: the Learning domain's one public read.
+"""The Learning domain's public reads: what the tutor may know about a student, and the
+student's active-time goals.
 
-Chat reads it once per turn, inside its prepare transaction (app/chat/service.py), and never
-touches the learning tables itself. It holds display names, not codes, and nothing that
-identifies the student: no name, email address or photo ever reaches the model.
+Chat reads the context once per turn, inside its prepare transaction (app/chat/service.py);
+Progress reads the goals (app/progress). Neither touches the learning tables itself. The
+context holds display names, not codes, and nothing that identifies the student: no name,
+email address or photo ever reaches the model.
 """
 
 from __future__ import annotations
@@ -105,6 +107,18 @@ async def read_subjects(session: AsyncSession, user_id: uuid.UUID) -> list[Learn
 
 def subject_choices(rows: Iterable[LearnerSubject]) -> list[SubjectChoice]:
     return [SubjectChoice(row.subject_code, row.is_priority, row.needs_improvement) for row in rows]
+
+
+@dataclass(frozen=True)
+class ActiveTimeGoals:
+    daily_minutes: int | None = None
+    weekly_minutes: int | None = None
+
+
+async def read_active_time_goals(session: AsyncSession, user_id: uuid.UUID) -> ActiveTimeGoals:
+    """The student's own daily and weekly active-time goals (read by app/progress)."""
+    row = await session.get(LearnerProfile, user_id)
+    return ActiveTimeGoals(row.daily_active_minutes_goal, row.weekly_active_minutes_goal) if row else ActiveTimeGoals()
 
 
 async def read_student_context(session: AsyncSession, user_id: uuid.UUID) -> StudentContext:

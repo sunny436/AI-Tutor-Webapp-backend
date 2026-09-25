@@ -6,10 +6,11 @@ refuses to start a production process with development secrets.
 
 from __future__ import annotations
 
+import zoneinfo
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field, SecretStr
+from pydantic import Field, SecretStr, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 # Placeholder for development only; validate_for_env() refuses it in production.
@@ -62,6 +63,10 @@ class Settings(BaseSettings):
     # raising this alone changes nothing for browsers.
     avatar_max_bytes: int = Field(default=5 * 1024 * 1024, ge=64 * 1024, le=20 * 1024 * 1024)
     avatar_uploads_per_user: int = 10  # per auth_window_minutes
+
+    # ---- progress ----
+    # Decides which day "today" is for a user who has not chosen a time zone (users.timezone).
+    default_timezone: str = "Asia/Kolkata"
 
     # ---- email ----
     email_backend: Literal["smtp", "ollastack", "memory"] = "smtp"
@@ -134,6 +139,15 @@ class Settings(BaseSettings):
     embedding_dimensions: int = 1536
     embedding_batch_size: int = 64
     embedding_timeout_s: float = 20.0
+
+    @field_validator("default_timezone")
+    @classmethod
+    def _known_zone(cls, value: str) -> str:
+        try:
+            zoneinfo.ZoneInfo(value)
+        except (zoneinfo.ZoneInfoNotFoundError, ValueError) as error:
+            raise ValueError("DEFAULT_TIMEZONE must be an IANA time zone name, e.g. Asia/Kolkata") from error
+        return value
 
     @property
     def cors_origins(self) -> list[str]:

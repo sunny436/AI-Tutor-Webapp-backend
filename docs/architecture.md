@@ -26,6 +26,7 @@ Browser ──► Web app (Next.js, frontend/; 127.0.0.1:3000)
                ├─ auth            users, sessions, email codes, throttling, profile photo, devices
                ├─ learning        academic catalog, learner profile, subjects, learning preferences,
                │                  and what they add to the tutor's instructions (app/learning/tutor.py)
+               ├─ progress        active time in PadhAI (deduplicated minutes), questions, streaks, goals
                ├─ conversations   list/create/rename/delete, message history
                ├─ chat            ChatService + SSE + stop + regenerate + feedback + quotas
                ├─ rag             LangGraph turn graph + LangChain retriever over pgvector (docs/rag.md)
@@ -52,6 +53,7 @@ users ─┬─ user_settings        preferences (JSONB, ≤ 4 KB)
        ├─ learner_profiles     class, board, medium, goals, weak topics (catalog codes + short text), versioned
        ├─ learner_subjects     ordered subject list with priority / needs-improvement flags
        ├─ learning_preferences how the student wants to be taught; typed columns, each `auto` by default
+       ├─ activity_days        per local day: active seconds, questions, the last credited UTC minute
        ├─ auth_sessions        SHA-256 of a random 256-bit token; 30-day sliding expiry
        ├─ conversations ── messages ── message_feedback
        └─ usage_events         one per generation: provider, model, tokens, latency, outcome
