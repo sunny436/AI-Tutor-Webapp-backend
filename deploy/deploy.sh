@@ -72,7 +72,7 @@ else
     "$WORK/ci.raw" "$(git config user.name || echo unknown)" "$WORK/ci.json"
   CI_SUMMARY="passed ($(bun -e 'console.log(JSON.parse(require("fs").readFileSync(process.argv[1],"utf8")).jobs.map(j=>j.name.split(" (")[0]).join(", "))' "$WORK/ci.raw"))"
 fi
-LIVE=$(ssh "$HOST" 'r=$(readlink -f /opt/aichat/current 2>/dev/null) && basename "$r"' || true)
+LIVE=$(ssh "$HOST" 'r=$(readlink -e /opt/aichat/current 2>/dev/null) && case "$r" in /opt/aichat/releases/*) basename "$r" ;; esac' || true)
 
 cat <<EOF
 
