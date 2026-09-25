@@ -103,6 +103,7 @@ const config = {
         hero: {
           foreground: "hsl(var(--hero-foreground))",
           muted: "hsl(var(--hero-muted))",
+          deep: "hsl(var(--hero-deep-from))",
         },
         // Decorative fill behind the streak's flame; never text.
         streak: "hsl(var(--streak))",
