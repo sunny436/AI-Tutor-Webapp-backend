@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The web app for "Assistant", a ChatGPT-style chat product: Next.js 14 App Router, React 18, TypeScript, Tailwind, Radix, in a Bun + Turborepo monorepo (`apps/app` is the app, `packages/ui` the design system). **Frontend only.** Accounts, conversations, messages and the LLM all live in the chat API: FastAPI + PostgreSQL/pgvector, in a separate repo (locally `../AI Tutor- Backend`). The app was converted from an Ayurveda chatbot that ran on Convex. No Convex, i18n or Ayurveda code remains, apart from a `/consult` → `/` legacy redirect.
+The web app of PadhAI, an AI tutor built on a ChatGPT-style chat: Next.js 14 App Router, React 18, TypeScript, Tailwind, Radix, in a Bun + Turborepo monorepo (`apps/app` is the app, `packages/ui` the design system). **Frontend only.** Accounts, conversations, messages and the LLM all live in the chat API: FastAPI + PostgreSQL/pgvector, in this repository's `backend/`. The app was converted from an Ayurveda chatbot that ran on Convex. No Convex, i18n or Ayurveda code remains, apart from a `/consult` → `/` legacy redirect.
+
+It is the API's first client, not the platform: durable data and business rules belong in the API (root `CLAUDE.md`, "web-first, not web-only"); browser storage holds UI state only.
 
 Git: this folder is part of the single application repository (see the root `CLAUDE.md`); commit and push from there. The old frontend repository (`sunny436/AI-Tutor-Webapp-frontend`) is no longer used. `ollastack.txt` and `ollima.txt` in the repository root hold tokens and are gitignored. Never add them.
 
@@ -83,6 +85,8 @@ Adding an endpoint means adding it to `ROUTES`. `routes.test.ts` fails unless th
 - KaTeX and highlight CSS load in `(app)/layout.tsx`, which keeps the renderer testable.
 
 **Styling.** Use the tokens in `packages/ui/src/globals.css` (contrast-checked, light and dark), not raw colours. The CSP in `next.config.mjs` allows only `'self'`, with `'unsafe-eval'`/`ws:` in dev only.
+
+**Preview UI.** The learning tools (My Courses, Homework Helper, Summarizer, Course Creator, Flashcards), streak/XP and similar sample-data UI render only with `PREVIEW_FEATURES=1`: a server env var read per request by `(app)/layout.tsx` (`lib/preview.ts`), never set in production. `e2e/gated.e2e.ts` and `e2e/preview.e2e.ts` check both states. Build the real versions on `/v1` APIs; `features/learning-hub/demo-data.ts` is a placeholder, not data.
 
 ## Production
 

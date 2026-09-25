@@ -30,3 +30,6 @@ logs/
 
 # Written into each production release by deploy/server/release.sh; never committed
 /RELEASE
+
+# Graphify knowledge-graph output (local, regenerated; any folder it is run on)
+graphify-out/

@@ -22,6 +22,27 @@ History:
 - The backend formerly held an Ayurveda chatbot; that code is only at the tag `ayurveda-baseline`.
 - Remotes: `tutor` is `sunny436/AI-Tutor-Webapp-backend` (PRs go to its `main`); `origin` is the old Ayurveda repo.
 
+## Architecture guardrail: web-first, not web-only
+
+PadhAI is built for the web today; the platform under it must serve future iOS, Android, tablet
+and desktop clients without a rewrite. The web app (with its BFF) is the API's first client, not
+the architecture. Priorities: correctness, security, reliability, maintainability, scalability,
+performance, simplicity.
+
+- **Durable data and rules live in the API** (routers → services/repositories → PostgreSQL). Browser
+  storage is for UI state only; user preferences belong in `/v1/me/settings`. A client may mirror a
+  rule for UX; the API enforces it.
+- **APIs model resources, not screens.** `/v1` changes are additive; anything breaking gets a new
+  endpoint or version while old clients still need the old one (`docs/api-contract.md`, "Compatibility").
+- **Authorization is per user, in the API.** Never rely on a client, or on the BFF allowlist.
+- **Web-only mechanisms stay at the client layer:** the BFF, cookies, CSP, layout, `PREVIEW_FEATURES`.
+- **Don't** build other clients, add cross-platform abstractions, or refactor working code for
+  scalability alone; make the smallest safe change. The web-derived assumptions a native client would
+  need resolved first are listed in `docs/architecture.md`, "Clients".
+- **Enforced by tests:** contract sync (`export_openapi.py --check`, `routes.test.ts`), dependency
+  direction (`test_architecture_guards.py`), per-user isolation (`test_authorization.py`). The rest
+  is review.
+
 ## Commands
 
 From the repository root (the implementation is `scripts/run.mjs`, a thin runner over each half's own tools):
@@ -72,7 +93,8 @@ Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. O
 - Server components call the API directly with `lib/server/backend.ts`. If the API is unreachable,
   users see an outage screen, not a sign-out.
 
-Never let the browser call the API, and never hand the token to page code.
+Never let the browser call the API, and never hand the token to page code. Future native clients will
+call a published API directly, never the BFF (`docs/architecture.md`, "Clients").
 
 **One contract.** `docs/openapi.json` is generated from the backend (`backend/scripts/export_openapi.py`).
 The frontend's `routes.test.ts` reads that file and fails if a proxied route or request field no

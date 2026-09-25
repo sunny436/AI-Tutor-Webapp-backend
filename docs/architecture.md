@@ -76,6 +76,36 @@ citations) without schema changes.
 
 The browser sends only `{conversationId, message}`; it never writes messages or sends history.
 
+## Clients: web-first, not web-only
+
+The web app is the first client of the API, not the platform. Everything a second client (iOS,
+Android, tablet, desktop) would need already lives behind `/v1`: accounts and sessions, data,
+validation, quotas, tutor configuration (`resolve_assistant_config`) and user preferences
+(`/v1/me/settings`, `user_settings.preferences`). Rules live in the API's services and repositories
+(`app/*/service.py`, `app/conversations/repository.py`); routers only translate HTTP. One exception is
+left as it is, since it works and moving it gains nothing today: feedback is written directly in
+`app/chat/router.py`. Clients follow the "Client obligations" in [api-contract.md](api-contract.md).
+
+These assumptions come from having only a web client. None needs changing now; each must be
+resolved before, and only when, a native client is started:
+
+| Today | Why it matters for a native client | Needed first |
+|---|---|---|
+| The API listens on loopback and is reached only through the web app's BFF | a native app cannot use the BFF (its session is a cookie and it checks `Origin` on mutations) | publish the API itself (e.g. its own hostname through the tunnel), still `/v1` with bearer tokens |
+| `TRUST_FORWARDED_FOR` takes the first `X-Forwarded-For` entry | safe only while the BFF is the sole caller; on a public API a client could set it and dodge per-IP throttling | take the client IP from `CF-Connecting-IP` (or the proxy's own entry) before publishing |
+| Closing the stream stops the reply (`app/chat/streams.py`) | phones drop connections when backgrounded or switching networks | let a client opt out per request, or stop only on `POST …/cancel` |
+| No idempotency key on `POST /v1/chat` and `/v1/chat/stream` | a send retried on a flaky network can create the message twice | accept an `Idempotency-Key` |
+| Sessions can be revoked only all at once (`revoke-others`) | people manage devices one by one | list and revoke single sessions (rows already keep user agent, IP and last use) |
+| The theme is stored in the browser (next-themes) | a preference that does not follow the user | move it to `/v1/me/settings` the next time preferences are worked on |
+| Sign-in throttling counts per IP | carrier NAT puts many phones behind one address | review the limits against real mobile traffic |
+| Logs carry request and user ids, but not the client; no metrics or tracing | web and app failures cannot be told apart | log a client identifier; add metrics once there is more than one client |
+| Nothing is stored outside PostgreSQL; there are no uploads | homework photos and PDFs | server-side storage behind the API, never on one device |
+
+Already client-neutral: bearer tokens returned in the response body; 30-day sliding sessions, one
+per device; email flows by 6-digit code, with no web links; a non-streaming `POST /v1/chat`
+alongside SSE; opaque pagination cursors; ISO-8601 timestamps; errors identified by `code`; another
+user's resources indistinguishable from missing ones.
+
 ## Extension points (for the AI tutor phase)
 
 | Need | Seam | Change required |
