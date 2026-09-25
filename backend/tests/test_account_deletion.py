@@ -10,7 +10,7 @@ import uuid
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import create_async_engine
 
-from tests.conftest import PASSWORD, ingest_docs, last_code, register, stream_chat
+from tests.conftest import PASSWORD, image_bytes, ingest_docs, last_code, register, stream_chat
 
 USER_REFERENCES = text(
     """
@@ -65,6 +65,14 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
         owner_user_id=uuid.UUID(user_id),
     )
     await client.post("/v1/auth/password/forgot", json={"email": account["email"]})  # a pending code by address
+    photo = await client.put("/v1/me/avatar", content=image_bytes(), headers={**headers, "Content-Type": "image/png"})
+    assert photo.status_code == 200, photo.text
+    change = await client.post(  # a pending change-email code, bound to the user
+        "/v1/me/email/change",
+        json={"newEmail": f"moved-{uuid.uuid4().hex[:8]}@example.com", "password": PASSWORD},
+        headers=headers,
+    )
+    assert change.status_code == 202, change.text
     assert last_code(app, account["email"])
 
     before = await _rows_referencing(database, user_id, account["email"])

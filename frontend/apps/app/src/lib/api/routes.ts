@@ -36,7 +36,16 @@ export type RouteSpec = {
    *   clear — the session has ended; delete the cookie
    */
   session?: "issue" | "clear";
+  /**
+   * A raw file as the request body instead of JSON: the content types the API accepts
+   * and the most bytes the BFF reads (the contract's `x-max-bytes`; the API checks too).
+   */
+  upload?: { types: readonly string[]; maxBytes: number };
+  /** The response is a file, not JSON: its content types. See the BFF's FILES note. */
+  file?: { types: readonly string[] };
 };
+
+const IMAGE_UPLOAD = { types: ["image/jpeg", "image/png", "image/webp"], maxBytes: 5 * 1024 * 1024 } as const;
 
 export const ROUTES = {
   "POST /v1/auth/signup": { auth: false, body: "SignupRequest" },
@@ -48,9 +57,17 @@ export const ROUTES = {
   "POST /v1/auth/password/change": { auth: true, body: "ChangePasswordRequest" },
   "POST /v1/auth/logout": { auth: true, session: "clear" },
   "POST /v1/auth/sessions/revoke-others": { auth: true },
+  "GET /v1/auth/sessions": { auth: true },
+  "DELETE /v1/auth/sessions/{session_id}": { auth: true },
 
   "GET /v1/me": { auth: true },
   "PATCH /v1/me": { auth: true, body: "UpdateMeRequest" },
+  "PATCH /v1/me/profile": { auth: true, body: "UpdateProfileRequest" },
+  "PUT /v1/me/avatar": { auth: true, upload: IMAGE_UPLOAD },
+  "DELETE /v1/me/avatar": { auth: true },
+  "GET /v1/me/avatar": { auth: true, query: ["v"], file: { types: ["image/webp"] } },
+  "POST /v1/me/email/change": { auth: true, body: "EmailChangeRequest" },
+  "POST /v1/me/email/confirm": { auth: true, body: "EmailConfirmRequest" },
   "DELETE /v1/me": { auth: true, body: "DeleteMeRequest", session: "clear" },
 
   "GET /v1/conversations": { auth: true, query: ["limit", "cursor"] },

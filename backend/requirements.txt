@@ -16,6 +16,12 @@ pgvector>=0.3.6,<1.0
 # Security
 argon2-cffi>=23.1,<26.0
 
+# Profile photos: validated, resized and re-encoded server-side (metadata stripped)
+Pillow>=12.2,<13
+
+# The IANA time zone database for zoneinfo (user time zones), identical on every OS
+tzdata>=2025.1
+
 # LLM and embedding providers (OpenAI-compatible APIs)
 openai>=1.55,<3.0
 httpx>=0.27,<1.0

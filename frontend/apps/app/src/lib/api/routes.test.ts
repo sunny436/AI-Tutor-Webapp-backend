@@ -11,10 +11,15 @@ import { describe, expect, test } from "bun:test";
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { ROUTES, type RouteKey, buildPath, matchRoute, splitRouteKey } from "./routes";
+import { ROUTES, type RouteKey, type RouteSpec, buildPath, matchRoute, splitRouteKey } from "./routes";
+
+type Operation = {
+  requestBody?: { content?: Record<string, { schema?: { $ref?: string } }>; "x-max-bytes"?: number };
+  responses?: Record<string, { content?: Record<string, unknown> }>;
+};
 
 type OpenApi = {
-  paths: Record<string, Record<string, { requestBody?: { content?: Record<string, { schema?: { $ref?: string } }> } }>>;
+  paths: Record<string, Record<string, Operation>>;
   components: { schemas: Record<string, { properties?: Record<string, unknown>; required?: string[] }> };
 };
 
@@ -58,6 +63,13 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
   ResetPasswordRequest: [{ email: "a@b.c", code: "123456", newPassword: "x" }],
   ChangePasswordRequest: [{ currentPassword: "x", newPassword: "y" }],
   UpdateMeRequest: [{ displayName: "A" }],
+  UpdateProfileRequest: [
+    { version: 0 },
+    { version: 1, set: { displayName: "A", timezone: "Asia/Kolkata" } },
+    { version: 2, reset: ["timezone"] },
+  ],
+  EmailChangeRequest: [{ newEmail: "a@b.c", password: "x" }],
+  EmailConfirmRequest: [{ newEmail: "a@b.c", code: "123456" }],
   DeleteMeRequest: [{ password: "x" }],
   RenameConversationRequest: [{ title: "T" }],
   ChatRequest: [{ message: "hi" }, { conversationId: ID, message: "hi" }],
@@ -83,6 +95,26 @@ describe("request bodies the client sends", () => {
       if (body) expect(Object.keys(SENT_BODIES)).toContain(body);
     }
   });
+});
+
+describe("file routes", () => {
+  for (const key of keys) {
+    const { method, pattern } = splitRouteKey(key);
+    const spec = ROUTES[key] as RouteSpec;
+    const operation = openapi.paths[pattern]?.[method.toLowerCase()];
+
+    if (spec.upload) {
+      test(`${key} accepts exactly the upload types and size the API declares`, () => {
+        expect([...(spec.upload?.types ?? [])].sort()).toEqual(Object.keys(operation?.requestBody?.content ?? {}).sort());
+        expect(spec.upload?.maxBytes).toBe(operation?.requestBody?.["x-max-bytes"] as never);
+      });
+    }
+    if (spec.file) {
+      test(`${key} passes exactly the file types the API answers with`, () => {
+        expect([...(spec.file?.types ?? [])].sort()).toEqual(Object.keys(operation?.responses?.["200"]?.content ?? {}).sort());
+      });
+    }
+  }
 });
 
 describe("buildPath / matchRoute", () => {

@@ -11,19 +11,25 @@ import uuid
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import delete, func, select, update
+from sqlalchemy import delete, func, or_, select, update
+from sqlalchemy.dialects.postgresql import insert
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth.emails import EmailSender, code_email
+from app.auth.avatar import ProcessedAvatar
+from app.auth.emails import EmailSender, code_email, email_changed_email, email_in_use_email
 from app.auth.security import Passwords, hash_code, hash_key, hash_token, new_email_code, new_session_token
-from app.db.models import AuthAttempt, AuthSession, EmailCode, User, UserSettings
+from app.db.models import AuthAttempt, AuthSession, EmailCode, User, UserAvatar, UserSettings
 from app.errors import (
+    Conflict,
     EmailNotVerified,
     InvalidCode,
     InvalidCredentials,
+    NotFound,
     RateLimited,
     ServiceUnavailable,
     ValidationFailed,
+    VersionConflict,
 )
 from app.logging import get_logger
 from app.settings import Settings
@@ -220,6 +226,7 @@ class AuthService:
         user.password_hash = await self.passwords.hash(new_password)
         user.email_verified_at = user.email_verified_at or utcnow()
         user.updated_at = utcnow()
+        user.password_changed_at = user.updated_at
         await self.db.execute(delete(AuthSession).where(AuthSession.user_id == user.id))
         issued = await self._issue_session(user, client)
         await self.db.commit()
@@ -231,6 +238,7 @@ class AuthService:
             raise InvalidCredentials("The current password is incorrect.")
         user.password_hash = await self.passwords.hash(new)
         user.updated_at = utcnow()
+        user.password_changed_at = user.updated_at
         await self.revoke_other_sessions(user.id, session_id, commit=False)
         await self.db.commit()
 
@@ -244,9 +252,194 @@ class AuthService:
             await self.db.commit()
 
     async def update_profile(self, user: User, display_name: str | None) -> User:
+        """The original PATCH /v1/me, kept for existing clients. It moves the version on too, so
+        a versioned edit that raced it is refused instead of silently overwriting it."""
         user.display_name = (display_name or "").strip() or None
         user.updated_at = utcnow()
+        user.profile_version = User.profile_version + 1
         await self.db.commit()
+        await self.db.refresh(user)
+        return user
+
+    # ------------------------------------------------------------ identity profile
+    PROFILE_COLUMNS = {"displayName": "display_name", "timezone": "timezone"}
+
+    async def update_profile_versioned(
+        self, user: User, version: int, changes: dict[str, object], reset: list[str]
+    ) -> User:
+        """Compare-and-set on profile_version in one UPDATE: of two writers that read the same
+        version, exactly one wins; the other gets 409 version_conflict. An empty change writes
+        nothing and keeps the version."""
+        values: dict[str, object] = {self.PROFILE_COLUMNS[name]: value for name, value in changes.items()}
+        values.update({self.PROFILE_COLUMNS[name]: None for name in reset})
+        if not values:
+            return user
+        result = await self.db.execute(
+            update(User)
+            .where(User.id == user.id, User.profile_version == version)
+            .values(**values, profile_version=User.profile_version + 1, updated_at=func.clock_timestamp())
+            .returning(User.id)
+            .execution_options(synchronize_session=False)
+        )
+        won = result.first() is not None
+        await self.db.commit()
+        await self.db.refresh(user)
+        if not won:
+            raise VersionConflict()
+        return user
+
+    # --------------------------------------------------------------- profile photo
+    async def throttle_avatar(self, user: User) -> None:
+        """Counted before the image is decoded, so refused and failed uploads cost an attempt too."""
+        await self._throttle("avatar_user", str(user.id), self.settings.avatar_uploads_per_user)
+        await self.db.commit()
+
+    async def set_avatar(self, user: User, avatar: ProcessedAvatar) -> User:
+        # The upsert locks the photo row until commit, so concurrent uploads apply one after the
+        # other and users.avatar_hash always names the stored image.
+        statement = insert(UserAvatar).values(
+            user_id=user.id, image=avatar.image, content_type=avatar.content_type, hash=avatar.hash
+        )
+        await self.db.execute(
+            statement.on_conflict_do_update(
+                index_elements=[UserAvatar.user_id],
+                set_={
+                    "image": statement.excluded.image,
+                    "content_type": statement.excluded.content_type,
+                    "hash": statement.excluded.hash,
+                    "updated_at": func.clock_timestamp(),
+                },
+            )
+        )
+        user.avatar_hash = avatar.hash
+        await self.db.commit()
+        return user
+
+    async def remove_avatar(self, user: User) -> User:
+        await self.db.execute(delete(UserAvatar).where(UserAvatar.user_id == user.id))
+        user.avatar_hash = None
+        await self.db.commit()
+        return user
+
+    async def get_avatar(self, user_id: uuid.UUID) -> UserAvatar | None:
+        return await self.db.get(UserAvatar, user_id)
+
+    # -------------------------------------------------------------------- sessions
+    async def list_sessions(self, user_id: uuid.UUID) -> list[AuthSession]:
+        rows = await self.db.scalars(
+            select(AuthSession)
+            .where(AuthSession.user_id == user_id, AuthSession.expires_at > func.now())
+            .order_by(AuthSession.last_seen_at.desc(), AuthSession.id)
+        )
+        return list(rows)
+
+    async def revoke_session(self, user_id: uuid.UUID, session_id: uuid.UUID, current_session_id: uuid.UUID) -> None:
+        if session_id == current_session_id:
+            raise Conflict("This is the device you are using. Sign out instead.", code="current_session")
+        # The owner is part of the condition: another account's session is simply "not found".
+        result = await self.db.execute(
+            delete(AuthSession).where(AuthSession.id == session_id, AuthSession.user_id == user_id)
+        )
+        if result.rowcount == 0:
+            raise NotFound("Session not found.")
+        await self.db.commit()
+
+    # ---------------------------------------------------------------- email change
+    @staticmethod
+    def _change_purpose(user_id: uuid.UUID) -> str:
+        # The HMAC names the user: a change code can only ever move the account that asked for it.
+        return f"change_email:{user_id}"
+
+    async def request_email_change(self, user: User, new_email: str, password: str) -> None:
+        """Answers 202 whatever the address. If it is free, a code goes to it; if another account
+        has it, a notice goes to it instead. Either way exactly one email is sent, so the caller
+        cannot tell which happened."""
+        if new_email.lower() == user.email.lower():
+            raise ValidationFailed(
+                "That is already your email address.", fields=[{"field": "newEmail", "reason": "unchanged"}]
+            )
+        await self._throttle("login_fail", user.email, self.settings.login_failures_per_email, record=False)
+        await self._throttle("email_change_user", str(user.id), self.settings.email_change_requests_per_user)
+        await self._throttle("code_email", new_email, self.settings.code_requests_per_email)
+        valid, _ = await self.passwords.verify(user.password_hash, password)
+        if not valid:
+            await self._record_attempt("login_fail", user.email)
+            await self.db.commit()
+            raise InvalidCredentials("The password is incorrect.")
+        # Only the latest request can be confirmed.
+        await self.db.execute(
+            delete(EmailCode).where(EmailCode.purpose == "change_email", EmailCode.user_id == user.id)
+        )
+        if await self._user_by_email(new_email) is not None:
+            subject, body = email_in_use_email(self.settings.app_name)
+            await self._deliver(new_email, subject, body)
+            await self.db.commit()
+            return
+        code = new_email_code()
+        self.db.add(
+            EmailCode(
+                email=new_email,
+                purpose="change_email",
+                user_id=user.id,
+                code_hash=hash_code(self.settings, new_email, self._change_purpose(user.id), code),
+                expires_at=utcnow() + timedelta(minutes=self.settings.email_code_ttl_minutes),
+            )
+        )
+        subject, body = code_email(self.settings.app_name, "change_email", code, self.settings.email_code_ttl_minutes)
+        await self._deliver(new_email, subject, body)
+        await self.db.commit()
+
+    async def confirm_email_change(self, user: User, current_session_id: uuid.UUID, new_email: str, code: str) -> User:
+        row = await self.db.scalar(
+            select(EmailCode)
+            .where(
+                EmailCode.email == new_email,
+                EmailCode.purpose == "change_email",
+                EmailCode.user_id == user.id,
+                EmailCode.consumed_at.is_(None),
+            )
+            .order_by(EmailCode.created_at.desc())
+            .limit(1)
+            .with_for_update()
+        )
+        if row is None or row.expires_at <= utcnow() or row.attempts >= self.settings.email_code_max_attempts:
+            raise InvalidCode()
+        if row.code_hash != hash_code(self.settings, new_email, self._change_purpose(user.id), code):
+            row.attempts += 1
+            await self.db.commit()
+            raise InvalidCode()
+        old_email = user.email
+        try:
+            await self.db.execute(
+                update(User)
+                .where(User.id == user.id)
+                .values(
+                    email=new_email,
+                    email_verified_at=func.clock_timestamp(),
+                    profile_version=User.profile_version + 1,
+                    updated_at=func.clock_timestamp(),
+                )
+                .execution_options(synchronize_session=False)
+            )
+        except IntegrityError as error:  # someone registered the address after the code was sent
+            await self.db.rollback()
+            raise Conflict("That email address is no longer available.", code="email_unavailable") from error
+        # No code for either address survives: an old reset code must not reach the account
+        # again, and nobody else's pending move to the new address can complete now.
+        await self.db.execute(
+            delete(EmailCode).where(
+                or_(EmailCode.email == old_email, EmailCode.email == new_email, EmailCode.user_id == user.id)
+            )
+        )
+        await self.revoke_other_sessions(user.id, current_session_id, commit=False)
+        await self.db.commit()
+        await self.db.refresh(user)
+        # After the commit: the change stands even when the notice cannot be sent right now.
+        subject, body = email_changed_email(self.settings.app_name, new_email)
+        try:
+            await self.email.send(old_email, subject, body)
+        except Exception as error:  # noqa: BLE001
+            log.error("email change notice failed", extra={"error_type": type(error).__name__})
         return user
 
     async def delete_account(self, user: User, password: str) -> None:

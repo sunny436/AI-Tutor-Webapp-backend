@@ -29,6 +29,17 @@ export const CONTRACT = {
       "minLength": 1
     }
   },
+  "EmailChangeRequest": {
+    "password": {
+      "maxLength": 128,
+      "minLength": 1
+    }
+  },
+  "EmailConfirmRequest": {
+    "code": {
+      "pattern": "^\\d{6}$"
+    }
+  },
   "FeedbackOut": {
     "rating": {
       "enum": [
@@ -52,6 +63,15 @@ export const CONTRACT = {
     "password": {
       "maxLength": 128,
       "minLength": 1
+    }
+  },
+  "ProfileSet": {
+    "displayName": {
+      "maxLength": 80,
+      "minLength": 1
+    },
+    "timezone": {
+      "maxLength": 64
     }
   },
   "RenameConversationRequest": {
@@ -89,6 +109,20 @@ export const CONTRACT = {
   "UpdateMeRequest": {
     "displayName": {
       "maxLength": 80
+    }
+  },
+  "UpdateProfileRequest": {
+    "reset": {
+      "items": {
+        "enum": [
+          "displayName",
+          "timezone"
+        ]
+      },
+      "maxItems": 2
+    },
+    "version": {
+      "minimum": 0
     }
   },
   "VerifyEmailRequest": {

@@ -95,11 +95,10 @@ resolved before, and only when, a native client is started:
 | `TRUST_FORWARDED_FOR` takes the first `X-Forwarded-For` entry | safe only while the BFF is the sole caller; on a public API a client could set it and dodge per-IP throttling | take the client IP from `CF-Connecting-IP` (or the proxy's own entry) before publishing |
 | Closing the stream stops the reply (`app/chat/streams.py`) | phones drop connections when backgrounded or switching networks | let a client opt out per request, or stop only on `POST …/cancel` |
 | No idempotency key on `POST /v1/chat` and `/v1/chat/stream` | a send retried on a flaky network can create the message twice | accept an `Idempotency-Key` |
-| Sessions can be revoked only all at once (`revoke-others`) | people manage devices one by one | list and revoke single sessions (rows already keep user agent, IP and last use) |
 | The theme is stored in the browser (next-themes) | a preference that does not follow the user | move it to `/v1/me/settings` the next time preferences are worked on |
 | Sign-in throttling counts per IP | carrier NAT puts many phones behind one address | review the limits against real mobile traffic |
 | Logs carry request and user ids, but not the client; no metrics or tracing | web and app failures cannot be told apart | log a client identifier; add metrics once there is more than one client |
-| Nothing is stored outside PostgreSQL; there are no uploads | homework photos and PDFs | server-side storage behind the API, never on one device |
+| The only upload is a profile photo, re-encoded to at most 64 KB and kept in PostgreSQL (`user_avatars`) | homework photos and PDFs are larger and many | object storage behind the API, never on one device; the photo is read and written only through `AuthService` |
 
 Already client-neutral: bearer tokens returned in the response body; 30-day sliding sessions, one
 per device; email flows by 6-digit code, with no web links; a non-streaming `POST /v1/chat`

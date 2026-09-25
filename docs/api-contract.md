@@ -9,9 +9,11 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 - Auth: `Authorization: Bearer <session token>` on everything except `/health`, `/ready` and the
   sign-up/login/verify/reset endpoints.
 - Optional `X-Request-ID` (`[A-Za-z0-9._-]{1,64}`); echoed back, otherwise generated.
-- Request bodies are limited to 64 KB (413 `payload_too_large`).
+- Request bodies are limited to 64 KB (413 `payload_too_large`), except the profile photo upload
+  (`PUT /v1/me/avatar`: a raw image of at most `AVATAR_MAX_BYTES`, 5 MB by default).
 - Resources owned by another user return **404**, exactly like missing ones.
-- Errors: `{"error": {"code": "...", "message": "...", "requestId": "..."}}` (+ `fields` on 422).
+- Errors: `{"error": {"code": "...", "message": "...", "requestId": "..."}}`, plus `fields` on 422
+  and `current` on 409 `version_conflict`.
 
 | HTTP | code | meaning |
 |---|---|---|
@@ -21,7 +23,11 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 | 400 | `invalid_code` | wrong, expired or over-used email code |
 | 404 | `not_found` | missing, or not yours |
 | 409 | `conflict` | a reply is already generating in this conversation; nothing to regenerate |
-| 413 | `payload_too_large` | body over 64 KB |
+| 409 | `version_conflict` | a versioned edit named an old `version`; `current` holds the resource as it is now |
+| 409 | `current_session` | revoking the session in use (sign out instead) |
+| 409 | `email_unavailable` | the new email address was taken before the change was confirmed |
+| 413 | `payload_too_large` | body over 64 KB (the photo upload: over its own limit) |
+| 415 | `unsupported_media_type` | a photo that is not JPEG, PNG or WebP |
 | 422 | `validation_error` | invalid body/query (`fields: [{field, reason}]`, values never echoed) |
 | 429 | `rate_limited` | auth throttling or the per-user generation quota |
 | 503 | `service_unavailable` | database or email temporarily unavailable |
@@ -40,9 +46,62 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 | POST | `/v1/auth/password/change` | `{currentPassword, newPassword}` | 204; other sessions revoked |
 | POST | `/v1/auth/logout` | – | 204 (this session) |
 | POST | `/v1/auth/sessions/revoke-others` | – | 204 |
-| GET / PATCH | `/v1/me` | PATCH `{displayName}` | `{id, email, displayName, emailVerified, createdAt}` |
+| GET | `/v1/auth/sessions` | – | `{items: [{id, current, device, ipMasked, createdAt, lastSeenAt, expiresAt}]}`, most recently used first |
+| DELETE | `/v1/auth/sessions/{id}` | – | 204 — signs that device out; 409 `current_session` for your own, 404 if not yours |
+| GET | `/v1/me` | – | the user (below) |
+| PATCH | `/v1/me/profile` | `{version, set: {displayName?, timezone?}, reset: [...]}` ([versioned edits](#versioned-edits)) | the user |
+| PATCH | `/v1/me` | `{displayName}` | the user. **Deprecated**: use `/v1/me/profile`. It moves `profileVersion` on too |
+| PUT | `/v1/me/avatar` | the raw image; `Content-Type: image/jpeg\|png\|webp` | the user, with a new `avatar.url` |
+| DELETE | `/v1/me/avatar` | – | the user, `avatar: null` (idempotent) |
+| GET | `/v1/me/avatar?v=<hash>` | – | `image/webp`, cacheable forever; 404 (never cached) unless `v` is the current photo |
+| POST | `/v1/me/email/change` | `{newEmail, password}` | 202 (always, [below](#changing-the-email-address)) |
+| POST | `/v1/me/email/confirm` | `{newEmail, code}` | the user, with the new email; other sessions revoked |
 | DELETE | `/v1/me` | `{password}` | 204 — deletes the account and all its data |
 | GET / PATCH | `/v1/me/settings` | PATCH `{preferences: {...}}` (merged; `null` removes a key; ≤ 4 KB) | `{preferences, updatedAt}` |
+
+The user: `{id, email, displayName, emailVerified, createdAt, profileVersion, timezone, avatar: {url} | null,
+passwordChangedAt}`. `timezone` is an IANA name (`Asia/Kolkata`) or null. `passwordChangedAt` is null
+until the password is first changed or reset.
+
+**Signed-in devices** show a label parsed from the user agent ("Chrome on Windows", or "Unknown device")
+and the network only (`203.0.113.x`, or an IPv6 /48). The raw IP address and user agent never leave the
+server.
+
+**Profile photo.** The server checks that the bytes are the declared type, refuses images over 40
+megapixels before decoding them, turns the photo upright, crops it square and stores a new 256 px
+WebP (at most 64 KB). Nothing of the original file is kept, including its EXIF data and GPS position.
+`avatar.url` contains the photo's hash, so a browser may cache it forever; a replaced or removed
+photo gets a new URL, and its old one answers 404. 10 uploads per 15 minutes; a changed photo does
+not change `profileVersion`.
+
+### Changing the email address
+
+1. `POST /v1/me/email/change {newEmail, password}` needs the current password (a wrong one counts as
+   a failed sign-in). It always answers 202: if the address is free, a code goes to it; if another
+   account has it, that address gets a notice instead, so the caller cannot tell which. A new request
+   cancels the previous one. 3 requests per 15 minutes; the same address as now is 422.
+2. `POST /v1/me/email/confirm {newEmail, code}` with a code sent for **this** account (15 minutes, 5
+   attempts). The email changes and counts as verified, every other session is signed out, every
+   pending code for the old and the new address is deleted, and the old address is told (with the
+   new one masked). If someone registered the address in the meantime: 409 `email_unavailable`.
+
+### Versioned edits
+
+A resource that can be edited from two places at once (two tabs, two devices) has an integer
+version, and every edit sends the version it read. One shape, for every such resource:
+
+```json
+{"version": 3, "set": {"displayName": "Asha"}, "reset": ["timezone"]}
+```
+
+- `set` replaces the listed fields (a list replaces the whole list). A field not listed is unchanged.
+- `reset` returns the listed fields to their defaults (for the profile: empty).
+- 422 for an unknown field, `null` inside `set` (use `reset`), a field in both, or a field twice.
+- An edit that changes nothing (`set` and `reset` empty) answers 200 and keeps the version.
+- Otherwise the version must be current: the edit applies and the version goes up by one, or it is
+  refused whole with 409 `version_conflict`, whose `current` is the resource as it is now. The client
+  applies its own pending change to `current` and sends it again, or asks the person.
+- The answer is always the whole resource.
 
 ## Conversations
 

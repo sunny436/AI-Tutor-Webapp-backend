@@ -359,3 +359,113 @@ describe("streaming", () => {
     expect(stream.status).toBe(502);
   });
 });
+
+describe("files", () => {
+  const PHOTO = new Uint8Array([0x89, 0x50, 0x4e, 0x47, 1, 2, 3]);
+  const HASH = "0123456789abcdef0123456789abcdef";
+
+  function upload(body: BodyInit, type: string, extra: { cookie?: string | null } = {}): Request {
+    const headers = new Headers({ host: "chat.example.com", "x-forwarded-proto": "https", origin: APP, "content-type": type });
+    if (extra.cookie !== null) headers.set("cookie", extra.cookie ?? `${SECURE_COOKIE}=tok123`);
+    return new Request("http://localhost:3000/api/v1/me/avatar", { method: "PUT", headers, body });
+  }
+
+  test("a photo upload is forwarded as the same bytes and type", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, { avatar: { url: `/v1/me/avatar?v=${HASH}` } }));
+    const response = await run(upload(PHOTO, "image/png"), "/v1/me/avatar", fetchImpl);
+    expect(response.status).toBe(200);
+    const sent = calls[0]?.init;
+    expect(new Headers(sent?.headers).get("content-type")).toBe("image/png");
+    expect(new Headers(sent?.headers).get("authorization")).toBe("Bearer tok123");
+    expect(Array.from(sent?.body as Uint8Array)).toEqual(Array.from(PHOTO));
+  });
+
+  test("an upload of another type, too large, or without a session never reaches the API", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    expect((await run(upload(PHOTO, "image/gif"), "/v1/me/avatar", fetchImpl)).status).toBe(415);
+    expect((await run(upload("{}", "application/json"), "/v1/me/avatar", fetchImpl)).status).toBe(415);
+    const huge = new Uint8Array(5 * 1024 * 1024 + 1);
+    expect((await run(upload(huge, "image/jpeg"), "/v1/me/avatar", fetchImpl)).status).toBe(413);
+    const anonymous = await run(upload(PHOTO, "image/png", { cookie: null }), "/v1/me/avatar", fetchImpl);
+    expect(anonymous.status).toBe(401);
+    expect(calls.length).toBe(0);
+  });
+
+  test("the unsupported type has its own code", async () => {
+    const { fetchImpl } = upstream(() => json(200, {}));
+    const response = await run(upload(PHOTO, "text/html"), "/v1/me/avatar", fetchImpl);
+    expect(((await response.json()) as { error: { code: string } }).error.code).toBe("unsupported_media_type");
+  });
+
+  test("an upload still needs a same-origin request", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, {}));
+    const request = upload(PHOTO, "image/png");
+    request.headers.set("origin", "https://evil.example");
+    expect((await run(request, "/v1/me/avatar", fetchImpl)).status).toBe(403);
+    expect(calls.length).toBe(0);
+  });
+
+  test("a photo is passed back as bytes with the API's private cache headers", async () => {
+    const headers = {
+      "Content-Type": "image/webp",
+      "Cache-Control": "private, max-age=31536000, immutable",
+      ETag: `"${HASH}"`,
+    };
+    const { calls, fetchImpl } = upstream(() => new Response(PHOTO, { status: 200, headers }));
+    const response = await run(browser("GET", `/v1/me/avatar?v=${HASH}&other=1`), "/v1/me/avatar", fetchImpl);
+    expect(calls[0]?.url).toBe(`${API}/v1/me/avatar?v=${HASH}`);
+    expect(response.status).toBe(200);
+    expect(response.headers.get("content-type")).toBe("image/webp");
+    expect(response.headers.get("cache-control")).toBe("private, max-age=31536000, immutable");
+    expect(response.headers.get("etag")).toBe(`"${HASH}"`);
+    expect(response.headers.get("x-content-type-options")).toBe("nosniff");
+    expect(response.headers.get("content-security-policy")).toBe("default-src 'none'; sandbox");
+    expect(new Uint8Array(await response.arrayBuffer())).toEqual(PHOTO);
+  });
+
+  test("a shared-cacheable or unexpected file is never passed on as such", async () => {
+    const shared = { "Content-Type": "image/webp", "Cache-Control": "public, max-age=60" };
+    const publicCache = upstream(() => new Response(PHOTO, { status: 200, headers: shared }));
+    const cached = await run(browser("GET", `/v1/me/avatar?v=${HASH}`), "/v1/me/avatar", publicCache.fetchImpl);
+    expect(cached.headers.get("cache-control")).toBe("no-store");
+
+    const page = { "Content-Type": "text/html" };
+    const html = upstream(() => new Response("<script>x</script>", { status: 200, headers: page }));
+    const refused = await run(browser("GET", `/v1/me/avatar?v=${HASH}`), "/v1/me/avatar", html.fetchImpl);
+    expect(refused.status).toBe(502);
+    expect(await refused.text()).not.toContain("script");
+  });
+
+  test("a missing photo is an ordinary uncached error", async () => {
+    const { fetchImpl } = upstream(() => json(404, { error: { code: "not_found", message: "Not found." } }));
+    const response = await run(browser("GET", `/v1/me/avatar?v=${HASH}`), "/v1/me/avatar", fetchImpl);
+    expect(response.status).toBe(404);
+    expect(response.headers.get("cache-control")).toBe("no-store");
+  });
+});
+
+describe("error details", () => {
+  test("machine-readable field reasons pass, sentences do not", async () => {
+    const fields = [
+      { field: "image", reason: "too_small" },
+      { field: "set.displayName", reason: "The name must not be blank." },
+    ];
+    const { fetchImpl } = upstream(() => json(422, { error: { code: "validation_error", fields } }));
+    const request = browser("PATCH", "/v1/me/profile", { body: JSON.stringify({ version: 0 }) });
+    const body = (await (await run(request, "/v1/me/profile", fetchImpl)).json()) as { error: { fields: unknown } };
+    expect(body.error.fields).toEqual([{ field: "image", reason: "too_small" }, { field: "set.displayName" }]);
+  });
+
+  test("a version conflict keeps the current resource; other errors never carry one", async () => {
+    const current = { id: CID, displayName: "Asha", profileVersion: 3 };
+    const conflict = upstream(() => json(409, { error: { code: "version_conflict", message: "x", current } }));
+    const request = () => browser("PATCH", "/v1/me/profile", { body: JSON.stringify({ version: 1 }) });
+    const response = await run(request(), "/v1/me/profile", conflict.fetchImpl);
+    expect(response.status).toBe(409);
+    expect(((await response.json()) as { error: { current: unknown } }).error.current).toEqual(current);
+
+    const other = upstream(() => json(409, { error: { code: "conflict", current } }));
+    const plain = (await (await run(request(), "/v1/me/profile", other.fetchImpl)).json()) as { error: object };
+    expect(plain.error).toEqual({ code: "conflict", requestId: "req1" });
+  });
+});

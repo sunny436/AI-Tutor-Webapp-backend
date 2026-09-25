@@ -7,6 +7,7 @@ is truncated before each test. It never points at a production database.
 
 from __future__ import annotations
 
+import io
 import os
 import re
 import subprocess
@@ -19,6 +20,7 @@ import asyncpg
 import httpx
 import pytest
 from langchain_core.embeddings import Embeddings
+from PIL import Image
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import create_async_engine
 
@@ -122,6 +124,13 @@ async def client(app):
 
 
 # ------------------------------------------------------------------ helpers
+def image_bytes(fmt: str = "PNG", size: tuple[int, int] = (64, 64), color=(200, 80, 40), **save) -> bytes:
+    """A real image file, made in memory."""
+    buffer = io.BytesIO()
+    Image.new("RGB", size, color).save(buffer, fmt, **save)
+    return buffer.getvalue()
+
+
 def last_code(app, email: str) -> str:
     for mail in reversed(app.state.email_sender.outbox):
         if mail["to"].lower() == email.lower():
