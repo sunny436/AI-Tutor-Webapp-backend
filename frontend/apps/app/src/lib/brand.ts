@@ -1,8 +1,22 @@
 /**
- * The product's name, in one place.
+ * The product's brand, in one place.
  *
- * Matches the backend's `APP_NAME` (its sign-up and reset emails say "Your
- * Assistant verification code"), so what users read in their inbox and in the app
- * agree. Change both together.
+ * Everything that shows the brand reads it from here: the name in titles and
+ * copy, the two-tone wordmark ("Padh" + "AI"), the tagline, and the mark — ONE
+ * image file, also used as the favicon. Replacing the logo means replacing that
+ * file (and `markSrc` if its name changes); no component draws the logo itself.
+ *
+ * The backend has its own `APP_NAME` (its sign-up and reset emails say "Your
+ * <name> verification code"). It is set in the API's environment, not here; set
+ * it to the same name so the inbox and the app agree.
  */
-export const APP_NAME = "Assistant";
+export const BRAND = {
+  name: "PadhAI",
+  wordmark: { lead: "Padh", accent: "AI" },
+  tagline: "AI Tutor India",
+  description: "PadhAI, your personal AI tutor.",
+  /** Served from `public/`. A square image that carries its own background. */
+  markSrc: "/brand/padhai-mark.svg",
+} as const;
+
+export const APP_NAME = BRAND.name;

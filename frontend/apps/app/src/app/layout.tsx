@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 import type { CSSProperties, ReactNode } from "react";
 import { Toaster } from "sonner";
 
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, BRAND } from "@/lib/brand";
 import { siteUrl } from "@/lib/site";
 
 // Self-hosted at build time by next/font: no request leaves the browser for them.
@@ -23,8 +23,10 @@ const fonts = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: { default: APP_NAME, template: `%s · ${APP_NAME}` },
-  description: `${APP_NAME} — a chat assistant.`,
+  description: BRAND.description,
   applicationName: APP_NAME,
+  // The one brand asset (lib/brand.ts), so the tab icon changes with the logo.
+  icons: { icon: { url: BRAND.markSrc, type: "image/svg+xml" } },
   // A private app: nothing here is for search engines.
   robots: { index: false, follow: false },
 };
