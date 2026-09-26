@@ -1,0 +1,13 @@
+[Unit]
+# Every minute. Installed with every release, enabled only by hand (docs/deployment.md,
+# "Jobs worker"): systemctl enable --now aichat-jobs.timer
+Description=Run the aichat jobs worker every minute
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+AccuracySec=5s
+# A missed minute is not caught up: the next run works out what is due on its own.
+Persistent=false
+
+[Install]
+WantedBy=timers.target

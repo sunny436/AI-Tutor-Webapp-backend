@@ -68,6 +68,21 @@ class Settings(BaseSettings):
     # Decides which day "today" is for a user who has not chosen a time zone (users.timezone).
     default_timezone: str = "Asia/Kolkata"
 
+    # ---- jobs worker (python -m app.jobs, started every minute by aichat-jobs.timer) ----
+    # Read on every run, so a change to api.env applies from the next minute, no restart needed.
+    jobs_enabled: bool = False
+    # Rollout of emails to students: off (nothing is planned or sent) -> dry_run (planned and
+    # recorded as `dry_run`, nothing sent) -> allowlist (sent only to NOTIFICATIONS_ALLOWLIST)
+    # -> on. Support forwards to SUPPORT_EMAIL do not depend on this.
+    notifications_mode: Literal["off", "dry_run", "allowlist", "on"] = "off"
+    notifications_allowlist: str = ""  # comma-separated user ids or email addresses
+    notifications_kinds: str = ""  # comma-separated kinds to allow; empty = every kind
+    notifications_max_per_run: int = Field(default=50, ge=1, le=1000)
+    # The public web address, for links in emails (unsubscribe). Required once emails are sent.
+    public_app_url: str = ""
+    # Where support requests are forwarded. Empty: requests are only stored.
+    support_email: str = ""
+
     # ---- email ----
     email_backend: Literal["smtp", "ollastack", "memory"] = "smtp"
     email_from: str = "Assistant <no-reply@localhost>"
@@ -156,6 +171,28 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.app_env == "production"
+
+    @staticmethod
+    def _items(value: str) -> list[str]:
+        return [item.strip() for item in value.split(",") if item.strip()]
+
+    @property
+    def notification_allowlist(self) -> set[str]:
+        return {item.lower() for item in self._items(self.notifications_allowlist)}
+
+    @property
+    def notification_kinds(self) -> set[str] | None:
+        """None = every kind."""
+        return set(self._items(self.notifications_kinds)) or None
+
+    def jobs_problems(self) -> list[str]:
+        """What stops the worker from sending emails safely (checked by every run)."""
+        problems = []
+        if self.notifications_mode != "off" and not self.public_app_url.startswith(("https://", "http://")):
+            problems.append("NOTIFICATIONS_MODE needs PUBLIC_APP_URL (the web app's address, for links in emails)")
+        if self.notifications_mode == "allowlist" and not self.notification_allowlist:
+            problems.append("NOTIFICATIONS_MODE=allowlist needs NOTIFICATIONS_ALLOWLIST")
+        return problems
 
     def validate_for_env(self) -> None:
         if not self.is_production:

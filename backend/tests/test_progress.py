@@ -6,7 +6,7 @@ from datetime import UTC, date, datetime, timedelta
 import pytest
 
 from app.progress import activity
-from app.progress.service import streaks
+from app.progress.activity import streaks
 from app.ratelimit import SlidingWindowLimiter
 from tests.conftest import PASSWORD, make_settings, register, stream_chat
 

@@ -27,6 +27,8 @@ Browser ──► Web app (Next.js, frontend/; 127.0.0.1:3000)
                ├─ learning        academic catalog, learner profile, subjects, learning preferences,
                │                  and what they add to the tutor's instructions (app/learning/tutor.py)
                ├─ progress        active time in PadhAI (deduplicated minutes), questions, streaks, goals
+               ├─ notifications   preferences, the email outbox, security alerts, reminders, unsubscribe
+               ├─ support         support requests (forwarded through the outbox)
                ├─ conversations   list/create/rename/delete, message history
                ├─ chat            ChatService + SSE + stop + regenerate + feedback + quotas
                ├─ rag             LangGraph turn graph + LangChain retriever over pgvector (docs/rag.md)
@@ -54,6 +56,9 @@ users ─┬─ user_settings        preferences (JSONB, ≤ 4 KB)
        ├─ learner_subjects     ordered subject list with priority / needs-improvement flags
        ├─ learning_preferences how the student wants to be taught; typed columns, each `auto` by default
        ├─ activity_days        per local day: active seconds, questions, the last credited UTC minute
+       ├─ notification_preferences   reminders (off by default) and sign-in alerts (on)
+       ├─ email_outbox         emails for the worker to send, at most once; redacted after 7 days
+       ├─ support_requests     plain-text questions and reports, kept until the account is deleted
        ├─ auth_sessions        SHA-256 of a random 256-bit token; 30-day sliding expiry
        ├─ conversations ── messages ── message_feedback
        └─ usage_events         one per generation: provider, model, tokens, latency, outcome

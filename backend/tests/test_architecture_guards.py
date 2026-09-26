@@ -150,3 +150,25 @@ async def test_embedding_dimension_matches_everywhere(database):
         )
     await engine.dispose()
     assert column == f"vector({EMBEDDING_DIMENSIONS})"
+
+
+def test_notifications_and_support_are_reached_only_through_their_public_modules():
+    """Other domains queue email (outbox), security alerts (alerts) or use the email texts
+    (emails); the worker plans and sends; the composition root mounts the routers. The jobs
+    worker is only ever started as its own process, never imported by the API."""
+    app_dir = BACKEND / "app"
+    public = {"app.notifications.outbox", "app.notifications.alerts", "app.notifications.emails"}
+    for module in app_dir.rglob("*.py"):
+        if app_dir / "notifications" in module.parents:
+            continue
+        allowed = set(public)
+        if module.name == "main.py":
+            allowed |= {"app.notifications.router", "app.support.router"}
+        if app_dir / "jobs" in module.parents:
+            allowed |= {"app.notifications.reminders", "app.notifications.sender"}
+        reached = {m for m in _imports(module) if m.startswith("app.notifications")}
+        assert reached <= allowed, (module.relative_to(app_dir), reached - allowed)
+        if app_dir / "support" not in module.parents:
+            assert not {m for m in _imports(module) if m.startswith("app.support")} - allowed, module.name
+        if app_dir / "jobs" not in module.parents:
+            assert not {m for m in _imports(module) if m.startswith("app.jobs")}, module.name

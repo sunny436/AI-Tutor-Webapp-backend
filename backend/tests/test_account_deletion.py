@@ -40,6 +40,9 @@ async def _rows_referencing(database: str, user_id: str, email: str) -> dict[str
             counts["email_codes (by address)"] = await conn.scalar(
                 text("SELECT count(*) FROM email_codes WHERE email = :email"), {"email": email}
             )
+            counts["email_outbox (by address)"] = await conn.scalar(
+                text("SELECT count(*) FROM email_outbox WHERE to_address = :email"), {"email": email}
+            )
             return counts
     finally:
         await engine.dispose()
@@ -81,6 +84,22 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
     for method, url, body in learning:
         response = await client.request(method, url, json=body, headers=headers)
         assert response.status_code == 200, (url, response.text)
+    preferences = await client.patch(
+        "/v1/notifications/preferences", json={"version": 0, "set": {"weeklySummary": True}}, headers=headers
+    )
+    assert preferences.status_code == 200, preferences.text
+    support = await client.post(
+        "/v1/support/requests",
+        json={"requestId": str(uuid.uuid4()), "kind": "question", "subject": "Help", "message": "How does this work?"},
+        headers=headers,
+    )
+    assert support.status_code == 201, support.text
+    phone = await client.post(  # a sign-in from a new kind of device queues an alert email
+        "/v1/auth/login",
+        json={"email": account["email"], "password": PASSWORD},
+        headers={"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) Version/18.0 Safari/604.1"},
+    )
+    assert phone.status_code == 200
     assert last_code(app, account["email"])
 
     before = await _rows_referencing(database, user_id, account["email"])

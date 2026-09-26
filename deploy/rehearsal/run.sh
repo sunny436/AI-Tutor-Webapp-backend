@@ -239,6 +239,23 @@ ssh rehearsal "systemctl list-units 'aichat-deploy-*' --no-legend" > "$LOGS/s10-
 for _ in $(seq 1 600); do [ "$(live)" = "$R6" ] && status_ok_on "$R6" s10 && break; sleep 2; done
 if status_ok_on "$R6" s10; then pass "S10 killed the local deploy mid-way: the host finished it; $(short "$R6") live, invariant holds"; else fail "S10 (see $LOGS/s10.log)"; fi
 
+step "S11 the jobs worker"
+ssh rehearsal 'bash -s' > "$LOGS/s11.log" 2>&1 <<'EOF'
+set -e
+echo "timer: $(systemctl is-enabled aichat-jobs.timer 2>&1 || true)"
+systemctl start aichat-jobs.service   # JOBS_ENABLED is not set: a run is a no-op
+printf 'JOBS_ENABLED=true\nNOTIFICATIONS_MODE=dry_run\nPUBLIC_APP_URL=https://rehearsal.invalid\n' >> /etc/aichat/api.env
+systemctl start aichat-jobs.service
+# The worker's own JSON lines (systemd adds its "Finished"/"Deactivated" lines after them).
+journalctl -u aichat-jobs.service -o cat --no-pager | grep '"logger"' || true
+echo "result: $(systemctl show -p Result --value aichat-jobs.service)"
+EOF
+if grep -q "^timer: disabled" "$LOGS/s11.log" && grep -q '"skipped": "JOBS_ENABLED is false"' "$LOGS/s11.log" \
+  && grep -q '"msg": "jobs run finished"' "$LOGS/s11.log" && grep -q '"retention"' "$LOGS/s11.log" \
+  && grep -q "^result: success" "$LOGS/s11.log"; then
+  pass "S11 jobs worker: timer installed but not enabled; a run is a no-op until JOBS_ENABLED, then runs every step"
+else fail "S11 jobs worker (see $LOGS/s11.log)"; fi
+
 step "poller: did the web app and the API ever report different releases at the same moment?"
 ssh rehearsal 'systemctl stop rehearsal-poller; cat /root/poll.log' > "$LOGS/poll.log"
 samples=$(awk '$2 != "-" && $3 != "-"' "$LOGS/poll.log" | wc -l)

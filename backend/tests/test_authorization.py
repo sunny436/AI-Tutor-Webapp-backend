@@ -2,6 +2,7 @@
 
 import uuid
 
+from app.notifications.tokens import make_token
 from tests.conftest import PASSWORD, image_bytes, last_code, register, stream_chat
 
 
@@ -100,6 +101,26 @@ async def test_progress_is_per_user(client, app):
     assert (theirs["today"]["questions"], theirs["today"]["activeMinutes"]) == (0, 1)
     mine = (await client.get("/v1/progress", headers=alice["headers"])).json()
     assert (mine["today"]["questions"], mine["today"]["activeMinutes"]) == (1, 1)
+
+
+async def test_notification_preferences_and_unsubscribe_links_are_per_user(client, app):
+    alice = await register(client, app)
+    bob = await register(client, app)
+    for account in (alice, bob):
+        await client.patch(
+            "/v1/notifications/preferences",
+            json={"version": 0, "set": {"dailyReminder": True}},
+            headers=account["headers"],
+        )
+    token = make_token(app.state.settings, uuid.UUID(alice["user"]["id"]), "daily_reminder")
+    assert (
+        await client.post("/v1/notifications/unsubscribe", json={"token": token}, headers=bob["headers"])
+    ).status_code == 200
+    # The link names Alice: it switched off Alice's reminder, whoever clicked it, and never Bob's.
+    assert (await client.get("/v1/notifications/preferences", headers=alice["headers"])).json()[
+        "dailyReminder"
+    ] is False
+    assert (await client.get("/v1/notifications/preferences", headers=bob["headers"])).json()["dailyReminder"] is True
 
 
 async def test_client_supplied_identity_fields_are_rejected(client, app):

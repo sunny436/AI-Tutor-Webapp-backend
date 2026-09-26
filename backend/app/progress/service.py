@@ -17,8 +17,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db.models import ActivityDay
 from app.learning.context import ActiveTimeGoals, read_active_time_goals
 from app.progress import activity
-
-ONE_DAY = timedelta(days=1)
+from app.progress.activity import streaks
 
 
 @dataclass(frozen=True)
@@ -44,22 +43,6 @@ class Summary:
     longest_streak: int
     goals: ActiveTimeGoals
     days: list[DayTotals]
-
-
-def streaks(active_days: set[date], today: date) -> tuple[int, int]:
-    """(current, longest) runs of consecutive active days."""
-    current = 0
-    day = today if today in active_days else today - ONE_DAY
-    while day in active_days:
-        current += 1
-        day -= ONE_DAY
-    longest = run = 0
-    previous: date | None = None
-    for day in sorted(active_days):
-        run = run + 1 if previous is not None and day == previous + ONE_DAY else 1
-        longest = max(longest, run)
-        previous = day
-    return current, longest
 
 
 class ProgressService:

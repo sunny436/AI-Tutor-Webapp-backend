@@ -17,6 +17,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.avatar import ProcessedAvatar
+from app.auth.devices import device_label
 from app.auth.emails import EmailSender, code_email, email_changed_email, email_in_use_email
 from app.auth.security import Passwords, hash_code, hash_key, hash_token, new_email_code, new_session_token
 from app.db.models import AuthAttempt, AuthSession, EmailCode, User, UserAvatar, UserSettings
@@ -32,6 +33,7 @@ from app.errors import (
     VersionConflict,
 )
 from app.logging import get_logger
+from app.notifications.alerts import queue_password_changed, queue_sign_in_alert
 from app.settings import Settings
 
 log = get_logger("app.auth")
@@ -89,10 +91,6 @@ class AuthService:
             raise RateLimited()
         if record:
             await self._record_attempt(scope, key)
-
-    async def prune_attempts(self) -> None:
-        cutoff = utcnow() - timedelta(days=1)
-        await self.db.execute(delete(AuthAttempt).where(AuthAttempt.created_at < cutoff))
 
     # ------------------------------------------------------------------ helpers
     async def _user_by_email(self, email: str) -> User | None:
@@ -201,9 +199,21 @@ class AuthService:
             raise EmailNotVerified()
         if needs_rehash:
             user.password_hash = await self.passwords.hash(password)
+        new_device = not await self._device_known(user.id, client.user_agent)
         issued = await self._issue_session(user, client)
+        if new_device:
+            await queue_sign_in_alert(self.db, self.settings, user, device_label(client.user_agent), utcnow())
         await self.db.commit()
         return issued
+
+    async def _device_known(self, user_id: uuid.UUID, user_agent: str | None) -> bool:
+        """Whether a live session of this account already signed in with the same kind of
+        device ("Chrome on Windows"): the test for a sign-in alert."""
+        label = device_label(user_agent)
+        agents = await self.db.scalars(
+            select(AuthSession.user_agent).where(AuthSession.user_id == user_id, AuthSession.expires_at > utcnow())
+        )
+        return any(device_label(agent) == label for agent in agents)
 
     async def resend_code(self, email: str, purpose: str, client: ClientInfo) -> None:
         await self._throttle("code_ip", client.ip, self.settings.signup_attempts_per_ip)
@@ -229,6 +239,7 @@ class AuthService:
         user.password_changed_at = user.updated_at
         await self.db.execute(delete(AuthSession).where(AuthSession.user_id == user.id))
         issued = await self._issue_session(user, client)
+        await queue_password_changed(self.db, self.settings, user, user.updated_at)
         await self.db.commit()
         return issued
 
@@ -240,6 +251,7 @@ class AuthService:
         user.updated_at = utcnow()
         user.password_changed_at = user.updated_at
         await self.revoke_other_sessions(user.id, session_id, commit=False)
+        await queue_password_changed(self.db, self.settings, user, user.updated_at)
         await self.db.commit()
 
     async def logout(self, session_id: uuid.UUID) -> None:

@@ -3,6 +3,8 @@
 User ─┬─ UserSettings
       ├─ LearnerProfile, LearnerSubject, LearningPreferences   (app/learning)
       ├─ ActivityDay   active time and questions per local day   (app/progress)
+      ├─ NotificationPreferences, EmailOutbox                    (app/notifications)
+      ├─ SupportRequest                                          (app/support)
       ├─ AuthSession
       ├─ Conversation ── Message ── MessageFeedback
       └─ UsageEvent
@@ -71,6 +73,11 @@ PREFERENCE_CHOICES: dict[str, tuple[str, ...]] = {
     "mistake_correction": ("auto", "gentle", "direct"),
     "highlight_key_concepts": ("auto", "on", "off"),
 }
+
+# Every state an outgoing email can be in (app/notifications/sender.py).
+OUTBOX_STATUSES = ("pending", "sending", "sent", "failed", "unknown", "dry_run", "suppressed", "expired")
+SUPPORT_KINDS = ("question", "bug", "feedback", "account")
+SUPPORT_STATUSES = ("open", "closed")
 
 # The pgvector column dimension. settings.embedding_dimensions must equal it (checked at
 # startup); changing it needs a new migration and a re-ingest of every document.
@@ -238,6 +245,86 @@ class ActivityDay(Base):
     active_seconds: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
     questions: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
     last_minute_utc: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class NotificationPreferences(Base):
+    """Which emails a student wants. Reminders are off until chosen; sign-in alerts are on.
+    Partial indexes let the worker scan only the students who opted in to each reminder."""
+
+    __tablename__ = "notification_preferences"
+    __table_args__ = (
+        Index("ix_notification_preferences_daily_reminder", "user_id", postgresql_where=text("daily_reminder")),
+        Index("ix_notification_preferences_streak_warning", "user_id", postgresql_where=text("streak_warning")),
+        Index("ix_notification_preferences_weekly_summary", "user_id", postgresql_where=text("weekly_summary")),
+    )
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    version: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    daily_reminder: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    streak_warning: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    weekly_summary: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    security_alerts: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("true"))
+    updated_at: Mapped[datetime] = _created()
+
+
+class EmailOutbox(Base):
+    """Emails the worker sends (python -m app.jobs), written in the transaction that decided to
+    send them. At most once: a row found in `sending` after a crash becomes `unknown` and is
+    never sent again. `send_before` keeps a late worker from sending stale news."""
+
+    __tablename__ = "email_outbox"
+    __table_args__ = (
+        CheckConstraint(f"status IN {OUTBOX_STATUSES}", name="status"),
+        CheckConstraint("attempts BETWEEN 0 AND 10", name="attempts"),
+        Index("ix_email_outbox_status_next_attempt_at", "status", "next_attempt_at"),
+        Index("ix_email_outbox_user_id", "user_id"),
+        Index("ix_email_outbox_final_at", "final_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    # Every email about a user carries their id, so deleting the account deletes its emails.
+    user_id: Mapped[uuid.UUID | None] = mapped_column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"))
+    kind: Mapped[str] = mapped_column(String(40), nullable=False)
+    # "<user>:<kind>:<period>" for reminders: one per period however often the worker runs.
+    dedup_key: Mapped[str | None] = mapped_column(String(200), unique=True)
+    to_address: Mapped[str] = mapped_column(String(320), nullable=False)
+    subject: Mapped[str] = mapped_column(String(300), nullable=False)
+    body: Mapped[str] = mapped_column(Text, nullable=False)
+    status: Mapped[str] = mapped_column(String(20), nullable=False, server_default=text("'pending'"))
+    attempts: Mapped[int] = mapped_column(SmallInteger, nullable=False, server_default=text("0"))
+    next_attempt_at: Mapped[datetime] = _created()
+    send_before: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    claimed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    final_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = _created()
+
+
+class SupportRequest(Base):
+    """A question or report from a signed-in student, kept until the account is deleted."""
+
+    __tablename__ = "support_requests"
+    __table_args__ = (
+        CheckConstraint(f"kind IN {SUPPORT_KINDS}", name="kind"),
+        CheckConstraint(f"status IN {SUPPORT_STATUSES}", name="status"),
+        CheckConstraint("char_length(message) <= 4000", name="message_length"),
+        UniqueConstraint("user_id", "client_request_id"),
+        Index("ix_support_requests_user_id_created_at", "user_id", "created_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    # Chosen by the client, so a retried submit finds the request it already made.
+    client_request_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    kind: Mapped[str] = mapped_column(String(20), nullable=False)
+    subject: Mapped[str] = mapped_column(String(120), nullable=False)
+    message: Mapped[str] = mapped_column(Text, nullable=False)
+    context: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, server_default=text("'{}'::jsonb"))
+    status: Mapped[str] = mapped_column(String(20), nullable=False, server_default=text("'open'"))
+    created_at: Mapped[datetime] = _created()
 
 
 class AuthSession(Base):

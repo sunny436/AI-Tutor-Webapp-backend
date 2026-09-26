@@ -418,9 +418,53 @@ export const CONTRACT = {
       "pattern": "^[a-z0-9_]+$"
     }
   },
+  "SupportRequestIn": {
+    "kind": {
+      "enum": [
+        "question",
+        "bug",
+        "feedback",
+        "account"
+      ]
+    },
+    "message": {
+      "maxLength": 4000,
+      "minLength": 10
+    },
+    "page": {
+      "maxLength": 200,
+      "pattern": "^/[^\\s]*$"
+    },
+    "subject": {
+      "maxLength": 120,
+      "minLength": 1
+    }
+  },
+  "SupportRequestOut": {
+    "kind": {
+      "enum": [
+        "question",
+        "bug",
+        "feedback",
+        "account"
+      ]
+    },
+    "status": {
+      "enum": [
+        "open",
+        "closed"
+      ]
+    }
+  },
   "TutorPreviewRequest": {
     "subjects": {
       "maxItems": 15
+    }
+  },
+  "UnsubscribeRequest": {
+    "token": {
+      "maxLength": 300,
+      "minLength": 10
     }
   },
   "UpdateLearnerProfileRequest": {
@@ -478,6 +522,22 @@ export const CONTRACT = {
   "UpdateMeRequest": {
     "displayName": {
       "maxLength": 80
+    }
+  },
+  "UpdateNotificationPreferencesRequest": {
+    "reset": {
+      "items": {
+        "enum": [
+          "dailyReminder",
+          "streakWarning",
+          "weeklySummary",
+          "securityAlerts"
+        ]
+      },
+      "maxItems": 4
+    },
+    "version": {
+      "minimum": 0
     }
   },
   "UpdateProfileRequest": {

@@ -44,7 +44,14 @@ class SmtpEmailSender:
 
 
 class EmailDeliveryError(Exception):
-    """A provider refused or failed a message. The text never contains the token or the recipient."""
+    """A provider refused or failed a message. The text never contains the token or the recipient.
+
+    `definite` is False when the message may have been delivered anyway (the provider timed out
+    after receiving it): the outbox then never sends it again (app/notifications/sender.py)."""
+
+    def __init__(self, message: str, *, definite: bool = True) -> None:
+        super().__init__(message)
+        self.definite = definite
 
 
 class OllastackEmailSender:
@@ -65,7 +72,11 @@ class OllastackEmailSender:
         try:
             response = await client.post(url, json={"to": to, "subject": subject, "text": body}, headers=headers)
         except httpx.HTTPError as error:
-            raise EmailDeliveryError(f"ollastack unreachable ({type(error).__name__})") from None
+            # A connection that never opened sent nothing; a read or write that timed out may have.
+            sent_maybe = isinstance(error, (httpx.ReadTimeout, httpx.WriteTimeout, httpx.RemoteProtocolError))
+            raise EmailDeliveryError(
+                f"ollastack unreachable ({type(error).__name__})", definite=not sent_maybe
+            ) from None
         finally:
             if self._client is None:
                 await client.aclose()

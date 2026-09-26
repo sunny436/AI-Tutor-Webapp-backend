@@ -28,6 +28,7 @@ systemd/aichat-api.service         API from the release /opt/aichat/current reso
 systemd/aichat-web.service         web app from that same release on its pinned Node, 127.0.0.1:3000
 systemd/aichat-postgres.service    the database (from /opt/aichat/shared/postgres, not from releases)
 systemd/aichat-pg-backup.{service,timer}   nightly backup at 03:15
+systemd/aichat-jobs.{service,timer}         the jobs worker, once a minute; installed, NOT enabled (docs/deployment.md)
 env/{postgres,api,web}.env.example templates for /etc/aichat/*.env (chmod 600, never in git)
 cloudflared/config.yml.template    ingress: the web app hostname only
 rehearsal/                         bun run rehearse: the whole model on a throwaway systemd container

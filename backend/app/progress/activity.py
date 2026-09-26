@@ -18,9 +18,10 @@ from __future__ import annotations
 
 import uuid
 import zoneinfo
-from datetime import UTC, date, datetime
+from dataclasses import dataclass
+from datetime import UTC, date, datetime, timedelta
 
-from sqlalchemy import func, or_
+from sqlalchemy import func, or_, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -28,6 +29,7 @@ from app.db.models import ActivityDay
 
 MINUTE_SECONDS = 60
 DAY_SECONDS = 86_400
+ONE_DAY = timedelta(days=1)
 
 
 def utcnow() -> datetime:
@@ -80,3 +82,56 @@ async def credit_minute(
     ).returning(ActivityDay.user_id)
     credited = (await session.execute(statement)).first() is not None
     return credited, today
+
+
+def streaks(active_days: set[date], today: date) -> tuple[int, int]:
+    """(current, longest) runs of consecutive active days. The current run ends today, or
+    yesterday while today has no activity yet."""
+    current = 0
+    day = today if today in active_days else today - ONE_DAY
+    while day in active_days:
+        current += 1
+        day -= ONE_DAY
+    longest = run = 0
+    previous: date | None = None
+    for day in sorted(active_days):
+        run = run + 1 if previous is not None and day == previous + ONE_DAY else 1
+        longest = max(longest, run)
+        previous = day
+    return current, longest
+
+
+@dataclass(frozen=True)
+class Snapshot:
+    """What reminders need to know (app/notifications/reminders.py)."""
+
+    today: date
+    today_active: bool
+    current_streak: int
+    last_week_start: date
+    last_week_minutes: int
+    last_week_questions: int
+    last_week_active_days: int
+
+
+async def snapshot(session: AsyncSession, user_id: uuid.UUID, zone: zoneinfo.ZoneInfo, now: datetime) -> Snapshot:
+    today = local_date(now, zone)
+    rows = (
+        await session.execute(
+            select(ActivityDay.local_date, ActivityDay.active_seconds, ActivityDay.questions).where(
+                ActivityDay.user_id == user_id, ActivityDay.local_date <= today
+            )
+        )
+    ).all()
+    active = {row.local_date for row in rows if row.active_seconds >= MINUTE_SECONDS or row.questions > 0}
+    last_week_start = today - timedelta(days=today.weekday() + 7)
+    last_week = [row for row in rows if last_week_start <= row.local_date < last_week_start + timedelta(days=7)]
+    return Snapshot(
+        today=today,
+        today_active=today in active,
+        current_streak=streaks(active, today)[0],
+        last_week_start=last_week_start,
+        last_week_minutes=sum(row.active_seconds for row in last_week) // MINUTE_SECONDS,
+        last_week_questions=sum(row.questions for row in last_week),
+        last_week_active_days=len({row.local_date for row in last_week} & active),
+    )

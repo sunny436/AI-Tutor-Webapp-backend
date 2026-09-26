@@ -21,6 +21,7 @@ PUBLIC = {
     ("POST", "/v1/auth/password/forgot"): "before signing in",
     ("POST", "/v1/auth/password/reset"): "signs in",
     ("GET", "/v1/catalog/academic"): "the same reference data for everyone, needed before sign-up is complete",
+    ("POST", "/v1/notifications/unsubscribe"): "the link in an email; authorised by its signed token, not a session",
 }
 
 PARAMETER = re.compile(r"\{[^}]+\}")
