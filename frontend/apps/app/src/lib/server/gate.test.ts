@@ -19,6 +19,12 @@ describe("middleware page gate", () => {
     expect(gate("/login", "", true)).toEqual({ action: "next" });
   });
 
+  test("an email's unsubscribe link works without signing in", () => {
+    expect(gate("/unsubscribe", "?token=abc.def", false)).toEqual({ action: "next" });
+    expect(gate("/unsubscribe", "?token=abc.def", true)).toEqual({ action: "next" });
+    expect(gate("/unsubscribe/x", "", false)).toEqual({ action: "redirect", location: "/login?redirect=%2Funsubscribe%2Fx" });
+  });
+
   test("the API is never redirected — it answers JSON itself", () => {
     expect(gate("/api/v1/me", "", false)).toEqual({ action: "next" });
     expect(gate("/api/session/expired", "", false)).toEqual({ action: "next" });

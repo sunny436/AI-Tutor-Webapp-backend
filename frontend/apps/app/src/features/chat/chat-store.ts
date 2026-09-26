@@ -192,6 +192,12 @@ export class ChatStore {
     return Boolean(this.getEntry(key)?.stream);
   }
 
+  /** Whether a reply is streaming in any conversation (the activity heartbeat counts that). */
+  anyStreaming(): boolean {
+    for (const entry of this.entries.values()) if (entry.stream) return true;
+    return false;
+  }
+
   subscribe(key: string, listener: Listener): () => void {
     return this.addListener(this.entryListeners, this.resolve(key), listener);
   }

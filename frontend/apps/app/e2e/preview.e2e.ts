@@ -15,6 +15,8 @@ const TOOLS = [
   { path: "/flashcards", title: "Flashcards" },
 ];
 
+const SHELL_CALLS = new Set(["/api/v1/conversations", "/api/v1/progress", "/api/v1/progress/activity"]);
+
 test.beforeAll(async () => {
   // serve.mjs starts this server alongside the main one; give it the same chance to come up.
   await expect
@@ -26,7 +28,7 @@ test("the shell lists every tool, and marks what is not real", async ({ page, ac
   await page.goto("/");
   await expect(composer(page)).toBeVisible();
   await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(6);
-  await expect(page.getByText(/Day Streak/)).toBeVisible();
+  await expect(page.getByRole("link", { name: /No streak yet/ })).toBeVisible(); // the real one, not sample data
   await expect(page.getByRole("button", { name: /Leaderboard/ })).toBeDisabled();
   await expect(page.getByRole("button", { name: "Attach an image or PDF (coming soon)" })).toBeDisabled();
   await expect(page.getByRole("button", { name: "Voice input (coming soon)" })).toBeDisabled();
@@ -41,8 +43,8 @@ for (const tool of TOOLS) {
     const calls: string[] = [];
     page.on("request", (request) => {
       const { pathname } = new URL(request.url());
-      // The shell's own chat list may refresh; the tool itself must not call anything.
-      if (pathname.startsWith("/api/") && pathname !== "/api/v1/conversations") calls.push(`${request.method()} ${pathname}`);
+      // The shell's own chat list and streak may refresh; the tool itself must not call anything.
+      if (pathname.startsWith("/api/") && !SHELL_CALLS.has(pathname)) calls.push(`${request.method()} ${pathname}`);
     });
 
     await page.goto(tool.path);
