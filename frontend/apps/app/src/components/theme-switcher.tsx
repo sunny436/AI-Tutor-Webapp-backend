@@ -6,6 +6,9 @@ import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
+import type { Theme } from "@/lib/api/types";
+import { useAppearance } from "./appearance-provider";
+
 /**
  * The theme control.
  *
@@ -24,6 +27,8 @@ import { useEffect, useState } from "react";
  */
 export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
   const { theme: currentTheme, setTheme, themes } = useTheme();
+  // Signed in, the choice is saved to the account (every device); elsewhere only this browser.
+  const appearance = useAppearance();
   // Avoid hydration mismatch: the theme is unknown on the server, so only show
   // the theme-dependent icon/label after the component has mounted on the client.
   const [mounted, setMounted] = useState(false);
@@ -40,7 +45,10 @@ export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
       // React threw "Hydration failed because the initial UI does not match".
       // Feeding it the same mount-guarded value keeps both renders identical.
       value={shown}
-      onValueChange={(theme) => setTheme(theme as (typeof themes)[number])}
+      onValueChange={(theme) => {
+        setTheme(theme);
+        appearance?.change({ theme: theme as Theme });
+      }}
     >
       <SelectTrigger
         // The trigger has no visible label, so without this it announces as an

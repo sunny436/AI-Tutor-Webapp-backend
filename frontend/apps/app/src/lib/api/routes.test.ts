@@ -62,7 +62,6 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
   ForgotPasswordRequest: [{ email: "a@b.c" }],
   ResetPasswordRequest: [{ email: "a@b.c", code: "123456", newPassword: "x" }],
   ChangePasswordRequest: [{ currentPassword: "x", newPassword: "y" }],
-  UpdateMeRequest: [{ displayName: "A" }],
   UpdateProfileRequest: [
     { version: 0 },
     { version: 1, set: { displayName: "A", timezone: "Asia/Kolkata" } },
@@ -82,6 +81,10 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
     { version: 1, reset: ["securityAlerts"] },
   ],
   UnsubscribeRequest: [{ token: "abc.def0123456789" }],
+  UpdateAppearanceRequest: [
+    { version: 0, set: { theme: "dark", fontSize: "large", highContrast: true, reduceMotion: false } },
+    { version: 1, reset: ["fontSize"], set: { readingComfort: true, showStreak: false } },
+  ],
   SupportRequestIn: [
     { requestId: "11111111-1111-4111-8111-111111111111", kind: "bug", subject: "S", message: "Long enough." },
     {

@@ -179,7 +179,10 @@ It ships **installed but not enabled**, and every email to students is **off** u
 | `PUBLIC_APP_URL` | – | the site's address, for links in emails; required for any mode but `off` (the worker keeps student email off without it, and logs why) |
 | `SUPPORT_EMAIL` | – | where support requests are forwarded (independent of `NOTIFICATIONS_MODE`); empty: stored only |
 
-The settings are read on every run: editing `api.env` takes effect within a minute, with no restart.
+The worker reads these on every run: editing `api.env` takes effect for it within a minute, with no
+restart. The API reads them when it starts, to tell each student in Settings whether their emails
+are being sent (`delivery`); after changing the rollout, `systemctl restart aichat-api` (about 3 s)
+so Settings says the same as the worker does.
 Suggested order, checking the outbox and deliverability at each step:
 
 ```sh

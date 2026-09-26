@@ -39,6 +39,10 @@ class NotificationPreferencesOut(ApiModel):
     reminders_need_timezone: bool = Field(
         description="True while the user has no time zone: reminders are only sent once one is chosen."
     )
+    delivery: Literal["active", "paused"] = Field(
+        description="Whether this server currently sends notification emails to this user at all "
+        "(its rollout: JOBS_ENABLED, NOTIFICATIONS_MODE). Preferences are kept either way."
+    )
     updated_at: datetime | None
 
 

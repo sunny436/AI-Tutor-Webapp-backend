@@ -16,12 +16,23 @@ export type Timestamp = string;
 
 // ---------------------------------------------------------------- accounts
 
+export type Avatar = {
+  /** The API path of the current photo (`/v1/me/avatar?v=<hash>`); see `avatarSrc`. */
+  url: string;
+};
+
 export type User = {
   id: Uuid;
   email: string;
   displayName: string | null;
   emailVerified: boolean;
   createdAt: Timestamp;
+  /** Send it back with a profile edit (versioned: another device may have changed it). */
+  profileVersion: number;
+  /** IANA name, e.g. "Asia/Kolkata"; null until the user confirms one. */
+  timezone: string | null;
+  avatar: Avatar | null;
+  passwordChangedAt: Timestamp | null;
 };
 
 /**
@@ -38,13 +49,72 @@ export type ResendCodeRequest = { email: string; purpose?: "verify_email" | "res
 export type ForgotPasswordRequest = { email: string };
 export type ResetPasswordRequest = { email: string; code: string; newPassword: string };
 export type ChangePasswordRequest = { currentPassword: string; newPassword: string };
-export type UpdateMeRequest = { displayName?: string | null };
 export type DeleteMeRequest = { password: string };
+
+/**
+ * Every Settings resource is edited the same way (docs/api-contract.md, "Versioned edits"):
+ * `set` replaces the listed fields, `reset` returns fields to their defaults, `version` must be
+ * the one read (else 409 `version_conflict`, whose `current` is the resource as it is now).
+ */
+export type VersionedEdit<Values, Field extends string> = {
+  version: number;
+  set?: Partial<Values>;
+  reset?: Field[];
+};
+
+export type ProfileValues = { displayName: string; timezone: string };
+export type UpdateProfileRequest = VersionedEdit<ProfileValues, keyof ProfileValues>;
+
+export type SessionInfo = {
+  id: Uuid;
+  current: boolean;
+  /** e.g. "Chrome on Windows"; never the raw user agent. */
+  device: string;
+  /** The network only ("203.0.113.x"), never the address. */
+  ipMasked: string | null;
+  createdAt: Timestamp;
+  lastSeenAt: Timestamp;
+  expiresAt: Timestamp;
+};
+export type SessionList = { items: SessionInfo[] };
+
+export type EmailChangeRequest = { newEmail: string; password: string };
+export type EmailConfirmRequest = { newEmail: string; code: string };
+
+export type Theme = (typeof CONTRACT.AppearanceSet.theme.enum)[number];
+export type FontSize = (typeof CONTRACT.AppearanceSet.fontSize.enum)[number];
+export const THEMES = CONTRACT.AppearanceSet.theme.enum;
+export const FONT_SIZES = CONTRACT.AppearanceSet.fontSize.enum;
+
+export type AppearanceValues = {
+  theme: Theme;
+  fontSize: FontSize;
+  highContrast: boolean;
+  reduceMotion: boolean;
+  readingComfort: boolean;
+  showStreak: boolean;
+};
+export type Appearance = AppearanceValues & { version: number; updatedAt: Timestamp | null };
+
+export type NotificationValues = {
+  dailyReminder: boolean;
+  streakWarning: boolean;
+  weeklySummary: boolean;
+  securityAlerts: boolean;
+};
+export type NotificationPreferences = NotificationValues & {
+  version: number;
+  /** Reminders go out only once the user has chosen a time zone. */
+  remindersNeedTimezone: boolean;
+  /** Whether the server sends notification emails to this user at all right now. */
+  delivery: (typeof CONTRACT.NotificationPreferencesOut.delivery.enum)[number];
+  updatedAt: Timestamp | null;
+};
 
 /** The backend's password rule, from the contract (contract.gen.ts). */
 export const PASSWORD_MIN = CONTRACT.SignupRequest.password.minLength;
 export const PASSWORD_MAX = CONTRACT.SignupRequest.password.maxLength;
-export const DISPLAY_NAME_MAX = CONTRACT.UpdateMeRequest.displayName.maxLength;
+export const DISPLAY_NAME_MAX = CONTRACT.ProfileSet.displayName.maxLength;
 /** Email codes are six digits. */
 export const CODE_LENGTH = 6;
 
@@ -141,6 +211,11 @@ export type ApiErrorEnvelope = {
     code: string;
     message?: string;
     requestId?: string;
-    fields?: { field: string; reason: string }[];
+    /** Machine-readable reasons only (`too_small`); the BFF drops anything else. */
+    fields?: FieldError[];
+    /** On `version_conflict`: the caller's own resource as it is now. */
+    current?: unknown;
   };
 };
+
+export type FieldError = { field: string; reason?: string };

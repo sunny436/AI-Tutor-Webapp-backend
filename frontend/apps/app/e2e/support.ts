@@ -17,9 +17,9 @@ export function uniqueEmail(tag: string): string {
 type MailSummary = { ID: string; Subject: string };
 const usedMail = new Set<string>();
 
-/** The newest unused sign-up or reset code emailed to `email`, from Mailpit. */
-export async function mailCode(email: string, purpose: "verify" | "reset"): Promise<string> {
-  const subject = purpose === "reset" ? /reset/i : /verification/i;
+/** The newest unused sign-up, reset or email-change code emailed to `email`, from Mailpit. */
+export async function mailCode(email: string, purpose: "verify" | "reset" | "change"): Promise<string> {
+  const subject = purpose === "reset" ? /reset/i : purpose === "change" ? /email change code/i : /verification/i;
   let code: string | undefined;
   await expect
     .poll(

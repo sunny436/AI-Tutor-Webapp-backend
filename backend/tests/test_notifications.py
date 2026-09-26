@@ -48,6 +48,7 @@ async def test_preferences_default_to_alerts_on_and_reminders_off(client, app):
         "weeklySummary": False,
         "securityAlerts": True,
         "remindersNeedTimezone": True,
+        "delivery": "paused",  # the test server's worker is off
         "updatedAt": None,
     }
 

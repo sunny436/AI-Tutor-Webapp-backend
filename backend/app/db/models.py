@@ -5,6 +5,7 @@ User ─┬─ UserSettings
       ├─ ActivityDay   active time and questions per local day   (app/progress)
       ├─ NotificationPreferences, EmailOutbox                    (app/notifications)
       ├─ SupportRequest                                          (app/support)
+      ├─ AppearanceSettings   theme, text size, contrast, motion   (app/appearance)
       ├─ AuthSession
       ├─ Conversation ── Message ── MessageFeedback
       └─ UsageEvent
@@ -77,6 +78,8 @@ PREFERENCE_CHOICES: dict[str, tuple[str, ...]] = {
 # Every state an outgoing email can be in (app/notifications/sender.py).
 OUTBOX_STATUSES = ("pending", "sending", "sent", "failed", "unknown", "dry_run", "suppressed", "expired")
 SUPPORT_KINDS = ("question", "bug", "feedback", "account")
+THEMES = ("system", "light", "dark")
+FONT_SIZES = ("small", "medium", "large", "x_large")
 SUPPORT_STATUSES = ("open", "closed")
 
 # The pgvector column dimension. settings.embedding_dimensions must equal it (checked at
@@ -325,6 +328,29 @@ class SupportRequest(Base):
     context: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False, server_default=text("'{}'::jsonb"))
     status: Mapped[str] = mapped_column(String(20), nullable=False, server_default=text("'open'"))
     created_at: Mapped[datetime] = _created()
+
+
+class AppearanceSettings(Base):
+    """How the app looks for this user, on every device. Presentation only: nothing here
+    changes what the tutor says (that is app/learning)."""
+
+    __tablename__ = "appearance_settings"
+    __table_args__ = (
+        CheckConstraint(f"theme IN {THEMES}", name="theme"),
+        CheckConstraint(f"font_size IN {FONT_SIZES}", name="font_size"),
+    )
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    version: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    theme: Mapped[str] = mapped_column(String(10), nullable=False, server_default=text("'system'"))
+    font_size: Mapped[str] = mapped_column(String(10), nullable=False, server_default=text("'medium'"))
+    high_contrast: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    reduce_motion: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    reading_comfort: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    show_streak: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("true"))
+    updated_at: Mapped[datetime] = _created()
 
 
 class AuthSession(Base):

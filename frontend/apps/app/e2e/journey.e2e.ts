@@ -241,14 +241,15 @@ test("a user's whole journey", async ({ page, context }) => {
 
   await test.step("change the display name in Settings", async () => {
     await page.getByRole("link", { name: "Settings" }).click();
-    await expect(page).toHaveURL("/settings");
+    await expect(page).toHaveURL("/settings/profile");
     await page.getByLabel("Display name").fill("E2E Renamed");
     await page.getByRole("button", { name: "Save", exact: true }).click();
-    await expect(page.getByText("Name saved.")).toBeVisible();
+    await expect(page.getByText("Profile saved.")).toBeVisible();
     await expect(page.getByText("E2E Renamed", { exact: true })).toBeVisible();
   });
 
   await test.step("delete the account", async () => {
+    await page.getByRole("link", { name: "Privacy & Security" }).click();
     await page.getByRole("button", { name: "Delete account" }).click();
     const dialog = page.getByRole("dialog", { name: "Delete your account?" });
     await dialog.getByLabel("Password").fill(newPassword);

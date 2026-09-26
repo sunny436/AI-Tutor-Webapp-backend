@@ -3,7 +3,7 @@ import "server-only";
 import { cookies, headers } from "next/headers";
 import { cache } from "react";
 
-import type { ConversationPage, User } from "@/lib/api/types";
+import type { Appearance, ConversationPage, User } from "@/lib/api/types";
 import { type BackendResult, backendGet } from "./backend";
 import { apiBaseUrl } from "./config";
 import { PLAIN_COOKIE, SECURE_COOKIE } from "./cookies";
@@ -37,4 +37,9 @@ export const getCurrentUser = cache(
 export const getInitialConversations = cache(
   (): Promise<BackendResult<ConversationPage>> =>
     backendGet<ConversationPage>(apiBaseUrl(), "/v1/conversations?limit=30", sessionToken()),
+);
+
+/** How the app looks for this user; applied on the client (AppearanceProvider). */
+export const getAppearance = cache(
+  (): Promise<BackendResult<Appearance>> => backendGet<Appearance>(apiBaseUrl(), "/v1/me/appearance", sessionToken()),
 );

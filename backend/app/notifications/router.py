@@ -19,6 +19,7 @@ from app.notifications.schemas import (
     UpdateNotificationPreferencesRequest,
 )
 from app.notifications.tokens import PREFERENCE_OF, read_token
+from app.settings import Settings
 
 router = APIRouter(prefix="/v1/notifications", tags=["notifications"])
 
@@ -30,12 +31,24 @@ class InvalidToken(AppError):
     status_code, code, message = 400, "invalid_token", "This link is not valid."
 
 
-def preferences_out(row: NotificationPreferences | None, user: User) -> NotificationPreferencesOut:
+def delivery_for(settings: Settings, user: User) -> str:
+    """Whether emails reach this user now: only while the worker runs and its rollout includes
+    them. Read from the settings this API process started with (restart aichat-api after
+    changing the rollout for this to show it)."""
+    if not settings.jobs_enabled or settings.jobs_problems() or settings.notifications_mode in ("off", "dry_run"):
+        return "paused"
+    if settings.notifications_mode == "allowlist":
+        return "active" if {str(user.id), user.email.lower()} & settings.notification_allowlist else "paused"
+    return "active"
+
+
+def preferences_out(row: NotificationPreferences | None, user: User, settings: Settings) -> NotificationPreferencesOut:
     values = {name: getattr(row, name) for name in DEFAULTS} if row else dict(DEFAULTS)
     return NotificationPreferencesOut(
         version=row.version if row else 0,
         updated_at=row.updated_at if row else None,
         reminders_need_timezone=user.timezone is None,
+        delivery=delivery_for(settings, user),
         **values,
     )
 
@@ -47,14 +60,16 @@ async def _locked(db: AsyncSession, user_id: uuid.UUID) -> NotificationPreferenc
 
 @router.get("/preferences", response_model=NotificationPreferencesOut)
 async def get_notification_preferences(
-    principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)
+    request: Request, principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)
 ):
-    return preferences_out(await db.get(NotificationPreferences, principal.user.id), principal.user)
+    row = await db.get(NotificationPreferences, principal.user.id)
+    return preferences_out(row, principal.user, request.app.state.settings)
 
 
 @router.patch("/preferences", response_model=NotificationPreferencesOut)
 async def update_notification_preferences(
     body: UpdateNotificationPreferencesRequest,
+    request: Request,
     principal: Principal = Depends(get_principal),
     db: AsyncSession = Depends(get_session),
 ):
@@ -70,7 +85,9 @@ async def update_notification_preferences(
             await db.rollback()
             current = await db.get(NotificationPreferences, user_id, populate_existing=True)
             raise VersionConflict(
-                current=preferences_out(current, await db.get(User, user_id)).model_dump(mode="json", by_alias=True)
+                current=preferences_out(current, await db.get(User, user_id), request.app.state.settings).model_dump(
+                    mode="json", by_alias=True
+                )
             )
         await db.execute(
             update(NotificationPreferences)
@@ -79,7 +96,7 @@ async def update_notification_preferences(
         )
         await db.commit()
     row = await db.get(NotificationPreferences, user_id, populate_existing=True)
-    return preferences_out(row, await db.get(User, user_id))
+    return preferences_out(row, await db.get(User, user_id), request.app.state.settings)
 
 
 @router.post("/unsubscribe", response_model=UnsubscribeOut)

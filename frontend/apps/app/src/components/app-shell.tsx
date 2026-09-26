@@ -53,7 +53,8 @@ const iconButton =
 /** What the page is (the `h1`), a line about it, and the sidebar controls. */
 function useHeading(pathname: string | null): { title: string; subtitle: string } {
   const { items } = useConversations();
-  if (pathname === "/settings") return { title: "Settings", subtitle: "Your account, security and appearance" };
+  if (pathname === "/settings" || pathname?.startsWith("/settings/"))
+    return { title: "Settings", subtitle: "Your profile, notifications, appearance and security" };
   const item = navItemFor(pathname);
   if (item?.id === "tutor") {
     const active = activeConversationId(pathname);

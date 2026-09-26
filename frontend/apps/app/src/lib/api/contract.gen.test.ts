@@ -27,7 +27,7 @@ describe("generated contract", () => {
     expect(TITLE_MAX).toBe(CONTRACT.RenameConversationRequest.title.maxLength);
     expect(PASSWORD_MIN).toBe(CONTRACT.SignupRequest.password.minLength);
     expect(PASSWORD_MAX).toBe(CONTRACT.SignupRequest.password.maxLength);
-    expect(DISPLAY_NAME_MAX).toBe(CONTRACT.UpdateMeRequest.displayName.maxLength);
+    expect(DISPLAY_NAME_MAX).toBe(CONTRACT.ProfileSet.displayName.maxLength);
     expect(CONTRACT.VerifyEmailRequest.code.pattern).toBe(`^\\d{${CODE_LENGTH}}$`);
   });
 });
