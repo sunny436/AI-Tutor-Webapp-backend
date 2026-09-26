@@ -6,14 +6,14 @@ import { PromptDialog } from "@v1/ui/prompt-dialog";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@v1/ui/tooltip";
 import { cn } from "@v1/ui/utils";
-import { Flame, LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2, Zap } from "lucide-react";
+import { LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { type ReactElement, useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 
 import { useConversations, useStores } from "@/features/chat/chat-context";
-import { STUDENT_STATS } from "@/features/learning-hub/demo-data";
+import { StreakCard } from "@/features/progress/streak-card";
 import { logout } from "@/lib/api/auth";
 import { describeError } from "@/lib/api/errors";
 import { avatarSrc } from "@/lib/api/identity";
@@ -23,7 +23,6 @@ import { cacheAttributes } from "@/lib/appearance";
 import { APP_NAME } from "@/lib/brand";
 import { BrandLockup, BrandMark } from "./brand/brand-mark";
 import { isActive, visibleNavItems } from "./nav-items";
-import { PreviewBadge } from "./preview-badge";
 import { usePreview } from "./preview-context";
 import { ThemeSwitcher } from "./theme-switcher";
 import { useUser } from "./user-context";
@@ -161,24 +160,7 @@ export function SidebarContent({
           </Link>
         </div>
 
-        {preview && !collapsed && (
-          <div className="relative mx-4 mt-5 flex items-center justify-between gap-2 rounded-2xl border border-accent-warm/25 bg-gradient-to-r from-accent-warm-soft to-brand-soft p-3">
-            <PreviewBadge className="absolute -top-2 right-3" />
-            <div className="flex min-w-0 items-center gap-2">
-              <span aria-hidden className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-streak text-white shadow-sm">
-                <Flame className="h-4 w-4 fill-current" />
-              </span>
-              <div className="min-w-0">
-                <p className="whitespace-nowrap text-xs font-bold text-foreground">{STUDENT_STATS.streakDays} Day Streak</p>
-                <p className="truncate text-2xs text-text-secondary">Keep learning daily!</p>
-              </div>
-            </div>
-            <span className="inline-flex shrink-0 items-center gap-1 rounded-lg border border-brand/15 bg-card px-2 py-1 text-xs font-black text-brand shadow-sm">
-              <Zap aria-hidden className="h-3.5 w-3.5 fill-current" />
-              {STUDENT_STATS.xp} XP
-            </span>
-          </div>
-        )}
+        {!collapsed && <StreakCard onNavigate={onNavigate} />}
 
         <div className={cn("shrink-0", collapsed ? "flex justify-center px-3 py-4" : "px-4 py-4")}>
           <RailTip label="Ask New Doubt" collapsed={collapsed}>
@@ -360,16 +342,7 @@ export function SidebarContent({
           {!collapsed && (
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-bold text-foreground">{name}</p>
-              {preview ? (
-                <p className="flex items-center gap-1 truncate text-xs text-text-secondary">
-                  <span className="font-semibold text-brand">{STUDENT_STATS.grade}</span>
-                  <span aria-hidden>•</span>
-                  <span>{STUDENT_STATS.board}</span>
-                  <PreviewBadge className="ml-1" />
-                </p>
-              ) : (
-                user.displayName && <p className="truncate text-xs text-text-secondary">{user.email}</p>
-              )}
+              {user.displayName && <p className="truncate text-xs text-text-secondary">{user.email}</p>}
             </div>
           )}
         </div>

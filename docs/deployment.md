@@ -149,6 +149,7 @@ never in git. Templates: `deploy/env/`. Local development: `backend/.env` and
 | `web.env` | `API_BASE_URL` | frontend server (BFF, server components) | runtime | no. **The link to the backend**: must be `http://127.0.0.1:4100`; a release refuses anything else |
 | `web.env` | `NEXT_PUBLIC_SITE_URL` | frontend (metadata URLs) | **build time** (baked into the release build; required) | no |
 | `web.env` | `NEXT_PUBLIC_SENTRY_DSN` | frontend error reporting, only bundled if set | build time | no (public DSN) |
+| `web.env` | `NEXT_PUBLIC_TERMS_URL`, `NEXT_PUBLIC_PRIVACY_URL` | Settings › Help & Support links; each shown only when set to an http(s) address | build time | no |
 | `api.env` | `SECRET_KEY`, `DATABASE_URL` | backend | runtime | **yes** |
 | `api.env` | `SMTP_USERNAME`, `SMTP_PASSWORD`, `OLLASTACK_TOKEN` | backend email | runtime | **yes** |
 | `api.env` | `LLM_PRIMARY_API_KEY`, `LLM_FALLBACK_API_KEY`, `EMBEDDING_API_KEY` | backend | runtime | **yes** |

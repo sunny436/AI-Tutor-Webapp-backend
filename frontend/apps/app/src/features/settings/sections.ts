@@ -3,11 +3,13 @@ import {
   BookOpen,
   Bot,
   GraduationCap,
+  LifeBuoy,
   type LucideIcon,
   Palette,
   ShieldCheck,
   SlidersHorizontal,
   Target,
+  TrendingUp,
   UserRound,
 } from "lucide-react";
 
@@ -21,8 +23,8 @@ export type SettingsSectionInfo = {
 /**
  * The Settings sections, in the product's order: Profile, Academic Profile, Learning Goals,
  * Learning Preferences, AI Tutor, Subjects & Study, Progress & Goals, Notifications,
- * Appearance & Accessibility, Privacy & Security, Help & Support. A section is listed only
- * once it works end to end; there are no placeholder pages.
+ * Appearance & Accessibility, Privacy & Security, Help & Support. Only sections that work
+ * end to end are listed; there are no placeholder pages.
  */
 export const SETTINGS_SECTIONS = [
   { slug: "profile", title: "Profile", description: "Your photo, name, time zone and email.", icon: UserRound },
@@ -52,6 +54,12 @@ export const SETTINGS_SECTIONS = [
     icon: BookOpen,
   },
   {
+    slug: "progress",
+    title: "Progress & Goals",
+    description: "Your active time, questions and streak.",
+    icon: TrendingUp,
+  },
+  {
     slug: "notifications",
     title: "Notifications",
     description: "Study reminders and sign-in alerts by email.",
@@ -69,6 +77,7 @@ export const SETTINGS_SECTIONS = [
     description: "Password, signed-in devices and deleting your account.",
     icon: ShieldCheck,
   },
+  { slug: "help", title: "Help & Support", description: "Answers, and a way to reach us.", icon: LifeBuoy },
 ] as const satisfies readonly SettingsSectionInfo[];
 
 export type SectionSlug = (typeof SETTINGS_SECTIONS)[number]["slug"];

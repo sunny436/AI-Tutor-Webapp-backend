@@ -6,7 +6,16 @@
 import { type Browser, type Page, expect } from "@playwright/test";
 
 import { APP_URL } from "./env";
-import { PASSWORD, SAME_ORIGIN, expectAccessible, expectNoHorizontalOverflow, mailCode, test, uniqueEmail } from "./support";
+import {
+  PASSWORD,
+  SAME_ORIGIN,
+  expectAccessible,
+  expectNoHorizontalOverflow,
+  mailCode,
+  sendAndWait,
+  test,
+  uniqueEmail,
+} from "./support";
 
 /** A 48 x 48 PNG (two colours), made with Pillow. */
 const PHOTO = Buffer.from(
@@ -36,9 +45,11 @@ test("the sections: one address each, one heading each, accessible, no sideways 
     ["learning", "Learning Preferences"],
     ["tutor", "AI Tutor"],
     ["subjects", "Subjects & Study"],
+    ["progress", "Progress & Goals"],
     ["notifications", "Notifications"],
     ["appearance", "Appearance & Accessibility"],
     ["privacy", "Privacy & Security"],
+    ["help", "Help & Support"],
   ] as const) {
     await page.getByRole("navigation", { name: "Settings sections" }).getByRole("link", { name: heading, exact: true }).click();
     await expect(page).toHaveURL(`/settings/${slug}`);
@@ -326,4 +337,185 @@ test("subjects: added, reordered from the keyboard, flagged and saved", async ({
   await page.getByRole("button", { name: "Save", exact: true }).click();
   await expect(page.getByText("Subjects saved.")).toBeVisible();
   expect((await apiJson(page, "/v1/learning/subjects")).items).toHaveLength(2);
+});
+
+// ------------------------------------------------------------------ progress
+
+const sidebarStreak = (page: Page) => page.getByRole("link", { name: /streak/i });
+/** A number on the Progress page, by its label (the first, when Today and This week share one). */
+const stat = (page: Page, label: string) =>
+  page.locator("dt", { hasText: new RegExp(`^${label}$`) }).first().locator("xpath=following-sibling::dd");
+
+test("progress: a question and an active minute count today, and start a streak", async ({ page, account: _ }) => {
+  await page.goto("/");
+  await sendAndWait(page, "What is photosynthesis?");
+  const report = await page.request.post(`${APP_URL}/api/v1/progress/activity`, { headers: SAME_ORIGIN });
+  expect(report.status()).toBe(200);
+  expect((await report.json()).credited).toBe(true);
+
+  await page.goto("/settings/progress");
+  await expect(page.getByText("about 1 min").first()).toBeVisible();
+  await expect(stat(page, "question")).toHaveText("1");
+  await expect(stat(page, "current streak")).toHaveText("1 day");
+  await expect(sidebarStreak(page)).toContainText("1-day streak");
+
+  // The chart: one tab stop, arrow keys move between days, and every value is in the table too.
+  const bars = page.getByRole("group", { name: /Active minutes, last 14 days/ }).getByRole("img");
+  await expect(bars).toHaveCount(14);
+  await bars.last().focus();
+  await expect(bars.last()).toHaveAttribute("aria-label", /: 1 min active, 1 question$/);
+  await page.keyboard.press("ArrowLeft");
+  await expect(bars.nth(12)).toBeFocused();
+  await expect(bars.nth(12)).toHaveAttribute("aria-label", /: 0 min active, 0 questions$/);
+  await page.keyboard.press("End");
+  await expect(bars.last()).toBeFocused();
+  await page.getByRole("button", { name: "Show as table" }).click();
+  const rows = page.getByRole("table").getByRole("row");
+  await expect(rows).toHaveCount(15);
+  await expect(rows.nth(1)).toContainText("1 min");
+  await expectAccessible(page);
+  await expectNoHorizontalOverflow(page);
+  await page.emulateMedia({ colorScheme: "dark" });
+  await expectAccessible(page);
+  await page.emulateMedia({ colorScheme: "light" });
+
+  // The streak in the sidebar can be turned off, and stays off.
+  await page.getByRole("switch", { name: "Show my streak in the sidebar" }).click();
+  await expect(sidebarStreak(page)).toHaveCount(0);
+  await expect
+    .poll(async () => (await (await page.request.get(`${APP_URL}/api/v1/me/appearance`)).json()).showStreak)
+    .toBe(false);
+  await page.reload();
+  await expect(page.getByRole("switch", { name: "Show my streak in the sidebar" })).not.toBeChecked();
+  await expect(sidebarStreak(page)).toHaveCount(0);
+});
+
+test("the heartbeat reports a minute while PadhAI is used, and stops when it isn't", async ({ page, account: _ }) => {
+  const reports: string[] = [];
+  page.on("request", (request) => {
+    if (request.method() === "POST" && new URL(request.url()).pathname === "/api/v1/progress/activity") reports.push(request.url());
+  });
+  await page.clock.install();
+  await page.goto("/settings/progress");
+  await expect(stat(page, "current streak")).toBeVisible();
+  await page.getByRole("heading", { level: 2, name: "Progress & Goals" }).click();
+
+  await page.clock.runFor(61_000);
+  await expect.poll(() => reports.length).toBe(1);
+  // A credited minute refreshes what is on screen.
+  await expect(page.getByText("about 1 min").first()).toBeVisible();
+
+  // Nobody touches it: reports stop within the two-minute window, and stay stopped.
+  await page.clock.runFor(4 * 60_000);
+  const afterIdle = reports.length;
+  expect(afterIdle).toBeLessThanOrEqual(2);
+  await page.clock.runFor(5 * 60_000);
+  expect(reports.length).toBe(afterIdle);
+});
+
+// ------------------------------------------------------------------ help
+
+test("help: a support request is sent once, even when the answer is lost, with a reference", async ({ page, account: _ }) => {
+  await page.goto("/settings/help");
+  await expect(page.getByRole("link", { name: "Help & FAQ" })).toHaveAttribute("href", "/help");
+  await expect(page.getByRole("link", { name: "About PadhAI" })).toHaveAttribute("href", "/about");
+  await expect(page.getByRole("link", { name: /Terms of Service|Privacy Policy/ })).toHaveCount(0); // not published yet
+
+  await page.getByRole("radio", { name: "Something isn't working" }).check();
+  await page.getByLabel("Subject").fill("The chart looks odd");
+  await page.getByLabel("Message").fill("Too short");
+  await expect(page.getByText("Write at least 10 characters.")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Send" })).toBeDisabled();
+  await page.getByLabel("Message").fill("The progress chart shows no bar for today although I asked a question.");
+  await expectAccessible(page);
+
+  // The first answer is lost on the way back (the request reached the API); sending again
+  // must not make a second request, and must show the first one's reference.
+  const bodies: { requestId: string }[] = [];
+  page.on("request", (request) => {
+    if (request.method() === "POST" && request.url().endsWith("/api/v1/support/requests")) bodies.push(request.postDataJSON());
+  });
+  let firstId = "";
+  await page.route(
+    "**/api/v1/support/requests",
+    async (route) => {
+      firstId = (await (await route.fetch()).json()).id;
+      await route.abort("connectionreset");
+    },
+    { times: 1 },
+  );
+  await page.getByRole("button", { name: "Send" }).click();
+  await expect(page.getByRole("alert").filter({ hasText: "couldn't reach the server" })).toBeVisible();
+  await page.getByRole("button", { name: "Send" }).click();
+  await expect(page.getByText("We've received your request.")).toBeVisible();
+  expect(bodies).toHaveLength(2);
+  expect(bodies[1]?.requestId).toBe(bodies[0]?.requestId);
+  expect(firstId).not.toBe("");
+  await expect(page.getByText(firstId.replaceAll("-", "").slice(0, 8).toUpperCase(), { exact: true })).toBeVisible();
+  await expectAccessible(page);
+
+  await page.getByRole("button", { name: "Send another" }).click();
+  await expect(page.getByLabel("Subject")).toHaveValue("");
+});
+
+for (const { path, h1, h2 } of [
+  { path: "/help", h1: "Help", h2: "Help & FAQ" },
+  { path: "/about", h1: "About", h2: "About PadhAI" },
+]) {
+  test(`${h2}: readable, accessible, fits a phone`, async ({ page, account: _ }) => {
+    await page.goto(path);
+    await expect(page.getByRole("heading", { level: 1, name: h1, exact: true })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 2, name: h2 })).toBeVisible();
+    if (path === "/help") {
+      await page.getByText("How is active time measured?").click();
+      await expect(page.getByText(/A minute counts when PadhAI is open and on screen/)).toBeVisible();
+    }
+    await expectAccessible(page);
+    await page.setViewportSize({ width: 320, height: 700 });
+    await expectNoHorizontalOverflow(page);
+    await page.emulateMedia({ colorScheme: "dark" });
+    await expectAccessible(page);
+  });
+}
+
+// ------------------------------------------------------------------ unsubscribe
+
+function fakeToken(kind: string): string {
+  const payload = Buffer.from(`00000000-0000-4000-8000-000000000000:${kind}`).toString("base64url");
+  return `${payload}.${"0".repeat(32)}`;
+}
+
+test("unsubscribe: works signed out, asks first, refuses a link we didn't sign", async ({ browser }) => {
+  const context = await browser.newContext({ baseURL: APP_URL });
+  const page = await context.newPage();
+  const posts: string[] = [];
+  page.on("request", (request) => {
+    if (request.method() === "POST" && request.url().includes("/api/v1/notifications/unsubscribe")) posts.push(request.url());
+  });
+
+  await page.goto(`/unsubscribe?token=${fakeToken("daily_reminder")}`);
+  await expect(page).toHaveURL(/\/unsubscribe\?token=/); // not sent to sign in
+  await expect(page.getByRole("heading", { level: 1, name: "Stop daily study reminders?" })).toBeVisible();
+  expect(posts).toHaveLength(0); // opening the link changes nothing
+  await expectAccessible(page);
+  await page.getByRole("button", { name: "Unsubscribe" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "This link doesn't work" })).toBeFocused();
+  expect(posts).toHaveLength(1);
+
+  // A link the API accepts. Signing one needs the server's key, so the answer is stubbed here;
+  // the API's own tests cover real tokens.
+  await page.route("**/api/v1/notifications/unsubscribe", (route) =>
+    route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ kind: "weekly_summary" }) }),
+  );
+  await page.goto(`/unsubscribe?token=${fakeToken("weekly_summary")}`);
+  await page.getByRole("button", { name: "Unsubscribe" }).click();
+  await expect(page.getByRole("heading", { level: 1, name: "You're unsubscribed" })).toBeFocused();
+  await expect(page.getByText("You won't get weekly summaries from PadhAI any more.", { exact: false })).toBeVisible();
+  await expectAccessible(page);
+
+  await page.goto("/unsubscribe");
+  await expect(page.getByRole("heading", { level: 1, name: "This link is incomplete" })).toBeVisible();
+  await page.setViewportSize({ width: 320, height: 700 });
+  await expectNoHorizontalOverflow(page);
+  await context.close();
 });

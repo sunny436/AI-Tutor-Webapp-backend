@@ -176,6 +176,45 @@ export const DAILY_MINUTES_MAX = CONTRACT.LearnerProfileSet.dailyActiveMinutesGo
 export const WEEKLY_MINUTES_MAX = CONTRACT.LearnerProfileSet.weeklyActiveMinutesGoal.maximum;
 export const SUBJECTS_MAX = CONTRACT.ReplaceSubjectsRequest.items.maxItems;
 
+// ------------------------------------------------------------------ progress
+
+export type ProgressDay = { date: string; activeMinutes: number; questions: number };
+export type Progress = {
+  /** The time zone that decides which day is today. */
+  timezone: string;
+  /** True until the user chooses a time zone. */
+  timezoneIsDefault: boolean;
+  today: ProgressDay;
+  thisWeek: { startDate: string; activeMinutes: number; questions: number };
+  streak: { currentDays: number; longestDays: number };
+  goals: {
+    dailyActiveMinutes: number | null;
+    weeklyActiveMinutes: number | null;
+    dailyMet: boolean | null;
+    weeklyMet: boolean | null;
+  };
+  /** Oldest first, including days without activity. */
+  days: ProgressDay[];
+};
+export type ActivityReport = { credited: boolean; date: string };
+
+// ------------------------------------------------------------------- support
+
+export type SupportKind = (typeof CONTRACT.SupportRequestIn.kind.enum)[number];
+export const SUPPORT_KINDS = CONTRACT.SupportRequestIn.kind.enum;
+export type SupportRequestIn = { requestId: Uuid; kind: SupportKind; subject: string; message: string; page?: string };
+export type SupportRequestOut = {
+  id: Uuid;
+  requestId: Uuid;
+  kind: SupportKind;
+  subject: string;
+  status: "open" | "closed";
+  createdAt: Timestamp;
+};
+export const SUPPORT_SUBJECT_MAX = CONTRACT.SupportRequestIn.subject.maxLength;
+export const SUPPORT_MESSAGE_MIN = CONTRACT.SupportRequestIn.message.minLength;
+export const SUPPORT_MESSAGE_MAX = CONTRACT.SupportRequestIn.message.maxLength;
+
 /** The backend's password rule, from the contract (contract.gen.ts). */
 export const PASSWORD_MIN = CONTRACT.SignupRequest.password.minLength;
 export const PASSWORD_MAX = CONTRACT.SignupRequest.password.maxLength;

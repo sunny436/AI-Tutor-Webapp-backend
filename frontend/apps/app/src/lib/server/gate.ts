@@ -10,9 +10,10 @@
  *                  `fetch` follows redirects and would hand a caller an HTML page
  *   /login /signup always reachable; a signed-in visitor is sent on by the page itself
  *                  (the page knows whether the cookie is still valid; we do not)
+ *   /unsubscribe   always reachable: an email's link must work on any device, signed in or not
  */
 
-export const PUBLIC_PAGES = new Set(["/login", "/signup"]);
+export const PUBLIC_PAGES = new Set(["/login", "/signup", "/unsubscribe"]);
 
 export type GateDecision = { action: "next" } | { action: "redirect"; location: string };
 

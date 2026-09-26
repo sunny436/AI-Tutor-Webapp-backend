@@ -7,14 +7,6 @@
  * exists. Search for an import of this file to find everything still waiting.
  */
 
-/** The streak, XP and class/board line in the sidebar. */
-export const STUDENT_STATS = {
-  streakDays: 7,
-  xp: 1420,
-  grade: "Class 10",
-  board: "CBSE",
-} as const;
-
 /** My Courses: the overview banner and three courses with their chapters. */
 export const COURSE_OVERVIEW = {
   tag: "Aligned with NCERT & ICSE 2026-27",

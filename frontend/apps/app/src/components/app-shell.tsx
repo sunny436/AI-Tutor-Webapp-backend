@@ -4,9 +4,11 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@v1/ui/sheet";
 import { Menu, Plus, Trophy } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type ReactNode, useState } from "react";
+import { type ReactNode, useCallback, useState } from "react";
 
-import { useConversations } from "@/features/chat/chat-context";
+import { useConversations, useStores } from "@/features/chat/chat-context";
+import { useActivityHeartbeat } from "@/features/progress/use-activity-heartbeat";
+import { APP_NAME } from "@/lib/brand";
 import { navItemFor } from "./nav-items";
 import { PreviewBadge } from "./preview-badge";
 import { usePreview } from "./preview-context";
@@ -19,6 +21,9 @@ import { SidebarContent, activeConversationId, useCollapsedSidebar } from "./sid
  */
 export function AppShell({ children }: { children: ReactNode }) {
   const { collapsed, toggle } = useCollapsedSidebar();
+  const { chat } = useStores();
+  // Active time in PadhAI (Settings > Progress & Goals): one heartbeat for the whole app.
+  useActivityHeartbeat(useCallback(() => chat.anyStreaming(), [chat]));
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -54,7 +59,9 @@ const iconButton =
 function useHeading(pathname: string | null): { title: string; subtitle: string } {
   const { items } = useConversations();
   if (pathname === "/settings" || pathname?.startsWith("/settings/"))
-    return { title: "Settings", subtitle: "Your profile, notifications, appearance and security" };
+    return { title: "Settings", subtitle: "Your profile, learning, progress and account" };
+  if (pathname === "/help") return { title: "Help", subtitle: "Answers to common questions" };
+  if (pathname === "/about") return { title: "About", subtitle: `What ${APP_NAME} is and how it uses your data` };
   const item = navItemFor(pathname);
   if (item?.id === "tutor") {
     const active = activeConversationId(pathname);
@@ -62,7 +69,7 @@ function useHeading(pathname: string | null): { title: string; subtitle: string 
     return { title, subtitle: item.description };
   }
   if (item) return { title: item.label, subtitle: item.description };
-  return { title: "PadhAI", subtitle: "" };
+  return { title: APP_NAME, subtitle: "" };
 }
 
 function Header({ collapsed, onToggleCollapse }: { collapsed: boolean; onToggleCollapse: () => void }) {
