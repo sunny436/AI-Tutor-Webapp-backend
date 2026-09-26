@@ -111,6 +111,71 @@ export type NotificationPreferences = NotificationValues & {
   updatedAt: Timestamp | null;
 };
 
+// ------------------------------------------------------------------ learning
+
+export type CatalogEntry = { code: string; name: string; deprecated: boolean };
+export type AcademicCatalog = {
+  version: number;
+  grades: CatalogEntry[];
+  boards: CatalogEntry[];
+  boardStates: CatalogEntry[];
+  mediums: CatalogEntry[];
+  academicYears: CatalogEntry[];
+  subjects: CatalogEntry[];
+};
+
+export type MainGoal = (typeof CONTRACT.LearnerProfileSet.mainGoal.enum)[number];
+export const MAIN_GOALS = CONTRACT.LearnerProfileSet.mainGoal.enum;
+
+/** What a learner profile field holds; every field may also be unset (null, or [] for topics). */
+export type LearnerProfileValues = {
+  grade: string;
+  board: string;
+  boardState: string;
+  medium: string;
+  academicYear: string;
+  mainGoal: MainGoal;
+  targetExam: string;
+  targetScorePercent: number;
+  weakTopics: string[];
+  dailyActiveMinutesGoal: number;
+  weeklyActiveMinutesGoal: number;
+  /** "HH:MM", 24-hour, in the user's time zone. */
+  preferredStudyTime: string;
+  shortTermGoal: string;
+  longTermGoal: string;
+};
+export type LearnerProfileField = keyof LearnerProfileValues;
+export type LearnerProfile = { [K in Exclude<LearnerProfileField, "weakTopics">]: LearnerProfileValues[K] | null } & {
+  weakTopics: string[];
+  version: number;
+  updatedAt: Timestamp | null;
+};
+export type UpdateLearnerProfileRequest = VersionedEdit<LearnerProfileValues, LearnerProfileField>;
+
+export type SubjectItem = { code: string; isPriority: boolean; needsImprovement: boolean };
+export type SubjectList = { version: number; items: SubjectItem[] };
+
+type PreferenceEnums = typeof CONTRACT.LearningPreferencesSet;
+export type LearningPreferenceValues = { [K in keyof PreferenceEnums]: PreferenceEnums[K]["enum"][number] };
+export type LearningPreferenceField = keyof LearningPreferenceValues;
+export type LearningPreferences = LearningPreferenceValues & { version: number; updatedAt: Timestamp | null };
+
+export type TutorPreviewRequest = {
+  profile?: Partial<{ [K in LearnerProfileField]: LearnerProfileValues[K] | null }>;
+  subjects?: SubjectItem[];
+  preferences?: Partial<LearningPreferenceValues>;
+};
+export type TutorPreview = { instructions: string; maxChars: number };
+
+export const TARGET_EXAM_MAX = CONTRACT.LearnerProfileSet.targetExam.maxLength;
+export const GOAL_MAX = CONTRACT.LearnerProfileSet.shortTermGoal.maxLength;
+export const TOPIC_MAX = CONTRACT.LearnerProfileSet.weakTopics.items.maxLength;
+export const TOPICS_MAX = CONTRACT.LearnerProfileSet.weakTopics.maxItems;
+export const DAILY_MINUTES_MAX = CONTRACT.LearnerProfileSet.dailyActiveMinutesGoal.maximum;
+export const WEEKLY_MINUTES_MAX = CONTRACT.LearnerProfileSet.weeklyActiveMinutesGoal.maximum;
+export const SUBJECTS_MAX = CONTRACT.ReplaceSubjectsRequest.items.maxItems;
+
 /** The backend's password rule, from the contract (contract.gen.ts). */
 export const PASSWORD_MIN = CONTRACT.SignupRequest.password.minLength;
 export const PASSWORD_MAX = CONTRACT.SignupRequest.password.maxLength;

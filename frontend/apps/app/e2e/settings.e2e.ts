@@ -31,11 +31,16 @@ test("the sections: one address each, one heading each, accessible, no sideways 
   await expect(page).toHaveURL("/settings/profile");
   for (const [slug, heading] of [
     ["profile", "Profile"],
+    ["academic", "Academic Profile"],
+    ["goals", "Learning Goals"],
+    ["learning", "Learning Preferences"],
+    ["tutor", "AI Tutor"],
+    ["subjects", "Subjects & Study"],
     ["notifications", "Notifications"],
     ["appearance", "Appearance & Accessibility"],
     ["privacy", "Privacy & Security"],
   ] as const) {
-    await page.getByRole("navigation", { name: "Settings sections" }).getByRole("link", { name: heading }).click();
+    await page.getByRole("navigation", { name: "Settings sections" }).getByRole("link", { name: heading, exact: true }).click();
     await expect(page).toHaveURL(`/settings/${slug}`);
     await expect(page.getByRole("heading", { level: 2, name: heading })).toBeVisible();
     await expect(page.getByRole("link", { name: heading, exact: true })).toHaveAttribute("aria-current", "page");
@@ -210,4 +215,115 @@ test("notifications: honest about delivery and time zone, and saved", async ({ p
   await page.reload();
   await expect(page.getByRole("switch", { name: "Weekly summary" })).toHaveAttribute("aria-checked", "true");
   await expect(page.getByRole("switch", { name: "Sign-in alerts" })).toHaveAttribute("aria-checked", "true");
+});
+
+// ------------------------------------------------------------------ learning
+
+async function apiJson(page: Page, path: string) {
+  return (await page.request.get(`${APP_URL}/api${path}`)).json();
+}
+
+test("academic profile: catalog choices, a state only with a state board, saved", async ({ page, account: _ }) => {
+  await page.goto("/settings/academic");
+  await page.getByLabel("Class").selectOption({ label: "Class 10" });
+  await expect(page.getByLabel("State", { exact: true })).toHaveCount(0);
+  await page.getByLabel("Board").selectOption({ label: "State board" });
+  await page.getByLabel("State", { exact: true }).selectOption({ label: "Maharashtra" });
+  await page.getByLabel("Medium of instruction").selectOption({ label: "Marathi" });
+  await page.getByLabel("Academic year").selectOption({ label: "2026–27" });
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByText("Academic profile saved.")).toBeVisible();
+
+  await page.reload();
+  await expect(page.getByLabel("Class")).toHaveValue("class_10");
+  await expect(page.getByLabel("State", { exact: true })).toHaveValue("maharashtra");
+
+  await page.getByLabel("Board").selectOption({ label: "CBSE" });
+  await expect(page.getByLabel("State", { exact: true })).toHaveCount(0);
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByText("Academic profile saved.")).toBeVisible();
+  const profile = await apiJson(page, "/v1/learning/profile");
+  expect([profile.board, profile.boardState, profile.medium]).toEqual(["cbse", null, "marathi"]);
+});
+
+test("learning goals: topics, study time and goals, saved", async ({ page, account: _ }) => {
+  await page.goto("/settings/goals");
+  await page.getByLabel("Main goal").selectOption({ label: "Preparing for a competitive exam" });
+  await page.getByLabel("Exam you're preparing for").fill("NEET");
+  await page.getByLabel("Target score (%)").fill("90");
+  const topic = page.getByLabel("Topics you find difficult", { exact: true });
+  await topic.fill("Genetics");
+  await topic.press("Enter");
+  await topic.fill("genetics");
+  await topic.press("Enter");
+  await expect(page.getByText("That topic is already on the list.")).toBeVisible();
+  await topic.fill("Optics");
+  await page.getByRole("button", { name: "Add", exact: true }).click();
+  await page.getByRole("button", { name: "Remove Genetics" }).click();
+  await page.getByLabel("Daily goal (minutes)").fill("45");
+  await page.getByLabel("Weekly goal (minutes)").fill("300");
+  await page.getByLabel("Preferred study time").fill("18:30");
+  await page.getByLabel("Short-term goal").fill("Finish biology revision");
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByText("Goals saved.")).toBeVisible();
+
+  await page.reload();
+  await expect(page.getByLabel("Exam you're preparing for")).toHaveValue("NEET");
+  await expect(page.getByRole("list", { name: "Your difficult topics" }).getByRole("listitem")).toHaveText(["Optics"]);
+  const profile = await apiJson(page, "/v1/learning/profile");
+  expect([profile.mainGoal, profile.targetScorePercent, profile.dailyActiveMinutesGoal, profile.preferredStudyTime]).toEqual([
+    "competitive_exam",
+    90,
+    45,
+    "18:30",
+  ]);
+});
+
+test("preferences save as they change, and the preview shows what the tutor is told", async ({ page, account: _ }) => {
+  await page.goto("/settings/learning");
+  await page.getByRole("group", { name: "Reply language" }).getByRole("radio", { name: "Hindi" }).check();
+  await expect.poll(async () => (await apiJson(page, "/v1/learning/preferences")).language).toBe("hindi");
+
+  await page.goto("/settings/tutor");
+  await expect(page.getByRole("heading", { name: "What your tutor is told" })).toBeVisible();
+  await expect(page.getByText("Reply in Hindi", { exact: false })).toBeVisible();
+  await page.getByRole("group", { name: "How it answers problems" }).getByRole("radio", { name: "Hint first" }).check();
+  await expect(page.getByText("start with a hint", { exact: false })).toBeVisible();
+  await expectAccessible(page);
+
+  await page.getByRole("group", { name: "How it answers problems" }).getByRole("radio", { name: "No preference" }).check();
+  await expect(page.getByText("start with a hint", { exact: false })).toHaveCount(0);
+});
+
+test("subjects: added, reordered from the keyboard, flagged and saved", async ({ page, account: _ }) => {
+  await page.goto("/settings/subjects");
+  for (const subject of ["Mathematics", "Physics", "Chemistry"]) {
+    await page.getByLabel("Add a subject").selectOption({ label: subject });
+    await page.getByRole("button", { name: "Add", exact: true }).click();
+  }
+  const rows = page.getByRole("list", { name: "Your subjects" }).getByRole("listitem");
+  await expect(rows).toHaveCount(3);
+
+  const up = page.getByRole("button", { name: "Move Chemistry up" });
+  await up.focus();
+  await page.keyboard.press("Enter");
+  await expect(up).toBeFocused(); // focus follows the subject it moved
+  await page.keyboard.press("Enter");
+  await expect(rows.first()).toContainText("Chemistry");
+  await expect(page.getByRole("button", { name: "Move Chemistry down" })).toBeFocused(); // at the top: up is disabled
+
+  await page.getByRole("checkbox", { name: "Priority: Physics" }).check();
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByText("Subjects saved.")).toBeVisible();
+
+  await page.reload();
+  await expect(rows).toHaveCount(3);
+  const saved = await apiJson(page, "/v1/learning/subjects");
+  expect(saved.items.map((item: { code: string }) => item.code)).toEqual(["chemistry", "mathematics", "physics"]);
+  expect(saved.items[2].isPriority).toBe(true);
+
+  await page.getByRole("button", { name: "Remove Mathematics" }).click();
+  await page.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(page.getByText("Subjects saved.")).toBeVisible();
+  expect((await apiJson(page, "/v1/learning/subjects")).items).toHaveLength(2);
 });

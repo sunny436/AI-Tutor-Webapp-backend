@@ -1,4 +1,15 @@
-import { Bell, type LucideIcon, Palette, ShieldCheck, UserRound } from "lucide-react";
+import {
+  Bell,
+  BookOpen,
+  Bot,
+  GraduationCap,
+  type LucideIcon,
+  Palette,
+  ShieldCheck,
+  SlidersHorizontal,
+  Target,
+  UserRound,
+} from "lucide-react";
 
 export type SettingsSectionInfo = {
   slug: string;
@@ -15,6 +26,31 @@ export type SettingsSectionInfo = {
  */
 export const SETTINGS_SECTIONS = [
   { slug: "profile", title: "Profile", description: "Your photo, name, time zone and email.", icon: UserRound },
+  {
+    slug: "academic",
+    title: "Academic Profile",
+    description: "Your class, board, medium and academic year.",
+    icon: GraduationCap,
+  },
+  {
+    slug: "goals",
+    title: "Learning Goals",
+    description: "What you're working towards, and your study time.",
+    icon: Target,
+  },
+  {
+    slug: "learning",
+    title: "Learning Preferences",
+    description: "Language, depth, pace and examples.",
+    icon: SlidersHorizontal,
+  },
+  { slug: "tutor", title: "AI Tutor", description: "How your tutor talks and teaches.", icon: Bot },
+  {
+    slug: "subjects",
+    title: "Subjects & Study",
+    description: "Your subjects, priorities and what needs work.",
+    icon: BookOpen,
+  },
   {
     slug: "notifications",
     title: "Notifications",
