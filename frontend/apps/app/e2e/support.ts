@@ -224,6 +224,18 @@ export async function describeFocus(page: Page) {
 
 /** No serious or critical WCAG 2.1 A/AA violations on what is on screen now. */
 export async function expectAccessible(page: Page): Promise<void> {
+  // Measure the page at rest: mid-fade (the Settings workspace fades in) every colour is part
+  // transparent and reads as low contrast. Endless animations (a loading pulse) are left running.
+  await page
+    .waitForFunction(
+      () =>
+        document
+          .getAnimations()
+          .every((animation) => animation.playState !== "running" || animation.effect?.getTiming().iterations === Number.POSITIVE_INFINITY),
+      undefined,
+      { timeout: 5_000 },
+    )
+    .catch(() => undefined);
   const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
   const serious = results.violations
     .filter((violation) => violation.impact === "serious" || violation.impact === "critical")
