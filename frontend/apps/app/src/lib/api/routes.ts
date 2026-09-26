@@ -80,6 +80,10 @@ export const ROUTES = {
   "POST /v1/learning/tutor-preview": { auth: true, body: "TutorPreviewRequest" },
   "POST /v1/progress/activity": { auth: true },
   "GET /v1/progress": { auth: true, query: ["days"] },
+  "GET /v1/notifications/preferences": { auth: true },
+  "PATCH /v1/notifications/preferences": { auth: true, body: "UpdateNotificationPreferencesRequest" },
+  "POST /v1/notifications/unsubscribe": { auth: false, body: "UnsubscribeRequest" },
+  "POST /v1/support/requests": { auth: true, body: "SupportRequestIn" },
 
   "GET /v1/conversations": { auth: true, query: ["limit", "cursor"] },
   "GET /v1/conversations/{conversation_id}": { auth: true },

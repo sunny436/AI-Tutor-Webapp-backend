@@ -81,6 +81,10 @@ for unit in aichat-api aichat-web; do
   case "$start $dir" in *"/opt/aichat/current"*) ok "$unit starts from /opt/aichat/current" ;; *) bad "$unit does NOT start from /opt/aichat/current ($dir)" ;; esac
 done
 if grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' /etc/aichat/web.env 2>/dev/null; then ok "web.env API_BASE_URL -> the API on :4100"; else bad "web.env API_BASE_URL is not http://127.0.0.1:4100"; fi
+# The jobs worker is not part of the invariant: it runs from `current` whenever it runs.
+jobs_timer=$(systemctl is-enabled aichat-jobs.timer 2>/dev/null); [ -n "$jobs_timer" ] || jobs_timer="not installed"
+jobs_last=$(systemctl show -p ExecMainExitTimestamp --value aichat-jobs.service 2>/dev/null)
+info "jobs worker: aichat-jobs.timer ${jobs_timer}; last run ${jobs_last:-never} ($(systemctl show -p Result --value aichat-jobs.service 2>/dev/null))"
 for legacy in /opt/aichat/backend /opt/aichat/frontend; do
   [ -e "$legacy" ] && info "note: legacy checkout $legacy still exists (not used; remove after approval)"
 done

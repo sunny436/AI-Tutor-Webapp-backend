@@ -41,6 +41,11 @@ releases plus the live and previous one (`ls /opt/aichat/releases`, `/opt/aichat
 To go back to an older commit that is no longer kept, deploy it: `bun run deploy -- --ref <commit>
 --older` (it must still be on `main` with successful CI).
 
+The jobs worker (`aichat-jobs`, if its timer is enabled) always runs the release `current` points
+at, so after a rollback its next run uses the older code. A release that predates the worker has no
+`backend/app/jobs/__main__.py`, and the unit's `ConditionPathExists` then skips each run silently;
+the outbox waits (and its rows expire) until a release with the worker is live again.
+
 ## Across a migration
 
 If the release you are leaving ran a migration, the older code will run on the newer schema. That is

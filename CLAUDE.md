@@ -156,6 +156,10 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   releases = every process's release = files match the commit, and prints `INVARIANT OK`/`FAIL`.
 - **Pinned runtimes:** `.node-version` (the web app runs on Node, not Bun's runtime: Bun does not
   signal a client disconnect, which breaks stop-on-leave), `.bun-version`, `backend/requirements.lock`.
+- **Jobs worker:** `aichat-jobs.timer` runs `python -m app.jobs` once a minute from `current`: the
+  email outbox (at most once), reminders, retention. It ships installed but NOT enabled, and student
+  email follows `NOTIFICATIONS_MODE` (default `off`); enabling either is an owner decision
+  (`docs/deployment.md`, "Jobs worker"). It is not part of the invariant.
 - **Rollback:** `bun run rollback` switches both back together, to the previously live release
   (`LIVE-STACK`). Details in `docs/deployment.md`, `docs/rollback.md` and `deploy/README.md`.
 - **Host:** Ubuntu 24.04 VM `10.1.30.37` (`ssh root@10.1.30.37`). It has no GitHub access. The public

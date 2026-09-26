@@ -28,6 +28,8 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 | 409 | `email_unavailable` | the new email address was taken before the change was confirmed |
 | 413 | `payload_too_large` | body over 64 KB (the photo upload: over its own limit) |
 | 415 | `unsupported_media_type` | a photo that is not JPEG, PNG or WebP |
+| 400 | `invalid_token` | an unsubscribe link that this server did not sign |
+| 429 | `too_many_open_requests` | 30 support requests are still open |
 | 422 | `validation_error` | invalid body/query (`fields: [{field, reason}]`, values never echoed) |
 | 429 | `rate_limited` | auth throttling or the per-user generation quota |
 | 503 | `service_unavailable` | database or email temporarily unavailable |
@@ -156,6 +158,34 @@ version, and every edit sends the version it read. One shape, for every such res
   null without a goal.
 - `today`/`days[]`: `{date, activeMinutes, questions}`; `days` lists the last `days` days, oldest first,
   including days without activity.
+
+## Notifications
+
+| Method | Path | Body | Success |
+|---|---|---|---|
+| GET / PATCH | `/v1/notifications/preferences` | PATCH [versioned](#versioned-edits): `dailyReminder`, `streakWarning`, `weeklySummary`, `securityAlerts` | `{version, dailyReminder, streakWarning, weeklySummary, securityAlerts, remindersNeedTimezone, updatedAt}` |
+| POST | `/v1/notifications/unsubscribe` | `{token}` from an email's link. **No session needed** | `{kind, unsubscribed: true}`; using it again changes nothing |
+
+- **Emails:** all are plain text, and none contains an IP address.
+  - Reminders are off until chosen: a daily reminder at the learner profile's `preferredStudyTime` (or 18:00), a
+    streak warning at 20:00–22:00, and a weekly summary on Monday mornings. All three need a confirmed `timezone`,
+    and each is sent at most once per period.
+  - Sign-in alerts (on by default) are sent for a sign-in from a device the account has no live session on.
+  - A password change or reset is always reported, and has no unsubscribe link.
+- **Delivery:** emails are sent by the jobs worker, only as its rollout allows (`NOTIFICATIONS_MODE`,
+  [deployment.md](deployment.md#jobs-worker)), at most once, and never later than a day for alerts.
+- **Unsubscribe tokens** name one user and one kind of email, signed with the server's key. They don't expire.
+
+## Support
+
+| Method | Path | Body | Success |
+|---|---|---|---|
+| POST | `/v1/support/requests` | `{requestId (uuid, chosen by the client), kind: question\|bug\|feedback\|account, subject (≤ 120), message (10–4000), page?}` | 201 `{id, requestId, kind, subject, status, createdAt}`; the same `requestId` again → 200, the same request |
+
+- **Limits:** 5 per hour and 20 per day, and at most 30 open (`too_many_open_requests`).
+- **Text:** the subject loses line breaks and control characters; the message keeps line breaks. At most 5 links.
+- **Forwarding:** requests are forwarded to the team's address through the outbox, and kept until the account is
+  deleted.
 
 ## Conversations
 

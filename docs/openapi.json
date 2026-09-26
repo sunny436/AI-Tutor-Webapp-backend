@@ -1437,6 +1437,111 @@
         "title": "MessagePage",
         "type": "object"
       },
+      "NotificationPreferencesOut": {
+        "properties": {
+          "dailyReminder": {
+            "title": "Dailyreminder",
+            "type": "boolean"
+          },
+          "remindersNeedTimezone": {
+            "description": "True while the user has no time zone: reminders are only sent once one is chosen.",
+            "title": "Remindersneedtimezone",
+            "type": "boolean"
+          },
+          "securityAlerts": {
+            "title": "Securityalerts",
+            "type": "boolean"
+          },
+          "streakWarning": {
+            "title": "Streakwarning",
+            "type": "boolean"
+          },
+          "updatedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updatedat"
+          },
+          "version": {
+            "description": "Send it back with PATCH /v1/notifications/preferences.",
+            "title": "Version",
+            "type": "integer"
+          },
+          "weeklySummary": {
+            "title": "Weeklysummary",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "version",
+          "dailyReminder",
+          "streakWarning",
+          "weeklySummary",
+          "securityAlerts",
+          "remindersNeedTimezone",
+          "updatedAt"
+        ],
+        "title": "NotificationPreferencesOut",
+        "type": "object"
+      },
+      "NotificationPreferencesSet": {
+        "additionalProperties": false,
+        "properties": {
+          "dailyReminder": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dailyreminder"
+          },
+          "securityAlerts": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Emails about sign-ins from a new device.",
+            "title": "Securityalerts"
+          },
+          "streakWarning": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Streakwarning"
+          },
+          "weeklySummary": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weeklysummary"
+          }
+        },
+        "title": "NotificationPreferencesSet",
+        "type": "object"
+      },
       "ProfileSet": {
         "additionalProperties": false,
         "description": "Fields to set. A field absent here is left unchanged; `null` is not a value (use `reset`).",
@@ -1899,6 +2004,112 @@
         "title": "SubjectsOut",
         "type": "object"
       },
+      "SupportRequestIn": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "question",
+              "bug",
+              "feedback",
+              "account"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "message": {
+            "maxLength": 4000,
+            "minLength": 10,
+            "title": "Message",
+            "type": "string"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "maxLength": 200,
+                "pattern": "^/[^\\s]*$",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The app page it is about.",
+            "title": "Page"
+          },
+          "requestId": {
+            "description": "Chosen by the client; sending the same request again returns it.",
+            "format": "uuid",
+            "title": "Requestid",
+            "type": "string"
+          },
+          "subject": {
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Subject",
+            "type": "string"
+          }
+        },
+        "required": [
+          "requestId",
+          "kind",
+          "subject",
+          "message"
+        ],
+        "title": "SupportRequestIn",
+        "type": "object"
+      },
+      "SupportRequestOut": {
+        "properties": {
+          "createdAt": {
+            "format": "date-time",
+            "title": "Createdat",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "question",
+              "bug",
+              "feedback",
+              "account"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "requestId": {
+            "format": "uuid",
+            "title": "Requestid",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "closed"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "subject": {
+            "title": "Subject",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "requestId",
+          "kind",
+          "subject",
+          "status",
+          "createdAt"
+        ],
+        "title": "SupportRequestOut",
+        "type": "object"
+      },
       "TutorPreviewOut": {
         "properties": {
           "instructions": {
@@ -1959,6 +2170,40 @@
           }
         },
         "title": "TutorPreviewRequest",
+        "type": "object"
+      },
+      "UnsubscribeOut": {
+        "properties": {
+          "kind": {
+            "title": "Kind",
+            "type": "string"
+          },
+          "unsubscribed": {
+            "default": true,
+            "title": "Unsubscribed",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "kind"
+        ],
+        "title": "UnsubscribeOut",
+        "type": "object"
+      },
+      "UnsubscribeRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "token": {
+            "maxLength": 300,
+            "minLength": 10,
+            "title": "Token",
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ],
+        "title": "UnsubscribeRequest",
         "type": "object"
       },
       "UpdateLearnerProfileRequest": {
@@ -2064,6 +2309,39 @@
           }
         },
         "title": "UpdateMeRequest",
+        "type": "object"
+      },
+      "UpdateNotificationPreferencesRequest": {
+        "additionalProperties": false,
+        "description": "`{version, set, reset}`; `reset` returns a field to its default.",
+        "properties": {
+          "reset": {
+            "items": {
+              "enum": [
+                "dailyReminder",
+                "streakWarning",
+                "weeklySummary",
+                "securityAlerts"
+              ],
+              "type": "string"
+            },
+            "maxItems": 4,
+            "title": "Reset",
+            "type": "array"
+          },
+          "set": {
+            "$ref": "#/components/schemas/NotificationPreferencesSet"
+          },
+          "version": {
+            "minimum": 0.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "title": "UpdateNotificationPreferencesRequest",
         "type": "object"
       },
       "UpdateProfileRequest": {
@@ -3919,6 +4197,109 @@
         ]
       }
     },
+    "/v1/notifications/preferences": {
+      "get": {
+        "operationId": "get_notification_preferences_v1_notifications_preferences_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationPreferencesOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Notification Preferences",
+        "tags": [
+          "notifications"
+        ]
+      },
+      "patch": {
+        "description": "Versioned edit: `{version, set, reset}` (docs/api-contract.md). Emails are sent only while\nthe server's rollout allows them (NOTIFICATIONS_MODE); reminders also need a time zone.",
+        "operationId": "update_notification_preferences_v1_notifications_preferences_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateNotificationPreferencesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationPreferencesOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Notification Preferences",
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
+    "/v1/notifications/unsubscribe": {
+      "post": {
+        "description": "The link in a reminder or alert email. No sign-in: the signed token names the student and\nthe kind of email, and nothing else can be changed with it. Using it again changes nothing.",
+        "operationId": "unsubscribe_v1_notifications_unsubscribe_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UnsubscribeRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UnsubscribeOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Unsubscribe",
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
     "/v1/progress": {
       "get": {
         "description": "Active time in PadhAI and questions asked: today, this week, the streak and the goals.",
@@ -3986,6 +4367,57 @@
         "summary": "Report Activity",
         "tags": [
           "progress"
+        ]
+      }
+    },
+    "/v1/support/requests": {
+      "post": {
+        "operationId": "create_support_request_v1_support_requests_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SupportRequestIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SupportRequestOut"
+                }
+              }
+            },
+            "description": "The same requestId was already sent."
+          },
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SupportRequestOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Create Support Request",
+        "tags": [
+          "support"
         ]
       }
     }

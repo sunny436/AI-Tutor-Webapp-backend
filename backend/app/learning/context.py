@@ -2,7 +2,8 @@
 student's active-time goals.
 
 Chat reads the context once per turn, inside its prepare transaction (app/chat/service.py);
-Progress reads the goals (app/progress). Neither touches the learning tables itself. The
+Progress reads the goals (app/progress) and reminders the study time (app/notifications). None
+of them touches the learning tables itself. The
 context holds display names, not codes, and nothing that identifies the student: no name,
 email address or photo ever reaches the model.
 """
@@ -12,6 +13,7 @@ from __future__ import annotations
 import uuid
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
+from datetime import time
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -119,6 +121,12 @@ async def read_active_time_goals(session: AsyncSession, user_id: uuid.UUID) -> A
     """The student's own daily and weekly active-time goals (read by app/progress)."""
     row = await session.get(LearnerProfile, user_id)
     return ActiveTimeGoals(row.daily_active_minutes_goal, row.weekly_active_minutes_goal) if row else ActiveTimeGoals()
+
+
+async def read_study_time(session: AsyncSession, user_id: uuid.UUID) -> time | None:
+    """When the student prefers to study, in their own time zone (read by reminders)."""
+    row = await session.get(LearnerProfile, user_id)
+    return row.preferred_study_time if row else None
 
 
 async def read_student_context(session: AsyncSession, user_id: uuid.UUID) -> StudentContext:

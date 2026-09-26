@@ -152,12 +152,51 @@ never in git. Templates: `deploy/env/`. Local development: `backend/.env` and
 | `api.env` | `SECRET_KEY`, `DATABASE_URL` | backend | runtime | **yes** |
 | `api.env` | `SMTP_USERNAME`, `SMTP_PASSWORD`, `OLLASTACK_TOKEN` | backend email | runtime | **yes** |
 | `api.env` | `LLM_PRIMARY_API_KEY`, `LLM_FALLBACK_API_KEY`, `EMBEDDING_API_KEY` | backend | runtime | **yes** |
-| `api.env` | `APP_ENV`, `APP_NAME`, `EMAIL_*`, `SMTP_HOST/PORT/…`, `OLLASTACK_BASE_URL/MAILBOX_ID`, `LLM_*` names/URLs/models, `RAG_*`, `EMBEDDING_*` (other), `CHAT_*`, `STREAM_*`, limits | backend | runtime | no |
+| `api.env` | `APP_ENV`, `APP_NAME`, `EMAIL_*`, `SMTP_HOST/PORT/…`, `OLLASTACK_BASE_URL/MAILBOX_ID`, `LLM_*` names/URLs/models, `RAG_*`, `EMBEDDING_*` (other), `CHAT_*`, `STREAM_*`, `DEFAULT_TIMEZONE`, `AVATAR_MAX_BYTES`, limits | backend | runtime | no |
+| `api.env` | `JOBS_ENABLED`, `NOTIFICATIONS_*`, `PUBLIC_APP_URL`, `SUPPORT_EMAIL` | jobs worker (and the API, for support forwards and links) | read on every worker run | no |
 | `postgres.env` | `POSTGRES_PASSWORD` | database, backup | runtime | **yes** |
 | `postgres.env` | `POSTGRES_USER`, `POSTGRES_DB`, `BACKUP_DIR`, `KEEP_DAYS` | database, backup | runtime | no |
 
 A runtime value takes effect on the next restart of the service; a build-time value
 (`NEXT_PUBLIC_*`) on the next deploy (the release is rebuilt when they change).
+
+## Jobs worker
+
+`python -m app.jobs` (backend/app/jobs) does what no request should wait for: it sends the email
+outbox (sign-in and password alerts, reminders, support forwards), plans reminders, and applies
+retention (expired sessions with their IP and user agent, old throttling counters and codes, sent
+emails redacted after 7 days). `aichat-jobs.timer` starts one run a minute; each run exits.
+
+It ships **installed but not enabled**, and every email to students is **off** until you turn it on:
+
+| Setting (`api.env`) | Default | Meaning |
+|---|---|---|
+| `JOBS_ENABLED` | `false` | `false`: a run exits at once. Nothing is sent, nothing is cleaned up. |
+| `NOTIFICATIONS_MODE` | `off` | `off`: no student email is planned or sent (it waits, then expires). `dry_run`: planned and recorded as `dry_run`, never sent. `allowlist`: sent only to `NOTIFICATIONS_ALLOWLIST`, the rest recorded as `suppressed`. `on`: sent. |
+| `NOTIFICATIONS_ALLOWLIST` | – | comma-separated user ids or email addresses (for `allowlist`) |
+| `NOTIFICATIONS_KINDS` | every kind | comma-separated: `security_sign_in`, `security_password_changed`, `daily_reminder`, `streak_warning`, `weekly_summary` |
+| `NOTIFICATIONS_MAX_PER_RUN` | `50` | emails a run sends at most |
+| `PUBLIC_APP_URL` | – | the site's address, for links in emails; required for any mode but `off` (the worker keeps student email off without it, and logs why) |
+| `SUPPORT_EMAIL` | – | where support requests are forwarded (independent of `NOTIFICATIONS_MODE`); empty: stored only |
+
+The settings are read on every run: editing `api.env` takes effect within a minute, with no restart.
+Suggested order, checking the outbox and deliverability at each step:
+
+```sh
+ssh root@10.1.30.37
+# 1. enable the worker, emails still off: retention runs, support forwards go out
+printf 'JOBS_ENABLED=true\nPUBLIC_APP_URL=https://ayur.namahos.com\n' >> /etc/aichat/api.env
+systemctl enable --now aichat-jobs.timer
+journalctl -u aichat-jobs -o cat -n 5                     # "jobs run finished", a report of counts
+# 2. NOTIFICATIONS_MODE=dry_run: what would be sent is recorded, nothing leaves
+# 3. NOTIFICATIONS_MODE=allowlist with NOTIFICATIONS_ALLOWLIST=<your address>
+# 4. NOTIFICATIONS_MODE=on
+```
+
+Inspect the outbox (counts only, never bodies, in shared logs):
+`docker exec compose-postgres-1 psql -U aichat -d aichat -c "select kind, status, count(*) from email_outbox group by 1, 2"`.
+Delivery is at most once: a run that dies between claiming an email and recording the result
+leaves it `unknown`, never resent. `bun run status` prints the timer's state and last run.
 
 ## Changing the database container on purpose
 
@@ -173,7 +212,8 @@ A throwaway Ubuntu 24.04 container with real systemd, PostgreSQL + pgvector and 
 `install.sh`, on which the real `deploy.sh`, `rollback.sh` and `status.sh` run through
 frontend-only, backend-only and combined releases, a broken build, a broken backend, a failed live
 check, double rollback, migration guards, every bypass and a killed SSH connection, while a poller
-checks that the two apps never report different releases. Local only (Docker, about 45 minutes).
+checks that the two apps never report different releases, and that the jobs worker ships installed
+but disabled and runs once enabled. Local only (Docker, about 45 minutes).
 
 ## Never do this
 

@@ -77,6 +77,21 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
   ],
   ReplaceSubjectsRequest: [{ version: 0, items: [{ code: "physics", isPriority: true, needsImprovement: false }] }],
   UpdateLearningPreferencesRequest: [{ version: 0, set: { pace: "slow" } }, { version: 1, reset: ["pace"] }],
+  UpdateNotificationPreferencesRequest: [
+    { version: 0, set: { dailyReminder: true, securityAlerts: false } },
+    { version: 1, reset: ["securityAlerts"] },
+  ],
+  UnsubscribeRequest: [{ token: "abc.def0123456789" }],
+  SupportRequestIn: [
+    { requestId: "11111111-1111-4111-8111-111111111111", kind: "bug", subject: "S", message: "Long enough." },
+    {
+      requestId: "11111111-1111-4111-8111-111111111111",
+      kind: "question",
+      subject: "S",
+      message: "Long enough.",
+      page: "/settings/help",
+    },
+  ],
   TutorPreviewRequest: [{}, { profile: { grade: "class_9" }, subjects: [{ code: "physics" }], preferences: { pace: "fast" } }],
   DeleteMeRequest: [{ password: "x" }],
   RenameConversationRequest: [{ title: "T" }],
