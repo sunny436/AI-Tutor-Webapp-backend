@@ -244,10 +244,10 @@ ssh rehearsal 'bash -s' > "$LOGS/s11.log" 2>&1 <<'EOF'
 set -e
 echo "timer: $(systemctl is-enabled aichat-jobs.timer 2>&1 || true)"
 systemctl start aichat-jobs.service   # JOBS_ENABLED is not set: a run is a no-op
-journalctl -u aichat-jobs.service -o cat --no-pager | tail -n 3
 printf 'JOBS_ENABLED=true\nNOTIFICATIONS_MODE=dry_run\nPUBLIC_APP_URL=https://rehearsal.invalid\n' >> /etc/aichat/api.env
 systemctl start aichat-jobs.service
-journalctl -u aichat-jobs.service -o cat --no-pager | tail -n 3
+# The worker's own JSON lines (systemd adds its "Finished"/"Deactivated" lines after them).
+journalctl -u aichat-jobs.service -o cat --no-pager | grep '"logger"' || true
 echo "result: $(systemctl show -p Result --value aichat-jobs.service)"
 EOF
 if grep -q "^timer: disabled" "$LOGS/s11.log" && grep -q '"skipped": "JOBS_ENABLED is false"' "$LOGS/s11.log" \
