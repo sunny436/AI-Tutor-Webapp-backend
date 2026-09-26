@@ -5,12 +5,13 @@ import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 
-import { AppShell } from "@/components/app-shell";
 import { AppearanceProvider } from "@/components/appearance-provider";
 import { PreviewProvider } from "@/components/preview-context";
 import { ServiceUnavailable } from "@/components/service-unavailable";
 import { UserProvider } from "@/components/user-context";
 import { ChatProvider } from "@/features/chat/chat-context";
+import { NavigationGuardRoot } from "@/features/navigation/navigation-guard-root";
+import { ActivityHeartbeat } from "@/features/progress/activity-heartbeat";
 import { previewEnabled } from "@/lib/preview";
 import { safeRedirect } from "@/lib/safe-redirect";
 import { getAppearance, getCurrentUser, getInitialConversations } from "@/lib/server/session";
@@ -25,6 +26,11 @@ import { getAppearance, getCurrentUser, getInitialConversations } from "@/lib/se
  *                  chats already loaded, so the sidebar is filled on first paint
  *
  * Also decides, per request, whether preview UI may render (lib/preview.ts).
+ *
+ * The providers, the activity heartbeat and the unsaved-changes guard live HERE, once, so they
+ * outlive the switch between the two views under this layout: the app (`(main)/`, inside the
+ * app shell) and the Settings workspace (`settings/`, its own frame). A reply keeps streaming
+ * and the session is still watched while Settings is open.
  */
 export default async function AppLayout({ children }: { children: ReactNode }) {
   const [session, conversations, appearance] = await Promise.all([
@@ -44,7 +50,9 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
       <UserProvider user={session.data}>
         <AppearanceProvider initial={appearance.status === "ok" ? appearance.data : null}>
           <ChatProvider initialConversations={conversations.status === "ok" ? conversations.data : null}>
-            <AppShell>{children}</AppShell>
+            <ActivityHeartbeat />
+            <NavigationGuardRoot />
+            {children}
           </ChatProvider>
         </AppearanceProvider>
       </UserProvider>

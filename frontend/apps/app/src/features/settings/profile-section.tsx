@@ -246,7 +246,7 @@ function NameAndZoneCard() {
           {(props) => (
             <Input
               {...props}
-              className="w-full sm:w-80"
+              className="w-full sm:max-w-[20rem]"
               value={draft.displayName}
               maxLength={DISPLAY_NAME_MAX}
               autoComplete="name"
@@ -274,7 +274,7 @@ function NameAndZoneCard() {
               {...props}
               value={draft.timezone}
               onChange={(event) => setDraft({ ...draft, timezone: event.target.value })}
-              className="focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-sm sm:w-80"
+              className="focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-sm sm:max-w-[20rem]"
             >
               <option value="">Not set</option>
               {options.map((zone) => (

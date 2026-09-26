@@ -1,44 +1,4 @@
-import type { Page } from "@playwright/test";
-
-import { expect, expectAccessible, lastReply, seedTurn, sendAndWait, test } from "./support";
-
-/**
- * What the element that has focus looks like, compared with the same element
- * unfocused: a focus indicator is anything focus changes in its ring, outline or
- * border — on the element, or on the form it sits in (the composer draws its ring
- * on the form, not the textarea). Transitions are switched off while measuring,
- * or a ring caught mid-animation reads as no ring at all.
- */
-async function describeFocus(page: Page) {
-  return page.evaluate(() => {
-    const element = document.activeElement as HTMLElement;
-    const targets = [element, element.closest("form")].filter((node): node is HTMLElement => node instanceof HTMLElement);
-    const saved = targets.map((target) => target.style.getPropertyValue("transition"));
-    for (const target of targets) target.style.setProperty("transition", "none", "important");
-    const look = () =>
-      targets
-        .map((target) => {
-          const style = getComputedStyle(target);
-          return [style.boxShadow, style.outlineStyle, style.outlineWidth, style.outlineColor, style.borderColor].join("|");
-        })
-        .join("§");
-    const focused = look();
-    element.blur();
-    const unfocused = look();
-    element.focus();
-    targets.forEach((target, index) => {
-      if (saved[index]) target.style.setProperty("transition", saved[index]);
-      else target.style.removeProperty("transition");
-    });
-    const box = element.getBoundingClientRect();
-    return {
-      label: element.getAttribute("aria-label") || element.textContent?.trim().slice(0, 40) || element.tagName,
-      indicated: focused !== unfocused,
-      onScreen: box.width > 0 && box.height > 0 && box.bottom > 0 && box.right > 0 && box.top < innerHeight && box.left < innerWidth,
-      isComposer: element.tagName === "TEXTAREA" && element.id.startsWith("composer-"),
-    };
-  });
-}
+import { describeFocus, expect, expectAccessible, lastReply, seedTurn, sendAndWait, test } from "./support";
 
 test("sign-in and sign-up pages", async ({ page }) => {
   await page.goto("/login");

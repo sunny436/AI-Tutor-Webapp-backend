@@ -4,10 +4,11 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@v1/ui/sheet";
 import { Menu, Plus, Trophy } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type ReactNode, useCallback, useState } from "react";
+import { type ReactNode, type RefObject, useEffect, useRef, useState } from "react";
 
-import { useConversations, useStores } from "@/features/chat/chat-context";
-import { useActivityHeartbeat } from "@/features/progress/use-activity-heartbeat";
+import { useConversations } from "@/features/chat/chat-context";
+import { rememberAppPath } from "@/features/navigation/app-return";
+import { useFocusOnArrival } from "@/features/navigation/route-focus";
 import { APP_NAME } from "@/lib/brand";
 import { navItemFor } from "./nav-items";
 import { PreviewBadge } from "./preview-badge";
@@ -21,10 +22,16 @@ import { SidebarContent, activeConversationId, useCollapsedSidebar } from "./sid
  */
 export function AppShell({ children }: { children: ReactNode }) {
   const { collapsed, toggle } = useCollapsedSidebar();
-  const { chat } = useStores();
-  // Active time in PadhAI (Settings > Progress & Goals): one heartbeat for the whole app.
-  useActivityHeartbeat(useCallback(() => chat.anyStreaming(), [chat]));
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const heading = useRef<HTMLHeadingElement>(null);
+
+  // Where "Close settings" comes back to (features/navigation/app-return.ts).
+  useEffect(() => {
+    if (pathname) rememberAppPath(pathname);
+  }, [pathname]);
+  // Back from Settings: the chat focuses its message box itself; any other page, its title.
+  useFocusOnArrival(() => heading.current);
 
   return (
     <div className="flex h-dvh w-full overflow-hidden bg-background">
@@ -42,7 +49,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </SheetContent>
 
         <div className="flex min-w-0 flex-1 flex-col">
-          <Header collapsed={collapsed} onToggleCollapse={toggle} />
+          <Header collapsed={collapsed} onToggleCollapse={toggle} headingRef={heading} />
           <main id="main" tabIndex={-1} className="min-h-0 flex-1 outline-none">
             {children}
           </main>
@@ -58,8 +65,6 @@ const iconButton =
 /** What the page is (the `h1`), a line about it, and the sidebar controls. */
 function useHeading(pathname: string | null): { title: string; subtitle: string } {
   const { items } = useConversations();
-  if (pathname === "/settings" || pathname?.startsWith("/settings/"))
-    return { title: "Settings", subtitle: "Your profile, learning, progress and account" };
   if (pathname === "/help") return { title: "Help", subtitle: "Answers to common questions" };
   if (pathname === "/about") return { title: "About", subtitle: `What ${APP_NAME} is and how it uses your data` };
   const item = navItemFor(pathname);
@@ -72,7 +77,15 @@ function useHeading(pathname: string | null): { title: string; subtitle: string 
   return { title: APP_NAME, subtitle: "" };
 }
 
-function Header({ collapsed, onToggleCollapse }: { collapsed: boolean; onToggleCollapse: () => void }) {
+function Header({
+  collapsed,
+  onToggleCollapse,
+  headingRef,
+}: {
+  collapsed: boolean;
+  onToggleCollapse: () => void;
+  headingRef: RefObject<HTMLHeadingElement>;
+}) {
   const pathname = usePathname();
   const preview = usePreview();
   const { title, subtitle } = useHeading(pathname);
@@ -94,7 +107,9 @@ function Header({ collapsed, onToggleCollapse }: { collapsed: boolean; onToggleC
       </button>
 
       <div className="min-w-0 flex-1 px-1">
-        <h1 className="truncate text-base font-bold text-foreground">{title}</h1>
+        <h1 ref={headingRef} tabIndex={-1} className="truncate text-base font-bold text-foreground outline-none">
+          {title}
+        </h1>
         {subtitle && <p className="hidden truncate text-xs text-text-secondary sm:block">{subtitle}</p>}
       </div>
 

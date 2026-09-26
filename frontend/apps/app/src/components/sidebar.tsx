@@ -1,6 +1,5 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@v1/ui/avatar";
 import { ConfirmDialog } from "@v1/ui/confirm-dialog";
 import { PromptDialog } from "@v1/ui/prompt-dialog";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
@@ -9,22 +8,23 @@ import { cn } from "@v1/ui/utils";
 import { LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { type ReactElement, useEffect, useMemo, useState } from "react";
+import { type ReactElement, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { toast } from "sonner";
 
 import { useConversations, useStores } from "@/features/chat/chat-context";
+import { forgetAppPath } from "@/features/navigation/app-return";
 import { StreakCard } from "@/features/progress/streak-card";
-import { logout } from "@/lib/api/auth";
+import { DEFAULT_SECTION } from "@/features/settings/sections";
 import { describeError } from "@/lib/api/errors";
-import { avatarSrc } from "@/lib/api/identity";
 import type { Conversation } from "@/lib/api/types";
 import { TITLE_MAX } from "@/lib/api/types";
-import { cacheAttributes } from "@/lib/appearance";
 import { APP_NAME } from "@/lib/brand";
 import { BrandLockup, BrandMark } from "./brand/brand-mark";
 import { isActive, visibleNavItems } from "./nav-items";
 import { usePreview } from "./preview-context";
 import { ThemeSwitcher } from "./theme-switcher";
+import { useSignOut } from "./use-sign-out";
+import { UserAvatar } from "./user-avatar";
 import { useUser } from "./user-context";
 
 /** Which conversation is on screen — from the URL only (no copy of it in state). */
@@ -33,28 +33,41 @@ export function activeConversationId(pathname: string | null): string | null {
 }
 
 const COLLAPSE_KEY = "aichat.sidebar.collapsed";
+const COLLAPSE_EVENT = "aichat:sidebar-collapse";
 
+function readCollapsed(): boolean {
+  try {
+    return window.localStorage.getItem(COLLAPSE_KEY) === "1";
+  } catch {
+    return false; // storage unavailable: stay expanded
+  }
+}
+
+function subscribeCollapsed(onChange: () => void): () => void {
+  window.addEventListener(COLLAPSE_EVENT, onChange);
+  return () => window.removeEventListener(COLLAPSE_EVENT, onChange);
+}
+
+/**
+ * Expanded on the server and while hydrating (storage is unknown there), then the saved value.
+ * Read synchronously on a client-side mount, so the rail doesn't flash open when the app shell
+ * comes back after Settings.
+ */
 export function useCollapsedSidebar() {
-  const [collapsed, setCollapsed] = useState(false);
-  // Read after mount: reading storage during render would mismatch hydration.
-  useEffect(() => {
+  const collapsed = useSyncExternalStore(subscribeCollapsed, readCollapsed, () => false);
+  const toggle = () => {
     try {
-      setCollapsed(window.localStorage.getItem(COLLAPSE_KEY) === "1");
+      window.localStorage.setItem(COLLAPSE_KEY, collapsed ? "0" : "1");
     } catch {
-      // storage unavailable: stay expanded
+      // ignore
     }
-  }, []);
-  const toggle = () =>
-    setCollapsed((value) => {
-      try {
-        window.localStorage.setItem(COLLAPSE_KEY, value ? "0" : "1");
-      } catch {
-        // ignore
-      }
-      return !value;
-    });
+    window.dispatchEvent(new Event(COLLAPSE_EVENT));
+  };
   return { collapsed, toggle };
 }
+
+/** Where each copy of the sidebar was scrolled, kept while the app shell is away (Settings). */
+const scrollMemory = new Map<string, number>();
 
 /** In the collapsed rail a control is an icon only, so it names itself on hover and focus. */
 function RailTip({ label, collapsed, children }: { label: string; collapsed: boolean; children: ReactElement }) {
@@ -89,7 +102,19 @@ export function SidebarContent({
   const [search, setSearch] = useState("");
   const [renaming, setRenaming] = useState<Conversation | null>(null);
   const [deleting, setDeleting] = useState<Conversation | null>(null);
-  const [signingOut, setSigningOut] = useState(false);
+  const { signOut, signingOut } = useSignOut();
+  // The drawer is the phone layout, where Settings opens on its list of sections.
+  const variant = onNavigate ? "drawer" : "rail";
+  const settingsHref = variant === "drawer" ? "/settings" : `/settings/${DEFAULT_SECTION}`;
+  const scroller = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = scroller.current;
+    if (!element) return;
+    element.scrollTop = scrollMemory.get(variant) ?? 0;
+    const remember = () => scrollMemory.set(variant, element.scrollTop);
+    element.addEventListener("scroll", remember, { passive: true });
+    return () => element.removeEventListener("scroll", remember);
+  }, [variant]);
 
   const visible = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -112,6 +137,7 @@ export function SidebarContent({
     setDeleting(null);
     if (!target) return;
     conversations.remove(target.id);
+    forgetAppPath(`/c/${target.id}`);
     if (active === target.id) router.push("/");
     try {
       await chat.deleteConversation(target.id);
@@ -121,23 +147,7 @@ export function SidebarContent({
     }
   };
 
-  const signOut = async () => {
-    setSigningOut(true);
-    try {
-      await logout();
-    } catch (error) {
-      setSigningOut(false);
-      toast.error(describeError(error).message);
-      return;
-    }
-    chat.reset();
-    cacheAttributes(null); // the next person on this device starts from the defaults
-    // A full load leaves nothing of the old session in memory.
-    window.location.assign("/login");
-  };
-
   const name = user.displayName || user.email;
-  const photo = avatarSrc(user);
 
   return (
     <div
@@ -146,7 +156,7 @@ export function SidebarContent({
         collapsed ? "w-20" : "w-72 max-w-full",
       )}
     >
-      <div className="scrollbar-subtle flex min-h-0 flex-1 flex-col overflow-y-auto">
+      <div ref={scroller} className="scrollbar-subtle flex min-h-0 flex-1 flex-col overflow-y-auto">
         <div className={cn("flex shrink-0 items-center border-b border-border/70", collapsed ? "justify-center p-4" : "p-5")}>
           <Link href="/" onClick={onNavigate} className="focus-ring rounded-2xl">
             {collapsed ? (
@@ -333,12 +343,7 @@ export function SidebarContent({
 
       <div className={cn("shrink-0 border-t border-border bg-surface p-3", collapsed && "px-2")}>
         <div className={cn("flex items-center gap-3", collapsed && "justify-center")}>
-          <Avatar aria-hidden className="h-10 w-10 rounded-xl border-0 shadow-sm">
-            {photo && <AvatarImage src={photo} alt="" className="rounded-xl" />}
-            <AvatarFallback className="rounded-xl bg-gradient-to-tr from-streak to-accent-warm text-lg font-bold text-white">
-              {name.charAt(0).toUpperCase()}
-            </AvatarFallback>
-          </Avatar>
+          <UserAvatar user={user} />
           {!collapsed && (
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-bold text-foreground">{name}</p>
@@ -354,12 +359,11 @@ export function SidebarContent({
         >
           <RailTip label="Settings" collapsed={collapsed}>
             <Link
-              href="/settings"
+              href={settingsHref}
               onClick={onNavigate}
               aria-label={collapsed ? "Settings" : undefined}
-              aria-current={pathname === "/settings" || pathname?.startsWith("/settings/") ? "page" : undefined}
               className={cn(
-                "focus-ring flex items-center gap-1.5 whitespace-nowrap rounded-lg font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground aria-[current=page]:text-brand",
+                "focus-ring flex items-center gap-1.5 whitespace-nowrap rounded-lg font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground",
                 collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",
               )}
             >

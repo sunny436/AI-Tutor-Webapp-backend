@@ -3,7 +3,9 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@v1/ui/card";
 import { Switch } from "@v1/ui/switch";
 import { cn } from "@v1/ui/utils";
-import { type ReactNode, useId } from "react";
+import { type ReactNode, useEffect, useId, useRef } from "react";
+
+import { takeHeadingFocus } from "./heading-focus";
 
 /**
  * The building blocks every Settings section uses, so they all look and behave alike: the
@@ -11,11 +13,28 @@ import { type ReactNode, useId } from "react";
  * fields whose hint and error are announced with the field, switches and choice groups.
  */
 
+/**
+ * The section's title. It is where focus goes when a section opens in place of what was used to
+ * open it (a row of the phone list, search, arriving from the app): `data-settings-heading`
+ * marks it for the workspace, and it takes focus itself if it mounts after the request (the
+ * section was still loading). Not the page's first element, so Next's own focus call skips it.
+ */
 export function SectionHeading({ title, description }: { title: string; description: string }) {
+  const heading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    if (takeHeadingFocus()) heading.current?.focus({ preventScroll: true });
+  }, []);
   return (
-    <div className="mb-5">
-      <h2 className="font-display text-xl font-bold tracking-tight text-foreground">{title}</h2>
-      <p className="mt-1 max-w-prose text-sm leading-relaxed text-text-secondary">{description}</p>
+    <div className="mb-6 md:mb-8">
+      <h2
+        ref={heading}
+        tabIndex={-1}
+        data-settings-heading=""
+        className="font-display text-2xl font-bold tracking-tight text-foreground outline-none sm:text-[1.75rem]"
+      >
+        {title}
+      </h2>
+      <p className="mt-1.5 max-w-prose text-sm leading-relaxed text-text-secondary">{description}</p>
     </div>
   );
 }
