@@ -7,7 +7,7 @@
  * response. The `requestId` is kept for "report this" cases.
  */
 
-import type { ApiErrorEnvelope } from "./types";
+import type { ApiErrorEnvelope, FieldError } from "./types";
 
 /** Codes from the API contract plus the ones only the client can observe. */
 export type ErrorCode =
@@ -26,6 +26,12 @@ export type ErrorCode =
   | "llm_unavailable"
   | "llm_timeout"
   | "llm_bad_request"
+  | "version_conflict"
+  | "current_session"
+  | "email_unavailable"
+  | "unsupported_media_type"
+  | "invalid_token"
+  | "too_many_open_requests"
   // client-side only
   | "network_error"
   | "stream_interrupted"
@@ -36,17 +42,20 @@ export class ApiError extends Error {
   readonly status: number;
   readonly code: ErrorCode;
   readonly requestId?: string;
-  readonly fields?: { field: string; reason: string }[];
+  readonly fields?: FieldError[];
   /** Streaming failures say whether retrying (regenerating) can help. */
   readonly retryable?: boolean;
+  /** `version_conflict` only: the resource as it is now, to re-apply an edit onto. */
+  readonly current?: unknown;
 
   constructor(
     status: number,
     code: string,
     options: {
       requestId?: string;
-      fields?: { field: string; reason: string }[];
+      fields?: FieldError[];
       retryable?: boolean;
+      current?: unknown;
     } = {},
   ) {
     const known = normalizeCode(code, status);
@@ -57,6 +66,12 @@ export class ApiError extends Error {
     this.requestId = options.requestId;
     this.fields = options.fields;
     this.retryable = options.retryable;
+    this.current = options.current;
+  }
+
+  /** The machine-readable reason given for `field` (e.g. "set.timezone"), if any. */
+  reasonFor(field: string): string | undefined {
+    return this.fields?.find((entry) => entry.field === field)?.reason;
   }
 }
 
@@ -76,6 +91,12 @@ const KNOWN = new Set<ErrorCode>([
   "llm_unavailable",
   "llm_timeout",
   "llm_bad_request",
+  "version_conflict",
+  "current_session",
+  "email_unavailable",
+  "unsupported_media_type",
+  "invalid_token",
+  "too_many_open_requests",
   "network_error",
   "stream_interrupted",
   "interrupted",
@@ -107,6 +128,7 @@ export async function errorFromResponse(response: Response): Promise<ApiError> {
   return new ApiError(response.status, typeof error?.code === "string" ? error.code : "", {
     requestId: typeof error?.requestId === "string" ? error.requestId : undefined,
     fields: Array.isArray(error?.fields) ? error.fields : undefined,
+    current: error?.current,
   });
 }
 
@@ -213,6 +235,36 @@ const COPY: Record<ErrorCode, { title: string; message: string; action: Recovery
     title: "The AI couldn't handle that",
     message: "Try a shorter message, or start a new chat.",
     action: "edit",
+  },
+  version_conflict: {
+    title: "Changed somewhere else",
+    message: "This was changed on another device or tab. The latest version is shown; check it and try again.",
+    action: "reload",
+  },
+  current_session: {
+    title: "That's this device",
+    message: "To sign this device out, use Log out.",
+    action: "none",
+  },
+  email_unavailable: {
+    title: "Email address taken",
+    message: "That email address is no longer available. Try a different one.",
+    action: "edit",
+  },
+  unsupported_media_type: {
+    title: "Unsupported file",
+    message: "Use a JPEG, PNG or WebP image.",
+    action: "edit",
+  },
+  invalid_token: {
+    title: "This link doesn't work",
+    message: "The link is incomplete or not from us. Open it again from the email.",
+    action: "none",
+  },
+  too_many_open_requests: {
+    title: "Many requests are still open",
+    message: "You have a lot of open requests. We'll reply to those first.",
+    action: "wait",
   },
   network_error: {
     title: "You're offline",

@@ -83,28 +83,30 @@ test("the sidebar collapses to a rail, and stays that way after a reload", async
 });
 
 test("the colour theme can be switched, and the choice is remembered", async ({ page, account: _ }) => {
-  await page.goto("/settings");
+  await page.goto("/settings/appearance");
   const html = page.locator("html");
-  const theme = page.getByRole("main").getByRole("combobox", { name: "Colour theme" });
 
-  await theme.click();
-  await page.getByRole("option", { name: "Dark" }).click();
+  await page.getByRole("main").getByRole("radio", { name: "Dark" }).check();
   await expect(html).toHaveClass(/\bdark\b/);
+  await expect.poll(async () => (await (await page.request.get("/api/v1/me/appearance")).json()).theme).toBe("dark");
   await page.reload();
   await expect(html).toHaveClass(/\bdark\b/);
 
-  await page.getByRole("main").getByRole("combobox", { name: "Colour theme" }).click();
+  // The sidebar's quick switch saves to the account too.
+  await page.getByRole("complementary").getByRole("combobox", { name: "Colour theme" }).click();
   await page.getByRole("option", { name: "Light" }).click();
   await expect(html).not.toHaveClass(/\bdark\b/);
+  await expect.poll(async () => (await (await page.request.get("/api/v1/me/appearance")).json()).theme).toBe("light");
   await page.reload();
   await expect(html).not.toHaveClass(/\bdark\b/);
+  await expect(page.getByRole("main").getByRole("radio", { name: "Light" })).toBeChecked();
 });
 
 test("changing the password: a wrong current one is refused, the new one signs in", async ({ page }) => {
   const { email } = await createAccount(page, "password");
   const next = `${PASSWORD}-changed`;
   try {
-    await page.goto("/settings");
+    await page.goto("/settings/privacy");
     await page.getByLabel("Current password").fill("not-the-password");
     await page.getByLabel("New password", { exact: true }).fill(next);
     await page.getByLabel("Confirm new password").fill(next);
@@ -143,7 +145,7 @@ test("signing out other devices ends their sessions, not this one", async ({ pag
     expect(login.status()).toBe(200);
     expect((await other.request.get("/api/v1/me")).status()).toBe(200);
 
-    await page.goto("/settings");
+    await page.goto("/settings/privacy");
     await page.getByRole("button", { name: "Sign out other devices" }).click();
     await expect(page.getByText("Signed out of all other devices.")).toBeVisible();
 

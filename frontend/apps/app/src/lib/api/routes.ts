@@ -45,7 +45,7 @@ export type RouteSpec = {
   file?: { types: readonly string[] };
 };
 
-const IMAGE_UPLOAD = { types: ["image/jpeg", "image/png", "image/webp"], maxBytes: 5 * 1024 * 1024 } as const;
+export const IMAGE_UPLOAD = { types: ["image/jpeg", "image/png", "image/webp"], maxBytes: 5 * 1024 * 1024 } as const;
 
 export const ROUTES = {
   "POST /v1/auth/signup": { auth: false, body: "SignupRequest" },
@@ -61,8 +61,9 @@ export const ROUTES = {
   "DELETE /v1/auth/sessions/{session_id}": { auth: true },
 
   "GET /v1/me": { auth: true },
-  "PATCH /v1/me": { auth: true, body: "UpdateMeRequest" },
   "PATCH /v1/me/profile": { auth: true, body: "UpdateProfileRequest" },
+  "GET /v1/me/appearance": { auth: true },
+  "PATCH /v1/me/appearance": { auth: true, body: "UpdateAppearanceRequest" },
   "PUT /v1/me/avatar": { auth: true, upload: IMAGE_UPLOAD },
   "DELETE /v1/me/avatar": { auth: true },
   "GET /v1/me/avatar": { auth: true, query: ["v"], file: { types: ["image/webp"] } },

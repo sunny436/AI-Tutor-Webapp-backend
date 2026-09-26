@@ -2,6 +2,40 @@
 // The backend owns these enums and limits; the web app reads them from here.
 
 export const CONTRACT = {
+  "AppearanceOut": {
+    "fontSize": {
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "x_large"
+      ]
+    },
+    "theme": {
+      "enum": [
+        "system",
+        "light",
+        "dark"
+      ]
+    }
+  },
+  "AppearanceSet": {
+    "fontSize": {
+      "enum": [
+        "small",
+        "medium",
+        "large",
+        "x_large"
+      ]
+    },
+    "theme": {
+      "enum": [
+        "system",
+        "light",
+        "dark"
+      ]
+    }
+  },
   "ChangePasswordRequest": {
     "currentPassword": {
       "maxLength": 128,
@@ -362,6 +396,14 @@ export const CONTRACT = {
       "minLength": 1
     }
   },
+  "NotificationPreferencesOut": {
+    "delivery": {
+      "enum": [
+        "active",
+        "paused"
+      ]
+    }
+  },
   "ProfileSet": {
     "displayName": {
       "maxLength": 80,
@@ -465,6 +507,24 @@ export const CONTRACT = {
     "token": {
       "maxLength": 300,
       "minLength": 10
+    }
+  },
+  "UpdateAppearanceRequest": {
+    "reset": {
+      "items": {
+        "enum": [
+          "theme",
+          "fontSize",
+          "highContrast",
+          "reduceMotion",
+          "readingComfort",
+          "showStreak"
+        ]
+      },
+      "maxItems": 6
+    },
+    "version": {
+      "minimum": 0
     }
   },
   "UpdateLearnerProfileRequest": {

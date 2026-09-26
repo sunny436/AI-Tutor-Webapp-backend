@@ -59,7 +59,8 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 | POST | `/v1/me/email/change` | `{newEmail, password}` | 202 (always, [below](#changing-the-email-address)) |
 | POST | `/v1/me/email/confirm` | `{newEmail, code}` | the user, with the new email; other sessions revoked |
 | DELETE | `/v1/me` | `{password}` | 204 — deletes the account and all its data |
-| GET / PATCH | `/v1/me/settings` | PATCH `{preferences: {...}}` (merged; `null` removes a key; ≤ 4 KB) | `{preferences, updatedAt}` |
+| GET / PATCH | `/v1/me/appearance` | PATCH [versioned](#versioned-edits): `theme` (system\|light\|dark), `fontSize` (small\|medium\|large\|x_large), `highContrast`, `reduceMotion`, `readingComfort`, `showStreak` | the appearance, the same on every device |
+| GET / PATCH | `/v1/me/settings` | PATCH `{preferences: {...}}` (merged; `null` removes a key; ≤ 4 KB) | `{preferences, updatedAt}`. Unused by the web app; appearance is `/v1/me/appearance` |
 
 The user: `{id, email, displayName, emailVerified, createdAt, profileVersion, timezone, avatar: {url} | null,
 passwordChangedAt}`. `timezone` is an IANA name (`Asia/Kolkata`) or null. `passwordChangedAt` is null
@@ -163,7 +164,7 @@ version, and every edit sends the version it read. One shape, for every such res
 
 | Method | Path | Body | Success |
 |---|---|---|---|
-| GET / PATCH | `/v1/notifications/preferences` | PATCH [versioned](#versioned-edits): `dailyReminder`, `streakWarning`, `weeklySummary`, `securityAlerts` | `{version, dailyReminder, streakWarning, weeklySummary, securityAlerts, remindersNeedTimezone, updatedAt}` |
+| GET / PATCH | `/v1/notifications/preferences` | PATCH [versioned](#versioned-edits): `dailyReminder`, `streakWarning`, `weeklySummary`, `securityAlerts` | `{version, dailyReminder, streakWarning, weeklySummary, securityAlerts, remindersNeedTimezone, delivery, updatedAt}`; `delivery` is `paused` while this server sends no notification email to the user (its rollout), `active` otherwise |
 | POST | `/v1/notifications/unsubscribe` | `{token}` from an email's link. **No session needed** | `{kind, unsubscribed: true}`; using it again changes nothing |
 
 - **Emails:** all are plain text, and none contains an IP address.

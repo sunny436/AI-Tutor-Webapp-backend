@@ -88,6 +88,8 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
         "/v1/notifications/preferences", json={"version": 0, "set": {"weeklySummary": True}}, headers=headers
     )
     assert preferences.status_code == 200, preferences.text
+    appearance = await client.patch("/v1/me/appearance", json={"version": 0, "set": {"theme": "dark"}}, headers=headers)
+    assert appearance.status_code == 200, appearance.text
     support = await client.post(
         "/v1/support/requests",
         json={"requestId": str(uuid.uuid4()), "kind": "question", "subject": "Help", "message": "How does this work?"},

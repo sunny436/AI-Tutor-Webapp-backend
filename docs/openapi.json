@@ -93,6 +93,160 @@
         "title": "ActivityOut",
         "type": "object"
       },
+      "AppearanceOut": {
+        "properties": {
+          "fontSize": {
+            "enum": [
+              "small",
+              "medium",
+              "large",
+              "x_large"
+            ],
+            "title": "Fontsize",
+            "type": "string"
+          },
+          "highContrast": {
+            "title": "Highcontrast",
+            "type": "boolean"
+          },
+          "readingComfort": {
+            "title": "Readingcomfort",
+            "type": "boolean"
+          },
+          "reduceMotion": {
+            "title": "Reducemotion",
+            "type": "boolean"
+          },
+          "showStreak": {
+            "title": "Showstreak",
+            "type": "boolean"
+          },
+          "theme": {
+            "enum": [
+              "system",
+              "light",
+              "dark"
+            ],
+            "title": "Theme",
+            "type": "string"
+          },
+          "updatedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updatedat"
+          },
+          "version": {
+            "description": "Send it back with PATCH /v1/me/appearance.",
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version",
+          "theme",
+          "fontSize",
+          "highContrast",
+          "reduceMotion",
+          "readingComfort",
+          "showStreak",
+          "updatedAt"
+        ],
+        "title": "AppearanceOut",
+        "type": "object"
+      },
+      "AppearanceSet": {
+        "additionalProperties": false,
+        "properties": {
+          "fontSize": {
+            "anyOf": [
+              {
+                "enum": [
+                  "small",
+                  "medium",
+                  "large",
+                  "x_large"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fontsize"
+          },
+          "highContrast": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Highcontrast"
+          },
+          "readingComfort": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Wider line spacing in answers.",
+            "title": "Readingcomfort"
+          },
+          "reduceMotion": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Also on when the device asks for less motion.",
+            "title": "Reducemotion"
+          },
+          "showStreak": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Showstreak"
+          },
+          "theme": {
+            "anyOf": [
+              {
+                "enum": [
+                  "system",
+                  "light",
+                  "dark"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Theme"
+          }
+        },
+        "title": "AppearanceSet",
+        "type": "object"
+      },
       "AuthResult": {
         "properties": {
           "session": {
@@ -1443,6 +1597,15 @@
             "title": "Dailyreminder",
             "type": "boolean"
           },
+          "delivery": {
+            "description": "Whether this server currently sends notification emails to this user at all (its rollout: JOBS_ENABLED, NOTIFICATIONS_MODE). Preferences are kept either way.",
+            "enum": [
+              "active",
+              "paused"
+            ],
+            "title": "Delivery",
+            "type": "string"
+          },
           "remindersNeedTimezone": {
             "description": "True while the user has no time zone: reminders are only sent once one is chosen.",
             "title": "Remindersneedtimezone",
@@ -1485,6 +1648,7 @@
           "weeklySummary",
           "securityAlerts",
           "remindersNeedTimezone",
+          "delivery",
           "updatedAt"
         ],
         "title": "NotificationPreferencesOut",
@@ -2204,6 +2368,40 @@
           "token"
         ],
         "title": "UnsubscribeRequest",
+        "type": "object"
+      },
+      "UpdateAppearanceRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "reset": {
+            "items": {
+              "enum": [
+                "theme",
+                "fontSize",
+                "highContrast",
+                "reduceMotion",
+                "readingComfort",
+                "showStreak"
+              ],
+              "type": "string"
+            },
+            "maxItems": 6,
+            "title": "Reset",
+            "type": "array"
+          },
+          "set": {
+            "$ref": "#/components/schemas/AppearanceSet"
+          },
+          "version": {
+            "minimum": 0.0,
+            "title": "Version",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version"
+        ],
+        "title": "UpdateAppearanceRequest",
         "type": "object"
       },
       "UpdateLearnerProfileRequest": {
@@ -3715,6 +3913,66 @@
         "summary": "Update Me",
         "tags": [
           "auth",
+          "me"
+        ]
+      }
+    },
+    "/v1/me/appearance": {
+      "get": {
+        "operationId": "get_appearance_v1_me_appearance_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppearanceOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Appearance",
+        "tags": [
+          "me"
+        ]
+      },
+      "patch": {
+        "operationId": "update_appearance_v1_me_appearance_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateAppearanceRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AppearanceOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Update Appearance",
+        "tags": [
           "me"
         ]
       }

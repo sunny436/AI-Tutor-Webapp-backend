@@ -63,7 +63,7 @@ test("the chat, empty and with a reply, in light and dark", async ({ page, accou
 });
 
 test("settings, and the delete-account dialog", async ({ page, account: _ }) => {
-  await page.goto("/settings");
+  await page.goto("/settings/privacy");
   await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible();
   await expectAccessible(page);
   const trigger = page.getByRole("button", { name: "Delete account" });

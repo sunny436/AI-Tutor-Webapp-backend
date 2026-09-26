@@ -1,5 +1,6 @@
 "use client";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@v1/ui/avatar";
 import { ConfirmDialog } from "@v1/ui/confirm-dialog";
 import { PromptDialog } from "@v1/ui/prompt-dialog";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
@@ -15,8 +16,10 @@ import { useConversations, useStores } from "@/features/chat/chat-context";
 import { STUDENT_STATS } from "@/features/learning-hub/demo-data";
 import { logout } from "@/lib/api/auth";
 import { describeError } from "@/lib/api/errors";
+import { avatarSrc } from "@/lib/api/identity";
 import type { Conversation } from "@/lib/api/types";
 import { TITLE_MAX } from "@/lib/api/types";
+import { cacheAttributes } from "@/lib/appearance";
 import { APP_NAME } from "@/lib/brand";
 import { BrandLockup, BrandMark } from "./brand/brand-mark";
 import { isActive, visibleNavItems } from "./nav-items";
@@ -129,11 +132,13 @@ export function SidebarContent({
       return;
     }
     chat.reset();
+    cacheAttributes(null); // the next person on this device starts from the defaults
     // A full load leaves nothing of the old session in memory.
     window.location.assign("/login");
   };
 
   const name = user.displayName || user.email;
+  const photo = avatarSrc(user);
 
   return (
     <div
@@ -346,12 +351,12 @@ export function SidebarContent({
 
       <div className={cn("shrink-0 border-t border-border bg-surface p-3", collapsed && "px-2")}>
         <div className={cn("flex items-center gap-3", collapsed && "justify-center")}>
-          <span
-            aria-hidden
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-tr from-streak to-accent-warm text-lg font-bold text-white shadow-sm"
-          >
-            {name.charAt(0).toUpperCase()}
-          </span>
+          <Avatar aria-hidden className="h-10 w-10 rounded-xl border-0 shadow-sm">
+            {photo && <AvatarImage src={photo} alt="" className="rounded-xl" />}
+            <AvatarFallback className="rounded-xl bg-gradient-to-tr from-streak to-accent-warm text-lg font-bold text-white">
+              {name.charAt(0).toUpperCase()}
+            </AvatarFallback>
+          </Avatar>
           {!collapsed && (
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-bold text-foreground">{name}</p>
@@ -379,7 +384,7 @@ export function SidebarContent({
               href="/settings"
               onClick={onNavigate}
               aria-label={collapsed ? "Settings" : undefined}
-              aria-current={pathname === "/settings" ? "page" : undefined}
+              aria-current={pathname === "/settings" || pathname?.startsWith("/settings/") ? "page" : undefined}
               className={cn(
                 "focus-ring flex items-center gap-1.5 whitespace-nowrap rounded-lg font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground aria-[current=page]:text-brand",
                 collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",

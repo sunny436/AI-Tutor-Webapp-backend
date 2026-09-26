@@ -108,8 +108,6 @@ endpoints.
 1. **Feedback is not returned with messages.** A 👍/👎 is saved, but after a
    reload the app cannot show it without one `GET /v1/messages/{id}/feedback` per
    message. Needed: `feedback` on each message in `GET …/messages`.
-2. **No way to list sessions or devices.** Settings offers "Sign out other
-   devices" (`sessions/revoke-others`) only. Needed: a sessions list endpoint.
-3. **No conversation search.** Sidebar search filters the chats already loaded.
+2. **No conversation search.** Sidebar search filters the chats already loaded.
    Needed, if server-side search is wanted: a `q` parameter on
    `GET /v1/conversations`.

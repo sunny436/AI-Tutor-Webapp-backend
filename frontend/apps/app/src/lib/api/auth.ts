@@ -13,7 +13,6 @@ import type {
   ResetPasswordRequest,
   SignedIn,
   SignupRequest,
-  UpdateMeRequest,
   User,
   VerifyEmailRequest,
 } from "./types";
@@ -75,10 +74,6 @@ export function revokeOtherSessions(): Promise<void> {
 
 export function getMe(): Promise<User> {
   return callRoute("GET /v1/me");
-}
-
-export function updateMe(request: UpdateMeRequest): Promise<User> {
-  return callRoute("PATCH /v1/me", { body: { displayName: request.displayName ?? null } });
 }
 
 /** Deletes the account and all of its data. The BFF clears the cookie. */

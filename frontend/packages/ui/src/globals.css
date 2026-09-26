@@ -468,3 +468,65 @@
     }
   }
 }
+
+/**
+ * Appearance settings (Settings > Appearance & Accessibility), set as attributes on <html>
+ * by apps/app/src/lib/appearance.ts: before the first paint from the last visit, then from the
+ * account (the same on every device).
+ */
+@layer base {
+  /* Text size: every size in the app is in rem, so this scales all of it together. */
+  html[data-font-size="small"] {
+    font-size: 87.5%;
+  }
+  html[data-font-size="large"] {
+    font-size: 112.5%;
+  }
+  html[data-font-size="x_large"] {
+    font-size: 125%;
+  }
+
+  /* High contrast: secondary text moves most of the way to the main text colour, and every
+     edge (borders, field outlines) becomes clearly visible. Measured: light, slate-700 text
+     9.86:1 on the page and 10.32:1 on a card, slate-500 edges 4.74:1 on a card; dark,
+     slate-300 text 12.86:1 on the page and 12.00:1 on a card, slate-400 edges 6.96:1 on a
+     card. The dark rule is more specific, so it wins over the light one there. */
+  html[data-contrast="high"] {
+    --text-secondary: 215 25% 26.7%;
+    --muted-foreground: 215 25% 26.7%;
+    --border: 215 16.3% 46.9%;
+    --input: 215 16.3% 46.9%;
+  }
+  html.dark[data-contrast="high"] {
+    --text-secondary: 212.7 26.8% 83.9%;
+    --muted-foreground: 212.7 26.8% 83.9%;
+    --border: 215 20.2% 65.1%;
+    --input: 215 20.2% 65.1%;
+  }
+
+  /* Reduce motion, chosen in the app: the same as the prefers-reduced-motion rules above,
+     for a device that does not ask for it. */
+  html[data-motion="reduce"] *,
+  html[data-motion="reduce"] *::before,
+  html[data-motion="reduce"] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html[data-motion="reduce"] .animate-rise-in,
+  html[data-motion="reduce"] .animate-soft-pulse,
+  html[data-motion="reduce"] .stagger > * {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  /* Reading comfort: more space between lines, letters and words in the tutor's answers. */
+  html[data-reading="comfort"] .message-content {
+    line-height: 1.85;
+    letter-spacing: 0.012em;
+    word-spacing: 0.06em;
+  }
+}

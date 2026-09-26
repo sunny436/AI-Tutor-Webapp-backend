@@ -1,7 +1,8 @@
-import { SettingsView } from "@/components/settings/settings-view";
+import { redirect } from "next/navigation";
 
-export const metadata = { title: "Settings" };
+import { DEFAULT_SECTION } from "@/features/settings/sections";
 
+/** `/settings` opens the first section; every section has its own address. */
 export default function SettingsPage() {
-  return <SettingsView />;
+  redirect(`/settings/${DEFAULT_SECTION}`);
 }

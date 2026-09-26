@@ -17,6 +17,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from langchain_core.embeddings import Embeddings
 
+from app.appearance.router import router as appearance_router
 from app.auth.avatar import AVATAR_DECODES
 from app.auth.emails import EmailSender, build_email_sender
 from app.auth.router import router as auth_router
@@ -167,4 +168,5 @@ def create_app(
     app.include_router(progress_router)
     app.include_router(notifications_router)
     app.include_router(support_router)
+    app.include_router(appearance_router)
     return app

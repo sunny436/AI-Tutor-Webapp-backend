@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import type { CSSProperties, ReactNode } from "react";
 import { Toaster } from "sonner";
 
+import { PREPAINT_SCRIPT } from "@/lib/appearance";
 import { APP_NAME, BRAND } from "@/lib/brand";
 import { siteUrl } from "@/lib/site";
 
@@ -36,6 +37,12 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Text size, contrast, motion and reading spacing from the last visit, before the
+            first paint (lib/appearance.ts); the signed-in app then applies the server's value. */}
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: a constant script, no user data */}
+        <script dangerouslySetInnerHTML={{ __html: PREPAINT_SCRIPT }} />
+      </head>
       <body className="font-sans antialiased" style={fonts}>
         {/* WCAG 2.4.1: every page's main region carries id="main". */}
         <a
