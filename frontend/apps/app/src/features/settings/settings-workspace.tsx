@@ -130,7 +130,7 @@ export function SettingsWorkspace({ children }: { children: ReactNode }) {
 
   return (
     <WorkspaceContext.Provider value={workspace}>
-      <div className="flex h-dvh w-full overflow-hidden bg-background motion-safe:duration-200 motion-safe:animate-in motion-safe:fade-in-0">
+      <div className="flex h-dvh w-full overflow-hidden bg-background">
         <aside
           aria-label="Settings"
           className="hidden h-full w-64 shrink-0 flex-col border-r border-border bg-card md:flex lg:w-72"
