@@ -84,13 +84,22 @@ test("opened from a chat: the app shell steps aside, focus is on the section, Cl
   await expect(closeSettings(page)).toHaveAttribute("href", `/c/${id}`);
   await expectAccessible(page);
 
-  // A category: the panel stays. Chromium focuses a clicked link, and focus stays on it; WebKit
-  // never focuses a clicked link, so focus would be lost: it goes to the section's heading.
+  // A category: the panel stays, and focus is never lost. Where the engine focuses a clicked
+  // link (Chromium, WebKit on Linux) it stays on the category; where it doesn't (WebKit on
+  // Windows and Apple platforms) it goes to the section's heading.
   await section(page, "Notifications").click();
   await expect(page).toHaveURL("/settings/notifications");
   await expect(heading(page, "Notifications")).toBeVisible();
-  if (browserName === "webkit") await expect(heading(page, "Notifications")).toBeFocused();
-  else await expect(section(page, "Notifications")).toBeFocused();
+  await expect
+    .poll(() =>
+      page.evaluate(() => {
+        const active = document.activeElement;
+        if (active?.matches('nav[aria-label="Settings sections"] a[href="/settings/notifications"]')) return "category";
+        if (active?.matches("[data-settings-heading]")) return "heading";
+        return active?.tagName ?? "none";
+      }),
+    )
+    .toMatch(browserName === "webkit" ? /^(category|heading)$/ : /^category$/);
 
   await closeSettings(page).click();
   await expect(page).toHaveURL(`/c/${id}`);
