@@ -40,6 +40,24 @@ async function todayInView(page: Page): Promise<boolean> {
   });
 }
 
+/** The slogan in the sidebar (or the phone's drawer), measured in Poppins: lines, and inside the edge. */
+async function sloganFit(page: Page) {
+  await expect
+    .poll(() => page.evaluate(() => [...document.fonts].some((face) => /poppins/i.test(face.family) && face.status === "loaded")))
+    .toBe(true);
+  await page.evaluate(() => document.fonts.ready);
+  return page
+    .getByText(SLOGAN, { exact: true })
+    .filter({ visible: true })
+    .first()
+    .evaluate((element) => {
+      const box = element.getBoundingClientRect();
+      const edge = element.closest("aside, [role=dialog]")?.getBoundingClientRect();
+      const lines = Math.round(box.height / Number.parseFloat(getComputedStyle(element).lineHeight));
+      return { lines, inside: !!edge && box.right <= edge.right - 12 };
+    });
+}
+
 async function preferences(page: Page) {
   return (await page.request.get(`${APP_URL}/api/v1/notifications/preferences`)).json();
 }
@@ -151,19 +169,8 @@ test("the look: Poppins everywhere, the slogan on one line, and a clean chat", a
   await page.goto("/");
   await waitForHydration(page);
   expect(await page.locator("body").innerText()).not.toMatch(/AI Tutor India/i);
-  const slogan = page.getByRole("complementary").getByText(SLOGAN, { exact: true });
-  await expect(slogan).toBeVisible();
-  // Measured in Poppins: until it loads, the fallback font (DejaVu Sans on Linux, wider) is shown.
-  await expect
-    .poll(() => page.evaluate(() => [...document.fonts].some((face) => /poppins/i.test(face.family) && face.status === "loaded")))
-    .toBe(true);
-  await page.evaluate(() => document.fonts.ready);
-  const fit = await slogan.evaluate((element) => {
-    const box = element.getBoundingClientRect();
-    const sidebar = element.closest("aside")?.getBoundingClientRect();
-    return { lines: Math.round(box.height / Number.parseFloat(getComputedStyle(element).lineHeight)), inside: !!sidebar && box.right <= sidebar.right - 16 };
-  });
-  expect(fit, "the slogan is one line inside the sidebar").toEqual({ lines: 1, inside: true });
+  await expect(page.getByRole("complementary").getByText(SLOGAN, { exact: true })).toBeVisible();
+  expect(await sloganFit(page), "the slogan is one line inside the sidebar").toEqual({ lines: 1, inside: true });
   await sendAndWait(page, "What is a prime number?");
 
   const fonts = await page.evaluate(() =>
@@ -216,6 +223,9 @@ test("a phone at 320 px: the header, the chat and Learning & Streak fit", async 
   await expect(streakBadge(page)).toBeVisible();
   await expect(bell(page)).toBeVisible();
   await expectNoHorizontalOverflow(page);
+  await page.getByRole("button", { name: "Open menu" }).click();
+  expect(await sloganFit(page), "the slogan is one line in the 272px drawer").toEqual({ lines: 1, inside: true });
+  await page.keyboard.press("Escape");
   await sendAndWait(page, "What is the speed of light?");
   await expectNoHorizontalOverflow(page);
   await page.goto("/settings/streak");
