@@ -153,6 +153,11 @@ test("the look: Poppins everywhere, the slogan on one line, and a clean chat", a
   expect(await page.locator("body").innerText()).not.toMatch(/AI Tutor India/i);
   const slogan = page.getByRole("complementary").getByText(SLOGAN, { exact: true });
   await expect(slogan).toBeVisible();
+  // Measured in Poppins: until it loads, the fallback font (DejaVu Sans on Linux, wider) is shown.
+  await expect
+    .poll(() => page.evaluate(() => [...document.fonts].some((face) => /poppins/i.test(face.family) && face.status === "loaded")))
+    .toBe(true);
+  await page.evaluate(() => document.fonts.ready);
   const fit = await slogan.evaluate((element) => {
     const box = element.getBoundingClientRect();
     const sidebar = element.closest("aside")?.getBoundingClientRect();
