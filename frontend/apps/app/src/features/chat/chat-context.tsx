@@ -12,6 +12,7 @@ import { type ReactNode, createContext, useContext, useEffect, useState, useSync
 
 import { cancelMessage, clearFeedback, setFeedback, streamChat, streamRegenerate } from "@/lib/api/chat";
 import { deleteConversation, listConversations, listMessages, renameConversation } from "@/lib/api/conversations";
+import { retargetAppPath } from "@/features/navigation/app-return";
 import { onUnauthorized } from "@/lib/api/http";
 import type { ConversationPage } from "@/lib/api/types";
 import { ConversationsStore, type ConversationsState } from "@/features/conversations/conversations-store";
@@ -47,8 +48,10 @@ export function ChatProvider({
       conversations.upsert(conversation);
       // Still looking at the draft that became this conversation? Give it its URL.
       // Both URLs render the same persistent chat view, so nothing remounts.
-      if (chat.activeKey === conversation.id && window.location.pathname === "/") {
-        router.replace(`/c/${conversation.id}`);
+      if (chat.activeKey === conversation.id) {
+        if (window.location.pathname === "/") router.replace(`/c/${conversation.id}`);
+        // Gone to Settings before the reply began? "Close settings" comes back to this chat.
+        else retargetAppPath("/", `/c/${conversation.id}`);
       }
     };
     chat.onConversationUpdated = (conversation) => conversations.upsert(conversation);

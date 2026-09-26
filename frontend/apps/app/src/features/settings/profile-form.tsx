@@ -104,7 +104,7 @@ export function SaveFooter({ dirty, pending, onCancel }: { dirty: boolean; pendi
   );
 }
 
-const selectClass = "focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-sm sm:w-80";
+const selectClass = "focus-field h-10 w-full rounded-xl border border-input bg-card px-3 text-sm sm:max-w-[20rem]";
 
 /** A catalog-driven choice. A deprecated value is kept and shown as such, never offered anew. */
 export function CatalogSelect({

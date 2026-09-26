@@ -141,7 +141,7 @@ export function SubjectsSection() {
               <label htmlFor={addId} className="text-sm font-bold text-foreground">
                 Add a subject
               </label>
-              <div className="flex w-full gap-2 sm:w-[28rem]">
+              <div className="flex w-full gap-2 sm:max-w-[28rem]">
                 <select
                   id={addId}
                   value={adding}

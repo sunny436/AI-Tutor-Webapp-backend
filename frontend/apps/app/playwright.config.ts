@@ -47,6 +47,9 @@ export default defineConfig({
     { name: "mobile", use: { ...devices["Pixel 7"] }, testMatch: /mobile\.e2e\.ts$/ },
     // The same build with PREVIEW_FEATURES=1 (e2e/serve.mjs).
     { name: "preview", use: { ...devices["Desktop Chrome"], baseURL: PREVIEW_URL }, testMatch: /preview\.e2e\.ts$/ },
+    // Safari-class engines for the Settings workspace (navigation, focus, history, the phone list).
+    { name: "webkit", use: { ...devices["Desktop Safari"] }, testMatch: /settings-workspace\.e2e\.ts$/ },
+    { name: "webkit-mobile", use: { ...devices["iPhone 14"] }, testMatch: /settings-mobile\.e2e\.ts$/ },
   ],
   webServer: [
     ...(backendDir

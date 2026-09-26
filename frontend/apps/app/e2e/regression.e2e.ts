@@ -92,8 +92,8 @@ test("the colour theme can be switched, and the choice is remembered", async ({ 
   await page.reload();
   await expect(html).toHaveClass(/\bdark\b/);
 
-  // The sidebar's quick switch saves to the account too.
-  await page.getByRole("complementary").getByRole("combobox", { name: "Colour theme" }).click();
+  // The quick switch in the Settings top bar (the app's sidebar has the same one) saves to the account too.
+  await page.getByRole("banner").getByRole("combobox", { name: "Colour theme" }).click();
   await page.getByRole("option", { name: "Light" }).click();
   await expect(html).not.toHaveClass(/\bdark\b/);
   await expect.poll(async () => (await (await page.request.get("/api/v1/me/appearance")).json()).theme).toBe("light");

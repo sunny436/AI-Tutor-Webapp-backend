@@ -79,7 +79,7 @@ function TopicsEditor({
         error={error ?? (invalid ? "Check these topics." : null)}
       >
         {(props) => (
-          <div className="flex w-full gap-2 sm:w-[28rem]">
+          <div className="flex w-full gap-2 sm:max-w-[28rem]">
             <Input
               {...props}
               value={text}
@@ -168,7 +168,7 @@ export function GoalsSection() {
               {(props) => (
                 <Input
                   {...props}
-                  className="w-full sm:w-80"
+                  className="w-full sm:max-w-[20rem]"
                   value={draft.targetExam ?? ""}
                   maxLength={TARGET_EXAM_MAX}
                   onChange={(event) => form.change({ targetExam: event.target.value })}
@@ -197,7 +197,7 @@ export function GoalsSection() {
                   maxLength={GOAL_MAX}
                   value={draft.shortTermGoal ?? ""}
                   onChange={(event) => form.change({ shortTermGoal: event.target.value })}
-                  className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-sm sm:w-[28rem]"
+                  className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-sm sm:max-w-[28rem]"
                 />
               )}
             </Field>
@@ -209,7 +209,7 @@ export function GoalsSection() {
                   maxLength={GOAL_MAX}
                   value={draft.longTermGoal ?? ""}
                   onChange={(event) => form.change({ longTermGoal: event.target.value })}
-                  className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-sm sm:w-[28rem]"
+                  className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-sm sm:max-w-[28rem]"
                 />
               )}
             </Field>

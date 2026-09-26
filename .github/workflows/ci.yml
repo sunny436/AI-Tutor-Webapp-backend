@@ -153,7 +153,7 @@ jobs:
         working-directory: frontend
         run: |
           bun install --frozen-lockfile
-          cd apps/app && bunx playwright install --with-deps chromium
+          cd apps/app && bunx playwright install --with-deps chromium webkit
 
       - name: End-to-end (the built web app + BFF + API + PostgreSQL + Mailpit, fake LLM)
         run: bun run test:e2e

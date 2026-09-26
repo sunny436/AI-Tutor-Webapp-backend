@@ -103,7 +103,7 @@ function SupportForm() {
         {(props) => (
           <Input
             {...props}
-            className="w-full sm:w-[28rem]"
+            className="w-full sm:max-w-[28rem]"
             value={subject}
             maxLength={SUPPORT_SUBJECT_MAX}
             required
@@ -130,7 +130,7 @@ function SupportForm() {
             maxLength={SUPPORT_MESSAGE_MAX}
             required
             onChange={(event) => setMessage(event.target.value)}
-            className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-sm sm:w-[28rem]"
+            className="focus-field w-full rounded-xl border border-input bg-card px-3 py-2 text-sm sm:max-w-[28rem]"
           />
         )}
       </Field>

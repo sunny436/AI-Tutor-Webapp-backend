@@ -81,7 +81,7 @@ function PasswordCard() {
           {(props) => (
             <Input
               {...props}
-              className="w-full sm:w-80"
+              className="w-full sm:max-w-[20rem]"
               type="password"
               autoComplete="current-password"
               required
@@ -95,7 +95,7 @@ function PasswordCard() {
           {(props) => (
             <Input
               {...props}
-              className="w-full sm:w-80"
+              className="w-full sm:max-w-[20rem]"
               type="password"
               autoComplete="new-password"
               required
@@ -110,7 +110,7 @@ function PasswordCard() {
           {(props) => (
             <Input
               {...props}
-              className="w-full sm:w-80"
+              className="w-full sm:max-w-[20rem]"
               type="password"
               autoComplete="new-password"
               required

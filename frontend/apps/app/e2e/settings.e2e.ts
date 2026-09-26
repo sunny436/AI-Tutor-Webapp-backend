@@ -110,7 +110,7 @@ test("leaving with unsaved changes asks first", async ({ page, account: _ }) => 
   await expect(page).toHaveURL("/settings/notifications");
 });
 
-test("photo: upload, shown in the sidebar, replace-safe, removed", async ({ page, account: _ }) => {
+test("photo: upload, shown with the account, replace-safe, removed", async ({ page, account: _ }) => {
   await page.goto("/settings/profile");
   await page.locator('input[type="file"]').setInputFiles({ name: "me.png", mimeType: "image/png", buffer: PHOTO });
   await expect(page.getByText("Photo updated.")).toBeVisible();
@@ -121,7 +121,7 @@ test("photo: upload, shown in the sidebar, replace-safe, removed", async ({ page
   expect(response.status()).toBe(200);
   expect(response.headers()["content-type"]).toBe("image/webp");
   expect(response.headers()["cache-control"]).toContain("immutable");
-  await expect(page.locator(`aside img[src="${src}"]`)).toBeVisible(); // the sidebar
+  await expect(page.locator(`aside img[src="${src}"]`)).toBeVisible(); // the Settings panel's account
 
   await page.getByRole("button", { name: "Remove photo" }).click();
   await expect(page.getByText("Photo removed.")).toBeVisible();
@@ -352,12 +352,16 @@ test("progress: a question and an active minute count today, and start a streak"
   const report = await page.request.post(`${APP_URL}/api/v1/progress/activity`, { headers: SAME_ORIGIN });
   expect(report.status()).toBe(200);
   expect((await report.json()).credited).toBe(true);
+  await page.reload(); // the app's sidebar shows the streak it reads when it loads
+  await expect(sidebarStreak(page)).toContainText("1-day streak");
+  const chat = new URL(page.url()).pathname;
 
-  await page.goto("/settings/progress");
+  await page.getByRole("link", { name: "Settings", exact: true }).click();
+  await page.getByRole("navigation", { name: "Settings sections" }).getByRole("link", { name: "Progress & Goals" }).click();
+  await expect(page).toHaveURL("/settings/progress");
   await expect(page.getByText("about 1 min").first()).toBeVisible();
   await expect(stat(page, "question")).toHaveText("1");
   await expect(stat(page, "current streak")).toHaveText("1 day");
-  await expect(sidebarStreak(page)).toContainText("1-day streak");
 
   // The chart: one tab stop, arrow keys move between days, and every value is in the table too.
   const bars = page.getByRole("group", { name: /Active minutes, last 14 days/ }).getByRole("img");
@@ -379,14 +383,16 @@ test("progress: a question and an active minute count today, and start a streak"
   await expectAccessible(page);
   await page.emulateMedia({ colorScheme: "light" });
 
-  // The streak in the sidebar can be turned off, and stays off.
+  // The streak in the app's sidebar can be turned off, and stays off.
   await page.getByRole("switch", { name: "Show my streak in the sidebar" }).click();
-  await expect(sidebarStreak(page)).toHaveCount(0);
   await expect
     .poll(async () => (await (await page.request.get(`${APP_URL}/api/v1/me/appearance`)).json()).showStreak)
     .toBe(false);
   await page.reload();
   await expect(page.getByRole("switch", { name: "Show my streak in the sidebar" })).not.toBeChecked();
+  await page.getByRole("link", { name: "Close settings" }).click();
+  await expect(page).toHaveURL(chat);
+  await expect(page.getByRole("navigation", { name: "Learning Hub" })).toBeVisible();
   await expect(sidebarStreak(page)).toHaveCount(0);
 });
 

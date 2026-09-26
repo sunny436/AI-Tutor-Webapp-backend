@@ -81,14 +81,19 @@ type Fixtures = {
 
 export const test = base.extend<Fixtures>({
   pageGuard: [
-    async ({ page }, use) => {
+    async ({ page, browserName }, use) => {
       const problems: string[] = [];
       page.on("console", (message) => {
         if (message.type() === "error" && /Content Security Policy|Refused to (load|execute|connect|apply)/i.test(message.text())) {
           problems.push(`CSP: ${message.text()}`);
         }
       });
-      page.on("pageerror", (error) => problems.push(`Uncaught: ${error.message}`));
+      page.on("pageerror", (error) => {
+        // WebKit reports Next's prefetch requests cancelled by leaving the page (page.goto) as
+        // "... ?_rsc=... due to access control checks". A cancellation, not an error of the page.
+        if (browserName === "webkit" && /\?_rsc=\S* due to access control checks/.test(error.message)) return;
+        problems.push(`Uncaught: ${error.message}`);
+      });
       await use(undefined);
       expect(problems, "no CSP violations or uncaught errors in the page").toEqual([]);
     },
@@ -109,7 +114,16 @@ export const lastReply = (page: Page) => replies(page).last();
 export const stopButton = (page: Page) => page.getByRole("button", { name: "Stop generating" });
 
 /** Type a message and send it with the Send button. */
+/**
+ * The page is live (React has hydrated): Next adds its route announcer then. Typing into a
+ * server-rendered field before this puts text on screen that React never hears about.
+ */
+export async function waitForHydration(page: Page): Promise<void> {
+  await page.waitForFunction(() => document.querySelector("next-route-announcer") !== null);
+}
+
 export async function send(page: Page, text: string): Promise<void> {
+  await waitForHydration(page);
   await composer(page).fill(text);
   await page.getByRole("button", { name: "Send message" }).click();
 }
@@ -167,6 +181,45 @@ export async function expectNoHorizontalOverflow(page: Page): Promise<void> {
 export const LONG_MESSAGE = Array.from({ length: 80 }, (_, index) => `w${index + 1}`).join(" ");
 
 // ------------------------------------------------------------ accessibility
+
+/**
+ * What the element that has focus looks like, compared with the same element
+ * unfocused: a focus indicator is anything focus changes in its ring, outline or
+ * border — on the element, or on the form it sits in (the composer draws its ring
+ * on the form, not the textarea). Transitions are switched off while measuring,
+ * or a ring caught mid-animation reads as no ring at all.
+ */
+export async function describeFocus(page: Page) {
+  return page.evaluate(() => {
+    const element = document.activeElement as HTMLElement;
+    const targets = [element, element.closest("form")].filter((node): node is HTMLElement => node instanceof HTMLElement);
+    const saved = targets.map((target) => target.style.getPropertyValue("transition"));
+    for (const target of targets) target.style.setProperty("transition", "none", "important");
+    const look = () =>
+      targets
+        .map((target) => {
+          const style = getComputedStyle(target);
+          return [style.boxShadow, style.outlineStyle, style.outlineWidth, style.outlineColor, style.borderColor].join("|");
+        })
+        .join("§");
+    const focused = look();
+    element.blur();
+    const unfocused = look();
+    element.focus();
+    targets.forEach((target, index) => {
+      if (saved[index]) target.style.setProperty("transition", saved[index]);
+      else target.style.removeProperty("transition");
+    });
+    const box = element.getBoundingClientRect();
+    return {
+      label: element.getAttribute("aria-label") || element.textContent?.trim().slice(0, 40) || element.tagName,
+      indicated: focused !== unfocused,
+      onScreen: box.width > 0 && box.height > 0 && box.bottom > 0 && box.right > 0 && box.top < innerHeight && box.left < innerWidth,
+      isComposer: element.tagName === "TEXTAREA" && element.id.startsWith("composer-"),
+    };
+  });
+}
+
 
 /** No serious or critical WCAG 2.1 A/AA violations on what is on screen now. */
 export async function expectAccessible(page: Page): Promise<void> {

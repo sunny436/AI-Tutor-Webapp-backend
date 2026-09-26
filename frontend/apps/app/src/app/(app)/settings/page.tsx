@@ -1,8 +1,8 @@
-import { redirect } from "next/navigation";
+import { SettingsHome } from "@/features/settings/settings-home";
 
-import { DEFAULT_SECTION } from "@/features/settings/sections";
+export const metadata = { title: "Settings" };
 
-/** `/settings` opens the first section; every section has its own address. */
+/** On a phone, the list of sections; wider, the first section (features/settings/settings-home.tsx). */
 export default function SettingsPage() {
-  redirect(`/settings/${DEFAULT_SECTION}`);
+  return <SettingsHome />;
 }

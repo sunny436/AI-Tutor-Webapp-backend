@@ -20,7 +20,8 @@ test("without preview features no sample data or unconnected control is shown", 
   for (const path of ["/", "/settings"]) {
     await page.goto(path);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(1);
+    // The app lists only the real tool; Settings is its own workspace, without the app's navigation.
+    await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(path === "/" ? 1 : 0);
     for (const text of [/Day Streak/, /\bXP\b/, /Leaderboard/, /Syllabus Synchronized/, /Class 10 •/]) {
       await expect(page.getByText(text), `${text} on ${path}`).toHaveCount(0);
     }
