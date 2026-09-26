@@ -1,0 +1,65 @@
+"use client";
+
+import { useSyncExternalStore } from "react";
+
+import { LEARNING_EVENT } from "@/lib/activity";
+import { getStreak } from "@/lib/api/progress";
+import type { LearningStreak } from "@/lib/api/types";
+
+/**
+ * The learning streak as the server reports it (GET /v1/progress/streak), shared by the header's
+ * badge and countdown and by Settings > Learning & Streak: one request, never computed here.
+ *
+ * Fetched when first shown, again when a reply finishes (LEARNING_EVENT), when the tab comes
+ * back, and when the learning day ends. No polling. A failed request keeps what was shown
+ * (or "error" when nothing was): the UI must never show a streak of 0 it doesn't know.
+ */
+
+export type StreakState = { status: "loading" | "ready" | "error"; data: LearningStreak | null };
+
+const LOADING: StreakState = { status: "loading", data: null };
+let state: StreakState = LOADING;
+let inflight: Promise<void> | null = null;
+const listeners = new Set<() => void>();
+
+function publish(next: StreakState): void {
+  state = next;
+  for (const listener of listeners) listener();
+}
+
+export function refreshStreak(): Promise<void> {
+  inflight ??= getStreak()
+    .then(
+      (data) => publish({ status: "ready", data }),
+      () => publish(state.data ? state : { status: "error", data: null }),
+    )
+    .finally(() => {
+      inflight = null;
+    });
+  return inflight;
+}
+
+const onLearning = () => void refreshStreak();
+const onVisible = () => {
+  if (document.visibilityState === "visible") void refreshStreak();
+};
+
+function subscribe(listener: () => void): () => void {
+  if (listeners.size === 0) {
+    window.addEventListener(LEARNING_EVENT, onLearning);
+    document.addEventListener("visibilitychange", onVisible);
+    void refreshStreak();
+  }
+  listeners.add(listener);
+  return () => {
+    listeners.delete(listener);
+    if (listeners.size === 0) {
+      window.removeEventListener(LEARNING_EVENT, onLearning);
+      document.removeEventListener("visibilitychange", onVisible);
+    }
+  };
+}
+
+export function useStreak(): StreakState {
+  return useSyncExternalStore(subscribe, () => state, () => LOADING);
+}

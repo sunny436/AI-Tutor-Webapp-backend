@@ -27,6 +27,7 @@ import * as Sentry from "@sentry/nextjs";
 import { useEffect } from "react";
 
 import { APP_NAME, BRAND } from "@/lib/brand";
+import { poppins } from "@/lib/fonts";
 
 export default function GlobalError({
   error,
@@ -40,7 +41,7 @@ export default function GlobalError({
   }, [error]);
 
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.variable}>
       <head>
         <title>{`Something went wrong · ${APP_NAME}`}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -63,7 +64,7 @@ export default function GlobalError({
             background: "var(--ge-bg)",
             color: "var(--ge-fg)",
             fontFamily:
-              'ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
+              'var(--font-poppins), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif',
           }}
         >
           <div style={{ maxWidth: "27rem", textAlign: "center" }}>
@@ -93,7 +94,7 @@ export default function GlobalError({
                 fontSize: "1.6rem",
                 lineHeight: 1.2,
                 fontWeight: 800,
-                fontFamily: 'ui-serif, Georgia, Cambria, "Times New Roman", serif',
+                fontFamily: 'var(--font-poppins), ui-sans-serif, system-ui, sans-serif',
               }}
             >
               Something went wrong

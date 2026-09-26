@@ -78,6 +78,15 @@ PREFERENCE_CHOICES: dict[str, tuple[str, ...]] = {
 # Every state an outgoing email can be in (app/notifications/sender.py).
 OUTBOX_STATUSES = ("pending", "sending", "sent", "failed", "unknown", "dry_run", "suppressed", "expired")
 SUPPORT_KINDS = ("question", "bug", "feedback", "account")
+# What an in-app notification is about (app/notifications/inbox.py). Plain text only.
+IN_APP_KINDS = (
+    "streak_milestone",
+    "streak_reminder",
+    "daily_reminder",
+    "weekly_summary",
+    "security_sign_in",
+    "security_password_changed",
+)
 THEMES = ("system", "light", "dark")
 FONT_SIZES = ("small", "medium", "large", "x_large")
 SUPPORT_STATUSES = ("open", "closed")
@@ -269,7 +278,49 @@ class NotificationPreferences(Base):
     streak_warning: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
     weekly_summary: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
     security_alerts: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("true"))
+    # Reminders in the app's bell (streak, daily, weekly); on unless turned off.
+    in_app_reminders: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("true"))
     updated_at: Mapped[datetime] = _created()
+
+
+class LearningDailyActivity(Base):
+    """A day of meaningful learning, dated in India time (app/progress/learning.py): a row
+    exists only for such a day, and the streak is derived from these rows alone."""
+
+    __tablename__ = "learning_daily_activity"
+    __table_args__ = (CheckConstraint("interactions >= 1", name="interactions"),)
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    activity_date: Mapped[date] = mapped_column(Date, primary_key=True)
+    interactions: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("1"))
+    created_at: Mapped[datetime] = _created()
+    updated_at: Mapped[datetime] = _created()
+
+
+class UserNotification(Base):
+    """A notification in the app's bell. `dedup_key` makes each one happen once (a milestone
+    ever, a reminder per day, an alert per event). Title and body are plain text."""
+
+    __tablename__ = "user_notifications"
+    __table_args__ = (
+        CheckConstraint(f"kind IN {IN_APP_KINDS}", name="kind"),
+        UniqueConstraint("user_id", "dedup_key"),
+        Index("ix_user_notifications_user_id_created_at", "user_id", "created_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    kind: Mapped[str] = mapped_column(String(40), nullable=False)
+    title: Mapped[str] = mapped_column(String(120), nullable=False)
+    body: Mapped[str] = mapped_column(String(400), nullable=False)
+    link: Mapped[str | None] = mapped_column(String(200))
+    dedup_key: Mapped[str] = mapped_column(String(120), nullable=False)
+    created_at: Mapped[datetime] = _created()
+    read_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class EmailOutbox(Base):

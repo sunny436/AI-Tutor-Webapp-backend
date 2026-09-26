@@ -35,6 +35,7 @@ from app.learning.context import read_student_context
 from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
 from app.progress.activity import record_question
+from app.progress.learning import is_meaningful, now, record_learning
 from app.settings import Settings
 
 log = get_logger("app.chat")
@@ -406,7 +407,7 @@ class ChatService:
     async def _finalize(self, turn, content, status, metadata, latency_ms, ttft_ms, usage):
         async with self.db.sessionmaker() as session:
             # A cancel written by the cancel endpoint wins over "complete".
-            await session.execute(
+            final_status = await session.scalar(
                 update(Message)
                 .where(Message.id == turn.assistant_id)
                 .values(
@@ -414,7 +415,15 @@ class ChatService:
                     status=case((Message.status == "cancelled", "cancelled"), else_=status),
                     metadata_=metadata,
                 )
+                .returning(Message.status)
             )
+            # A fully answered, meaningful question makes today a learning day (app/progress/learning.py).
+            if (
+                final_status == "complete"
+                and turn.user_message is not None
+                and is_meaningful(turn.user_message.content)
+            ):
+                await record_learning(session, turn.user.id, now())
             await session.execute(
                 update(UsageEvent)
                 .where(UsageEvent.message_id == turn.assistant_id)

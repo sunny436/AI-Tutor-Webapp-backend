@@ -31,6 +31,7 @@ const SECTIONS = [
   ["tutor", "AI Tutor"],
   ["subjects", "Subjects & Study"],
   ["progress", "Progress & Goals"],
+  ["streak", "Learning & Streak"],
   ["notifications", "Notifications"],
   ["appearance", "Appearance & Accessibility"],
   ["privacy", "Privacy & Security"],
@@ -240,7 +241,7 @@ test("search: partial, any case, several words, nothing, typing fast; Enter and 
   await waitForHydration(page);
   const links = sections(page).getByRole("link");
   const status = page.getByRole("status").filter({ hasText: /match/ });
-  await expect(links).toHaveCount(11);
+  await expect(links).toHaveCount(12);
 
   await search(page).fill("PASS");
   await expect(links).toHaveCount(1);
@@ -264,7 +265,7 @@ test("search: partial, any case, several words, nothing, typing fast; Enter and 
   await expect(page).toHaveURL("/settings/privacy");
   await expect(heading(page, "Privacy & Security")).toBeFocused();
   await expect(search(page)).toHaveValue("");
-  await expect(links).toHaveCount(11);
+  await expect(links).toHaveCount(12);
 
   await search(page).fill("theme");
   await search(page).press("ArrowDown");
@@ -272,7 +273,7 @@ test("search: partial, any case, several words, nothing, typing fast; Enter and 
   await search(page).focus();
   await search(page).press("Escape");
   await expect(search(page)).toHaveValue("");
-  await expect(links).toHaveCount(11);
+  await expect(links).toHaveCount(12);
   await expectAccessible(page);
 });
 
@@ -334,6 +335,8 @@ test("the workspace's landmarks, headings and names", async ({ page, account: _ 
           - link "Subjects & Study"
         - listitem:
           - link "Progress & Goals"
+        - listitem:
+          - link "Learning & Streak"
         - listitem:
           - link "Notifications"
         - listitem:
@@ -514,7 +517,7 @@ for (const width of [767, 768, 769]) {
     await page.goto("/settings");
     if (width < 768) {
       await expect(title(page)).toBeVisible();
-      await expect(sections(page).getByRole("link")).toHaveCount(11);
+      await expect(sections(page).getByRole("link")).toHaveCount(12);
       await page.waitForTimeout(500);
       await expect(page).toHaveURL("/settings"); // stays on the list
       await expect(panel(page)).toHaveCount(0);
@@ -547,7 +550,7 @@ for (const width of [767, 768, 769]) {
 test("resizing across 768px keeps you where you are", async ({ page, account: _ }) => {
   await page.setViewportSize({ width: 700, height: 900 });
   await page.goto("/settings");
-  await expect(sections(page).getByRole("link")).toHaveCount(11);
+  await expect(sections(page).getByRole("link")).toHaveCount(12);
   await page.setViewportSize({ width: 900, height: 900 });
   await expect(page).toHaveURL("/settings/profile");
   await expect(panel(page)).toBeVisible();

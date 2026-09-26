@@ -1,4 +1,5 @@
 import { cn } from "@v1/ui/utils";
+import { Fragment } from "react";
 
 import { BRAND } from "@/lib/brand";
 
@@ -33,15 +34,27 @@ export function BrandWordmark({ className }: { className?: string }) {
   );
 }
 
-/** Mark, wordmark and tagline: the lockup at the top of the sidebar and on sign-in. */
+/** The tagline's phrases ("Your Questions." ...): a narrow row wraps between them, never inside one. */
+const TAGLINE_PHRASES = BRAND.tagline.split(/(?<=\.)\s+/);
+
+/**
+ * Mark, wordmark and tagline: the lockup at the top of the sidebar, the Settings panel and
+ * sign-in. The tagline is one line in the sidebar: about 197px of text at 10.5px in the 288px
+ * rail, 188px at 10px in the phone drawer (272px at a 320px screen).
+ */
 export function BrandLockup({ compact = false, className }: { compact?: boolean; className?: string }) {
   return (
-    <span className={cn("flex items-center gap-3", className)}>
-      <BrandMark size={compact ? 36 : 44} className="rounded-2xl shadow-md shadow-brand/20" />
+    <span className={cn("flex min-w-0 items-center gap-2.5", className)}>
+      <BrandMark size={compact ? 36 : 40} className="rounded-2xl shadow-md shadow-brand/20" />
       <span className="flex min-w-0 flex-col items-start gap-1">
         <BrandWordmark className={compact ? "text-xl leading-none" : "text-2xl leading-none"} />
-        <span className="rounded-full border border-brand/15 bg-brand-soft px-2 py-0.5 text-2xs font-semibold uppercase tracking-wide text-brand">
-          {BRAND.tagline}
+        <span className="text-[0.625rem] font-medium leading-snug text-text-secondary md:text-[0.65625rem]">
+          {TAGLINE_PHRASES.map((phrase, index) => (
+            <Fragment key={phrase}>
+              {index > 0 && " "}
+              <span className="whitespace-nowrap">{phrase}</span>
+            </Fragment>
+          ))}
         </span>
       </span>
     </span>

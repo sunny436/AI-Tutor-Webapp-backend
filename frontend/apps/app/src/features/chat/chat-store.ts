@@ -164,6 +164,8 @@ export class ChatStore {
 
   onConversationCreated?: (conversation: Conversation, draftKey: string) => void;
   onConversationUpdated?: (conversation: Conversation) => void;
+  /** A reply finished (the streak may have changed: the header and the bell refresh). */
+  onReplyFinished?: () => void;
 
   constructor(options: ChatStoreOptions) {
     this.api = options.api;
@@ -436,6 +438,7 @@ export class ChatStore {
         this.flush(canonical, done.message.id);
         this.putMessage(canonical, { ...done.message, feedback: this.getMessage(canonical, done.message.id)?.feedback });
         this.onConversationUpdated?.(done.conversation);
+        this.onReplyFinished?.();
       },
       onError: (failure: StreamFailure) => {
         const id = failure.messageId ?? assistantId;

@@ -25,7 +25,10 @@ class ProgressWeekOut(ApiModel):
 
 
 class StreakOut(ApiModel):
-    current_days: int = Field(description="Consecutive active days up to today (or yesterday, before today's first).")
+    current_days: int = Field(
+        description="The learning streak (GET /v1/progress/streak): consecutive learning days up to today, "
+        "or up to yesterday while today has none yet."
+    )
     longest_days: int
 
 
@@ -34,6 +37,30 @@ class GoalsOut(ApiModel):
     weekly_active_minutes: int | None
     daily_met: bool | None = Field(description="Null when there is no goal.")
     weekly_met: bool | None
+
+
+class LearningStreakOut(ApiModel):
+    current_streak: int = Field(
+        description="Consecutive learning days ending today, or ending yesterday while today has none yet "
+        "(then `todayActive` is false: today is still pending). 0 once a whole India day passes without learning."
+    )
+    longest_streak: int
+    today_active: bool = Field(description="Today (India time) is already a learning day.")
+    today_date: dt.date = Field(description="Today's learning date, in `timezone`.")
+    timezone: str = Field(description="The time zone of learning days: Asia/Kolkata for everyone.")
+    day_end: dt.datetime = Field(description="When today's learning day ends (the next midnight in `timezone`).")
+
+
+class LearningDayOut(ApiModel):
+    date: dt.date
+    interactions: int = Field(description="Meaningful, fully answered questions that day.")
+    intensity: int = Field(ge=1, le=4, description="1 for 1-2 interactions, 2 for 3-5, 3 for 6-9, 4 for 10 or more.")
+
+
+class LearningDaysOut(ApiModel):
+    start: dt.date
+    end: dt.date
+    days: list[LearningDayOut] = Field(description="Learning days only, oldest first.")
 
 
 class ProgressOut(ApiModel):

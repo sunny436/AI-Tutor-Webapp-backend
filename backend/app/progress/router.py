@@ -1,12 +1,25 @@
 from __future__ import annotations
 
+import datetime as dt
+
 from fastapi import APIRouter, Depends, Query, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.dependencies import Principal, get_principal
 from app.db.session import get_session
-from app.errors import RateLimited
-from app.progress.schemas import ActivityOut, GoalsOut, ProgressDayOut, ProgressOut, ProgressWeekOut, StreakOut
+from app.errors import AppError, RateLimited
+from app.progress import learning
+from app.progress.schemas import (
+    ActivityOut,
+    GoalsOut,
+    LearningDayOut,
+    LearningDaysOut,
+    LearningStreakOut,
+    ProgressDayOut,
+    ProgressOut,
+    ProgressWeekOut,
+    StreakOut,
+)
 from app.progress.service import DayTotals, ProgressService
 
 router = APIRouter(prefix="/v1/progress", tags=["progress"])
@@ -22,6 +35,45 @@ def _day(totals: DayTotals) -> ProgressDayOut:
 
 def _met(done: int, goal: int | None) -> bool | None:
     return None if goal is None else done >= goal
+
+
+class InvalidRange(AppError):
+    status_code, code, message = 422, "validation_error", "Choose a range of at most a year, start before end."
+
+
+@router.get("/streak", response_model=LearningStreakOut)
+async def get_learning_streak(principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)):
+    """The learning streak: days (India time) with at least one meaningful, fully answered
+    question. Computed by the server from those days; nothing about it can be set."""
+    state = await learning.streak_state(db, principal.user.id, learning.now())
+    return LearningStreakOut(
+        current_streak=state.current,
+        longest_streak=state.longest,
+        today_active=state.today_active,
+        today_date=state.today,
+        timezone=learning.LEARNING_ZONE.key,
+        day_end=state.day_end,
+    )
+
+
+@router.get("/learning-days", response_model=LearningDaysOut)
+async def get_learning_days(
+    start: dt.date | None = Query(default=None, alias="from", description="First day (default: a year ago)."),
+    end: dt.date | None = Query(default=None, alias="to", description="Last day (default: today, India time)."),
+    principal: Principal = Depends(get_principal),
+    db: AsyncSession = Depends(get_session),
+):
+    """The student's learning days for the calendar, as daily totals (never the questions)."""
+    end = end or learning.learning_date(learning.now())
+    start = start or end - dt.timedelta(days=364)
+    if start > end or (end - start).days >= learning.MAX_RANGE_DAYS:
+        raise InvalidRange()
+    days = await learning.learning_days(db, principal.user.id, start, end)
+    return LearningDaysOut(
+        start=start,
+        end=end,
+        days=[LearningDayOut(date=day.date, interactions=day.interactions, intensity=day.intensity) for day in days],
+    )
 
 
 @router.post("/activity", response_model=ActivityOut)

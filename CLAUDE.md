@@ -182,6 +182,40 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **Changing the deploy scripts:** prove it with `bun run rehearse`; the host scripts run from the
   release being deployed, so a fix only takes effect with the release that contains it.
 
+## Implementation and release workflow (owner's standing guardrail)
+
+Follow this for every implementation task unless the owner explicitly overrides it.
+
+1. **Implement.**
+   - Minimum safe code, maximum useful output.
+   - Reuse the existing architecture, utilities, components, APIs and patterns.
+   - No unnecessary dependencies, services, abstractions or refactors, and no scope creep.
+   - No subagents unless the owner asks for them.
+   - Keep behaviour outside the requested scope unchanged.
+2. **Verify before claiming success.**
+   - Run the relevant tests, typecheck, lint, build and contract checks.
+   - Test everything affected, not only the changed file.
+   - A failure is work to do, not an accepted "known issue".
+3. **Headed Chrome red-team QA for every user-facing change.**
+   - Cover: the normal flow, edge cases, loading and error states, mobile and responsive layouts, light and dark, likely regressions, accessibility, and authorization and security boundaries.
+   - Try to break it, check visual quality, spacing and overflow, and confirm unrelated functionality still works.
+4. **Fix and retest** (automated checks plus headed QA) until everything passes. Never knowingly ship a failing test, a broken flow or a regression, and never silently reduce scope to make tests pass.
+5. **PR.** Only when implementation and QA are clean: commit, push the branch to the owner's GitHub repo (`tutor`), open a PR to `main`, and track CI. If CI fails, diagnose, fix, push, and wait again.
+6. **Merge.** Only with automated checks, headed QA and PR CI all green and no known regression: merge into `main`, confirm the merge, and delete the feature branch.
+7. **Production.**
+   - After a successful merge, deploy **only the exact merged `main` commit** (`bun run deploy`, with `--with-migrations` when the release has migrations).
+   - Verify that the live release equals the merged SHA (`bun run status`), then run a final headed Chrome production smoke and regression test of the affected functionality.
+   - If verification fails, stop and investigate; don't declare success.
+8. **Release invariant.** Production always equals the merged `main` commit. Never:
+   - deploy before the merge, or bypass CI;
+   - skip the headed QA;
+   - leave failures unresolved, or claim completion without verification.
+9. **Report** concisely, each line PASS or FAIL:
+   - Implementation, Automated tests, Headed Chrome QA;
+   - PR (number and link), CI, Merge, Branch deletion;
+   - Production deployment, Production verification;
+   - plus the final deployed Git SHA.
+
 ## Repo hygiene
 
 - `ollima.txt` and `ollastack.txt` in the repository root hold live provider keys. They are

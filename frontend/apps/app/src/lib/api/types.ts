@@ -101,6 +101,8 @@ export type NotificationValues = {
   streakWarning: boolean;
   weeklySummary: boolean;
   securityAlerts: boolean;
+  /** Reminders in the app's notifications (streak, daily, weekly). */
+  inAppReminders: boolean;
 };
 export type NotificationPreferences = NotificationValues & {
   version: number;
@@ -179,6 +181,32 @@ export const SUBJECTS_MAX = CONTRACT.ReplaceSubjectsRequest.items.maxItems;
 // ------------------------------------------------------------------ progress
 
 export type ProgressDay = { date: string; activeMinutes: number; questions: number };
+
+/** The learning streak (GET /v1/progress/streak): computed by the server, India days. */
+export type LearningStreak = {
+  currentStreak: number;
+  longestStreak: number;
+  /** Today already has learning; false means today is still pending. */
+  todayActive: boolean;
+  todayDate: string;
+  timezone: string;
+  /** When today's learning day ends (UTC instant). */
+  dayEnd: Timestamp;
+};
+export type LearningDay = { date: string; interactions: number; intensity: number };
+export type LearningDays = { start: string; end: string; days: LearningDay[] };
+
+export type AppNotification = {
+  id: Uuid;
+  kind: string;
+  /** Plain text: never rendered as HTML. */
+  title: string;
+  body: string;
+  link: string | null;
+  createdAt: Timestamp;
+  readAt: Timestamp | null;
+};
+export type NotificationList = { items: AppNotification[]; unreadCount: number };
 export type Progress = {
   /** The time zone that decides which day is today. */
   timezone: string;

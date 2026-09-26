@@ -13,7 +13,7 @@
 export const BRAND = {
   name: "PadhAI",
   wordmark: { lead: "Padh", accent: "AI" },
-  tagline: "AI Tutor India",
+  tagline: "Your Questions. Your Tutor. Your Way.",
   description: "PadhAI, your personal AI tutor.",
   /** Served from `public/`. A square image that carries its own background. */
   markSrc: "/brand/padhai-mark.svg",

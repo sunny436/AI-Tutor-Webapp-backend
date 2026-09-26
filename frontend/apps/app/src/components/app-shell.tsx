@@ -9,6 +9,8 @@ import { type ReactNode, type RefObject, useEffect, useRef, useState } from "rea
 import { useConversations } from "@/features/chat/chat-context";
 import { rememberAppPath } from "@/features/navigation/app-return";
 import { useFocusOnArrival } from "@/features/navigation/route-focus";
+import { NotificationBell } from "@/features/notifications/notification-bell";
+import { DayCountdown, StreakBadge } from "@/features/streak/header-streak";
 import { APP_NAME } from "@/lib/brand";
 import { navItemFor } from "./nav-items";
 import { PreviewBadge } from "./preview-badge";
@@ -132,6 +134,12 @@ function Header({
           </button>
         </div>
       )}
+
+      <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+        <StreakBadge />
+        <DayCountdown className="hidden sm:inline-flex" />
+        <NotificationBell />
+      </div>
 
       <Link href="/" aria-label="Ask New Doubt" className={`${iconButton} md:hidden`}>
         <Plus aria-hidden className="h-5 w-5" />

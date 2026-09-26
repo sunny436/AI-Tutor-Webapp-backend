@@ -176,6 +176,12 @@ export const CONTRACT = {
       "minimum": 0
     }
   },
+  "LearningDayOut": {
+    "intensity": {
+      "maximum": 4,
+      "minimum": 1
+    }
+  },
   "LearningPreferencesOut": {
     "answerMode": {
       "enum": [
@@ -396,6 +402,11 @@ export const CONTRACT = {
       "minLength": 1
     }
   },
+  "MarkReadRequest": {
+    "ids": {
+      "maxItems": 30
+    }
+  },
   "NotificationPreferencesOut": {
     "delivery": {
       "enum": [
@@ -591,10 +602,11 @@ export const CONTRACT = {
           "dailyReminder",
           "streakWarning",
           "weeklySummary",
-          "securityAlerts"
+          "securityAlerts",
+          "inAppReminders"
         ]
       },
-      "maxItems": 4
+      "maxItems": 5
     },
     "version": {
       "minimum": 0

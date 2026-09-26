@@ -10,9 +10,10 @@ import { Notice, SectionHeading, SettingsCard, ToggleRow } from "./primitives";
 import { useAutoSaver } from "./use-auto-saver";
 
 /**
- * Email only (there are no push or in-app notifications). Says plainly when this server is not
- * sending notification emails yet, and when reminders are waiting for a time zone, rather than
- * letting a switch suggest an email that will not come.
+ * In the app (the header's bell: everything, reminders switchable) and by email (security and
+ * the reminders chosen here). Says plainly when this server is not sending notification emails
+ * yet, and when email reminders are waiting for a time zone, rather than letting a switch
+ * suggest an email that will not come.
  */
 export function NotificationsSection() {
   const { value, change, loadError, retry } = useAutoSaver<NotificationPreferences>({
@@ -25,13 +26,17 @@ export function NotificationsSection() {
           ...(set.streakWarning !== undefined && { streakWarning: set.streakWarning }),
           ...(set.weeklySummary !== undefined && { weeklySummary: set.weeklySummary }),
           ...(set.securityAlerts !== undefined && { securityAlerts: set.securityAlerts }),
+          ...(set.inAppReminders !== undefined && { inAppReminders: set.inAppReminders }),
         },
       }),
   });
 
   return (
     <>
-      <SectionHeading title="Notifications" description="Which emails PadhAI sends you." />
+      <SectionHeading
+        title="Notifications"
+        description="What appears in the app's notifications (the bell), and which emails PadhAI sends you."
+      />
       {loadError ? (
         <SettingsCard title="Couldn't load your notification settings">
           <p className="text-sm text-text-secondary">{describeError(loadError).message}</p>
@@ -49,6 +54,17 @@ export function NotificationsSection() {
         </SkeletonGroup>
       ) : (
         <div className="flex flex-col gap-4">
+          <SettingsCard
+            title="In the app"
+            description="Security alerts and streak milestones always appear in the bell at the top of the app."
+          >
+            <ToggleRow
+              label="Reminders in the app"
+              description="A gentle streak reminder in the evening of a day you haven't learnt yet, and your study reminders."
+              checked={value.inAppReminders}
+              onCheckedChange={(inAppReminders) => change({ inAppReminders })}
+            />
+          </SettingsCard>
           {value.delivery === "paused" && (
             <Notice>
               PadhAI isn't sending notification emails yet. Your choices are saved and will apply as soon as it does.

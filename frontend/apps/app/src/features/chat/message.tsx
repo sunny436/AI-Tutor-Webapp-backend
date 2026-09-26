@@ -5,7 +5,6 @@ import { cn } from "@v1/ui/utils";
 import { memo } from "react";
 
 import { BrandMark } from "@/components/brand/brand-mark";
-import { useUser } from "@/components/user-context";
 import { MessageContent } from "@/features/markdown/lazy-message-content";
 import type { ChatMessage } from "./chat-store";
 import { useChatEntry, useChatMessage, useStores } from "./chat-context";
@@ -52,33 +51,18 @@ function MessageTime({ value, className }: { value: string; className?: string }
   );
 }
 
-/** The student's initial, in the warm gradient. Their name is on screen elsewhere. */
-function UserAvatar() {
-  const { user } = useUser();
-  const name = user.displayName || user.email;
-  return (
-    <span
-      aria-hidden
-      className="mt-1 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-gradient-to-tr from-streak to-accent-warm text-sm font-bold text-white shadow-sm"
-    >
-      {name.charAt(0).toUpperCase()}
-    </span>
-  );
-}
-
 export function UserMessage({ message }: { message: ChatMessage }) {
   return (
-    <article aria-label="You" className="flex justify-end gap-3">
+    <article aria-label="You" className="flex justify-end">
       <div
         className={cn(
-          "min-w-0 max-w-[85%] whitespace-pre-wrap break-words rounded-2xl rounded-tr-none bg-brand px-4 py-3 text-[0.9375rem] font-medium leading-relaxed text-brand-foreground shadow-sm shadow-brand/20 sm:max-w-[75%]",
+          "min-w-0 max-w-[85%] whitespace-pre-wrap break-words rounded-2xl bg-surface-2 px-4 py-2.5 text-[0.9375rem] leading-relaxed text-foreground sm:max-w-[75%]",
           message.pending && "opacity-80",
         )}
       >
         {message.content}
-        <MessageTime value={message.createdAt} className="text-brand-foreground/85" />
+        <MessageTime value={message.createdAt} className="text-text-secondary" />
       </div>
-      <UserAvatar />
     </article>
   );
 }
@@ -120,10 +104,10 @@ function AssistantMessage({
 
   return (
     <article aria-label="Assistant" aria-busy={streaming} className="group flex gap-3">
-      <BrandMark size={36} className="mt-1 rounded-xl" />
+      <BrandMark size={28} className="mt-0.5 rounded-lg" />
       <div className="min-w-0 flex-1">
         {(message.content || (live && streaming) || phase === "stopping" || message.status === "cancelled" || elsewhere) && (
-          <div className="w-fit max-w-full rounded-2xl rounded-tl-none border border-border bg-card px-4 py-3 elev-1">
+          <div className="w-fit max-w-full pt-0.5">
             {message.content ? (
               <>
                 <MessageContent content={message.content} />

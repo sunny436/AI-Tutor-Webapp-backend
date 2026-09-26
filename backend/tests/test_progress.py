@@ -155,7 +155,8 @@ async def test_the_summary_counts_weeks_goals_and_the_streak(client, app, clock)
     summary = await _progress(client, headers)
     assert summary["today"] == {"date": "2026-09-25", "activeMinutes": 2, "questions": 1}
     assert summary["thisWeek"] == {"startDate": "2026-09-21", "activeMinutes": 6, "questions": 1}
-    assert summary["streak"] == {"currentDays": 3, "longestDays": 3}  # the 22nd had no activity
+    # The learning streak: only the answered question counts (active minutes don't).
+    assert summary["streak"] == {"currentDays": 1, "longestDays": 1}
     assert summary["goals"] == {
         "dailyActiveMinutes": 2,
         "weeklyActiveMinutes": 5,

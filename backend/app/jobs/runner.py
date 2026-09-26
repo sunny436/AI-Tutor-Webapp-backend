@@ -25,6 +25,7 @@ from app.auth.emails import EmailSender
 from app.auth.retention import purge_expired
 from app.db.session import Database
 from app.logging import get_logger
+from app.notifications.inbox import purge_read
 from app.notifications.reminders import plan_reminders
 from app.notifications.sender import expire_stale, recover_stuck, redact_old, send_due
 from app.settings import Settings
@@ -58,6 +59,7 @@ async def run_once(settings: Settings, db: Database, email: EmailSender, now: da
             async def retention() -> dict:
                 async with db.sessionmaker() as session:
                     purged = await purge_expired(session, now)
+                    purged["notifications"] = await purge_read(session, now)
                     await session.commit()
                 return purged | await redact_old(db, now)
 

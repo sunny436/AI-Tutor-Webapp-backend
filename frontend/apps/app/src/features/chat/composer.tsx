@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@v1/ui/utils";
-import { Mic, Paperclip, Send, Square, X, Zap } from "lucide-react";
+import { Mic, Paperclip, Send, Square, X } from "lucide-react";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { PreviewBadge } from "@/components/preview-badge";
@@ -90,8 +90,8 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
   const stop = () => void chat.stop(chatKey);
 
   return (
-    <div className="shrink-0 border-t border-border bg-card px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 shadow-[0_-10px_30px_-18px_hsl(var(--overlay)/0.25)] sm:px-5">
-      <div className="mx-auto w-full max-w-4xl">
+    <div className="shrink-0 bg-background px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 sm:px-5">
+      <div className="mx-auto w-full max-w-3xl">
         {error && (
           <div
             role="alert"
@@ -117,7 +117,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
             event.preventDefault();
             send();
           }}
-          className="flex items-end gap-1.5 rounded-2xl border-2 border-border bg-surface p-2 transition-all focus-within:border-brand focus-within:bg-card focus-within:ring-4 focus-within:ring-brand/10"
+          className="flex items-end gap-1.5 rounded-3xl border border-border bg-card p-2 shadow-sm transition-colors focus-within:border-brand/60 focus-within:ring-2 focus-within:ring-brand/15"
         >
           {preview && (
             <SoonButton label="Attach an image or PDF">
@@ -159,7 +159,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
               onClick={stop}
               disabled={stream.phase !== "streaming"}
               aria-label={stream.phase === "stopping" ? "Stopping" : "Stop generating"}
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-foreground text-background shadow-md transition hover:brightness-110 disabled:opacity-50 sm:h-10 sm:w-10"
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-foreground text-background transition hover:brightness-110 disabled:opacity-50 sm:h-10 sm:w-10"
             >
               <Square aria-hidden className="h-3.5 w-3.5 fill-current" />
             </button>
@@ -168,7 +168,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
               type="submit"
               disabled={!canSend}
               aria-label="Send message"
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand text-brand-foreground shadow-md shadow-brand/20 transition hover:bg-brand-hover active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none sm:h-10 sm:w-10"
+              className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand text-brand-foreground transition hover:bg-brand-hover active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:w-10"
             >
               <Send aria-hidden className="h-[18px] w-[18px]" />
             </button>
@@ -177,10 +177,9 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
 
         <div
           id={`composer-hint-${chatKey}`}
-          className="mt-2 flex items-center justify-between gap-3 px-1 text-2xs text-text-secondary"
+          className="mt-1.5 flex items-center justify-between gap-3 px-3 text-2xs text-text-secondary"
         >
           <span className="flex min-w-0 items-center gap-1">
-            <Zap aria-hidden className="h-3 w-3 shrink-0 text-streak" />
             <span className="truncate">
               Powered by {APP_NAME} · AI can make mistakes<span className="hidden sm:inline">. Check important answers</span>.
             </span>

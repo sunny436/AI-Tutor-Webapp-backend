@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import uuid
 
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, Query, Request, Response, status
 from sqlalchemy import func, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -11,20 +11,31 @@ from app.auth.dependencies import Principal, client_info, get_principal
 from app.db.models import NotificationPreferences, User
 from app.db.session import get_session
 from app.errors import AppError, RateLimited, VersionConflict
+from app.notifications import inbox
 from app.notifications.schemas import (
+    MarkReadRequest,
+    NotificationOut,
     NotificationPreferencesOut,
     NotificationPreferencesSet,
+    NotificationsOut,
     UnsubscribeOut,
     UnsubscribeRequest,
     UpdateNotificationPreferencesRequest,
 )
 from app.notifications.tokens import PREFERENCE_OF, read_token
+from app.progress.learning import now
 from app.settings import Settings
 
 router = APIRouter(prefix="/v1/notifications", tags=["notifications"])
 
 COLUMNS = {field.alias or name: name for name, field in NotificationPreferencesSet.model_fields.items()}
-DEFAULTS = {"daily_reminder": False, "streak_warning": False, "weekly_summary": False, "security_alerts": True}
+DEFAULTS = {
+    "daily_reminder": False,
+    "streak_warning": False,
+    "weekly_summary": False,
+    "security_alerts": True,
+    "in_app_reminders": True,
+}
 
 
 class InvalidToken(AppError):
@@ -56,6 +67,44 @@ def preferences_out(row: NotificationPreferences | None, user: User, settings: S
 async def _locked(db: AsyncSession, user_id: uuid.UUID) -> NotificationPreferences:
     await db.execute(insert(NotificationPreferences).values(user_id=user_id).on_conflict_do_nothing())
     return await db.get(NotificationPreferences, user_id, with_for_update=True, populate_existing=True)
+
+
+@router.get("", response_model=NotificationsOut)
+async def list_notifications(
+    limit: int = Query(default=inbox.LIST_MAX, ge=1, le=inbox.LIST_MAX, description="At most 30."),
+    principal: Principal = Depends(get_principal),
+    db: AsyncSession = Depends(get_session),
+):
+    """The student's notifications for the bell, newest first, and how many are unread. In the
+    evening of a day without learning, this is also when the streak reminder is added."""
+    user_id = principal.user.id
+    if await inbox.ensure_streak_reminder(db, user_id, now()):
+        await db.commit()
+    result = await inbox.list_for(db, user_id, limit)
+    return NotificationsOut(
+        items=[
+            NotificationOut(
+                id=item.id,
+                kind=item.kind,
+                title=item.title,
+                body=item.body,
+                link=item.link,
+                created_at=item.created_at,
+                read_at=item.read_at,
+            )
+            for item in result.items
+        ],
+        unread_count=result.unread,
+    )
+
+
+@router.post("/read", status_code=status.HTTP_204_NO_CONTENT, response_class=Response)
+async def mark_notifications_read(
+    body: MarkReadRequest, principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)
+):
+    """Mark notifications read: the ones listed, or all of the student's. Only their own."""
+    await inbox.mark_read(db, principal.user.id, body.ids)
+    await db.commit()
 
 
 @router.get("/preferences", response_model=NotificationPreferencesOut)

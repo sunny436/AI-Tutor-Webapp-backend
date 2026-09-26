@@ -18,7 +18,7 @@ export default async function AuthLayout({ children }: { children: ReactNode }) 
   return (
     <div className="relative flex min-h-dvh w-full flex-col bg-background">
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
-      <header className="relative flex items-center justify-between px-4 py-5 sm:px-6">
+      <header className="relative flex items-center justify-between gap-3 px-4 py-5 sm:px-6">
         <BrandLockup compact />
         <ThemeSwitcher />
       </header>
