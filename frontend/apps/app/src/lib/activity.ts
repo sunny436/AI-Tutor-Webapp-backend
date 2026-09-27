@@ -9,6 +9,8 @@ export const ACTIVE_WINDOW_MS = 2 * 60_000;
 
 /** Fired on window after the server credited a minute, so a streak shown can refresh. */
 export const ACTIVITY_EVENT = "padhai:activity";
+/** Fired on window when a reply finished: the learning streak and the notifications may have changed. */
+export const LEARNING_EVENT = "padhai:learning";
 
 export function shouldReport(state: {
   visible: boolean;

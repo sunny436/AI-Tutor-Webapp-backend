@@ -15,7 +15,13 @@ const TOOLS = [
   { path: "/flashcards", title: "Flashcards" },
 ];
 
-const SHELL_CALLS = new Set(["/api/v1/conversations", "/api/v1/progress", "/api/v1/progress/activity"]);
+const SHELL_CALLS = new Set([
+  "/api/v1/conversations",
+  "/api/v1/progress",
+  "/api/v1/progress/activity",
+  "/api/v1/progress/streak",
+  "/api/v1/notifications",
+]);
 
 test.beforeAll(async () => {
   // serve.mjs starts this server alongside the main one; give it the same chance to come up.
@@ -28,7 +34,7 @@ test("the shell lists every tool, and marks what is not real", async ({ page, ac
   await page.goto("/");
   await expect(composer(page)).toBeVisible();
   await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(6);
-  await expect(page.getByRole("link", { name: /No streak yet/ })).toBeVisible(); // the real one, not sample data
+  await expect(page.getByRole("banner").getByRole("link", { name: /day learning streak/ })).toBeVisible(); // the real one
   await expect(page.getByRole("button", { name: /Leaderboard/ })).toBeDisabled();
   await expect(page.getByRole("button", { name: "Attach an image or PDF (coming soon)" })).toBeDisabled();
   await expect(page.getByRole("button", { name: "Voice input (coming soon)" })).toBeDisabled();

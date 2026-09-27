@@ -1,0 +1,45 @@
+/* The calendar library's drawing (LearningActivityCalendar.tsx) in the app's tokens, light and dark. */
+.learning-calendar .calendar-heatmap {
+  box-sizing: initial;
+  overflow: visible;
+}
+
+.learning-calendar text.month-name,
+.learning-calendar text.day-initial,
+.learning-calendar text.calendar-heatmap-legend-text {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  fill: hsl(var(--text-secondary));
+}
+
+.learning-calendar text.month-name {
+  dominant-baseline: hanging;
+}
+
+.learning-calendar rect.day-cell {
+  cursor: pointer;
+  outline: none;
+}
+
+.learning-calendar rect.day-cell:hover {
+  stroke: hsl(var(--foreground) / 0.45);
+  stroke-width: 1px;
+}
+
+.learning-calendar rect.day-cell:focus-visible {
+  stroke: hsl(var(--foreground));
+  stroke-width: 2px;
+}
+
+.learning-calendar .day-cell-tooltip {
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  background: hsl(var(--foreground));
+  color: hsl(var(--background));
+}

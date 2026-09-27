@@ -13,7 +13,6 @@ import { toast } from "sonner";
 
 import { useConversations, useStores } from "@/features/chat/chat-context";
 import { forgetAppPath } from "@/features/navigation/app-return";
-import { StreakCard } from "@/features/progress/streak-card";
 import { DEFAULT_SECTION } from "@/features/settings/sections";
 import { describeError } from "@/lib/api/errors";
 import type { Conversation } from "@/lib/api/types";
@@ -156,21 +155,21 @@ export function SidebarContent({
         collapsed ? "w-20" : "w-72 max-w-full",
       )}
     >
-      <div ref={scroller} className="scrollbar-subtle flex min-h-0 flex-1 flex-col overflow-y-auto">
-        <div className={cn("flex shrink-0 items-center border-b border-border/70", collapsed ? "justify-center p-4" : "p-5")}>
-          <Link href="/" onClick={onNavigate} className="focus-ring rounded-2xl">
-            {collapsed ? (
-              <>
-                <BrandMark size={44} className="rounded-2xl shadow-md shadow-brand/20" />
-                <span className="sr-only">{APP_NAME}</span>
-              </>
-            ) : (
-              <BrandLockup />
-            )}
-          </Link>
-        </div>
+      {/* Outside the scrolling list: the brand stays in view, and a scrollbar never narrows the slogan's line. */}
+      <div className={cn("flex shrink-0 items-center border-b border-border/70", collapsed ? "justify-center p-4" : "px-3 py-5")}>
+        <Link href="/" onClick={onNavigate} className="focus-ring rounded-2xl">
+          {collapsed ? (
+            <>
+              <BrandMark size={44} className="rounded-2xl shadow-md shadow-brand/20" />
+              <span className="sr-only">{APP_NAME}</span>
+            </>
+          ) : (
+            <BrandLockup />
+          )}
+        </Link>
+      </div>
 
-        {!collapsed && <StreakCard onNavigate={onNavigate} />}
+      <div ref={scroller} className="scrollbar-subtle flex min-h-0 flex-1 flex-col overflow-y-auto">
 
         <div className={cn("shrink-0", collapsed ? "flex justify-center px-3 py-4" : "px-4 py-4")}>
           <RailTip label="Ask New Doubt" collapsed={collapsed}>
@@ -371,7 +370,8 @@ export function SidebarContent({
               {!collapsed && "Settings"}
             </Link>
           </RailTip>
-          {!collapsed && <ThemeSwitcher />}
+          {/* Icon only: with the labels of Settings and Log out, a named theme no longer fits 288px. */}
+          {!collapsed && <ThemeSwitcher showLabel={false} />}
           <RailTip label="Log out" collapsed={collapsed}>
             <button
               type="button"

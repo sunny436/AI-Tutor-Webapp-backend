@@ -46,6 +46,7 @@ test("the sections: one address each, one heading each, accessible, no sideways 
     ["tutor", "AI Tutor"],
     ["subjects", "Subjects & Study"],
     ["progress", "Progress & Goals"],
+    ["streak", "Learning & Streak"],
     ["notifications", "Notifications"],
     ["appearance", "Appearance & Accessibility"],
     ["privacy", "Privacy & Security"],
@@ -341,7 +342,7 @@ test("subjects: added, reordered from the keyboard, flagged and saved", async ({
 
 // ------------------------------------------------------------------ progress
 
-const sidebarStreak = (page: Page) => page.getByRole("link", { name: /streak/i });
+const headerStreak = (page: Page) => page.getByRole("banner").getByRole("link", { name: /day learning streak/ });
 /** A number on the Progress page, by its label (the first, when Today and This week share one). */
 const stat = (page: Page, label: string) =>
   page.locator("dt", { hasText: new RegExp(`^${label}$`) }).first().locator("xpath=following-sibling::dd");
@@ -352,8 +353,8 @@ test("progress: a question and an active minute count today, and start a streak"
   const report = await page.request.post(`${APP_URL}/api/v1/progress/activity`, { headers: SAME_ORIGIN });
   expect(report.status()).toBe(200);
   expect((await report.json()).credited).toBe(true);
-  await page.reload(); // the app's sidebar shows the streak it reads when it loads
-  await expect(sidebarStreak(page)).toContainText("1-day streak");
+  await page.reload();
+  await expect(headerStreak(page)).toHaveAccessibleName(/^1 day learning streak$/);
   const chat = new URL(page.url()).pathname;
 
   await page.getByRole("link", { name: "Settings", exact: true }).click();
@@ -361,7 +362,7 @@ test("progress: a question and an active minute count today, and start a streak"
   await expect(page).toHaveURL("/settings/progress");
   await expect(page.getByText("about 1 min").first()).toBeVisible();
   await expect(stat(page, "question")).toHaveText("1");
-  await expect(stat(page, "current streak")).toHaveText("1 day");
+  await expect(page.getByRole("link", { name: "Learning & Streak" }).last()).toBeVisible();
 
   // The chart: one tab stop, arrow keys move between days, and every value is in the table too.
   const bars = page.getByRole("group", { name: /Active minutes, last 14 days/ }).getByRole("img");
@@ -383,17 +384,20 @@ test("progress: a question and an active minute count today, and start a streak"
   await expectAccessible(page);
   await page.emulateMedia({ colorScheme: "light" });
 
-  // The streak in the app's sidebar can be turned off, and stays off.
-  await page.getByRole("switch", { name: "Show my streak in the sidebar" }).click();
+  // The streak lives in Learning & Streak, and the header's badge can be turned off there.
+  await page.getByRole("navigation", { name: "Settings sections" }).getByRole("link", { name: "Learning & Streak" }).click();
+  await expect(page).toHaveURL("/settings/streak");
+  await expect(page.locator("dt", { hasText: /^Current streak$/ }).locator("xpath=following-sibling::dd")).toHaveText("1 day");
+  await page.getByRole("switch", { name: "Show my streak in the header" }).click();
   await expect
     .poll(async () => (await (await page.request.get(`${APP_URL}/api/v1/me/appearance`)).json()).showStreak)
     .toBe(false);
   await page.reload();
-  await expect(page.getByRole("switch", { name: "Show my streak in the sidebar" })).not.toBeChecked();
+  await expect(page.getByRole("switch", { name: "Show my streak in the header" })).not.toBeChecked();
   await page.getByRole("link", { name: "Close settings" }).click();
   await expect(page).toHaveURL(chat);
   await expect(page.getByRole("navigation", { name: "Learning Hub" })).toBeVisible();
-  await expect(sidebarStreak(page)).toHaveCount(0);
+  await expect(headerStreak(page)).toHaveCount(0);
 });
 
 test("the heartbeat reports a minute while PadhAI is used, and stops when it isn't", async ({ page, account: _ }) => {
@@ -403,7 +407,7 @@ test("the heartbeat reports a minute while PadhAI is used, and stops when it isn
   });
   await page.clock.install();
   await page.goto("/settings/progress");
-  await expect(stat(page, "current streak")).toBeVisible();
+  await expect(stat(page, "questions?")).toBeVisible();
   await page.getByRole("heading", { level: 2, name: "Progress & Goals" }).click();
 
   await page.clock.runFor(61_000);

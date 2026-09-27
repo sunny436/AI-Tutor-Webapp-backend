@@ -7,7 +7,12 @@ runs, and even if two ran at once, a period gets one email:
 
 - **daily_reminder**: in the hour from the preferred study time (the learner profile's, or
   18:00), and only if the student has not been active yet that day.
-- **streak_warning**: 20:00–22:00, when a streak of 2+ days would end tonight.
+- **streak_warning**: 20:00–22:00 India time, when a learning streak of 2+ days would end
+  tonight (app/progress/learning.py: the same streak the app shows).
+
+Each reminder queued as an email is also added to the app's notifications, unless the student
+turned in-app reminders off (app/notifications/inbox.py; the streak one shares its daily key
+with the in-app streak reminder, so a day never gets two).
 - **weekly_summary**: Mondays 08:00–12:00, about the previous week, if it had any activity.
 """
 
@@ -23,9 +28,11 @@ from app.db.models import NotificationPreferences, User
 from app.learning.context import read_study_time
 from app.notifications import emails
 from app.notifications.alerts import settings_link
+from app.notifications.inbox import in_app_reminders_on, notify
 from app.notifications.outbox import DAILY_REMINDER, STREAK_WARNING, WEEKLY_SUMMARY, queue_email
 from app.notifications.tokens import unsubscribe_url
 from app.progress.activity import snapshot, zone_for
+from app.progress.learning import LEARNING_ZONE, remaining_label, streak_state
 from app.settings import Settings
 
 DEFAULT_STUDY_TIME = time(18, 0)
@@ -98,13 +105,37 @@ async def _plan_for(session: AsyncSession, settings: Settings, row, due: set[str
         if start <= local < start + DAILY_WINDOW:
             unsubscribe = unsubscribe_url(settings, row.id, DAILY_REMINDER)
             email = emails.daily_reminder(app, app_url, manage, unsubscribe)
-            queued += await _queue(session, row, DAILY_REMINDER, state.today.isoformat(), email, start + DAILY_WINDOW)
+            added = await _queue(session, row, DAILY_REMINDER, state.today.isoformat(), email, start + DAILY_WINDOW)
+            if added and await in_app_reminders_on(session, row.id):
+                await notify(
+                    session,
+                    row.id,
+                    kind="daily_reminder",
+                    title="📚 Time to study",
+                    body="Your study time is now. Ask your tutor a question to get going.",
+                    link="/",
+                    dedup_key=f"daily-reminder:{state.today.isoformat()}",
+                )
+            queued += added
 
-    if STREAK_WARNING in due and not state.today_active and state.current_streak >= 2:
-        if STREAK_WINDOW[0] <= local.time() < STREAK_WINDOW[1]:
+    if STREAK_WARNING in due:
+        streak = await streak_state(session, row.id, now)
+        india = now.astimezone(LEARNING_ZONE)
+        if not streak.today_active and streak.current >= 2 and STREAK_WINDOW[0] <= india.time() < STREAK_WINDOW[1]:
             unsubscribe = unsubscribe_url(settings, row.id, STREAK_WARNING)
-            email = emails.streak_warning(app, state.current_streak, app_url, manage, unsubscribe)
-            queued += await _queue(session, row, STREAK_WARNING, state.today.isoformat(), email, end_of_day)
+            email = emails.streak_warning(app, streak.current, app_url, manage, unsubscribe)
+            added = await _queue(session, row, STREAK_WARNING, streak.today.isoformat(), email, streak.day_end)
+            if added and await in_app_reminders_on(session, row.id):
+                await notify(
+                    session,
+                    row.id,
+                    kind="streak_reminder",
+                    title=f"🔥 Your {streak.current}-day streak is waiting",
+                    body=f"A question today keeps it going. {remaining_label(streak.day_end - now)} left today.",
+                    link="/",
+                    dedup_key=f"streak-reminder:{streak.today.isoformat()}",
+                )
+            queued += added
 
     if WEEKLY_SUMMARY in due and state.last_week_active_days:
         if local.weekday() == 0 and WEEKLY_WINDOW[0] <= local.time() < WEEKLY_WINDOW[1]:
@@ -121,5 +152,16 @@ async def _plan_for(session: AsyncSession, settings: Settings, row, due: set[str
                 manage,
                 unsubscribe,
             )
-            queued += await _queue(session, row, WEEKLY_SUMMARY, f"{year}-W{week:02d}", email, end_of_day)
+            added = await _queue(session, row, WEEKLY_SUMMARY, f"{year}-W{week:02d}", email, end_of_day)
+            if added and await in_app_reminders_on(session, row.id):
+                await notify(
+                    session,
+                    row.id,
+                    kind="weekly_summary",
+                    title="📊 Your week in PadhAI",
+                    body=f"{state.last_week_questions} questions, {state.last_week_active_days} active days last week.",
+                    link="/settings/progress",
+                    dedup_key=f"weekly-summary:{year}-W{week:02d}",
+                )
+            queued += added
     return queued

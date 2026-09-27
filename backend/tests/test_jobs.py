@@ -248,18 +248,31 @@ async def test_no_reminders_without_a_confirmed_time_zone(client, app, database)
     assert report["reminders"] == {"considered": 0, "queued": 0}
 
 
+async def learning_days(database: str, account, *days: date) -> None:
+    for day in days:
+        await sql(
+            database,
+            "INSERT INTO learning_daily_activity (user_id, activity_date) VALUES (:id, :day)",
+            id=uuid.UUID(account["user"]["id"]),
+            day=day,
+        )
+
+
 async def test_the_streak_warning_comes_in_the_evening_before_a_streak_ends(client, app, database):
     account = await reminder_student(client, app, database, streakWarning=True)
-    await active_days(database, account, date(2030, 1, 6), date(2030, 1, 7))
+    await learning_days(database, account, date(2030, 1, 6), date(2030, 1, 7))
     assert (await run(app, ist("2030-01-08T19:59")))["reminders"]["queued"] == 0
     assert (await run(app, ist("2030-01-08T20:00")))["reminders"]["queued"] == 1
     assert (await run(app, ist("2030-01-08T21:00")))["reminders"]["queued"] == 0
     assert sent_to(app, account["email"])[-1]["subject"] == "Keep your 2-day streak going"
+    # The same reminder in the app, once (it shares its key with the one made when the bell is read).
+    kinds = await sql(database, "SELECT kind, dedup_key FROM user_notifications")
+    assert kinds == [{"kind": "streak_reminder", "dedup_key": "streak-reminder:2030-01-08"}]
 
 
 async def test_no_streak_warning_for_a_single_day(client, app, database):
     account = await reminder_student(client, app, database, streakWarning=True)
-    await active_days(database, account, date(2030, 1, 7))
+    await learning_days(database, account, date(2030, 1, 7))
     assert (await run(app, ist("2030-01-08T20:30")))["reminders"]["queued"] == 0
 
 

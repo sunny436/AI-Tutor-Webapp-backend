@@ -28,9 +28,10 @@ const config = {
       //   mono     `--font-mono`, set by the app's root layout: the system code
       //            face, because code is read at length in a tutor's answers.
       fontFamily: {
-        sans: defaultTheme.fontFamily.sans,
+        // Poppins everywhere (apps/app/src/lib/fonts.ts sets --font-poppins); code stays monospace.
+        sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
         mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
-        display: defaultTheme.fontFamily.serif,
+        display: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",

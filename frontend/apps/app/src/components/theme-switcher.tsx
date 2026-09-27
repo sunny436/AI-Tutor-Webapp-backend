@@ -25,7 +25,7 @@ import { useAppearance } from "./appearance-provider";
  * `next-themes` handles the value itself; this is only the control, so mounting
  * it on public pages costs nothing and changes no behaviour.
  */
-export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
+export function ThemeSwitcher({ triggerClass, showLabel = true }: { triggerClass?: string; showLabel?: boolean }) {
   const { theme: currentTheme, setTheme, themes } = useTheme();
   // Signed in, the choice is saved to the account (every device); elsewhere only this browser.
   const appearance = useAppearance();
@@ -54,6 +54,7 @@ export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
         // The trigger has no visible label, so without this it announces as an
         // unnamed combobox.
         aria-label="Colour theme"
+        title={showLabel ? undefined : "Colour theme"}
         // `size="sm"` rather than a `h-7 … !px-2` className override: see the
         // note on selectTriggerVariants in packages/ui/src/components/select.tsx
         // for why an override here is a breakpoint hazard.
@@ -72,7 +73,7 @@ export function ThemeSwitcher({ triggerClass }: { triggerClass?: string }) {
           ) : (
             <Monitor aria-hidden className="h-[14px] w-[14px]" />
           )}
-          {shown && (
+          {shown && showLabel && (
             <span className="text-xs font-medium">
               {shown.charAt(0).toUpperCase() + shown.slice(1)}
             </span>

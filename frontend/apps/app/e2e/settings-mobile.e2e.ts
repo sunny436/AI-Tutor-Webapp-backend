@@ -25,7 +25,7 @@ test("on a phone: the list, a section, back up to the same place, and out", asyn
   await page.getByRole("dialog", { name: "Navigation" }).getByRole("link", { name: "Settings", exact: true }).click();
   await expect(page).toHaveURL("/settings");
   await expect(page.getByRole("heading", { level: 1, name: "Settings" })).toBeFocused();
-  await expect(rows(page)).toHaveCount(11);
+  await expect(rows(page)).toHaveCount(12);
   await expect(page.getByRole("navigation", { name: "Learning Hub" })).toHaveCount(0);
   await expectNoHorizontalOverflow(page);
   await expectAccessible(page);

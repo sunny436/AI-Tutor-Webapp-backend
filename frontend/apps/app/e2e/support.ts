@@ -90,7 +90,7 @@ export const test = base.extend<Fixtures>({
       });
       page.on("pageerror", (error) => {
         // WebKit reports a same-origin request cancelled by leaving the page (page.goto: Next's
-        // prefetches, the streak card's refresh) as "<url> due to access control checks". Every
+        // prefetches, the streak's refresh) as "<url> due to access control checks". Every
         // request here is same-origin (the BFF), so that wording is a cancellation, not an error.
         if (browserName === "webkit" && /localhost:\d+\/\S* due to access control checks/.test(error.message)) return;
         problems.push(`Uncaught: ${error.message}`);

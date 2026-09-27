@@ -13,6 +13,7 @@ import { type ReactNode, createContext, useContext, useEffect, useState, useSync
 import { cancelMessage, clearFeedback, setFeedback, streamChat, streamRegenerate } from "@/lib/api/chat";
 import { deleteConversation, listConversations, listMessages, renameConversation } from "@/lib/api/conversations";
 import { retargetAppPath } from "@/features/navigation/app-return";
+import { LEARNING_EVENT } from "@/lib/activity";
 import { onUnauthorized } from "@/lib/api/http";
 import type { ConversationPage } from "@/lib/api/types";
 import { ConversationsStore, type ConversationsState } from "@/features/conversations/conversations-store";
@@ -55,6 +56,7 @@ export function ChatProvider({
       }
     };
     chat.onConversationUpdated = (conversation) => conversations.upsert(conversation);
+    chat.onReplyFinished = () => window.dispatchEvent(new Event(LEARNING_EVENT));
 
     // Any API call answered with "your session is gone": stop everything and sign in.
     const offUnauthorized = onUnauthorized(() => {
@@ -72,6 +74,7 @@ export function ChatProvider({
       window.removeEventListener("focus", onFocus);
       chat.onConversationCreated = undefined;
       chat.onConversationUpdated = undefined;
+      chat.onReplyFinished = undefined;
     };
   }, [stores, router, initialConversations]);
 

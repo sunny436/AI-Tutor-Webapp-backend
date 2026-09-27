@@ -79,8 +79,10 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
   UpdateNotificationPreferencesRequest: [
     { version: 0, set: { dailyReminder: true, securityAlerts: false } },
     { version: 1, reset: ["securityAlerts"] },
+    { version: 2, set: { inAppReminders: false } },
   ],
   UnsubscribeRequest: [{ token: "abc.def0123456789" }],
+  MarkReadRequest: [{}, { ids: ["7d9f5f2c-3f7e-4a57-9d0c-3b1f0b6f2a11"] }],
   UpdateAppearanceRequest: [
     { version: 0, set: { theme: "dark", fontSize: "large", highContrast: true, reduceMotion: false } },
     { version: 1, reset: ["fontSize"], set: { readingComfort: true, showStreak: false } },

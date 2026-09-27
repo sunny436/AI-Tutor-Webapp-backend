@@ -1,10 +1,8 @@
 "use client";
 
-import { ChevronRight, Sparkles } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
-import { BrandMark } from "@/components/brand/brand-mark";
 import { useUser } from "@/components/user-context";
-import { APP_NAME } from "@/lib/brand";
 import { useStores } from "./chat-context";
 
 /**
@@ -35,62 +33,44 @@ const QUICK_PROMPTS = [
   },
 ] as const;
 
-/** What a new, empty chat shows: a welcome, four ways to start, and a greeting. */
+/** What a new, empty chat shows: a greeting, the question, and four ways to start. */
 export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   const { chat } = useStores();
   const { user } = useUser();
   const firstName = user.displayName?.trim().split(/\s+/)[0];
 
   return (
-    <div className="mx-auto flex w-full max-w-4xl flex-1 flex-col justify-between gap-8 px-3 py-6 sm:px-6 sm:py-8">
-      <div>
-        {/* Compact on phones: the transcript opens scrolled to its end, so what
-            does not fit is cut from the top, where the heading is. */}
-        <div className="mb-6 text-center sm:mb-8">
-          <span
-            aria-hidden
-            className="bg-hero mx-auto mb-4 hidden h-16 w-16 place-items-center rounded-2xl text-hero-foreground shadow-lg shadow-brand/25 sm:grid"
-          >
-            <Sparkles className="h-8 w-8" />
-          </span>
-          <h2 className="font-display text-xl font-black text-foreground sm:text-2xl">How can I help your studies today?</h2>
-          <p className="mx-auto mt-2 max-w-md text-sm text-text-secondary">
-            Ask doubts, practice board questions, or get instant step-by-step math and science solutions.
-          </p>
-        </div>
-
-        <ul aria-label="Suggested questions" className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {QUICK_PROMPTS.map((item) => (
-            <li key={item.title}>
-              <button
-                type="button"
-                onClick={() => void chat.send(chatKey, item.prompt)}
-                className="focus-ring group w-full rounded-2xl border border-border bg-card p-3.5 text-left elev-1 transition-all hover:border-brand/50 hover:elev-2 sm:p-4"
-              >
-                <span className="mb-1 flex items-center justify-between gap-2">
-                  <span className="text-sm font-bold text-foreground transition-colors group-hover:text-brand">
-                    {item.title}
-                  </span>
-                  <ChevronRight
-                    aria-hidden
-                    className="h-4 w-4 shrink-0 text-text-secondary transition-colors group-hover:text-brand"
-                  />
-                </span>
-                <span className="text-xs text-text-secondary">{item.subject}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* A greeting, not a message: it is not in the conversation, so it is not an article. */}
-      <div className="flex gap-3">
-        <BrandMark size={36} className="mt-1 rounded-xl" />
-        <p className="max-w-[85%] rounded-2xl rounded-tl-none border border-border bg-card p-4 text-sm leading-relaxed text-foreground elev-1 sm:max-w-[75%]">
-          Namaste{firstName ? ` ${firstName}` : ""}! 👋 I'm {APP_NAME}, your personal AI tutor. Ask me any doubt from
-          your syllabus. What topic should we master today?
+    <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-8 px-4 py-10 sm:px-6">
+      <div className="text-center">
+        <p className="text-sm font-medium text-text-secondary">Namaste{firstName ? `, ${firstName}` : ""} 👋</p>
+        <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+          How can I help your studies today?
+        </h2>
+        <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-text-secondary">
+          Ask a doubt, practise board questions, or get step-by-step maths and science solutions.
         </p>
       </div>
+
+      <ul aria-label="Suggested questions" className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+        {QUICK_PROMPTS.map((item) => (
+          <li key={item.title}>
+            <button
+              type="button"
+              onClick={() => void chat.send(chatKey, item.prompt)}
+              className="focus-ring group flex w-full items-center justify-between gap-3 rounded-2xl border border-border px-4 py-3 text-left transition-colors hover:bg-surface-2"
+            >
+              <span className="min-w-0">
+                <span className="block text-sm font-semibold text-foreground">{item.title}</span>
+                <span className="block text-xs text-text-secondary">{item.subject}</span>
+              </span>
+              <ChevronRight
+                aria-hidden
+                className="h-4 w-4 shrink-0 text-text-secondary opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
+              />
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

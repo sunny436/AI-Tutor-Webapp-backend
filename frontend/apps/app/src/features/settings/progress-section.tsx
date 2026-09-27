@@ -4,13 +4,12 @@ import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { useAppearance } from "@/components/appearance-provider";
 import { ActivityChart } from "@/features/progress/activity-chart";
 import { ACTIVITY_EVENT } from "@/lib/activity";
 import { describeError } from "@/lib/api/errors";
 import { getProgress } from "@/lib/api/progress";
 import type { Progress } from "@/lib/api/types";
-import { Notice, SectionHeading, SettingsCard, ToggleRow } from "./primitives";
+import { Notice, SectionHeading, SettingsCard } from "./primitives";
 
 function about(value: number): string {
   return value === 0 ? "0 min" : `about ${value} min`;
@@ -49,7 +48,6 @@ function Stat({ value, label }: { value: string; label: string }) {
 }
 
 export function ProgressSection() {
-  const appearance = useAppearance();
   const [progress, setProgress] = useState<Progress | null>(null);
   const [error, setError] = useState<unknown>(null);
   const [attempt, setAttempt] = useState(0);
@@ -141,23 +139,13 @@ export function ProgressSection() {
               .
             </p>
           )}
-          <SettingsCard title="Streak">
-            <dl className="flex gap-8">
-              <Stat value={`${progress.streak.currentDays} ${progress.streak.currentDays === 1 ? "day" : "days"}`} label="current streak" />
-              <Stat value={`${progress.streak.longestDays} ${progress.streak.longestDays === 1 ? "day" : "days"}`} label="longest streak" />
-            </dl>
-            <p className="text-sm text-text-secondary">
-              A day counts when you're active for a minute or ask a question. A streak ends only when a whole day
-              goes by without either.
-            </p>
-            {appearance?.appearance && (
-              <ToggleRow
-                label="Show my streak in the sidebar"
-                checked={appearance.appearance.showStreak}
-                onCheckedChange={(showStreak) => appearance.change({ showStreak })}
-              />
-            )}
-          </SettingsCard>
+          <p className="text-sm text-text-secondary">
+            Your learning streak and calendar are in{" "}
+            <Link href="/settings/streak" className="focus-ring rounded font-semibold text-brand underline underline-offset-2">
+              Learning &amp; Streak
+            </Link>
+            .
+          </p>
           <SettingsCard title="Recent days">
             <ActivityChart days={progress.days} goal={progress.goals.dailyActiveMinutes} />
           </SettingsCard>

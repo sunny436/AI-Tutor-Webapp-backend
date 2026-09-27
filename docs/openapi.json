@@ -1082,6 +1082,63 @@
         "title": "LearnerProfileSet",
         "type": "object"
       },
+      "LearningDayOut": {
+        "properties": {
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          },
+          "intensity": {
+            "description": "1 for 1-2 interactions, 2 for 3-5, 3 for 6-9, 4 for 10 or more.",
+            "maximum": 4.0,
+            "minimum": 1.0,
+            "title": "Intensity",
+            "type": "integer"
+          },
+          "interactions": {
+            "description": "Meaningful, fully answered questions that day.",
+            "title": "Interactions",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "date",
+          "interactions",
+          "intensity"
+        ],
+        "title": "LearningDayOut",
+        "type": "object"
+      },
+      "LearningDaysOut": {
+        "properties": {
+          "days": {
+            "description": "Learning days only, oldest first.",
+            "items": {
+              "$ref": "#/components/schemas/LearningDayOut"
+            },
+            "title": "Days",
+            "type": "array"
+          },
+          "end": {
+            "format": "date",
+            "title": "End",
+            "type": "string"
+          },
+          "start": {
+            "format": "date",
+            "title": "Start",
+            "type": "string"
+          }
+        },
+        "required": [
+          "start",
+          "end",
+          "days"
+        ],
+        "title": "LearningDaysOut",
+        "type": "object"
+      },
       "LearningPreferencesOut": {
         "properties": {
           "answerMode": {
@@ -1495,6 +1552,51 @@
         "title": "LearningPreferencesSet",
         "type": "object"
       },
+      "LearningStreakOut": {
+        "properties": {
+          "currentStreak": {
+            "description": "Consecutive learning days ending today, or ending yesterday while today has none yet (then `todayActive` is false: today is still pending). 0 once a whole India day passes without learning.",
+            "title": "Currentstreak",
+            "type": "integer"
+          },
+          "dayEnd": {
+            "description": "When today's learning day ends (the next midnight in `timezone`).",
+            "format": "date-time",
+            "title": "Dayend",
+            "type": "string"
+          },
+          "longestStreak": {
+            "title": "Longeststreak",
+            "type": "integer"
+          },
+          "timezone": {
+            "description": "The time zone of learning days: Asia/Kolkata for everyone.",
+            "title": "Timezone",
+            "type": "string"
+          },
+          "todayActive": {
+            "description": "Today (India time) is already a learning day.",
+            "title": "Todayactive",
+            "type": "boolean"
+          },
+          "todayDate": {
+            "description": "Today's learning date, in `timezone`.",
+            "format": "date",
+            "title": "Todaydate",
+            "type": "string"
+          }
+        },
+        "required": [
+          "currentStreak",
+          "longestStreak",
+          "todayActive",
+          "todayDate",
+          "timezone",
+          "dayEnd"
+        ],
+        "title": "LearningStreakOut",
+        "type": "object"
+      },
       "LoginRequest": {
         "additionalProperties": false,
         "properties": {
@@ -1515,6 +1617,30 @@
           "password"
         ],
         "title": "LoginRequest",
+        "type": "object"
+      },
+      "MarkReadRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "ids": {
+            "anyOf": [
+              {
+                "items": {
+                  "format": "uuid",
+                  "type": "string"
+                },
+                "maxItems": 30,
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The notifications to mark read; omitted: all of yours.",
+            "title": "Ids"
+          }
+        },
+        "title": "MarkReadRequest",
         "type": "object"
       },
       "MessageOut": {
@@ -1591,6 +1717,69 @@
         "title": "MessagePage",
         "type": "object"
       },
+      "NotificationOut": {
+        "properties": {
+          "body": {
+            "description": "Plain text.",
+            "title": "Body",
+            "type": "string"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "title": "Createdat",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "title": "Kind",
+            "type": "string"
+          },
+          "link": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "A path in this app, when there is somewhere to go.",
+            "title": "Link"
+          },
+          "readAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Readat"
+          },
+          "title": {
+            "description": "Plain text.",
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "title",
+          "body",
+          "link",
+          "createdAt",
+          "readAt"
+        ],
+        "title": "NotificationOut",
+        "type": "object"
+      },
       "NotificationPreferencesOut": {
         "properties": {
           "dailyReminder": {
@@ -1605,6 +1794,10 @@
             ],
             "title": "Delivery",
             "type": "string"
+          },
+          "inAppReminders": {
+            "title": "Inappreminders",
+            "type": "boolean"
           },
           "remindersNeedTimezone": {
             "description": "True while the user has no time zone: reminders are only sent once one is chosen.",
@@ -1647,6 +1840,7 @@
           "streakWarning",
           "weeklySummary",
           "securityAlerts",
+          "inAppReminders",
           "remindersNeedTimezone",
           "delivery",
           "updatedAt"
@@ -1667,6 +1861,18 @@
               }
             ],
             "title": "Dailyreminder"
+          },
+          "inAppReminders": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Reminders in the app's notifications (streak, daily, weekly). On by default.",
+            "title": "Inappreminders"
           },
           "securityAlerts": {
             "anyOf": [
@@ -1704,6 +1910,28 @@
           }
         },
         "title": "NotificationPreferencesSet",
+        "type": "object"
+      },
+      "NotificationsOut": {
+        "properties": {
+          "items": {
+            "description": "Newest first; never more than 30.",
+            "items": {
+              "$ref": "#/components/schemas/NotificationOut"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "unreadCount": {
+            "title": "Unreadcount",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "items",
+          "unreadCount"
+        ],
+        "title": "NotificationsOut",
         "type": "object"
       },
       "ProfileSet": {
@@ -2080,7 +2308,7 @@
       "StreakOut": {
         "properties": {
           "currentDays": {
-            "description": "Consecutive active days up to today (or yesterday, before today's first).",
+            "description": "The learning streak (GET /v1/progress/streak): consecutive learning days up to today, or up to yesterday while today has none yet.",
             "title": "Currentdays",
             "type": "integer"
           },
@@ -2519,11 +2747,12 @@
                 "dailyReminder",
                 "streakWarning",
                 "weeklySummary",
-                "securityAlerts"
+                "securityAlerts",
+                "inAppReminders"
               ],
               "type": "string"
             },
-            "maxItems": 4,
+            "maxItems": 5,
             "title": "Reset",
             "type": "array"
           },
@@ -4455,6 +4684,54 @@
         ]
       }
     },
+    "/v1/notifications": {
+      "get": {
+        "description": "The student's notifications for the bell, newest first, and how many are unread. In the\nevening of a day without learning, this is also when the streak reminder is added.",
+        "operationId": "list_notifications_v1_notifications_get",
+        "parameters": [
+          {
+            "description": "At most 30.",
+            "in": "query",
+            "name": "limit",
+            "required": false,
+            "schema": {
+              "default": 30,
+              "description": "At most 30.",
+              "maximum": 30,
+              "minimum": 1,
+              "title": "Limit",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationsOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "List Notifications",
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
     "/v1/notifications/preferences": {
       "get": {
         "operationId": "get_notification_preferences_v1_notifications_preferences_get",
@@ -4511,6 +4788,41 @@
           }
         },
         "summary": "Update Notification Preferences",
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
+    "/v1/notifications/read": {
+      "post": {
+        "description": "Mark notifications read: the ones listed, or all of the student's. Only their own.",
+        "operationId": "mark_notifications_read_v1_notifications_read_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarkReadRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Mark Notifications Read",
         "tags": [
           "notifications"
         ]
@@ -4623,6 +4935,100 @@
           }
         },
         "summary": "Report Activity",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/learning-days": {
+      "get": {
+        "description": "The student's learning days for the calendar, as daily totals (never the questions).",
+        "operationId": "get_learning_days_v1_progress_learning_days_get",
+        "parameters": [
+          {
+            "description": "First day (default: a year ago).",
+            "in": "query",
+            "name": "from",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "First day (default: a year ago).",
+              "title": "From"
+            }
+          },
+          {
+            "description": "Last day (default: today, India time).",
+            "in": "query",
+            "name": "to",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "format": "date",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Last day (default: today, India time).",
+              "title": "To"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearningDaysOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Learning Days",
+        "tags": [
+          "progress"
+        ]
+      }
+    },
+    "/v1/progress/streak": {
+      "get": {
+        "description": "The learning streak: days (India time) with at least one meaningful, fully answered\nquestion. Computed by the server from those days; nothing about it can be set.",
+        "operationId": "get_learning_streak_v1_progress_streak_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LearningStreakOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Learning Streak",
         "tags": [
           "progress"
         ]

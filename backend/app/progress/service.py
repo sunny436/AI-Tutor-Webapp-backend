@@ -1,8 +1,8 @@
 """Progress summaries: today, this week, the streak and the student's goals.
 
-A day is **active** when it has at least one credited minute or one accepted question. The
-current streak is the run of active days ending today, or ending yesterday while today has
-no activity yet (so a streak does not look broken in the morning). Weeks start on Monday.
+Active time and questions are per day in the student's own time zone. The streak is the
+learning streak (app/progress/learning.py: meaningful, fully answered questions, India time),
+the same one the header and Settings > Learning & Streak show. Weeks start on Monday.
 """
 
 from __future__ import annotations
@@ -17,7 +17,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db.models import ActivityDay
 from app.learning.context import ActiveTimeGoals, read_active_time_goals
 from app.progress import activity
-from app.progress.activity import streaks
+from app.progress.learning import streak_state
 
 
 @dataclass(frozen=True)
@@ -68,7 +68,7 @@ class ProgressService:
             for row in rows
         }
         totals = {day: value for day, value in totals.items() if day <= today}  # a later zone can't add the future
-        current, longest = streaks({day for day, value in totals.items() if value.active}, today)
+        streak = await streak_state(self.db, user_id, activity.utcnow())
         week_start = today - timedelta(days=today.weekday())
         week = [value for day, value in totals.items() if week_start <= day <= today]
         return Summary(
@@ -78,8 +78,8 @@ class ProgressService:
             week_start=week_start,
             week_active_minutes=sum(value.active_minutes for value in week),
             week_questions=sum(value.questions for value in week),
-            current_streak=current,
-            longest_streak=longest,
+            current_streak=streak.current,
+            longest_streak=streak.longest,
             goals=await read_active_time_goals(self.db, user_id),
             days=[
                 totals.get(day, DayTotals(day)) for day in (today - timedelta(days=n) for n in range(days - 1, -1, -1))
