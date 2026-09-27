@@ -151,7 +151,7 @@ export function SidebarContent({
   return (
     <div
       className={cn(
-        "flex h-full flex-col border-r border-border bg-card transition-[width] duration-300 ease-in-out",
+        "flex h-full flex-col border-r border-border bg-card transition-[width] duration-slow ease-standard",
         collapsed ? "w-20" : "w-72 max-w-full",
       )}
     >
@@ -169,7 +169,7 @@ export function SidebarContent({
         </Link>
       </div>
 
-      <div ref={scroller} className="scrollbar-subtle flex min-h-0 flex-1 flex-col overflow-y-auto">
+      <div ref={scroller} className="scrollbar-subtle flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain">
 
         <div className={cn("shrink-0", collapsed ? "flex justify-center px-3 py-4" : "px-4 py-4")}>
           <RailTip label="Ask New Doubt" collapsed={collapsed}>
@@ -182,7 +182,7 @@ export function SidebarContent({
                 collapsed ? "h-11 w-11" : "w-full px-4 py-3 text-sm",
               )}
             >
-              <Plus aria-hidden className="h-5 w-5 transition-transform motion-safe:group-hover:rotate-90" />
+              <Plus aria-hidden className="h-5 w-5" />
               {!collapsed && "Ask New Doubt"}
             </Link>
           </RailTip>
@@ -209,7 +209,7 @@ export function SidebarContent({
                   aria-current={current ? "page" : undefined}
                   aria-label={collapsed ? item.label : undefined}
                   className={cn(
-                    "focus-ring relative flex items-center rounded-xl text-left transition-all",
+                    "focus-ring relative flex items-center rounded-xl text-left transition-[color,background-color,box-shadow]",
                     collapsed ? "mx-auto h-11 w-11 justify-center" : "w-full gap-3 px-3 py-2.5",
                     current
                       ? "bg-brand font-semibold text-brand-foreground shadow-md shadow-brand/20"

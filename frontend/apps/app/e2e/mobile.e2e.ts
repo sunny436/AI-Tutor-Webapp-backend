@@ -1,4 +1,4 @@
-import { composer, expect, expectAccessible, lastReply, sendAndWait, test } from "./support";
+import { composer, expect, expectAccessible, lastReply, seedTurn, sendAndWait, test, waitForHydration } from "./support";
 
 const WIDE = [
   "A wide table and a long line of code:",
@@ -58,5 +58,34 @@ test("on a phone: the drawer, the composer, and no sideways scrolling", async ({
     await expect(drawer).toBeHidden();
     await expect(page).toHaveURL(conversation);
     await expect(lastReply(page).getByRole("table")).toBeVisible();
+  });
+});
+
+test("on a phone: a tap leaves no hover behind, and the drawer keeps the chat's place", async ({ page, account: _ }) => {
+  let id = "";
+  for (let turn = 0; turn < 8; turn += 1) id = await seedTurn(page, `Question ${turn + 1}: ${WIDE.slice(0, 60)}`, id || undefined);
+  await page.goto(`/c/${id}`);
+  await waitForHydration(page);
+  await expect(page.getByRole("article", { name: "Assistant" })).toHaveCount(8);
+
+  await test.step("hover styles only exist where a pointer can hover", async () => {
+    const bell = page.getByRole("banner").getByRole("button", { name: /^Notifications/ });
+    const resting = await bell.evaluate((element) => getComputedStyle(element).backgroundColor);
+    await bell.tap();
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("menu")).toHaveCount(0);
+    expect(await bell.evaluate((element) => getComputedStyle(element).backgroundColor)).toBe(resting);
+  });
+
+  await test.step("opening and closing the drawer keeps the transcript where it was", async () => {
+    const transcript = page.locator("main .overflow-y-auto").first();
+    await transcript.evaluate((element) => element.scrollTo({ top: Math.round(element.scrollHeight / 3) }));
+    const before = await transcript.evaluate((element) => element.scrollTop);
+    expect(before, "the transcript is scrolled part-way").toBeGreaterThan(0);
+    await page.getByRole("button", { name: "Open menu" }).tap();
+    await expect(page.getByRole("dialog", { name: "Navigation" })).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("dialog", { name: "Navigation" })).toHaveCount(0);
+    expect(await transcript.evaluate((element) => element.scrollTop)).toBe(before);
   });
 });

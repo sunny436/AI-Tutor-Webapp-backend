@@ -114,7 +114,7 @@ export function SettingsPanel({ variant }: { variant: "panel" | "list" }) {
 
       <nav
         aria-label="Settings sections"
-        className={cn("min-h-0", variant === "panel" && "scrollbar-subtle flex-1 overflow-y-auto px-3 pb-3")}
+        className={cn("min-h-0", variant === "panel" && "scrollbar-subtle flex-1 overflow-y-auto overscroll-contain px-3 pb-3")}
       >
         {results.length === 0 ? (
           <p className="px-3 py-4 text-sm text-text-secondary">No settings match “{query.trim()}”.</p>

@@ -25,11 +25,11 @@ const SheetContent = React.forwardRef<
   }
 >(({ className, children, side = "left", ...props }, ref) => (
   <DialogPrimitive.Portal>
-    <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-overlay/55 backdrop-blur-[2px] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
+    <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-overlay/55 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=open]:duration-slow data-[state=open]:ease-enter data-[state=closed]:duration-fast data-[state=closed]:ease-exit" />
     <DialogPrimitive.Content
       ref={ref}
       className={cn(
-        "fixed inset-y-0 z-50 flex h-full max-w-[85vw] flex-col bg-card elev-3 outline-none duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out",
+        "fixed inset-y-0 z-50 flex h-full max-w-[85vw] flex-col overscroll-contain bg-card elev-3 outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=open]:duration-slow data-[state=open]:ease-enter data-[state=closed]:duration-fast data-[state=closed]:ease-exit",
         side === "left"
           ? "left-0 data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left"
           : "right-0 data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right",

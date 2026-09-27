@@ -15,7 +15,7 @@ const RESEND_COOLDOWN_SECONDS = 30;
 // 16 px below `sm`: iOS Safari zooms the page when a focused field is smaller,
 // and the zoom does not undo itself.
 const inputClass =
-  "h-11 w-full rounded-xl border border-input bg-surface px-3 text-base font-medium text-foreground outline-none transition-all placeholder:text-text-secondary focus:border-brand focus:bg-card focus:ring-4 focus:ring-brand/10 sm:h-11 sm:text-sm";
+  "h-11 w-full rounded-xl border border-input bg-surface px-3 text-base font-medium text-foreground outline-none transition-[border-color,background-color,box-shadow] placeholder:text-text-secondary focus:border-brand focus:bg-card focus:ring-4 focus:ring-brand/10 sm:h-11 sm:text-sm";
 
 function Field({ label, children, hint }: { label: string; children: (id: string) => ReactNode; hint?: string }) {
   const id = useId();

@@ -19,6 +19,7 @@
 .learning-calendar rect.day-cell {
   cursor: pointer;
   outline: none;
+  transition: stroke var(--motion-fast) var(--ease-standard);
 }
 
 .learning-calendar rect.day-cell:hover {
@@ -42,4 +43,12 @@
   line-height: 1.4;
   background: hsl(var(--foreground));
   color: hsl(var(--background));
+  /* Fades in: also hides the one frame before it is moved to the day's centre. */
+  animation: calendar-tip-in var(--motion-fast) var(--ease-enter) both;
+}
+
+@keyframes calendar-tip-in {
+  from {
+    opacity: 0;
+  }
 }

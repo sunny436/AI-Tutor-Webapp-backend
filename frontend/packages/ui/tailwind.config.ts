@@ -155,6 +155,20 @@ const config = {
         // text never runs the full width of a large monitor.
         prose: "68ch",
       },
+      // Motion tokens (globals.css, "motion"). DEFAULT retunes every bare `transition*`;
+      // tailwindcss-animate derives its durations and easings from these too.
+      transitionDuration: {
+        DEFAULT: "var(--motion-fast)",
+        fast: "var(--motion-fast)",
+        base: "var(--motion-base)",
+        slow: "var(--motion-slow)",
+      },
+      transitionTimingFunction: {
+        DEFAULT: "var(--ease-standard)",
+        standard: "var(--ease-standard)",
+        enter: "var(--ease-enter)",
+        exit: "var(--ease-exit)",
+      },
       // The accordion keyframes and their animations were removed with the rest
       // of the starter's leftovers: `packages/ui` has no Accordion component, so
       // they described a `--radix-accordion-content-height` variable that
@@ -163,6 +177,9 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  // `hover:` only where a pointer can hover: a tap on a phone or tablet never leaves a
+  // hover style stuck on.
+  future: { hoverOnlyWhenSupported: true },
 } satisfies Config;
 
 export default config;

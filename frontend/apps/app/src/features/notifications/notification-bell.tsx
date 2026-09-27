@@ -120,7 +120,7 @@ export function NotificationBell() {
           {badge && (
             <span
               aria-hidden
-              className="absolute -right-1 -top-1 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-destructive px-1 text-[10px] font-bold leading-none text-destructive-foreground"
+              className="absolute -right-1 -top-1 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-destructive px-1 text-[10px] font-bold leading-none text-destructive-foreground motion-safe:animate-in motion-safe:fade-in-0 motion-safe:zoom-in-75 duration-base ease-enter"
             >
               {badge}
             </span>

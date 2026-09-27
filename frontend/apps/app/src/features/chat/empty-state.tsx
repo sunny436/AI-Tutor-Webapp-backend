@@ -40,7 +40,7 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   const firstName = user.displayName?.trim().split(/\s+/)[0];
 
   return (
-    <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-8 px-4 py-10 sm:px-6">
+    <div className="mx-auto flex w-full max-w-3xl flex-1 animate-rise-in flex-col justify-center gap-8 px-4 py-10 sm:px-6">
       <div className="text-center">
         <p className="text-sm font-medium text-text-secondary">Namaste{firstName ? `, ${firstName}` : ""} 👋</p>
         <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">

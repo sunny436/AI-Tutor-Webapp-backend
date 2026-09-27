@@ -100,7 +100,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
-      <div ref={scrollRef} className="scrollbar-subtle min-h-0 flex-1 overflow-y-auto">
+      <div ref={scrollRef} className="scrollbar-subtle min-h-0 flex-1 overflow-y-auto overscroll-contain">
         <section ref={contentRef} aria-label="Conversation" className="flex min-h-full flex-col">
           {body}
         </section>
@@ -109,7 +109,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
         <button
           type="button"
           onClick={() => scrollToBottom("smooth")}
-          className="focus-ring absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-brand elev-2 transition hover:bg-brand-soft"
+          className="focus-ring absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-brand elev-2 transition hover:bg-brand-soft motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-left-1/2 motion-safe:slide-in-from-bottom-1 duration-base ease-enter"
         >
           <ArrowDown aria-hidden className="h-3.5 w-3.5" />
           Jump to latest

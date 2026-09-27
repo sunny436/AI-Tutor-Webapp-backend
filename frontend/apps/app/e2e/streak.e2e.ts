@@ -69,7 +69,8 @@ test("the streak counts real questions only, and opens Learning & Streak with th
   await page.goto("/");
   await waitForHydration(page);
   await expect(streakBadge(page)).toHaveAccessibleName("0 day learning streak, today's learning still to do");
-  await expect(banner(page).getByText(/\d+ hours? \d+ minutes? left in today's learning day/)).toBeAttached();
+  // "2 hours 14 minutes left…", or in the day's last hour "31 minutes left…".
+  await expect(banner(page).getByText(/(\d+ hours? )?\d+ minutes? left in today's learning day/)).toBeAttached();
 
   await sendAndWait(page, "hi");
   await expect(streakBadge(page)).toHaveAccessibleName("0 day learning streak, today's learning still to do");

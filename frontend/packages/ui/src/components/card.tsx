@@ -43,7 +43,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           // reduced-motion rule kills the transition, but the transform itself
           // would still snap. This removes the movement entirely for anyone who
           // asked for less of it, and keeps the border/shadow feedback.
-          "transition-[box-shadow,border-color,transform] duration-200 hover:border-brand/40 hover:elev-2 motion-safe:hover:-translate-y-0.5 focus-within:border-brand/40",
+          "transition-[box-shadow,border-color,transform] duration-base hover:border-brand/40 hover:elev-2 motion-safe:hover:-translate-y-0.5 focus-within:border-brand/40",
         className,
       )}
       {...props}
