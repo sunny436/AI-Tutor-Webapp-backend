@@ -1,4 +1,4 @@
-import { describeFocus, expect, expectAccessible, lastReply, seedTurn, sendAndWait, test } from "./support";
+import { describeFocus, expect, expectAccessible, lastReply, seedTurn, sendAndWait, test, waitForHydration } from "./support";
 
 test("sign-in and sign-up pages", async ({ page }) => {
   await page.goto("/login");
@@ -74,6 +74,8 @@ test("the collapsed rail names its controls on keyboard focus", async ({ page, a
 test("the chat dialogs keep focus inside, close on Escape and give focus back", async ({ page, account: _ }) => {
   const id = await seedTurn(page, "A chat to open dialogs on");
   await page.goto("/");
+  // Before hydration the composer's autofocus would take focus back from the button below.
+  await waitForHydration(page);
   const item = page.locator("li", { has: page.locator(`a[href="/c/${id}"]`) });
   const staysInside = async (name: string) => {
     for (let step = 0; step < 6; step += 1) {

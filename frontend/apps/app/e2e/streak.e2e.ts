@@ -88,6 +88,8 @@ test("the streak counts real questions only, and opens Learning & Streak with th
 
   await expect(todayCell(page)).toHaveCount(1);
   await expect.poll(() => todayInView(page)).toBe(true);
+  // On a desktop the whole year fits: no sideways scrolling.
+  expect(await page.locator(".learning-calendar").evaluate((box) => box.scrollWidth - box.clientWidth)).toBeLessThanOrEqual(0);
   await todayCell(page).click();
   await expect(page.getByText("✓ Learning day · 1 learning interaction")).toBeVisible();
   await expectNoHorizontalOverflow(page);

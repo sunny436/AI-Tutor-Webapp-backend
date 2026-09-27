@@ -17,13 +17,15 @@ const LEVELS = 4;
 /**
  * The library draws a fixed width (its `fitWidth` ignores the container), so the size is worked
  * out here from the calendar's own width: a year is at most 54 week columns, each a cell plus
- * 2px of padding, inside 20px margins either side. Too narrow for 8px cells, it scrolls.
+ * 2px of padding, inside 20px margins either side. The year fits when its days can be 6px or
+ * more; narrower (a phone), 10px days, easier to tap, scroll sideways instead.
  */
 const WEEKS = 54;
 const CELL_PADDING = 2;
 const MARGINS = 40;
 function layout(available: number) {
-  const cell = Math.max(8, Math.min(14, Math.floor((available - MARGINS) / WEEKS) - CELL_PADDING));
+  const fitted = Math.floor((available - MARGINS) / WEEKS) - CELL_PADDING;
+  const cell = fitted >= 6 ? Math.min(14, fitted) : 10;
   const grid = WEEKS * (cell + CELL_PADDING);
   // The legend (Less, four squares, More) sits under the grid's right end: its width places it there.
   return { cell, width: Math.max(available - MARGINS, grid), legend: 5 * (cell + CELL_PADDING) + 34 };
