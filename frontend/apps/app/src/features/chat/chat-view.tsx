@@ -6,9 +6,11 @@ import { useEffect, useRef, useState } from "react";
 import { preloadMessageContent } from "@/features/markdown/lazy-message-content";
 import { APP_NAME } from "@/lib/brand";
 import { Announcer } from "./announcer";
+import { cn } from "@v1/ui/utils";
+
 import { useChatEntry, useConversations, useStores } from "./chat-context";
 import { Composer } from "./composer";
-import { MessageList } from "./message-list";
+import { MessageList, isEmptyChat } from "./message-list";
 
 /**
  * The chat screen, for both `/` (a new chat) and `/c/[conversationId]`.
@@ -16,6 +18,12 @@ import { MessageList } from "./message-list";
  * Rendered by the `(chat)` LAYOUT, not by the two pages, so it stays mounted when
  * a new chat receives its id and the URL changes from `/` to `/c/<id>`: focus,
  * scroll position and the live stream carry straight on.
+ *
+ * While the chat is empty, a spacer below the composer takes as much room as the transcript
+ * above it, so the ONE composer sits in the middle with the greeting just above; when the first
+ * message goes, the spacer's share shrinks to nothing and the same composer glides to the bottom
+ * (no second composer, no remount: the text, focus and stream are untouched). Reduced motion
+ * (the device's or the app's) makes the move immediate (globals.css).
  */
 export function ChatView() {
   const params = useParams<{ conversationId?: string }>();
@@ -41,6 +49,7 @@ export function ChatView() {
   }, [chat, chatKey, conversationId]);
 
   useDocumentTitle(conversationId);
+  const empty = isEmptyChat(useChatEntry(chatKey));
 
   return (
     <div className="flex h-full min-h-0 flex-col">
@@ -52,6 +61,14 @@ export function ChatView() {
           const element = scrollRef.current;
           if (element) element.scrollTo({ top: element.scrollHeight });
         }}
+      />
+      <div
+        aria-hidden
+        data-composer-spacer=""
+        className={cn(
+          "min-h-0 shrink-0 basis-0 transition-[flex-grow] duration-slow ease-standard",
+          empty ? "grow" : "grow-0",
+        )}
       />
       <Announcer chatKey={chatKey} />
     </div>

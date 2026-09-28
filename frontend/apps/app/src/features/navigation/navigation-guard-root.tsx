@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
+import { leaving } from "./leaving";
 import { navigationGuard } from "./navigation-guard";
 
 /**
@@ -37,20 +38,29 @@ export function NavigationGuardRoot() {
         event.stopPropagation();
       }
     };
-    const popstate = (event: PopStateEvent) => navigationGuard.popstate(event.state);
+    const popstate = (event: PopStateEvent) => {
+      leaving.settled();
+      navigationGuard.popstate(event.state);
+    };
+    // Bubble phase and passive: it only notes where a click is heading (leaving.ts), after the
+    // guard above had its chance to stop it.
+    const note = (event: MouseEvent) => leaving.click(event, new URL(window.location.href));
 
     window.addEventListener("beforeunload", beforeUnload);
     document.addEventListener("click", click, true);
+    document.addEventListener("click", note, { passive: true });
     window.addEventListener("popstate", popstate);
     return () => {
       window.removeEventListener("beforeunload", beforeUnload);
       document.removeEventListener("click", click, true);
+      document.removeEventListener("click", note);
       window.removeEventListener("popstate", popstate);
       navigationGuard.detach();
     };
   }, []);
 
   useEffect(() => {
+    leaving.settled();
     navigationGuard.navigated(window.location.href);
   }, [pathname]);
 

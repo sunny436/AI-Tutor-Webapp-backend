@@ -8,9 +8,15 @@ import { useRef } from "react";
 
 import { describeCode } from "@/lib/api/errors";
 import { useChatEntry, useStores } from "./chat-context";
+import type { ChatEntry } from "./chat-store";
 import { ChatEmptyState } from "./empty-state";
 import { MessageRow } from "./message";
 import { useStickToBottom } from "./use-stick-to-bottom";
+
+/** A chat with nothing in it yet (a new chat): the greeting shows, and the composer is centred. */
+export function isEmptyChat(entry: ChatEntry | undefined): boolean {
+  return (entry?.status ?? "idle") === "ready" && (entry?.order.length ?? 0) === 0;
+}
 
 /**
  * The scrolling transcript. Subscribes to the conversation's `order` and status
@@ -79,8 +85,8 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
         <Skeleton className="ml-auto h-10 w-1/3 rounded-2xl" />
       </SkeletonGroup>
     );
-  } else if (order.length === 0) {
-    body = <ChatEmptyState chatKey={chatKey} />;
+  } else if (isEmptyChat(entry)) {
+    body = <ChatEmptyState />;
   } else {
     body = (
       <div className="mx-auto w-full max-w-3xl space-y-8 px-4 py-8 sm:px-6">

@@ -3,9 +3,13 @@ import {
   PASSWORD,
   composer,
   conversationIdOf,
+  currentGreeting,
+  emptyGreeting,
   expect,
   lastReply,
+  logOutFromSidebar,
   mailCode,
+  openSettingsFromSidebar,
   replies,
   send,
   sendAndWait,
@@ -53,7 +57,7 @@ test("a user's whole journey", async ({ page, context }) => {
     await page.getByLabel("Code").fill(await mailCode(email, "verify"));
     await page.getByRole("button", { name: "Verify email" }).click();
     await expect(page).toHaveURL("/");
-    await expect(page.getByRole("heading", { name: "How can I help your studies today?" })).toBeVisible();
+    await expect(emptyGreeting(page)).toHaveText(await currentGreeting(page));
   });
 
   await test.step("the session is an httpOnly cookie the page cannot read", async () => {
@@ -178,7 +182,7 @@ test("a user's whole journey", async ({ page, context }) => {
   await test.step("start a second chat", async () => {
     await page.getByRole("link", { name: "Ask New Doubt" }).click();
     await expect(page).toHaveURL("/");
-    await expect(page.getByRole("heading", { name: "How can I help your studies today?" })).toBeVisible();
+    await expect(emptyGreeting(page)).toHaveText(await currentGreeting(page));
     await sendAndWait(page, "A second chat");
     second = conversationIdOf(page);
     expect(second).not.toBe(first);
@@ -212,7 +216,7 @@ test("a user's whole journey", async ({ page, context }) => {
   });
 
   await test.step("log out; a chat link then asks to sign in and comes back", async () => {
-    await page.getByRole("button", { name: "Log out" }).click();
+    await logOutFromSidebar(page);
     await expect(page).toHaveURL("/login");
     expect((await context.cookies()).some((cookie) => cookie.name === "aichat_session" && cookie.value)).toBe(false);
 
@@ -226,7 +230,7 @@ test("a user's whole journey", async ({ page, context }) => {
   });
 
   await test.step("forgotten password: reset it with an emailed code", async () => {
-    await page.getByRole("button", { name: "Log out" }).click();
+    await logOutFromSidebar(page);
     await expect(page).toHaveURL("/login");
     await page.getByRole("button", { name: "Forgot password?" }).click();
     await page.getByLabel("Email").fill(email);
@@ -240,7 +244,7 @@ test("a user's whole journey", async ({ page, context }) => {
   });
 
   await test.step("change the display name in Settings", async () => {
-    await page.getByRole("link", { name: "Settings" }).click();
+    await openSettingsFromSidebar(page);
     await expect(page).toHaveURL("/settings/profile");
     await page.getByLabel("Display name").fill("E2E Renamed");
     await page.getByRole("button", { name: "Save", exact: true }).click();

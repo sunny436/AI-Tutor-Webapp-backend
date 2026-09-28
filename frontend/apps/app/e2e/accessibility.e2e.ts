@@ -1,4 +1,15 @@
-import { describeFocus, expect, expectAccessible, lastReply, seedTurn, sendAndWait, test, waitForHydration } from "./support";
+import {
+  currentGreeting,
+  describeFocus,
+  emptyGreeting,
+  expect,
+  expectAccessible,
+  lastReply,
+  seedTurn,
+  sendAndWait,
+  test,
+  waitForHydration,
+} from "./support";
 
 test("sign-in and sign-up pages", async ({ page }) => {
   await page.goto("/login");
@@ -11,7 +22,7 @@ test("sign-in and sign-up pages", async ({ page }) => {
 
 test("the chat, empty and with a reply, in light and dark", async ({ page, account: _ }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: "How can I help your studies today?" })).toBeVisible();
+  await expect(emptyGreeting(page)).toHaveText(await currentGreeting(page));
   await expectAccessible(page);
 
   await sendAndWait(page, "A **table**:\n\n| a | b |\n| - | - |\n| 1 | 2 |\n\n```ts\nconst x = 1;\n```\n\n$e^{i\\pi} + 1 = 0$");
@@ -62,12 +73,17 @@ test("every control reached by Tab shows where focus is", async ({ page, account
 test("the collapsed rail names its controls on keyboard focus", async ({ page, account: _ }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Collapse sidebar" }).click();
-  for (const name of ["Ask New Doubt", "AI Tutor", "Settings", "Log out"]) {
-    const control = page.getByRole("complementary").getByRole(name === "Log out" ? "button" : "link", { name });
+  for (const name of ["Ask New Doubt", "AI Tutor"]) {
+    const control = page.getByRole("complementary").getByRole("link", { name });
     await control.focus();
     // (Filtered: the previous tooltip can still be fading out.)
     await expect(page.getByRole("tooltip").filter({ hasText: name })).toHaveCount(1);
   }
+  // The account (Settings and Log out are in its menu): named on focus too.
+  const account = page.getByRole("complementary").getByRole("button", { name: /^Account: / });
+  await account.focus();
+  const who = ((await account.getAttribute("aria-label")) ?? "").replace(/^Account: /, "");
+  await expect(page.getByRole("tooltip").filter({ hasText: who })).toHaveCount(1);
   await expectAccessible(page);
 });
 
@@ -115,7 +131,7 @@ test("the chat dialogs keep focus inside, close on Escape and give focus back", 
   });
 });
 
-test("the skip link goes to the page, then Tab reaches the suggestions and the message box", async ({
+test("the skip link goes to the page, then Tab reaches the message box", async ({
   page,
   account: _,
 }) => {
@@ -134,11 +150,7 @@ test("the skip link goes to the page, then Tab reaches the suggestions and the m
   await expect(skip).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main")).toBeFocused();
-  // A new chat offers four suggested questions first, in reading order, then the box.
-  await page.keyboard.press("Tab");
-  await expect(page.getByRole("button", { name: /^Explain Photosynthesis/ })).toBeFocused();
-  for (let step = 0; step < 3; step += 1) await page.keyboard.press("Tab");
-  await expect(page.getByRole("button", { name: /^French Revolution Recapped/ })).toBeFocused();
+  // A new chat is its greeting and the message box: nothing to tab past on the way.
   await page.keyboard.press("Tab");
   await expect(page.getByRole("textbox", { name: "Message" })).toBeFocused();
 });

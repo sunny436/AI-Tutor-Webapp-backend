@@ -11,6 +11,12 @@ import { takeHeadingFocus } from "./heading-focus";
  * The building blocks every Settings section uses, so they all look and behave alike: the
  * section's own heading (`h2`, the app header owns the `h1`), cards with an `h3`, labelled
  * fields whose hint and error are announced with the field, switches and choice groups.
+ *
+ * Product settings, not a form: on wide screens a field is a row (what it is | the control) and a
+ * choice group sits beside its explanation; on phones everything stacks as before. The rows turn on
+ * where the CARD is wide enough (the Settings sidebar takes 256-288px from md up): fields at lg,
+ * pill groups at xl. Only layout changes: labels, hints, errors and fieldset names are wired to
+ * their controls exactly as before, in the same DOM order.
  */
 
 /**
@@ -57,11 +63,11 @@ export function SettingsCard({
 }) {
   return (
     <Card className={tone === "danger" ? "border-destructive/40" : undefined}>
-      <CardHeader>
+      <CardHeader className="gap-1.5 p-6 md:p-7">
         <CardTitle as={titleAs}>{title}</CardTitle>
-        {description && <CardDescription>{description}</CardDescription>}
+        {description && <CardDescription className="max-w-prose leading-relaxed">{description}</CardDescription>}
       </CardHeader>
-      {children && <CardContent className="flex flex-col gap-4">{children}</CardContent>}
+      {children && <CardContent className="flex flex-col gap-6 px-6 pb-6 pt-0 md:px-7 md:pb-7">{children}</CardContent>}
       {footer && (
         <CardFooter
           className={cn(
@@ -92,19 +98,23 @@ export function Field({
   const hintId = `${id}-hint`;
   const errorId = `${id}-error`;
   const describedBy = [hint ? hintId : null, error ? errorId : null].filter(Boolean).join(" ") || undefined;
+  // Stacked: label, control, hint, error. From lg: label and hint on the left, the control and its
+  // error on the right (grid placement only, so the DOM and reading order stay the same).
   return (
-    <div className="flex flex-col gap-1.5">
-      <label htmlFor={id} className="text-sm font-bold text-foreground">
+    <div className="flex flex-col gap-1.5 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-start lg:gap-x-8 lg:gap-y-1">
+      <label htmlFor={id} className="text-sm font-bold text-foreground lg:col-start-1 lg:row-start-1 lg:pt-2.5">
         {label}
       </label>
-      {children({ id, "aria-describedby": describedBy, "aria-invalid": error ? true : undefined })}
+      <div className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+        {children({ id, "aria-describedby": describedBy, "aria-invalid": error ? true : undefined })}
+      </div>
       {hint && (
-        <p id={hintId} className="text-2xs text-text-secondary">
+        <p id={hintId} className="text-2xs text-text-secondary lg:col-start-1 lg:row-start-2">
           {hint}
         </p>
       )}
       {error && (
-        <p id={errorId} className="text-sm text-destructive">
+        <p id={errorId} className="text-sm text-destructive lg:col-start-2 lg:row-start-3">
           {error}
         </p>
       )}
@@ -165,11 +175,25 @@ export function ChoiceGroup<T extends string>({
   onChange: (value: T) => void;
 }) {
   const name = useId();
+  // A <fieldset> named by aria-labelledby rather than a <legend>, so the name can sit in a column
+  // beside the pills: still a group with that name, of real radio buttons.
   return (
-    <fieldset>
-      <legend className="text-sm font-bold text-foreground">{legend}</legend>
-      {description && <p className="mt-0.5 text-sm text-text-secondary">{description}</p>}
-      <div className="mt-2 flex flex-wrap gap-2">
+    <fieldset
+      aria-labelledby={`${name}-legend`}
+      aria-describedby={description ? `${name}-description` : undefined}
+      className="xl:flex xl:items-start xl:justify-between xl:gap-8"
+    >
+      <div className="min-w-0 xl:max-w-[16rem] xl:flex-1 xl:pt-2">
+        <p id={`${name}-legend`} className="text-sm font-bold text-foreground">
+          {legend}
+        </p>
+        {description && (
+          <p id={`${name}-description`} className="mt-0.5 text-sm text-text-secondary">
+            {description}
+          </p>
+        )}
+      </div>
+      <div className="mt-2 flex flex-wrap gap-2 xl:mt-0 xl:flex-[1.6] xl:justify-start">
         {options.map((option) => (
           <label key={option.value} className="relative">
             {/* The real radio lies over its pill, invisible: it is what a pointer, a keyboard and

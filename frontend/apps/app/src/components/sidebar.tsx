@@ -1,11 +1,18 @@
 "use client";
 
 import { ConfirmDialog } from "@v1/ui/confirm-dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@v1/ui/dropdown-menu";
 import { PromptDialog } from "@v1/ui/prompt-dialog";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@v1/ui/tooltip";
 import { cn } from "@v1/ui/utils";
-import { LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2 } from "lucide-react";
+import { ChevronsUpDown, LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { type ReactElement, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
@@ -21,7 +28,6 @@ import { APP_NAME } from "@/lib/brand";
 import { BrandLockup, BrandMark } from "./brand/brand-mark";
 import { isActive, visibleNavItems } from "./nav-items";
 import { usePreview } from "./preview-context";
-import { ThemeSwitcher } from "./theme-switcher";
 import { useSignOut } from "./use-sign-out";
 import { UserAvatar } from "./user-avatar";
 import { useUser } from "./user-context";
@@ -340,54 +346,54 @@ export function SidebarContent({
         )}
       </div>
 
-      <div className={cn("shrink-0 border-t border-border bg-surface p-3", collapsed && "px-2")}>
-        <div className={cn("flex items-center gap-3", collapsed && "justify-center")}>
-          <UserAvatar user={user} />
-          {!collapsed && (
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-bold text-foreground">{name}</p>
-              {user.displayName && <p className="truncate text-xs text-text-secondary">{user.email}</p>}
-            </div>
-          )}
-        </div>
-        <div
-          className={cn(
-            "mt-3 flex items-center gap-1 border-t border-border pt-3 text-xs",
-            collapsed ? "flex-col" : "justify-between",
-          )}
-        >
-          <RailTip label="Settings" collapsed={collapsed}>
-            <Link
-              href={settingsHref}
-              onClick={onNavigate}
-              aria-label={collapsed ? "Settings" : undefined}
-              className={cn(
-                "focus-ring flex items-center gap-1.5 whitespace-nowrap rounded-lg font-medium text-text-secondary transition-colors hover:bg-surface-2 hover:text-foreground",
-                collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",
-              )}
-            >
-              <Settings aria-hidden className="h-4 w-4" />
-              {!collapsed && "Settings"}
-            </Link>
+      {/* Only the account here: Settings and Log out are in its menu. */}
+      <div className={cn("shrink-0 border-t border-border bg-surface p-2", collapsed && "px-2")}>
+        <DropdownMenu modal={false}>
+          <RailTip label={name} collapsed={collapsed}>
+            <DropdownMenuTrigger asChild>
+              <button
+                type="button"
+                aria-label={`Account: ${name}`}
+                className={cn(
+                  "focus-ring flex w-full items-center gap-3 rounded-xl p-1.5 text-left transition-colors hover:bg-surface-2 data-[state=open]:bg-surface-2",
+                  collapsed && "justify-center",
+                )}
+              >
+                <UserAvatar user={user} />
+                {!collapsed && (
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-sm font-bold text-foreground">{name}</span>
+                    {user.displayName && <span className="block truncate text-xs text-text-secondary">{user.email}</span>}
+                  </span>
+                )}
+                {!collapsed && <ChevronsUpDown aria-hidden className="h-4 w-4 shrink-0 text-text-secondary" />}
+              </button>
+            </DropdownMenuTrigger>
           </RailTip>
-          {/* Icon only: with the labels of Settings and Log out, a named theme no longer fits 288px. */}
-          {!collapsed && <ThemeSwitcher showLabel={false} />}
-          <RailTip label="Log out" collapsed={collapsed}>
-            <button
-              type="button"
-              onClick={signOut}
+          <DropdownMenuContent
+            side="top"
+            align="start"
+            sideOffset={6}
+            collisionPadding={8}
+            className={cn("min-w-[12rem] p-1", !collapsed && "w-[var(--radix-dropdown-menu-trigger-width)]")}
+          >
+            <DropdownMenuItem asChild className="gap-2.5 font-medium">
+              <Link href={settingsHref} onClick={onNavigate}>
+                <Settings aria-hidden className="h-4 w-4 text-text-secondary" />
+                Settings
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem
+              onSelect={() => void signOut()}
               disabled={signingOut}
-              aria-label={collapsed ? "Log out" : undefined}
-              className={cn(
-                "focus-ring flex items-center gap-1.5 whitespace-nowrap rounded-lg font-medium text-destructive transition-colors hover:bg-destructive/10 disabled:opacity-50",
-                collapsed ? "h-9 w-9 justify-center" : "px-2 py-1.5",
-              )}
+              className="gap-2.5 font-medium text-destructive focus:bg-destructive/10 focus:text-destructive"
             >
               <LogOut aria-hidden className="h-4 w-4" />
-              {!collapsed && "Log out"}
-            </button>
-          </RailTip>
-        </div>
+              Log out
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
 
       <PromptDialog

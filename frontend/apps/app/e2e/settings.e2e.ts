@@ -12,6 +12,7 @@ import {
   expectAccessible,
   expectNoHorizontalOverflow,
   mailCode,
+  openSettingsFromSidebar,
   sendAndWait,
   test,
   uniqueEmail,
@@ -357,7 +358,7 @@ test("progress: a question and an active minute count today, and start a streak"
   await expect(headerStreak(page)).toHaveAccessibleName(/^1 day learning streak$/);
   const chat = new URL(page.url()).pathname;
 
-  await page.getByRole("link", { name: "Settings", exact: true }).click();
+  await openSettingsFromSidebar(page);
   await page.getByRole("navigation", { name: "Settings sections" }).getByRole("link", { name: "Progress & Goals" }).click();
   await expect(page).toHaveURL("/settings/progress");
   await expect(page.getByText("about 1 min").first()).toBeVisible();

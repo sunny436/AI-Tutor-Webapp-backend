@@ -6,7 +6,7 @@
 
 import { type Page, expect } from "@playwright/test";
 
-import { expectAccessible, expectNoHorizontalOverflow, lastReply, seedTurn, test } from "./support";
+import { expectAccessible, expectNoHorizontalOverflow, lastReply, openSettingsFromSidebar, seedTurn, test } from "./support";
 
 const rows = (page: Page) => page.getByRole("navigation", { name: "Settings sections" }).getByRole("link");
 const row = (page: Page, name: string) =>
@@ -22,7 +22,7 @@ test("on a phone: the list, a section, back up to the same place, and out", asyn
   await expect(lastReply(page)).toBeVisible();
 
   await page.getByRole("button", { name: "Open menu" }).click();
-  await page.getByRole("dialog", { name: "Navigation" }).getByRole("link", { name: "Settings", exact: true }).click();
+  await openSettingsFromSidebar(page, page.getByRole("dialog", { name: "Navigation" }));
   await expect(page).toHaveURL("/settings");
   await expect(page.getByRole("heading", { level: 1, name: "Settings" })).toBeFocused();
   await expect(rows(page)).toHaveCount(12);

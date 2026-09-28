@@ -7,7 +7,7 @@
 
 import { type Page, expect } from "@playwright/test";
 
-import { composer, seedTurn, send, stopButton, test, waitForHydration, waitForIdle, LONG_MESSAGE } from "./support";
+import { composer, openSettingsFromSidebar, seedTurn, send, stopButton, test, waitForHydration, waitForIdle, LONG_MESSAGE } from "./support";
 
 const bell = (page: Page) => page.getByRole("banner").getByRole("button", { name: /^Notifications/ });
 
@@ -211,7 +211,7 @@ test("sending, streaming, menus and Settings shift nothing on the page", async (
   await page.keyboard.press("Escape");
   await stopButton(page).click();
   await waitForIdle(page);
-  await page.getByRole("link", { name: "Settings", exact: true }).click();
+  await openSettingsFromSidebar(page);
   const nav = page.getByRole("navigation", { name: "Settings sections" });
   for (const name of ["Notifications", "Learning & Streak", "Appearance & Accessibility"]) {
     await nav.getByRole("link", { name, exact: true }).click();

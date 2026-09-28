@@ -13,7 +13,9 @@ import { type ReactNode, createContext, useContext, useEffect, useState, useSync
 import { cancelMessage, clearFeedback, setFeedback, streamChat, streamRegenerate } from "@/lib/api/chat";
 import { deleteConversation, listConversations, listMessages, renameConversation } from "@/lib/api/conversations";
 import { retargetAppPath } from "@/features/navigation/app-return";
+import { leaving } from "@/features/navigation/leaving";
 import { LEARNING_EVENT } from "@/lib/activity";
+import { FALLBACK_GREETING } from "@/lib/greeting";
 import { onUnauthorized } from "@/lib/api/http";
 import type { ConversationPage } from "@/lib/api/types";
 import { ConversationsStore, type ConversationsState } from "@/features/conversations/conversations-store";
@@ -22,15 +24,19 @@ import { type ChatEntry, type ChatMessage, ChatStore } from "./chat-store";
 type Stores = { chat: ChatStore; conversations: ConversationsStore };
 
 const ChatContext = createContext<Stores | null>(null);
+/** This week's study greeting, loaded with the page by the signed-in layout (lib/greeting.ts). */
+const GreetingContext = createContext<string>(FALLBACK_GREETING);
 
 /** How often the sidebar may refetch when the window regains focus. */
 const FOCUS_REFRESH_MS = 30_000;
 
 export function ChatProvider({
   initialConversations,
+  greeting = FALLBACK_GREETING,
   children,
 }: {
   initialConversations: ConversationPage | null;
+  greeting?: string;
   children: ReactNode;
 }) {
   const router = useRouter();
@@ -47,13 +53,16 @@ export function ChatProvider({
 
     chat.onConversationCreated = (conversation) => {
       conversations.upsert(conversation);
-      // Still looking at the draft that became this conversation? Give it its URL.
+      if (chat.activeKey !== conversation.id) return;
+      const path = `/c/${conversation.id}`;
+      // "Close settings" comes back to this chat, however the next lines go (a replace below can
+      // itself be overtaken by a click that follows it).
+      retargetAppPath("/", path);
+      // Still looking at the draft, and not already on the way elsewhere? Give it its URL. The URL
+      // alone can't tell: while Next loads the next page (Settings, on a slow server) it still says
+      // "/", and a replace now would overtake that navigation and bring the student back here.
       // Both URLs render the same persistent chat view, so nothing remounts.
-      if (chat.activeKey === conversation.id) {
-        if (window.location.pathname === "/") router.replace(`/c/${conversation.id}`);
-        // Gone to Settings before the reply began? "Close settings" comes back to this chat.
-        else retargetAppPath("/", `/c/${conversation.id}`);
-      }
+      if (window.location.pathname === "/" && leaving.current() === null) router.replace(path);
     };
     chat.onConversationUpdated = (conversation) => conversations.upsert(conversation);
     chat.onReplyFinished = () => window.dispatchEvent(new Event(LEARNING_EVENT));
@@ -78,7 +87,16 @@ export function ChatProvider({
     };
   }, [stores, router, initialConversations]);
 
-  return <ChatContext.Provider value={stores}>{children}</ChatContext.Provider>;
+  return (
+    <ChatContext.Provider value={stores}>
+      <GreetingContext.Provider value={greeting}>{children}</GreetingContext.Provider>
+    </ChatContext.Provider>
+  );
+}
+
+/** The line above a new chat's composer: this week's study greeting, the same for everyone. */
+export function useStudyGreeting(): string {
+  return useContext(GreetingContext);
 }
 
 export function useStores(): Stores {

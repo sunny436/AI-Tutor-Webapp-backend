@@ -16,6 +16,7 @@ import { navItemFor } from "./nav-items";
 import { PreviewBadge } from "./preview-badge";
 import { usePreview } from "./preview-context";
 import { SidebarContent, activeConversationId, useCollapsedSidebar } from "./sidebar";
+import { ThemeMenu } from "./theme-menu";
 
 /**
  * Sidebar | (header + page). A flex layout the height of the dynamic viewport,
@@ -139,6 +140,7 @@ function Header({
         <StreakBadge />
         <DayCountdown className="hidden sm:inline-flex" />
         <NotificationBell />
+        <ThemeMenu />
       </div>
 
       <Link href="/" aria-label="Ask New Doubt" className={`${iconButton} md:hidden`}>

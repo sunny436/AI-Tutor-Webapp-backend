@@ -10,6 +10,7 @@ import {
   lastReply,
   replies,
   seedTurn,
+  send,
   test,
   waitForIdle,
 } from "./support";
@@ -92,7 +93,7 @@ test("the colour theme can be switched, and the choice is remembered", async ({ 
   await page.reload();
   await expect(html).toHaveClass(/\bdark\b/);
 
-  // The quick switch in the Settings top bar (the app's sidebar has the same one) saves to the account too.
+  // The quick switch in the Settings top bar (the app header's theme menu shares it) saves to the account too.
   await page.getByRole("banner").getByRole("combobox", { name: "Colour theme" }).click();
   await page.getByRole("option", { name: "Light" }).click();
   await expect(html).not.toHaveClass(/\bdark\b/);
@@ -189,9 +190,10 @@ test("an unknown page shows the not-found screen, with a way back", async ({ pag
   await expect(composer(page)).toBeVisible();
 });
 
-test("a suggested question is sent as an ordinary message", async ({ page, account: _ }) => {
+test("a new chat has no suggested questions; its first message is an ordinary message", async ({ page, account: _ }) => {
   await page.goto("/");
-  await page.getByRole("button", { name: /^Quadratic Formula/ }).click();
+  await expect(page.getByRole("list", { name: "Suggested questions" })).toHaveCount(0);
+  await send(page, "Give me the Quadratic Formula");
   await expect(page).toHaveURL(/\/c\/[0-9a-f-]{36}$/);
   await waitForIdle(page);
   await expect(page.getByRole("article", { name: "You" })).toHaveText(/Give me the Quadratic Formula/);

@@ -164,7 +164,7 @@ export function SettingsWorkspace({ children }: { children: ReactNode }) {
             tabIndex={-1}
             className="scrollbar-subtle min-h-0 flex-1 overflow-y-auto overscroll-contain outline-none"
           >
-            <div className="mx-auto w-full max-w-3xl px-4 py-6 sm:px-6 md:py-10 lg:px-10">{children}</div>
+            <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 md:py-10 lg:px-10">{children}</div>
           </main>
         </div>
       </div>

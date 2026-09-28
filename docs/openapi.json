@@ -2324,6 +2324,25 @@
         "title": "StreakOut",
         "type": "object"
       },
+      "StudyGreetingResponse": {
+        "properties": {
+          "text": {
+            "title": "Text",
+            "type": "string"
+          },
+          "weekOf": {
+            "format": "date",
+            "title": "Weekof",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "weekOf"
+        ],
+        "title": "StudyGreetingResponse",
+        "type": "object"
+      },
       "SubjectIn": {
         "additionalProperties": false,
         "properties": {
@@ -3821,6 +3840,27 @@
         "summary": "Replace the last reply with a new one (Server-Sent Events)",
         "tags": [
           "chat"
+        ]
+      }
+    },
+    "/v1/greetings/current": {
+      "get": {
+        "operationId": "current_greeting_v1_greetings_current_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyGreetingResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "This week's study greeting (the same for everyone; 404 when none is live)",
+        "tags": [
+          "greetings"
         ]
       }
     },

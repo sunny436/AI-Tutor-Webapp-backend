@@ -61,6 +61,7 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 | DELETE | `/v1/me` | `{password}` | 204 — deletes the account and all its data |
 | GET / PATCH | `/v1/me/appearance` | PATCH [versioned](#versioned-edits): `theme` (system\|light\|dark), `fontSize` (small\|medium\|large\|x_large), `highContrast`, `reduceMotion`, `readingComfort`, `showStreak` | the appearance, the same on every device |
 | GET / PATCH | `/v1/me/settings` | PATCH `{preferences: {...}}` (merged; `null` removes a key; ≤ 4 KB) | `{preferences, updatedAt}`. Unused by the web app; appearance is `/v1/me/appearance` |
+| GET | `/v1/greetings/current` | – | `{text, weekOf}`: this week's study greeting, the same for every user (404 when none is live; the web app then shows its own fallback). Weeks start Monday in `DEFAULT_TIMEZONE`; retire a greeting from a future Monday, never delete one |
 
 The user: `{id, email, displayName, emailVerified, createdAt, profileVersion, timezone, avatar: {url} | null,
 passwordChangedAt}`. `timezone` is an IANA name (`Asia/Kolkata`) or null. `passwordChangedAt` is null

@@ -29,6 +29,7 @@ from app.conversations.router import router as conversations_router
 from app.db.models import EMBEDDING_DIMENSIONS
 from app.db.session import Database
 from app.errors import install_error_handlers
+from app.greetings.router import router as greetings_router
 from app.health import router as health_router
 from app.learning.router import router as learning_router
 from app.llm.base import LLMProvider
@@ -169,4 +170,5 @@ def create_app(
     app.include_router(notifications_router)
     app.include_router(support_router)
     app.include_router(appearance_router)
+    app.include_router(greetings_router)
     return app

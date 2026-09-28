@@ -30,6 +30,7 @@ from sqlalchemy import (
     Date,
     DateTime,
     ForeignKey,
+    Identity,
     Index,
     Integer,
     LargeBinary,
@@ -402,6 +403,29 @@ class AppearanceSettings(Base):
     reading_comfort: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
     show_streak: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("true"))
     updated_at: Mapped[datetime] = _created()
+
+
+class StudyGreeting(Base):
+    """The app-level line above a new chat's composer (app/greetings). Not owned by any user: one
+    greeting per week, the same for everyone. Live for whole weeks, from `active_from` until
+    `retired_from` (both Mondays), so any week's set is fixed; retire, never delete."""
+
+    __tablename__ = "study_greetings"
+    __table_args__ = (
+        UniqueConstraint("text"),
+        CheckConstraint("char_length(btrim(text)) BETWEEN 1 AND 80", name="text"),
+        CheckConstraint("EXTRACT(ISODOW FROM active_from) = 1", name="active_from_monday"),
+        CheckConstraint(
+            "retired_from IS NULL OR (EXTRACT(ISODOW FROM retired_from) = 1 AND retired_from > active_from)",
+            name="retired_from",
+        ),
+    )
+
+    id: Mapped[int] = mapped_column(Integer, Identity(always=True), primary_key=True)
+    text: Mapped[str] = mapped_column(String(80), nullable=False)
+    active_from: Mapped[date] = mapped_column(Date, nullable=False)
+    retired_from: Mapped[date | None] = mapped_column(Date)
+    created_at: Mapped[datetime] = _created()
 
 
 class AuthSession(Base):

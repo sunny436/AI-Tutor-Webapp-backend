@@ -96,6 +96,9 @@ export type AppearanceValues = {
 };
 export type Appearance = AppearanceValues & { version: number; updatedAt: Timestamp | null };
 
+/** This week's study greeting (`GET /v1/greetings/current`): app-level, the same for every user. */
+export type StudyGreeting = { text: string; weekOf: string };
+
 export type NotificationValues = {
   dailyReminder: boolean;
   streakWarning: boolean;

@@ -1,7 +1,7 @@
 import AxeBuilder from "@axe-core/playwright";
-import { type Page, test as base, expect } from "@playwright/test";
+import { type Locator, type Page, test as base, expect } from "@playwright/test";
 
-import { APP_URL, MAILPIT_URL } from "./env";
+import { API_URL, APP_URL, MAILPIT_URL } from "./env";
 
 export { expect };
 
@@ -107,7 +107,38 @@ export const test = base.extend<Fixtures>({
   },
 });
 
+// ------------------------------------------------------------------ the sidebar's account menu
+
+/** Open the account menu at the foot of the sidebar (or of the phone drawer: pass it as `scope`). */
+export async function accountMenu(page: Page, scope?: Locator): Promise<Locator> {
+  await (scope ?? page.getByRole("complementary")).getByRole("button", { name: /^Account: / }).click();
+  const menu = page.getByRole("menu");
+  await expect(menu).toBeVisible();
+  return menu;
+}
+
+export async function openSettingsFromSidebar(page: Page, scope?: Locator): Promise<void> {
+  await (await accountMenu(page, scope)).getByRole("menuitem", { name: "Settings" }).click();
+}
+
+export async function logOutFromSidebar(page: Page): Promise<void> {
+  await (await accountMenu(page)).getByRole("menuitem", { name: "Log out" }).click();
+}
+
 // ------------------------------------------------------------------ the chat
+
+/** The line above a new chat's composer. */
+export const emptyGreeting = (page: Page) => page.getByRole("main").getByRole("heading", { level: 2 });
+
+/** This week's study greeting, straight from the API with this page's session. */
+export async function currentGreeting(page: Page): Promise<string> {
+  const session = (await page.context().cookies()).find((cookie) => cookie.name === "aichat_session")?.value ?? "";
+  const response = await page.request.get(`${API_URL}/v1/greetings/current`, {
+    headers: { Authorization: `Bearer ${decodeURIComponent(session)}` },
+  });
+  expect(response.status(), "GET /v1/greetings/current").toBe(200);
+  return (await response.json()).text;
+}
 
 export const composer = (page: Page) => page.getByRole("textbox", { name: "Message" });
 export const replies = (page: Page) => page.getByRole("article", { name: "Assistant" });

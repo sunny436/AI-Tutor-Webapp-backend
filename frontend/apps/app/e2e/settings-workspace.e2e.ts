@@ -16,6 +16,7 @@ import {
   expectAccessible,
   expectNoHorizontalOverflow,
   lastReply,
+  openSettingsFromSidebar,
   seedTurn,
   send,
   stopButton,
@@ -45,7 +46,6 @@ const closeSettings = (page: Page) => page.getByRole("link", { name: "Close sett
 const search = (page: Page) => page.getByRole("searchbox", { name: "Search settings" });
 const title = (page: Page) => page.getByRole("heading", { level: 1, name: "Settings" });
 const heading = (page: Page, name: string) => page.getByRole("heading", { level: 2, name, exact: true });
-const openSettingsFromSidebar = (page: Page) => page.getByRole("link", { name: "Settings", exact: true }).click();
 
 /** Nothing inside the section's scrolling area is wider than it. */
 async function expectNoInnerOverflow(page: Page) {

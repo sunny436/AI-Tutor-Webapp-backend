@@ -23,9 +23,17 @@ import { useAppearance } from "./appearance-provider";
  * 2am is least welcome.
  *
  * `next-themes` handles the value itself; this is only the control, so mounting
- * it on public pages costs nothing and changes no behaviour.
+ * it on public pages costs nothing and changes no behaviour. The app header's
+ * compact menu (theme-menu.tsx) shares the same choice and icons below.
  */
-export function ThemeSwitcher({ triggerClass, showLabel = true }: { triggerClass?: string; showLabel?: boolean }) {
+
+export const THEME_CHOICES = ["light", "dark", "system"] as const;
+
+/**
+ * The one theme choice both controls use: next-themes' value (only once mounted, since the theme
+ * is unknown on the server), and a change that also saves it to the account when signed in.
+ */
+export function useThemeChoice() {
   const { theme: currentTheme, setTheme, themes } = useTheme();
   // Signed in, the choice is saved to the account (every device); elsewhere only this browser.
   const appearance = useAppearance();
@@ -34,6 +42,22 @@ export function ThemeSwitcher({ triggerClass, showLabel = true }: { triggerClass
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   const shown = mounted ? currentTheme : undefined;
+  const choose = (theme: string) => {
+    setTheme(theme);
+    appearance?.change({ theme: theme as Theme });
+  };
+  return { shown, themes, choose };
+}
+
+/** The icon of a theme choice (System, or not known yet: the monitor). */
+export function ThemeIcon({ theme, className }: { theme: string | undefined; className?: string }) {
+  if (theme === "light") return <Sun aria-hidden className={className} />;
+  if (theme === "dark") return <Moon aria-hidden className={className} />;
+  return <Monitor aria-hidden className={className} />;
+}
+
+export function ThemeSwitcher({ triggerClass, showLabel = true }: { triggerClass?: string; showLabel?: boolean }) {
+  const { shown, themes, choose } = useThemeChoice();
 
   return (
     <Select
@@ -45,10 +69,7 @@ export function ThemeSwitcher({ triggerClass, showLabel = true }: { triggerClass
       // React threw "Hydration failed because the initial UI does not match".
       // Feeding it the same mount-guarded value keeps both renders identical.
       value={shown}
-      onValueChange={(theme) => {
-        setTheme(theme);
-        appearance?.change({ theme: theme as Theme });
-      }}
+      onValueChange={choose}
     >
       <SelectTrigger
         // The trigger has no visible label, so without this it announces as an
@@ -66,13 +87,7 @@ export function ThemeSwitcher({ triggerClass, showLabel = true }: { triggerClass
         className={cn("w-auto shrink-0 border-border bg-surface-2", triggerClass)}
       >
         <span className="!flex items-center gap-2 whitespace-nowrap">
-          {shown === "light" ? (
-            <Sun aria-hidden className="h-[14px] w-[14px]" />
-          ) : shown === "dark" ? (
-            <Moon aria-hidden className="h-[14px] w-[14px]" />
-          ) : (
-            <Monitor aria-hidden className="h-[14px] w-[14px]" />
-          )}
+          <ThemeIcon theme={shown} className="h-[14px] w-[14px]" />
           {shown && showLabel && (
             <span className="text-xs font-medium">
               {shown.charAt(0).toUpperCase() + shown.slice(1)}
