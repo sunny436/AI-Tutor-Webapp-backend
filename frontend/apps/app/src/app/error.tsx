@@ -30,7 +30,7 @@ export default function ErrorBoundary({ error, reset }: { error: Error & { diges
         <ThemeSwitcher />
       </div>
       <div className="relative">
-        <BrandMark size={56} className="mx-auto mb-5 rounded-2xl shadow-lg shadow-brand/25" />
+        <BrandMark size={56} className="mx-auto mb-5 rounded-2xl" />
         <h1 className="font-display text-2xl font-black tracking-tight text-foreground">Something went wrong</h1>
         <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-text-secondary">
           This page could not be loaded. Your chats are saved and nothing has been lost.

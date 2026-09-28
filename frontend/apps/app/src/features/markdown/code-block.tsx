@@ -34,7 +34,7 @@ export function CodeBlock({
   };
 
   return (
-    <div className="group/code my-3 overflow-hidden rounded-xl border border-border bg-surface-2/60">
+    <div className="group/code my-3 overflow-hidden rounded-xl border border-border bg-surface">
       <div className="flex items-center justify-between border-b border-border px-3 py-1.5 text-2xs text-text-secondary">
         <span className="font-mono">{language ?? "code"}</span>
         <button

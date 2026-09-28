@@ -28,7 +28,7 @@ export default function UnsubscribePage({ searchParams }: { searchParams: { toke
         tabIndex={-1}
         className="relative flex flex-1 items-start justify-center px-4 pb-16 pt-6 outline-none sm:items-center sm:pt-0"
       >
-        <div className="w-full max-w-md rounded-3xl border border-border bg-card p-6 elev-3 sm:p-8">
+        <div className="w-full max-w-md rounded-3xl border border-border bg-card p-6 elev-2 sm:p-8">
           <UnsubscribeCard token={token} />
         </div>
       </main>

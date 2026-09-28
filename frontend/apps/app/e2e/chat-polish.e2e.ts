@@ -1,4 +1,6 @@
-import type { Page } from "@playwright/test";
+import type { Locator, Page } from "@playwright/test";
+
+import { backendDir, sql } from "./db";
 
 import {
   chatLinks,
@@ -318,86 +320,396 @@ test("the greeting: one of this week's, a new one for the next chat, word by wor
   expect(second).not.toBe(first);
 });
 
-test("the greeting reads clearly in both themes and holds still with reduced motion", async ({ page, account: _ }) => {
-  for (const scheme of ["light", "dark"] as const) {
-    await page.emulateMedia({ colorScheme: scheme, reducedMotion: "reduce" });
-    await page.goto("/");
-    await waitForHydration(page);
-    await expectStudyGreeting(page);
-    // Every gradient stop against the page, as WCAG computes contrast.
-    const ratios = await page.evaluate(() => {
-      // A new element per colour: recolouring one would read the start of a (reduced-motion) transition.
-      const rgb = (token: string) => {
+/** The greeting is set to exactly `text` while `run` runs: the week's pool steps aside, then returns. */
+const MONDAY = "(date_trunc('week', now() AT TIME ZONE 'Asia/Kolkata'))::date";
+async function withGreeting(text: string, run: () => Promise<void>): Promise<void> {
+  const quoted = `'${text.replaceAll("'", "''")}'`;
+  sql("UPDATE study_greetings SET active_from = active_from + 700"); // 100 weeks on, Mondays kept
+  sql(`INSERT INTO study_greetings (text, active_from) VALUES (${quoted}, ${MONDAY})`);
+  try {
+    await run();
+  } finally {
+    sql(`DELETE FROM study_greetings WHERE text = ${quoted}`);
+    sql("UPDATE study_greetings SET active_from = active_from - 700");
+  }
+}
+
+/**
+ * The lowest contrast anywhere in the greeting AS RENDERED: each word is photographed once as a
+ * solid block of its gradient slice (the colour its letters get at every x) and once hidden (the
+ * real ground behind it, atmosphere included); every pixel pair is compared, as WCAG does.
+ */
+async function renderedGreetingContrast(page: Page): Promise<number> {
+  const heading = emptyGreeting(page);
+  const words = heading.locator("[data-greeting-word]");
+  const origin = await heading.boundingBox();
+  if (!origin) throw new Error("no greeting on screen");
+  const rects = await words.evaluateAll(
+    (spans, at) =>
+      spans.map((span) => {
+        const rect = span.getBoundingClientRect();
+        return { x: rect.left - at.x, y: rect.top - at.y, width: rect.width, height: rect.height };
+      }),
+    { x: origin.x, y: origin.y },
+  );
+  const paint = (mode: "block" | "hidden" | "text") =>
+    words.evaluateAll((spans, how) => {
+      for (const span of spans as HTMLElement[]) {
+        for (const property of ["background-clip", "-webkit-background-clip", "visibility"]) span.style.removeProperty(property);
+        if (how === "block") {
+          span.style.setProperty("background-clip", "border-box", "important");
+          span.style.setProperty("-webkit-background-clip", "border-box", "important");
+        }
+        if (how === "hidden") span.style.setProperty("visibility", "hidden", "important");
+      }
+    }, mode);
+  await paint("block");
+  const gradient = await heading.screenshot({ animations: "disabled" });
+  await paint("hidden");
+  const ground = await heading.screenshot({ animations: "disabled" });
+  await paint("text");
+  return page.evaluate(
+    async ({ gradient, ground, rects, width }) => {
+      const decode = async (png: string) => {
+        const image = new Image();
+        image.src = `data:image/png;base64,${png}`;
+        await image.decode();
+        const canvas = document.createElement("canvas");
+        canvas.width = image.width;
+        canvas.height = image.height;
+        const context = canvas.getContext("2d") as CanvasRenderingContext2D;
+        context.drawImage(image, 0, 0);
+        return { width: image.width, data: context.getImageData(0, 0, image.width, image.height).data };
+      };
+      const [fill, back] = [await decode(gradient), await decode(ground)];
+      const scale = fill.width / width;
+      const luminance = (data: Uint8ClampedArray, index: number) =>
+        [data[index] ?? 0, data[index + 1] ?? 0, data[index + 2] ?? 0]
+          .map((value) => value / 255)
+          .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4))
+          .reduce((sum, c, channel) => sum + c * ([0.2126, 0.7152, 0.0722][channel] ?? 0), 0);
+      let lowest = Number.POSITIVE_INFINITY;
+      for (const rect of rects) {
+        for (const at of [0.35, 0.5, 0.65]) {
+          const y = Math.round((rect.y + rect.height * at) * scale);
+          for (let x = Math.ceil((rect.x + 1) * scale); x < Math.floor((rect.x + rect.width - 1) * scale); x++) {
+            const index = (y * fill.width + x) * 4;
+            const [a, b] = [luminance(fill.data, index), luminance(back.data, index)];
+            lowest = Math.min(lowest, (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05));
+          }
+        }
+      }
+      return lowest;
+    },
+    { gradient: gradient.toString("base64"), ground: ground.toString("base64"), rects, width: origin.width },
+  );
+}
+
+const SHORT_GREETING = "Ready to learn?";
+const LONG_GREETING = "Ready to turn a confusing chapter into real clarity today?";
+
+test("the greeting as rendered clears 4.5:1 at every point: light and dark, one line and two, wide and narrow", async ({
+  page,
+  account: _,
+}) => {
+  test.skip(!backendDir, "needs the local backend's database");
+  test.setTimeout(120_000);
+  for (const text of [SHORT_GREETING, LONG_GREETING]) {
+    await withGreeting(text, async () => {
+      for (const scheme of ["light", "dark"] as const) {
+        for (const width of [1440, 390]) {
+          await page.setViewportSize({ width, height: 900 });
+          await page.emulateMedia({ colorScheme: scheme, reducedMotion: "reduce" });
+          await page.goto("/");
+          await waitForHydration(page);
+          await expect(emptyGreeting(page)).toHaveText(text);
+          const words = emptyGreeting(page).locator("[data-greeting-word]");
+          const lines = await words.evaluateAll((spans) => new Set(spans.map((span) => (span as HTMLElement).offsetTop)).size);
+          if (text === LONG_GREETING && width === 390) expect(lines, "the long greeting wraps on a phone").toBeGreaterThan(1);
+          const lowest = await renderedGreetingContrast(page);
+          expect(lowest, `"${text}", ${lines} line(s), ${scheme}, ${width}px`).toBeGreaterThanOrEqual(4.5);
+          // Reduced motion: every word in place at once.
+          const styles = await words.evaluateAll((spans) =>
+            spans.map((span) => `${getComputedStyle(span).animationName}|${getComputedStyle(span).opacity}`),
+          );
+          expect(new Set(styles)).toEqual(new Set(["none|1"]));
+        }
+      }
+    });
+  }
+  await expectAccessible(page);
+});
+
+/** WCAG contrast of an element's own text colour against its own background colour. */
+const ownContrast = (locator: Locator) =>
+  locator.evaluate((element) => {
+    const channels = (value: string) => (value.match(/[\d.]+/g) ?? []).slice(0, 3).map(Number);
+    const luminance = (value: string) =>
+      channels(value)
+        .map((v) => v / 255)
+        .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4))
+        .reduce((sum, c, index) => sum + c * ([0.2126, 0.7152, 0.0722][index] ?? 0), 0);
+    const style = getComputedStyle(element);
+    const [a, b] = [luminance(style.color), luminance(style.backgroundColor)];
+    return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+  });
+
+/** WCAG contrast between two tokens, each read from a fresh element (no transition to catch). */
+const tokenContrast = (page: Page, one: string, two: string) =>
+  page.evaluate(
+    ({ first, second }) => {
+      const luminance = (token: string) => {
         const probe = document.createElement("span");
         probe.style.color = `hsl(var(${token}))`;
         document.body.append(probe);
-        const color = getComputedStyle(probe).color;
+        const value = getComputedStyle(probe).color;
         probe.remove();
-        return (color.match(/\d+(\.\d+)?/g) ?? []).slice(0, 3).map(Number);
-      };
-      const luminance = ([r, g, b]: number[]) =>
-        [r, g, b]
-          .map((value) => (value ?? 0) / 255)
+        return (value.match(/[\d.]+/g) ?? [])
+          .slice(0, 3)
+          .map(Number)
+          .map((v) => v / 255)
           .map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4))
-          .reduce((sum, c, index) => sum + c * [0.2126, 0.7152, 0.0722][index]!, 0);
-      const background = luminance(rgb("--background"));
-      const ratios = Object.fromEntries(
-        ["--info", "--brand", "--accent-purple"].map((token) => {
-          const [light, dark] = [luminance(rgb(token)), background].sort((a, b) => b - a) as [number, number];
-          return [token, (light + 0.05) / (dark + 0.05)];
-        }),
-      );
-      return ratios;
-    });
-    for (const [token, ratio] of Object.entries(ratios)) expect(ratio, `${token} in ${scheme}`).toBeGreaterThanOrEqual(4.5);
-    // Reduced motion: every word in place at once.
-    const styles = await emptyGreeting(page)
-      .locator("[data-greeting-word]")
-      .evaluateAll((spans) => spans.map((span) => `${getComputedStyle(span).animationName}|${getComputedStyle(span).opacity}`));
-    expect(new Set(styles)).toEqual(new Set(["none|1"]));
-    await expectAccessible(page);
+          .reduce((sum, c, index) => sum + c * ([0.2126, 0.7152, 0.0722][index] ?? 0), 0);
+      };
+      const [a, b] = [luminance(first), luminance(second)];
+      return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+    },
+    { first: one, second: two },
+  );
+
+test("primary controls read clearly in both themes: at rest, hovered, disabled, and the focus ring", async ({
+  page,
+  account: _,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  for (const scheme of ["light", "dark"] as const) {
+    await page.emulateMedia({ colorScheme: scheme });
+    await page.goto("/");
+    await waitForHydration(page);
+    const ask = page.getByRole("complementary").getByRole("link", { name: "Ask New Doubt" });
+    const send = page.getByRole("button", { name: "Send message" });
+    expect(await ownContrast(ask), `Ask New Doubt, ${scheme}`).toBeGreaterThanOrEqual(4.5);
+    await ask.hover();
+    await page.waitForTimeout(300);
+    expect(await ownContrast(ask), `Ask New Doubt hovered, ${scheme}`).toBeGreaterThanOrEqual(4.5);
+    await page.mouse.move(800, 300);
+    await expect(send).toBeDisabled();
+    await page.waitForTimeout(300);
+    expect(await ownContrast(send), `Send disabled, ${scheme}`).toBeGreaterThanOrEqual(3);
+    await composer(page).fill("Explain gravity");
+    await page.waitForTimeout(300);
+    expect(await ownContrast(send), `Send, ${scheme}`).toBeGreaterThanOrEqual(4.5);
+    await send.hover();
+    await page.waitForTimeout(300);
+    expect(await ownContrast(send), `Send hovered, ${scheme}`).toBeGreaterThanOrEqual(4.5);
+    await composer(page).fill("");
+    expect(await tokenContrast(page, "--ring", "--background"), `focus ring on the page, ${scheme}`).toBeGreaterThanOrEqual(3);
+    expect(await tokenContrast(page, "--ring", "--card"), `focus ring on a card, ${scheme}`).toBeGreaterThanOrEqual(3);
+
+    await page.goto("/settings/privacy");
+    const button = page.getByRole("button", { name: "Change password", exact: true });
+    await expect(button).toBeVisible();
+    expect(await ownContrast(button), `a primary Button, ${scheme}`).toBeGreaterThanOrEqual(4.5);
   }
 });
 
-test("a long chat title slides in its row, a short one does not; it holds still on hover and with reduced motion", async ({
+test("a long title moves only while its row is hovered or keyboard-focused; at rest an ellipsis, sharp from the left", async ({
   page,
   account: _,
 }) => {
   const LONG = "A very long chat title about photosynthesis, respiration and the carbon cycle in green plants";
+  const short = await seedTurn(page, "Define osmosis");
   const long = await seedTurn(page, "Explain photosynthesis");
   await renameChat(page, long, LONG);
-  const short = await seedTurn(page, "Define osmosis");
   await page.setViewportSize({ width: 1280, height: 800 });
   await page.goto("/");
   await waitForHydration(page);
 
   const row = (id: string) => page.locator(`nav[aria-labelledby='chats-heading'] a[href='/c/${id}']`);
-  const motion = (id: string) =>
+  const state = (id: string) =>
     row(id)
-      .locator(".marquee-track")
-      .evaluate((element) => `${getComputedStyle(element).animationName}|${getComputedStyle(element).animationPlayState}`);
-  await expect(row(short)).toHaveText("Osmosis Definition");
-  await expect(row(short).locator(".marquee")).not.toHaveAttribute("data-overflowing");
-  expect(await motion(short)).toBe("none|running");
+      .locator(".marquee")
+      .evaluate((box) => {
+        const track = box.querySelector(".marquee-track") as HTMLElement;
+        const style = getComputedStyle(box);
+        const text = track.firstChild as Text;
+        const range = document.createRange();
+        range.setStart(text, 0);
+        range.setEnd(text, 1);
+        return {
+          overflowing: box.hasAttribute("data-overflowing"),
+          textOverflow: style.textOverflow,
+          mask: style.maskImage || style.webkitMaskImage || "none",
+          animation: getComputedStyle(track).animationName,
+          running: track.getAnimations().length,
+          firstLetterInside: range.getBoundingClientRect().left >= box.getBoundingClientRect().left - 0.5,
+        };
+      });
+  const moving = () =>
+    page.locator(".marquee-track").evaluateAll((tracks) => tracks.reduce((count, track) => count + track.getAnimations().length, 0));
 
-  await expect(row(long)).toHaveAccessibleName(LONG); // the whole title, however it is drawn
-  await expect(row(long).locator(".marquee")).toHaveAttribute("data-overflowing", "");
-  expect(await motion(long)).toBe("marquee|running");
-  const mask = await row(long)
-    .locator(".marquee")
-    .evaluate((element) => getComputedStyle(element).maskImage || getComputedStyle(element).webkitMaskImage);
-  expect(mask).toContain("linear-gradient");
-
-  await row(long).hover();
-  expect(await motion(long)).toBe("marquee|paused");
+  // At rest: still, an ellipsis, no mask, the first letter fully inside; nothing moves anywhere.
   await page.mouse.move(900, 400);
-  expect(await motion(long)).toBe("marquee|running");
-  await row(long).focus();
-  expect(await motion(long)).toBe("marquee|paused");
+  await expect(row(long)).toHaveAccessibleName(LONG);
+  expect(await state(long)).toEqual({
+    overflowing: true,
+    textOverflow: "ellipsis",
+    mask: "none",
+    animation: "none",
+    running: 0,
+    firstLetterInside: true,
+  });
+  expect(await moving()).toBe(0);
+  const restWidth = (await row(long).boundingBox())?.width;
+
+  // Hovered: after a short hold it slides, with a fade on the RIGHT edge only; the row keeps its width.
+  await row(long).hover();
+  await page.waitForTimeout(600);
+  const hovered = await state(long);
+  expect(hovered.animation).toBe("marquee");
+  expect(hovered.running).toBe(1);
+  expect(hovered.mask).toMatch(/^linear-gradient\((to right|90deg), rgb\(0, 0, 0\) .*rgba\(0, 0, 0, 0\)\)$/);
+  expect((await row(long).boundingBox())?.width).toBe(restWidth);
   await expectNoHorizontalOverflow(page);
 
+  // A short title never moves; leaving the long one stops it.
+  await row(short).hover();
+  await page.waitForTimeout(600);
+  expect((await state(short)).running).toBe(0);
+  expect(await state(long)).toMatchObject({ running: 0, mask: "none", textOverflow: "ellipsis" });
+
+  // Keyboard focus moves it; moving focus on stops it.
+  await page.mouse.move(900, 400);
+  await page.getByRole("complementary").getByRole("link", { name: "Ask New Doubt" }).focus();
+  await page.keyboard.press("Tab");
+  await expect(row(long)).toBeFocused();
+  await page.waitForTimeout(600);
+  expect((await state(long)).animation).toBe("marquee");
+  await page.keyboard.press("Shift+Tab");
+  await page.waitForTimeout(100);
+  expect((await state(long)).running).toBe(0);
+
+  // A click is not keyboard focus: once the pointer leaves, it is still.
+  await row(long).click();
+  await expect(page).toHaveURL(new RegExp(`/c/${long}$`));
+  await page.mouse.move(900, 400);
+  await page.waitForTimeout(600);
+  expect((await state(long)).running).toBe(0);
+
+  // Reduced motion, the device's and then the app's own: never moves, not even hovered.
   await page.emulateMedia({ reducedMotion: "reduce" });
-  expect((await motion(long)).split("|")[0]).toBe("none");
+  await row(long).hover();
+  await page.waitForTimeout(600);
+  expect(await state(long)).toMatchObject({ animation: "none", mask: "none", textOverflow: "ellipsis" });
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.mouse.move(900, 400);
+  await page.evaluate(() => document.documentElement.setAttribute("data-motion", "reduce"));
+  await row(long).hover();
+  await page.waitForTimeout(600);
+  expect(await state(long)).toMatchObject({ animation: "none", mask: "none" });
+});
+
+test("short screens: the greeting and the composer stay in view, the picture steps aside below 600px", async ({
+  page,
+  account: _,
+}) => {
+  const sizes = [
+    [1280, 600],
+    [1280, 500],
+    [1280, 450],
+    [390, 500],
+    [390, 450],
+    [390, 420], // a phone with its keyboard open
+    [844, 390],
+  ] as const;
+  for (const [width, height] of sizes) {
+    await page.setViewportSize({ width, height });
+    await page.goto("/");
+    await waitForHydration(page);
+    await expectStudyGreeting(page);
+    const header = await page.getByRole("banner").boundingBox();
+    const top = (header?.y ?? 0) + (header?.height ?? 0) - 1;
+    for (const [name, locator] of [
+      ["greeting", emptyGreeting(page)],
+      ["composer", composer(page)],
+    ] as const) {
+      const box = await locator.boundingBox();
+      expect(box && box.y >= top && box.y + box.height <= height + 0.5, `${name} in view at ${width}×${height}`).toBe(true);
+    }
+    const picture = page.locator("[data-study-illustration]");
+    if (height >= 600) await expect(picture).toBeVisible();
+    else await expect(picture).toBeHidden();
+    expect(await page.evaluate(() => (document.scrollingElement?.scrollHeight ?? 0) - window.innerHeight)).toBeLessThanOrEqual(0);
+    await expectNoHorizontalOverflow(page);
+  }
+});
+
+test("keyboard: the controls come in reading order", async ({ page, account: _ }) => {
+  await seedTurn(page, "Define osmosis");
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/");
+  await waitForHydration(page);
+  const names: string[] = [];
+  for (let press = 0; press < 18; press++) {
+    await page.keyboard.press("Tab");
+    names.push(
+      await page.evaluate(() => {
+        const element = document.activeElement as HTMLElement | null;
+        return element?.getAttribute("aria-label") || element?.textContent?.trim() || element?.tagName || "";
+      }),
+    );
+  }
+  const expected = [
+    /^Skip to content$/,
+    /PadhAI/,
+    /^Ask New Doubt$/,
+    /^Osmosis Definition$/,
+    /^Rename/,
+    /^Delete/,
+    /^Account: /,
+    /sidebar$/,
+    /streak/i,
+    /^Notifications/,
+    /^Colour theme$/,
+    /^Ask your doubt$|^TEXTAREA$/,
+  ];
+  let at = 0;
+  for (const name of names) if (at < expected.length && expected[at]?.test(name)) at += 1;
+  expect(at, `in order: ${names.join(" → ")}`).toBe(expected.length);
+});
+
+test("no layout shift on arrival or on the first message; the greeting's animations end, titles never start at rest", async ({
+  page,
+  account: _,
+}) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.addInitScript(() => {
+    const store = window as unknown as { __shift: number };
+    store.__shift = 0;
+    new PerformanceObserver((list) => {
+      for (const entry of list.getEntries() as unknown as { value: number; hadRecentInput: boolean }[]) {
+        if (!entry.hadRecentInput) store.__shift += entry.value;
+      }
+    }).observe({ type: "layout-shift", buffered: true });
+  });
+  await page.goto("/");
+  await waitForHydration(page);
+  await expectStudyGreeting(page);
+  await page.waitForTimeout(2000);
+  const shift = () => page.evaluate(() => (window as unknown as { __shift: number }).__shift);
+  expect(await shift(), "layout shift on arrival").toBeLessThan(0.02);
+  const greeting = await page
+    .locator("[data-greeting-word]")
+    .evaluateAll((spans) => spans.flatMap((span) => span.getAnimations().map((animation) => animation.playState)));
+  expect(greeting.every((state) => state === "finished"), `greeting animations: ${greeting.join(",")}`).toBe(true);
+  expect(await page.locator(".marquee-track").evaluateAll((tracks) => tracks.reduce((n, t) => n + t.getAnimations().length, 0))).toBe(0);
+
+  await page.evaluate(() => {
+    (window as unknown as { __shift: number }).__shift = 0;
+  });
+  await sendAndWait(page, "Explain photosynthesis");
+  await page.waitForTimeout(500);
+  expect(await shift(), "layout shift after the first message").toBeLessThan(0.02);
 });
 
 test("a hostile first message names the chat in plain words only", async ({ page, account: _ }) => {

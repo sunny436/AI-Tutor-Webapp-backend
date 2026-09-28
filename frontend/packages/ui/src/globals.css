@@ -7,12 +7,12 @@
  *
  * THE DIRECTION
  *
- * A study companion for school students: clear, friendly and bright, never
- * childish. Cool slate neutrals, white cards on a near-white page, and ONE
- * acting colour, indigo, with violet only as the second stop of a gradient.
- * Headings are set in a serif, which gives a textbook's authority; everything
- * the interface itself says is in the platform's own sans. Corners are soft
- * (8-16px) and shadows are short and cool.
+ * A calm place to study for hours. A warm-neutral page, white surfaces and borders that almost
+ * disappear, and ONE acting colour, a quiet slate blue, used for the primary action, selection
+ * and focus and nothing else. A muted sage is the only accent (the greeting's gradient drifts
+ * into it); it never means anything, so status colours stay clearly apart from it. Roughly 90%
+ * neutral, 8% blue, 2% everything else. Poppins throughout; soft corners (8-20px); shadows
+ * barely there, borders do the separating.
  *
  * WHAT DID NOT CHANGE
  *
@@ -20,57 +20,56 @@
  * referenced across the app; only the values moved, so no call site had to.
  * `--primary` is still the main TEXT colour (near-black in light, near-white in
  * dark) and NOT the brand. Turning it into the accent would turn every
- * paragraph indigo.
+ * paragraph blue.
  *
  * CONTRAST
  *
- * Every foreground/background pair below was measured, not estimated, in both
- * themes, and each clears 4.5:1 for text and 3:1 for focus rings (WCAG 1.4.11).
- * The ratio is recorded beside each colour that carries text. Two rules follow
- * from the measurements:
- *   - Text on a brand fill may be translucent down to /80 and no further (/75
- *     measures 4.24:1 in light and 4.25:1 in dark).
- *   - Slate-400 and slate-500, the usual "secondary grey", fail on slate-50/100.
- *     `--text-secondary` sits between slate-500 and slate-600 for that reason.
+ * Every foreground/background pair below was measured, not estimated, in both themes (the
+ * ratio sits beside each colour that carries text): text clears 4.5:1, focus rings and control
+ * edges 3:1 (WCAG 1.4.11). One blue cannot carry white text AND read as text on the dark page,
+ * so dark mode's brand is a lighter blue carrying DARK text. Status colours were also checked
+ * for separation from each other and from sage (OKLab, incl. colour-blind simulation); each
+ * status also always carries an icon and words, never colour alone.
  */
 @layer base {
   :root {
-    /* Slate-50 page, white cards on it. */
-    --background: 210 40% 98%;
-    --foreground: 217 32.6% 17.5%; /* 13.98:1 on background, 14.63:1 on card */
+    /* Warm-neutral page, white surfaces on it. */
+    --background: 220 23.1% 97.5%; /* #F7F8FA */
+    --foreground: 212.7 14.7% 14.7%; /* #20252B: 14.52:1 on background, 15.43:1 on card */
 
     --card: 0 0% 100%;
-    --card-foreground: 217 32.6% 17.5%;
+    --card-foreground: 212.7 14.7% 14.7%;
     --popover: 0 0% 100%;
-    --popover-foreground: 217 32.6% 17.5%;
+    --popover-foreground: 212.7 14.7% 14.7%;
 
-    /* TEXT, not brand. See the note above. 17.06:1 */
-    --primary: 222 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* TEXT, not brand. See the note above. */
+    --primary: 213.3 16.4% 10.8%; /* #171B20 */
+    --primary-foreground: 220 23.1% 97.5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 215 25% 26.7%; /* 9.45:1 */
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215 19.3% 34.5%; /* 6.92:1 on muted, 7.58:1 on card */
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222 47.4% 11.2%; /* 16.30:1 */
+    --secondary: 216 21.7% 95.5%; /* #F1F3F6 */
+    --secondary-foreground: 213.3 13.4% 26.3%; /* 9.15:1 */
+    --muted: 216 21.7% 95.5%;
+    --muted-foreground: 213 9.5% 41.2%; /* = text-secondary */
+    --accent: 216 21.7% 95.5%;
+    --accent-foreground: 213.3 16.4% 10.8%;
 
-    /* Rose, a shade deeper than rose-600, which measures 4.49:1 on the page.
-       5.02:1 on the page, 5.25:1 on a card and as a filled button. */
-    --destructive: 348 79.7% 46.3%;
+    /* A muted crimson: 5.84:1 on a card and carrying white, 5.50:1 on the page. */
+    --destructive: 353 50.8% 46.3%; /* #B23A48 */
     --destructive-foreground: 0 0% 100%;
 
-    /* Slate-200 hairlines. */
-    --border: 214 31.8% 91.4%;
-    --input: 214 31.8% 91.4%;
-    --ring: 239 83.5% 66.7%; /* 4.27:1 on page, 4.47:1 on card */
+    /* Hairlines that separate surfaces without drawing lines. A field's edge is not decoration:
+       it tells you where to type, so `--input` is darker, 3.31:1 on a card and 3.12:1 on the page
+       (WCAG 1.4.11). */
+    --border: 214.3 14.9% 90.8%; /* #E4E7EB */
+    --input: 212 6.7% 55.9%; /* #878E96 */
+    --ring: 210 28.8% 43.5%; /* the brand: 4.94:1 on the page, 5.25:1 on a card */
 
-    /* Indigo-600: the colour this product ACTS with. 6.01:1 as text on the
-       page, 5.62:1 on its soft tint, 6.29:1 carrying white as a button. */
-    --brand: 243 75.4% 58.6%;
+    /* Slate blue: the colour this product ACTS with. 4.94:1 as text on the page, 4.60:1 on
+       its soft tint, 5.25:1 carrying white (6.77:1 hovered). */
+    --brand: 210 28.8% 43.5%; /* #4F6F8F */
     --brand-foreground: 0 0% 100%;
-    --brand-soft: 226 100% 96.7%;
-    --brand-hover: 245 57.9% 50.6%; /* 7.90:1 with white */
+    --brand-soft: 205 40% 94.1%; /* #EAF1F6: the selected row, the brand's quiet tint */
+    --brand-hover: 209 31.2% 36.5%; /* #405E7A */
 
     --radius: 0.5rem;
 
@@ -95,135 +94,151 @@
     --ease-exit: cubic-bezier(0.4, 0, 1, 1);
 
     /* ---- semantic layer ----
-       `surface` is a well inside a card (inputs, list rows); `surface-2` is
-       one step deeper, for hover and skeletons. `text-secondary` names what
-       would otherwise be spelt as an opacity on `--primary`. */
-    --surface: 210 40% 98%;
-    --surface-2: 210 40% 96.1%;
-    --text-secondary: 215 17.3% 40.8%; /* 5.67:1 page, 5.94:1 card, 5.42:1 surface-2, 5.31:1 brand-soft */
+       `surface` is a well inside a card (list rows, code); `surface-2` is one step deeper, for
+       hover, the student's bubble and skeletons. `text-secondary` names what would otherwise be
+       spelt as an opacity on `--primary`. */
+    --surface: 220 23.1% 97.5%;
+    --surface-2: 210 21.4% 94.5%; /* #EEF1F4 */
+    --text-secondary: 213 9.5% 41.2%; /* #5F6873: 5.32:1 page, 5.65:1 card, 4.99:1 surface-2, 4.96:1 brand-soft */
 
-    /* Orange. Marks rather than acts: streaks and highlights, never a button. */
-    --accent-warm: 17 88.3% 40.4%; /* 4.88:1 on its soft, 5.18:1 on card */
-    --accent-warm-soft: 33 100% 96.5%;
+    /* The one accent: a muted grey sage. Decoration only (the greeting's gradient, the empty
+       state), never a status. 4.90:1 on the page. */
+    --sage: 137.1 6.7% 41.2%; /* #627066 */
+    --sage-soft: 140 11.1% 94.7%;
+    /* Warm ivory, for the empty state's faint warmth. Never behind text. */
+    --ivory: 39.1 56.1% 92%;
 
-    /* Status, kept distinct from the brand on purpose: "this worked" and "this
-       is our colour" are different statements. */
-    --success: 163 93.5% 24.3%; /* 5.21:1 on its soft */
-    --success-soft: 152 81% 95.9%;
-    --warning: 26 90.5% 37.1%; /* 4.84:1 */
-    --warning-soft: 48 100% 96.1%;
-    --info: 224 76.3% 48%; /* 6.16:1 */
-    --info-soft: 214 100% 96.9%;
+    /* The greeting's gradient: deep navy into the brand into sage (every stop and every point
+       between them clears 4.5:1 on the page: e2e/chat-polish.e2e.ts measures the rendered one). */
+    --greeting-from: 211.5 32.3% 24.3%; /* #2A3D52: 10.47:1 */
+    --greeting-via: 210 28.8% 43.5%; /* 4.94:1 */
+    --greeting-to: 137.1 6.7% 41.2%; /* 4.90:1 */
 
-    /* The learning tools' own colours, one per tool, as in the product's
-       navigation. Purple also fills the study-plan button. */
-    --accent-purple: 271 81.3% 55.9%; /* 5.02:1 on its soft, 5.38:1 carrying white */
+    /* Warm amber. Marks rather than acts: streaks and highlights, never a button. */
+    --accent-warm: 28.6 70% 35.3%; /* #99571B: 5.62:1 on a card, 4.99:1 on its soft */
+    --accent-warm-soft: 31.6 61.3% 93.9%;
+
+    /* Status, kept apart from the brand and from sage on purpose: "this worked" and "this is
+       our colour" are different statements. */
+    --success: 138.6 64.9% 30.2%; /* #1B7F3A: 5.07:1 on a card, 4.6:1 on its soft */
+    --success-soft: 133.3 33.3% 94.7%;
+    --warning: 45.2 100% 23.9%; /* #7A5C00: 6.25:1 on a card */
+    --warning-soft: 43.6 61.1% 92.9%;
+    --info: 210.7 39.8% 40.4%; /* #3E6690: 5.25:1 on its soft */
+    --info-soft: 207.7 44.8% 94.3%;
+
+    /* The learning tools' own colours (preview only), one per tool: muted, never loud. */
+    --accent-purple: 267.3 19.6% 43.9%; /* 5.32:1 on its soft */
     --accent-purple-foreground: 0 0% 100%;
-    --accent-purple-soft: 270 100% 98%;
-    --accent-pink: 335 77.6% 42%; /* 5.53:1 on its soft */
-    --accent-pink-soft: 327 73.3% 97.1%;
+    --accent-purple-soft: 265.7 28% 95.1%;
+    --accent-pink: 336.6 36.3% 44.3%; /* 5.27:1 on its soft */
+    --accent-pink-soft: 333.3 36% 95.1%;
 
-    /* The brand gradient (logo tile, hero banners, flashcards), and a deeper
-       one for large banners. Deep in BOTH themes, so white text on it holds
-       its contrast whatever the page does: 5.70:1 at its lightest stop;
-       `hero-muted` 4.63:1. */
-    --hero-from: 243 75.4% 58.6%;
-    --hero-to: 262 83.3% 57.8%;
-    --hero-deep-from: 242 47.4% 34.3%;
-    --hero-deep-to: 274 65.6% 32%;
+    /* The brand's washes (sign-in, error pages) and the preview banners' deep fill. White on
+       the deep fill clears 4.5:1 at both stops. */
+    --hero-from: 210 28.8% 43.5%;
+    --hero-to: 131.5 13.1% 38.8%;
+    --hero-deep-from: 210.7 32.8% 25.7%;
+    --hero-deep-to: 167.1 23% 23.9%;
     --hero-foreground: 0 0% 100%;
-    --hero-muted: 226 100% 93.9%;
+    --hero-muted: 208.4 37.3% 90%;
 
     /* Amber fill behind the streak's flame. Decorative only, never text. */
-    --streak: 38 92.1% 50.2%;
+    --streak: 36.9 69.6% 51%;
 
-    /* Chart series, in order: the brand, then colours that hold their
-       contrast on the page. */
-    --chart-1: 243 75.4% 58.6%;
-    --chart-2: 262 83.3% 57.8%;
-    --chart-3: 161 93.5% 30.4%;
-    --chart-4: 32 94.6% 43.7%;
-    --chart-5: 333 71.4% 50.6%;
+    /* Chart series, in order. */
+    --chart-1: 210 28.8% 43.5%;
+    --chart-2: 137.1 6.7% 41.2%;
+    --chart-3: 35.5 71% 42%;
+    --chart-4: 336.6 36.3% 44.3%;
+    --chart-5: 212.3 10.8% 47.1%;
 
     /* The scrim behind a modal. Not `bg-foreground/x`, which inverts, so dark
        mode would get a WHITE veil. */
-    --overlay: 222 47.4% 11.2%;
+    --overlay: 215 21.4% 11%;
   }
 
   .dark {
-    /* Deep blue-slate, not black: black crushes every shadow, so elevation
-       could no longer be expressed. */
-    --background: 223 47.4% 7.5%;
-    --foreground: 214 31.8% 91.4%; /* 15.51:1 */
+    /* Near-black with a blue cast, not pure black: black crushes every edge, so surfaces could
+       no longer be told apart. */
+    --background: 225 21.1% 7.5%; /* #0F1117 */
+    --foreground: 216 33.3% 97.1%; /* #F5F7FA: 17.58:1 */
 
-    --card: 222 47.4% 11.2%;
-    --card-foreground: 214 31.8% 91.4%; /* 14.48:1 */
-    --popover: 222 47.4% 11.2%;
-    --popover-foreground: 214 31.8% 91.4%;
+    --card: 222 17.9% 11%; /* #171A21 */
+    --card-foreground: 216 33.3% 97.1%; /* 16.22:1 */
+    --popover: 222 17.9% 11%;
+    --popover-foreground: 216 33.3% 97.1%;
 
-    --primary: 210 40% 96.1%; /* 17.46:1 */
-    --primary-foreground: 222 47.4% 11.2%;
+    --primary: 216 33.3% 97.1%;
+    --primary-foreground: 225 21.1% 7.5%;
 
-    --secondary: 217 32.6% 17.5%;
-    --secondary-foreground: 214 31.8% 91.4%; /* 11.87:1 */
-    --muted: 217 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%; /* 5.71:1 */
-    --accent: 217 32.6% 17.5%;
-    --accent-foreground: 210 40% 96.1%; /* 13.35:1 */
+    --secondary: 221.5 17.8% 14.3%;
+    --secondary-foreground: 216.9 23.6% 89.2%; /* 12.24:1 */
+    --muted: 221.5 17.8% 14.3%;
+    --muted-foreground: 220 15.4% 69.4%;
+    --accent: 221.5 17.8% 14.3%;
+    --accent-foreground: 216 33.3% 97.1%;
 
-    --destructive: 351 94.5% 71.4%; /* 7.11:1 text, 6.63:1 on a card */
-    --destructive-foreground: 223 47.4% 7.5%;
+    --destructive: 351 77% 72.7%; /* #EF8494: 7.53:1 on the page, carrying dark text */
+    --destructive-foreground: 225 21.1% 7.5%;
 
-    --border: 218 30.8% 20.4%;
-    --input: 218 30.8% 20.4%;
-    --ring: 234 89.5% 73.9%; /* 6.41:1 page, 5.98:1 card */
+    --border: 220 15.5% 19%; /* #292E38 */
+    --input: 218.4 10.8% 45.3%; /* #677080: 3.48:1 on a card, 3.78:1 on the page */
+    --ring: 210.5 32.5% 66.9%; /* 7.85:1 */
 
-    /* Indigo-400 with DARK text on it. One indigo cannot do both jobs here:
-       any shade dark enough to carry white fails as text on this ground.
-       6.41:1 as text, 5.15:1 on its soft, 6.41:1 as a button. */
-    --brand: 234 89.5% 73.9%;
-    --brand-foreground: 223 47.4% 7.5%;
-    --brand-soft: 236 41.2% 20%;
-    --brand-hover: 230 93.5% 81.8%;
+    /* A lighter, softer slate blue with DARK text on it: 7.85:1 as text, 6.35:1 on its soft,
+       7.85:1 as a button (9.78:1 hovered). */
+    --brand: 210.5 32.5% 66.9%; /* #8FAAC6 */
+    --brand-foreground: 225 21.1% 7.5%;
+    --brand-soft: 213.9 29.1% 15.5%; /* #1C2633 */
+    --brand-hover: 211.3 35.4% 74.5%;
 
-    --surface: 222 41.5% 12.7%;
-    --surface-2: 217 32.6% 17.5%;
-    --text-secondary: 215 20.2% 65.1%; /* 7.46:1 page, 6.96:1 card, 5.71:1 surface-2 */
+    --surface: 220 19.1% 9.2%;
+    --surface-2: 221.5 17.8% 14.3%; /* #1E222B */
+    --text-secondary: 220 15.4% 69.4%; /* #A5ADBD: 8.37:1 page, 7.72:1 card, 7.06:1 surface-2 */
 
-    --accent-warm: 27 96% 61%; /* 7.40:1 */
-    --accent-warm-soft: 23 44.8% 11.4%;
+    --sage: 130 7.3% 67.8%; /* #A7B3A9 */
+    --sage-soft: 140 10.3% 11.4%;
+    --ivory: 38.8 25.4% 13.1%;
+
+    --greeting-from: 212.3 31.7% 92%;
+    --greeting-via: 210.6 37.6% 75.5%;
+    --greeting-to: 132 11.1% 73.5%;
+
+    --accent-warm: 29.1 71.9% 65.1%; /* 8.18:1 */
+    --accent-warm-soft: 27 35.7% 11%;
 
     /* Soft variants are dim tints, not pale washes, and foregrounds lighten:
        a naive inversion vibrates against the surface. */
-    --success: 158 64.4% 51.6%; /* 7.97:1 */
-    --success-soft: 163 52.7% 10.8%;
-    --warning: 43 96.4% 56.3%; /* 9.52:1 */
-    --warning-soft: 43 58.5% 10.4%;
-    --info: 213 93.9% 67.8%; /* 6.43:1 */
-    --info-soft: 219 60.5% 14.9%;
+    --success: 113 55.7% 63.7%; /* #7BD66F */
+    --success-soft: 128 27.3% 10.8%;
+    --warning: 41.8 72.5% 64.3%; /* #E6BE62 */
+    --warning-soft: 43.6 40.7% 10.6%;
+    --info: 210.9 44.6% 71%;
+    --info-soft: 213.6 35.2% 13.9%;
 
-    --accent-purple: 270 95.2% 75.3%; /* 6.37:1 on its soft, 7.24:1 with dark text */
-    --accent-purple-foreground: 223 47.4% 7.5%;
-    --accent-purple-soft: 265 43.6% 15.3%;
-    --accent-pink: 329 85.5% 70.2%; /* 6.50:1 */
-    --accent-pink-soft: 316 41.9% 12.2%;
+    --accent-purple: 267 28.2% 72.2%;
+    --accent-purple-foreground: 225 21.1% 7.5%;
+    --accent-purple-soft: 263.1 20% 12.7%;
+    --accent-pink: 335.6 46.4% 72.9%;
+    --accent-pink-soft: 332 24.6% 12%;
 
-    --hero-from: 245 57.9% 50.6%; /* white 7.90:1 */
-    --hero-to: 263 70% 50.4%; /* white 7.10:1 */
-    --hero-deep-from: 244 47.1% 20%;
-    --hero-deep-to: 274 86.9% 21%;
+    --hero-from: 209 31.2% 36.5%;
+    --hero-to: 137.4 19.7% 30.8%;
+    --hero-deep-from: 212.6 32.7% 21%;
+    --hero-deep-to: 162.5 26.1% 18%;
     --hero-foreground: 0 0% 100%;
-    --hero-muted: 226 100% 93.9%; /* 5.77:1 at the lightest stop */
+    --hero-muted: 208.4 37.3% 90%;
 
-    --streak: 38 92.1% 50.2%;
+    --streak: 36.9 69.6% 51%;
 
-    --chart-1: 234 89.5% 73.9%;
-    --chart-2: 255 91.7% 76.3%;
-    --chart-3: 158 64.4% 51.6%;
-    --chart-4: 43 96.4% 56.3%;
-    --chart-5: 329 85.5% 70.2%;
+    --chart-1: 210.5 32.5% 66.9%;
+    --chart-2: 130 7.3% 67.8%;
+    --chart-3: 41.8 72.5% 64.3%;
+    --chart-4: 335.6 46.4% 72.9%;
+    --chart-5: 220 15.4% 69.4%;
 
-    --overlay: 229 84% 4.9%;
+    --overlay: 216 33.3% 2.9%;
   }
 }
 
@@ -235,6 +250,10 @@
     @apply bg-background text-foreground;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+  }
+  /* Selected text in the brand's tint, not the browser's saturated default blue. */
+  ::selection {
+    background-color: hsl(var(--brand) / 0.25);
   }
   /* Tabular contexts read counts down a column. */
   table {
@@ -254,21 +273,24 @@
 
 @layer utilities {
   /**
-   * Elevation. Short, cool shadows tinted with the slate of the text, so a
-   * raised card reads as lifted off the page rather than smudged onto it.
+   * Elevation, barely there: borders do the separating, a shadow only says "this sits above".
+   * Tinted with the navy of the text, so a raised surface reads as lifted, not smudged.
+   *   1  cards, the composer, the primary sidebar action
+   *   2  menus and popovers
+   *   3  dialogs
    */
   .elev-1 {
-    box-shadow: 0 1px 2px 0 hsl(222 47% 11% / 0.06);
+    box-shadow: 0 1px 2px 0 hsl(213 15% 15% / 0.05);
   }
   .elev-2 {
     box-shadow:
-      0 4px 6px -1px hsl(222 47% 11% / 0.07),
-      0 2px 4px -2px hsl(222 47% 11% / 0.06);
+      0 4px 12px -2px hsl(213 15% 15% / 0.08),
+      0 2px 4px -2px hsl(213 15% 15% / 0.05);
   }
   .elev-3 {
     box-shadow:
-      0 20px 25px -5px hsl(222 47% 11% / 0.12),
-      0 8px 10px -6px hsl(222 47% 11% / 0.08);
+      0 20px 32px -8px hsl(213 15% 15% / 0.14),
+      0 8px 12px -6px hsl(213 15% 15% / 0.06);
   }
   .dark .elev-1 {
     box-shadow: 0 1px 2px 0 hsl(0 0% 0% / 0.4);
@@ -286,7 +308,7 @@
 
   /**
    * The page ground behind sign-in and the error screens: two faint pools of
-   * the brand's own colours, indigo from the top left and violet from the top
+   * the brand's own colours, slate blue from the top left and sage from the top
    * right. No image, nothing to download.
    *
    * Fixed and pointer-events-none at the call site, so it never participates
@@ -407,8 +429,9 @@
   }
 
   /* A new chat's greeting (features/chat/empty-state.tsx): the words arrive one after another,
-     each painted with its slice of one gradient across the line (sized and offset per word by the
-     component). Every stop is >= 4.5:1 on the page in both themes (e2e/chat-polish.e2e.ts). */
+     each painted with its slice of ONE gradient across the line (sized and offset per word by the
+     component), deep navy drifting into the brand and then sage. The rendered text clears 4.5:1
+     on the page at every point, in both themes (measured in e2e/chat-polish.e2e.ts). */
   @keyframes word-in {
     from {
       opacity: 0;
@@ -421,7 +444,12 @@
   }
   .greeting-word {
     display: inline-block;
-    background-image: linear-gradient(90deg, hsl(var(--info)), hsl(var(--brand)) 55%, hsl(var(--accent-purple)));
+    background-image: linear-gradient(
+      90deg,
+      hsl(var(--greeting-from)),
+      hsl(var(--greeting-via)) 58%,
+      hsl(var(--greeting-to))
+    );
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
@@ -436,36 +464,65 @@
     }
   }
 
-  /* A sidebar chat title too long for its row (components/marquee-title.tsx): faded at the right
-     edge, and slid to its end and back now and then, waiting at each end. Still while its row is
-     hovered or focused, so it can be read or acted on. Transform only: the compositor moves it. */
+  /* A new chat's faint atmosphere (features/chat/chat-view.tsx): a whisper of the brand's blue
+     in the top-left corner and of warmth in the bottom-right, gone once the chat starts. Static
+     (no filter, no animation), kept to the corners, clear of the greeting and the composer, and
+     not drawn at all on short screens. */
+  .empty-atmosphere {
+    background-image:
+      radial-gradient(28rem 18rem at 0% 0%, hsl(var(--brand) / 0.07), transparent 70%),
+      radial-gradient(30rem 20rem at 100% 100%, hsl(var(--streak) / 0.06), transparent 70%);
+  }
+  .dark .empty-atmosphere {
+    background-image:
+      radial-gradient(28rem 18rem at 0% 0%, hsl(var(--brand) / 0.05), transparent 70%),
+      radial-gradient(30rem 20rem at 100% 100%, hsl(var(--streak) / 0.035), transparent 70%);
+  }
+
+  /* A sidebar chat title too long for its row (components/marquee-title.tsx). At rest it is
+     still: one line ending in an ellipsis, nothing moving, no fade. Only while THAT row is
+     hovered (a pointer that can hover) or holds focus does it slide, slowly, to its end and
+     back, after a short hold so a passing pointer never sets it off; then a fade appears on the
+     RIGHT edge only, never the left, so the start of the title is always sharp. Transform only:
+     the compositor moves it. Reduced motion (the device's or the app's) never moves it. */
   .marquee {
     display: block;
     overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .marquee-track {
-    display: inline-block;
     white-space: nowrap;
   }
-  .marquee[data-overflowing] {
-    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
-    mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
-  }
-  .marquee[data-overflowing] .marquee-track {
-    animation: marquee var(--marquee-cycle, 8s) ease-in-out infinite;
-  }
-  li:hover .marquee[data-overflowing] .marquee-track,
-  li:focus-within .marquee[data-overflowing] .marquee-track {
-    animation-play-state: paused;
+  @media (prefers-reduced-motion: no-preference) {
+    @media (hover: hover) {
+      html:not([data-motion="reduce"]) li:hover .marquee[data-overflowing] {
+        text-overflow: clip;
+        -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.25rem), transparent);
+        mask-image: linear-gradient(to right, #000 calc(100% - 1.25rem), transparent);
+      }
+      html:not([data-motion="reduce"]) li:hover .marquee[data-overflowing] .marquee-track {
+        display: inline-block;
+        animation: marquee var(--marquee-cycle, 8s) ease-in-out 350ms infinite;
+      }
+    }
+    html:not([data-motion="reduce"]) li:has(:focus-visible) .marquee[data-overflowing] {
+      text-overflow: clip;
+      -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.25rem), transparent);
+      mask-image: linear-gradient(to right, #000 calc(100% - 1.25rem), transparent);
+    }
+    html:not([data-motion="reduce"]) li:has(:focus-visible) .marquee[data-overflowing] .marquee-track {
+      display: inline-block;
+      animation: marquee var(--marquee-cycle, 8s) ease-in-out 350ms infinite;
+    }
   }
   @keyframes marquee {
     0%,
-    25% {
+    20% {
       transform: translateX(0);
     }
     50%,
-    75% {
+    70% {
       transform: translateX(var(--marquee-shift, 0));
     }
     100% {
@@ -586,21 +643,21 @@
   }
 
   /* High contrast: secondary text moves most of the way to the main text colour, and every
-     edge (borders, field outlines) becomes clearly visible. Measured: light, slate-700 text
-     9.86:1 on the page and 10.32:1 on a card, slate-500 edges 4.74:1 on a card; dark,
-     slate-300 text 12.86:1 on the page and 12.00:1 on a card, slate-400 edges 6.96:1 on a
-     card. The dark rule is more specific, so it wins over the light one there. */
+     edge (borders, field outlines) becomes clearly visible. Measured: light, text #3B434D
+     9.43:1 on the page and 10.02:1 on a card, edges #66707D 5.02:1 on a card; dark, text
+     #D0D6DF 12.91:1 on the page and 11.91:1 on a card, edges #9AA3B2 6.83:1 on a card. The
+     dark rule is more specific, so it wins over the light one there. */
   html[data-contrast="high"] {
-    --text-secondary: 215 25% 26.7%;
-    --muted-foreground: 215 25% 26.7%;
-    --border: 215 16.3% 46.9%;
-    --input: 215 16.3% 46.9%;
+    --text-secondary: 213.3 13.2% 26.7%;
+    --muted-foreground: 213.3 13.2% 26.7%;
+    --border: 213.9 10.1% 44.5%;
+    --input: 213.9 10.1% 44.5%;
   }
   html.dark[data-contrast="high"] {
-    --text-secondary: 212.7 26.8% 83.9%;
-    --muted-foreground: 212.7 26.8% 83.9%;
-    --border: 215 20.2% 65.1%;
-    --input: 215 20.2% 65.1%;
+    --text-secondary: 216 19% 84.5%;
+    --muted-foreground: 216 19% 84.5%;
+    --border: 217.5 13.5% 65.1%;
+    --input: 217.5 13.5% 65.1%;
   }
 
   /* Reduce motion, chosen in the app: the same as the prefers-reduced-motion rules above,
@@ -630,4 +687,26 @@
     letter-spacing: 0.012em;
     word-spacing: 0.06em;
   }
+}
+
+/* Toasts (sonner) in the design system's colours, following the app's own theme: sonner's
+   built-in palettes (and its default light theme in a dark app) match neither. Unlayered and
+   more specific than sonner's `[data-sonner-toaster][data-sonner-theme=…]`, which sonner injects
+   at runtime, so these always win. Every text/background pair is a measured token pair. */
+:root [data-sonner-toaster][data-sonner-theme] {
+  --normal-bg: hsl(var(--popover));
+  --normal-border: hsl(var(--border));
+  --normal-text: hsl(var(--popover-foreground));
+  --success-bg: hsl(var(--success-soft));
+  --success-border: hsl(var(--success) / 0.25);
+  --success-text: hsl(var(--success));
+  --info-bg: hsl(var(--info-soft));
+  --info-border: hsl(var(--info) / 0.25);
+  --info-text: hsl(var(--info));
+  --warning-bg: hsl(var(--warning-soft));
+  --warning-border: hsl(var(--warning) / 0.25);
+  --warning-text: hsl(var(--warning));
+  --error-bg: color-mix(in srgb, hsl(var(--destructive)) 8%, hsl(var(--card)));
+  --error-border: hsl(var(--destructive) / 0.3);
+  --error-text: hsl(var(--destructive));
 }

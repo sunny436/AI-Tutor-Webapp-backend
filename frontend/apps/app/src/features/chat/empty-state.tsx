@@ -4,12 +4,13 @@ import { type CSSProperties, Fragment, useLayoutEffect, useRef, useState } from 
 
 import { pickGreeting } from "@/lib/greeting";
 import { useStudyGreetings } from "./chat-context";
+import { StudyIllustration } from "./study-illustration";
 
 /**
- * What a new, empty chat shows above the composer: a study greeting picked at random from this
- * week's pool, kept for this chat (lib/greeting.ts), and nothing else. It sits at the bottom of the
- * transcript's space, so it is directly above the composer, which the chat view centres while the
- * chat is empty.
+ * What a new, empty chat shows above the composer: a small, quiet picture (study-illustration.tsx)
+ * and a study greeting picked at random from this week's pool, kept for this chat
+ * (lib/greeting.ts), and nothing else. It sits at the bottom of the transcript's space, so it is
+ * directly above the composer, which the chat view centres while the chat is empty.
  *
  * The words arrive one after another, each painted with its slice of ONE gradient that runs across
  * its line (measured, so the colour flows through the words instead of restarting in each). It is
@@ -25,11 +26,12 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-end px-4 pb-6 pt-10 sm:px-6">
+      <StudyIllustration />
       <h2
         key={greeting ?? ""}
         ref={ref}
         data-greeting=""
-        className="text-balance text-center font-display text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+        className="text-balance text-center font-display text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
       >
         {greeting === null ? (
           <span className="invisible">&nbsp;</span>
@@ -73,9 +75,17 @@ function useLineGradient(greeting: string | null) {
       }
     };
     paint();
+    // Again whenever the line or a word changes size: the web font arriving moves the words
+    // without resizing the heading.
+    let mounted = true;
     const observer = new ResizeObserver(paint);
     observer.observe(heading);
-    return () => observer.disconnect();
+    for (const word of heading.querySelectorAll("[data-greeting-word]")) observer.observe(word);
+    void document.fonts?.ready.then(() => mounted && paint());
+    return () => {
+      mounted = false;
+      observer.disconnect();
+    };
   }, [greeting]);
   return ref;
 }

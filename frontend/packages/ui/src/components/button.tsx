@@ -12,15 +12,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // The primary action is the product's own indigo, lifted by a shadow
-        // of its own colour. Not `bg-primary`: in this codebase that is the
-        // near-black TEXT colour.
-        default:
-          "bg-brand text-brand-foreground shadow-md shadow-brand/20 hover:bg-brand-hover",
+        // The primary action is the product's slate blue on a hairline shadow (never a
+        // coloured glow). Not `bg-primary`: in this codebase that is the near-black TEXT colour.
+        default: "bg-brand text-brand-foreground elev-1 hover:bg-brand-hover",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        // Secondary: a white surface and a hairline, no shadow.
         outline:
-          "border border-input bg-card text-foreground elev-1 hover:border-brand/30 hover:bg-surface-2",
+          "border border-input bg-card text-foreground hover:border-brand/30 hover:bg-surface-2",
         secondary: "bg-secondary text-secondary-foreground hover:bg-border",
         ghost: "hover:bg-surface-2 hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",

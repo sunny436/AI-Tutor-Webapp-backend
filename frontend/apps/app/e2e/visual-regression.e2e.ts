@@ -39,6 +39,7 @@ function masks(page: Page): Locator[] {
   return [
     page.locator("time"),
     page.getByRole("button", { name: /^Account: / }),
+    page.getByText(/@example\.com/),
   ];
 }
 
@@ -47,17 +48,24 @@ async function snap(page: Page, name: string): Promise<void> {
   // group a fixed, empty box, so nothing around it (the header's name) moves between runs.
   const width = (page.viewportSize()?.width ?? 0) < 640 ? "9rem" : "16.5rem";
   // By structure, not role: once hidden (by an earlier photo of this page) it has no role.
-  await page
-    .locator("header button[aria-label='Colour theme']")
-    .locator("xpath=..")
-    .evaluate((group, fixed) => Object.assign((group as HTMLElement).style, { width: fixed, overflow: "hidden", visibility: "hidden" }), width);
+  const group = page.locator("header button[aria-label='Colour theme']").locator("xpath=..");
+  if (await group.count()) {
+    await group.evaluate(
+      (element, fixed) => Object.assign((element as HTMLElement).style, { width: fixed, overflow: "hidden", visibility: "hidden" }),
+      width,
+    );
+  }
   await page.waitForTimeout(150);
-  await expect(page).toHaveScreenshot(`${name}.png`, {
+  // Soft: every state is compared (and a candidate written) in one run; any difference still fails the test.
+  await expect.soft(page).toHaveScreenshot(`${name}.png`, {
     animations: "disabled",
     caret: "hide",
     mask: masks(page),
-    // Same machine, same fonts: identical runs differ by 0 pixels, so a small budget catches small regressions.
+    // Same machine, same fonts: identical runs differ by 0 pixels, so a small budget catches small
+    // regressions, and a low per-pixel threshold catches colour drift (the default 0.2 lets a white
+    // field pass for a grey one).
     maxDiffPixels: 100,
+    threshold: 0.02,
   });
 }
 
@@ -115,6 +123,59 @@ for (const width of WIDTHS) {
         await expect(page.getByRole("dialog", { name: "Navigation" })).toBeVisible();
         await snap(page, `drawer-${width}-${theme}`);
       }
+    });
+  }
+}
+
+// Around the app: Settings, the account menu, the rename dialog, a hovered long title, not-found and
+// sign-in, at the widest and a phone's width, in both themes.
+for (const width of [1440, 390]) {
+  for (const theme of THEMES) {
+    test(`around the app at ${width}px, ${theme}`, async ({ page, browser, account: _ }) => {
+      test.setTimeout(90_000);
+      const named = await seedTurn(page, "Explain photosynthesis");
+      await renameChat(page, named, LONG);
+      await page.setViewportSize({ width, height: HEIGHT });
+      await page.emulateMedia({ colorScheme: theme, reducedMotion: "reduce" });
+
+      await page.goto("/settings/appearance");
+      await expect(page.getByRole("main").getByRole("heading", { level: 2 }).first()).toBeVisible();
+      await snap(page, `settings-appearance-${width}-${theme}`);
+
+      await page.goto("/");
+      await waitForHydration(page);
+      const phone = width < MD;
+      if (phone) await page.getByRole("button", { name: "Open menu" }).click();
+      const panel = phone ? page.getByRole("dialog", { name: "Navigation" }) : page.getByRole("complementary");
+      await panel.getByRole("button", { name: /^Account: / }).click();
+      await expect(page.getByRole("menu")).toBeVisible();
+      await snap(page, `account-menu-${width}-${theme}`);
+      await page.keyboard.press("Escape");
+      await panel.getByRole("button", { name: /^Rename/ }).first().click();
+      await expect(page.getByRole("dialog", { name: "Rename chat" })).toBeVisible();
+      await snap(page, `rename-dialog-${width}-${theme}`);
+
+      if (!phone) {
+        // The only moment a title moves: hovered (the photo holds it at its start, fade on the right).
+        await page.goto("/");
+        await waitForHydration(page);
+        await page.emulateMedia({ colorScheme: theme, reducedMotion: "no-preference" });
+        await page.locator(`nav[aria-labelledby='chats-heading'] a[href='/c/${named}']`).hover();
+        await page.waitForTimeout(500);
+        await snap(page, `row-hover-${width}-${theme}`);
+        await page.emulateMedia({ colorScheme: theme, reducedMotion: "reduce" });
+      }
+
+      await page.goto("/no-such-page");
+      await expect(page.getByRole("heading", { name: "This page could not be found" })).toBeVisible();
+      await snap(page, `not-found-${width}-${theme}`);
+
+      const signedOut = await browser.newPage({ viewport: { width, height: HEIGHT } });
+      await signedOut.emulateMedia({ colorScheme: theme, reducedMotion: "reduce" });
+      await signedOut.goto("/login");
+      await expect(signedOut.getByRole("button", { name: "Sign in" })).toBeVisible();
+      await snap(signedOut, `sign-in-${width}-${theme}`);
+      await signedOut.close();
     });
   }
 }

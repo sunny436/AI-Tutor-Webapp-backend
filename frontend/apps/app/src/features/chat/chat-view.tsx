@@ -52,7 +52,15 @@ export function ChatView() {
   const empty = isEmptyChat(useChatEntry(chatKey));
 
   return (
-    <div className="flex h-full min-h-0 flex-col">
+    <div className="relative isolate flex h-full min-h-0 flex-col">
+      {/* A faint warmth in the corners while the chat is empty (globals.css `.empty-atmosphere`). */}
+      <div
+        aria-hidden
+        className={cn(
+          "empty-atmosphere pointer-events-none absolute inset-0 -z-10 transition-opacity duration-slow ease-standard [@media(max-height:599px)]:hidden",
+          empty ? "opacity-100" : "opacity-0",
+        )}
+      />
       <MessageList chatKey={chatKey} scrollRef={scrollRef} />
       <Composer
         chatKey={chatKey}

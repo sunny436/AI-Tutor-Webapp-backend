@@ -108,6 +108,11 @@ const config = {
         },
         // Decorative fill behind the streak's flame; never text.
         streak: "hsl(var(--streak))",
+        sage: {
+          DEFAULT: "hsl(var(--sage))",
+          soft: "hsl(var(--sage-soft))",
+        },
+        ivory: "hsl(var(--ivory))",
         success: {
           DEFAULT: "hsl(var(--success))",
           soft: "hsl(var(--success-soft))",

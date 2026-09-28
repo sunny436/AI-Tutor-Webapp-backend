@@ -48,11 +48,11 @@ export default function GlobalError({
       </head>
       <body style={{ margin: 0 }}>
         <style>{`
-          :root { color-scheme: light dark; --ge-bg:#F8FAFC; --ge-fg:#1E293B;
-                  --ge-soft:#56657A; --ge-line:#E2E8F0; --ge-brand:#4F46E5; --ge-on-brand:#FFFFFF; }
+          :root { color-scheme: light dark; --ge-bg:#F7F8FA; --ge-fg:#20252B;
+                  --ge-soft:#5F6873; --ge-line:#E4E7EB; --ge-brand:#4F6F8F; --ge-on-brand:#FFFFFF; }
           @media (prefers-color-scheme: dark) {
-            :root { --ge-bg:#0A0F1C; --ge-fg:#E2E8F0; --ge-soft:#94A3B8;
-                    --ge-line:#243044; --ge-brand:#818CF8; --ge-on-brand:#0A0F1C; }
+            :root { --ge-bg:#0F1117; --ge-fg:#F5F7FA; --ge-soft:#A5ADBD;
+                    --ge-line:#292E38; --ge-brand:#8FAAC6; --ge-on-brand:#0F1117; }
           }
         `}</style>
         <main

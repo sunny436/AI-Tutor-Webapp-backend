@@ -124,7 +124,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
             event.preventDefault();
             send();
           }}
-          className="flex items-end gap-1.5 rounded-3xl border border-border bg-card p-2 shadow-sm transition-[border-color,box-shadow] focus-within:border-brand/60 focus-within:ring-2 focus-within:ring-brand/15"
+          className="elev-1 flex items-end gap-1.5 rounded-[1.25rem] border border-border bg-card p-2 transition-[border-color,box-shadow] focus-within:border-brand/50 focus-within:ring-2 focus-within:ring-brand/15"
         >
           {preview && (
             <SoonButton label="Attach an image or PDF">
@@ -178,7 +178,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
               disabled={!canSend}
               aria-label="Send message"
               className={cn(
-                "grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand text-brand-foreground transition hover:bg-brand-hover active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:w-10",
+                "elev-1 grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand text-brand-foreground transition hover:bg-brand-hover active:scale-[0.97] disabled:cursor-not-allowed disabled:bg-surface-2 disabled:text-text-secondary disabled:shadow-none sm:h-10 sm:w-10",
                 swapIn,
               )}
             >

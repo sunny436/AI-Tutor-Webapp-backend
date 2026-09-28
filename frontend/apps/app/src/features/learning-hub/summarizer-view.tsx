@@ -21,7 +21,7 @@ export function SummarizerView() {
         </label>
         <textarea
           id="summarize-text"
-          className="focus-field h-32 w-full resize-y rounded-xl border border-input bg-surface p-3 text-base text-foreground placeholder:text-text-secondary focus-visible:bg-card sm:text-sm"
+          className="focus-field h-32 w-full resize-y rounded-xl border border-input bg-card p-3 text-base text-foreground placeholder:text-text-secondary sm:text-sm"
           placeholder="Paste text here or type chapter name like 'Acid Bases and Salts'…"
         />
         <Button type="button" disabled className="bg-warning text-warning-soft shadow-warning/20 hover:bg-warning">

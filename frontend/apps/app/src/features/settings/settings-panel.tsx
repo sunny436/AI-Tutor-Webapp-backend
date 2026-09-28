@@ -104,7 +104,7 @@ export function SettingsPanel({ variant }: { variant: "panel" | "list" }) {
             placeholder="Search settings"
             autoComplete="off"
             aria-controls={listId}
-            className="focus-field h-11 w-full rounded-xl border border-input bg-surface pl-9 pr-3 text-sm text-foreground placeholder:text-text-secondary md:h-10"
+            className="focus-field h-11 w-full rounded-xl border border-input bg-card pl-9 pr-3 text-sm text-foreground placeholder:text-text-secondary md:h-10"
           />
         </div>
         <p role="status" className="sr-only">
@@ -173,7 +173,7 @@ export function SettingsPanel({ variant }: { variant: "panel" | "list" }) {
       <div
         className={cn(
           "flex shrink-0 items-center gap-3",
-          variant === "panel" ? "border-t border-border bg-surface p-3" : "mt-4 rounded-2xl border border-border bg-card p-3",
+          variant === "panel" ? "border-t border-border bg-card p-3" : "mt-4 rounded-2xl border border-border bg-card p-3",
         )}
       >
         <UserAvatar user={user} />

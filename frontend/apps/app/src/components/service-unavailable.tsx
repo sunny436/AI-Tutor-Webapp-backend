@@ -16,7 +16,7 @@ export function ServiceUnavailable() {
     >
       <div aria-hidden className="backdrop-wash pointer-events-none fixed inset-0" />
       <div className="relative">
-        <BrandMark size={56} className="mx-auto mb-5 rounded-2xl shadow-lg shadow-brand/25" />
+        <BrandMark size={56} className="mx-auto mb-5 rounded-2xl" />
         <h1 className="font-display text-2xl font-black tracking-tight text-foreground">We can't reach the service</h1>
         <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-text-secondary">
           The chat service is temporarily unavailable. Your chats are safe — please try again in a moment.

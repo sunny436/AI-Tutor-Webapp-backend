@@ -69,6 +69,8 @@ test("phones, upright and sideways: greeting, name, composer and the drawer's lo
       const row = panel.locator(`a[href='/c/${long}']`);
       await expect(row).toHaveAccessibleName(LONG);
       await expect(row.locator(".marquee")).toHaveAttribute("data-overflowing", "");
+      // Touch has no hover: a long title sits still (an ellipsis) until the chat is opened.
+      expect(await row.locator(".marquee-track").evaluate((track) => track.getAnimations().length)).toBe(0);
       const rowBox = await row.boundingBox();
       const panelBox = await panel.boundingBox();
       expect((rowBox?.x ?? 0) + (rowBox?.width ?? 0)).toBeLessThanOrEqual((panelBox?.x ?? 0) + (panelBox?.width ?? 0) + 0.5);

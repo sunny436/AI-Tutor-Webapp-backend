@@ -111,7 +111,7 @@ function Header({
       </button>
 
       <div className="min-w-0 flex-1 px-1">
-        <h1 ref={headingRef} tabIndex={-1} className="truncate text-base font-bold text-foreground outline-none">
+        <h1 ref={headingRef} tabIndex={-1} className="truncate text-base font-semibold text-foreground outline-none">
           {title}
         </h1>
         {subtitle && <p className="hidden truncate text-xs text-text-secondary sm:block">{subtitle}</p>}

@@ -10,9 +10,9 @@ export function UserAvatar({ user }: { user: User }) {
   const name = user.displayName || user.email;
   const photo = avatarSrc(user);
   return (
-    <Avatar aria-hidden className="h-10 w-10 rounded-xl border-0 shadow-sm">
-      {photo && <AvatarImage src={photo} alt="" className="rounded-xl" />}
-      <AvatarFallback className="rounded-xl bg-gradient-to-tr from-streak to-accent-warm text-lg font-bold text-white">
+    <Avatar aria-hidden className="h-10 w-10 rounded-full border-0">
+      {photo && <AvatarImage src={photo} alt="" className="rounded-full" />}
+      <AvatarFallback className="rounded-full bg-brand text-base font-semibold text-brand-foreground">
         {name.charAt(0).toUpperCase()}
       </AvatarFallback>
     </Avatar>

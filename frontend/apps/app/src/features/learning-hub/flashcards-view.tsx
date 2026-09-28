@@ -34,7 +34,7 @@ export function FlashcardsView() {
         type="button"
         onClick={() => setFlipped((value) => !value)}
         aria-pressed={flipped}
-        className="focus-ring bg-hero flex h-72 w-full max-w-2xl flex-col justify-between rounded-3xl p-6 text-left text-hero-foreground shadow-xl shadow-brand/20 transition-transform motion-safe:hover:scale-[1.01] motion-safe:active:scale-[0.99] sm:p-8"
+        className="focus-ring bg-hero flex h-72 w-full max-w-2xl flex-col justify-between rounded-3xl p-6 text-left text-hero-foreground elev-2 transition-transform motion-safe:hover:scale-[1.01] motion-safe:active:scale-[0.99] sm:p-8"
       >
         <span className="flex items-center justify-between text-xs">
           <span className="rounded-full bg-hero-deep/35 px-3 py-1 font-semibold">{card.topic}</span>

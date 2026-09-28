@@ -18,7 +18,7 @@ export default function NotFound() {
         <ThemeSwitcher />
       </div>
       <div className="relative">
-        <BrandMark size={56} className="mx-auto mb-5 rounded-2xl shadow-lg shadow-brand/25" />
+        <BrandMark size={56} className="mx-auto mb-5 rounded-2xl" />
         <p className="text-sm font-bold uppercase tracking-widest text-brand">404</p>
         <h1 className="mt-2 font-display text-3xl font-black tracking-tight text-foreground">
           This page could not be found

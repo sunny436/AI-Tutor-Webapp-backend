@@ -8,7 +8,7 @@ import { STUDY_PLAN_FORM } from "./demo-data";
 import { SoonLabel, ToolPage } from "./tool-page";
 
 const selectClass =
-  "focus-field h-11 w-full rounded-xl border border-input bg-surface px-3 text-base font-medium text-foreground focus-visible:bg-card sm:h-10 sm:text-sm";
+  "focus-field h-11 w-full rounded-xl border border-input bg-card px-3 text-base font-medium text-foreground sm:h-10 sm:text-sm";
 
 /** Course Creator (preview): the study-plan form; generating a plan is not built yet. */
 export function CourseCreatorView() {
@@ -60,7 +60,7 @@ export function CourseCreatorView() {
           <Button
             type="submit"
             disabled
-            className="w-full bg-accent-purple text-accent-purple-foreground shadow-accent-purple/20 hover:bg-accent-purple"
+            className="w-full bg-accent-purple text-accent-purple-foreground hover:bg-accent-purple"
           >
             <SoonLabel>Generate Personalized Roadmap</SoonLabel>
           </Button>

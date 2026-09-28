@@ -46,7 +46,7 @@ const TAGLINE_PHRASES = BRAND.tagline.split(/(?<=\.)\s+/);
 export function BrandLockup({ compact = false, className }: { compact?: boolean; className?: string }) {
   return (
     <span className={cn("flex min-w-0 items-center gap-2.5", className)}>
-      <BrandMark size={36} className="rounded-2xl shadow-md shadow-brand/20" />
+      <BrandMark size={36} className="rounded-2xl" />
       <span className="flex min-w-0 flex-col items-start gap-1">
         <BrandWordmark className={compact ? "text-xl leading-none" : "text-2xl leading-none"} />
         <span className="text-[0.625rem] font-medium leading-snug text-text-secondary">

@@ -9,7 +9,7 @@ export function StreamingIndicator() {
       {[0, 160, 320].map((delay) => (
         <span
           key={delay}
-          className="h-2 w-2 rounded-full bg-brand animate-soft-pulse"
+          className="h-2 w-2 rounded-full bg-brand/60 animate-soft-pulse"
           style={{ animationDelay: `${delay}ms` }}
         />
       ))}

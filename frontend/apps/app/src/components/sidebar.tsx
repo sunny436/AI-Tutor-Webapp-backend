@@ -168,7 +168,7 @@ export function SidebarContent({
         <Link href="/" onClick={onNavigate} className="focus-ring rounded-2xl">
           {collapsed ? (
             <>
-              <BrandMark size={44} className="rounded-2xl shadow-md shadow-brand/20" />
+              <BrandMark size={44} className="rounded-2xl" />
               <span className="sr-only">{APP_NAME}</span>
             </>
           ) : (
@@ -186,7 +186,7 @@ export function SidebarContent({
               onClick={onNavigate}
               aria-label={collapsed ? "Ask New Doubt" : undefined}
               className={cn(
-                "focus-ring group flex items-center justify-center gap-2 rounded-xl bg-brand font-semibold text-brand-foreground shadow-md shadow-brand/20 transition hover:bg-brand-hover active:scale-[0.98]",
+                "focus-ring group flex items-center justify-center gap-2 rounded-xl bg-brand font-semibold text-brand-foreground elev-1 transition hover:bg-brand-hover hover:elev-2 active:scale-[0.98]",
                 collapsed ? "h-11 w-11" : "w-full px-4 py-3 text-sm",
               )}
             >
@@ -201,7 +201,7 @@ export function SidebarContent({
             <h2
               id="hub-heading"
               className={cn(
-                "mb-2 px-3 text-2xs font-bold uppercase tracking-wider text-text-secondary",
+                "mb-2 px-3 text-2xs font-semibold uppercase tracking-[0.08em] text-text-secondary",
                 collapsed && "sr-only",
               )}
             >
@@ -221,25 +221,25 @@ export function SidebarContent({
                       "focus-ring relative flex items-center rounded-xl text-left transition-[color,background-color,box-shadow]",
                       collapsed ? "mx-auto h-11 w-11 justify-center" : "w-full gap-3 px-3 py-2.5",
                       current
-                        ? "bg-brand font-semibold text-brand-foreground shadow-md shadow-brand/20"
+                        ? "bg-brand-soft font-semibold text-foreground"
                         : "text-text-secondary hover:bg-surface-2 hover:text-foreground",
                     )}
                   >
                     <span
                       aria-hidden
-                      className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg", current ? "bg-brand-foreground/15" : item.accent)}
+                      className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg", current ? "bg-card text-brand" : item.accent)}
                     >
                       <Icon className="h-[18px] w-[18px]" />
                     </span>
                     {!collapsed && (
                       <span className="min-w-0 flex-1">
                         <span className="block text-sm font-medium leading-tight">{item.label}</span>
-                        <span className={cn("block truncate text-2xs", current ? "text-brand-foreground/85" : "text-text-secondary")}>
+                        <span className="block truncate text-2xs text-text-secondary">
                           {item.description}
                         </span>
                       </span>
                     )}
-                    {current && !collapsed && <span aria-hidden className="h-6 w-1.5 shrink-0 rounded-full bg-brand-foreground" />}
+                    {current && !collapsed && <span aria-hidden className="h-6 w-1 shrink-0 rounded-full bg-brand" />}
                   </Link>
                 </RailTip>
               );
@@ -252,7 +252,7 @@ export function SidebarContent({
         ) : (
           <nav aria-labelledby="chats-heading" className="mt-5 flex min-h-[10rem] flex-1 flex-col">
             <div className="flex items-center justify-between px-6 pb-2">
-              <h2 id="chats-heading" className="text-2xs font-bold uppercase tracking-wider text-text-secondary">
+              <h2 id="chats-heading" className="text-2xs font-semibold uppercase tracking-[0.08em] text-text-secondary">
                 Recent Doubts
               </h2>
             </div>
@@ -264,7 +264,7 @@ export function SidebarContent({
                   onChange={(event) => setSearch(event.target.value)}
                   placeholder="Search chats"
                   aria-label="Search chats"
-                  className="focus-field h-9 w-full rounded-xl border border-input bg-surface pl-8 pr-2 text-sm placeholder:text-text-secondary focus-visible:bg-card"
+                  className="focus-field h-9 w-full rounded-xl border border-input bg-card pl-8 pr-2 text-sm transition-colors placeholder:text-text-secondary hover:border-text-secondary/40"
                 />
               </div>
             )}
@@ -299,7 +299,7 @@ export function SidebarContent({
                         key={item.id}
                         className={cn(
                           "group flex items-center gap-1 rounded-xl transition-colors",
-                          isActive ? "bg-brand-soft font-medium text-brand" : "text-text-secondary hover:bg-surface-2 hover:text-foreground",
+                          isActive ? "bg-brand-soft font-medium text-foreground" : "text-foreground/85 hover:bg-surface-2 hover:text-foreground",
                         )}
                       >
                         <Link
@@ -308,7 +308,7 @@ export function SidebarContent({
                           aria-current={isActive ? "page" : undefined}
                           className="focus-ring-inset flex h-9 min-w-0 flex-1 items-center gap-2.5 rounded-xl px-3 text-sm"
                         >
-                          <MessageSquare aria-hidden className="h-3.5 w-3.5 shrink-0 opacity-70" />
+                          <MessageSquare aria-hidden className={cn("h-3.5 w-3.5 shrink-0", isActive ? "text-brand" : "text-text-secondary")} />
                           <MarqueeTitle title={item.title} />
                         </Link>
                         {/* Always visible on touch; on hover/focus with a pointer. */}
@@ -351,7 +351,7 @@ export function SidebarContent({
       </div>
 
       {/* Only the account here: Settings and Log out are in its menu. */}
-      <div className={cn("shrink-0 border-t border-border bg-surface p-2", collapsed && "px-2")}>
+      <div className={cn("shrink-0 border-t border-border bg-card p-2", collapsed && "px-2")}>
         <DropdownMenu modal={false}>
           <RailTip label={name} collapsed={collapsed}>
             <DropdownMenuTrigger asChild>
@@ -366,7 +366,7 @@ export function SidebarContent({
                 <UserAvatar user={user} />
                 {!collapsed && (
                   <span className="min-w-0 flex-1">
-                    <span className="block truncate text-sm font-bold text-foreground">{name}</span>
+                    <span className="block truncate text-sm font-semibold text-foreground">{name}</span>
                     {user.displayName && <span className="block truncate text-xs text-text-secondary">{user.email}</span>}
                   </span>
                 )}
