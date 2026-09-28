@@ -7,12 +7,14 @@
  *
  *   1. the working tree is clean; HEAD is the commit; `git fsck --strict` finds nothing wrong
  *   2. the container image: Ubuntu 24.04 + Python 3.12 + the commit's .node-version/.bun-version
+ *      + the system libraries of the commit's Playwright version
  *   3. `git archive <commit>` into the container with CI's services (pgvector, Mailpit); the
  *      container sees only the commit's files, no ignored file, secret or local install
  *   4. HEAD and the tree are unchanged afterwards (nothing was edited meanwhile)
  *   5. .deploy/verified/<commit>.json + .log, written atomically; exit 0 only if every job passed
  *
- * About 45-60 minutes (the E2E suite dominates); the first run also builds the image.
+ * About 30-35 minutes: the jobs run at the same time, then the E2E suite (about 23 minutes) on a
+ * quiet machine. The first run also builds the image and fills the download cache.
  */
 import { spawn, spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
@@ -126,17 +128,21 @@ async function runContainer({ sha, repo }) {
   const show = (path) => must(sh("git", ["-C", repo, "show", `${sha}:${path}`]), `git show ${path}`);
   const node = show(".node-version").trim();
   const bun = show(".bun-version").trim();
+  const playwright = /"playwright-core": \["playwright-core@([0-9][^"]*)"/.exec(show("frontend/bun.lock"))?.[1];
+  if (!playwright) throw new Error("frontend/bun.lock pins no playwright-core version");
   must(sh("git", ["-C", repo, "archive", "--format=tar", "-o", join(input, "src.tar"), sha]), "git archive");
   writeFileSync(join(input, "run-ci.sh"), show("deploy/verify/run-ci.sh"));
   writeFileSync(join(input, "compose.yml"), show("deploy/verify/compose.yml"));
   const dockerfile = show("deploy/verify/Dockerfile");
   writeFileSync(join(context, "Dockerfile"), dockerfile);
-  const tag = `aichat-verify:${createHash("sha256").update(`${dockerfile}\n${node}\n${bun}`).digest("hex").slice(0, 16)}`;
+  const tag = `aichat-verify:${createHash("sha256").update(`${dockerfile}\n${node}\n${bun}\n${playwright}`).digest("hex").slice(0, 16)}`;
   const logFile = join(work, "verify.log");
   writeFileSync(logFile, `verify ${sha}\n`);
 
-  console.log(`==> image ${tag} (Ubuntu 24.04, Python 3.12, Node ${node}, Bun ${bun})`);
-  must(sh("docker", ["build", "--quiet", "--build-arg", `NODE_VERSION=${node}`, "--build-arg", `BUN_VERSION=${bun}`, "-t", tag, context], { stdio: ["ignore", "pipe", "inherit"] }), "docker build");
+  console.log(`==> image ${tag} (Ubuntu 24.04, Python 3.12, Node ${node}, Bun ${bun}, Playwright ${playwright})`);
+  const buildArgs = [`NODE_VERSION=${node}`, `BUN_VERSION=${bun}`, `PLAYWRIGHT_VERSION=${playwright}`].flatMap((arg) => ["--build-arg", arg]);
+  must(sh("docker", ["build", "--quiet", ...buildArgs, "-t", tag, context], { stdio: ["ignore", "pipe", "inherit"] }), "docker build");
+  must(sh("docker", ["volume", "create", "aichat-verify-cache"]), "the download cache volume");
   const project = `aichat-verify-${sha.slice(0, 12)}-${process.pid}`;
   const env = { VERIFY_IMAGE: tag, VERIFY_INPUT: input };
   const compose = ["compose", "-p", project, "-f", join(input, "compose.yml")];

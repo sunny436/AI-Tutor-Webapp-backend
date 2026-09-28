@@ -52,7 +52,7 @@ bun run setup | dev | dev:backend | dev:frontend       # dev: Docker db + migrat
 bun run test          # backend pytest + frontend typecheck + unit tests (incl. the API contract test)
 bun run test:e2e      # Playwright + axe against an API on :4100 with the fake LLM (starts it from backend/)
 bun run lint | build | contract                        # contract: regenerate docs/openapi.json + frontend check
-bun run verify        # the three CI jobs on HEAD, in a Linux container (Docker, ~45-60 min): deploy evidence
+bun run verify        # the three CI jobs on HEAD, in a Linux container (Docker, ~30-35 min): deploy evidence
 bun run deploy -- --ref <commit> | rollback | status  # production (docs/deployment.md, docs/rollback.md)
 bun run lock:backend  # after editing backend/requirements.txt: regenerate the hashed requirements.lock
 bun run rehearse      # the release model on a throwaway systemd container (Docker, ~45 min)
