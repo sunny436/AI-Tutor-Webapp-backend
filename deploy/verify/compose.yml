@@ -1,6 +1,7 @@
 # The services of `bun run verify`: the same images and settings as CI's `services:`, reachable
 # on 127.0.0.1 as in CI (the runner and Mailpit share the database container's network
-# namespace). Nothing is published on the machine; each run is its own compose project.
+# namespace). Nothing is published on the machine; each run is its own compose project. Only
+# downloads outlive a run (the `cache` volume), never a checkout, an install or a result.
 services:
   postgres:
     image: pgvector/pgvector:pg16
@@ -27,9 +28,20 @@ services:
         source: ${VERIFY_INPUT:?}
         target: /in
         read_only: true
+      - type: volume
+        source: cache
+        target: /cache
     depends_on:
       postgres:
         condition: service_healthy
       mailpit:
         condition: service_started
     command: ["bash", "/in/run-ci.sh"]
+
+volumes:
+  # Downloads kept between runs, like CI's pip cache: pip and Bun check every package against the
+  # commit's lockfiles, and the browsers are those of the commit's Playwright version. Created by
+  # deploy/verify.mjs; `docker volume rm aichat-verify-cache` empties it.
+  cache:
+    name: aichat-verify-cache
+    external: true

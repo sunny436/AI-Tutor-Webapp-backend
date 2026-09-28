@@ -267,11 +267,15 @@ DEPLOY_PID=$!
 for _ in $(seq 1 900); do grep -q "3/4 validate" "$LOGS/s10.log" 2>/dev/null && break; sleep 1; done
 # Kill both ends of the connection: the local deploy and the host-side client waiting on the
 # unit (what a dropped SSH session does). The systemd unit itself must carry on.
-kill "$DEPLOY_PID" 2>/dev/null
-ssh rehearsal "pkill -f 'systemd-run --unit=aichat-deploy-${R6:0:12}'; pkill -f 'journalctl -f -n0 -o cat -u aichat-deploy-${R6:0:12}'" || true
+kill_tree() { local child; for child in $(ps -ef | awk -v p="$1" '$3 == p { print $2 }'); do kill_tree "$child"; done; kill "$1" 2>/dev/null || true; }
+kill_tree "$DEPLOY_PID"
+# ([s]ystemd-run, [j]ournalctl: so that pkill -f does not match the remote shell running it.)
+ssh rehearsal "pkill -f '[s]ystemd-run --unit=aichat-deploy-${R6:0:12}'; pkill -f '[j]ournalctl -f -n all -o cat -u aichat-deploy-${R6:0:12}'" || true
 ssh rehearsal "systemctl list-units 'aichat-deploy-*' --no-legend" > "$LOGS/s10-unit.log" 2>&1
-for _ in $(seq 1 600); do [ "$(live)" = "$R6" ] && status_ok_on "$R6" s10 && break; sleep 2; done
-if status_ok_on "$R6" s10; then pass "S10 killed the local deploy mid-way: the host finished it; $(short "$R6") live, invariant holds"; else fail "S10 (see $LOGS/s10.log)"; fi
+# The host finished it: its unit is gone (and released the deploy lock), and the release is live.
+deploying() { [ -n "$(ssh rehearsal "systemctl list-units 'aichat-deploy-*' --state=active --no-legend")" ]; }
+for _ in $(seq 1 600); do ! deploying && [ "$(live)" = "$R6" ] && status_ok_on "$R6" s10 && break; sleep 2; done
+if grep -q "aichat-deploy-${R6:0:12}" "$LOGS/s10-unit.log" && ! deploying && status_ok_on "$R6" s10; then pass "S10 killed the local deploy mid-way: the host finished it; $(short "$R6") live, invariant holds"; else fail "S10 (see $LOGS/s10.log)"; fi
 
 step "S11 the jobs worker"
 ssh rehearsal 'bash -s' > "$LOGS/s11.log" 2>&1 <<'EOF'
@@ -349,7 +353,9 @@ else fail "S14 compare-and-swap (see $LOGS/s14a.log and $LOGS/s14b.log)"; fi
 
 step "S15 audit, and a rollback after direct deploys"
 ssh rehearsal "tail -1 /opt/aichat/releases/HISTORY; test -s /opt/aichat/releases/$C1/verify.log.gz && echo LOG=ok; python3.12 -c 'import json; d=json.load(open(\"/opt/aichat/releases/$C1/CI.json\")); print(\"SOURCE=\" + d[\"source\"], \"LIVE=\" + str(d[\"deploy\"][\"expected_live\"]))'" > "$LOGS/s15a.log" 2>&1
-if grep -q "deployed $C1 (previous: $LIVE13) by Rehearsal from $(hostname) (ssh " "$LOGS/s15a.log" && grep -q "evidence [0-9a-f]\{12\}; GitHub main" "$LOGS/s15a.log" \
+# The operator is what deploy.sh records: git config user.name of the checkout it ran in.
+OPERATOR=$(git -C "$WT" config user.name || echo unknown)
+if grep -qF "deployed $C1 (previous: $LIVE13) by $OPERATOR from $(hostname) (ssh " "$LOGS/s15a.log" && grep -q "evidence [0-9a-f]\{12\}; GitHub main" "$LOGS/s15a.log" \
   && grep -q "^LOG=ok" "$LOGS/s15a.log" && grep -q "SOURCE=local LIVE=$LIVE13" "$LOGS/s15a.log" && grep -q "evidence: rehearsal evidence" "$LOGS/status-s14.log"; then
   pass "S15 HISTORY names the operator, machine, SSH client, evidence and GitHub main; the release keeps its evidence and log"
 else fail "S15 audit (see $LOGS/s15a.log)"; fi

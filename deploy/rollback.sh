@@ -29,6 +29,7 @@ if [ "$YES" != 1 ]; then
   read -r -p "  Type 'rollback' to continue: " answer
   [ "$answer" = rollback ] || { echo "STOP: not confirmed" >&2; exit 1; }
 fi
-UNIT="aichat-rollback-$(date -u +%Y%m%dT%H%M%S)"
+# A unique name: its whole journal is followed (-n all), so a refusal at once still shows its reason.
+UNIT="aichat-rollback-$(date -u +%Y%m%dT%H%M%S)-$RANDOM"
 # shellcheck disable=SC2029  # expanded here on purpose
-ssh "$HOST" "journalctl -f -n0 -o cat -u $UNIT & J=\$!; systemd-run --unit=$UNIT --quiet --wait --collect -p Environment=HOME=/root -p Environment=AICHAT_VIA_DEPLOY=1 -p \"Environment=AICHAT_SSH_CLIENT=\${SSH_CONNECTION// /,}\" -p Environment=AICHAT_OPERATOR=$(git config user.name 2>/dev/null | tr -cd 'A-Za-z0-9 ._-' | tr ' ' '_') bash /opt/aichat/current/deploy/server/rollback.sh ${ARGS[*]:-}; rc=\$?; sleep 2; kill \$J 2>/dev/null; exit \$rc"
+ssh "$HOST" "journalctl -f -n all -o cat -u $UNIT & J=\$!; systemd-run --unit=$UNIT --quiet --wait --collect -p Environment=HOME=/root -p Environment=AICHAT_VIA_DEPLOY=1 -p \"Environment=AICHAT_SSH_CLIENT=\${SSH_CONNECTION// /,}\" -p Environment=AICHAT_OPERATOR=$(git config user.name 2>/dev/null | tr -cd 'A-Za-z0-9 ._-' | tr ' ' '_') bash /opt/aichat/current/deploy/server/rollback.sh ${ARGS[*]:-}; rc=\$?; sleep 2; kill \$J 2>/dev/null; exit \$rc"
