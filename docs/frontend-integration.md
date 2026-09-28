@@ -31,8 +31,8 @@ Forgot password: `password/forgot` (202) → code + new password → `password/r
 ## 3. Chat screen
 
 - **New chat:** don't create anything up front. Send the first message to `POST /v1/chat/stream`
-  without `conversationId`; the `meta` event returns the new conversation (id + title). Add it to the
-  sidebar and navigate to it.
+  without `conversationId`; the `meta` event returns the new conversation (id + title, "New chat").
+  Add it to the sidebar and navigate to it; the `done` event brings its name.
 - **Existing chat:** `GET /v1/conversations/{id}/messages` (oldest first; `nextCursor` loads older),
   then send with `conversationId`.
 - **Streaming:** parse SSE frames (`event:` / `data:` lines, frames separated by a blank line;

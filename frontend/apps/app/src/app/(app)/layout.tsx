@@ -12,10 +12,10 @@ import { UserProvider } from "@/components/user-context";
 import { ChatProvider } from "@/features/chat/chat-context";
 import { NavigationGuardRoot } from "@/features/navigation/navigation-guard-root";
 import { ActivityHeartbeat } from "@/features/progress/activity-heartbeat";
-import { greetingText } from "@/lib/greeting";
+import { greetingPool } from "@/lib/greeting";
 import { previewEnabled } from "@/lib/preview";
 import { safeRedirect } from "@/lib/safe-redirect";
-import { getAppearance, getCurrentUser, getInitialConversations, getStudyGreeting } from "@/lib/server/session";
+import { getAppearance, getCurrentUser, getInitialConversations, getStudyGreetings } from "@/lib/server/session";
 
 /**
  * Every signed-in page. The session is checked HERE, on the server, against the
@@ -24,7 +24,7 @@ import { getAppearance, getCurrentUser, getInitialConversations, getStudyGreetin
  *   401          → /api/session/expired (re-checks, clears the cookie, → sign in)
  *   unreachable  → an outage screen, NOT a sign-out
  *   ok           → the app, with the user, their appearance, the first page of chats
- *                  and this week's study greeting already loaded, so the first paint is
+ *                  and this week's study greetings already loaded, so the first paint is
  *                  complete (the greeting falls back quietly: lib/greeting.ts)
  *
  * Also decides, per request, whether preview UI may render (lib/preview.ts).
@@ -35,11 +35,11 @@ import { getAppearance, getCurrentUser, getInitialConversations, getStudyGreetin
  * and the session is still watched while Settings is open.
  */
 export default async function AppLayout({ children }: { children: ReactNode }) {
-  const [session, conversations, appearance, greeting] = await Promise.all([
+  const [session, conversations, appearance, greetings] = await Promise.all([
     getCurrentUser(),
     getInitialConversations(),
     getAppearance(),
-    getStudyGreeting(),
+    getStudyGreetings(),
   ]);
 
   if (session.status === "unauthorized") {
@@ -54,7 +54,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
         <AppearanceProvider initial={appearance.status === "ok" ? appearance.data : null}>
           <ChatProvider
             initialConversations={conversations.status === "ok" ? conversations.data : null}
-            greeting={greetingText(greeting)}
+            greetings={greetingPool(greetings)}
           >
             <ActivityHeartbeat />
             <NavigationGuardRoot />

@@ -24,7 +24,7 @@ async def test_stream_event_order_and_persistence(client, app):
     assert kinds[0] == "meta" and kinds[-1] == "done" and kinds.count("token") >= 2
     meta, done = events[0][1], events[-1][1]
     assert meta["userMessage"]["content"] == "Hello there"
-    assert meta["conversation"]["title"] == "Hello there"
+    assert meta["conversation"]["title"] == done["conversation"]["title"] == "New chat"  # small talk names nothing
     streamed = "".join(data["text"] for kind, data in events if kind == "token")
     assert streamed == "You said: Hello there" == done["message"]["content"]
     assert done["message"]["id"] == meta["assistantMessageId"] and done["message"]["status"] == "complete"
@@ -65,13 +65,110 @@ async def test_markdown_code_tables_and_math_are_stored_byte_for_byte(client, ap
     assert stored[0]["content"] == RICH and stored[1]["content"] == RICH
 
 
-async def test_new_chat_is_titled_from_first_message(client, app):
+LONG_QUESTION = "Explain how photosynthesis works in plants and why it matters for life on Earth today"
+
+
+def _log_blob(records) -> str:
+    """What the JSON formatter writes for these records: message, extra fields, exception text."""
+    import logging
+
+    standard = set(logging.LogRecord("", 0, "", 0, "", (), None).__dict__) | {"message", "asctime"}
+    return " ".join(
+        f"{r.getMessage()} { {k: v for k, v in r.__dict__.items() if k not in standard} } {r.exc_text or ''}"
+        for r in records
+    )
+
+
+async def test_new_chat_is_named_once_when_its_first_meaningful_question_is_answered(client, app, caplog):
+    import logging
+
+    caplog.set_level(logging.INFO, logger="app.chat")
     account = await register(client, app)
-    created = (await client.post("/v1/conversations", json={}, headers=account["headers"])).json()
-    long = "Explain how photosynthesis works in plants and why it matters for life on Earth today"
-    _, events = await stream_chat(client, account["headers"], long, conversation_id=created["id"])
-    title = events[0][1]["conversation"]["title"]
-    assert title.startswith("Explain how photosynthesis") and len(title) <= 60 and title.endswith("…")
+    h = account["headers"]
+    _, events = await stream_chat(client, h, "hi")
+    cid = events[0][1]["conversationId"]
+    assert events[0][1]["conversation"]["title"] == events[-1][1]["conversation"]["title"] == "New chat"
+
+    _, events = await stream_chat(client, h, LONG_QUESTION, conversation_id=cid)
+    assert events[0][1]["conversation"]["title"] == "New chat"  # named when the reply completes, not before
+    assert events[-1][1]["conversation"]["title"] == "How Photosynthesis Works in Plants"
+    _, events = await stream_chat(client, h, "What is the difference between mitosis and meiosis?", cid)
+    assert events[-1][1]["conversation"]["title"] == "How Photosynthesis Works in Plants"  # never renamed
+    listed = (await client.get("/v1/conversations", headers=h)).json()["items"]
+    assert [c["title"] for c in listed] == ["How Photosynthesis Works in Plants"]
+
+    titled = [r for r in caplog.records if r.getMessage() == "conversation titled"]
+    assert [(r.source, r.words) for r in titled] == [("question", 5)]
+    assert {r.reason for r in caplog.records if r.getMessage() == "conversation title skipped"} == {"small_talk"}
+    blob = _log_blob(caplog.records).lower()
+    assert "photosynthesis" not in blob and "mitosis" not in blob  # no question, reply or title text
+
+
+async def test_an_empty_or_renamed_conversation_is_named_only_while_it_is_new_chat(client, app):
+    account = await register(client, app)
+    h = account["headers"]
+    created = (await client.post("/v1/conversations", json={}, headers=h)).json()
+    _, events = await stream_chat(client, h, "Explain photosynthesis", conversation_id=created["id"])
+    assert events[-1][1]["conversation"]["title"] == "Photosynthesis Explained"
+
+    renamed = (await client.post("/v1/conversations", json={}, headers=h)).json()
+    await client.patch(f"/v1/conversations/{renamed['id']}", json={"title": "Trip plans"}, headers=h)
+    _, events = await stream_chat(client, h, "Explain photosynthesis", conversation_id=renamed["id"])
+    assert events[-1][1]["conversation"]["title"] == "Trip plans"
+
+
+async def test_naming_touches_only_the_owners_conversation(client, app):
+    alice, bob = await register(client, app), await register(client, app)
+    await client.post("/v1/conversations", json={}, headers=bob["headers"])
+    await stream_chat(client, alice["headers"], "Explain photosynthesis")
+    bobs = (await client.get("/v1/conversations", headers=bob["headers"])).json()["items"]
+    alices = (await client.get("/v1/conversations", headers=alice["headers"])).json()["items"]
+    assert [c["title"] for c in bobs] == ["New chat"]
+    assert [c["title"] for c in alices] == ["Photosynthesis Explained"]
+
+
+async def test_a_failed_reply_names_nothing_and_a_successful_retry_does(client, app, fake_llm):
+    fake_llm.fail_before_first = LLMUnavailable("down")
+    account = await register(client, app)
+    h = account["headers"]
+    _, events = await stream_chat(client, h, "Explain photosynthesis")
+    cid = events[0][1]["conversationId"]
+    assert events[-1][0] == "error"
+    assert (await client.get(f"/v1/conversations/{cid}", headers=h)).json()["title"] == "New chat"
+    fake_llm.fail_before_first = None
+    retried = parse_sse((await client.post(f"/v1/conversations/{cid}/regenerate/stream", headers=h)).text)
+    assert retried[-1][0] == "done" and retried[-1][1]["conversation"]["title"] == "Photosynthesis Explained"
+
+
+async def test_a_title_failure_never_fails_the_reply(client, app, caplog, monkeypatch):
+    import logging
+
+    from app.chat import service
+
+    def broken(question, reply):
+        raise RuntimeError("boom")
+
+    monkeypatch.setattr(service, "topic_title", broken)
+    caplog.set_level(logging.INFO, logger="app.chat")
+    account = await register(client, app)
+    _, events = await stream_chat(client, account["headers"], "Explain photosynthesis")
+    assert events[-1][0] == "done" and events[-1][1]["message"]["status"] == "complete"
+    assert events[-1][1]["conversation"]["title"] == "New chat"
+    assert "conversation title failed" in {r.getMessage() for r in caplog.records}
+
+
+async def test_slow_generations_are_logged_without_content(client, app, caplog, monkeypatch):
+    import logging
+
+    from app.chat import service
+
+    monkeypatch.setattr(service, "SLOW_TOTAL_MS", -1)
+    caplog.set_level(logging.INFO, logger="app.chat")
+    account = await register(client, app)
+    await stream_chat(client, account["headers"], "Explain photosynthesis")
+    slow = [r for r in caplog.records if r.getMessage() == "generation slow"]
+    assert len(slow) == 1 and slow[0].levelname == "WARNING" and slow[0].status == "complete"
+    assert slow[0].latency_ms >= 0 and "photosynthesis" not in _log_blob(slow).lower()
 
 
 async def test_non_streaming_chat(client, app):
@@ -174,12 +271,27 @@ async def test_cancel_stops_generation_and_keeps_partial(slow_client, slow_app):
     assert done[0] == "done" and done[1]["message"]["status"] == "cancelled"
     partial = done[1]["message"]["content"]
     assert partial and partial.startswith("w0") and len(partial.split()) < 60
+    assert done[1]["conversation"]["title"] == "New chat"  # a stopped reply names nothing
     async with slow_app.state.db.sessionmaker() as s:
         msg = await s.get(Message, streaming.id)
     assert msg.status == "cancelled" and msg.content == partial
     # cancelling again is idempotent
     again = await slow_client.post(f"/v1/messages/{streaming.id}/cancel", headers=account["headers"])
     assert again.json()["status"] == "cancelled"
+
+
+async def test_a_rename_during_the_first_reply_is_never_overwritten(slow_client, slow_app):
+    account = await register(slow_client, slow_app)
+    h = account["headers"]
+    task = asyncio.create_task(stream_chat(slow_client, h, "Explain photosynthesis"))
+    streaming = await _wait_for_streaming(slow_app)
+    r = await slow_client.patch(
+        f"/v1/conversations/{streaming.conversation_id}", json={"title": "My biology notes"}, headers=h
+    )
+    assert r.status_code == 200
+    _, events = await asyncio.wait_for(task, 10)
+    assert events[-1][0] == "done" and events[-1][1]["message"]["status"] == "complete"
+    assert events[-1][1]["conversation"]["title"] == "My biology notes"
 
 
 async def test_concurrent_send_in_same_conversation_is_409(slow_client, slow_app):

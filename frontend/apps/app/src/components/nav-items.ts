@@ -82,6 +82,14 @@ export function visibleNavItems(preview: boolean): readonly NavItem[] {
   return preview ? NAV_ITEMS : NAV_ITEMS.filter((item) => !item.preview);
 }
 
+/**
+ * The sidebar's Learning Hub: the tools besides the chat. The chat is already the sidebar's
+ * "Ask New Doubt" and chat list, so it is not listed again; with no other tool, there is no hub.
+ */
+export function hubItems(preview: boolean): readonly NavItem[] {
+  return visibleNavItems(preview).filter((item) => item.id !== "tutor");
+}
+
 /** The tutor owns `/` and every conversation (`/c/<id>`); a tool owns its path and below. */
 export function isActive(item: NavItem, pathname: string | null): boolean {
   const path = pathname ?? "";

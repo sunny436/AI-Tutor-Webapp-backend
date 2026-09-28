@@ -26,6 +26,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.chat.assistant import AssistantConfig, resolve_assistant_config
 from app.chat.streams import ActiveGenerations, ChatEvent, Generation
+from app.chat.titles import topic_title
 from app.conversations.repository import DEFAULT_TITLE, ConversationRepository
 from app.conversations.router import conversation_out, message_out
 from app.db.models import Conversation, Message, UsageEvent, User
@@ -40,7 +41,9 @@ from app.settings import Settings
 
 log = get_logger("app.chat")
 
-TITLE_CHARS = 60
+# A reply this slow is logged as a warning (operators see it without reading every "generation finished").
+SLOW_TTFT_MS = 20_000
+SLOW_TOTAL_MS = 120_000
 
 PUBLIC_ERRORS = {
     "llm_unavailable": ("The AI service is temporarily unavailable. Please try again.", True),
@@ -64,11 +67,6 @@ def public_error(code: str) -> dict:
         "message": message,
         "retryable": retryable,
     }
-
-
-def make_title(text: str) -> str:
-    title = " ".join(text.split())
-    return (title[: TITLE_CHARS - 1].rstrip() + "…") if len(title) > TITLE_CHARS else title or DEFAULT_TITLE
 
 
 @dataclass
@@ -162,21 +160,13 @@ class ChatService:
             raise ValidationFailed("The message is too long.")
         repo = ConversationRepository(session)
         if conversation_id is None:
-            conversation = await repo.create(user.id, make_title(text))
+            # Named after its first answered question when the reply completes (_name_conversation).
+            conversation = await repo.create(user.id, DEFAULT_TITLE)
         else:
             conversation = await repo.get(user.id, conversation_id, lock=True)
             if conversation is None:
                 raise NotFound("Conversation not found.")
         await self._check_turn_allowed(session, user.id, conversation.id)
-
-        if conversation.title == DEFAULT_TITLE:
-            has_user_messages = await session.scalar(
-                select(func.count())
-                .select_from(Message)
-                .where(Message.conversation_id == conversation.id, Message.role == "user")
-            )
-            if not has_user_messages:
-                conversation.title = make_title(text)
 
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
@@ -381,6 +371,17 @@ class ChatService:
                 "message_id": str(turn.assistant_id),
             },
         )
+        if (ttft_ms or 0) > SLOW_TTFT_MS or latency_ms > SLOW_TOTAL_MS:
+            log.warning(
+                "generation slow",
+                extra={
+                    "status": status,
+                    "provider": provider,
+                    "latency_ms": latency_ms,
+                    "ttft_ms": ttft_ms,
+                    "message_id": str(turn.assistant_id),
+                },
+            )
         try:
             message, conversation = await self._finalize(turn, content, status, metadata, latency_ms, ttft_ms, usage)
             if message.status == "error":
@@ -424,6 +425,8 @@ class ChatService:
                 and is_meaningful(turn.user_message.content)
             ):
                 await record_learning(session, turn.user.id, now())
+            if final_status == "complete" and turn.conversation.title == DEFAULT_TITLE:
+                await self._name_conversation(session, turn, content)
             await session.execute(
                 update(UsageEvent)
                 .where(UsageEvent.message_id == turn.assistant_id)
@@ -442,6 +445,47 @@ class ChatService:
             message = await session.get(Message, turn.assistant_id)
             conversation = await session.get(Conversation, turn.conversation.id)
             return message, conversation
+
+    async def _name_conversation(self, session: AsyncSession, turn: PreparedTurn, reply: str) -> None:
+        """Name a "New chat" after its first answered, meaningful question (app/chat/titles.py).
+
+        Compare-and-set on the default title, scoped to the owner: a rename made while the reply
+        streamed always wins, and a named conversation is never renamed. A title never fails a turn.
+        """
+        extra = {"conversation_id": str(turn.conversation.id)}
+        try:
+            question = (
+                turn.user_message.content
+                if turn.user_message is not None
+                else await session.scalar(  # a regeneration answers the latest question
+                    select(Message.content)
+                    .where(Message.conversation_id == turn.conversation.id, Message.role == "user")
+                    .order_by(Message.created_at.desc(), Message.id.desc())
+                    .limit(1)
+                )
+            )
+            if not question or not is_meaningful(question):
+                log.info("conversation title skipped", extra={**extra, "reason": "small_talk"})
+                return
+            named = topic_title(question, reply)
+            if named is None:
+                log.info("conversation title skipped", extra={**extra, "reason": "no_candidate"})
+                return
+            title, source = named
+            async with session.begin_nested():  # a failure here must not undo the reply being saved
+                result = await session.execute(
+                    update(Conversation)
+                    .where(
+                        Conversation.id == turn.conversation.id,
+                        Conversation.user_id == turn.user.id,
+                        Conversation.title == DEFAULT_TITLE,
+                    )
+                    .values(title=title)
+                )
+            if result.rowcount:
+                log.info("conversation titled", extra={**extra, "source": source, "words": len(title.split())})
+        except Exception:  # noqa: BLE001 - the reply is already complete; keep "New chat"
+            log.exception("conversation title failed", extra=extra)
 
     # ------------------------------------------------------------------- cancel
     async def cancel(self, session: AsyncSession, user: User, message_id: uuid.UUID) -> str:

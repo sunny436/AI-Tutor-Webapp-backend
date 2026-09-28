@@ -9,6 +9,10 @@
  *
  * Rename and delete are optimistic and roll back (with the error rethrown for a
  * toast) when the API refuses. Nothing here swallows a failure.
+ *
+ * A title renamed in this tab wins over a stream's copy of the conversation, which may have been
+ * read just before the rename was saved (the API never names a renamed chat again), until the next
+ * refresh brings the server's own titles.
  */
 
 import type { Conversation, ConversationPage } from "@/lib/api/types";
@@ -34,6 +38,8 @@ export class ConversationsStore {
   private state: ConversationsState;
   private readonly listeners = new Set<() => void>();
   private lastRefresh = 0;
+  /** Titles set by a rename in this tab, by conversation id. */
+  private readonly renamed = new Map<string, string>();
 
   constructor(
     private readonly api: ConversationsApi,
@@ -63,6 +69,7 @@ export class ConversationsStore {
     this.lastRefresh = this.now();
     try {
       const page = await this.api.listConversations({ limit: PAGE_SIZE });
+      for (const item of page.items) this.renamed.delete(item.id);
       // The first page replaces what we had, so renames and deletions made in
       // another tab show up. Pages loaded beyond it ("Load more") are kept.
       const loadedBeyondFirstPage = this.state.items.length > PAGE_SIZE;
@@ -97,8 +104,10 @@ export class ConversationsStore {
 
   /** A conversation was created or changed (title, activity): put it in its place. */
   upsert(conversation: Conversation): void {
+    const title = this.renamed.get(conversation.id);
+    const next = title === undefined ? conversation : { ...conversation, title };
     const others = this.state.items.filter((item) => item.id !== conversation.id);
-    this.set({ items: [conversation, ...others].sort(byActivity) });
+    this.set({ items: [next, ...others].sort(byActivity) });
   }
 
   remove(id: string): void {
@@ -112,11 +121,16 @@ export class ConversationsStore {
     if (!before) return;
     const trimmed = title.trim();
     if (!trimmed || trimmed === before.title) return;
+    const renamedBefore = this.renamed.get(id);
+    this.renamed.set(id, trimmed);
     this.set({ items: this.state.items.map((item) => (item.id === id ? { ...item, title: trimmed } : item)) });
     try {
       const saved = await this.api.renameConversation(id, trimmed);
+      this.renamed.set(id, saved.title);
       this.set({ items: this.state.items.map((item) => (item.id === id ? saved : item)) });
     } catch (error) {
+      if (renamedBefore === undefined) this.renamed.delete(id);
+      else this.renamed.set(id, renamedBefore);
       this.set({ items: this.state.items.map((item) => (item.id === id ? before : item)) });
       throw error;
     }

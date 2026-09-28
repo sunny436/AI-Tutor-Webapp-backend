@@ -130,17 +130,28 @@ export async function logOutFromSidebar(page: Page): Promise<void> {
 /** The line above a new chat's composer. */
 export const emptyGreeting = (page: Page) => page.getByRole("main").getByRole("heading", { level: 2 });
 
-/** This week's study greeting, straight from the API with this page's session. */
-export async function currentGreeting(page: Page): Promise<string> {
+/** This week's study greetings, straight from the API with this page's session. */
+export async function studyGreetings(page: Page): Promise<string[]> {
   const session = (await page.context().cookies()).find((cookie) => cookie.name === "aichat_session")?.value ?? "";
-  const response = await page.request.get(`${API_URL}/v1/greetings/current`, {
+  const response = await page.request.get(`${API_URL}/v1/greetings`, {
     headers: { Authorization: `Bearer ${decodeURIComponent(session)}` },
   });
-  expect(response.status(), "GET /v1/greetings/current").toBe(200);
-  return (await response.json()).text;
+  expect(response.status(), "GET /v1/greetings").toBe(200);
+  return (await response.json()).items;
 }
 
-export const composer = (page: Page) => page.getByRole("textbox", { name: "Message" });
+export const FALLBACK_GREETING = "What are you studying today?";
+
+/** The new chat shows one of this week's greetings (the fallback when none is live); returns it. */
+export async function expectStudyGreeting(page: Page): Promise<string> {
+  const pool = await studyGreetings(page);
+  const choices = (pool.length ? pool : [FALLBACK_GREETING]).map((text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  await expect(emptyGreeting(page)).toHaveText(new RegExp(`^(?:${choices.join("|")})$`));
+  return (await emptyGreeting(page).textContent()) ?? "";
+}
+
+export const COMPOSER_NAME = "Ask your doubt";
+export const composer = (page: Page) => page.getByRole("textbox", { name: COMPOSER_NAME });
 export const replies = (page: Page) => page.getByRole("article", { name: "Assistant" });
 export const lastReply = (page: Page) => replies(page).last();
 export const stopButton = (page: Page) => page.getByRole("button", { name: "Stop generating" });
@@ -198,6 +209,15 @@ export async function seedTurn(page: Page, message: string, conversationId?: str
   const id = JSON.parse(meta?.split("\ndata: ")[1] ?? "{}").conversationId as string | undefined;
   if (!id) throw new Error("no meta event in the stream");
   return id;
+}
+
+/** Rename a chat through the app's own route, as the sidebar does. */
+export async function renameChat(page: Page, conversationId: string, title: string): Promise<void> {
+  const response = await page.request.patch(`${APP_URL}/api/v1/conversations/${conversationId}`, {
+    data: { title },
+    headers: SAME_ORIGIN,
+  });
+  expect(response.status(), "rename").toBe(200);
 }
 
 /** The chat links in the sidebar's list. */

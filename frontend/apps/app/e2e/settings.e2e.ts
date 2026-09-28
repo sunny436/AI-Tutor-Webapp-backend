@@ -397,7 +397,7 @@ test("progress: a question and an active minute count today, and start a streak"
   await expect(page.getByRole("switch", { name: "Show my streak in the header" })).not.toBeChecked();
   await page.getByRole("link", { name: "Close settings" }).click();
   await expect(page).toHaveURL(chat);
-  await expect(page.getByRole("navigation", { name: "Learning Hub" })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Recent Doubts" })).toBeVisible();
   await expect(headerStreak(page)).toHaveCount(0);
 });
 

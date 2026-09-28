@@ -6,10 +6,10 @@ import {
   PASSWORD,
   accountMenu,
   composer,
-  currentGreeting,
   emptyGreeting,
   expect,
   expectNoHorizontalOverflow,
+  expectStudyGreeting,
   lastReply,
   logOutFromSidebar,
   openSettingsFromSidebar,
@@ -46,7 +46,7 @@ async function layout(page: Page) {
 /** Mark the composer's DOM node, then check it is still the same, and the only one. */
 const mark = (page: Page) => composer(page).evaluate((element, probe) => Object.assign(element, { __probe: probe }), PROBE);
 async function sameComposer(page: Page) {
-  await expect(page.getByRole("textbox", { name: "Message" })).toHaveCount(1);
+  await expect(composer(page)).toHaveCount(1);
   expect(await composer(page).evaluate((element) => (element as unknown as { __probe?: string }).__probe)).toBe(PROBE);
 }
 
@@ -61,7 +61,7 @@ test("a new chat: this week's study greeting, the composer centred, then ONE com
 }) => {
   await page.goto("/");
   await waitForHydration(page);
-  await expect(emptyGreeting(page)).toHaveText(await currentGreeting(page));
+  await expectStudyGreeting(page);
   await expect(page.getByRole("list", { name: "Suggested questions" })).toHaveCount(0);
   await expect(page.getByRole("main").getByRole("button")).toHaveCount(1); // Send, nothing else
   expect(await layout(page)).toMatchObject({ centred: true, pageScroll: 0 });

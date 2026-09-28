@@ -72,9 +72,10 @@ function useHeading(pathname: string | null): { title: string; subtitle: string 
   if (pathname === "/about") return { title: "About", subtitle: `What ${APP_NAME} is and how it uses your data` };
   const item = navItemFor(pathname);
   if (item?.id === "tutor") {
+    // The chat's own name (named after its first answered question), "New chat" until then.
     const active = activeConversationId(pathname);
-    const title = active ? (items.find((conversation) => conversation.id === active)?.title ?? "Chat") : item.label;
-    return { title, subtitle: item.description };
+    const title = active ? (items.find((conversation) => conversation.id === active)?.title ?? "Chat") : "New chat";
+    return { title, subtitle: "" };
   }
   if (item) return { title: item.label, subtitle: item.description };
   return { title: APP_NAME, subtitle: "" };

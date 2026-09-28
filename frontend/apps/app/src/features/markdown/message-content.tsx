@@ -9,6 +9,10 @@
  *
  * Raw HTML in a reply is not parsed (no rehype-raw): it is shown as text.
  *
+ * A reply renders as its top-level blocks (blocks.ts), each parsed once and kept while later
+ * ones arrive: while a reply streams only its last block is parsed again, and the finished reply
+ * is the same elements as the streaming one, so nothing is replaced when it completes.
+ *
  * EXTENSION POINT. `components` below is the single place that decides how each
  * element renders. Future content types — citations, diagrams (```mermaid),
  * chemistry, educational blocks — are added as entries here (or as an extra remark
@@ -18,7 +22,7 @@
  * this module stays importable in unit tests.
  */
 
-import { memo } from "react";
+import { Fragment, memo } from "react";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -28,6 +32,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@v1/ui/table";
+import { splitBlocks, streamSafe } from "./blocks";
 import { CodeBlock } from "./code-block";
 import { type HastNode, hastText, languageOf, rehypeMarkBlockCode, rehypeRawAsText } from "./hast";
 import { safeUrl, sanitizeSchema } from "./sanitize-schema";
@@ -157,17 +162,30 @@ const components: Components = {
     ) : null,
 };
 
-function MessageContentImpl({ content }: { content: string }) {
+const urlTransform = (url: string) => safeUrl(url) ?? "";
+
+/** One block of Markdown, parsed again only when its own text changes. */
+export const Markdown = memo(function Markdown({ text }: { text: string }) {
+  return (
+    <ReactMarkdown remarkPlugins={remarkPlugins} rehypePlugins={rehypePlugins} components={components} urlTransform={urlTransform}>
+      {text}
+    </ReactMarkdown>
+  );
+});
+
+function MessageContentImpl({ content, streaming = false }: { content: string; streaming?: boolean }) {
+  const blocks = splitBlocks(content);
+  const last = blocks.length - 1;
   return (
     <div className="message-content min-w-0 break-words text-[0.9375rem] leading-7 text-foreground">
-      <ReactMarkdown
-        remarkPlugins={remarkPlugins}
-        rehypePlugins={rehypePlugins}
-        components={components}
-        urlTransform={(url) => safeUrl(url) ?? ""}
-      >
-        {content}
-      </ReactMarkdown>
+      {blocks.map((block, index) => (
+        // biome-ignore lint/suspicious/noArrayIndexKey: blocks only grow at the end, so a block keeps its place
+        <Fragment key={index}>
+          {/* The same line break the parser puts between top-level elements: identical HTML. */}
+          {index > 0 && "\n"}
+          <Markdown text={streaming && index === last ? streamSafe(block) : block} />
+        </Fragment>
+      ))}
     </div>
   );
 }

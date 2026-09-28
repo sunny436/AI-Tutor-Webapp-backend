@@ -29,6 +29,7 @@ from app.conversations.router import router as conversations_router
 from app.db.models import EMBEDDING_DIMENSIONS
 from app.db.session import Database
 from app.errors import install_error_handlers
+from app.greetings.refresh import GreetingRefresh
 from app.greetings.router import router as greetings_router
 from app.health import router as health_router
 from app.learning.router import router as learning_router
@@ -118,6 +119,7 @@ def create_app(
         try:
             yield
         finally:
+            await app.state.greeting_refresh.stop()
             await app.state.generations.shutdown()
             await app.state.db.dispose()
 
@@ -139,6 +141,7 @@ def create_app(
     app.state.email_sender = email_sender or build_email_sender(settings)
     app.state.passwords = Passwords(settings)
     app.state.generations = ActiveGenerations()
+    app.state.greeting_refresh = GreetingRefresh()
     app.state.avatar_decodes = asyncio.Semaphore(AVATAR_DECODES)
     app.state.tutor_preview_limiter = SlidingWindowLimiter(limit=60, window_s=60)
     # One active minute a minute is all a client reports; a little slack for retries.

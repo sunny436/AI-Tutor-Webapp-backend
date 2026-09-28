@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { NAV_ITEMS, isActive, navItemFor, visibleNavItems } from "./nav-items";
+import { NAV_ITEMS, hubItems, isActive, navItemFor, visibleNavItems } from "./nav-items";
 
 const tutor = NAV_ITEMS.find((item) => item.id === "tutor");
 const courses = NAV_ITEMS.find((item) => item.id === "courses");
@@ -15,6 +15,11 @@ describe("nav items", () => {
       "course-creator",
       "flashcards",
     ]);
+  });
+
+  test("the Learning Hub never lists the chat itself, and is empty without preview features", () => {
+    expect(hubItems(false)).toEqual([]);
+    expect(hubItems(true).map((item) => item.id)).toEqual(["courses", "homework", "summarizer", "course-creator", "flashcards"]);
   });
 
   test("the tutor owns / and every conversation, nothing else", () => {

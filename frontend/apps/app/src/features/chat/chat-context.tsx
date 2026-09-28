@@ -24,19 +24,20 @@ import { type ChatEntry, type ChatMessage, ChatStore } from "./chat-store";
 type Stores = { chat: ChatStore; conversations: ConversationsStore };
 
 const ChatContext = createContext<Stores | null>(null);
-/** This week's study greeting, loaded with the page by the signed-in layout (lib/greeting.ts). */
-const GreetingContext = createContext<string>(FALLBACK_GREETING);
+/** This week's study greetings, loaded with the page by the signed-in layout (lib/greeting.ts). */
+const GreetingContext = createContext<readonly string[]>([FALLBACK_GREETING]);
+const FALLBACK_POOL = [FALLBACK_GREETING];
 
 /** How often the sidebar may refetch when the window regains focus. */
 const FOCUS_REFRESH_MS = 30_000;
 
 export function ChatProvider({
   initialConversations,
-  greeting = FALLBACK_GREETING,
+  greetings = FALLBACK_POOL,
   children,
 }: {
   initialConversations: ConversationPage | null;
-  greeting?: string;
+  greetings?: readonly string[];
   children: ReactNode;
 }) {
   const router = useRouter();
@@ -89,13 +90,13 @@ export function ChatProvider({
 
   return (
     <ChatContext.Provider value={stores}>
-      <GreetingContext.Provider value={greeting}>{children}</GreetingContext.Provider>
+      <GreetingContext.Provider value={greetings}>{children}</GreetingContext.Provider>
     </ChatContext.Provider>
   );
 }
 
-/** The line above a new chat's composer: this week's study greeting, the same for everyone. */
-export function useStudyGreeting(): string {
+/** The lines a new chat's greeting is picked from: this week's pool, the same for everyone. */
+export function useStudyGreetings(): readonly string[] {
   return useContext(GreetingContext);
 }
 

@@ -406,6 +406,73 @@
     animation: soft-pulse 1.6s ease-in-out infinite;
   }
 
+  /* A new chat's greeting (features/chat/empty-state.tsx): the words arrive one after another,
+     each painted with its slice of one gradient across the line (sized and offset per word by the
+     component). Every stop is >= 4.5:1 on the page in both themes (e2e/chat-polish.e2e.ts). */
+  @keyframes word-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.35em);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  .greeting-word {
+    display: inline-block;
+    background-image: linear-gradient(90deg, hsl(var(--info)), hsl(var(--brand)) 55%, hsl(var(--accent-purple)));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: word-in 480ms var(--ease-enter) both;
+    animation-delay: calc(var(--word, 0) * 70ms);
+  }
+  @media (forced-colors: active) {
+    .greeting-word {
+      background-image: none;
+      color: CanvasText;
+    }
+  }
+
+  /* A sidebar chat title too long for its row (components/marquee-title.tsx): faded at the right
+     edge, and slid to its end and back now and then, waiting at each end. Still while its row is
+     hovered or focused, so it can be read or acted on. Transform only: the compositor moves it. */
+  .marquee {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-track {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .marquee[data-overflowing] {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
+  }
+  .marquee[data-overflowing] .marquee-track {
+    animation: marquee var(--marquee-cycle, 8s) ease-in-out infinite;
+  }
+  li:hover .marquee[data-overflowing] .marquee-track,
+  li:focus-within .marquee[data-overflowing] .marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    0%,
+    25% {
+      transform: translateX(0);
+    }
+    50%,
+    75% {
+      transform: translateX(var(--marquee-shift, 0));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
   /**
    * PAGE LOAD, set in sequence.
    *
@@ -491,7 +558,9 @@
        sped up. */
     .animate-rise-in,
     .animate-soft-pulse,
-    .stagger > * {
+    .stagger > *,
+    .greeting-word,
+    .marquee-track {
       animation: none !important;
       transform: none !important;
       opacity: 1 !important;
@@ -547,7 +616,9 @@
   }
   html[data-motion="reduce"] .animate-rise-in,
   html[data-motion="reduce"] .animate-soft-pulse,
-  html[data-motion="reduce"] .stagger > * {
+  html[data-motion="reduce"] .stagger > *,
+  html[data-motion="reduce"] .greeting-word,
+  html[data-motion="reduce"] .marquee-track {
     animation: none !important;
     transform: none !important;
     opacity: 1 !important;

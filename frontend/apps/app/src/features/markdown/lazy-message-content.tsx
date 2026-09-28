@@ -22,7 +22,7 @@ export function preloadMessageContent(): void {
   void load();
 }
 
-export function MessageContent({ content }: { content: string }) {
+export function MessageContent({ content, streaming = false }: { content: string; streaming?: boolean }) {
   return (
     <Suspense
       fallback={
@@ -31,7 +31,7 @@ export function MessageContent({ content }: { content: string }) {
         </div>
       }
     >
-      <Renderer content={content} />
+      <Renderer content={content} streaming={streaming} />
     </Suspense>
   );
 }

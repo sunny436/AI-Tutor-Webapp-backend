@@ -29,17 +29,18 @@ test("the chat list: first page, load more, search and no match", async ({ page,
 
   await page.goto("/");
   await expect(chatLinks(page)).toHaveCount(30);
-  // Newest activity first: the last one seeded heads the list, the first is on page two.
-  await expect(chatLinks(page).first()).toHaveText("Seeded chat number 31");
+  // Newest activity first: the last one seeded heads the list, the first is on page two. (Each is
+  // named after its question, in title case: app/chat/titles.py.)
+  await expect(chatLinks(page).first()).toHaveText("Seeded Chat Number 31");
   await page.getByRole("button", { name: "Load more" }).click();
   await expect(chatLinks(page)).toHaveCount(31);
-  await expect(chatLinks(page).last()).toHaveText("Seeded chat number 01");
+  await expect(chatLinks(page).last()).toHaveText("Seeded Chat Number 01");
   await expect(page.getByRole("button", { name: "Load more" })).toHaveCount(0);
 
   const search = page.getByRole("textbox", { name: "Search chats" });
   await search.fill("number 07");
   await expect(chatLinks(page)).toHaveCount(1);
-  await expect(chatLinks(page)).toHaveText("Seeded chat number 07");
+  await expect(chatLinks(page)).toHaveText("Seeded Chat Number 07");
   await search.fill("nothing like this");
   await expect(chatLinks(page)).toHaveCount(0);
   await expect(page.getByText("No chat matches that.")).toBeVisible();
@@ -162,21 +163,22 @@ test("cancelling a rename or a delete changes nothing", async ({ page, account: 
   await page.goto("/");
   const link = page.locator(`nav a[href="/c/${id}"]`);
   const item = page.locator("li", { has: page.locator(`a[href="/c/${id}"]`) });
-  await expect(link).toHaveText("Keep this chat");
+  const title = "Keep This Chat"; // its automatic name (app/chat/titles.py)
+  await expect(link).toHaveText(title);
 
   await item.getByRole("button", { name: /^Rename/ }).click();
   const rename = page.getByRole("dialog", { name: "Rename chat" });
   await rename.getByLabel("Name").fill("This must not stick");
   await rename.getByRole("button", { name: "Cancel" }).click();
   await expect(rename).toBeHidden();
-  await expect(link).toHaveText("Keep this chat");
+  await expect(link).toHaveText(title);
 
   await item.getByRole("button", { name: /^Delete/ }).click();
   const remove = page.getByRole("dialog", { name: "Delete this chat?" });
   await remove.getByRole("button", { name: "Cancel" }).click();
   await expect(remove).toBeHidden();
   await page.reload();
-  await expect(link).toHaveText("Keep this chat");
+  await expect(link).toHaveText(title);
   await page.goto(`/c/${id}`);
   await expect(replies(page)).toHaveCount(1);
 });

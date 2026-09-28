@@ -57,6 +57,30 @@ describe("ConversationsStore", () => {
     expect(store.getSnapshot().items[0]?.title).toBe("Old");
   });
 
+  test("a rename wins over a stream's older copy of the conversation, until the next refresh", async () => {
+    const first = convo(1, "2026-01-02T00:00:00Z", "New chat");
+    const { api } = fakeApi({ "": { items: [convo(1, "2026-01-04T00:00:00Z", "From the server")], nextCursor: null } });
+    const store = new ConversationsStore(api, { items: [first], nextCursor: null });
+    await store.rename(first.id, "My biology notes");
+    // The reply's `done`, read just before the rename was saved, carries the automatic title.
+    store.upsert({ ...first, title: "Photosynthesis Explained", updatedAt: "2026-01-03T00:00:00Z" });
+    expect(store.getSnapshot().items[0]?.title).toBe("My biology notes");
+    expect(store.getSnapshot().items[0]?.updatedAt).toBe("2026-01-03T00:00:00Z"); // activity still moves
+    await store.refresh();
+    expect(store.getSnapshot().items[0]?.title).toBe("From the server");
+    store.upsert({ ...first, title: "Named elsewhere" });
+    expect(store.getSnapshot().items[0]?.title).toBe("Named elsewhere");
+  });
+
+  test("a refused rename is forgotten, so the stream's title shows", async () => {
+    const first = convo(1, "2026-01-02T00:00:00Z", "New chat");
+    const { api } = fakeApi({}, { failRename: true });
+    const store = new ConversationsStore(api, { items: [first], nextCursor: null });
+    await expect(store.rename(first.id, "Mine")).rejects.toThrow();
+    store.upsert({ ...first, title: "Photosynthesis Explained" });
+    expect(store.getSnapshot().items[0]?.title).toBe("Photosynthesis Explained");
+  });
+
   test("an empty or unchanged title is not sent", async () => {
     const { api, calls } = fakeApi({});
     const store = new ConversationsStore(api, { items: [convo(1, "2026-01-01T00:00:00Z", "Same")], nextCursor: null });

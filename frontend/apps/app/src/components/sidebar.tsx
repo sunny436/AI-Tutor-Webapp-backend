@@ -26,7 +26,8 @@ import type { Conversation } from "@/lib/api/types";
 import { TITLE_MAX } from "@/lib/api/types";
 import { APP_NAME } from "@/lib/brand";
 import { BrandLockup, BrandMark } from "./brand/brand-mark";
-import { isActive, visibleNavItems } from "./nav-items";
+import { MarqueeTitle } from "./marquee-title";
+import { hubItems, isActive } from "./nav-items";
 import { usePreview } from "./preview-context";
 import { useSignOut } from "./use-sign-out";
 import { UserAvatar } from "./user-avatar";
@@ -86,8 +87,8 @@ function RailTip({ label, collapsed, children }: { label: string; collapsed: boo
 }
 
 /**
- * The brand, "Ask New Doubt", the Learning Hub, the chat list ("Recent Doubts")
- * and the account. Rendered in the desktop rail and inside the mobile drawer
+ * The brand, "Ask New Doubt", the Learning Hub (only when there are tools besides the chat), the
+ * chat list ("Recent Doubts") and the account. Rendered in the desktop rail and inside the mobile drawer
  * (`onNavigate` closes the drawer). The collapse control lives in the header.
  */
 export function SidebarContent({
@@ -103,6 +104,7 @@ export function SidebarContent({
   const list = useConversations();
   const { user } = useUser();
   const preview = usePreview();
+  const hub = hubItems(preview);
   const active = activeConversationId(pathname);
   const [search, setSearch] = useState("");
   const [renaming, setRenaming] = useState<Conversation | null>(null);
@@ -194,54 +196,56 @@ export function SidebarContent({
           </RailTip>
         </div>
 
-        <nav aria-labelledby="hub-heading" className={cn("shrink-0 space-y-1", collapsed ? "px-3" : "px-3")}>
-          <h2
-            id="hub-heading"
-            className={cn(
-              "mb-2 px-3 text-2xs font-bold uppercase tracking-wider text-text-secondary",
-              collapsed && "sr-only",
-            )}
-          >
-            Learning Hub
-          </h2>
-          {visibleNavItems(preview).map((item) => {
-            const Icon = item.icon;
-            const current = isActive(item, pathname);
-            return (
-              <RailTip key={item.id} label={item.label} collapsed={collapsed}>
-                <Link
-                  href={item.href}
-                  onClick={onNavigate}
-                  aria-current={current ? "page" : undefined}
-                  aria-label={collapsed ? item.label : undefined}
-                  className={cn(
-                    "focus-ring relative flex items-center rounded-xl text-left transition-[color,background-color,box-shadow]",
-                    collapsed ? "mx-auto h-11 w-11 justify-center" : "w-full gap-3 px-3 py-2.5",
-                    current
-                      ? "bg-brand font-semibold text-brand-foreground shadow-md shadow-brand/20"
-                      : "text-text-secondary hover:bg-surface-2 hover:text-foreground",
-                  )}
-                >
-                  <span
-                    aria-hidden
-                    className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg", current ? "bg-brand-foreground/15" : item.accent)}
+        {hub.length > 0 && (
+          <nav aria-labelledby="hub-heading" className={cn("shrink-0 space-y-1", collapsed ? "px-3" : "px-3")}>
+            <h2
+              id="hub-heading"
+              className={cn(
+                "mb-2 px-3 text-2xs font-bold uppercase tracking-wider text-text-secondary",
+                collapsed && "sr-only",
+              )}
+            >
+              Learning Hub
+            </h2>
+            {hub.map((item) => {
+              const Icon = item.icon;
+              const current = isActive(item, pathname);
+              return (
+                <RailTip key={item.id} label={item.label} collapsed={collapsed}>
+                  <Link
+                    href={item.href}
+                    onClick={onNavigate}
+                    aria-current={current ? "page" : undefined}
+                    aria-label={collapsed ? item.label : undefined}
+                    className={cn(
+                      "focus-ring relative flex items-center rounded-xl text-left transition-[color,background-color,box-shadow]",
+                      collapsed ? "mx-auto h-11 w-11 justify-center" : "w-full gap-3 px-3 py-2.5",
+                      current
+                        ? "bg-brand font-semibold text-brand-foreground shadow-md shadow-brand/20"
+                        : "text-text-secondary hover:bg-surface-2 hover:text-foreground",
+                    )}
                   >
-                    <Icon className="h-[18px] w-[18px]" />
-                  </span>
-                  {!collapsed && (
-                    <span className="min-w-0 flex-1">
-                      <span className="block text-sm font-medium leading-tight">{item.label}</span>
-                      <span className={cn("block truncate text-2xs", current ? "text-brand-foreground/85" : "text-text-secondary")}>
-                        {item.description}
-                      </span>
+                    <span
+                      aria-hidden
+                      className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg", current ? "bg-brand-foreground/15" : item.accent)}
+                    >
+                      <Icon className="h-[18px] w-[18px]" />
                     </span>
-                  )}
-                  {current && !collapsed && <span aria-hidden className="h-6 w-1.5 shrink-0 rounded-full bg-brand-foreground" />}
-                </Link>
-              </RailTip>
-            );
-          })}
-        </nav>
+                    {!collapsed && (
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-sm font-medium leading-tight">{item.label}</span>
+                        <span className={cn("block truncate text-2xs", current ? "text-brand-foreground/85" : "text-text-secondary")}>
+                          {item.description}
+                        </span>
+                      </span>
+                    )}
+                    {current && !collapsed && <span aria-hidden className="h-6 w-1.5 shrink-0 rounded-full bg-brand-foreground" />}
+                  </Link>
+                </RailTip>
+              );
+            })}
+          </nav>
+        )}
 
         {collapsed ? (
           <div className="min-h-0 flex-1" />
@@ -305,7 +309,7 @@ export function SidebarContent({
                           className="focus-ring-inset flex h-9 min-w-0 flex-1 items-center gap-2.5 rounded-xl px-3 text-sm"
                         >
                           <MessageSquare aria-hidden className="h-3.5 w-3.5 shrink-0 opacity-70" />
-                          <span className="truncate">{item.title}</span>
+                          <MarqueeTitle title={item.title} />
                         </Link>
                         {/* Always visible on touch; on hover/focus with a pointer. */}
                         <span className="flex shrink-0 items-center gap-0.5 pr-1 opacity-100 transition-opacity md:opacity-0 md:focus-within:opacity-100 md:group-hover:opacity-100">

@@ -61,7 +61,8 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 | DELETE | `/v1/me` | `{password}` | 204 — deletes the account and all its data |
 | GET / PATCH | `/v1/me/appearance` | PATCH [versioned](#versioned-edits): `theme` (system\|light\|dark), `fontSize` (small\|medium\|large\|x_large), `highContrast`, `reduceMotion`, `readingComfort`, `showStreak` | the appearance, the same on every device |
 | GET / PATCH | `/v1/me/settings` | PATCH `{preferences: {...}}` (merged; `null` removes a key; ≤ 4 KB) | `{preferences, updatedAt}`. Unused by the web app; appearance is `/v1/me/appearance` |
-| GET | `/v1/greetings/current` | – | `{text, weekOf}`: this week's study greeting, the same for every user (404 when none is live; the web app then shows its own fallback). Weeks start Monday in `DEFAULT_TIMEZONE`; retire a greeting from a future Monday, never delete one |
+| GET | `/v1/greetings` | – | `{weekOf, items}`: this week's study greetings, the same pool for every user (`items` empty when none is live; the web app then shows its own fallback). The web app shows a random one per new chat. The first request of a week whose pool is older than that week starts a background refresh by the LLM (10-15 checked lines replace the pool; any failure keeps it) and never waits for it. Weeks start Monday in `DEFAULT_TIMEZONE`; greetings are retired, never deleted |
+| GET | `/v1/greetings/current` | – | `{text, weekOf}`: ONE greeting for the whole week (kept for older clients; 404 when none is live) |
 
 The user: `{id, email, displayName, emailVerified, createdAt, profileVersion, timezone, avatar: {url} | null,
 passwordChangedAt}`. `timezone` is an IANA name (`Asia/Kolkata`) or null. `passwordChangedAt` is null
@@ -194,9 +195,15 @@ version, and every edit sends the version it read. One shape, for every such res
 | Method | Path | Notes |
 |---|---|---|
 | GET | `/v1/conversations?limit=30&cursor=` | newest activity first → `{items:[{id,title,createdAt,updatedAt}], nextCursor}` |
-| POST | `/v1/conversations` | `{title?}` → 201 (title defaults to "New chat"; retitled from the first message) |
+| POST | `/v1/conversations` | `{title?}` → 201 (title defaults to "New chat"; see naming below) |
 | GET | `/v1/conversations/{id}` | |
 | PATCH | `/v1/conversations/{id}` | `{title}` (1-120 chars) — rename |
+
+Naming: a conversation starts as "New chat" and is named once, in at most six words, when a reply to a
+meaningful question completes (the `done` event carries the new title; small talk, a stopped or failed
+reply names nothing). The name comes from the question ("Photosynthesis Explained", "Mitosis vs
+Meiosis"), else the reply's first heading, else the question's own words, with no second model call.
+A title the user set is never changed.
 | DELETE | `/v1/conversations/{id}` | 204; messages and feedback are deleted with it |
 | GET | `/v1/conversations/{id}/messages?limit=50&before=` | oldest-first page; `nextCursor` loads older messages |
 

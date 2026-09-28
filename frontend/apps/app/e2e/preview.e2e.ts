@@ -33,7 +33,7 @@ test.beforeAll(async () => {
 test("the shell lists every tool, and marks what is not real", async ({ page, account: _ }) => {
   await page.goto("/");
   await expect(composer(page)).toBeVisible();
-  await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(6);
+  await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(5); // not the chat itself
   await expect(page.getByRole("banner").getByRole("link", { name: /day learning streak/ })).toBeVisible(); // the real one
   await expect(page.getByRole("button", { name: /Leaderboard/ })).toBeDisabled();
   await expect(page.getByRole("button", { name: "Attach an image or PDF (coming soon)" })).toBeDisabled();

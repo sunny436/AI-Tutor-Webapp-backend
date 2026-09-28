@@ -1,9 +1,10 @@
 import {
-  currentGreeting,
+  composer,
   describeFocus,
   emptyGreeting,
   expect,
   expectAccessible,
+  expectStudyGreeting,
   lastReply,
   seedTurn,
   sendAndWait,
@@ -22,7 +23,7 @@ test("sign-in and sign-up pages", async ({ page }) => {
 
 test("the chat, empty and with a reply, in light and dark", async ({ page, account: _ }) => {
   await page.goto("/");
-  await expect(emptyGreeting(page)).toHaveText(await currentGreeting(page));
+  await expectStudyGreeting(page);
   await expectAccessible(page);
 
   await sendAndWait(page, "A **table**:\n\n| a | b |\n| - | - |\n| 1 | 2 |\n\n```ts\nconst x = 1;\n```\n\n$e^{i\\pi} + 1 = 0$");
@@ -52,7 +53,7 @@ test("settings, and the delete-account dialog", async ({ page, account: _ }) => 
 test("every control reached by Tab shows where focus is", async ({ page, account: _ }) => {
   await seedTurn(page, "A chat, so the list has rows and row actions");
   await page.goto("/");
-  await expect(page.getByRole("textbox", { name: "Message" })).toBeFocused();
+  await expect(composer(page)).toBeFocused();
   await page.evaluate(() => {
     document.body.tabIndex = -1;
     document.body.focus();
@@ -73,7 +74,7 @@ test("every control reached by Tab shows where focus is", async ({ page, account
 test("the collapsed rail names its controls on keyboard focus", async ({ page, account: _ }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "Collapse sidebar" }).click();
-  for (const name of ["Ask New Doubt", "AI Tutor"]) {
+  for (const name of ["Ask New Doubt"]) {
     const control = page.getByRole("complementary").getByRole("link", { name });
     await control.focus();
     // (Filtered: the previous tooltip can still be fading out.)
@@ -139,7 +140,7 @@ test("the skip link goes to the page, then Tab reaches the message box", async (
   // Arrival focuses the composer on a desktop (once hydrated; wait for it, or it
   // takes focus back after the reset below). Then start from the top, as a fresh
   // visit does: focusing <body> moves the browser's Tab starting point there.
-  await expect(page.getByRole("textbox", { name: "Message" })).toBeFocused();
+  await expect(composer(page)).toBeFocused();
   await page.evaluate(() => {
     document.body.tabIndex = -1;
     document.body.focus();
@@ -152,5 +153,5 @@ test("the skip link goes to the page, then Tab reaches the message box", async (
   await expect(page.locator("#main")).toBeFocused();
   // A new chat is its greeting and the message box: nothing to tab past on the way.
   await page.keyboard.press("Tab");
-  await expect(page.getByRole("textbox", { name: "Message" })).toBeFocused();
+  await expect(composer(page)).toBeFocused();
 });

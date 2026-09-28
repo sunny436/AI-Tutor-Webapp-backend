@@ -86,7 +86,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
       </SkeletonGroup>
     );
   } else if (isEmptyChat(entry)) {
-    body = <ChatEmptyState />;
+    body = <ChatEmptyState chatKey={chatKey} />;
   } else {
     body = (
       <div className="mx-auto w-full max-w-3xl space-y-8 px-4 py-8 sm:px-6">

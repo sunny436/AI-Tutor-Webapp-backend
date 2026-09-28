@@ -3,9 +3,9 @@ import {
   PASSWORD,
   composer,
   conversationIdOf,
-  currentGreeting,
   emptyGreeting,
   expect,
+  expectStudyGreeting,
   lastReply,
   logOutFromSidebar,
   mailCode,
@@ -57,7 +57,7 @@ test("a user's whole journey", async ({ page, context }) => {
     await page.getByLabel("Code").fill(await mailCode(email, "verify"));
     await page.getByRole("button", { name: "Verify email" }).click();
     await expect(page).toHaveURL("/");
-    await expect(emptyGreeting(page)).toHaveText(await currentGreeting(page));
+    await expectStudyGreeting(page);
   });
 
   await test.step("the session is an httpOnly cookie the page cannot read", async () => {
@@ -182,7 +182,7 @@ test("a user's whole journey", async ({ page, context }) => {
   await test.step("start a second chat", async () => {
     await page.getByRole("link", { name: "Ask New Doubt" }).click();
     await expect(page).toHaveURL("/");
-    await expect(emptyGreeting(page)).toHaveText(await currentGreeting(page));
+    await expectStudyGreeting(page);
     await sendAndWait(page, "A second chat");
     second = conversationIdOf(page);
     expect(second).not.toBe(first);

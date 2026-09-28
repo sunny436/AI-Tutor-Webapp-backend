@@ -10,6 +10,7 @@ import type { ChatMessage } from "./chat-store";
 import { useChatEntry, useChatMessage, useStores } from "./chat-context";
 import { ErrorMessage } from "./error-message";
 import { MessageActions } from "./message-actions";
+import { useSmoothText } from "./smooth-text";
 import { StreamingCaret, StreamingIndicator } from "./streaming-indicator";
 
 /**
@@ -130,7 +131,10 @@ function AssistantMessage({
 }) {
   const { chat } = useStores();
   const streaming = message.status === "streaming";
-  const arrival = useArrival(message.id, live && streaming ? "live" : null);
+  const revealing = live && streaming;
+  // The reply as it should read now: at an even pace while it streams (smooth-text.ts).
+  const text = useSmoothText(message.content, revealing);
+  const arrival = useArrival(message.id, revealing ? "live" : null);
   // Streaming on the server, but not from this tab: another tab is writing it.
   const elsewhere = streaming && !live;
   const retry =
@@ -145,14 +149,14 @@ function AssistantMessage({
     >
       <BrandMark size={28} className="mt-0.5 rounded-lg" />
       <div className="min-w-0 flex-1">
-        {(message.content || (live && streaming) || phase === "stopping" || message.status === "cancelled" || elsewhere) && (
+        {(text || revealing || phase === "stopping" || message.status === "cancelled" || elsewhere) && (
           <div className="w-fit max-w-full pt-0.5">
-            {message.content ? (
+            {text ? (
               <>
-                <MessageContent content={message.content} />
-                {live && streaming && <StreamingCaret />}
+                <MessageContent content={text} streaming={revealing} />
+                {revealing && <StreamingCaret />}
               </>
-            ) : live && streaming ? (
+            ) : revealing ? (
               <StreamingIndicator />
             ) : null}
 

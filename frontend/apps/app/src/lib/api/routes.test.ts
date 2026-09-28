@@ -12,7 +12,7 @@ import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { ROUTES, type RouteKey, type RouteSpec, buildPath, matchRoute, splitRouteKey } from "./routes";
-import type { StudyGreeting } from "./types";
+import type { StudyGreetingPool } from "./types";
 
 type Operation = {
   requestBody?: { content?: Record<string, { schema?: { $ref?: string } }>; "x-max-bytes"?: number };
@@ -127,14 +127,14 @@ describe("request bodies the client sends", () => {
 });
 
 describe("responses read by server components (not proxied)", () => {
-  test("GET /v1/greetings/current answers exactly the StudyGreeting the app reads", () => {
-    const operation = openapi.paths["/v1/greetings/current"]?.get as
+  test("GET /v1/greetings answers exactly the StudyGreetingPool the app reads", () => {
+    const operation = openapi.paths["/v1/greetings"]?.get as
       | { responses?: Record<string, { content?: Record<string, { schema?: { $ref?: string } }> }> }
       | undefined;
     const ref = operation?.responses?.["200"]?.content?.["application/json"]?.schema?.$ref ?? "";
     const schema = openapi.components.schemas[ref.split("/").pop() ?? ""];
-    // A typed sample: a field added to or removed from StudyGreeting fails here or in the typecheck.
-    const sample: Required<StudyGreeting> = { text: "", weekOf: "" };
+    // A typed sample: a field added to or removed from StudyGreetingPool fails here or in the typecheck.
+    const sample: Required<StudyGreetingPool> = { weekOf: "", items: [] };
     expect(Object.keys(schema?.properties ?? {}).sort()).toEqual(Object.keys(sample).sort());
     expect([...(schema?.required ?? [])].sort()).toEqual(Object.keys(sample).sort());
   });

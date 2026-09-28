@@ -2324,6 +2324,28 @@
         "title": "StreakOut",
         "type": "object"
       },
+      "StudyGreetingPool": {
+        "properties": {
+          "items": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "weekOf": {
+            "format": "date",
+            "title": "Weekof",
+            "type": "string"
+          }
+        },
+        "required": [
+          "weekOf",
+          "items"
+        ],
+        "title": "StudyGreetingPool",
+        "type": "object"
+      },
       "StudyGreetingResponse": {
         "properties": {
           "text": {
@@ -3840,6 +3862,27 @@
         "summary": "Replace the last reply with a new one (Server-Sent Events)",
         "tags": [
           "chat"
+        ]
+      }
+    },
+    "/v1/greetings": {
+      "get": {
+        "operationId": "greeting_pool_v1_greetings_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyGreetingPool"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "This week's study greetings (the same pool for everyone; empty when none is live)",
+        "tags": [
+          "greetings"
         ]
       }
     },

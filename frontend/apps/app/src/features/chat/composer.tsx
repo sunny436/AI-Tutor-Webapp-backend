@@ -7,7 +7,6 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { PreviewBadge } from "@/components/preview-badge";
 import { usePreview } from "@/components/preview-context";
 import { describeCode } from "@/lib/api/errors";
-import { APP_NAME } from "@/lib/brand";
 import { MESSAGE_MAX } from "@/lib/api/types";
 import { useChatEntry, useStores } from "./chat-context";
 import { shouldSubmit } from "./keyboard";
@@ -28,6 +27,8 @@ const COUNTER_FROM = MESSAGE_MAX - 1000;
  *   - 16 px text on phones: iOS zooms the page when a focused field is smaller
  *   - attach and voice exist only as preview UI (lib/preview.ts): disabled and
  *     marked "Soon", and absent in production
+ *   - no placeholder and no lines under it: its name ("Ask your doubt") and the keys are
+ *     for assistive technology; only the character count shows, near the limit
  */
 
 /** An icon button that does nothing yet: disabled, named as such, marked "Soon". */
@@ -131,7 +132,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
             </SoonButton>
           )}
           <label htmlFor={`composer-${chatKey}`} className="sr-only">
-            Message
+            Ask your doubt
           </label>
           <textarea
             id={`composer-${chatKey}`}
@@ -149,10 +150,9 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
                 send();
               }
             }}
-            placeholder="Ask your doubt in English or Hinglish (e.g. 'Explain Newton's laws' or 'solve x² + 5x + 6 = 0')…"
             aria-describedby={`composer-hint-${chatKey}`}
             aria-invalid={tooLong || undefined}
-            className="max-h-[200px] min-h-[2.75rem] min-w-0 flex-1 resize-none bg-transparent px-2 py-2.5 text-base leading-relaxed text-foreground outline-none placeholder:truncate placeholder:text-text-secondary sm:text-sm"
+            className="max-h-[200px] min-h-[2.75rem] min-w-0 flex-1 resize-none bg-transparent px-2 py-2.5 text-base leading-relaxed text-foreground outline-none sm:text-sm"
           />
           {preview && (
             <SoonButton label="Voice input">
@@ -187,21 +187,12 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
           )}
         </form>
 
-        <div
-          id={`composer-hint-${chatKey}`}
-          className="mt-1.5 flex items-center justify-between gap-3 px-3 text-2xs text-text-secondary"
-        >
-          <span className="flex min-w-0 items-center gap-1">
-            <span className="truncate">
-              Powered by {APP_NAME} · AI can make mistakes<span className="hidden sm:inline">. Check important answers</span>.
-            </span>
-          </span>
-          {value.length > COUNTER_FROM ? (
-            <span className={cn("shrink-0 tabular-nums", tooLong && "font-semibold text-destructive")}>
+        <div id={`composer-hint-${chatKey}`} className="flex justify-end px-3 text-2xs text-text-secondary">
+          <span className="sr-only">Enter to send, Shift + Enter for a new line.</span>
+          {value.length > COUNTER_FROM && (
+            <span className={cn("mt-1.5 shrink-0 tabular-nums", tooLong && "font-semibold text-destructive")}>
               {value.length.toLocaleString()} / {MESSAGE_MAX.toLocaleString()}
             </span>
-          ) : (
-            <span className="hidden shrink-0 sm:inline">Enter to send · Shift + Enter for a new line</span>
           )}
         </div>
       </div>

@@ -6,6 +6,7 @@ import {
   expectAccessible,
   expectNoHorizontalOverflow,
   lastReply,
+  renameChat,
   seedTurn,
   sendAndWait,
   test,
@@ -84,7 +85,9 @@ for (const width of WIDTHS) {
   test(`at ${width}px: the chat, a wide reply, a long title and settings`, async ({ page, account: _ }) => {
     test.setTimeout(90_000);
     await page.setViewportSize({ width, height: HEIGHT });
+    // Named by the student (chats are named automatically in six words or fewer).
     const titled = await seedTurn(page, LONG_TITLE);
+    await renameChat(page, titled, LONG_TITLE);
 
     await test.step("a new chat", async () => {
       await page.goto("/");
