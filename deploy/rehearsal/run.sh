@@ -161,7 +161,8 @@ git -C "$WT" reset -q --hard "$GOOD" && git -C "$WT" push -q -f "$SOURCE" HEAD:r
 step "C0 cutover: release layout -> the checkout /opt/aichat/app"
 if deploy > "$LOGS/c0b.log" 2>&1 && grep -q "Status: MATCH" "$LOGS/c0b.log" \
   && [ "$(api_rel)" = "$GOOD" ] && [ "$(web_rel)" = "$GOOD" ] \
-  && [ "$(ssh rehearsal 'systemctl show -p WorkingDirectory --value aichat-api aichat-web | tr "\n" " "')" = "/opt/aichat/app/backend /opt/aichat/app/frontend/apps/app " ] \
+  && [ "$(ssh rehearsal 'systemctl show -p WorkingDirectory --value aichat-api')" = /opt/aichat/app/backend ] \
+  && [ "$(ssh rehearsal 'systemctl show -p WorkingDirectory --value aichat-web')" = /opt/aichat/app/frontend/apps/app ] \
   && ssh rehearsal "test -d /opt/aichat/releases/$OLD"; then
   pass "C0 cutover: both apps run $(short "$GOOD") from /opt/aichat/app; the old release is left in place"
 else fail "C0 cutover (see $LOGS/c0b.log)"; fi
@@ -283,7 +284,8 @@ git -C "$WT" reset -q --hard HEAD~1
 step "data and secrets survived everything"
 [ "$(ssh rehearsal "su postgres -c \"psql -d aichat -tAc 'select note from rehearsal_keep'\"")" = survives ] && pass "database rows survived the cutover and every deploy" || fail "database rows"
 [ "$(ssh rehearsal 'sha256sum /etc/aichat/*.env')" = "$SECRETS_BEFORE" ] && pass "secrets untouched" || fail "secrets changed"
-in_wt deploy/status.sh > "$LOGS/status.log" 2>&1 && grep -q "Status: MATCH" "$LOGS/status.log" && pass "bun run status: healthy, MATCH" || fail "status (see $LOGS/status.log)"
+in_wt deploy/status.sh > "$LOGS/status.log" 2>&1 && grep -q "Status: MATCH" "$LOGS/status.log" && grep -q "ok    no local edits in the checkout" "$LOGS/status.log" \
+  && pass "bun run status: healthy, no local edits in the checkout, MATCH" || fail "status (see $LOGS/status.log)"
 
 step "result"
 printf '%s\n' "${RESULTS[@]}"
