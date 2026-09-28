@@ -5,9 +5,9 @@ from fastapi.responses import JSONResponse
 
 router = APIRouter(tags=["health"])
 
-# A production release is /opt/aichat/releases/<commit>/ with a RELEASE file at its root
-# (written by deploy/server/release.sh). The path is taken from this module's own location,
-# not from the /opt/aichat/current pointer, so the value is the release this process runs.
+# Production runs the checkout /opt/aichat/app, with a RELEASE file at its root (written by
+# deploy/server/update.sh on every deploy). It is read once, at start: the value is the commit
+# this process started from.
 RELEASE_FILE = Path(__file__).resolve().parents[2] / "RELEASE"
 
 

@@ -7,7 +7,7 @@ FROM ubuntu:24.04
 ARG BUN_VERSION
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends systemd systemd-sysv dbus curl ca-certificates \
-      unzip xz-utils python3.12 python3.12-venv postgresql-16 postgresql-16-pgvector iproute2 openssh-server \
+      unzip xz-utils git python3.12 python3.12-venv postgresql-16 postgresql-16-pgvector iproute2 openssh-server \
     && rm -rf /var/lib/apt/lists/*
 RUN curl -fsSL https://bun.sh/install | BUN_INSTALL=/root/.bun bash -s "bun-v${BUN_VERSION}"
 COPY docker-stub /usr/bin/docker

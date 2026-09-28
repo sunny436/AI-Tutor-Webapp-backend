@@ -5,11 +5,9 @@
  *   bun deploy/ci-gate.mjs <commit>            prints the evidence (JSON) and exits 0, or explains and exits 1
  *   bun deploy/ci-gate.mjs --report <commit>   one line for `bun run status`; always exits 0
  *
- * No longer what lets a commit into production: `bun run deploy` requires the local
- * verification instead (deploy/local-gate.mjs), so a GitHub Actions outage or exhausted minutes
- * cannot block a release. CI still runs on every push and pull request, and `bun run status`
- * reports its verdict on the live release as a second, independent opinion. REQUIRED_JOBS is also
- * the list of jobs the local verification must pass (deploy/tests/ci-parity.test.mjs).
+ * Advisory only: `bun run deploy` never waits for CI (docs/deployment.md). CI still runs on every
+ * push, and `bun run status` shows its verdict on the production checkout. REQUIRED_JOBS is also
+ * the list of jobs the optional `bun run verify` runs (deploy/tests/ci-parity.test.mjs).
  * The token comes from git's credential helper and is never printed.
  */
 import { spawnSync } from "node:child_process";

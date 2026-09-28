@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 #
-# Install the systemd units and the shared PostgreSQL files from a release directory.
-# Called by release.sh before every switch and by install.sh on a new host. Idempotent.
+# Install the systemd units and the shared PostgreSQL files from a copy of this repository.
+# Called by deploy/server/update.sh on every deploy and by install.sh on a new host. Idempotent.
 #
-#   bash deploy/server/install-units.sh /opt/aichat/releases/<commit>
+#   bash deploy/server/install-units.sh <directory with deploy/>
 #
-# - Units point at /opt/aichat/current, so they are the same for every release; they are
-#   only rewritten (and systemd reloaded) when their content changes.
-# - The database is NOT part of app releases: its compose file lives in
+# - Units run the production checkout /opt/aichat/app. They are only rewritten (and systemd
+#   reloaded) when their content changes; each rewrite prints "updated <unit>", which is how
+#   update.sh knows which service to restart. Replaced files are kept as <unit>$BACKUP_SUFFIX.
+# - The database is NOT part of app deploys: its compose file lives in
 #   /opt/aichat/shared/postgres and is installed once. A release with a different compose
 #   file prints a warning instead of replacing it, because recreating the database container
 #   must be a deliberate step. Project and volume names are pinned in that file, so its
@@ -16,7 +17,7 @@
 set -euo pipefail
 . "$(dirname "$(readlink -f "$0")")/lib.sh"
 
-SRC=${1:?usage: install-units.sh <release directory>}
+SRC=${1:?usage: install-units.sh <directory with deploy/>}
 [ "$(id -u)" -eq 0 ] || die "run as root"
 
 SUFFIX=${BACKUP_SUFFIX:-.before-$(date -u +%Y%m%d%H%M%S)}  # replaced units are kept as <unit>$SUFFIX
@@ -32,8 +33,8 @@ for unit in "$SRC"/deploy/systemd/aichat-*.service "$SRC"/deploy/systemd/aichat-
 done
 if [ "$changed" = 1 ]; then systemctl daemon-reload; fi
 systemctl enable --quiet aichat-postgres.service aichat-pg-backup.timer
-# The app units start at boot only once a release is live (a fresh host has none yet).
-if [ -e "$CURRENT" ]; then systemctl enable --quiet aichat-api.service aichat-web.service; fi
+# The app units start at boot once production has a checkout (a fresh host has none yet).
+if [ -d "$APP/.git" ]; then systemctl enable --quiet aichat-api.service aichat-web.service; fi
 
 install -d -m 755 "$SHARED/postgres"
 compose="$SHARED/postgres/docker-compose.yml"

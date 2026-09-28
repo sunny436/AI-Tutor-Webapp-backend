@@ -1,24 +1,22 @@
 [Unit]
-# One run of the jobs worker of the ACTIVE RELEASE (backend/app/jobs): email outbox, reminders,
-# retention. Started every minute by aichat-jobs.timer; runs once and exits.
-# - Installed with every release but NOT enabled: enabling the timer is a deliberate step
-#   (docs/deployment.md, "Jobs worker"). JOBS_ENABLED=false in api.env also makes a run a no-op.
-# - ExecStart resolves /opt/aichat/current ONCE, like the API: a run that started before a
-#   switch finishes on its release (under a minute), the next one starts on the new release.
-# - A release without the worker (a rollback to an older one) skips the run: see the Condition.
-# - Deploy trial copies never run jobs; only this unit does. One run at a time: systemd never
-#   starts a oneshot unit that is still running, and the worker holds a database lock.
+# One run of the jobs worker (backend/app/jobs) from the production checkout /opt/aichat/app:
+# email outbox, reminders, retention. Started every minute by aichat-jobs.timer; runs once, exits.
+# - Installed but NOT enabled: enabling the timer is a deliberate step (docs/deployment.md,
+#   "Jobs worker"). JOBS_ENABLED=false in api.env also makes a run a no-op.
+# - A commit without the worker (a rollback to an older one) skips the run: see the Condition.
+# - One run at a time: systemd never starts a oneshot unit that is still running, and the
+#   worker holds a database lock.
 Description=aichat jobs worker (one run)
 Requires=aichat-postgres.service
 After=aichat-postgres.service network-online.target
 Wants=network-online.target
-ConditionPathExists=/opt/aichat/current/backend/app/jobs/__main__.py
+ConditionPathExists=/opt/aichat/app/backend/app/jobs/__main__.py
 
 [Service]
 Type=oneshot
-WorkingDirectory=/opt/aichat/current/backend
+WorkingDirectory=/opt/aichat/app/backend
 EnvironmentFile=/etc/aichat/api.env
-ExecStart=/bin/sh -c 'R=$$(readlink -f /opt/aichat/current) && cd "$$R/backend" && exec "$$R/backend/.venv/bin/python" -m app.jobs'
+ExecStart=/opt/aichat/app/backend/.venv/bin/python -m app.jobs
 TimeoutStartSec=300
 MemoryMax=400M
 NoNewPrivileges=yes

@@ -1,9 +1,10 @@
 #!/usr/bin/env bun
 /**
- * `bun run verify`: run the three CI jobs, command for command (deploy/verify/run-ci.sh), in a
- * Linux container on `git archive` of the commit checked out here, and record the result as the
- * evidence `bun run deploy` requires (deploy/local-gate.mjs). It takes no options and reads no
- * environment: what runs is decided by the commit being verified, nothing else.
+ * `bun run verify` (optional; never required by a deploy): run the three CI jobs, command for
+ * command (deploy/verify/run-ci.sh), in a Linux container on `git archive` of the commit checked
+ * out here, and record the result in .deploy/verified/. The way to run CI while GitHub Actions
+ * has no minutes. It takes no options and reads no environment: what runs is decided by the
+ * commit being verified, nothing else.
  *
  *   1. the working tree is clean; HEAD is the commit; `git fsck --strict` finds nothing wrong
  *   2. the container image: Ubuntu 24.04 + Python 3.12 + the commit's .node-version/.bun-version
@@ -23,7 +24,10 @@ import { hostname, tmpdir } from "node:os";
 import { join } from "node:path";
 
 import { REQUIRED_JOBS } from "./ci-gate.mjs";
-import { EVIDENCE_DIR, EVIDENCE_VERSION } from "./local-gate.mjs";
+
+// Where the results go (git-ignored), and their format.
+export const EVIDENCE_DIR = ".deploy/verified";
+export const EVIDENCE_VERSION = 1;
 
 /** Write `path` so that it is either absent or complete, never half-written. */
 export function writeAtomic(path, content) {

@@ -28,7 +28,7 @@ logs/
 # Per-user Claude Code permissions (local only)
 .claude/settings.local.json
 
-# Written into each production release by deploy/server/release.sh; never committed
+# Written into the production checkout by deploy/server/update.sh; never committed
 /RELEASE
 
 # Graphify knowledge-graph output (local, regenerated; any folder it is run on)

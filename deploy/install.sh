@@ -5,10 +5,10 @@
 #
 #   sudo bash deploy/install.sh
 #
-# Installs system packages and Bun, creates /opt/aichat/{releases,incoming,shared}, checks that
-# the secret files exist, installs the systemd units and the shared PostgreSQL files, and starts
-# PostgreSQL and the backup timer. It never builds or starts the app (deploy releases with
-# deploy/deploy.sh), never writes secrets and never imports data.
+# Installs system packages (git included) and Bun, creates /opt/aichat/{app-state,shared,runtime},
+# checks that the secret files exist, installs the systemd units and the shared PostgreSQL files,
+# and starts PostgreSQL and the backup timer. It never builds or starts the app (the first
+# `bun run deploy` does), never writes secrets and never imports data.
 #
 # Safe on a host that runs other services: an existing Docker installation is used as is
 # (never replaced, upgraded or restarted), and it stops if :5432 is held by anything other
@@ -23,7 +23,7 @@ BUN_VERSION=$(tr -d '[:space:]' < "$SRC/.bun-version")   # one pinned version ev
 log "1/5 packages"
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq
-apt-get install -y -qq curl ca-certificates unzip xz-utils python3.12 python3.12-venv >/dev/null
+apt-get install -y -qq curl ca-certificates unzip xz-utils git python3.12 python3.12-venv >/dev/null
 if command -v docker >/dev/null 2>&1; then
   note "docker already installed ($(docker --version)); leaving it untouched"
 else
@@ -40,7 +40,7 @@ fi
 [ "$("$BUN" --version)" = "$BUN_VERSION" ] || die "bun $BUN_VERSION could not be installed"
 
 log "3/5 directories and the pinned Node runtime"
-install -d -m 755 "$RELEASES" "$ROOT/incoming" "$SHARED" "$RUNTIMES"
+install -d -m 755 "$STATE" "$SHARED" "$RUNTIMES"
 ensure_node "$SRC"
 note "Node $(tr -d '[:space:]' < "$SRC/.node-version") ready in $RUNTIMES"
 
@@ -61,4 +61,4 @@ fi
 bash "$SRC/deploy/server/install-units.sh" "$SRC"
 systemctl enable --now aichat-postgres.service aichat-pg-backup.timer
 note "PostgreSQL and the nightly backup are running."
-log "host ready. Deploy a release from a workstation: bun run deploy (docs/deployment.md)"
+log "host ready. From a workstation: git push origin main && bun run deploy (docs/deployment.md)"

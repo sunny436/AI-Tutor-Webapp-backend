@@ -1,11 +1,8 @@
 [Unit]
-# FastAPI chat API of the ACTIVE RELEASE: /opt/aichat/current -> releases/<commit>.
+# FastAPI chat API, from the production checkout /opt/aichat/app (bun run deploy).
 # Loopback only: the web app's server-side proxy is its only client.
-# Migrations are NOT run here. deploy/server/release.sh runs them explicitly before a switch,
-# so a rollback to an older release never tries to migrate a newer schema.
-# ExecStart resolves the pointer ONCE, at start: the process then runs from the real
-# releases/<commit> path, so a later switch of `current` can never load a newer release's
-# code into this process (Python would otherwise keep importing through the symlink).
+# Migrations are NOT run here: deploy/server/update.sh runs them (after a backup) before it
+# restarts this unit, and only when the commit brings new ones.
 Description=aichat chat API (FastAPI)
 Requires=aichat-postgres.service
 After=aichat-postgres.service network-online.target
@@ -13,9 +10,9 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/aichat/current/backend
+WorkingDirectory=/opt/aichat/app/backend
 EnvironmentFile=/etc/aichat/api.env
-ExecStart=/bin/sh -c 'R=$$(readlink -f /opt/aichat/current) && cd "$$R/backend" && exec "$$R/backend/.venv/bin/python" -m uvicorn app.main:create_app --factory --host 127.0.0.1 --port 4100 --proxy-headers --forwarded-allow-ips 127.0.0.1'
+ExecStart=/opt/aichat/app/backend/.venv/bin/python -m uvicorn app.main:create_app --factory --host 127.0.0.1 --port 4100 --proxy-headers --forwarded-allow-ips 127.0.0.1
 Restart=always
 RestartSec=5
 # In-flight replies are persisted as 'cancelled' on shutdown; give them a moment.

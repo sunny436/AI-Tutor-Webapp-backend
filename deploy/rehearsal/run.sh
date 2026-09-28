@@ -1,60 +1,54 @@
 #!/usr/bin/env bash
 #
-# Rehearse the unified release model on a throwaway systemd host (Docker). Local only.
+# Rehearse the production deploy (deploy/deploy.sh, rollback.sh, status.sh) on a throwaway
+# systemd host (Docker). Local only, and never a deploy prerequisite.
 #
-#   bun run rehearse          (needs Docker and a clean working tree; ~45 min: builds ~10 releases)
+#   bun run rehearse          (needs Docker and a clean working tree; ~30 min)
 #   REHEARSAL_KEEP=1 ...      keep the container afterwards for inspection
 #
-# Drives the REAL deploy/deploy.sh, rollback.sh and status.sh over SSH against a host prepared by
-# the real deploy/install.sh. Test commits are made in a temporary worktree and pushed to a
-# temporary local "main"; nothing is pushed anywhere else. Rehearsal mode cannot reach the
-# production host (deploy.sh refuses it, and requires the /etc/aichat/REHEARSAL marker).
+# The host starts where production was before this deploy model: the release layout, prepared
+# and deployed by the scripts of commit $OLD. Test commits are made in a temporary worktree and
+# pushed to a temporary bare repository standing in for GitHub; nothing is pushed anywhere else.
+# Rehearsal mode cannot reach the production host (deploy.sh refuses it, and the host must carry
+# the /etc/aichat/REHEARSAL marker).
 #
-# Every deploy takes the operator's path: from the checkout of the release, --ref that commit,
-# through the local verification gate (rehearsal-marked evidence), with a temporary bare
-# repository standing in for GitHub.
-#
-# Proves: frontend-only / backend-only / both-halves changes each become ONE release with both
-# halves; a broken frontend build and a broken backend never switch production; a failed live
-# check rolls back automatically; manual rollback returns both halves to the exact previous
-# release and a second rollback goes further back; migration guards; no bypass (unpushed,
-# unverified, older or other-than-checked-out commits, a dirty tree, hand-run scripts, tampered
-# releases, missing API_BASE_URL, low disk, the production host); a deploy survives its SSH
-# connection being killed; a release from an unmerged branch, and a deploy that would drop it is
-# refused; two deploys at once, and a pre-flight overtaken by another deploy (refused under the
-# host lock); the audit trail; and a poller on the host never sees the web app and the API
-# report different releases at the same moment.
+# Proves: the cutover from the release layout, and that a failed cutover puts it back; a
+# frontend-only, backend-only, migration and full-stack commit each rebuild and restart only
+# their part; a docs-only commit restarts nothing; a failed build never reaches users and never
+# reports success; a rollback swaps the previous frontend build back without building; two
+# deploys at once; the refusals (dirty tree, not GitHub main, the production host); database
+# rows and secrets survive everything. Prints how long each deploy took.
 set -uo pipefail
 
+OLD=25029ea138e2e696d9d0822928d3cbbe4141dc20 # the last release of the release layout
 REPO=$(git rev-parse --show-toplevel)
 cd "$REPO" || exit 1
 [ -z "$(git status --porcelain)" ] || { echo "rehearse needs a clean working tree (it deploys commits)" >&2; exit 1; }
-command -v docker >/dev/null || { echo "rehearse needs Docker" >&2; exit 1; }
+command -v docker > /dev/null || { echo "rehearse needs Docker" >&2; exit 1; }
 export MSYS_NO_PATHCONV=1
-native() { if command -v cygpath >/dev/null; then cygpath -w "$1"; else printf '%s' "$1"; fi; }
+native() { if command -v cygpath > /dev/null; then cygpath -w "$1"; else printf '%s' "$1"; fi; }
 
 WORK=$(mktemp -d)
 NAME=aichat-rehearsal
 PORT=${REHEARSAL_SSH_PORT:-2222}
 SOURCE="$WORK/source.git"
 WT="$WORK/worktree"
-WT2="$WORK/worktree2"   # a second machine's checkout (S13, S14)
-# On Windows, the paths git is given must mean the same directory to git and to bash (with
-# MSYS_NO_PATHCONV, native git reads /tmp/... as C:\tmp\...). WORK itself stays POSIX: it is on PATH.
-if command -v cygpath >/dev/null; then SOURCE=$(cygpath -m "$SOURCE"); WT=$(cygpath -m "$WT"); WT2=$(cygpath -m "$WT2"); fi
+WTOLD="$WORK/worktree-old"
+# On Windows, the paths git is given must mean the same directory to git and to bash.
+if command -v cygpath > /dev/null; then SOURCE=$(cygpath -m "$SOURCE"); WT=$(cygpath -m "$WT"); WTOLD=$(cygpath -m "$WTOLD"); fi
 LOGS="$WORK/logs"
 mkdir -p "$LOGS" "$WORK/ctx" "$WORK/bin"
-RESULTS=()
+RESULTS=() TIMES=()
 pass() { RESULTS+=("PASS  $*"); printf '\033[32mPASS\033[0m  %s\n' "$*"; }
 fail() { RESULTS+=("FAIL  $*"); printf '\033[31mFAIL\033[0m  %s\n' "$*"; }
 step() { printf '\n\033[1m##### %s\033[0m\n' "$*"; }
 
 cleanup() {
-  git worktree remove --force "$WT" >/dev/null 2>&1 || true
-  git worktree remove --force "$WT2" >/dev/null 2>&1 || true
-  git worktree prune >/dev/null 2>&1 || true
-  git for-each-ref --format='%(refname)' refs/deploy | while read -r ref; do git update-ref -d "$ref"; done 2>/dev/null || true
-  if [ "${REHEARSAL_KEEP:-0}" != 1 ]; then docker rm -f "$NAME" >/dev/null 2>&1 || true; fi
+  git worktree remove --force "$WT" > /dev/null 2>&1 || true
+  git worktree remove --force "$WTOLD" > /dev/null 2>&1 || true
+  git worktree prune > /dev/null 2>&1 || true
+  git for-each-ref --format='%(refname)' refs/deploy | while read -r ref; do git update-ref -d "$ref"; done 2> /dev/null || true
+  if [ "${REHEARSAL_KEEP:-0}" != 1 ]; then docker rm -f "$NAME" > /dev/null 2>&1 || true; fi
   echo "logs: $LOGS"
 }
 trap cleanup EXIT
@@ -64,16 +58,16 @@ step "rehearsal host (Ubuntu 24.04, systemd, PostgreSQL + pgvector, SSH)"
 ssh-keygen -q -t ed25519 -N "" -f "$WORK/key" -C rehearsal
 cp deploy/rehearsal/Dockerfile deploy/rehearsal/docker-stub deploy/rehearsal/docker.service "$WORK/ctx/"
 cp "$WORK/key.pub" "$WORK/ctx/authorized_keys"
-docker build -q -t aichat-rehearsal:systemd --build-arg "BUN_VERSION=$(tr -d '[:space:]' < .bun-version)" "$(native "$WORK/ctx")" >/dev/null \
+docker build -q -t aichat-rehearsal:systemd --build-arg "BUN_VERSION=$(tr -d '[:space:]' < .bun-version)" "$(native "$WORK/ctx")" > /dev/null \
   || { echo "image build failed" >&2; exit 1; }
-docker rm -f "$NAME" >/dev/null 2>&1
+docker rm -f "$NAME" > /dev/null 2>&1
 docker run -d --name "$NAME" --privileged --cgroupns=host -v /sys/fs/cgroup:/sys/fs/cgroup:rw \
-  --tmpfs /run --tmpfs /run/lock -p "127.0.0.1:$PORT:22" aichat-rehearsal:systemd >/dev/null
-docker exec "$NAME" systemctl is-system-running --wait >/dev/null 2>&1
+  --tmpfs /run --tmpfs /run/lock -p "127.0.0.1:$PORT:22" aichat-rehearsal:systemd > /dev/null
+docker exec "$NAME" systemctl is-system-running --wait > /dev/null 2>&1
 docker exec "$NAME" bash -c 'for i in $(seq 30); do pg_isready -q -h 127.0.0.1 && break; sleep 1; done
   su postgres -c "psql -qc \"create role aichat login superuser password '"'"'rehearsal'"'"'\"" && su postgres -c "createdb -O aichat aichat"'
 REAL_SSH=$(command -v ssh)
-cat > "$WORK/ssh_config" <<EOF
+cat > "$WORK/ssh_config" << EOF
 Host rehearsal
   HostName 127.0.0.1
   Port $PORT
@@ -89,12 +83,12 @@ export PATH="$WORK/bin:$PATH"
 export DEPLOY_HOST=rehearsal
 ssh rehearsal true || { echo "ssh to the rehearsal host failed" >&2; exit 1; }
 
-step "prepare the host with the real deploy/install.sh (dummy secrets, never real ones)"
-ssh rehearsal 'bash -s' <<'EOF'
+step "the release layout, as production had it: $OLD's install.sh and deploy.sh (dummy secrets)"
+ssh rehearsal 'bash -s' << 'EOF'
 set -e
 umask 077
 printf 'POSTGRES_USER=aichat\nPOSTGRES_PASSWORD=rehearsal\nPOSTGRES_DB=aichat\nBACKUP_DIR=/var/backups/aichat\nKEEP_DAYS=30\n' > /etc/aichat/postgres.env
-cat > /etc/aichat/api.env <<E
+cat > /etc/aichat/api.env << E
 APP_ENV=production
 SECRET_KEY=$(head -c 48 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c 60)
 DATABASE_URL=postgresql+asyncpg://aichat:rehearsal@127.0.0.1:5432/aichat
@@ -111,99 +105,98 @@ EMBEDDING_API_KEY=
 E
 printf 'API_BASE_URL=http://127.0.0.1:4100\nNEXT_PUBLIC_SITE_URL=https://rehearsal.invalid\nNEXT_PUBLIC_SENTRY_DSN=\n' > /etc/aichat/web.env
 EOF
-git archive --format=tar HEAD | ssh rehearsal 'rm -rf /root/setup && mkdir -p /root/setup && tar -xf - -C /root/setup'
-# Production's database is its own unit (aichat-postgres); stop the stand-in so install.sh starts it that way.
-ssh rehearsal 'systemctl stop postgresql'
-ssh rehearsal 'bash /root/setup/deploy/install.sh' > "$LOGS/install.log" 2>&1 && pass "install.sh prepared a fresh host" || fail "install.sh (see $LOGS/install.log)"
-
-# Poller: the release each app reports, every 0.2 s, for the whole rehearsal.
-ssh rehearsal 'bash -s' <<'EOF'
-cat > /root/poll.sh <<'P'
-rel() { curl -fsS --max-time 2 "$1" 2>/dev/null | python3.12 -c 'import json,sys; print(json.load(sys.stdin).get("release") or "-")' 2>/dev/null || echo -; }
-while true; do echo "$(date +%s.%N) $(rel http://127.0.0.1:4100/health) $(rel http://127.0.0.1:3000/api/health)"; sleep 0.2; done
-P
-systemd-run --unit=rehearsal-poller --quiet -p StandardOutput=file:/root/poll.log -p StandardError=journal bash /root/poll.sh
-EOF
+git archive --format=tar "$OLD" | ssh rehearsal 'rm -rf /root/setup && mkdir -p /root/setup && tar -xf - -C /root/setup'
+ssh rehearsal 'systemctl stop postgresql' # production's database is its own unit (aichat-postgres)
+ssh rehearsal 'bash /root/setup/deploy/install.sh' > "$LOGS/install.log" 2>&1 || { fail "old install.sh (see $LOGS/install.log)"; exit 1; }
+git init -q --bare "$SOURCE"
+git push -q "$SOURCE" "$OLD:refs/heads/main"
+git worktree add -q --detach "$WTOLD" "$OLD"
+mkdir -p "$WTOLD/.deploy/verified"
+printf '{"version":1,"sha":"%s","tree":"%s","source":"local","rehearsal":true,"result":"success","log_sha256":"-","jobs":[{"name":"Backend (lint, contract, tests)","conclusion":"success"},{"name":"Frontend (typecheck, lint, tests incl. contract, build)","conclusion":"success"},{"name":"Integration (end-to-end)","conclusion":"success"}]}\n' \
+  "$OLD" "$(git rev-parse "$OLD^{tree}")" > "$WTOLD/.deploy/verified/$OLD.json"
+printf 'rehearsal\n' > "$WTOLD/.deploy/verified/$OLD.log"
+(cd "$WTOLD" && DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/deploy.sh --yes --ref "$OLD") > "$LOGS/old-layout.log" 2>&1
+[ "$(ssh rehearsal 'readlink -f /opt/aichat/current')" = "/opt/aichat/releases/$OLD" ] \
+  && pass "the release layout runs $OLD (as production did)" || { fail "old layout deploy (see $LOGS/old-layout.log)"; exit 1; }
+# Data and secrets that must survive everything below.
+ssh rehearsal "su postgres -c \"psql -d aichat -qc \\\"create table rehearsal_keep (note text); insert into rehearsal_keep values ('survives')\\\"\""
+SECRETS_BEFORE=$(ssh rehearsal 'sha256sum /etc/aichat/*.env')
 
 # ------------------------------------------------------------------ helpers
-git init -q --bare "$SOURCE"
 git worktree add -q --detach "$WT" HEAD
+git -C "$WT" push -q -f "$SOURCE" HEAD:refs/heads/main
 G=(git -C "$WT" -c user.name=Rehearsal -c user.email=rehearsal@example.invalid -c core.autocrlf=false)
-advance() { # message, then an edit command run inside the worktree; prints the new main
+advance() { # message, then an edit command run inside the worktree: commit it, push it to "GitHub" main, print it
   local message=$1; shift
-  (cd "$WT" && "$@")
+  (cd "$WT" && "$@") > /dev/null
   "${G[@]}" add -A && "${G[@]}" commit -q -m "rehearsal: $message" && git -C "$WT" push -q -f "$SOURCE" HEAD:refs/heads/main
   git -C "$WT" rev-parse HEAD
 }
-# Rehearsal-marked evidence for a worktree's HEAD: the 45-minute `bun run verify` is not run for
-# every test commit. The gate accepts this only in rehearsal mode (deploy/tests/local-gate.test.mjs).
-evidence() { # [worktree]
-  local tree_dir=${1:-$WT} sha tree
-  sha=$(git -C "$tree_dir" rev-parse HEAD); tree=$(git -C "$tree_dir" rev-parse 'HEAD^{tree}')
-  mkdir -p "$tree_dir/.deploy/verified"
-  printf '{"version":1,"sha":"%s","tree":"%s","source":"local","rehearsal":true,"result":"success","log_sha256":"-","jobs":[{"name":"Backend (lint, contract, tests)","conclusion":"success"},{"name":"Frontend (typecheck, lint, tests incl. contract, build)","conclusion":"success"},{"name":"Integration (end-to-end)","conclusion":"success"}]}
-' "$sha" "$tree" > "$tree_dir/.deploy/verified/$sha.json"
-  printf 'rehearsal evidence for %s
-' "$sha" > "$tree_dir/.deploy/verified/$sha.log"
-}
-# The operator's path: deploy.sh from the checkout of the release, --ref that commit.
-raw_deploy_in() { local tree_dir=$1; shift; (cd "$tree_dir" && DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/deploy.sh "$@"); }
-deploy_in() { local tree_dir=$1; shift; evidence "$tree_dir"; raw_deploy_in "$tree_dir" --yes --ref "$(git -C "$tree_dir" rev-parse HEAD)" "$@"; }
-deploy() { deploy_in "$WT" "$@"; }
-rollback() { bash deploy/rollback.sh --yes "$@"; }
-live() { ssh rehearsal 'r=$(readlink -e /opt/aichat/current 2>/dev/null) && case "$r" in /opt/aichat/releases/*) basename "$r" ;; esac'; }
-status_ok_on() { # the invariant holds, on release $1
-  DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/status.sh > "$LOGS/status-$2.log" 2>&1 && grep -q "INVARIANT OK: frontend and backend both run release $1" "$LOGS/status-$2.log"
-}
+in_wt() { (cd "$WT" && DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash "$@"); }
+deploy() { in_wt deploy/deploy.sh "$@"; }
+rollback() { in_wt deploy/rollback.sh "$@"; }
+took() { sed -n 's/^Time: \([0-9]*\)s$/\1/p' "$1" | tail -1; }
+pid() { ssh rehearsal "systemctl show -p MainPID --value $1"; }
+build_id() { ssh rehearsal 'cat /opt/aichat/app/frontend/apps/app/.next/BUILD_ID 2>/dev/null'; }
+reported() { ssh rehearsal "curl -fsS --max-time 5 $1 2>/dev/null | python3.12 -c 'import json,sys; print(json.load(sys.stdin)[\"release\"])' 2>/dev/null"; }
+api_rel() { reported http://127.0.0.1:4100/health; }
+web_rel() { reported http://127.0.0.1:3000/api/health; }
 schema() { ssh rehearsal "su postgres -c \"psql -d aichat -tAc 'select version_num from alembic_version'\""; }
+snap() { A=$(pid aichat-api) W=$(pid aichat-web) B=$(build_id); }
+api_same() { [ "$(pid aichat-api)" = "$A" ]; }
+web_same() { [ "$(pid aichat-web)" = "$W" ] && [ "$(build_id)" = "$B" ]; }
 short() { printf '%s' "${1:0:7}"; }
 
-# ------------------------------------------------------------------ scenarios
-git -C "$WT" push -q -f "$SOURCE" HEAD:refs/heads/main
-R1=$(git -C "$WT" rev-parse HEAD)
-step "S0 first release: $(short "$R1")"
-# A new host's database is empty, so its first release has every migration pending.
-deploy --with-migrations > "$LOGS/s0.log" 2>&1 && status_ok_on "$R1" s0 && pass "S0 first release live (empty database migrated after a backup); frontend == backend == $(short "$R1")" || fail "S0 first release (see $LOGS/s0.log)"
+# ------------------------------------------------------------------ the cutover
+step "C0 cutover: a first deploy that fails puts the release layout back"
+GOOD=$(git -C "$WT" rev-parse HEAD)
+advance "a backend that cannot start" sed -i '1i raise RuntimeError("rehearsal: this backend cannot start")' backend/app/main.py > /dev/null
+if ! deploy > "$LOGS/c0a.log" 2>&1 && grep -q "cutover failed: restoring" "$LOGS/c0a.log" \
+  && [ "$(api_rel)" = "$OLD" ] && [ "$(web_rel)" = "$OLD" ] \
+  && ssh rehearsal 'systemctl show -p ExecStart --value aichat-api' | grep -q /opt/aichat/current; then
+  pass "C0 a failed cutover restored the release layout: both apps serve $(short "$OLD") again"
+else fail "C0 failed cutover (see $LOGS/c0a.log)"; fi
+git -C "$WT" reset -q --hard "$GOOD" && git -C "$WT" push -q -f "$SOURCE" HEAD:refs/heads/main
 
-step "S1 frontend-only change"
-R2=$(advance "frontend-only change" sh -c 'printf "\n// rehearsal: frontend-only change\n" >> frontend/apps/app/src/lib/brand.ts')
-deploy > "$LOGS/s1.log" 2>&1 && status_ok_on "$R2" s1 && pass "S1 frontend-only commit -> one release; backend runs it too ($(short "$R2"))" || fail "S1 (see $LOGS/s1.log)"
+step "C0 cutover: release layout -> the checkout /opt/aichat/app"
+if deploy > "$LOGS/c0b.log" 2>&1 && grep -q "Status: MATCH" "$LOGS/c0b.log" \
+  && [ "$(api_rel)" = "$GOOD" ] && [ "$(web_rel)" = "$GOOD" ] \
+  && [ "$(ssh rehearsal 'systemctl show -p WorkingDirectory --value aichat-api aichat-web | tr "\n" " "')" = "/opt/aichat/app/backend /opt/aichat/app/frontend/apps/app " ] \
+  && ssh rehearsal "test -d /opt/aichat/releases/$OLD"; then
+  pass "C0 cutover: both apps run $(short "$GOOD") from /opt/aichat/app; the old release is left in place"
+else fail "C0 cutover (see $LOGS/c0b.log)"; fi
+TIMES+=("cutover (full build after the failed attempt): $(took "$LOGS/c0b.log")s")
 
-step "S2 backend-only change"
-R3=$(advance "backend-only change" sh -c 'printf "\n# rehearsal: backend-only change\n" >> backend/app/errors.py')
-deploy > "$LOGS/s2.log" 2>&1 && status_ok_on "$R3" s2 && pass "S2 backend-only commit -> one release; frontend runs it too ($(short "$R3"))" || fail "S2 (see $LOGS/s2.log)"
+# ------------------------------------------------------------------ changed parts only
+step "T1 frontend-only change: only the web app rebuilds and restarts"
+snap
+F1=$(advance "frontend-only" sh -c "printf '\n// rehearsal: frontend-only\n' >> frontend/apps/app/src/lib/brand.ts")
+if deploy > "$LOGS/t1.log" 2>&1 && grep -q "to do: frontend-build web-restart$" "$LOGS/t1.log" && grep -q "Status: MATCH" "$LOGS/t1.log" \
+  && api_same && [ "$(pid aichat-web)" != "$W" ] && [ "$(build_id)" != "$B" ] && [ "$(web_rel)" = "$F1" ] && [ "$(api_rel)" = "$GOOD" ]; then
+  pass "T1 frontend-only: web rebuilt and restarted, the API untouched (still $(short "$GOOD"))"
+else fail "T1 frontend-only (see $LOGS/t1.log)"; fi
+TIMES+=("frontend-only: $(took "$LOGS/t1.log")s")
 
-step "S3 frontend + backend change"
-R4=$(advance "frontend + backend change" sh -c 'printf "\n// rehearsal: both\n" >> frontend/apps/app/src/lib/brand.ts && printf "\n# rehearsal: both\n" >> backend/app/errors.py')
-deploy > "$LOGS/s3.log" 2>&1 && status_ok_on "$R4" s3 && pass "S3 one commit changing both halves -> both live together ($(short "$R4"))" || fail "S3 (see $LOGS/s3.log)"
+step "T2 backend-only change: only the API restarts"
+snap
+B1=$(advance "backend-only" sh -c "printf '\n# rehearsal: backend-only\n' >> backend/app/health.py")
+if deploy > "$LOGS/t2.log" 2>&1 && grep -q "to do: api-restart$" "$LOGS/t2.log" && grep -q "Status: MATCH" "$LOGS/t2.log" \
+  && web_same && [ "$(pid aichat-api)" != "$A" ] && [ "$(api_rel)" = "$B1" ] && [ "$(web_rel)" = "$F1" ]; then
+  pass "T2 backend-only: the API restarted, the web app and its build untouched"
+else fail "T2 backend-only (see $LOGS/t2.log)"; fi
+TIMES+=("backend-only: $(took "$LOGS/t2.log")s")
 
-step "S4 broken frontend build"
-BAD=$(advance "broken frontend build" sh -c 'printf "\nexport const broken: number = ;\n" >> frontend/apps/app/src/lib/brand.ts')
-if ! deploy > "$LOGS/s4.log" 2>&1 && [ "$(live)" = "$R4" ] && status_ok_on "$R4" s4; then pass "S4 broken frontend build: deploy stopped, $(short "$R4") still live, invariant holds"; else fail "S4 (see $LOGS/s4.log)"; fi
-advance "revert the broken frontend" "${G[@]}" revert --no-edit --no-commit "$BAD" >/dev/null
+step "docs-only change: nothing rebuilds or restarts"
+snap
+advance "docs-only" sh -c "printf '\nrehearsal: docs-only\n' >> docs/deployment.md" > /dev/null
+if deploy > "$LOGS/docs.log" 2>&1 && grep -q "to do: nothing" "$LOGS/docs.log" && grep -q "Status: MATCH" "$LOGS/docs.log" && api_same && web_same; then
+  pass "docs-only: nothing rebuilt or restarted; status MATCH"
+else fail "docs-only (see $LOGS/docs.log)"; fi
+TIMES+=("docs-only: $(took "$LOGS/docs.log")s")
 
-step "S5 broken backend (API cannot start)"
-BAD=$(advance "broken backend" sh -c 'printf "\nraise RuntimeError(\"rehearsal: broken backend\")\n" >> backend/app/main.py')
-if ! deploy > "$LOGS/s5.log" 2>&1 && grep -q "trial API not ready" "$LOGS/s5.log" && [ "$(live)" = "$R4" ] && status_ok_on "$R4" s5; then
-  pass "S5 broken backend: stopped at the trial copies, $(short "$R4") still live"
-else fail "S5 (see $LOGS/s5.log)"; fi
-advance "revert the broken backend" "${G[@]}" revert --no-edit --no-commit "$BAD" >/dev/null
-
-step "S6 release that passes its trial copies but fails live (web starts on the wrong port)"
-BAD=$(advance "fails after the switch" sh -c 'sed -i "s/next start -p 3000/next start -p 3002/" frontend/apps/app/package.json')
-if ! deploy > "$LOGS/s6.log" 2>&1 && grep -q "production is back on $R4" "$LOGS/s6.log" && [ "$(live)" = "$R4" ] && status_ok_on "$R4" s6; then
-  pass "S6 failed live check: rolled back automatically to $(short "$R4"); invariant holds"
-else fail "S6 (see $LOGS/s6.log)"; fi
-R5=$(advance "revert the bad start script" "${G[@]}" revert --no-edit --no-commit "$BAD")
-
-step "S7 manual rollback, twice"
-if rollback > "$LOGS/s7a.log" 2>&1 && status_ok_on "$R3" s7a; then pass "S7 rollback: frontend and backend both back on the exact previous release $(short "$R3")"; else fail "S7 first rollback (see $LOGS/s7a.log)"; fi
-if rollback > "$LOGS/s7b.log" 2>&1 && status_ok_on "$R2" s7b; then pass "S7 second rollback goes further back ($(short "$R2")), never forward to $(short "$R4")"; else fail "S7 second rollback (see $LOGS/s7b.log)"; fi
-deploy > "$LOGS/s7c.log" 2>&1 && status_ok_on "$R5" s7c && pass "S7 deploy after rollbacks: main tip $(short "$R5") live" || fail "S7 redeploy (see $LOGS/s7c.log)"
-
-step "S8 migration guards"
+step "T3 migration: backup, migrate, API restart; the web app untouched"
 HEAD_REVISION=$(grep -h '^revision = ' "$WT"/backend/alembic/versions/*.py | cut -d'"' -f2 | sort | tail -1)
-cat > "$WT/backend/alembic/versions/0099_rehearsal.py" <<M
+cat > "$WT/backend/alembic/versions/0099_rehearsal.py" << M
 """Rehearsal only: a backward-compatible migration (adds a table nothing uses)."""
 
 import sqlalchemy as sa
@@ -222,158 +215,80 @@ def upgrade() -> None:
 def downgrade() -> None:
     op.drop_table("rehearsal_marker")
 M
-MIG=$(advance "backward-compatible migration" true)
-if ! deploy > "$LOGS/s8a.log" 2>&1 && grep -q "pending migrations" "$LOGS/s8a.log" && [ "$(live)" = "$R5" ] && [ "$(schema)" != 0099_rehearsal ]; then
-  pass "S8 pending migration without --with-migrations: refused, nothing migrated, $(short "$R5") live"
-else fail "S8 refusal (see $LOGS/s8a.log)"; fi
-if deploy --with-migrations > "$LOGS/s8b.log" 2>&1 && grep -q "backup before migrating: /var/backups/aichat/aichat-" "$LOGS/s8b.log" && [ "$(schema)" = 0099_rehearsal ] && status_ok_on "$MIG" s8b; then
-  pass "S8 --with-migrations: backup taken, migrated to 0099, $(short "$MIG") live"
-else fail "S8 migrate (see $LOGS/s8b.log)"; fi
-if ! rollback > "$LOGS/s8c.log" 2>&1 && grep -q "is newer than release" "$LOGS/s8c.log" && [ "$(live)" = "$MIG" ]; then
-  pass "S8 rollback past the migration refused without --allow-older-schema"
-else fail "S8 rollback guard (see $LOGS/s8c.log)"; fi
-if rollback --allow-older-schema > "$LOGS/s8d.log" 2>&1 && status_ok_on "$R5" s8d; then pass "S8 with --allow-older-schema: back on $(short "$R5") (schema stays 0099)"; else fail "S8 older-schema rollback (see $LOGS/s8d.log)"; fi
+snap
+BACKUPS=$(ssh rehearsal 'ls /var/backups/aichat/*.dump 2>/dev/null | wc -l')
+M1=$(advance "a migration" true)
+if deploy > "$LOGS/t3.log" 2>&1 && grep -q "backup before migrating: /var/backups/aichat/" "$LOGS/t3.log" && grep -q "Status: MATCH" "$LOGS/t3.log" \
+  && [ "$(schema)" = 0099_rehearsal ] && [ "$(ssh rehearsal 'ls /var/backups/aichat/*.dump 2>/dev/null | wc -l')" -gt "$BACKUPS" ] \
+  && [ "$(api_rel)" = "$M1" ] && web_same; then
+  pass "T3 migration: backup taken, migrated to 0099, the API restarted, the web app untouched"
+else fail "T3 migration (see $LOGS/t3.log)"; fi
+TIMES+=("migration (backend): $(took "$LOGS/t3.log")s")
 
-step "S9 no bypass"
-UNPUSHED=$( (cd "$WT" && printf '\n// never pushed\n' >> frontend/apps/app/src/lib/brand.ts) && "${G[@]}" commit -qam unpushed && git -C "$WT" rev-parse HEAD)
-if ! deploy > "$LOGS/s9a.log" 2>&1 && grep -q "is on no branch" "$LOGS/s9a.log"; then pass "S9 a verified commit that is on no GitHub branch (never pushed) is refused"; else fail "S9 unpushed (see $LOGS/s9a.log)"; fi
-"${G[@]}" reset -q --hard HEAD~1
-TIP=$(git -C "$WT" rev-parse HEAD)
-git -C "$WT" checkout -q --detach "$R2"
-if ! deploy > "$LOGS/s9b.log" 2>&1 && grep -q "does not contain GitHub's main" "$LOGS/s9b.log"; then pass "S9 an older commit without --older is refused"; else fail "S9 older (see $LOGS/s9b.log)"; fi
-git -C "$WT" checkout -q --detach "$TIP"
-rm -f "$WT/.deploy/verified/$TIP.json"
-if ! raw_deploy_in "$WT" --yes --ref "$TIP" > "$LOGS/s9h.log" 2>&1 && grep -q "has no passing verification" "$LOGS/s9h.log"; then pass "S9 an unverified commit is refused"; else fail "S9 unverified (see $LOGS/s9h.log)"; fi
-printf 'stray
-' > "$WT/stray.txt"
-if ! deploy > "$LOGS/s9i.log" 2>&1 && grep -q "uncommitted or untracked" "$LOGS/s9i.log"; then pass "S9 a working tree with changes is refused"; else fail "S9 dirty tree (see $LOGS/s9i.log)"; fi
-rm -f "$WT/stray.txt"
-evidence
-if ! raw_deploy_in "$WT" --yes --ref "$R2" > "$LOGS/s9j.log" 2>&1 && grep -q "but this checkout is at" "$LOGS/s9j.log"; then pass "S9 a --ref other than the commit checked out is refused"; else fail "S9 --ref mismatch (see $LOGS/s9j.log)"; fi
-if ! ssh rehearsal "bash /opt/aichat/releases/$R5/deploy/server/release.sh $R5" > "$LOGS/s9c.log" 2>&1 && grep -q "never run release.sh by hand" "$LOGS/s9c.log"; then pass "S9 running release.sh by hand is refused"; else fail "S9 hand-run (see $LOGS/s9c.log)"; fi
-ssh rehearsal "printf '# tampered\n' >> /opt/aichat/releases/$MIG/backend/app/errors.py"
-if ! rollback --to "$MIG" --allow-older-schema > "$LOGS/s9d.log" 2>&1 && grep -q "does not match its commit" "$LOGS/s9d.log" && [ "$(live)" = "$R5" ]; then pass "S9 a tampered release is refused (files checked against the commit)"; else fail "S9 tampered (see $LOGS/s9d.log)"; fi
-ssh rehearsal "sed -i 's#^API_BASE_URL=.*#API_BASE_URL=http://127.0.0.1:4000#' /etc/aichat/web.env"
-R6=$(advance "harmless change" sh -c 'printf "\n// rehearsal: harmless\n" >> frontend/apps/app/src/lib/brand.ts')
-if ! deploy > "$LOGS/s9e.log" 2>&1 && grep -q "must set API_BASE_URL" "$LOGS/s9e.log" && [ "$(live)" = "$R5" ]; then pass "S9 a web.env without API_BASE_URL=:4100 is refused"; else fail "S9 API_BASE_URL (see $LOGS/s9e.log)"; fi
-ssh rehearsal "sed -i 's#^API_BASE_URL=.*#API_BASE_URL=http://127.0.0.1:4100#' /etc/aichat/web.env"
-if ! ssh rehearsal "AICHAT_MIN_FREE_MB=999999999 bash -c '. /opt/aichat/current/deploy/server/lib.sh; preflight_resources'" > "$LOGS/s9f.log" 2>&1 && grep -q "MB free on" "$LOGS/s9f.log"; then pass "S9 too little disk is refused before any build"; else fail "S9 low disk (see $LOGS/s9f.log)"; fi
-if ! DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" DEPLOY_HOST=root@10.1.30.37 bash deploy/deploy.sh --yes --ref HEAD > "$LOGS/s9g.log" 2>&1 && grep -q "never deploys to production" "$LOGS/s9g.log"; then pass "S9 rehearsal mode refuses the production host (before connecting)"; else fail "S9 production guard (see $LOGS/s9g.log)"; fi
-if ! grep -qE '"deploy:|"rollback:|deploy-frontend|deploy-backend' package.json frontend/package.json frontend/apps/app/package.json; then pass "S9 no component-level deploy command exists"; else fail "S9 component deploy command found"; fi
+step "T4 full-stack change: both update, both run the same commit"
+snap
+FS=$(advance "full-stack" sh -c "printf '\n// rehearsal: both\n' >> frontend/apps/app/src/lib/brand.ts && printf '\n# rehearsal: both\n' >> backend/app/health.py")
+if deploy > "$LOGS/t4.log" 2>&1 && grep -q "Status: MATCH" "$LOGS/t4.log" \
+  && [ "$(pid aichat-api)" != "$A" ] && [ "$(pid aichat-web)" != "$W" ] && [ "$(build_id)" != "$B" ] \
+  && [ "$(api_rel)" = "$FS" ] && [ "$(web_rel)" = "$FS" ]; then
+  pass "T4 full-stack: API and web restarted; both report $(short "$FS")"
+else fail "T4 full-stack (see $LOGS/t4.log)"; fi
+TIMES+=("full-stack: $(took "$LOGS/t4.log")s")
 
-step "S10 the SSH connection dies mid-deploy"
-( deploy > "$LOGS/s10.log" 2>&1 ) &
-DEPLOY_PID=$!
-for _ in $(seq 1 900); do grep -q "3/4 validate" "$LOGS/s10.log" 2>/dev/null && break; sleep 1; done
-# Kill both ends of the connection: the local deploy and the host-side client waiting on the
-# unit (what a dropped SSH session does). The systemd unit itself must carry on.
-kill_tree() { local child; for child in $(ps -ef | awk -v p="$1" '$3 == p { print $2 }'); do kill_tree "$child"; done; kill "$1" 2>/dev/null || true; }
-kill_tree "$DEPLOY_PID"
-# ([s]ystemd-run, [j]ournalctl: so that pkill -f does not match the remote shell running it.)
-ssh rehearsal "pkill -f '[s]ystemd-run --unit=aichat-deploy-${R6:0:12}'; pkill -f '[j]ournalctl -f -n all -o cat -u aichat-deploy-${R6:0:12}'" || true
-ssh rehearsal "systemctl list-units 'aichat-deploy-*' --no-legend" > "$LOGS/s10-unit.log" 2>&1
-# The host finished it: its unit is gone (and released the deploy lock), and the release is live.
-deploying() { [ -n "$(ssh rehearsal "systemctl list-units 'aichat-deploy-*' --state=active --no-legend")" ]; }
-for _ in $(seq 1 600); do ! deploying && [ "$(live)" = "$R6" ] && status_ok_on "$R6" s10 && break; sleep 2; done
-if grep -q "aichat-deploy-${R6:0:12}" "$LOGS/s10-unit.log" && ! deploying && status_ok_on "$R6" s10; then pass "S10 killed the local deploy mid-way: the host finished it; $(short "$R6") live, invariant holds"; else fail "S10 (see $LOGS/s10.log)"; fi
+step "T5 a failed frontend build never reaches users and never reports success"
+snap
+advance "a frontend that does not build" sh -c "printf '\nexport const broken = ;\n' >> frontend/apps/app/src/lib/brand.ts" > /dev/null
+if ! deploy > "$LOGS/t5a.log" 2>&1 && grep -q "the frontend build failed" "$LOGS/t5a.log" && grep -q "Status: MISMATCH" "$LOGS/t5a.log" \
+  && web_same && api_same && [ "$(web_rel)" = "$FS" ] && ssh rehearsal 'curl -fsS -o /dev/null http://127.0.0.1:3000/login'; then
+  pass "T5 failed build: exit non-zero, MISMATCH, the previous build keeps serving"
+else fail "T5 failed build (see $LOGS/t5a.log)"; fi
+FIX=$(advance "fix the frontend" git checkout HEAD~1 -- frontend/apps/app/src/lib/brand.ts)
+if deploy > "$LOGS/t5b.log" 2>&1 && grep -q "Status: MATCH" "$LOGS/t5b.log" && web_same; then
+  pass "T5 the fix deploys: its frontend is the one being served, so nothing is rebuilt"
+else fail "T5 fix (see $LOGS/t5b.log)"; fi
 
-step "S11 the jobs worker"
-ssh rehearsal 'bash -s' > "$LOGS/s11.log" 2>&1 <<'EOF'
-set -e
-echo "timer: $(systemctl is-enabled aichat-jobs.timer 2>&1 || true)"
-systemctl start aichat-jobs.service   # JOBS_ENABLED is not set: a run is a no-op
-printf 'JOBS_ENABLED=true\nNOTIFICATIONS_MODE=dry_run\nPUBLIC_APP_URL=https://rehearsal.invalid\n' >> /etc/aichat/api.env
-systemctl start aichat-jobs.service
-# The worker's own JSON lines (systemd adds its "Finished"/"Deactivated" lines after them).
-journalctl -u aichat-jobs.service -o cat --no-pager | grep '"logger"' || true
-echo "result: $(systemctl show -p Result --value aichat-jobs.service)"
-EOF
-if grep -q "^timer: disabled" "$LOGS/s11.log" && grep -q '"skipped": "JOBS_ENABLED is false"' "$LOGS/s11.log" \
-  && grep -q '"msg": "jobs run finished"' "$LOGS/s11.log" && grep -q '"retention"' "$LOGS/s11.log" \
-  && grep -q "^result: success" "$LOGS/s11.log"; then
-  pass "S11 jobs worker: timer installed but not enabled; a run is a no-op until JOBS_ENABLED, then runs every step"
-else fail "S11 jobs worker (see $LOGS/s11.log)"; fi
+step "T6 rollback: the previous frontend build is swapped back without building"
+F2=$(advance "frontend change before a rollback" sh -c "printf '\n// rehearsal: before a rollback\n' >> frontend/apps/app/src/lib/brand.ts")
+deploy > "$LOGS/t6a.log" 2>&1 || fail "T6 deploy before the rollback (see $LOGS/t6a.log)"
+snap
+if rollback > "$LOGS/t6b.log" 2>&1 && grep -q "reusing it (no build)" "$LOGS/t6b.log" && grep -q "Status: MISMATCH (the production checkout is not GitHub main)" "$LOGS/t6b.log" \
+  && api_same && [ "$(pid aichat-web)" != "$W" ] && [ "$(web_rel)" = "$FIX" ]; then
+  pass "T6 rollback to $(short "$FIX"): frontend swapped back without a build; status says production is not GitHub main"
+else fail "T6 rollback (see $LOGS/t6b.log)"; fi
+TIMES+=("rollback (frontend swap): $(took "$LOGS/t6b.log")s")
+if deploy > "$LOGS/t6c.log" 2>&1 && grep -q "reusing it (no build)" "$LOGS/t6c.log" && grep -q "Status: MATCH" "$LOGS/t6c.log" && [ "$(web_rel)" = "$F2" ]; then
+  pass "T6 deploying main again: back on $(short "$F2") by a swap, MATCH"
+else fail "T6 redeploy (see $LOGS/t6c.log)"; fi
 
-step "S12 a release from an unmerged branch; a checkout that would drop it is refused"
-source_main() { git --git-dir="$SOURCE" rev-parse refs/heads/main; }
-MAIN_TIP=$(source_main)
-branch_commit() { # <worktree> <branch> <message>: commit on the worktree's HEAD, push it to <branch>, print it
-  (cd "$1" && printf '\n// rehearsal: %s\n' "$3" >> frontend/apps/app/src/lib/brand.ts) >/dev/null
-  git -C "$1" -c user.name=Rehearsal -c user.email=rehearsal@example.invalid -c core.autocrlf=false commit -qam "rehearsal: $3" >/dev/null
-  git -C "$1" push -q -f "$SOURCE" "HEAD:refs/heads/$2" >/dev/null
-  git -C "$1" rev-parse HEAD
-}
-git -C "$WT" checkout -q --detach "$MAIN_TIP"
-FEATURE=$(branch_commit "$WT" feature "feature branch")
-if deploy > "$LOGS/s12a.log" 2>&1 && status_ok_on "$FEATURE" s12a && grep -q "ahead of GitHub main" "$LOGS/status-s12a.log"; then
-  pass "S12 a verified, pushed, not yet merged commit deploys ($(short "$FEATURE")); status says it is ahead of GitHub main"
-else fail "S12 unmerged deploy (see $LOGS/s12a.log)"; fi
-git -C "$WT" checkout -q --detach "$MAIN_TIP"
-if ! deploy > "$LOGS/s12b.log" 2>&1 && grep -q "does not contain the live release" "$LOGS/s12b.log" && [ "$(live)" = "$FEATURE" ]; then
-  pass "S12 GitHub's main without the live release (another machine's view) is refused; $(short "$FEATURE") stays live"
-else fail "S12 drop refusal (see $LOGS/s12b.log)"; fi
-git -C "$WT" push -q "$SOURCE" "$FEATURE:refs/heads/main"
-git -C "$WT" checkout -q --detach "$FEATURE"
-if status_ok_on "$FEATURE" s12c && grep -q "GitHub main == the live release" "$LOGS/status-s12c.log"; then pass "S12 main fast-forwarded to the release: status says GitHub main == live"; else fail "S12 main == live (see $LOGS/status-s12c.log)"; fi
-
-step "S13 two deploys at the same moment: exactly one lands"
-git worktree add -q --detach "$WT2" "$FEATURE"
-A=$(branch_commit "$WT" machine-a "machine A")
-B=$(branch_commit "$WT2" machine-b "machine B")
-( deploy_in "$WT" > "$LOGS/s13a.log" 2>&1; echo $? > "$LOGS/s13a.rc" ) &
-# The two "machines" share this repository here, so their fetches are 5 s apart (a real second
-# machine has its own); both still reach the host while the first deploy is building.
-( sleep 5; deploy_in "$WT2" > "$LOGS/s13b.log" 2>&1; echo $? > "$LOGS/s13b.rc" ) &
+# ------------------------------------------------------------------ safety
+step "two deploys at once: the second one stops cleanly"
+advance "concurrent deploys" sh -c "printf '\n// rehearsal: concurrent\n' >> frontend/apps/app/src/lib/brand.ts" > /dev/null
+(deploy > "$LOGS/cc-a.log" 2>&1; echo $? > "$LOGS/cc-a.rc") &
+sleep 8
+deploy > "$LOGS/cc-b.log" 2>&1; echo $? > "$LOGS/cc-b.rc"
 wait
-LIVE13=$(live)
-refused() { grep -qE "another deploy or rollback is running|production changed since the deploy's pre-flight" "$1"; }
-if { [ "$(cat "$LOGS/s13a.rc")" = 0 ] && [ "$(cat "$LOGS/s13b.rc")" != 0 ] && refused "$LOGS/s13b.log" && [ "$LIVE13" = "$A" ]; } \
-  || { [ "$(cat "$LOGS/s13b.rc")" = 0 ] && [ "$(cat "$LOGS/s13a.rc")" != 0 ] && refused "$LOGS/s13a.log" && [ "$LIVE13" = "$B" ]; }; then
-  if status_ok_on "$LIVE13" s13; then pass "S13 one deploy landed ($(short "$LIVE13")), the other was refused; invariant holds"; else fail "S13 invariant (see $LOGS/status-s13.log)"; fi
-else fail "S13 concurrent deploys (see $LOGS/s13a.log and $LOGS/s13b.log)"; fi
+if [ "$(cat "$LOGS/cc-a.rc")" = 0 ] && [ "$(cat "$LOGS/cc-b.rc")" != 0 ] && grep -q "another deploy is running" "$LOGS/cc-b.log" && grep -q "Status: MATCH" "$LOGS/cc-a.log"; then
+  pass "two deploys at once: the first finished (MATCH), the second stopped: another deploy is running"
+else fail "concurrent deploys (see $LOGS/cc-a.log and $LOGS/cc-b.log)"; fi
 
-step "S14 production changes between a deploy's pre-flight and its switch: the host refuses"
-git -C "$WT" checkout -q --detach "$LIVE13"
-git -C "$WT2" checkout -q --detach "$LIVE13"
-C1=$(branch_commit "$WT" cas-one "change one")
-C2=$(branch_commit "$WT2" cas-two "change two")
-evidence "$WT2"
-rm -f "$WORK/go"
-# C2's pre-flight runs now (live: LIVE13), then waits for its typed confirmation...
-( ( while [ ! -f "$WORK/go" ]; do sleep 1; done; printf '%s\n' "${C2:0:7}" ) | raw_deploy_in "$WT2" --ref "$C2" > "$LOGS/s14b.log" 2>&1; echo $? > "$LOGS/s14b.rc" ) &
-CAS_PID=$!
-for _ in $(seq 1 120); do grep -q "Deploy to" "$LOGS/s14b.log" 2>/dev/null && break; sleep 1; done
-# ...while C1 lands. Then C2 is confirmed, with a pre-flight that no longer holds.
-deploy > "$LOGS/s14a.log" 2>&1
-touch "$WORK/go"
-wait "$CAS_PID"
-if grep -q "production changed since the deploy's pre-flight" "$LOGS/s14b.log" && [ "$(cat "$LOGS/s14b.rc")" != 0 ] && [ "$(live)" = "$C1" ] && status_ok_on "$C1" s14; then
-  pass "S14 a deploy whose pre-flight saw another live release is refused under the host lock; $(short "$C1") stays live"
-else fail "S14 compare-and-swap (see $LOGS/s14a.log and $LOGS/s14b.log)"; fi
+step "refusals"
+touch "$WT/stray.txt"
+! deploy > "$LOGS/r1.log" 2>&1 && grep -q "uncommitted or untracked" "$LOGS/r1.log" && pass "a dirty tree is refused" || fail "dirty tree (see $LOGS/r1.log)"
+rm -f "$WT/stray.txt"
+(cd "$WT" && printf '\n// never pushed\n' >> frontend/apps/app/src/lib/brand.ts) && "${G[@]}" commit -qam "not pushed"
+! deploy > "$LOGS/r2.log" 2>&1 && grep -q "is not GitHub main" "$LOGS/r2.log" && pass "a commit that is not GitHub main is refused" || fail "not main (see $LOGS/r2.log)"
+git -C "$WT" reset -q --hard HEAD~1
+! DEPLOY_HOST=root@10.1.30.37 deploy > "$LOGS/r3.log" 2>&1 && grep -q "never deploys to production" "$LOGS/r3.log" && pass "rehearsal mode refuses the production host" || fail "production host (see $LOGS/r3.log)"
 
-step "S15 audit, and a rollback after direct deploys"
-ssh rehearsal "tail -1 /opt/aichat/releases/HISTORY; test -s /opt/aichat/releases/$C1/verify.log.gz && echo LOG=ok; python3.12 -c 'import json; d=json.load(open(\"/opt/aichat/releases/$C1/CI.json\")); print(\"SOURCE=\" + d[\"source\"], \"LIVE=\" + str(d[\"deploy\"][\"expected_live\"]))'" > "$LOGS/s15a.log" 2>&1
-# The operator is what deploy.sh records: git config user.name of the checkout it ran in.
-OPERATOR=$(git -C "$WT" config user.name || echo unknown)
-if grep -qF "deployed $C1 (previous: $LIVE13) by $OPERATOR from $(hostname) (ssh " "$LOGS/s15a.log" && grep -q "evidence [0-9a-f]\{12\}; GitHub main" "$LOGS/s15a.log" \
-  && grep -q "^LOG=ok" "$LOGS/s15a.log" && grep -q "SOURCE=local LIVE=$LIVE13" "$LOGS/s15a.log" && grep -q "evidence: rehearsal evidence" "$LOGS/status-s14.log"; then
-  pass "S15 HISTORY names the operator, machine, SSH client, evidence and GitHub main; the release keeps its evidence and log"
-else fail "S15 audit (see $LOGS/s15a.log)"; fi
-if rollback > "$LOGS/s15b.log" 2>&1 && status_ok_on "$LIVE13" s15 && ssh rehearsal "tail -1 /opt/aichat/releases/HISTORY" | grep -q "rolled back $C1 -> $LIVE13 by .* (ssh "; then
-  pass "S15 rollback after a direct deploy: back on $(short "$LIVE13"), audited"
-else fail "S15 rollback (see $LOGS/s15b.log)"; fi
-
-step "poller: did the web app and the API ever report different releases at the same moment?"
-ssh rehearsal 'systemctl stop rehearsal-poller; cat /root/poll.log' > "$LOGS/poll.log"
-samples=$(awk '$2 != "-" && $3 != "-"' "$LOGS/poll.log" | wc -l)
-mixed=$(awk '$2 != "-" && $3 != "-" && $2 != $3' "$LOGS/poll.log" | wc -l)
-if [ "$mixed" = 0 ] && [ "$samples" -gt 100 ]; then pass "poller: $samples samples with both apps up, 0 with different releases"; else fail "poller: $mixed of $samples samples showed different releases"; fi
-# Every stretch (after the first release) in which either app did not answer: the switches' outages.
-echo "unavailable (seconds, one per switch or failed release): $(awk '{ up = ($2 != "-" && $3 != "-") }
-  up { if (down) printf "%.1f ", $1 - down; down = 0; seen = 1; next }
-  seen && !down { down = $1 }' "$LOGS/poll.log")"
+step "data and secrets survived everything"
+[ "$(ssh rehearsal "su postgres -c \"psql -d aichat -tAc 'select note from rehearsal_keep'\"")" = survives ] && pass "database rows survived the cutover and every deploy" || fail "database rows"
+[ "$(ssh rehearsal 'sha256sum /etc/aichat/*.env')" = "$SECRETS_BEFORE" ] && pass "secrets untouched" || fail "secrets changed"
+in_wt deploy/status.sh > "$LOGS/status.log" 2>&1 && grep -q "Status: MATCH" "$LOGS/status.log" && pass "bun run status: healthy, MATCH" || fail "status (see $LOGS/status.log)"
 
 step "result"
 printf '%s\n' "${RESULTS[@]}"
-if printf '%s\n' "${RESULTS[@]}" | grep '^FAIL' >/dev/null; then exit 1; fi
+echo
+echo "deploy times (deploy.sh's own clock, rehearsal host on this machine):"
+printf '  %s\n' "${TIMES[@]}"
+if printf '%s\n' "${RESULTS[@]}" | grep '^FAIL' > /dev/null; then exit 1; fi
 echo "ALL PASS"

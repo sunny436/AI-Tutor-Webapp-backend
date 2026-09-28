@@ -1,11 +1,10 @@
 /**
  * Which release this web server runs, for operators.
  *
- * A production release is /opt/aichat/releases/<commit>/ with a RELEASE file at its root
- * (written by deploy/server/release.sh). The server runs from <release>/frontend/apps/app,
- * and the working directory is the resolved path, so a later switch of the
- * /opt/aichat/current pointer never changes the answer: it is the release this process
- * started from. Outside a release (development, tests) the answer is "development".
+ * Production runs the checkout /opt/aichat/app with a RELEASE file at its root (written by
+ * deploy/server/update.sh on every deploy); the server runs from <checkout>/frontend/apps/app
+ * and reads it once, at start: it is the commit this process started from. Outside production
+ * (development, tests) the answer is "development".
  *
  * Only reported to local requests: through Cloudflare (which always adds `cf-ray`) the
  * public site never reveals the commit it runs.

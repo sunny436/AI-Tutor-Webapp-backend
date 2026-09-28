@@ -9,8 +9,8 @@
 revision this code does not have (it was migrated by a NEWER release), in which case running
 this code against it is only safe if that newer migration was backward compatible.
 
-deploy/server/release.sh and rollback.sh use it to decide, before switching releases, whether
-migrations must run and whether a rollback would put old code on a newer schema.
+deploy/server/update.sh uses it, when a deploy brings new migration files, to decide whether
+migrations must run and whether a rollback puts old code on a newer schema.
 Reads DATABASE_URL from the environment, like the app. Never writes anything.
 """
 

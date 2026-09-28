@@ -56,7 +56,7 @@ function runnerJobs() {
 const jobs = runnerJobs();
 
 describe("local verification runs exactly what CI runs", () => {
-  test("the same three jobs, by name, as the deploy gate requires", () => {
+  test("the same three jobs, by name, as ci-gate.mjs reports", () => {
     expect(Object.values(ci.jobs).map((job) => job.name)).toEqual(REQUIRED_JOBS);
     expect([...jobs.keys()]).toEqual(REQUIRED_JOBS);
   });

@@ -1,111 +1,54 @@
 #!/usr/bin/env bash
 #
-# Which release is running, and proof that the web app and the API run the SAME one.
-# Read-only. From a workstation: `bun run status` (pipes this file over ssh), or on the host:
-#   bash /opt/aichat/current/deploy/server/status.sh
+# What production runs, and whether it is healthy. Read-only. From a workstation:
+# `bun run status` (pipes lib.sh + this file over ssh); on the host:
+#   bash /opt/aichat/app/deploy/server/status.sh
 #
-# Checks: /opt/aichat/current, the release each app reports (/health, /api/health), the
-# release every aichat-api / aichat-web process runs from, that both units start from
-# /opt/aichat/current, that the release's files are exactly its commit, and API_BASE_URL.
-# Exits 1 unless everything agrees: "INVARIANT OK" means
-#   FRONTEND_RUNNING_SHA == BACKEND_RUNNING_SHA == /opt/aichat/current.
+# Checks the production checkout /opt/aichat/app against production Git, that the backend and
+# the frontend run the checkout's code (content keys, lib.sh), both units and their health, and
+# web.env's API_BASE_URL. The public URL is shown, never required. Exits 1 on any failure; its
+# last line ("@@STATUS ...") is read by deploy/status.sh.
 set -uo pipefail
-
-RELEASES=/opt/aichat/releases
-CURRENT=/opt/aichat/current
+declare -F tree_key > /dev/null || . "$(dirname "$(readlink -f "$0")")/lib.sh"
 fail=0
 bad() { printf '  FAIL  %s\n' "$*"; fail=1; }
 ok() { printf '  ok    %s\n' "$*"; }
 info() { printf '        %s\n' "$*"; }
 
-release_of() {
-  local path
-  path=$(readlink -f "$1" 2>/dev/null) || return 0
-  case "$path" in "$RELEASES"/*) path=${path#"$RELEASES"/}; printf '%s' "${path%%/*}" ;; esac
-}
-reported() {
-  curl -fsS --max-time 5 "$1" 2>/dev/null \
-    | python3.12 -c 'import json,sys; print(json.load(sys.stdin).get("release", ""))' 2>/dev/null
-}
-# The releases all processes of a unit run from (sorted, unique; "outside" for non-release dirs).
-unit_releases() {
-  local cgroup pid
-  cgroup=$(systemctl show -p ControlGroup --value "$1" 2>/dev/null)
-  [ -n "$cgroup" ] && [ -r "/sys/fs/cgroup$cgroup/cgroup.procs" ] || return 0
-  while read -r pid; do
-    [ -n "$pid" ] && { r=$(release_of "/proc/$pid/cwd"); printf '%s\n' "${r:-outside}"; }
-  done < "/sys/fs/cgroup$cgroup/cgroup.procs" | sort -u
-}
-# The Node binaries the web app's processes run on (full path: it names the version).
-runtime_of_web() {
-  local cgroup pid exe
-  cgroup=$(systemctl show -p ControlGroup --value aichat-web 2>/dev/null)
-  [ -n "$cgroup" ] && [ -r "/sys/fs/cgroup$cgroup/cgroup.procs" ] || return 0
-  while read -r pid; do
-    exe=$(readlink "/proc/$pid/exe" 2>/dev/null) || continue
-    case "$exe" in */node) printf '%s\n' "$exe" ;; esac
-  done < "/sys/fs/cgroup$cgroup/cgroup.procs" | sort -u | tr '\n' ' '
-}
-
-echo "release"
-pointer=$(release_of "$CURRENT")
-if [ -n "$pointer" ]; then ok "/opt/aichat/current -> $pointer"; else bad "/opt/aichat/current does not point at a release (old layout?)"; fi
-api=$(reported "http://127.0.0.1:4100/health")
-web=$(reported "http://127.0.0.1:3000/api/health")
-api_procs=$(unit_releases aichat-api | tr '\n' ' ')
-web_procs=$(unit_releases aichat-web | tr '\n' ' ')
-info "backend  (aichat-api) reports release=${api:-none}   processes run: ${api_procs:-none}"
-info "frontend (aichat-web) reports release=${web:-none}   processes run: ${web_procs:-none}   runtime: $(runtime_of_web)"
-[ "${api_procs% }" = "$pointer" ] && [ "${web_procs% }" = "$pointer" ] && [ -n "$pointer" ] \
-  && ok "every aichat-api and aichat-web process runs $pointer" || bad "processes do not all run the pointer's release"
-[ "$api" = "$pointer" ] && [ "$web" = "$pointer" ] && [ -n "$pointer" ] \
-  && ok "frontend release == backend release == $pointer" || bad "reported releases differ (frontend=${web:-none}, backend=${api:-none}, pointer=${pointer:-none})"
-if [ -n "$pointer" ] && [ -f "$RELEASES/$pointer/.node-version" ]; then
-  want_node="/opt/aichat/runtime/node-v$(tr -d '[:space:]' < "$RELEASES/$pointer/.node-version")-linux-x64/bin/node"
-  [ "$(runtime_of_web)" = "$want_node " ] && ok "web runs the release's pinned Node ($want_node)" \
-    || bad "web does not run the release's pinned Node (expected $want_node, found: $(runtime_of_web))"
+echo "production"
+if [ ! -d "$APP/.git" ]; then
+  bad "no production checkout at $APP (the host still runs the old release layout: bun run deploy)"
+  exit 1
 fi
+HEAD=$(git -C "$APP" rev-parse HEAD)
+BARE=$(git --git-dir="$APP_GIT" rev-parse -q --verify refs/heads/main 2> /dev/null)
+ok "checkout $APP at $HEAD ($(git -C "$APP" log -1 --format=%s))"
+[ "$BARE" = "$HEAD" ] && ok "production Git main == the checkout" || bad "production Git main is ${BARE:-missing}, the checkout is $HEAD: the last deploy did not finish"
+[ -z "$(git -C "$APP" status --porcelain --untracked-files=no)" ] && ok "no local edits in the checkout" || bad "the checkout has local edits (git -C $APP status): only deploys change it"
 
-echo "integrity"
-if [ -n "$pointer" ] && [ -f "$RELEASES/$pointer/MANIFEST" ]; then
-  if out=$(python3.12 "$RELEASES/$pointer/deploy/server/verify-release.py" "$RELEASES/$pointer" 2>&1); then ok "${out#"${out%%[![:space:]]*}"}"; else bad "release files differ from commit $pointer"; printf '%s\n' "$out" | sed 's/^/        /' | head -8; fi
-else
-  bad "no MANIFEST to verify the live release against its commit"
-fi
-# The live release's evidence: local verification (the current model), GitHub CI (releases
-# deployed before it) or rehearsal. The same reading as evidence_summary in lib.sh.
-if [ -f "$RELEASES/$pointer/CI.json" ]; then
-  info "evidence: $(python3.12 - "$RELEASES/$pointer/CI.json" <<'PY' 2>/dev/null || echo "unreadable"
-import json, sys
-d = json.load(open(sys.argv[1]))
-jobs = ", ".join(j["name"].split(" (")[0] + " " + str(j.get("conclusion")) for j in d.get("jobs", []))
-if d.get("source") == "local":
-    print(("rehearsal evidence" if d.get("rehearsal") else f"verified locally on {d.get('machine', '?')} at {d.get('finished_at', '?')}") + f": {jobs}")
-elif d.get("rehearsal"):
-    print("rehearsal (no CI)")
-else:
-    print(f"GitHub CI: {jobs}")
-PY
-)"
-  [ -f "$RELEASES/$pointer/verify.log.gz" ] && info "verification log: $RELEASES/$pointer/verify.log.gz"
-fi
+api=$(reported_release "http://127.0.0.1:$API_PORT/health")
+web=$(reported_release "http://127.0.0.1:$WEB_PORT/api/health")
+K_BACK=$(key_backend) K_FRONT=$(key_frontend)
+bcur=no fcur=no
+if [ "$(running_key backend)" = "$K_BACK" ]; then bcur=yes; ok "backend: aichat-api runs the checkout's backend code (deployed with $(running_commit backend); reports ${api:-nothing})"; else bad "backend: aichat-api runs older backend code ($(running_commit backend)): deploy again"; fi
+if [ "$(running_key frontend)" = "$K_FRONT" ]; then fcur=yes; ok "frontend: aichat-web serves the checkout's frontend build (built from $(running_commit frontend); reports ${web:-nothing})"; else bad "frontend: aichat-web serves an older build ($(running_commit frontend)): deploy again"; fi
 
-echo "units"
+echo "services"
 for unit in aichat-api aichat-web; do
-  start=$(systemctl show -p ExecStart --value "$unit" 2>/dev/null)
-  dir=$(systemctl show -p WorkingDirectory --value "$unit" 2>/dev/null)
-  case "$start $dir" in *"/opt/aichat/current"*) ok "$unit starts from /opt/aichat/current" ;; *) bad "$unit does NOT start from /opt/aichat/current ($dir)" ;; esac
+  systemctl is-active --quiet "$unit" && ok "$unit active" || bad "$unit is not active (journalctl -u $unit)"
+  case "$(systemctl show -p WorkingDirectory --value "$unit" 2> /dev/null)" in "$APP"/*) ;; *) bad "$unit does not run from $APP" ;; esac
 done
-if grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' /etc/aichat/web.env 2>/dev/null; then ok "web.env API_BASE_URL -> the API on :4100"; else bad "web.env API_BASE_URL is not http://127.0.0.1:4100"; fi
-# The jobs worker is not part of the invariant: it runs from `current` whenever it runs.
-jobs_timer=$(systemctl is-enabled aichat-jobs.timer 2>/dev/null); [ -n "$jobs_timer" ] || jobs_timer="not installed"
-jobs_last=$(systemctl show -p ExecMainExitTimestamp --value aichat-jobs.service 2>/dev/null)
-info "jobs worker: aichat-jobs.timer ${jobs_timer}; last run ${jobs_last:-never} ($(systemctl show -p Result --value aichat-jobs.service 2>/dev/null))"
-for legacy in /opt/aichat/backend /opt/aichat/frontend; do
-  [ -e "$legacy" ] && info "note: legacy checkout $legacy still exists (not used; remove after approval)"
+curl -fsS -o /dev/null --max-time 5 "http://127.0.0.1:$API_PORT/ready" && ok "API /health and /ready (database reachable)" || bad "API /ready fails"
+curl -fsS -o /dev/null --max-time 5 "http://127.0.0.1:$WEB_PORT/login" && ok "web /login" || bad "web /login fails"
+grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' "$SECRETS/web.env" 2> /dev/null && ok "web.env API_BASE_URL -> the API on :4100" || bad "web.env API_BASE_URL is not http://127.0.0.1:4100"
+public=$(sed -n 's/^NEXT_PUBLIC_SITE_URL=//p' "$SECRETS/web.env" 2> /dev/null)
+if [ -n "$public" ]; then info "public $public/login -> $(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "$public/login" || true) (information: Cloudflare/DNS)"; fi
+jobs_timer=$(systemctl is-enabled aichat-jobs.timer 2> /dev/null); info "jobs worker: aichat-jobs.timer ${jobs_timer:-not installed}"
+for legacy in /opt/aichat/backend /opt/aichat/frontend /opt/aichat/releases; do
+  [ -e "$legacy" ] && info "note: $legacy is from an older layout (not used; remove after approval)"
 done
 
-if [ -f "$RELEASES/HISTORY" ]; then echo "last events"; tail -3 "$RELEASES/HISTORY" | sed 's/^/        /'; fi
-echo
-if [ "$fail" = 0 ]; then echo "INVARIANT OK: frontend and backend both run release $pointer"; else echo "INVARIANT FAIL"; fi
+if [ -f "$HISTORY" ]; then echo "last deploys"; tail -3 "$HISTORY" | sed 's/^/        /'; fi
+printf '@@STATUS checkout=%s backend=%s frontend=%s backend_current=%s frontend_current=%s\n' \
+  "$HEAD" "$(running_commit backend)" "$(running_commit frontend)" "$bcur" "$fcur"
 exit "$fail"

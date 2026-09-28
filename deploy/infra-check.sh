@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
 # Compare the host against INFRASTRUCTURE.md. Read-only.
-#   bash /opt/aichat/current/deploy/infra-check.sh
+#   bash /opt/aichat/app/deploy/infra-check.sh
 #
-# First the release invariant (deploy/server/status.sh: frontend release == backend release ==
-# /opt/aichat/current, every process, the release's files == its commit), then the host.
+# First what production runs (deploy/server/status.sh: the checkout, the code each part runs,
+# health), then the host.
 set -uo pipefail
 . "$(dirname "$(readlink -f "$0")")/server/lib.sh"
 fail=0
