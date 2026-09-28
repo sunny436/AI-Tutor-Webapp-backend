@@ -90,6 +90,8 @@ function repository() {
           DEPLOY_REHEARSAL_SOURCE: posix(origin),
           DEPLOY_HOST: host,
           FAKE_LIVE: live,
+          // As the rehearsal runs it on Windows: Git Bash hands native programs its paths as-is.
+          MSYS_NO_PATHCONV: "1",
         },
       });
       const output = `${result.stdout}\n${result.stderr}`;
@@ -110,6 +112,7 @@ describe("deploy pre-flight: only the verified, pushed commit checked out here",
     repo.verified(sha);
     const run = repo.deploy(["--ref", sha], { live });
     expect(run.output).toContain("contains it, plus 1 commit(s)");
+    expect(run.output).toMatch(/verified {2}rehearsal evidence/);
     expect(run.passed).toBe(true);
   });
 

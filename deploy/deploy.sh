@@ -71,7 +71,9 @@ SUBJECT=$(git log -1 --format='%s' "$SHA")
 # ---------------------------------------------------------------- 2. verified on this machine
 echo "==> local verification of $SHA"
 bun deploy/local-gate.mjs "$SHA" > "$WORK/evidence.json" || stop "$SHA has no passing verification: run 'bun run verify' with it checked out (nothing was deployed)"
-VERIFIED=$(bun -e 'const d=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8")); console.log(d.rehearsal ? "rehearsal evidence" : `${d.machine} at ${d.finished_at} (${d.runner?.os ?? "?"}): ${d.jobs.map(j=>j.name.split(" (")[0]).join(", ")} passed`)' "$WORK/evidence.json")
+# (Bun reads the JSON from stdin: on Windows it cannot open Git Bash's /tmp paths.)
+VERIFIED=$(bun -e 'const d=JSON.parse(require("fs").readFileSync(0,"utf8")); console.log(d.rehearsal ? "rehearsal evidence" : `${d.machine} at ${d.finished_at} (${d.runner?.os ?? "?"}): ${d.jobs.map(j=>j.name.split(" (")[0]).join(", ")} passed`)' < "$WORK/evidence.json")
+[ -n "$VERIFIED" ] || stop "could not read the verification evidence"
 
 # ---------------------------------------------------------------- 3. on GitHub, containing GitHub's main
 echo "==> fetching the branches of $SOURCE"
@@ -132,11 +134,12 @@ fi
 
 # The evidence travels with the release (release.sh, status.sh and the host's HISTORY show it),
 # with who deployed it, from where, and what GitHub held at that moment.
-bun -e 'const fs=require("fs"); const [file,operator,machine,main,branches,live,out]=process.argv.slice(1);
-  const d=JSON.parse(fs.readFileSync(file,"utf8"));
+bun -e 'const [operator,machine,main,branches,live]=process.argv.slice(1);
+  const d=JSON.parse(require("fs").readFileSync(0,"utf8"));
   d.deploy={operator,machine,github_main:main,github_branches:branches.split(" "),expected_live:live||null};
-  d.operator=operator; fs.writeFileSync(out, JSON.stringify(d));' \
-  "$WORK/evidence.json" "$(git config user.name || echo unknown)" "$(hostname)" "$MAIN" "$BRANCHES" "$LIVE" "$WORK/ci.json"
+  d.operator=operator; console.log(JSON.stringify(d));' \
+  "$(git config user.name || echo unknown)" "$(hostname)" "$MAIN" "$BRANCHES" "$LIVE" < "$WORK/evidence.json" > "$WORK/ci.json"
+[ -s "$WORK/ci.json" ] || stop "could not prepare the release evidence"
 
 ID=$(date -u +%Y%m%dT%H%M%S)-$RANDOM
 UP="/opt/aichat/incoming/$SHA.$ID"
