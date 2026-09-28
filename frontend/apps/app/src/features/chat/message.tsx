@@ -2,7 +2,7 @@
 
 import { Button } from "@v1/ui/button";
 import { cn } from "@v1/ui/utils";
-import { memo } from "react";
+import { type CSSProperties, memo, useState } from "react";
 
 import { BrandMark } from "@/components/brand/brand-mark";
 import { MessageContent } from "@/features/markdown/lazy-message-content";
@@ -51,9 +51,42 @@ function MessageTime({ value, className }: { value: string; className?: string }
   );
 }
 
+/** The rise-in's length: --motion-base. */
+const ARRIVAL_MS = 220;
+/** When each message began to arrive, for this page's lifetime. */
+const arrivals = new Map<string, number>();
+let lastSent: { content: string; at: number } | null = null;
+
+/**
+ * A message rises in once, when it first appears live: the student's as it is sent, a reply
+ * as it starts. The same message mounting again (its optimistic id swapped for the server's,
+ * the chat moving to its own address) continues that one arrival rather than starting another
+ * or snapping into place; history never animates. The style is the negative delay that does it.
+ */
+function useArrival(id: string, start: "sent" | "confirmed" | "live" | null, content = ""): CSSProperties | undefined {
+  const [style] = useState<CSSProperties | undefined>(() => {
+    if (typeof window === "undefined" || start === null) return undefined;
+    const now = performance.now();
+    if (start === "sent" && !arrivals.has(id)) {
+      arrivals.set(id, now);
+      lastSent = { content, at: now };
+    }
+    if (start === "confirmed" && lastSent?.content === content) {
+      arrivals.set(id, lastSent.at);
+      lastSent = null;
+    }
+    if (start === "live" && !arrivals.has(id)) arrivals.set(id, now);
+    const began = arrivals.get(id);
+    if (began === undefined || now - began >= ARRIVAL_MS) return undefined;
+    return { animationDelay: `${-Math.round(now - began)}ms` };
+  });
+  return style;
+}
+
 export function UserMessage({ message }: { message: ChatMessage }) {
+  const arrival = useArrival(message.id, message.pending ? "sent" : "confirmed", message.content);
   return (
-    <article aria-label="You" className="flex justify-end">
+    <article aria-label="You" className={cn("flex justify-end", arrival && "animate-rise-in")} style={arrival}>
       <div
         className={cn(
           "min-w-0 max-w-[85%] whitespace-pre-wrap break-words rounded-2xl bg-surface-2 px-4 py-2.5 text-[0.9375rem] leading-relaxed text-foreground sm:max-w-[75%]",
@@ -97,13 +130,19 @@ function AssistantMessage({
 }) {
   const { chat } = useStores();
   const streaming = message.status === "streaming";
+  const arrival = useArrival(message.id, live && streaming ? "live" : null);
   // Streaming on the server, but not from this tab: another tab is writing it.
   const elsewhere = streaming && !live;
   const retry =
     canRegenerate && message.conversationId ? () => void chat.regenerate(message.conversationId) : undefined;
 
   return (
-    <article aria-label="Assistant" aria-busy={streaming} className="group flex gap-3">
+    <article
+      aria-label="Assistant"
+      aria-busy={streaming}
+      className={cn("group flex gap-3", arrival && "animate-rise-in")}
+      style={arrival}
+    >
       <BrandMark size={28} className="mt-0.5 rounded-lg" />
       <div className="min-w-0 flex-1">
         {(message.content || (live && streaming) || phase === "stopping" || message.status === "cancelled" || elsewhere) && (

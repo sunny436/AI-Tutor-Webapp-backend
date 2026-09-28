@@ -20,6 +20,11 @@ export function useStickToBottom(
   resetKey: string,
 ) {
   const stick = useRef(true);
+  // JavaScript smooth scrolling ignores the CSS reduced-motion rule: honour it here (the OS
+  // setting, or Reduce motion in Settings).
+  const reduced = () =>
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ||
+    document.documentElement.getAttribute("data-motion") === "reduce";
   const [atBottom, setAtBottom] = useState(true);
 
   const scrollToBottom = useCallback(
@@ -28,7 +33,7 @@ export function useStickToBottom(
       if (!element) return;
       stick.current = true;
       setAtBottom(true);
-      element.scrollTo({ top: element.scrollHeight, behavior });
+      element.scrollTo({ top: element.scrollHeight, behavior: behavior === "smooth" && reduced() ? "auto" : behavior });
     },
     [scrollRef],
   );

@@ -46,7 +46,7 @@ export function CoursesView() {
                 aria-pressed={current}
                 onClick={() => setSelectedId(course.id)}
                 className={cn(
-                  "focus-ring w-full rounded-2xl border bg-card p-5 text-left transition-all",
+                  "focus-ring w-full rounded-2xl border bg-card p-5 text-left transition-[border-color,box-shadow]",
                   current ? "border-brand elev-2 ring-2 ring-brand/20" : "border-border elev-1 hover:border-brand/30",
                 )}
               >

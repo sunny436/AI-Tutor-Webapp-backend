@@ -1,0 +1,223 @@
+/**
+ * The motion system, end to end: one set of tokens drives every transition; nothing animates
+ * `all`; dialogs scale in place and menus grow from their trigger; a message arrives once;
+ * nothing is left animating at rest; reduced motion (the OS setting or Settings) stops the
+ * movement, "Jump to latest" included; and none of it shifts the layout.
+ */
+
+import { type Page, expect } from "@playwright/test";
+
+import { composer, seedTurn, send, stopButton, test, waitForHydration, waitForIdle, LONG_MESSAGE } from "./support";
+
+const bell = (page: Page) => page.getByRole("banner").getByRole("button", { name: /^Notifications/ });
+
+/** Elements whose transition animates every property (not the 0s initial value). */
+async function transitionsOnAll(page: Page): Promise<string[]> {
+  return page.evaluate(() =>
+    [...document.querySelectorAll<HTMLElement>("body *")]
+      .filter((element) => {
+        const style = getComputedStyle(element);
+        const properties = style.transitionProperty.split(",").map((part) => part.trim());
+        const durations = style.transitionDuration.split(",").map((part) => Number.parseFloat(part));
+        return properties.some((property, index) => property === "all" && (durations[index] ?? durations[0] ?? 0) > 0);
+      })
+      .map((element) => `${element.tagName.toLowerCase()}.${String(element.className).slice(0, 60)}`),
+  );
+}
+
+/** Finite animations still running. */
+async function runningAnimations(page: Page): Promise<string[]> {
+  return page.evaluate(() =>
+    document
+      .getAnimations()
+      .filter((animation) => animation.playState === "running" && animation.effect?.getTiming().iterations !== Number.POSITIVE_INFINITY)
+      .map((animation) => (animation as CSSAnimation).animationName ?? "transition"),
+  );
+}
+
+test("one set of tokens; nothing transitions `all`", async ({ page, account: _ }) => {
+  const id = await seedTurn(page, "A reply to look at");
+  await page.goto("/");
+  await waitForHydration(page);
+  const tokens = await page.evaluate(() => {
+    const root = getComputedStyle(document.documentElement);
+    return ["--motion-fast", "--motion-base", "--motion-slow", "--ease-standard", "--ease-enter", "--ease-exit"].map((name) =>
+      root.getPropertyValue(name).replace(/\s+/g, ""),
+    );
+  });
+  expect(tokens).toEqual([
+    "150ms",
+    "220ms",
+    "320ms",
+    "cubic-bezier(0.25,0.1,0.25,1)",
+    "cubic-bezier(0.22,1,0.36,1)",
+    "cubic-bezier(0.4,0,1,1)",
+  ]);
+  // A bare `transition` resolves to the tokens.
+  const send = await page.getByRole("button", { name: "Send message" }).evaluate((button) => {
+    const style = getComputedStyle(button);
+    return [style.transitionDuration.split(",")[0]?.trim(), style.transitionTimingFunction.split("),")[0]?.trim()];
+  });
+  expect(send[0]).toBe("0.15s");
+  expect(send[1]).toContain("cubic-bezier(0.25, 0.1, 0.25, 1");
+
+  expect(await transitionsOnAll(page)).toEqual([]);
+  await page.goto(`/c/${id}`);
+  await expect(page.getByRole("article", { name: "Assistant" })).toHaveCount(1);
+  expect(await transitionsOnAll(page)).toEqual([]);
+  await page.goto("/settings/profile");
+  await expect(page.getByRole("heading", { level: 2, name: "Profile" })).toBeVisible();
+  expect(await transitionsOnAll(page)).toEqual([]);
+});
+
+test("a dialog scales in place; a menu grows from its trigger; nothing animates at rest", async ({ page, account: _ }) => {
+  const id = await seedTurn(page, "A chat with a dialog to open");
+  await page.goto(`/c/${id}`);
+  await waitForHydration(page);
+
+  const row = page.locator("li", { has: page.locator(`a[href="/c/${id}"]`) });
+  await row.hover();
+  // The dialog's centre, sampled every frame while it opens: it must not move.
+  const centres = page.evaluate(
+    () =>
+      new Promise<number[][]>((resolve) => {
+        const points: number[][] = [];
+        const start = performance.now();
+        const sample = () => {
+          const dialog = document.querySelector('[role="dialog"]');
+          if (dialog) {
+            const box = dialog.getBoundingClientRect();
+            points.push([box.left + box.width / 2, box.top + box.height / 2]);
+          }
+          if (performance.now() - start < 600) requestAnimationFrame(sample);
+          else resolve(points);
+        };
+        requestAnimationFrame(sample);
+      }),
+  );
+  await row.getByRole("button", { name: /^Rename/ }).click();
+  const points = await centres;
+  expect(points.length, "frames sampled while the dialog opened").toBeGreaterThan(2);
+  const [x0, y0] = points.at(-1) as number[];
+  for (const [x, y] of points) {
+    expect(Math.abs((x as number) - (x0 as number)), "no sideways drift").toBeLessThanOrEqual(1);
+    expect(Math.abs((y as number) - (y0 as number)), "no vertical drift").toBeLessThanOrEqual(1);
+  }
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+
+  // The bell's menu opens below the bell, aligned to its end: it grows from its top-right.
+  await bell(page).click();
+  const origin = await page.getByRole("menu").evaluate((menu) => {
+    const [x, y] = getComputedStyle(menu).transformOrigin.split(" ").map(Number.parseFloat);
+    return { x: x as number, y: y as number, width: menu.getBoundingClientRect().width };
+  });
+  expect(origin.y, "grows from its top edge").toBeLessThanOrEqual(2);
+  expect(origin.x, "from the end it is aligned to").toBeGreaterThan(origin.width / 2);
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("menu")).toHaveCount(0);
+
+  await page.waitForTimeout(1_000);
+  expect(await runningAnimations(page)).toEqual([]);
+});
+
+test("a message arrives once: no replay when its id is confirmed or the chat gets its address", async ({ page, account: _ }) => {
+  await page.goto("/");
+  await waitForHydration(page);
+  await page.evaluate(() => {
+    const starts: { at: string; elapsed: number }[] = [];
+    (window as unknown as { __starts: typeof starts }).__starts = starts;
+    document.addEventListener("animationstart", (event) => {
+      const target = event.target as HTMLElement;
+      if (event.animationName === "rise-in" && target.tagName === "ARTICLE") {
+        starts.push({ at: target.getAttribute("aria-label") ?? "", elapsed: event.elapsedTime });
+      }
+    });
+  });
+  await send(page, "Explain evaporation in one line");
+  await waitForIdle(page);
+  await expect(page).toHaveURL(/\/c\//);
+  const starts = await page.evaluate(() => (window as unknown as { __starts: { at: string; elapsed: number }[] }).__starts);
+  // Continuations of an arrival already under way start part-way (elapsed > 0); a fresh
+  // arrival starts at 0: exactly one each for the student's message and the reply.
+  const fresh = starts.filter((start) => start.elapsed === 0).map((start) => start.at);
+  expect(fresh.sort()).toEqual(["Assistant", "You"]);
+  await page.waitForTimeout(1_000);
+  expect(await runningAnimations(page)).toEqual([]);
+});
+
+test("reduced motion, from the OS or from Settings: no movement, and Jump to latest lands at once", async ({ page, account: _ }) => {
+  test.setTimeout(120_000);
+  let id = "";
+  for (let turn = 0; turn < 12; turn += 1) id = await seedTurn(page, `Question ${turn + 1}: how do plants, animals and people use water?`, id || undefined);
+
+  for (const mode of ["os", "settings"] as const) {
+    await page.emulateMedia({ reducedMotion: mode === "os" ? "reduce" : "no-preference" });
+    await page.goto(`/c/${id}`);
+    await waitForHydration(page);
+    // The chat opens at its latest message once the messages are in: scroll after that.
+    await expect(page.getByRole("article", { name: "Assistant" })).toHaveCount(12);
+    if (mode === "settings") await page.evaluate(() => document.documentElement.setAttribute("data-motion", "reduce"));
+
+    await bell(page).click();
+    const menu = await page.getByRole("menu").evaluate((element) => {
+      const style = getComputedStyle(element);
+      return { duration: Number.parseFloat(style.animationDuration), transform: style.transform };
+    });
+    expect(menu.duration, `${mode}: the menu does not animate`).toBeLessThan(0.001);
+    expect(["none", "matrix(1, 0, 0, 1, 0, 0)"], `${mode}: and is not scaled`).toContain(menu.transform);
+    await page.keyboard.press("Escape");
+
+    const transcript = page.locator("main .overflow-y-auto").first();
+    await transcript.evaluate((element) => element.scrollTo({ top: 0 }));
+    await page.getByRole("button", { name: "Jump to latest" }).click();
+    const gap = await transcript.evaluate((element) => element.scrollHeight - element.clientHeight - element.scrollTop);
+    expect(gap, `${mode}: jumped straight to the end`).toBeLessThanOrEqual(2);
+  }
+});
+
+test("sending, streaming, menus and Settings shift nothing on the page", async ({ page, account: _ }) => {
+  await page.goto("/");
+  await waitForHydration(page);
+  // Typed text growing the composer is the reader's own doing (a keypress excludes it from the
+  // metric); Playwright's fill() has no keypress, so it is filled before measuring.
+  await composer(page).fill(LONG_MESSAGE);
+  await page.evaluate(() => {
+    type Shift = PerformanceEntry & {
+      value: number;
+      hadRecentInput: boolean;
+      sources: { node: Node | null; previousRect: DOMRectReadOnly; currentRect: DOMRectReadOnly }[];
+    };
+    const shifts: { value: number; what: string }[] = [];
+    (window as unknown as { __shifts: typeof shifts }).__shifts = shifts;
+    new PerformanceObserver((list) => {
+      for (const entry of list.getEntries() as Shift[]) {
+        if (entry.hadRecentInput) continue;
+        const what = entry.sources
+          .map((source) => {
+            const node = source.node as Element | null;
+            const name = node ? `${node.nodeName.toLowerCase()}.${String((node as Element).className ?? "").slice(0, 50)}` : "?";
+            return `${name} y ${Math.round(source.previousRect.y)}->${Math.round(source.currentRect.y)} h ${Math.round(source.previousRect.height)}->${Math.round(source.currentRect.height)} @${location.pathname}`;
+          })
+          .join(" | ");
+        shifts.push({ value: entry.value, what });
+      }
+    }).observe({ type: "layout-shift", buffered: false });
+  });
+  await page.getByRole("button", { name: "Send message" }).click();
+  await expect(stopButton(page)).toBeVisible();
+  await page.waitForTimeout(800);
+  await bell(page).click();
+  await page.keyboard.press("Escape");
+  await stopButton(page).click();
+  await waitForIdle(page);
+  await page.getByRole("link", { name: "Settings", exact: true }).click();
+  const nav = page.getByRole("navigation", { name: "Settings sections" });
+  for (const name of ["Notifications", "Learning & Streak", "Appearance & Accessibility"]) {
+    await nav.getByRole("link", { name, exact: true }).click();
+    await expect(page.getByRole("heading", { level: 2, name, exact: true })).toBeVisible();
+  }
+  const shifts = await page.evaluate(() => (window as unknown as { __shifts: { value: number; what: string }[] }).__shifts);
+  const cls = shifts.reduce((sum, shift) => sum + shift.value, 0);
+  expect(cls, `cumulative layout shift: ${JSON.stringify(shifts)}`).toBeLessThan(0.01);
+});

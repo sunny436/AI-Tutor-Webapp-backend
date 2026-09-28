@@ -53,6 +53,12 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
   const textarea = useRef<HTMLTextAreaElement>(null);
 
   const stream = entry?.stream ?? null;
+  // Send and Stop take each other's place with a quick scale-in, but not on the page's first
+  // paint: only once the button has actually changed.
+  const startedStreaming = useRef(Boolean(stream));
+  const swapped = useRef(false);
+  if (Boolean(stream) !== startedStreaming.current) swapped.current = true;
+  const swapIn = swapped.current && "motion-safe:animate-in motion-safe:fade-in-0 motion-safe:zoom-in-90 ease-enter";
   const tooLong = value.length > MESSAGE_MAX;
   const canSend = Boolean(value.trim()) && !stream && !tooLong;
   const error = entry?.composerError ?? null;
@@ -117,7 +123,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
             event.preventDefault();
             send();
           }}
-          className="flex items-end gap-1.5 rounded-3xl border border-border bg-card p-2 shadow-sm transition-colors focus-within:border-brand/60 focus-within:ring-2 focus-within:ring-brand/15"
+          className="flex items-end gap-1.5 rounded-3xl border border-border bg-card p-2 shadow-sm transition-[border-color,box-shadow] focus-within:border-brand/60 focus-within:ring-2 focus-within:ring-brand/15"
         >
           {preview && (
             <SoonButton label="Attach an image or PDF">
@@ -159,7 +165,10 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
               onClick={stop}
               disabled={stream.phase !== "streaming"}
               aria-label={stream.phase === "stopping" ? "Stopping" : "Stop generating"}
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-foreground text-background transition hover:brightness-110 disabled:opacity-50 sm:h-10 sm:w-10"
+              className={cn(
+                "grid h-11 w-11 shrink-0 place-items-center rounded-full bg-foreground text-background transition hover:brightness-110 active:scale-[0.97] disabled:opacity-50 sm:h-10 sm:w-10",
+                swapIn,
+              )}
             >
               <Square aria-hidden className="h-3.5 w-3.5 fill-current" />
             </button>
@@ -168,7 +177,10 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
               type="submit"
               disabled={!canSend}
               aria-label="Send message"
-              className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand text-brand-foreground transition hover:bg-brand-hover active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:w-10"
+              className={cn(
+                "grid h-11 w-11 shrink-0 place-items-center rounded-full bg-brand text-brand-foreground transition hover:bg-brand-hover active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:w-10",
+                swapIn,
+              )}
             >
               <Send aria-hidden className="h-[18px] w-[18px]" />
             </button>

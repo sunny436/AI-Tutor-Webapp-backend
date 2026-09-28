@@ -3,7 +3,7 @@
 import { cn } from "@v1/ui/utils";
 import { Flame, Hourglass } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useAppearance } from "@/components/appearance-provider";
 import { dayHasEnded, describeRemaining } from "./countdown";
@@ -20,8 +20,13 @@ const pill =
 export function StreakBadge() {
   const { status, data } = useStreak();
   const appearance = useAppearance();
-  if (appearance?.appearance && !appearance.appearance.showStreak) return null;
   const known = status === "ready" && data;
+  // A new number rises in; the first one the page shows simply appears.
+  const shown = known ? data.currentStreak : null;
+  const first = useRef<number | null>(null);
+  if (first.current === null && shown !== null) first.current = shown;
+  const rise = shown !== null && shown !== first.current;
+  if (appearance?.appearance && !appearance.appearance.showStreak) return null;
   const label = known
     ? `${data.currentStreak} day learning streak${data.todayActive ? "" : ", today's learning still to do"}`
     : "Learning streak unavailable";
@@ -29,9 +34,11 @@ export function StreakBadge() {
     <Link href="/settings/streak" aria-label={label} title={label} className={cn(pill, "hover:bg-surface-2")}>
       <Flame
         aria-hidden
-        className={cn("h-4 w-4", known && data.todayActive ? "fill-current text-streak" : "text-text-secondary")}
+        className={cn("h-4 w-4 transition-colors", known && data.todayActive ? "fill-current text-streak" : "text-text-secondary")}
       />
-      <span aria-hidden>{known ? data.currentStreak : "–"}</span>
+      <span key={shown ?? "unknown"} aria-hidden className={cn("inline-block", rise && "animate-rise-in")}>
+        {known ? data.currentStreak : "–"}
+      </span>
     </Link>
   );
 }
@@ -42,7 +49,7 @@ export function StreakBadge() {
  * day the streak is asked for again (the new day's end comes with it).
  */
 export function DayCountdown({ className }: { className?: string }) {
-  const { data } = useStreak();
+  const { status, data } = useStreak();
   const dayEnd = data?.dayEnd;
   const [now, setNow] = useState<number | null>(null);
 
@@ -61,7 +68,15 @@ export function DayCountdown({ className }: { className?: string }) {
     return () => window.clearInterval(timer);
   }, [dayEnd]);
 
-  if (!dayEnd || now === null) return null;
+  if (!dayEnd || now === null) {
+    // Hold the pill's place while the streak loads, so the header does not shift when it arrives.
+    return status === "loading" || dayEnd ? (
+      <span aria-hidden className={cn(pill, "invisible font-medium", className)}>
+        <Hourglass className="h-4 w-4" />
+        00h 00m
+      </span>
+    ) : null;
+  }
   const { short, spoken } = describeRemaining(Date.parse(dayEnd) - now);
   return (
     <span className={cn(pill, "font-medium text-text-secondary", className)} title={spoken}>

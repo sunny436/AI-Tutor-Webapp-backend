@@ -74,6 +74,26 @@
 
     --radius: 0.5rem;
 
+    /* ---- motion ----
+       One small system for every normal movement (Tailwind: duration-fast|base|slow,
+       ease-standard|enter|exit; the bare `transition` classes use fast + standard, and
+       tailwindcss-animate's enter/exit read the same scale).
+         fast  hover, press, focus, colour, menus, tooltips, and every exit
+         base  dialogs, arrivals, badges, toggles
+         slow  the phone drawer and the sidebar collapse: large surfaces
+       Enter decelerates (arrives fast, lands softly); exit accelerates away; standard is a
+       state changing in place. Only transform and opacity move, except the sidebar's width.
+       Deliberate exceptions: the transcript follows a streaming reply instantly; the composer
+       grows instantly; Settings panes swap instantly; the skeleton, the streaming caret and
+       the typing dots breathe (opacity, gone with their element); toasts (sonner) and the
+       calendar library animate themselves. Reduced motion (below) removes all of it. */
+    --motion-fast: 150ms;
+    --motion-base: 220ms;
+    --motion-slow: 320ms;
+    --ease-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
     /* ---- semantic layer ----
        `surface` is a well inside a card (inputs, list rows); `surface-2` is
        one step deeper, for hover and skeletons. `text-secondary` names what
@@ -220,6 +240,16 @@
   table {
     font-variant-numeric: tabular-nums;
   }
+  /* Touch: the press states are the feedback, not the browser's grey tap flash, and a tap
+     is never held back waiting to see if it becomes a double-tap zoom. */
+  a,
+  button,
+  [role="button"],
+  summary,
+  label {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
 }
 
 @layer utilities {
@@ -359,7 +389,7 @@
     }
   }
   .animate-rise-in {
-    animation: rise-in 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: rise-in var(--motion-base) var(--ease-enter) both;
   }
 
   /* Skeletons and the streaming caret. A gentle breath, not a strobe. */
@@ -398,7 +428,7 @@
     }
   }
   .stagger > * {
-    animation: settle-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: settle-in 420ms var(--ease-enter) both;
   }
   .stagger > *:nth-child(1) {
     animation-delay: 0ms;

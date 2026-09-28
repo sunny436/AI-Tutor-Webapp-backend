@@ -5,10 +5,10 @@ import * as React from "react";
 import { cn } from "../utils";
 
 const buttonVariants = cva(
-  // `transition-all` rather than `transition-colors` so the press and the shadow
-  // animate too; `active:scale-[0.98]` gives a button the small physical
-  // acknowledgement that separates a product from a page.
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none",
+  // Colour, shadow and the press animate (motion tokens: fast, standard), never layout;
+  // `active:scale-[0.98]` gives a button the small physical acknowledgement that
+  // separates a product from a page.
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-[color,background-color,border-color,box-shadow,transform,opacity] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:scale-[0.98] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none",
   {
     variants: {
       variant: {
