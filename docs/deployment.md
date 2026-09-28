@@ -8,10 +8,11 @@ production release is identified by one immutable commit SHA, and production run
 and the API from that same release, at all times.
 
 ```
-feature branch ─► PR ─► main ─► CI on that exact commit: Backend + Frontend + Integration
+commit ─► git push (a branch on GitHub) ─► bun run verify   (the three CI jobs, in a Linux container)
                                         │
-                           bun run deploy   (workstation)
-                                        │  CI gate · git archive <commit> + file manifest ──ssh──►
+                  bun run deploy -- --ref <commit>   (the deploy machine: the release checked out)
+                                        │  verified · on GitHub · contains main and the live release
+                                        │  git archive <commit> + manifest + evidence ─────ssh──►
                                         ▼
  /opt/aichat/releases/<commit>/   systemd unit aichat-deploy-<commit>-<id> (detached)
     verify   every file == the commit (git blob hashes)
@@ -29,9 +30,12 @@ feature branch ─► PR ─► main ─► CI on that exact commit: Backend + F
 | Guarantee | Enforced by |
 |---|---|
 | Frontend and backend always run the same commit | Both units run from `/opt/aichat/current`, resolved once at start. Every switch stops the web app **before** the pointer moves and starts it **after** the API runs the new release, so an old web app never serves against a new API or the reverse. Afterwards the deploy proves pointer = API-reported release = web-reported release = the release of every `aichat-api` / `aichat-web` process, or rolls back. |
-| Only approved commits reach production | `deploy.sh` fetches `main` from the pinned repository URL, accepts only commits of `main`'s own history, and requires GitHub CI **success for that exact commit** on all three jobs (`deploy/ci-gate.mjs`, fail closed). Branch protection is not available on this repository's plan; this gate is the enforcement. |
+| Only verified commits reach production | `deploy.sh` releases exactly the commit checked out (`--ref` must be `HEAD`, the tree clean, `git fsck` clean) and only with passing evidence from `bun run verify` for that commit **and its tree** (`deploy/local-gate.mjs`, fail closed). The verification runs the three CI jobs' commands (kept identical to `ci.yml` by `deploy/tests/ci-parity.test.mjs`) in an Ubuntu 24.04 container on `git archive` of the commit, with CI's service images and pinned runtimes, so no local file, install or secret can influence it. GitHub Actions is not consulted: its minutes or availability cannot block a release. |
+| Production never drifts from GitHub | Before anything is uploaded, the commit must be on a branch of GitHub (fetched from the pinned URL) and contain GitHub's `main`; the live release must be on GitHub too, and the new commit must contain it, so a deploy from another machine or an older checkout can never silently remove live commits (`--older` is the explicit downgrade). `bun run status` shows the live release against `main` and GitHub CI's verdict on it. |
+| Two deploys cannot interleave | The pre-flight passes the live release it checked to the host, which refuses under its deploy lock if production changed since (another deploy or a rollback got in between). One deploy or rollback at a time (lock). |
+| Every release is accounted for | The host's `HISTORY` records who deployed, from which machine and SSH client, the evidence's hash and GitHub's `main` at that moment; the evidence (`CI.json`) and the full verification log (`verify.log.gz`) stay in the release's directory. |
 | A release is exactly its commit | `git archive` of the commit, never a working tree. Every file is checked against the commit's `git ls-tree` hashes on arrival, before the switch, on rollback and by `bun run status`. |
-| What CI tested is what runs | The backend installs `backend/requirements.lock` (every package pinned, hashes required); the frontend is built and served on the release's `.node-version` Node; Bun is `.bun-version`. CI uses the same three files. |
+| What was verified is what runs | The backend installs `backend/requirements.lock` (every package pinned, hashes required); the frontend is built and served on the release's `.node-version` Node; Bun is `.bun-version`. The verification container and CI use the same three files. |
 | Nothing live changes until the release is proven | Build, migrations check and trial copies all happen before the switch; any failure stops there (fail closed). |
 | A bad release does not stay live | Live checks after the switch; on failure the previous release is restored automatically. |
 | A deploy cannot be interrupted half-way | The host side runs as a detached systemd unit; losing SSH or pressing Ctrl+C on the workstation does not stop it. One deploy or rollback at a time (lock). |
@@ -63,20 +67,43 @@ Each app reports the release it runs: the API at `GET /health` and the web app a
 release the process started from. The web app shows it to local requests only; through Cloudflare
 the public site answers `{"status": "ok"}` without the commit.
 
-## Deploying
+## Releasing
 
-From the repository root, on a workstation that can read the GitHub repository and SSH to the host
-(Git Bash works on Windows):
+On the deploy machine (Git Bash works on Windows; Docker is needed for `bun run verify`), from the
+repository root, in this order:
 
 ```sh
-bun run deploy                                     # the tip of main (the normal case)
-bun run deploy -- --with-migrations                # the release has pending migrations
-bun run deploy -- --prepare-only                   # build + validate on the host, do not switch
+git status                          # 1. clean: nothing uncommitted or untracked
+git commit ...                      # 2. the release is a commit (on a branch, or main)
+git push tutor <branch>             # 3. GitHub holds it before production does
+bun run verify                      # 4. the three CI jobs on this exact commit (about 45-60 min)
+bun run deploy -- --ref <commit>    # 5. the commit checked out here; --with-migrations if needed
+bun run status                      # 6. INVARIANT OK; then the production smoke test
+git push tutor <commit>:main        # 7. GitHub main == the live release (a fast-forward)
+```
+
+Step 7 keeps GitHub's `main` identical to production. If the release was a PR's branch, pushing it
+to `main` marks the PR merged; GitHub's merge button would create a different commit, so prefer the
+fast-forward (or merge locally, verify and deploy that merge commit). Until `main` equals the live
+release, `bun run status` says which way they differ.
+
+```sh
+bun run deploy -- --ref <commit> --prepare-only    # build + validate on the host, do not switch
 bun run deploy -- --ref <commit> --older           # an older commit of main (prefer bun run rollback)
 ```
 
-It shows the release, its CI result and what is live, and asks you to type the first 7 characters
-of the commit (`--yes` for automation). The full log is in the journal (`journalctl -u
+What the deploy checks before anything reaches the host, each failing closed:
+
+1. `--ref` is the commit checked out here (`HEAD`), the working tree is clean, `git fsck` is clean.
+2. `bun run verify` passed on exactly this commit and tree (`.deploy/verified/<commit>.json` and
+   its log; `deploy/local-gate.mjs`).
+3. The commit is on a branch of GitHub and contains GitHub's `main` (or, with `--older`, is a
+   commit of `main`'s own history).
+4. The commit contains the live release, and the live release is on GitHub (or, with `--older`,
+   the commit is an ancestor of it: a deliberate downgrade).
+
+It shows the release, where it was verified, how it relates to GitHub's `main` and to what is
+live, and asks you to type the first 7 characters of the commit (`--yes` for automation). The full log is in the journal (`journalctl -u
 aichat-deploy-*`) and in `/opt/aichat/releases/<commit>/deploy-<id>.log`; every deploy,
 migration, failure and rollback is appended to `/opt/aichat/releases/HISTORY`.
 
@@ -219,6 +246,20 @@ check, double rollback, migration guards, every bypass and a killed SSH connecti
 checks that the two apps never report different releases, and that the jobs worker ships installed
 but disabled and runs once enabled. Local only (Docker, about 45 minutes).
 
+## Accepted limitations of the local-deploy model
+
+- **The deploy machine is trusted.** Whoever can run the deploy has root SSH to production and
+  could also write verification evidence by hand; the evidence protects against accidents (a
+  forgotten test, an edited or different commit), not against that person or a compromised
+  machine. Protect the machine and the SSH key.
+- **GitHub (git) must be reachable to deploy**, to prove the release and the live release are on
+  it. During a GitHub outage no new release goes out; `bun run rollback` still works (host only).
+  GitHub *Actions* is not needed at all.
+- **One verifier when Actions is unavailable.** When CI does run, its verdict on the live release is
+  shown by `bun run status` (a warning on failure), not enforced.
+- **Host records are root-writable** (`HISTORY`, the evidence in each release), as before.
+- **Visual and performance behaviour on real devices** is outside any automated verification.
+
 ## Never do this
 
 - **Deploy the frontend or the backend on its own.** There is no command for it and there never
@@ -226,7 +267,8 @@ but disabled and runs once enabled. Local only (Docker, about 45 minutes).
 - Run `release.sh` or `rollback.sh` by hand (they refuse), edit files inside
   `/opt/aichat/releases/*` (verified against the commit; a changed release is refused), or point
   `/opt/aichat/current` somewhere by hand except in the emergency steps of [rollback.md](rollback.md).
-- Deploy a commit that is not on `main`, or whose CI did not pass (refused).
+- Deploy a commit that was not verified by `bun run verify`, is not on GitHub, or would remove
+  commits that are live (refused); or leave GitHub's `main` behind the live release.
 - Run migrations outside a deploy, rename the compose project or volume, or `docker compose down -v`.
 - Put a secret in the repository, or change `API_BASE_URL` in `web.env`.
 - Use the retired deployment (git bundles, `install.sh` with `BACKEND_REPO`/`FRONTEND_REPO`, the

@@ -40,12 +40,13 @@ bun run test      # backend + frontend tests, including the API contract
 ## Releasing
 
 ```sh
-bun run deploy    # the tip of main, only if CI passed on that exact commit (docs/deployment.md)
+bun run verify    # the three CI jobs on the commit checked out, in a Linux container (docs/deployment.md)
+bun run deploy -- --ref <commit>   # that verified commit, if it is on GitHub and contains main and what is live
 bun run status    # which release production runs; both apps must report the same commit
 bun run rollback  # both apps back to the previous release, together (docs/rollback.md)
 ```
 
-Those three are the only production commands.
+Those are the only production commands (`verify` only reads).
 
 ## History
 

@@ -52,7 +52,8 @@ bun run setup | dev | dev:backend | dev:frontend       # dev: Docker db + migrat
 bun run test          # backend pytest + frontend typecheck + unit tests (incl. the API contract test)
 bun run test:e2e      # Playwright + axe against an API on :4100 with the fake LLM (starts it from backend/)
 bun run lint | build | contract                        # contract: regenerate docs/openapi.json + frontend check
-bun run deploy | rollback | status                     # production (docs/deployment.md, docs/rollback.md)
+bun run verify        # the three CI jobs on HEAD, in a Linux container (Docker, ~45-60 min): deploy evidence
+bun run deploy -- --ref <commit> | rollback | status  # production (docs/deployment.md, docs/rollback.md)
 bun run lock:backend  # after editing backend/requirements.txt: regenerate the hashed requirements.lock
 bun run rehearse      # the release model on a throwaway systemd container (Docker, ~45 min)
 ```
@@ -141,10 +142,19 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 
 ## Deployment and production
 
-- **What gets deployed:** `bun run deploy` (`deploy/deploy.sh`) takes a commit of GitHub's `main`
-  (the tip by default) whose three CI jobs passed on that exact commit (`deploy/ci-gate.mjs`, fail
-  closed), sends `git archive` of it plus a file manifest to the host, and runs it there as a
-  detached systemd unit (`deploy/server/bootstrap.sh` → that release's `deploy/server/release.sh`).
+- **What gets deployed:** `bun run deploy -- --ref <commit>` (`deploy/deploy.sh`) releases exactly the
+  commit checked out on the deploy machine, only if:
+  - `bun run verify` passed on that commit and tree (`deploy/local-gate.mjs`: the three CI jobs'
+    commands in an Ubuntu container on `git archive`, kept identical to `ci.yml` by
+    `deploy/tests/ci-parity.test.mjs`);
+  - the commit is on a GitHub branch and contains GitHub's `main`;
+  - it contains the live release (itself on GitHub).
+
+  GitHub Actions is not a deploy dependency; `bun run status` shows its verdict on the live
+  release. The host gets `git archive` plus a manifest, the evidence and its log, and refuses under
+  its lock if production changed since the pre-flight. It runs as a detached systemd unit
+  (`deploy/server/bootstrap.sh` → that release's `deploy/server/release.sh`). Operator order and
+  accepted limitations: `docs/deployment.md`, "Releasing".
 - **The release steps:** verify every file against the commit → build into
   `/opt/aichat/releases/<commit>/` (backend from the hashed `requirements.lock`, frontend on the
   pinned Node) → migrations (only with `--with-migrations`, after a backup) → trial API :4101 and
@@ -200,19 +210,21 @@ Follow this for every implementation task unless the owner explicitly overrides 
    - Cover: the normal flow, edge cases, loading and error states, mobile and responsive layouts, light and dark, likely regressions, accessibility, and authorization and security boundaries.
    - Try to break it, check visual quality, spacing and overflow, and confirm unrelated functionality still works.
 4. **Fix and retest** (automated checks plus headed QA) until everything passes. Never knowingly ship a failing test, a broken flow or a regression, and never silently reduce scope to make tests pass.
-5. **PR.** Only when implementation and QA are clean: commit, push the branch to the owner's GitHub repo (`tutor`), open a PR to `main`, and track CI. If CI fails, diagnose, fix, push, and wait again.
-6. **Merge.** Only with automated checks, headed QA and PR CI all green and no known regression: merge into `main`, confirm the merge, and delete the feature branch.
+5. **PR.** Only when implementation and QA are clean: commit, push the branch to the owner's GitHub repo (`tutor`), open a PR to `main` (the review record). GitHub CI runs when Actions is available; its result is a second opinion, not the release gate.
+6. **Verify.** `bun run verify` on the exact release commit (the three CI jobs in a Linux container); it must pass.
 7. **Production.**
-   - After a successful merge, deploy **only the exact merged `main` commit** (`bun run deploy`, with `--with-migrations` when the release has migrations).
-   - Verify that the live release equals the merged SHA (`bun run status`), then run a final headed Chrome production smoke and regression test of the affected functionality.
-   - If verification fails, stop and investigate; don't declare success.
-8. **Release invariant.** Production always equals the merged `main` commit. Never:
-   - deploy before the merge, or bypass CI;
+   - Deploy **only that verified commit**: `bun run deploy -- --ref <commit>` (with `--with-migrations` when the release has migrations). It must be on GitHub and contain GitHub's `main` and the live release.
+   - Verify with `bun run status` (INVARIANT OK, the live release is the commit), then run a final headed Chrome production smoke and regression test of the affected functionality.
+   - If verification fails, stop and investigate (or `bun run rollback`); don't declare success.
+   - Then make GitHub's `main` equal the live release (a fast-forward push of that commit to `main`, which marks the PR merged) and delete the feature branch.
+8. **Release invariant.** Production is always a verified commit that is on GitHub and contains everything that was live before; GitHub's `main` is brought to it right after the deploy. Never:
+   - deploy an unverified commit, a dirty tree or a commit that is not on GitHub;
+   - weaken or bypass the verification or the deploy checks;
    - skip the headed QA;
    - leave failures unresolved, or claim completion without verification.
 9. **Report** concisely, each line PASS or FAIL:
    - Implementation, Automated tests, Headed Chrome QA;
-   - PR (number and link), CI, Merge, Branch deletion;
+   - PR (number and link), Local verification (and GitHub CI when it ran), `main` updated, Branch deletion;
    - Production deployment, Production verification;
    - plus the final deployed Git SHA.
 

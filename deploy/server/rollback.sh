@@ -68,7 +68,7 @@ if activate "$TARGET"; then
   else
     push_live "$TARGET"
   fi
-  record "rolled back $LIVE -> $TARGET"
+  record "rolled back $LIVE -> $TARGET by ${AICHAT_OPERATOR:-unknown} (ssh ${AICHAT_SSH_CLIENT:-unknown})"
   log "live: $TARGET (was $LIVE)"
   exit 0
 fi

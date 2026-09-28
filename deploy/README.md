@@ -9,10 +9,13 @@ How to deploy and roll back: [docs/deployment.md](../docs/deployment.md) and
 [docs/rollback.md](../docs/rollback.md). Host layout: [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
 
 ```
-deploy.sh                          THE deploy command (workstation): main's commit + CI gate -> the host -> live
+deploy.sh                          THE deploy command (deploy machine): the verified commit checked out -> the host -> live
 rollback.sh                        roll back frontend + backend together (workstation)
 status.sh                          what production runs, and "INVARIANT OK" or "FAIL" (workstation)
-ci-gate.mjs                        GitHub CI must have passed on that exact commit (tests in tests/)
+verify.mjs                         bun run verify: the three CI jobs in a Linux container on git archive of HEAD -> evidence
+verify/                            its container (Dockerfile), services (compose.yml) and CI's commands (run-ci.sh)
+local-gate.mjs                     the deploy gate: passing evidence for this exact commit and tree (tests in tests/)
+ci-gate.mjs                        GitHub CI's verdict on a commit: informational (bun run status), not a gate
 server/bootstrap.sh                on the host, detached: lock, unpack the release, verify it, run release.sh
 server/verify-release.py           every file of a release against its commit (git blob hashes)
 server/release.sh                  on the host: prepare -> migrate -> validate trial copies -> switch

@@ -10,13 +10,20 @@
 # temporary local "main"; nothing is pushed anywhere else. Rehearsal mode cannot reach the
 # production host (deploy.sh refuses it, and requires the /etc/aichat/REHEARSAL marker).
 #
+# Every deploy takes the operator's path: from the checkout of the release, --ref that commit,
+# through the local verification gate (rehearsal-marked evidence), with a temporary bare
+# repository standing in for GitHub.
+#
 # Proves: frontend-only / backend-only / both-halves changes each become ONE release with both
 # halves; a broken frontend build and a broken backend never switch production; a failed live
 # check rolls back automatically; manual rollback returns both halves to the exact previous
-# release and a second rollback goes further back; migration guards; no bypass (unpushed or
-# older commits, hand-run scripts, tampered releases, missing API_BASE_URL, low disk, the
-# production host); a deploy survives its SSH connection being killed; and a poller on the
-# host never sees the web app and the API report different releases at the same moment.
+# release and a second rollback goes further back; migration guards; no bypass (unpushed,
+# unverified, older or other-than-checked-out commits, a dirty tree, hand-run scripts, tampered
+# releases, missing API_BASE_URL, low disk, the production host); a deploy survives its SSH
+# connection being killed; a release from an unmerged branch, and a deploy that would drop it is
+# refused; two deploys at once, and a pre-flight overtaken by another deploy (refused under the
+# host lock); the audit trail; and a poller on the host never sees the web app and the API
+# report different releases at the same moment.
 set -uo pipefail
 
 REPO=$(git rev-parse --show-toplevel)
@@ -31,9 +38,10 @@ NAME=aichat-rehearsal
 PORT=${REHEARSAL_SSH_PORT:-2222}
 SOURCE="$WORK/source.git"
 WT="$WORK/worktree"
+WT2="$WORK/worktree2"   # a second machine's checkout (S13, S14)
 # On Windows, the paths git is given must mean the same directory to git and to bash (with
 # MSYS_NO_PATHCONV, native git reads /tmp/... as C:\tmp\...). WORK itself stays POSIX: it is on PATH.
-if command -v cygpath >/dev/null; then SOURCE=$(cygpath -m "$SOURCE"); WT=$(cygpath -m "$WT"); fi
+if command -v cygpath >/dev/null; then SOURCE=$(cygpath -m "$SOURCE"); WT=$(cygpath -m "$WT"); WT2=$(cygpath -m "$WT2"); fi
 LOGS="$WORK/logs"
 mkdir -p "$LOGS" "$WORK/ctx" "$WORK/bin"
 RESULTS=()
@@ -43,8 +51,9 @@ step() { printf '\n\033[1m##### %s\033[0m\n' "$*"; }
 
 cleanup() {
   git worktree remove --force "$WT" >/dev/null 2>&1 || true
+  git worktree remove --force "$WT2" >/dev/null 2>&1 || true
   git worktree prune >/dev/null 2>&1 || true
-  git update-ref -d refs/deploy/main >/dev/null 2>&1 || true
+  git for-each-ref --format='%(refname)' refs/deploy | while read -r ref; do git update-ref -d "$ref"; done 2>/dev/null || true
   if [ "${REHEARSAL_KEEP:-0}" != 1 ]; then docker rm -f "$NAME" >/dev/null 2>&1 || true; fi
   echo "logs: $LOGS"
 }
@@ -126,11 +135,25 @@ advance() { # message, then an edit command run inside the worktree; prints the 
   "${G[@]}" add -A && "${G[@]}" commit -q -m "rehearsal: $message" && git -C "$WT" push -q -f "$SOURCE" HEAD:refs/heads/main
   git -C "$WT" rev-parse HEAD
 }
-deploy() { DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/deploy.sh --yes "$@"; }
+# Rehearsal-marked evidence for a worktree's HEAD: the 45-minute `bun run verify` is not run for
+# every test commit. The gate accepts this only in rehearsal mode (deploy/tests/local-gate.test.mjs).
+evidence() { # [worktree]
+  local tree_dir=${1:-$WT} sha tree
+  sha=$(git -C "$tree_dir" rev-parse HEAD); tree=$(git -C "$tree_dir" rev-parse 'HEAD^{tree}')
+  mkdir -p "$tree_dir/.deploy/verified"
+  printf '{"version":1,"sha":"%s","tree":"%s","source":"local","rehearsal":true,"result":"success","log_sha256":"-","jobs":[{"name":"Backend (lint, contract, tests)","conclusion":"success"},{"name":"Frontend (typecheck, lint, tests incl. contract, build)","conclusion":"success"},{"name":"Integration (end-to-end)","conclusion":"success"}]}
+' "$sha" "$tree" > "$tree_dir/.deploy/verified/$sha.json"
+  printf 'rehearsal evidence for %s
+' "$sha" > "$tree_dir/.deploy/verified/$sha.log"
+}
+# The operator's path: deploy.sh from the checkout of the release, --ref that commit.
+raw_deploy_in() { local tree_dir=$1; shift; (cd "$tree_dir" && DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/deploy.sh "$@"); }
+deploy_in() { local tree_dir=$1; shift; evidence "$tree_dir"; raw_deploy_in "$tree_dir" --yes --ref "$(git -C "$tree_dir" rev-parse HEAD)" "$@"; }
+deploy() { deploy_in "$WT" "$@"; }
 rollback() { bash deploy/rollback.sh --yes "$@"; }
 live() { ssh rehearsal 'r=$(readlink -e /opt/aichat/current 2>/dev/null) && case "$r" in /opt/aichat/releases/*) basename "$r" ;; esac'; }
 status_ok_on() { # the invariant holds, on release $1
-  bash deploy/status.sh > "$LOGS/status-$2.log" 2>&1 && grep -q "INVARIANT OK: frontend and backend both run release $1" "$LOGS/status-$2.log"
+  DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/status.sh > "$LOGS/status-$2.log" 2>&1 && grep -q "INVARIANT OK: frontend and backend both run release $1" "$LOGS/status-$2.log"
 }
 schema() { ssh rehearsal "su postgres -c \"psql -d aichat -tAc 'select version_num from alembic_version'\""; }
 short() { printf '%s' "${1:0:7}"; }
@@ -213,9 +236,20 @@ if rollback --allow-older-schema > "$LOGS/s8d.log" 2>&1 && status_ok_on "$R5" s8
 
 step "S9 no bypass"
 UNPUSHED=$( (cd "$WT" && printf '\n// never pushed\n' >> frontend/apps/app/src/lib/brand.ts) && "${G[@]}" commit -qam unpushed && git -C "$WT" rev-parse HEAD)
-if ! deploy --ref "$UNPUSHED" > "$LOGS/s9a.log" 2>&1 && grep -q "is not a commit of main" "$LOGS/s9a.log"; then pass "S9 a commit that is not on main is refused"; else fail "S9 unpushed (see $LOGS/s9a.log)"; fi
+if ! deploy > "$LOGS/s9a.log" 2>&1 && grep -q "is on no branch" "$LOGS/s9a.log"; then pass "S9 a verified commit that is on no GitHub branch (never pushed) is refused"; else fail "S9 unpushed (see $LOGS/s9a.log)"; fi
 "${G[@]}" reset -q --hard HEAD~1
-if ! deploy --ref "$R2" > "$LOGS/s9b.log" 2>&1 && grep -q "is older than main" "$LOGS/s9b.log"; then pass "S9 an older commit without --older is refused"; else fail "S9 older (see $LOGS/s9b.log)"; fi
+TIP=$(git -C "$WT" rev-parse HEAD)
+git -C "$WT" checkout -q --detach "$R2"
+if ! deploy > "$LOGS/s9b.log" 2>&1 && grep -q "does not contain GitHub's main" "$LOGS/s9b.log"; then pass "S9 an older commit without --older is refused"; else fail "S9 older (see $LOGS/s9b.log)"; fi
+git -C "$WT" checkout -q --detach "$TIP"
+rm -f "$WT/.deploy/verified/$TIP.json"
+if ! raw_deploy_in "$WT" --yes --ref "$TIP" > "$LOGS/s9h.log" 2>&1 && grep -q "has no passing verification" "$LOGS/s9h.log"; then pass "S9 an unverified commit is refused"; else fail "S9 unverified (see $LOGS/s9h.log)"; fi
+printf 'stray
+' > "$WT/stray.txt"
+if ! deploy > "$LOGS/s9i.log" 2>&1 && grep -q "uncommitted or untracked" "$LOGS/s9i.log"; then pass "S9 a working tree with changes is refused"; else fail "S9 dirty tree (see $LOGS/s9i.log)"; fi
+rm -f "$WT/stray.txt"
+evidence
+if ! raw_deploy_in "$WT" --yes --ref "$R2" > "$LOGS/s9j.log" 2>&1 && grep -q "but this checkout is at" "$LOGS/s9j.log"; then pass "S9 a --ref other than the commit checked out is refused"; else fail "S9 --ref mismatch (see $LOGS/s9j.log)"; fi
 if ! ssh rehearsal "bash /opt/aichat/releases/$R5/deploy/server/release.sh $R5" > "$LOGS/s9c.log" 2>&1 && grep -q "never run release.sh by hand" "$LOGS/s9c.log"; then pass "S9 running release.sh by hand is refused"; else fail "S9 hand-run (see $LOGS/s9c.log)"; fi
 ssh rehearsal "printf '# tampered\n' >> /opt/aichat/releases/$MIG/backend/app/errors.py"
 if ! rollback --to "$MIG" --allow-older-schema > "$LOGS/s9d.log" 2>&1 && grep -q "does not match its commit" "$LOGS/s9d.log" && [ "$(live)" = "$R5" ]; then pass "S9 a tampered release is refused (files checked against the commit)"; else fail "S9 tampered (see $LOGS/s9d.log)"; fi
@@ -224,7 +258,7 @@ R6=$(advance "harmless change" sh -c 'printf "\n// rehearsal: harmless\n" >> fro
 if ! deploy > "$LOGS/s9e.log" 2>&1 && grep -q "must set API_BASE_URL" "$LOGS/s9e.log" && [ "$(live)" = "$R5" ]; then pass "S9 a web.env without API_BASE_URL=:4100 is refused"; else fail "S9 API_BASE_URL (see $LOGS/s9e.log)"; fi
 ssh rehearsal "sed -i 's#^API_BASE_URL=.*#API_BASE_URL=http://127.0.0.1:4100#' /etc/aichat/web.env"
 if ! ssh rehearsal "AICHAT_MIN_FREE_MB=999999999 bash -c '. /opt/aichat/current/deploy/server/lib.sh; preflight_resources'" > "$LOGS/s9f.log" 2>&1 && grep -q "MB free on" "$LOGS/s9f.log"; then pass "S9 too little disk is refused before any build"; else fail "S9 low disk (see $LOGS/s9f.log)"; fi
-if ! DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" DEPLOY_HOST=root@10.1.30.37 bash deploy/deploy.sh --yes > "$LOGS/s9g.log" 2>&1 && grep -q "never deploys to production" "$LOGS/s9g.log"; then pass "S9 rehearsal mode refuses the production host (before connecting)"; else fail "S9 production guard (see $LOGS/s9g.log)"; fi
+if ! DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" DEPLOY_HOST=root@10.1.30.37 bash deploy/deploy.sh --yes --ref HEAD > "$LOGS/s9g.log" 2>&1 && grep -q "never deploys to production" "$LOGS/s9g.log"; then pass "S9 rehearsal mode refuses the production host (before connecting)"; else fail "S9 production guard (see $LOGS/s9g.log)"; fi
 if ! grep -qE '"deploy:|"rollback:|deploy-frontend|deploy-backend' package.json frontend/package.json frontend/apps/app/package.json; then pass "S9 no component-level deploy command exists"; else fail "S9 component deploy command found"; fi
 
 step "S10 the SSH connection dies mid-deploy"
@@ -255,6 +289,73 @@ if grep -q "^timer: disabled" "$LOGS/s11.log" && grep -q '"skipped": "JOBS_ENABL
   && grep -q "^result: success" "$LOGS/s11.log"; then
   pass "S11 jobs worker: timer installed but not enabled; a run is a no-op until JOBS_ENABLED, then runs every step"
 else fail "S11 jobs worker (see $LOGS/s11.log)"; fi
+
+step "S12 a release from an unmerged branch; a checkout that would drop it is refused"
+source_main() { git --git-dir="$SOURCE" rev-parse refs/heads/main; }
+MAIN_TIP=$(source_main)
+branch_commit() { # <worktree> <branch> <message>: commit on the worktree's HEAD, push it to <branch>, print it
+  (cd "$1" && printf '\n// rehearsal: %s\n' "$3" >> frontend/apps/app/src/lib/brand.ts) >/dev/null
+  git -C "$1" -c user.name=Rehearsal -c user.email=rehearsal@example.invalid -c core.autocrlf=false commit -qam "rehearsal: $3" >/dev/null
+  git -C "$1" push -q -f "$SOURCE" "HEAD:refs/heads/$2" >/dev/null
+  git -C "$1" rev-parse HEAD
+}
+git -C "$WT" checkout -q --detach "$MAIN_TIP"
+FEATURE=$(branch_commit "$WT" feature "feature branch")
+if deploy > "$LOGS/s12a.log" 2>&1 && status_ok_on "$FEATURE" s12a && grep -q "ahead of GitHub main" "$LOGS/status-s12a.log"; then
+  pass "S12 a verified, pushed, not yet merged commit deploys ($(short "$FEATURE")); status says it is ahead of GitHub main"
+else fail "S12 unmerged deploy (see $LOGS/s12a.log)"; fi
+git -C "$WT" checkout -q --detach "$MAIN_TIP"
+if ! deploy > "$LOGS/s12b.log" 2>&1 && grep -q "does not contain the live release" "$LOGS/s12b.log" && [ "$(live)" = "$FEATURE" ]; then
+  pass "S12 GitHub's main without the live release (another machine's view) is refused; $(short "$FEATURE") stays live"
+else fail "S12 drop refusal (see $LOGS/s12b.log)"; fi
+git -C "$WT" push -q "$SOURCE" "$FEATURE:refs/heads/main"
+git -C "$WT" checkout -q --detach "$FEATURE"
+if status_ok_on "$FEATURE" s12c && grep -q "GitHub main == the live release" "$LOGS/status-s12c.log"; then pass "S12 main fast-forwarded to the release: status says GitHub main == live"; else fail "S12 main == live (see $LOGS/status-s12c.log)"; fi
+
+step "S13 two deploys at the same moment: exactly one lands"
+git worktree add -q --detach "$WT2" "$FEATURE"
+A=$(branch_commit "$WT" machine-a "machine A")
+B=$(branch_commit "$WT2" machine-b "machine B")
+( deploy_in "$WT" > "$LOGS/s13a.log" 2>&1; echo $? > "$LOGS/s13a.rc" ) &
+# The two "machines" share this repository here, so their fetches are 5 s apart (a real second
+# machine has its own); both still reach the host while the first deploy is building.
+( sleep 5; deploy_in "$WT2" > "$LOGS/s13b.log" 2>&1; echo $? > "$LOGS/s13b.rc" ) &
+wait
+LIVE13=$(live)
+refused() { grep -qE "another deploy or rollback is running|production changed since the deploy's pre-flight" "$1"; }
+if { [ "$(cat "$LOGS/s13a.rc")" = 0 ] && [ "$(cat "$LOGS/s13b.rc")" != 0 ] && refused "$LOGS/s13b.log" && [ "$LIVE13" = "$A" ]; } \
+  || { [ "$(cat "$LOGS/s13b.rc")" = 0 ] && [ "$(cat "$LOGS/s13a.rc")" != 0 ] && refused "$LOGS/s13a.log" && [ "$LIVE13" = "$B" ]; }; then
+  if status_ok_on "$LIVE13" s13; then pass "S13 one deploy landed ($(short "$LIVE13")), the other was refused; invariant holds"; else fail "S13 invariant (see $LOGS/status-s13.log)"; fi
+else fail "S13 concurrent deploys (see $LOGS/s13a.log and $LOGS/s13b.log)"; fi
+
+step "S14 production changes between a deploy's pre-flight and its switch: the host refuses"
+git -C "$WT" checkout -q --detach "$LIVE13"
+git -C "$WT2" checkout -q --detach "$LIVE13"
+C1=$(branch_commit "$WT" cas-one "change one")
+C2=$(branch_commit "$WT2" cas-two "change two")
+evidence "$WT2"
+rm -f "$WORK/go"
+# C2's pre-flight runs now (live: LIVE13), then waits for its typed confirmation...
+( ( while [ ! -f "$WORK/go" ]; do sleep 1; done; printf '%s\n' "${C2:0:7}" ) | raw_deploy_in "$WT2" --ref "$C2" > "$LOGS/s14b.log" 2>&1; echo $? > "$LOGS/s14b.rc" ) &
+CAS_PID=$!
+for _ in $(seq 1 120); do grep -q "Deploy to" "$LOGS/s14b.log" 2>/dev/null && break; sleep 1; done
+# ...while C1 lands. Then C2 is confirmed, with a pre-flight that no longer holds.
+deploy > "$LOGS/s14a.log" 2>&1
+touch "$WORK/go"
+wait "$CAS_PID"
+if grep -q "production changed since the deploy's pre-flight" "$LOGS/s14b.log" && [ "$(cat "$LOGS/s14b.rc")" != 0 ] && [ "$(live)" = "$C1" ] && status_ok_on "$C1" s14; then
+  pass "S14 a deploy whose pre-flight saw another live release is refused under the host lock; $(short "$C1") stays live"
+else fail "S14 compare-and-swap (see $LOGS/s14a.log and $LOGS/s14b.log)"; fi
+
+step "S15 audit, and a rollback after direct deploys"
+ssh rehearsal "tail -1 /opt/aichat/releases/HISTORY; test -s /opt/aichat/releases/$C1/verify.log.gz && echo LOG=ok; python3.12 -c 'import json; d=json.load(open(\"/opt/aichat/releases/$C1/CI.json\")); print(\"SOURCE=\" + d[\"source\"], \"LIVE=\" + str(d[\"deploy\"][\"expected_live\"]))'" > "$LOGS/s15a.log" 2>&1
+if grep -q "deployed $C1 (previous: $LIVE13) by Rehearsal from $(hostname) (ssh " "$LOGS/s15a.log" && grep -q "evidence [0-9a-f]\{12\}; GitHub main" "$LOGS/s15a.log" \
+  && grep -q "^LOG=ok" "$LOGS/s15a.log" && grep -q "SOURCE=local LIVE=$LIVE13" "$LOGS/s15a.log" && grep -q "evidence: rehearsal evidence" "$LOGS/status-s14.log"; then
+  pass "S15 HISTORY names the operator, machine, SSH client, evidence and GitHub main; the release keeps its evidence and log"
+else fail "S15 audit (see $LOGS/s15a.log)"; fi
+if rollback > "$LOGS/s15b.log" 2>&1 && status_ok_on "$LIVE13" s15 && ssh rehearsal "tail -1 /opt/aichat/releases/HISTORY" | grep -q "rolled back $C1 -> $LIVE13 by .* (ssh "; then
+  pass "S15 rollback after a direct deploy: back on $(short "$LIVE13"), audited"
+else fail "S15 rollback (see $LOGS/s15b.log)"; fi
 
 step "poller: did the web app and the API ever report different releases at the same moment?"
 ssh rehearsal 'systemctl stop rehearsal-poller; cat /root/poll.log' > "$LOGS/poll.log"

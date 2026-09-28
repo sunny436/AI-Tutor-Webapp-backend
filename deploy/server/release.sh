@@ -2,7 +2,8 @@
 #
 # Deploy ONE release (frontend + backend from the same commit) on the production host.
 # Only ever started by deploy/server/bootstrap.sh, which deploy/deploy.sh runs as a detached
-# systemd unit after checking that the commit is on GitHub's main and that CI passed on it.
+# systemd unit after checking that the commit passed `bun run verify`, is on GitHub, contains
+# GitHub's main and the live release (docs/deployment.md).
 #
 #   --with-migrations     run pending database migrations (backup first, before the switch)
 #   --allow-older-schema  deploy code that is older than the database schema
@@ -66,8 +67,9 @@ command -v python3.12 >/dev/null || die "python3.12 is not installed (run deploy
 systemctl is-active --quiet aichat-postgres || die "aichat-postgres is not running"
 PREVIOUS=$(current_release)
 note "live now: ${PREVIOUS:-none (first release)}"
-note "CI: $(python3.12 -c 'import json,sys; d=json.load(open(sys.argv[1])); print("rehearsal (no CI)" if d.get("rehearsal") else ", ".join(j["name"].split(" (")[0] + " " + j["conclusion"] for j in d["jobs"]))' "$DIR/CI.json")"
-OPERATOR=$(python3.12 -c 'import json,sys; print(json.load(open(sys.argv[1])).get("operator", "unknown"))' "$DIR/CI.json")
+note "evidence: $(evidence_summary "$DIR/CI.json")"
+BY=$(deploy_audit "$DIR/CI.json")
+note "deployed $BY"
 [ -f "$DIR/RELEASE" ] || printf 'commit=%s\nprepared=%s\n' "$REL" "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > "$DIR/RELEASE"
 verify_release "$REL" || die "release $REL does not match its commit"
 
@@ -116,7 +118,7 @@ elif [ "$pending" != "[]" ]; then
   systemd-run --pipe --wait --collect --quiet -p EnvironmentFile="$SECRETS/api.env" \
     -p WorkingDirectory="$DIR/backend" "$DIR/backend/.venv/bin/python" -m alembic upgrade head \
     || die "the migration failed (backup: $backup); nothing was switched"
-  record "migrated $database -> $head for $REL (backup: $backup) by $OPERATOR"
+  record "migrated $database -> $head for $REL (backup: $backup) $BY"
   note "migrated: $pending"
   if [ -n "$PREVIOUS" ]; then
     check_chain "$WEB_PORT" aichat-api || note "WARNING: the live release fails its check after migrating"
@@ -161,7 +163,7 @@ fi
 cleanup_candidates
 
 if [ "$PREPARE_ONLY" = 1 ]; then
-  record "validated $REL (not switched; live: ${PREVIOUS:-none}) by $OPERATOR"
+  record "validated $REL (not switched; live: ${PREVIOUS:-none}) $BY"
   log "validated; production unchanged (--prepare-only)"
   exit 0
 fi
@@ -173,14 +175,14 @@ STAMP=".before-$(date -u +%Y%m%d%H%M%S)"   # units replaced now are kept as <uni
 export STAMP
 if activate "$REL"; then
   push_live "$REL"
-  record "deployed $REL (previous: ${PREVIOUS:-none}) by $OPERATOR"
+  record "deployed $REL (previous: ${PREVIOUS:-none}) $BY"
   systemctl enable --quiet aichat-api.service aichat-web.service || note "(could not enable the units at boot)"
 else
   note "live checks FAILED on $REL"
   if [ -n "$PREVIOUS" ] && [ "$PREVIOUS" != "$REL" ]; then
     log "rolling back to $PREVIOUS"
     if activate "$PREVIOUS"; then
-      record "FAILED $REL, rolled back to $PREVIOUS by $OPERATOR"
+      record "FAILED $REL, rolled back to $PREVIOUS $BY"
       die "release $REL failed its live checks; production is back on $PREVIOUS"
     fi
     record "FAILED $REL, rollback to $PREVIOUS ALSO failed"

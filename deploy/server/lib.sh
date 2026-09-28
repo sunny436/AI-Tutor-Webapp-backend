@@ -176,6 +176,31 @@ activate() {
 }
 
 # Bookkeeping never turns a finished switch into a reported failure.
+# A release's evidence (CI.json) in one line: local verification (the current model), GitHub CI
+# (releases deployed before it) or rehearsal. Also used by status.sh (which inlines a copy).
+evidence_summary() {
+  python3.12 - "$1" <<'PY' 2>/dev/null || echo "unreadable evidence"
+import json, sys
+d = json.load(open(sys.argv[1]))
+jobs = ", ".join(j["name"].split(" (")[0] + " " + str(j.get("conclusion")) for j in d.get("jobs", []))
+if d.get("source") == "local":
+    print(("rehearsal evidence" if d.get("rehearsal") else f"verified locally on {d.get('machine', '?')} at {d.get('finished_at', '?')}") + f": {jobs}")
+elif d.get("rehearsal"):
+    print("rehearsal (no CI)")
+else:
+    print(f"GitHub CI: {jobs}")
+PY
+}
+# Who deployed a release, from where, on what evidence, and what GitHub held then.
+deploy_audit() { # <CI.json>
+  python3.12 - "$1" "${AICHAT_SSH_CLIENT:-unknown}" "$(sha256sum "$1" | cut -c1-12)" <<'PY' 2>/dev/null || echo "by unknown"
+import json, sys
+d = json.load(open(sys.argv[1])); dep = d.get("deploy", {})
+where = f" from {dep['machine']}" if dep.get("machine") else ""
+main = f"; GitHub main {dep['github_main'][:7]} on [{' '.join(dep.get('github_branches', []))}]" if dep.get("github_main") else ""
+print(f"by {d.get('operator', 'unknown')}{where} (ssh {sys.argv[2]}); evidence {sys.argv[3]}{main}")
+PY
+}
 record() { printf '%s %s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$*" >> "$HISTORY" 2>/dev/null || note "(could not write $HISTORY)"; }
 push_live() { printf '%s\n' "$1" >> "$LIVE_STACK" 2>/dev/null || note "(could not write $LIVE_STACK)"; }
 live_stack() { [ -f "$LIVE_STACK" ] && grep -E '^[0-9a-f]{40}$' "$LIVE_STACK" || true; }

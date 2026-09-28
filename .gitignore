@@ -33,3 +33,6 @@ logs/
 
 # Graphify knowledge-graph output (local, regenerated; any folder it is run on)
 graphify-out/
+
+# Local verification evidence and logs (bun run verify); they travel with a release, not in git
+.deploy/

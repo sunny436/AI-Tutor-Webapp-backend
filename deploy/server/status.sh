@@ -72,7 +72,23 @@ if [ -n "$pointer" ] && [ -f "$RELEASES/$pointer/MANIFEST" ]; then
 else
   bad "no MANIFEST to verify the live release against its commit"
 fi
-[ -f "$RELEASES/$pointer/CI.json" ] && info "CI: $(python3.12 -c 'import json,sys; d=json.load(open(sys.argv[1])); print("rehearsal (no CI)" if d.get("rehearsal") else ", ".join(j["name"].split(" (")[0] + " " + j["conclusion"] for j in d["jobs"]))' "$RELEASES/$pointer/CI.json" 2>/dev/null)"
+# The live release's evidence: local verification (the current model), GitHub CI (releases
+# deployed before it) or rehearsal. The same reading as evidence_summary in lib.sh.
+if [ -f "$RELEASES/$pointer/CI.json" ]; then
+  info "evidence: $(python3.12 - "$RELEASES/$pointer/CI.json" <<'PY' 2>/dev/null || echo "unreadable"
+import json, sys
+d = json.load(open(sys.argv[1]))
+jobs = ", ".join(j["name"].split(" (")[0] + " " + str(j.get("conclusion")) for j in d.get("jobs", []))
+if d.get("source") == "local":
+    print(("rehearsal evidence" if d.get("rehearsal") else f"verified locally on {d.get('machine', '?')} at {d.get('finished_at', '?')}") + f": {jobs}")
+elif d.get("rehearsal"):
+    print("rehearsal (no CI)")
+else:
+    print(f"GitHub CI: {jobs}")
+PY
+)"
+  [ -f "$RELEASES/$pointer/verify.log.gz" ] && info "verification log: $RELEASES/$pointer/verify.log.gz"
+fi
 
 echo "units"
 for unit in aichat-api aichat-web; do

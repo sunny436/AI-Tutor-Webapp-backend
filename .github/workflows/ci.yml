@@ -1,8 +1,10 @@
 name: CI
 
 # One repository, one commit: every push and pull request checks the backend, the frontend and
-# the two together. `bun run deploy` refuses any commit on which one of these jobs did not pass
-# (deploy/ci-gate.mjs requires each job by its exact name). The runtimes are the pinned ones
+# the two together. Production does not wait for these runs: `bun run verify` runs the same
+# commands in a Linux container before a deploy (deploy/verify/run-ci.sh, kept identical to this
+# file by deploy/tests/ci-parity.test.mjs, which also requires these three job names), and
+# `bun run status` reports this CI's verdict on the live release. The runtimes are the pinned ones
 # production uses: backend/requirements.lock, .node-version, .bun-version.
 on:
   push:

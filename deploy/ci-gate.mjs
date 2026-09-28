@@ -1,14 +1,16 @@
 #!/usr/bin/env bun
 /**
- * The CI gate of `bun run deploy`: a commit may reach production only if GitHub reports every
- * REQUIRED CI job as completed with success for that exact commit.
+ * GitHub CI's verdict on one commit: every REQUIRED job completed with success, or not.
  *
- *   bun deploy/ci-gate.mjs <commit>      prints the evidence (JSON) and exits 0, or explains and exits 1
+ *   bun deploy/ci-gate.mjs <commit>            prints the evidence (JSON) and exits 0, or explains and exits 1
+ *   bun deploy/ci-gate.mjs --report <commit>   one line for `bun run status`; always exits 0
  *
- * Fails closed: a missing job, a job still running, any conclusion other than "success", an
- * unreachable GitHub or a missing token all refuse the deploy. Branch protection is not
- * available on this repository's plan, so this gate is what enforces "CI passed". The token
- * comes from git's credential helper and is never printed.
+ * No longer what lets a commit into production: `bun run deploy` requires the local
+ * verification instead (deploy/local-gate.mjs), so a GitHub Actions outage or exhausted minutes
+ * cannot block a release. CI still runs on every push and pull request, and `bun run status`
+ * reports its verdict on the live release as a second, independent opinion. REQUIRED_JOBS is also
+ * the list of jobs the local verification must pass (deploy/tests/ci-parity.test.mjs).
+ * The token comes from git's credential helper and is never printed.
  */
 import { spawnSync } from "node:child_process";
 
@@ -73,9 +75,45 @@ async function main(sha) {
   console.log(JSON.stringify({ sha, checked_at: new Date().toISOString(), repository: REPOSITORY, jobs: verdict.jobs }));
 }
 
+/** One informational line; never fails. */
+async function report(sha) {
+  try {
+    const token = githubToken();
+    if (!token) return "unavailable (no GitHub credential)";
+    const response = await fetch(`https://api.github.com/repos/${REPOSITORY}/commits/${sha}/check-runs?per_page=100`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" },
+      signal: AbortSignal.timeout(20_000),
+    });
+    if (!response.ok) return `unavailable (GitHub answered ${response.status})`;
+    const { check_runs: checkRuns = [] } = await response.json();
+    const verdict = evaluate(checkRuns);
+    if (verdict.ok) return `success (${verdict.jobs.map((job) => job.name.split(" (")[0]).join(", ")})`;
+    // A job GitHub refused to start (billing, spending limit) also concludes "failure": say so.
+    const notStarted = [];
+    for (const job of verdict.jobs.filter((candidate) => candidate.conclusion === "failure")) {
+      const annotations = await fetch(`https://api.github.com/repos/${REPOSITORY}/check-runs/${job.id}/annotations`, {
+        headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" },
+        signal: AbortSignal.timeout(20_000),
+      }).then((reply) => (reply.ok ? reply.json() : []));
+      const refusal = annotations.find((annotation) => /job was not started/i.test(annotation.message ?? ""));
+      if (refusal) notStarted.push(job.name);
+    }
+    if (notStarted.length === verdict.jobs.length && notStarted.length > 0) return "not run (GitHub did not start the jobs: Actions billing or spending limit)";
+    const failed = verdict.problems.filter((problem) => /: (failure|cancelled|timed_out|action_required)$/.test(problem) && !notStarted.some((name) => problem.startsWith(name)));
+    if (failed.length) return `FAILURE: ${failed.join("; ")}`;
+    return `not passed: ${verdict.problems.join("; ")}`;
+  } catch (error) {
+    return `unavailable (${error.message})`;
+  }
+}
+
 if (import.meta.main) {
-  main(process.argv[2]).catch((error) => {
-    console.error(`CI gate: ${error.message}`);
-    process.exit(1);
-  });
+  if (process.argv[2] === "--report") {
+    report(process.argv[3] ?? "").then((line) => console.log(line));
+  } else {
+    main(process.argv[2]).catch((error) => {
+      console.error(`CI gate: ${error.message}`);
+      process.exit(1);
+    });
+  }
 }
