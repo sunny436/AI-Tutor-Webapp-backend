@@ -353,7 +353,9 @@ else fail "S14 compare-and-swap (see $LOGS/s14a.log and $LOGS/s14b.log)"; fi
 
 step "S15 audit, and a rollback after direct deploys"
 ssh rehearsal "tail -1 /opt/aichat/releases/HISTORY; test -s /opt/aichat/releases/$C1/verify.log.gz && echo LOG=ok; python3.12 -c 'import json; d=json.load(open(\"/opt/aichat/releases/$C1/CI.json\")); print(\"SOURCE=\" + d[\"source\"], \"LIVE=\" + str(d[\"deploy\"][\"expected_live\"]))'" > "$LOGS/s15a.log" 2>&1
-if grep -q "deployed $C1 (previous: $LIVE13) by Rehearsal from $(hostname) (ssh " "$LOGS/s15a.log" && grep -q "evidence [0-9a-f]\{12\}; GitHub main" "$LOGS/s15a.log" \
+# The operator is what deploy.sh records: git config user.name of the checkout it ran in.
+OPERATOR=$(git -C "$WT" config user.name || echo unknown)
+if grep -qF "deployed $C1 (previous: $LIVE13) by $OPERATOR from $(hostname) (ssh " "$LOGS/s15a.log" && grep -q "evidence [0-9a-f]\{12\}; GitHub main" "$LOGS/s15a.log" \
   && grep -q "^LOG=ok" "$LOGS/s15a.log" && grep -q "SOURCE=local LIVE=$LIVE13" "$LOGS/s15a.log" && grep -q "evidence: rehearsal evidence" "$LOGS/status-s14.log"; then
   pass "S15 HISTORY names the operator, machine, SSH client, evidence and GitHub main; the release keeps its evidence and log"
 else fail "S15 audit (see $LOGS/s15a.log)"; fi
