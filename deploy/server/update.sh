@@ -141,6 +141,9 @@ if [ "$DO_BUILD" = 1 ]; then
       && NEXT_DIST_DIR=.next-build PATH="$NODE_BIN:$PATH" build_step "$BUN" run build) \
       || { rm -rf "$WEBDIR/.next-build"; die "the frontend build failed; the site keeps serving the previous build"; }
     printf '%s' "$K_FRONT" > "$WEBDIR/.next-build/AICHAT_KEY"
+    # The build rewrites tracked files (Next adds its build directory to tsconfig.json): the
+    # checkout stays exactly the commit.
+    git -C "$APP" checkout -q -- .
     NEW_BUILD=.next-build
   fi
   DONE+=("frontend-build")
