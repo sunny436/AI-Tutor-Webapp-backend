@@ -1,134 +1,156 @@
 # Deployment
 
-> **AI Tutor is released as one application. Frontend and backend are never independently
-> deployed to production.**
+## How a change reaches production
 
-One repository, one `main`, one commit, one release, one deploy command, one rollback. Every
-production release is identified by one immutable commit SHA, and production runs the web app
-and the API from that same release, at all times.
+1. You commit the change.
+2. You push it to GitHub: `git push origin main`.
+3. `bun run deploy` pushes the **same commit** to the production Git repository on the server.
+4. The server moves its checkout to exactly that commit.
+5. Only the parts that changed are rebuilt and restarted: the web app, the API, or both. A
+   commit that only changes docs or tests restarts nothing.
+6. A small smoke check confirms the app is alive.
+7. Done. It prints GitHub main, what production runs, and `MATCH`.
 
 ```
-commit ─► git push (a branch on GitHub) ─► bun run verify   (the three CI jobs, in a Linux container)
-                                        │
-                  bun run deploy -- --ref <commit>   (the deploy machine: the release checked out)
-                                        │  verified · on GitHub · contains main and the live release
-                                        │  git archive <commit> + manifest + evidence ─────ssh──►
-                                        ▼
- /opt/aichat/releases/<commit>/   systemd unit aichat-deploy-<commit>-<id> (detached)
-    verify   every file == the commit (git blob hashes)
-    prepare  backend from requirements.lock (hashes) · frontend on the pinned Node
-    migrate  only with --with-migrations, after a fresh backup
-    validate trial API :4101 + web :3001 on the real database: both report <commit>,
-             web -> API -> database proven by request id
-    switch   stop web · /opt/aichat/current -> <commit> · restart API · start web
-             prove: pointer == API release == web release == every process's release
-             failed? -> the previous release, automatically
+commit ─► git push origin main ─► bun run deploy ─► production Git ─► production checkout
+        ─► changed parts only ─► smoke check ─► live
 ```
 
-## The guarantees, and what enforces them
+There are no pull requests and nothing waits for GitHub CI. CI still runs on every push, but it is
+advisory: `bun run status` shows its verdict and never blocks anything. `bun run verify` runs the
+same CI jobs locally when you want them; a deploy never requires it.
 
-| Guarantee | Enforced by |
+## Deploy
+
+```sh
+git push origin main
+bun run deploy
+```
+
+`bun run deploy` refuses if your checkout has uncommitted changes or is not exactly GitHub `main`
+(push first). It takes seconds for a backend change and a minute or two when the frontend must be
+rebuilt. The work runs on the server as its own process, so closing the terminal or losing the
+connection does not stop it halfway, and a second deploy started meanwhile stops at once
+("another deploy is running").
+
+The end of every deploy:
+
+```
+GitHub main SHA:          <sha>
+Production checkout SHA:  <sha>
+Backend running SHA:      <sha>   (same backend code as the checkout)
+Frontend running SHA:     <sha>
+Status: MATCH
+```
+
+A part that did not change keeps running, so it can show an older commit whose code is identical;
+that is still `MATCH`. `MISMATCH` names what differs, for example after a rollback.
+
+### What runs for which change
+
+The server compares the new commit with what each part runs, by content (the git objects of its
+files, tests excluded), and does only what differs, in this order:
+
+| Changed | What happens |
 |---|---|
-| Frontend and backend always run the same commit | Both units run from `/opt/aichat/current`, resolved once at start. Every switch stops the web app **before** the pointer moves and starts it **after** the API runs the new release, so an old web app never serves against a new API or the reverse. Afterwards the deploy proves pointer = API-reported release = web-reported release = the release of every `aichat-api` / `aichat-web` process, or rolls back. |
-| Only verified commits reach production | `deploy.sh` releases exactly the commit checked out (`--ref` must be `HEAD`, the tree clean, `git fsck` clean) and only with passing evidence from `bun run verify` for that commit **and its tree** (`deploy/local-gate.mjs`, fail closed). The verification runs the three CI jobs' commands (kept identical to `ci.yml` by `deploy/tests/ci-parity.test.mjs`) in an Ubuntu 24.04 container on `git archive` of the commit, with CI's service images and pinned runtimes, so no local file, install or secret can influence it. As on CI, the jobs run at the same time (the end-to-end tests once the other two have finished, on a quiet machine), and only downloads are cached between runs, checked against the lockfiles as CI's pip cache is. GitHub Actions is not consulted: its minutes or availability cannot block a release. |
-| Production never drifts from GitHub | Before anything is uploaded, the commit must be on a branch of GitHub (fetched from the pinned URL) and contain GitHub's `main`; the live release must be on GitHub too, and the new commit must contain it, so a deploy from another machine or an older checkout can never silently remove live commits (`--older` is the explicit downgrade). `bun run status` shows the live release against `main` and GitHub CI's verdict on it. |
-| Two deploys cannot interleave | The pre-flight passes the live release it checked to the host, which refuses under its deploy lock if production changed since (another deploy or a rollback got in between). One deploy or rollback at a time (lock). |
-| Every release is accounted for | The host's `HISTORY` records who deployed, from which machine and SSH client, the evidence's hash and GitHub's `main` at that moment; the evidence (`CI.json`) and the full verification log (`verify.log.gz`) stay in the release's directory. |
-| A release is exactly its commit | `git archive` of the commit, never a working tree. Every file is checked against the commit's `git ls-tree` hashes on arrival, before the switch, on rollback and by `bun run status`. |
-| What was verified is what runs | The backend installs `backend/requirements.lock` (every package pinned, hashes required); the frontend is built and served on the release's `.node-version` Node; Bun is `.bun-version`. The verification container and CI use the same three files. |
-| Nothing live changes until the release is proven | Build, migrations check and trial copies all happen before the switch; any failure stops there (fail closed). |
-| A bad release does not stay live | Live checks after the switch; on failure the previous release is restored automatically. |
-| A deploy cannot be interrupted half-way | The host side runs as a detached systemd unit; losing SSH or pressing Ctrl+C on the workstation does not stop it. One deploy or rollback at a time (lock). |
-| Production is never starved by a build | Free disk and memory are checked first; builds run in a memory-capped, low-priority scope, so the kernel kills the build, not production or PostgreSQL. |
-| The database is never reset or rolled back | PostgreSQL is not part of releases (`/opt/aichat/shared/postgres`, pinned names `compose` / `compose_pgdata`). Migrations need an explicit flag and a successful backup first. |
+| `backend/requirements.lock` | `pip install --require-hashes` into the existing venv, then `pip check` |
+| a `package.json` or `frontend/bun.lock` | `bun install --frozen-lockfile` into the existing `node_modules` |
+| `frontend/`, `.node-version`, `NEXT_PUBLIC_*` in `web.env` | the frontend is **built beside the build being served**; a failed build never reaches users |
+| `backend/alembic/versions/` | if a migration is pending: a backup, then `alembic upgrade head` |
+| `backend/` | restart the API only (about 3–5 s; a reply being written is saved as stopped) |
+| the frontend (built above) | swap the new build in and restart the web app only (about 3–5 s) |
+| `deploy/systemd/*` | changed unit files rewritten; the affected service restarts |
+| anything else (docs, tests) | nothing |
 
-## Release identity: what is running
+Then the smoke check, on the server itself: both services active, API `/health` and `/ready`, web
+`/login`, and a request through web → API → database. The public URL through Cloudflare is not part
+of it (`bun run status` shows it).
 
-```sh
-bun run status        # read-only; exits 1 unless "INVARIANT OK"
-```
+The previous frontend build is kept (`.next-prev`), so going back to it (a rollback, or redeploying
+what was there before) is a swap without a build. Next.js's build cache is kept between builds
+(`.next-cache`), so a rebuild only recompiles what changed.
 
-```
-release
-  ok    /opt/aichat/current -> 3f2a…
-        backend  (aichat-api) reports release=3f2a…   processes run: 3f2a…
-        frontend (aichat-web) reports release=3f2a…   processes run: 3f2a…   runtime: …/node-v24.19.0-linux-x64/bin/node
-  ok    every aichat-api and aichat-web process runs 3f2a…
-  ok    frontend release == backend release == 3f2a…
-  ok    web runs the release's pinned Node
-integrity
-  ok    files verified: all 270 files match the commit
-units …
-INVARIANT OK: frontend and backend both run release 3f2a…
-```
-
-Each app reports the release it runs: the API at `GET /health` and the web app at
-`GET /api/health` (`{"status": "ok", "release": "<commit>"}`), read from the `RELEASE` file of the
-release the process started from. The web app shows it to local requests only; through Cloudflare
-the public site answers `{"status": "ok"}` without the commit.
-
-## Releasing
-
-On the deploy machine (Git Bash works on Windows; Docker is needed for `bun run verify`), from the
-repository root, in this order:
+## Check production
 
 ```sh
-git status                          # 1. clean: nothing uncommitted or untracked
-git commit ...                      # 2. the release is a commit (on a branch, or main)
-git push tutor <branch>             # 3. GitHub holds it before production does
-bun run verify                      # 4. the three CI jobs on this exact commit (about 30-35 min)
-bun run deploy -- --ref <commit>    # 5. the commit checked out here; --with-migrations if needed
-bun run status                      # 6. INVARIANT OK; then the production smoke test
-git push tutor <commit>:main        # 7. GitHub main == the live release (a fast-forward)
+bun run status        # read-only: health, what each part runs, GitHub main vs production, MATCH
 ```
 
-Step 7 keeps GitHub's `main` identical to production. If the release was a PR's branch, pushing it
-to `main` marks the PR merged; GitHub's merge button would create a different commit, so prefer the
-fast-forward (or merge locally, verify and deploy that merge commit). Until `main` equals the live
-release, `bun run status` says which way they differ.
+On the server (`ssh root@10.1.30.37`):
 
 ```sh
-bun run deploy -- --ref <commit> --prepare-only    # build + validate on the host, do not switch
-bun run deploy -- --ref <commit> --older           # an older commit of main (prefer bun run rollback)
+systemctl status aichat-api aichat-web          # the two services
+journalctl -u aichat-api -u aichat-web -n 50    # their logs
+journalctl -u 'aichat-deploy-*'                 # deploy logs
+tail /opt/aichat/app-state/HISTORY              # every deploy and rollback: who, what, how long
+git -C /opt/aichat/app log -1                   # the commit production runs
+bash /opt/aichat/app/deploy/infra-check.sh      # status plus ports, database and backups
 ```
 
-What the deploy checks before anything reaches the host, each failing closed:
+## Roll back
 
-1. `--ref` is the commit checked out here (`HEAD`), the working tree is clean, `git fsck` is clean.
-2. `bun run verify` passed on exactly this commit and tree (`.deploy/verified/<commit>.json` and
-   its log; `deploy/local-gate.mjs`).
-3. The commit is on a branch of GitHub and contains GitHub's `main` (or, with `--older`, is a
-   commit of `main`'s own history).
-4. The commit contains the live release, and the live release is on GitHub (or, with `--older`,
-   the commit is an ancestor of it: a deliberate downgrade).
+```sh
+bun run rollback                  # back to the commit that was live before the last deploy
+bun run rollback -- <commit>      # back to any earlier commit
+```
 
-It shows the release, where it was verified, how it relates to GitHub's `main` and to what is
-live, and asks you to type the first 7 characters of the commit (`--yes` for automation). The full log is in the journal (`journalctl -u
-aichat-deploy-*`) and in `/opt/aichat/releases/<commit>/deploy-<id>.log`; every deploy,
-migration, failure and rollback is appended to `/opt/aichat/releases/HISTORY`.
+Details: [rollback.md](rollback.md).
 
-### Downtime
+## When a deploy fails
 
-Validation happens before anything live changes. The switch itself makes the whole site
-unavailable for a few seconds (about 7–8 s: the web app is down while the API restarts), which is
-the price of never serving a mixed pair. A reply being generated at that moment is saved as
-cancelled.
+A deploy stops at the first failure with `STOP:` and the reason, prints what each part runs, and
+exits non-zero. It never reports success when a step failed. What was not restarted keeps serving;
+the next deploy redoes whatever did not finish.
+
+| It says | Do |
+|---|---|
+| `uncommitted or untracked changes` / `is not GitHub main` | commit, `git push origin main`, deploy again |
+| `another deploy is running` | wait for it, then deploy again |
+| `the frontend build failed` | users still get the previous build. Fix the code, push, deploy |
+| `pip install failed` / `bun install failed` | nothing was restarted. Fix the lockfile, push, deploy |
+| `the migration failed (backup: …)` | the API was not restarted. Read `journalctl -u 'aichat-deploy-*'`, fix the migration, push, deploy |
+| `the API is not ready after its restart` | `bun run rollback`, then read `journalctl -u aichat-api` |
+| `the new frontend did not start` | the previous build is already serving again; read `journalctl -u aichat-web` |
+| `web.env must set …` | fix `/etc/aichat/web.env` on the server, deploy again |
+
+## On the server
+
+```
+/opt/aichat/app.git      the production Git repository: deploys push here (the server never reaches GitHub)
+/opt/aichat/app          the production checkout: the code that runs
+  backend/.venv            its Python packages (reused; reinstalled only when requirements.lock changes)
+  frontend/node_modules    its JS packages (reused; reinstalled only when package.json/bun.lock change)
+  frontend/apps/app/.next  the served build (.next-prev: the one before; .next-cache: Next's cache)
+  RELEASE                  the commit, reported by the API's /health and the web app's /api/health
+/opt/aichat/app-state    what each part runs (content keys), previous, HISTORY
+/opt/aichat/shared       the database's compose file and backup script (never part of a deploy)
+/opt/aichat/runtime      the pinned Node versions
+/etc/aichat/*.env        the secrets (never in Git, never touched by a deploy)
+```
+
+`git reset --hard` only changes tracked source files. The venv, `node_modules`, the builds, the
+database, backups and secrets are outside Git and are never deleted by a deploy (it never runs
+`git clean`). PostgreSQL (with pgvector) is the only datastore; a deploy never restarts it.
+
+The first `bun run deploy` on a server that still runs the older release layout
+(`/opt/aichat/current` → `/opt/aichat/releases/<commit>`) moves it to the checkout: it builds
+everything while the old release keeps serving, then switches the services (a few seconds). If
+that first deploy fails, it puts the old services back. The old release directory is left in place,
+unused; delete it once you no longer want it (`bun run status` lists it).
 
 ### Migrations
 
-- A release's migrations run **before** the switch, while the current release still serves, so
-  every migration must work with the code that is live when it runs (expand/contract: add, then
-  backfill, then drop only what the previous release no longer uses, in a later release).
-- Pending migrations stop the deploy unless `--with-migrations` is given; then a backup
-  (`aichat-pg-backup`) must succeed first, and the migration is recorded in `HISTORY` with the
-  backup file.
-- Deploying or rolling back to code older than the schema needs `--allow-older-schema`, and is only
-  safe for backward-compatible migrations. The database is never rolled back automatically; to undo
-  a schema change, write a new migration.
-- `backend/scripts/migration_status.py` reports where the database stands for any code version.
-- Today every client ships in the same release as the API. Once a client is released on its own (an
-  app-store build), a migration and the API change it serves must also keep the **oldest supported
-  client** working, not only the previous release ([api-contract.md](api-contract.md#compatibility-and-versioning)).
+A migration runs while the previous API is still serving, and a rollback runs older code on the
+newer schema, so **every migration must be backward compatible** (expand, then contract):
+
+- **Allowed in one step:** adding tables, nullable columns or columns with a server default, and
+  adding indexes.
+- **Needs several deploys** (new code first, the removal later): renaming or dropping a column or
+  table, adding a NOT NULL without a default, or changing a type.
+- **Every migration is preceded by a backup** in `/var/backups/aichat` (named in the deploy output).
+- **Future native clients:** once a native client exists, a migration and the API change it serves
+  must also keep the **oldest supported client** working
+  ([api-contract.md](api-contract.md#compatibility-and-versioning)).
 
 ## One-time host preparation
 
@@ -140,41 +162,19 @@ ssh root@<host> bash /root/aichat-setup/deploy/install.sh     # lists the secret
 # write /etc/aichat/{postgres,api,web}.env from deploy/env/*.example (chmod 600), then run it again
 ```
 
-It installs Python 3.12, the pinned Bun and Node, leaves an existing Docker alone, creates
-`/opt/aichat/{releases,incoming,shared,runtime}`, installs the units and starts PostgreSQL and the
-nightly backup. Then `bun run deploy -- --with-migrations` (a new database is empty, so the first
-release has every migration pending; without the flag it stops before the switch).
-
-## The move from the two-checkout layout (2026-09-25)
-
-Until 2026-09-25 production ran two checkouts (`/opt/aichat/backend` and `/opt/aichat/frontend`,
-from two repositories and two commits). The first `bun run deploy` (release `a353815`, approved by
-the owner) moved it to releases: a trial deploy (`--prepare-only`) first, then the switch, with
-4.2 s of measured downtime and no moment in which the two apps ran different releases.
-
-- **It changed:** the systemd units, `/opt/aichat/current`, `/opt/aichat/shared/postgres`,
-  `/opt/aichat/runtime` (the pinned Node).
-- **It did not change:** the database container (not restarted; the pinned names keep the same
-  volume), `/etc/aichat/*.env`, the legacy services or Cloudflare.
-- **Left in place for rollback**, unused: the old checkouts, `/root/aichat-bundles`, and the
-  replaced units, saved as `/etc/systemd/system/aichat-*.before-20260925052156`. Until a second
-  release has been deployed, `bun run rollback` has no earlier release to return to; going back
-  means restoring those units ([rollback.md](rollback.md#the-first-release-on-the-old-layout)).
-- **Afterwards**, once the release layout has proven stable and the owner approves, delete the old
-  checkouts, `/root/aichat-bundles` and the saved units (the checkouts are a trap: running their
-  old `install.sh` would bring back two independently deployed checkouts; `bun run status` reports
-  them).
+It installs Git, Python 3.12, the pinned Bun and Node, leaves an existing Docker alone, creates
+`/opt/aichat/{app-state,shared,runtime}`, installs the units and starts PostgreSQL and the nightly
+backup. Then `bun run deploy` (the first one builds everything and runs every migration).
 
 ## Environment variables
 
-All production values live in `/etc/aichat/*.env` (root, mode 600), shared by every release and
-never in git. Templates: `deploy/env/`. Local development: `backend/.env` and
-`frontend/apps/app/.env.local`.
+All production values live in `/etc/aichat/*.env` (root, mode 600), never in git. Templates:
+`deploy/env/`. Local development: `backend/.env` and `frontend/apps/app/.env.local`.
 
 | File | Variable | Used by | When | Secret |
 |---|---|---|---|---|
-| `web.env` | `API_BASE_URL` | frontend server (BFF, server components) | runtime | no. **The link to the backend**: must be `http://127.0.0.1:4100`; a release refuses anything else |
-| `web.env` | `NEXT_PUBLIC_SITE_URL` | frontend (metadata URLs) | **build time** (baked into the release build; required) | no |
+| `web.env` | `API_BASE_URL` | frontend server (BFF, server components) | runtime | no. **The link to the backend**: must be `http://127.0.0.1:4100`; a deploy refuses anything else |
+| `web.env` | `NEXT_PUBLIC_SITE_URL` | frontend (metadata URLs) | **build time** (baked into the build; required) | no |
 | `web.env` | `NEXT_PUBLIC_SENTRY_DSN` | frontend error reporting, only bundled if set | build time | no (public DSN) |
 | `web.env` | `NEXT_PUBLIC_TERMS_URL`, `NEXT_PUBLIC_PRIVACY_URL` | Settings › Help & Support links; each shown only when set to an http(s) address | build time | no |
 | `api.env` | `SECRET_KEY`, `DATABASE_URL` | backend | runtime | **yes** |
@@ -186,7 +186,7 @@ never in git. Templates: `deploy/env/`. Local development: `backend/.env` and
 | `postgres.env` | `POSTGRES_USER`, `POSTGRES_DB`, `BACKUP_DIR`, `KEEP_DAYS` | database, backup | runtime | no |
 
 A runtime value takes effect on the next restart of the service; a build-time value
-(`NEXT_PUBLIC_*`) on the next deploy (the release is rebuilt when they change).
+(`NEXT_PUBLIC_*`) on the next deploy (the frontend is rebuilt when they change).
 
 ## Jobs worker
 
@@ -227,49 +227,29 @@ journalctl -u aichat-jobs -o cat -n 5                     # "jobs run finished",
 Inspect the outbox (counts only, never bodies, in shared logs):
 `docker exec compose-postgres-1 psql -U aichat -d aichat -c "select kind, status, count(*) from email_outbox group by 1, 2"`.
 Delivery is at most once: a run that dies between claiming an email and recording the result
-leaves it `unknown`, never resent. `bun run status` prints the timer's state and last run.
+leaves it `unknown`, never resent. `bun run status` prints the timer's state.
 
 ## Changing the database container on purpose
 
-`install-units.sh` never replaces `/opt/aichat/shared/postgres/docker-compose.yml`. If a release
+`install-units.sh` never replaces `/opt/aichat/shared/postgres/docker-compose.yml`. If a commit
 changes `deploy/compose/docker-compose.yml`, the deploy prints a warning. Apply it deliberately:
 take a backup (`systemctl start aichat-pg-backup`), copy the file into `/opt/aichat/shared/postgres/`,
 then `systemctl restart aichat-postgres aichat-api` (a short outage). Never change the pinned
 `name: compose` or the volume name `compose_pgdata`.
 
-## Proving the model: `bun run rehearse`
+## Rehearsing a change to the deploy scripts: `bun run rehearse`
 
-A throwaway Ubuntu 24.04 container with real systemd, PostgreSQL + pgvector and SSH, prepared by
-`install.sh`, on which the real `deploy.sh`, `rollback.sh` and `status.sh` run through
-frontend-only, backend-only and combined releases, a broken build, a broken backend, a failed live
-check, double rollback, migration guards, every bypass and a killed SSH connection, while a poller
-checks that the two apps never report different releases, and that the jobs worker ships installed
-but disabled and runs once enabled. Local only (Docker, about 45 minutes).
-
-## Accepted limitations of the local-deploy model
-
-- **The deploy machine is trusted.** Whoever can run the deploy has root SSH to production and
-  could also write verification evidence by hand; the evidence protects against accidents (a
-  forgotten test, an edited or different commit), not against that person or a compromised
-  machine. Protect the machine and the SSH key.
-- **GitHub (git) must be reachable to deploy**, to prove the release and the live release are on
-  it. During a GitHub outage no new release goes out; `bun run rollback` still works (host only).
-  GitHub *Actions* is not needed at all.
-- **One verifier when Actions is unavailable.** When CI does run, its verdict on the live release is
-  shown by `bun run status` (a warning on failure), not enforced.
-- **Host records are root-writable** (`HISTORY`, the evidence in each release), as before.
-- **Visual and performance behaviour on real devices** is outside any automated verification.
+Optional, local, never a deploy prerequisite. It runs the real `deploy.sh`, `rollback.sh` and
+`status.sh` against a throwaway systemd container that starts on the older release layout: the
+cutover (and a failed cutover that puts it back), frontend-only, backend-only, docs-only, migration
+and full-stack commits, a failed build, a rollback, two deploys at once, the refusals, and that
+database rows and secrets survive. It prints how long each deploy took. Use it when you change
+`deploy/`.
 
 ## Never do this
 
-- **Deploy the frontend or the backend on its own.** There is no command for it and there never
-  will be; a change to either half is released as a new commit of the whole application.
-- Run `release.sh` or `rollback.sh` by hand (they refuse), edit files inside
-  `/opt/aichat/releases/*` (verified against the commit; a changed release is refused), or point
-  `/opt/aichat/current` somewhere by hand except in the emergency steps of [rollback.md](rollback.md).
-- Deploy a commit that was not verified by `bun run verify`, is not on GitHub, or would remove
-  commits that are live (refused); or leave GitHub's `main` behind the live release.
-- Run migrations outside a deploy, rename the compose project or volume, or `docker compose down -v`.
-- Put a secret in the repository, or change `API_BASE_URL` in `web.env`.
-- Use the retired deployment (git bundles, `install.sh` with `BACKEND_REPO`/`FRONTEND_REPO`, the
-  old frontend repository): it no longer exists.
+- Edit files in `/opt/aichat/app` by hand (the next deploy resets them; `bun run status` flags local edits).
+- Run migrations outside a deploy, or `git clean` in `/opt/aichat/app`.
+- `docker compose down -v`, or anything that recreates the database volume.
+- Change `API_BASE_URL` in `web.env` (the frontend's default `:4000` is the old API on that host).
+- Put secrets in Git.

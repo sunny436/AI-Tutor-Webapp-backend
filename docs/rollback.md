@@ -1,92 +1,60 @@
 # Rollback
 
-> **AI Tutor is released as one application. Frontend and backend are never independently
-> deployed to production.** That holds for rollbacks too.
-
-A rollback switches the frontend and the backend back **together**, to one earlier release: both
-run from the one directory `/opt/aichat/current` points at, so there is no way to roll back one
-without the other. The database is never rolled back.
-
-## Automatic
-
-A deploy rolls back by itself when a release passes its trial checks but fails the live checks
-after the switch (the web → API → database chain, or any process not running the new release). It
-switches back to the previous release in the same order as a deploy, proves the invariant again,
-and ends with `STOP: release <commit> failed its live checks; production is back on <previous>`.
-A failure before the switch (checks, build, migrations, trial copies) never touches production.
-
-## Manual
-
-From the repository root on a workstation:
+A rollback is a deploy of an earlier commit: the same path as `bun run deploy`
+([deployment.md](deployment.md)), so only the parts that differ are rebuilt or restarted.
 
 ```sh
-bun run rollback                          # to the release that was live before this one
-bun run rollback -- --to <commit>         # to any kept release (7 to 40 hex characters)
-bun run rollback -- --allow-older-schema  # see "Across a migration"
+bun run rollback                  # the commit that was live before the last deploy
+bun run rollback -- <commit>      # any earlier commit (from git log, or the server's HISTORY)
 ```
 
-It asks you to type `rollback`, then runs on the host as a detached systemd unit
-(`aichat-rollback-<time>`), so a lost SSH connection cannot leave it half done. It:
+It pushes that commit to the production Git repository, moves the production checkout to it, and:
 
-1. picks the target from `/opt/aichat/releases/LIVE-STACK`, the ordered list of releases that were
-   live: a second `bun run rollback` goes further back, never forward to the release you just left;
-2. checks the target was fully built, and that its files still match its commit;
-3. applies the migration guard below;
-4. switches: stop web → `current` → target → restart API → start web, with the target's own units;
-5. proves pointer = API release = web release = every process's release, plus web → API → database.
-   If that fails, it returns to the release it started from.
+- **Frontend:** if it goes back to the build the last deploy replaced, that build is swapped back
+  **without building** (seconds). Otherwise the older frontend is built beside the served one
+  first, like any deploy.
+- **Backend:** the API restarts on the older code only if the backend differs.
+- **Checks:** the same smoke check as a deploy, then the SHAs and a status line.
 
-Afterwards, `bun run status` must end with `INVARIANT OK`. The host keeps the last three live
-releases plus the live and previous one (`ls /opt/aichat/releases`, `/opt/aichat/releases/HISTORY`).
-To go back to an older commit that is no longer kept, deploy it: `bun run deploy -- --ref <commit>
---older` (it must still be on `main` with successful CI).
+Afterwards the status says `MISMATCH (the production checkout is not GitHub main)`. That is
+expected: production is deliberately behind `main`. Fix the problem, `git push origin main`, and
+`bun run deploy`; the status is `MATCH` again.
 
-The jobs worker (`aichat-jobs`, if its timer is enabled) always runs the release `current` points
-at, so after a rollback its next run uses the older code. A release that predates the worker has no
-`backend/app/jobs/__main__.py`, and the unit's `ConditionPathExists` then skips each run silently;
-the outbox waits (and its rows expire) until a release with the worker is live again.
+Running `bun run rollback` twice does not go further back; it returns to the same commit. To go
+further back, name the commit (the server's `/opt/aichat/app-state/HISTORY` lists every deploy).
 
-## Across a migration
+## The database
 
-If the release you are leaving ran a migration, the older code will run on the newer schema. That is
-safe only when the migration was backward compatible, which is the rule for all migrations
-([deployment.md](deployment.md#migrations)). So the rollback refuses by default and says why;
-`--allow-older-schema` confirms it. To undo a schema change, write a new migration and deploy it.
-Never downgrade the production database by hand. Every migration was preceded by a backup in
-`/var/backups/aichat` (the file is named in `HISTORY`); restoring one loses everything written since,
-so it is a last resort (header of `deploy/backup.sh`).
+A rollback never touches the database. If the commit you leave ran a migration, the older code
+runs on the newer schema, and the deploy says so (a warning). That is safe because every migration
+is backward compatible ([deployment.md](deployment.md#migrations)). To undo a schema change, write a
+new migration and deploy it. Never downgrade the production database by hand. Every migration was
+preceded by a backup in `/var/backups/aichat`; restoring one loses everything written since, so it
+is a last resort (header of `deploy/backup.sh`).
 
-## The first release on the old layout
+## Automatic protection during a deploy
 
-On a host that still ran the two-checkout layout, there is no previous release. If the first
-release fails its live checks, the deploy restores the unit files it replaced (kept as
-`/etc/systemd/system/aichat-*.before-<time>`) and restarts the old layout.
-
-Production made that move on 2026-09-25 (units saved as `aichat-*.before-20260925052156`; the old
-checkouts are still in place). Until a second release has been deployed there, `bun run rollback`
-has no earlier release, and going back to the old layout is the manual restore below. If you ever
-need it:
-
-```sh
-cd /etc/systemd/system
-for f in aichat-*.before-<time>; do mv -f "$f" "${f%.before-<time>}"; done
-rm -f /opt/aichat/current
-systemctl daemon-reload && systemctl restart aichat-api aichat-web
-```
+- **Frontend build fails:** users keep the previous build; nothing is restarted.
+- **New frontend doesn't start:** the previous build is swapped back in and restarted
+  automatically.
+- **API fails its readiness check after a restart:** the deploy stops with `STOP:`; run
+  `bun run rollback`.
+- **First deploy (the cutover) fails:** the services of the old release layout are put back
+  automatically.
 
 ## Emergency: without the scripts
 
-Only if the scripts themselves are broken. On the host, keep the order (web down first, so the two
-halves never run different releases):
+Only if the deploy scripts themselves are broken. On the server:
 
 ```sh
-ls -1t /opt/aichat/releases                                  # pick a kept, built release
-systemctl stop aichat-web
-ln -sfn /opt/aichat/releases/<commit> /opt/aichat/current.next
-mv -Tf /opt/aichat/current.next /opt/aichat/current          # atomic
-systemctl restart aichat-api && systemctl start aichat-web
-bash /opt/aichat/current/deploy/server/status.sh             # must end with INVARIANT OK
+cd /opt/aichat/app
+git log --oneline -5                                   # pick a known-good commit
+git reset --hard <commit> && printf 'commit=%s\n' "$(git rev-parse HEAD)" > RELEASE
+systemctl restart aichat-api                           # if the backend differs
+# the frontend: a build of that commit must be in place (.next-prev is the one before the last deploy)
+systemctl stop aichat-web && mv frontend/apps/app/.next frontend/apps/app/.next-bad \
+  && mv frontend/apps/app/.next-prev frontend/apps/app/.next && systemctl start aichat-web
 ```
 
-Then record what you did in `/opt/aichat/releases/HISTORY`, and push the commit onto
-`/opt/aichat/releases/LIVE-STACK` so the next rollback starts from the right place.
+Then fix the scripts, push, and deploy normally: the next deploy compares against the recorded
+state and redoes whatever is needed.

@@ -1,11 +1,8 @@
 # AI Tutor: chat application
 
 A ChatGPT-style AI chat app with accounts, conversations and streamed replies, built to grow into an
-AI tutor. **One repository, one commit, one release:** the web app and the API live here together
-and are tested, deployed and rolled back together.
-
-> **AI Tutor is released as one application. Frontend and backend are never independently
-> deployed to production.**
+AI tutor. **One repository:** the web app and the API live here together. A deploy takes one commit
+of `main` to production and rebuilds or restarts only the part (web app, API or both) it changes.
 
 ```
 Browser ──► Cloudflare ──► frontend/  Next.js web app + server-side proxy (BFF)   127.0.0.1:3000
@@ -40,13 +37,13 @@ bun run test      # backend + frontend tests, including the API contract
 ## Releasing
 
 ```sh
-bun run verify    # the three CI jobs on the commit checked out, in a Linux container (docs/deployment.md)
-bun run deploy -- --ref <commit>   # that verified commit, if it is on GitHub and contains main and what is live
-bun run status    # which release production runs; both apps must report the same commit
-bun run rollback  # both apps back to the previous release, together (docs/rollback.md)
+git push origin main && bun run deploy   # GitHub main -> production, only what changed (docs/deployment.md)
+bun run status    # GitHub main vs production, what each part runs, health: MATCH or MISMATCH
+bun run rollback  # the previous commit, the same way (docs/rollback.md)
+bun run verify    # optional: CI's three jobs locally, in a Linux container (never required)
 ```
 
-Those are the only production commands (`verify` only reads).
+Those are the only production commands.
 
 ## History
 

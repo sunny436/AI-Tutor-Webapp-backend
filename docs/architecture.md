@@ -9,11 +9,12 @@ The whole application is one repository, and every commit is one complete, consi
 | `frontend/` | Next.js 14 web app + its server-side proxy (BFF), a Bun + Turborepo workspace (`apps/app`, `packages/ui`) | Bun 1.3.14, Biome, bun test, Playwright |
 | `backend/` | FastAPI chat API, SQLAlchemy async + Alembic, LangGraph/LangChain RAG | Python 3.12 venv, ruff, pytest |
 | `docs/openapi.json` | The API contract: generated from the backend, tested by the frontend (`routes.test.ts`) | `bun run contract` |
-| `deploy/` | One release-based deployment for both ([deployment.md](deployment.md), [rollback.md](rollback.md)) | bash, systemd |
+| `deploy/` | One deploy for both: Git push to production, only the changed part rebuilt ([deployment.md](deployment.md), [rollback.md](rollback.md)) | bash, systemd |
 
 They stay two processes (a Node server and a Python server) because they are different runtimes with
-a narrow, tested HTTP contract between them, but they are **built, tested, deployed and rolled back
-together**: production runs both from one release directory, `/opt/aichat/current -> releases/<commit>`.
+a narrow, tested HTTP contract between them, but they are **tested together and deployed from the
+same commit**: production runs both from one checkout, `/opt/aichat/app`, and a deploy restarts only
+the one a commit changes.
 
 ## Components
 

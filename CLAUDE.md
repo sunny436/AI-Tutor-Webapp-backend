@@ -12,9 +12,9 @@ repository, and each commit is one release** of both halves:
   `apps/app`, `packages/ui`, `tooling/typescript`. `frontend/CLAUDE.md` has the frontend detail;
   Claude Code loads it when you work there.
 
-They are two processes, but they are tested, deployed and rolled back together. **AI Tutor is
-released as one application. Frontend and backend are never independently deployed to production.**
-Never add a command, script or unit that deploys only one half.
+They are two processes, tested together and deployed from the same commit of `main`: production
+runs both from one checkout, and a deploy rebuilds and restarts only the half a commit changes
+(`docs/deployment.md`). There is one deploy command for both; don't add per-half deploy commands.
 
 History:
 - The frontend was a separate repository (`sunny436/AI-Tutor-Webapp-frontend`). It was imported with
@@ -52,10 +52,11 @@ bun run setup | dev | dev:backend | dev:frontend       # dev: Docker db + migrat
 bun run test          # backend pytest + frontend typecheck + unit tests (incl. the API contract test)
 bun run test:e2e      # Playwright + axe against an API on :4100 with the fake LLM (starts it from backend/)
 bun run lint | build | contract                        # contract: regenerate docs/openapi.json + frontend check
-bun run verify        # the three CI jobs on HEAD, in a Linux container (Docker, ~30-35 min): deploy evidence
-bun run deploy -- --ref <commit> | rollback | status  # production (docs/deployment.md, docs/rollback.md)
+git push origin main && bun run deploy   # production: GitHub main -> production, only what changed
+bun run rollback | status                 # previous commit the same way | GitHub main vs production (MATCH)
+bun run verify        # optional: the three CI jobs on HEAD, in a Linux container (Docker, ~30-35 min)
 bun run lock:backend  # after editing backend/requirements.txt: regenerate the hashed requirements.lock
-bun run rehearse      # the release model on a throwaway systemd container (Docker, ~45 min)
+bun run rehearse      # optional: the deploy scripts on a throwaway systemd container (Docker, ~30 min)
 ```
 
 Directly, in `backend/` (Windows paths; Linux `.venv/bin/python`):
@@ -142,55 +143,55 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 
 ## Deployment and production
 
-- **What gets deployed:** `bun run deploy -- --ref <commit>` (`deploy/deploy.sh`) releases exactly the
-  commit checked out on the deploy machine, only if:
-  - `bun run verify` passed on that commit and tree (`deploy/local-gate.mjs`: the three CI jobs'
-    commands in an Ubuntu container on `git archive`, kept identical to `ci.yml` by
-    `deploy/tests/ci-parity.test.mjs`);
-  - the commit is on a GitHub branch and contains GitHub's `main`;
-  - it contains the live release (itself on GitHub).
-
-  GitHub Actions is not a deploy dependency; `bun run status` shows its verdict on the live
-  release. The host gets `git archive` plus a manifest, the evidence and its log, and refuses under
-  its lock if production changed since the pre-flight. It runs as a detached systemd unit
-  (`deploy/server/bootstrap.sh` → that release's `deploy/server/release.sh`). Operator order and
-  accepted limitations: `docs/deployment.md`, "Releasing".
-- **The release steps:** verify every file against the commit → build into
-  `/opt/aichat/releases/<commit>/` (backend from the hashed `requirements.lock`, frontend on the
-  pinned Node) → migrations (only with `--with-migrations`, after a backup) → trial API :4101 and
-  web :3001 on the real database, proving web → API → database by request id → switch: stop web,
-  flip `/opt/aichat/current`, restart API, start web (≈7–8 s outage, never mixed) → prove the
-  invariant → automatic rollback on failure.
-- **Release identity:** each release has a `RELEASE` file; the API's `/health` and the web app's
-  `/api/health` (loopback only) report it. `bun run status` checks pointer = both reported
-  releases = every process's release = files match the commit, and prints `INVARIANT OK`/`FAIL`.
+- **How a commit goes live:** `git push origin main`, then `bun run deploy` (`deploy/deploy.sh`):
+  - it refuses unless this checkout is clean and exactly GitHub `main` (fetched now); no PRs, and
+    GitHub CI is advisory (never waited for; `bun run status` shows it);
+  - it pushes the commit to the production Git repository `/opt/aichat/app.git` (the host has no
+    GitHub access), then runs `deploy/server/update.sh` (from this checkout's `deploy/`) on the
+    host as a detached systemd unit under a lock (a second deploy stops: "another deploy is running").
+- **What update.sh does:** `git reset --hard` of the production checkout `/opt/aichat/app`, then
+  content keys (git objects of each part's files, tests excluded, `deploy/server/lib.sh`) decide
+  what runs:
+  - pip install only when `requirements.lock` changed; bun install only when a `package.json` or
+    `bun.lock` changed (the venv and `node_modules` are reused);
+  - the frontend is built **beside** the served build (`NEXT_DIST_DIR=.next-build`, Next's cache in
+    `.next-cache`) and swapped in; the build it replaced stays as `.next-prev`, so going back is a
+    swap without a build; a failed build never reaches users;
+  - backup + `alembic upgrade head` only when migrations are pending; restart only the API (backend
+    changed) and/or only the web app (frontend changed); docs/tests-only commits restart nothing;
+  - local smoke: both units active, API `/health` + `/ready`, web `/login`, web -> API -> database.
+  - It prints GitHub main, the production checkout, the backend and frontend running SHAs, and
+    `MATCH` or `MISMATCH`; any failure is `STOP:` and a non-zero exit, never reported as success.
+- **Release identity:** the checkout's `RELEASE` file; the API's `/health` and the web app's
+  `/api/health` (loopback only) report the commit each process started from. A part that did not
+  change keeps running an older commit with identical code (still MATCH).
 - **Pinned runtimes:** `.node-version` (the web app runs on Node, not Bun's runtime: Bun does not
   signal a client disconnect, which breaks stop-on-leave), `.bun-version`, `backend/requirements.lock`.
-- **Jobs worker:** `aichat-jobs.timer` runs `python -m app.jobs` once a minute from `current`: the
+- **Jobs worker:** `aichat-jobs.timer` runs `python -m app.jobs` once a minute from the checkout: the
   email outbox (at most once), reminders, retention. It ships installed but NOT enabled, and student
   email follows `NOTIFICATIONS_MODE` (default `off`); enabling either is an owner decision
-  (`docs/deployment.md`, "Jobs worker"). It is not part of the invariant.
-- **Rollback:** `bun run rollback` switches both back together, to the previously live release
-  (`LIVE-STACK`). Details in `docs/deployment.md`, `docs/rollback.md` and `deploy/README.md`.
-- **Host:** Ubuntu 24.04 VM `10.1.30.37` (`ssh root@10.1.30.37`). It has no GitHub access. The public
-  site `ayur.namahos.com` goes through a Cloudflare Tunnel to web `127.0.0.1:3000`. The API is on
-  `127.0.0.1:4100` (4000 is dev), and PostgreSQL is Docker on `127.0.0.1:5432`.
-- **Secrets:** only in `/etc/aichat/{api,web,postgres}.env` (mode 600). Load them for one-off
-  commands with `systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env ...`;
+  (`docs/deployment.md`, "Jobs worker").
+- **Rollback:** `bun run rollback [-- <commit>]` deploys the previous (or a named) commit the same way;
+  status says MISMATCH until main is deployed again. Details in `docs/deployment.md` and `docs/rollback.md`.
+- **Host:** Ubuntu 24.04 VM `10.1.30.37` (`ssh root@10.1.30.37`). The public site `ayur.namahos.com`
+  goes through a Cloudflare Tunnel to web `127.0.0.1:3000`. The API is on `127.0.0.1:4100` (4000 is
+  dev), and PostgreSQL is Docker on `127.0.0.1:5432`.
+- **Secrets:** only in `/etc/aichat/{api,web,postgres}.env` (mode 600), never touched by a deploy.
+  Load them for one-off commands with `systemd-run --pipe --wait --collect -p EnvironmentFile=/etc/aichat/api.env ...`;
   don't `source` them.
-- **The database is outside releases:** `/opt/aichat/shared/postgres`. Its Compose project and volume
-  names are pinned (`compose` / `compose_pgdata`); moving or renaming them would start an empty
-  database.
-- **Status:** production runs the release layout since 2026-09-25 (first release `a353815`,
-  `INFRASTRUCTURE.md`). The pre-release leftovers (old checkouts `/opt/aichat/{backend,frontend}`,
-  `/root/aichat-bundles`, units saved as `aichat-*.before-20260925052156`, the legacy Ayurveda
-  services) are kept for rollback until the owner approves their removal; don't touch them.
-  Production changes need the owner's explicit approval.
-- **Never, by hand:** edit a release, repoint `current` (except the emergency steps in
-  `docs/rollback.md`), run migrations outside `release.sh`, `docker compose down -v`, or change
-  `API_BASE_URL` in `web.env` (the frontend's default `:4000` is the old API on that host).
-- **Changing the deploy scripts:** prove it with `bun run rehearse`; the host scripts run from the
-  release being deployed, so a fix only takes effect with the release that contains it.
+- **The database is outside the checkout:** `/opt/aichat/shared/postgres`. Its Compose project and
+  volume names are pinned (`compose` / `compose_pgdata`); moving or renaming them would start an
+  empty database. Migrations must be backward compatible (a rollback runs older code on the newer schema).
+- **Status:** the first deploy of this model moves production from the release layout
+  (`/opt/aichat/current` -> `releases/<commit>`, since 2026-09-25) to `/opt/aichat/app`, and leaves
+  `releases/` in place. Leftovers kept until the owner approves their removal: `releases/`, the old
+  checkouts `/opt/aichat/{backend,frontend}`, `/root/aichat-bundles`, saved units `aichat-*.before-*`,
+  the legacy Ayurveda services; don't touch them. Production changes need the owner's explicit approval.
+- **Never, by hand:** edit files in `/opt/aichat/app`, run migrations outside a deploy, `git clean`
+  there, `docker compose down -v`, or change `API_BASE_URL` in `web.env` (the frontend's default
+  `:4000` is the old API on that host).
+- **Changing the deploy scripts:** try it with `bun run rehearse` (optional, local); the host runs
+  the deploying checkout's `deploy/` scripts, so a fix takes effect with the next deploy.
 
 ## Implementation and release workflow (owner's standing guardrail)
 
@@ -210,22 +211,21 @@ Follow this for every implementation task unless the owner explicitly overrides 
    - Cover: the normal flow, edge cases, loading and error states, mobile and responsive layouts, light and dark, likely regressions, accessibility, and authorization and security boundaries.
    - Try to break it, check visual quality, spacing and overflow, and confirm unrelated functionality still works.
 4. **Fix and retest** (automated checks plus headed QA) until everything passes. Never knowingly ship a failing test, a broken flow or a regression, and never silently reduce scope to make tests pass.
-5. **PR.** Only when implementation and QA are clean: commit, push the branch to the owner's GitHub repo (`tutor`), open a PR to `main` (the review record). GitHub CI runs when Actions is available; its result is a second opinion, not the release gate.
-6. **Verify.** `bun run verify` on the exact release commit (the three CI jobs in a Linux container); it must pass.
-7. **Production.**
-   - Deploy **only that verified commit**: `bun run deploy -- --ref <commit>` (with `--with-migrations` when the release has migrations). It must be on GitHub and contain GitHub's `main` and the live release.
-   - Verify with `bun run status` (INVARIANT OK, the live release is the commit), then run a final headed Chrome production smoke and regression test of the affected functionality.
-   - If verification fails, stop and investigate (or `bun run rollback`); don't declare success.
-   - Then make GitHub's `main` equal the live release (a fast-forward push of that commit to `main`, which marks the PR merged) and delete the feature branch.
-8. **Release invariant.** Production is always a verified commit that is on GitHub and contains everything that was live before; GitHub's `main` is brought to it right after the deploy. Never:
-   - deploy an unverified commit, a dirty tree or a commit that is not on GitHub;
-   - weaken or bypass the verification or the deploy checks;
+5. **Push.** Only when implementation and QA are clean: commit on `main` and `git push origin main` (`origin` is the owner's GitHub repo). No pull requests, no feature branches for deploying. GitHub CI runs by itself; it is advisory and never waited for.
+6. **Production.**
+   - `bun run deploy`: it deploys exactly GitHub `main` (the checkout must equal it) and rebuilds/restarts only what changed.
+   - It must end with `Status: MATCH`; then run a final headed Chrome production smoke and regression test of the affected functionality.
+   - If anything fails, stop and investigate (or `bun run rollback`); don't declare success.
+7. **Invariant.** GitHub `main` = the production checkout = what the backend and frontend run (`bun run status`: MATCH). Never:
+   - deploy a dirty tree or a commit that is not GitHub `main` (rollbacks excepted);
+   - edit production by hand;
    - skip the headed QA;
    - leave failures unresolved, or claim completion without verification.
+8. **Speed.** Nothing on the deploy path waits for CI, `bun run verify` or `bun run rehearse`; run those when they help, never as gates.
 9. **Report** concisely, each line PASS or FAIL:
    - Implementation, Automated tests, Headed Chrome QA;
-   - PR (number and link), Local verification (and GitHub CI when it ran), `main` updated, Branch deletion;
-   - Production deployment, Production verification;
+   - Pushed to `main` (SHA), GitHub CI (advisory, when it ran);
+   - Production deployment (`Status: MATCH`), Production verification;
    - plus the final deployed Git SHA.
 
 ## Repo hygiene

@@ -115,7 +115,7 @@ mkdir -p "$WTOLD/.deploy/verified"
 printf '{"version":1,"sha":"%s","tree":"%s","source":"local","rehearsal":true,"result":"success","log_sha256":"-","jobs":[{"name":"Backend (lint, contract, tests)","conclusion":"success"},{"name":"Frontend (typecheck, lint, tests incl. contract, build)","conclusion":"success"},{"name":"Integration (end-to-end)","conclusion":"success"}]}\n' \
   "$OLD" "$(git rev-parse "$OLD^{tree}")" > "$WTOLD/.deploy/verified/$OLD.json"
 printf 'rehearsal\n' > "$WTOLD/.deploy/verified/$OLD.log"
-(cd "$WTOLD" && DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/deploy.sh --yes --ref "$OLD") > "$LOGS/old-layout.log" 2>&1
+(cd "$WTOLD" && DEPLOY_REHEARSAL=1 DEPLOY_REHEARSAL_SOURCE="$SOURCE" bash deploy/deploy.sh --yes --ref "$OLD" --with-migrations) > "$LOGS/old-layout.log" 2>&1
 [ "$(ssh rehearsal 'readlink -f /opt/aichat/current')" = "/opt/aichat/releases/$OLD" ] \
   && pass "the release layout runs $OLD (as production did)" || { fail "old layout deploy (see $LOGS/old-layout.log)"; exit 1; }
 # Data and secrets that must survive everything below.

@@ -1,53 +1,45 @@
 # Deploy
 
-> **AI Tutor is released as one application. Frontend and backend are never independently
-> deployed to production.**
-
-A deployment takes **one commit** of `main` with successful CI and ships the frontend and the
-backend built from it, together. Ubuntu 24.04, systemd, Docker for PostgreSQL only.
-How to deploy and roll back: [docs/deployment.md](../docs/deployment.md) and
-[docs/rollback.md](../docs/rollback.md). Host layout: [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+`git push origin main`, then `bun run deploy`: the same commit goes to the production Git
+repository on the host, the production checkout moves to it, and only the parts that changed are
+rebuilt and restarted, then a local smoke check. No pull requests; GitHub CI is advisory.
+Ubuntu 24.04, systemd, Docker for PostgreSQL only. How to deploy and roll back:
+[docs/deployment.md](../docs/deployment.md) and [docs/rollback.md](../docs/rollback.md). Host
+layout: [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
 
 ```
-deploy.sh                          THE deploy command (deploy machine): the verified commit checked out -> the host -> live
-rollback.sh                        roll back frontend + backend together (workstation)
-status.sh                          what production runs, and "INVARIANT OK" or "FAIL" (workstation)
-verify.mjs                         bun run verify: the three CI jobs in a Linux container on git archive of HEAD -> evidence
-verify/                            its container (Dockerfile), services (compose.yml) and CI's commands (run-ci.sh)
-local-gate.mjs                     the deploy gate: passing evidence for this exact commit and tree (tests in tests/)
-ci-gate.mjs                        GitHub CI's verdict on a commit: informational (bun run status), not a gate
-server/bootstrap.sh                on the host, detached: lock, unpack the release, verify it, run release.sh
-server/verify-release.py           every file of a release against its commit (git blob hashes)
-server/release.sh                  on the host: prepare -> migrate -> validate trial copies -> switch
-server/rollback.sh                 on the host: switch back to the previously live release
-server/status.sh                   on the host: pointer, reported releases, processes, integrity
-server/install-units.sh            installs units + the shared PostgreSQL files; never restarts
-server/lib.sh                      shared helpers (checks, switch order, invariant proof, history)
-install.sh                         one-time host preparation (packages, pinned Bun + Node, dirs, units, database)
+deploy.sh                          THE deploy (workstation): this checkout == GitHub main -> production Git -> update.sh
+rollback.sh                        deploy an earlier commit the same way (workstation)
+status.sh                          GitHub main vs production, what each part runs, health; MATCH or MISMATCH (workstation)
+summary.sh                         the SHA lines and MATCH/MISMATCH that deploy, rollback and status end with
+server/update.sh                   on the host, detached, locked: reset the checkout, then only what changed, then smoke
+server/lib.sh                      shared helpers: content keys, health and chain checks, pinned Node/Bun, build limits
+server/status.sh                   on the host: checkout, what each part runs, units, health (read-only)
+server/install-units.sh            installs changed units + the shared PostgreSQL files; never restarts
+install.sh                         one-time host preparation (packages incl. git, pinned Bun + Node, dirs, units, database)
 infra-check.sh                     read-only health report: status.sh + ports, database, backups
 backup.sh                          pg_dump + rotation (nightly, and before every migration); restore steps in its header
 compose/docker-compose.yml         PostgreSQL 16 + pgvector; project/volume names pinned
-systemd/aichat-api.service         API from the release /opt/aichat/current resolves to, 127.0.0.1:4100
-systemd/aichat-web.service         web app from that same release on its pinned Node, 127.0.0.1:3000
-systemd/aichat-postgres.service    the database (from /opt/aichat/shared/postgres, not from releases)
+systemd/aichat-api.service         the API from /opt/aichat/app/backend, 127.0.0.1:4100
+systemd/aichat-web.service         the web app from /opt/aichat/app/frontend/apps/app on its pinned Node, 127.0.0.1:3000
+systemd/aichat-postgres.service    the database (from /opt/aichat/shared/postgres, never part of a deploy)
 systemd/aichat-pg-backup.{service,timer}   nightly backup at 03:15
 systemd/aichat-jobs.{service,timer}         the jobs worker, once a minute; installed, NOT enabled (docs/deployment.md)
 env/{postgres,api,web}.env.example templates for /etc/aichat/*.env (chmod 600, never in git)
 cloudflared/config.yml.template    ingress: the web app hostname only
-rehearsal/                         bun run rehearse: the whole model on a throwaway systemd container
+verify.mjs, verify/                optional: `bun run verify` runs CI's three jobs locally in a Linux container
+ci-gate.mjs                        GitHub CI's verdict on a commit, shown by `bun run status` (advisory)
+rehearsal/                         optional: `bun run rehearse` tries deploy changes on a throwaway systemd container
 ```
 
 Host layout:
 
 ```
-/opt/aichat/releases/<commit>/   one complete release: RELEASE, MANIFEST, CI.json, backend/ (+ .venv),
-                                 frontend/ (+ build), deploy-<id>.log
-/opt/aichat/current              -> releases/<commit>   the ONLY switch; both services run from it
-/opt/aichat/releases/HISTORY     every deploy, migration, failure and rollback
-/opt/aichat/releases/LIVE-STACK  the releases that were live, in order (rollback pops it)
+/opt/aichat/app.git              the production Git repository (deploys push here)
+/opt/aichat/app                  the production checkout: RELEASE, backend/ (+ .venv), frontend/ (+ node_modules,
+                                 .next, .next-prev, .next-cache)
+/opt/aichat/app-state/           what each part runs (content keys), deployed, previous, HISTORY
 /opt/aichat/runtime/             the pinned Node versions (checksum-verified downloads)
-/opt/aichat/shared/postgres/     database compose file + backup script (outside releases)
-/etc/aichat/{api,web,postgres}.env   secrets and settings, shared by all releases
+/opt/aichat/shared/postgres/     database compose file + backup script
+/etc/aichat/{api,web,postgres}.env   secrets and settings, never in git, never touched by a deploy
 ```
-
-There is no command, script or unit that deploys only the frontend or only the backend.
