@@ -267,11 +267,15 @@ DEPLOY_PID=$!
 for _ in $(seq 1 900); do grep -q "3/4 validate" "$LOGS/s10.log" 2>/dev/null && break; sleep 1; done
 # Kill both ends of the connection: the local deploy and the host-side client waiting on the
 # unit (what a dropped SSH session does). The systemd unit itself must carry on.
-kill "$DEPLOY_PID" 2>/dev/null
-ssh rehearsal "pkill -f 'systemd-run --unit=aichat-deploy-${R6:0:12}'; pkill -f 'journalctl -f -n0 -o cat -u aichat-deploy-${R6:0:12}'" || true
+kill_tree() { local child; for child in $(ps -ef | awk -v p="$1" '$3 == p { print $2 }'); do kill_tree "$child"; done; kill "$1" 2>/dev/null || true; }
+kill_tree "$DEPLOY_PID"
+# ([s]ystemd-run, [j]ournalctl: so that pkill -f does not match the remote shell running it.)
+ssh rehearsal "pkill -f '[s]ystemd-run --unit=aichat-deploy-${R6:0:12}'; pkill -f '[j]ournalctl -f -n all -o cat -u aichat-deploy-${R6:0:12}'" || true
 ssh rehearsal "systemctl list-units 'aichat-deploy-*' --no-legend" > "$LOGS/s10-unit.log" 2>&1
-for _ in $(seq 1 600); do [ "$(live)" = "$R6" ] && status_ok_on "$R6" s10 && break; sleep 2; done
-if status_ok_on "$R6" s10; then pass "S10 killed the local deploy mid-way: the host finished it; $(short "$R6") live, invariant holds"; else fail "S10 (see $LOGS/s10.log)"; fi
+# The host finished it: its unit is gone (and released the deploy lock), and the release is live.
+deploying() { [ -n "$(ssh rehearsal "systemctl list-units 'aichat-deploy-*' --state=active --no-legend")" ]; }
+for _ in $(seq 1 600); do ! deploying && [ "$(live)" = "$R6" ] && status_ok_on "$R6" s10 && break; sleep 2; done
+if grep -q "aichat-deploy-${R6:0:12}" "$LOGS/s10-unit.log" && ! deploying && status_ok_on "$R6" s10; then pass "S10 killed the local deploy mid-way: the host finished it; $(short "$R6") live, invariant holds"; else fail "S10 (see $LOGS/s10.log)"; fi
 
 step "S11 the jobs worker"
 ssh rehearsal 'bash -s' > "$LOGS/s11.log" 2>&1 <<'EOF'

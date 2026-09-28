@@ -159,6 +159,8 @@ tar -C "$WORK" -cf - "$SHA.$ID.tar.gz" "$SHA.$ID.sha256" "$SHA.$ID.manifest" "$S
 UNIT="aichat-deploy-${SHA:0:12}-${ID//[^0-9A-Za-z]/}"
 echo "==> deploying in systemd unit $UNIT on $HOST (safe to lose this connection: it keeps going)"
 # The expected live release is checked again on the host, under the deploy lock. The client
-# address ($SSH_CONNECTION, expanded on the host) is recorded in the host's HISTORY.
+# address ($SSH_CONNECTION, expanded on the host) is recorded in the host's HISTORY. The unit's
+# name is unique, so its whole journal is followed (-n all): a unit that stops at once (the lock,
+# the expected live release) still shows its reason here.
 # shellcheck disable=SC2029  # expanded here on purpose
-ssh "$HOST" "journalctl -f -n0 -o cat -u $UNIT & J=\$!; systemd-run --unit=$UNIT --quiet --wait --collect -p Environment=HOME=/root -p Environment=AICHAT_EXPECT_LIVE=${LIVE:-none} -p \"Environment=AICHAT_SSH_CLIENT=\${SSH_CONNECTION// /,}\" bash $UP.bootstrap.sh $SHA $UP ${PASS[*]:-}; rc=\$?; sleep 2; kill \$J 2>/dev/null; exit \$rc"
+ssh "$HOST" "journalctl -f -n all -o cat -u $UNIT & J=\$!; systemd-run --unit=$UNIT --quiet --wait --collect -p Environment=HOME=/root -p Environment=AICHAT_EXPECT_LIVE=${LIVE:-none} -p \"Environment=AICHAT_SSH_CLIENT=\${SSH_CONNECTION// /,}\" bash $UP.bootstrap.sh $SHA $UP ${PASS[*]:-}; rc=\$?; sleep 2; kill \$J 2>/dev/null; exit \$rc"
