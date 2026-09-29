@@ -147,14 +147,17 @@ async def test_embedding_dimension_matches_everywhere(database):
     assert Settings(_env_file=None).embedding_dimensions == EMBEDDING_DIMENSIONS == 1536
     engine = create_async_engine(database)
     async with engine.connect() as conn:
-        column = await conn.scalar(
-            text(
-                "select format_type(atttypid, atttypmod) from pg_attribute "
-                "where attrelid = 'document_chunks'::regclass and attname = 'embedding'"
+        columns = {
+            table: await conn.scalar(
+                text(
+                    "select format_type(atttypid, atttypmod) from pg_attribute "
+                    f"where attrelid = '{table}'::regclass and attname = 'embedding'"
+                )
             )
-        )
+            for table in ("document_chunks", "file_chunks")
+        }
     await engine.dispose()
-    assert column == f"vector({EMBEDDING_DIMENSIONS})"
+    assert columns == {table: f"vector({EMBEDDING_DIMENSIONS})" for table in columns}
 
 
 def test_notifications_and_support_are_reached_only_through_their_public_modules():

@@ -32,6 +32,10 @@ new migration and deploy it. Never downgrade the production database by hand. Ev
 preceded by a backup in `/var/backups/aichat`; restoring one loses everything written since, so it
 is a last resort (header of `deploy/backup.sh`).
 
+Students' files are database rows: a rollback keeps them (older code ignores the tables that hold
+them), and deploying `main` again brings the File Library back. To stop only file processing, use
+the kill switch instead of a rollback (`FILES_ENABLED=false`, [deployment.md](deployment.md#file-library-appfiles)).
+
 ## Automatic protection during a deploy
 
 - **Frontend build fails:** users keep the previous build; nothing is restarted.

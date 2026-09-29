@@ -14,6 +14,10 @@ EmailCode and AuthAttempt support sign-up, reset and throttling.
 Knowledge base (RAG):
 KnowledgeSource (global, or private to owner_user_id) ── Document ── DocumentChunk (pgvector embedding)
 
+User files (app/files): UserFile ─┬─ UserFileBlob   the original bytes, in 1 MiB rows
+                                  └─ FileChunk      extracted text with its embedding (derived data)
+Message ── MessageAttachment ── UserFile   (SET NULL when the file is deleted; the name is kept)
+
 `metadata` JSONB columns absorb per-feature data without schema churn.
 """
 
@@ -25,6 +29,7 @@ from typing import Any
 
 from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
+    BigInteger,
     Boolean,
     CheckConstraint,
     Date,
@@ -642,4 +647,103 @@ class DocumentChunk(Base):
     )
     embedding: Mapped[list[float]] = mapped_column(Vector(EMBEDDING_DIMENSIONS), nullable=False)
     embedding_model: Mapped[str] = mapped_column(String(200), nullable=False)
+    created_at: Mapped[datetime] = _created()
+
+
+# ---- user files (app/files) ----
+FILE_KINDS = ("pdf", "docx", "pptx", "xlsx", "csv", "txt", "md", "image")
+# processing: bytes stored and verified, text not yet usable; ready: the tutor can use it;
+# failed: see error_code; stored: kept, but processing is unavailable right now.
+FILE_STATUSES = ("processing", "ready", "failed", "stored")
+FILE_BLOB_BYTES = 1024 * 1024
+
+
+class UserFile(Base):
+    """One file in a student's File Library: one row per (user, bytes)."""
+
+    __tablename__ = "user_files"
+    __table_args__ = (
+        UniqueConstraint("user_id", "sha256"),
+        CheckConstraint(f"kind in {FILE_KINDS}", name="kind"),
+        CheckConstraint(f"status in {FILE_STATUSES}", name="status"),
+        CheckConstraint("size_bytes > 0", name="size_bytes"),
+        Index("ix_user_files_user_created", "user_id", text("created_at DESC")),
+        Index(
+            "ix_user_files_pending",
+            "status",
+            "updated_at",
+            postgresql_where=text("status IN ('processing', 'stored')"),
+        ),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    filename: Mapped[str] = mapped_column(String(255), nullable=False)
+    kind: Mapped[str] = mapped_column(String(16), nullable=False)
+    size_bytes: Mapped[int] = mapped_column(BigInteger, nullable=False)
+    sha256: Mapped[str] = mapped_column(String(64), nullable=False)
+    status: Mapped[str] = mapped_column(String(16), nullable=False)
+    error_code: Mapped[str | None] = mapped_column(String(40))
+    # Processing claims so far (at most 3); a graceful stop gives its claim back.
+    attempts: Mapped[int] = mapped_column(SmallInteger, nullable=False, server_default=text("0"))
+    # When the latest claim started: the lease while status is processing, and the fairness key.
+    processing_started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    char_count: Mapped[int | None] = mapped_column(Integer)
+    chunk_count: Mapped[int | None] = mapped_column(Integer)
+    created_at: Mapped[datetime] = _created()
+    updated_at: Mapped[datetime] = _created()
+
+
+class UserFileBlob(Base):
+    """The original bytes of a file, in order. Never loaded whole: read and written one row at a time."""
+
+    __tablename__ = "user_file_blobs"
+    __table_args__ = (CheckConstraint(f"octet_length(data) BETWEEN 1 AND {FILE_BLOB_BYTES}", name="data"),)
+
+    file_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("user_files.id", ondelete="CASCADE"), primary_key=True
+    )
+    seq: Mapped[int] = mapped_column(Integer, primary_key=True)
+    data: Mapped[bytes] = mapped_column(LargeBinary, nullable=False)
+
+
+class FileChunk(Base):
+    """A passage of a user file with its embedding. Derived data: excluded from backups, rebuilt on restore.
+
+    No vector index: a turn searches only the few files attached to its conversation, exactly."""
+
+    __tablename__ = "file_chunks"
+    __table_args__ = (UniqueConstraint("file_id", "ordinal"),)
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    file_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("user_files.id", ondelete="CASCADE"), nullable=False
+    )
+    ordinal: Mapped[int] = mapped_column(Integer, nullable=False)
+    content: Mapped[str] = mapped_column(Text, nullable=False)
+    # {"page": n} (PDF), {"slide": n} (PPTX) or {"sheet": name} (XLSX); {} otherwise.
+    metadata_: Mapped[dict[str, Any]] = mapped_column(
+        "metadata", JSONB, nullable=False, server_default=text("'{}'::jsonb")
+    )
+    embedding: Mapped[list[float]] = mapped_column(Vector(EMBEDDING_DIMENSIONS), nullable=False)
+    embedding_model: Mapped[str] = mapped_column(String(200), nullable=False)
+
+
+class MessageAttachment(Base):
+    """A file attached to a user message. The filename is kept when the file is deleted (file_id NULL)."""
+
+    __tablename__ = "message_attachments"
+    __table_args__ = (UniqueConstraint("message_id", "position"), Index("ix_message_attachments_file_id", "file_id"))
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    message_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("messages.id", ondelete="CASCADE"), nullable=False
+    )
+    file_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("user_files.id", ondelete="SET NULL")
+    )
+    filename: Mapped[str] = mapped_column(String(255), nullable=False)
+    position: Mapped[int] = mapped_column(SmallInteger, nullable=False)
     created_at: Mapped[datetime] = _created()

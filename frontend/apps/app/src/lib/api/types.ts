@@ -286,6 +286,9 @@ export type MessageMetadata = {
   finishReason?: string;
 };
 
+/** A file attached to a user message. `fileId` is null once the file was deleted (the name stays). */
+export type MessageAttachment = { fileId: Uuid | null; filename: string };
+
 export type Message = {
   id: Uuid;
   conversationId: Uuid;
@@ -295,15 +298,38 @@ export type Message = {
   status: MessageStatus;
   createdAt: Timestamp;
   metadata?: MessageMetadata;
+  /** User messages only; absent or empty when nothing was attached. */
+  attachments?: MessageAttachment[];
 };
 
 export type MessagePage = { items: Message[]; nextCursor: string | null };
 
 // -------------------------------------------------------------------- chat
 
-export type ChatRequest = { conversationId?: Uuid | null; message: string };
+export type ChatRequest = { conversationId?: Uuid | null; message: string; attachmentIds?: Uuid[] };
 /** The API rejects longer messages (the contract's ChatRequest.message). */
 export const MESSAGE_MAX = CONTRACT.ChatRequest.message.maxLength;
+/** Files one message may attach (the contract's ChatRequest.attachmentIds). */
+export const ATTACHMENTS_MAX = CONTRACT.ChatRequest.attachmentIds.maxItems;
+
+// -------------------------------------------------------------------- files
+
+export type FileKind = (typeof CONTRACT.FileOut.kind.enum)[number];
+/** processing: being read; ready: the tutor can use it; failed: see errorCode; stored: kept, not readable now. */
+export type FileStatus = (typeof CONTRACT.FileOut.status.enum)[number];
+export type LibraryFile = {
+  id: Uuid;
+  filename: string;
+  kind: FileKind;
+  sizeBytes: number;
+  status: FileStatus;
+  errorCode: string | null;
+  retryable: boolean;
+  createdAt: Timestamp;
+  updatedAt: Timestamp;
+};
+export type FileUsage = { usedBytes: number; quotaBytes: number; remainingBytes: number };
+export type FileList = { items: LibraryFile[]; usage: FileUsage };
 
 export type CancelResult = { status: string };
 

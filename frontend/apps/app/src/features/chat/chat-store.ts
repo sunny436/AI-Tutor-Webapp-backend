@@ -33,6 +33,7 @@ import type {
   Conversation,
   FeedbackRating,
   Message,
+  MessageAttachment,
   MessagePage,
   StreamDone,
   StreamFailure,
@@ -317,8 +318,14 @@ export class ChatStore {
 
   // -------------------------------------------------------------- sending
 
-  /** Send a message in a conversation (or a draft, which the server then creates). */
-  async send(key: string, rawText: string): Promise<void> {
+  /**
+   * A send refused before the turn existed gave its text back to the draft; these are the files
+   * it attached (ChatProvider gives them back to the composer too).
+   */
+  onSendRefused?: (key: string, attachments: MessageAttachment[]) => void;
+
+  /** Send a message in a conversation (or a draft, which the server then creates), with ready files. */
+  async send(key: string, rawText: string, attachments: MessageAttachment[] = []): Promise<void> {
     const text = rawText.trim();
     const entry = this.ensureEntry(key);
     if (!text || entry.stream) return;
@@ -337,6 +344,7 @@ export class ChatStore {
       status: "complete",
       createdAt: this.now().toISOString(),
       pending: true,
+      ...(attachments.length ? { attachments } : {}),
     };
     this.messageMap(canonical).set(optimisticId, optimistic);
     this.drafts.set(canonical, "");
@@ -345,8 +353,10 @@ export class ChatStore {
       composerError: null,
     });
 
+    const request: ChatRequest = { conversationId: entry.conversationId, message: text };
+    if (attachments.length) request.attachmentIds = attachments.flatMap((a) => (a.fileId ? [a.fileId] : []));
     await this.runStream(key, optimisticId, text, (handlers, signal) =>
-      this.api.streamChat({ conversationId: entry.conversationId, message: text }, handlers, { signal }),
+      this.api.streamChat(request, handlers, { signal }),
     );
   }
 
@@ -483,7 +493,9 @@ export class ChatStore {
       // saved. Take the optimistic message back and give the text back to the composer.
       const map = this.messageMap(canonical);
       const entry = this.entries.get(canonical);
+      const refused = optimisticId ? map.get(optimisticId)?.attachments : undefined;
       if (optimisticId) map.delete(optimisticId);
+      if (refused?.length) this.onSendRefused?.(canonical, refused);
       this.drafts.set(canonical, this.drafts.get(canonical) || sentText || "");
       this.update(canonical, {
         stream: null,

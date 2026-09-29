@@ -167,7 +167,29 @@ function passThrough(upstream: ReadableStream<Uint8Array>, abort: () => void): R
   });
 }
 
+/**
+ * Uploads larger than a JSON body are buffered whole before they are forwarded (a 25 MB file is
+ * about twice that in memory while it is read), so only this many run at once in this process;
+ * the rest get 503 `busy` straight away, before anything is read.
+ */
+export const UPLOADS_IN_FLIGHT_MAX = 2;
+let uploadsInFlight = 0;
+
 export async function proxyRequest(request: Request, segments: string[], deps: ProxyDeps): Promise<Response> {
+  const upload = matchRoute(request.method.toUpperCase(), `/v1/${segments.join("/")}`)?.spec.upload;
+  if (!upload || upload.maxBytes <= MAX_BODY_BYTES) return forward(request, segments, deps);
+  if (uploadsInFlight >= UPLOADS_IN_FLIGHT_MAX) {
+    return envelope(503, "busy", deps.requestId?.() ?? crypto.randomUUID().replace(/-/g, ""));
+  }
+  uploadsInFlight += 1;
+  try {
+    return await forward(request, segments, deps);
+  } finally {
+    uploadsInFlight -= 1;
+  }
+}
+
+async function forward(request: Request, segments: string[], deps: ProxyDeps): Promise<Response> {
   const requestId = deps.requestId?.() ?? crypto.randomUUID().replace(/-/g, "");
   const method = request.method.toUpperCase();
   const path = `/v1/${segments.join("/")}`;

@@ -14,8 +14,9 @@
 | `aichat-postgres.service` | 127.0.0.1:5432 | PostgreSQL 16 + pgvector (Docker, `/opt/aichat/shared/postgres/docker-compose.yml`; volume `compose_pgdata`); the only datastore; not part of releases |
 | `aichat-api.service` | 127.0.0.1:4100 | FastAPI API from `/opt/aichat/app/backend`; `MemoryMax=900M`; never migrates on start; `GET /health` reports the commit it started from |
 | `aichat-web.service` | 127.0.0.1:3000 | Next.js web app from `/opt/aichat/app/frontend/apps/app` (the `.next` build), on the pinned Node (`.node-version`); reaches the API through `API_BASE_URL`; `GET /api/health` reports its commit (loopback only) |
-| `aichat-pg-backup.timer` | – | nightly `pg_dump` at 03:15 to `/var/backups/aichat`, 30-day retention; the same service runs before every migration |
+| `aichat-pg-backup.timer` | – | nightly `pg_dump` at 03:15 to `/var/backups/aichat` (without `file_chunks`, which is rebuilt), `KEEP_DAYS` retention (7); refuses to dump with less than twice the database's size free; the same service runs before every migration |
 | `aichat-deploy-*` | – | transient units: one deploy or rollback, detached from SSH, one at a time |
+| `aichat-extract-*` | – | transient units started by the API: one student file read in a sandbox (no network, no secrets, 512 MB, 300 s); needs Tesseract (`eng`, `hin`) on the host |
 | `cloudflared` | outbound | publishes **only the web app hostname** (`deploy/cloudflared/config.yml.template`) |
 
 ```

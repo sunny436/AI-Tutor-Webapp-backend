@@ -39,6 +39,9 @@ from app.settings import Settings
 log = get_logger("app.auth")
 
 MAX_PREFERENCES_BYTES = 4096
+# File Library uploads per student (app/files): per AUTH_WINDOW_MINUTES, and per day.
+FILES_UPLOADS_PER_WINDOW = 20
+FILES_UPLOADS_PER_DAY = 30
 
 
 def utcnow() -> datetime:
@@ -66,8 +69,8 @@ class AuthService:
         self.email = email
 
     # ---------------------------------------------------------------- throttling
-    async def _count_attempts(self, scope: str, key: str) -> int:
-        since = utcnow() - timedelta(minutes=self.settings.auth_window_minutes)
+    async def _count_attempts(self, scope: str, key: str, minutes: int | None = None) -> int:
+        since = utcnow() - timedelta(minutes=minutes or self.settings.auth_window_minutes)
         return (
             await self.db.scalar(
                 select(func.count())
@@ -304,6 +307,16 @@ class AuthService:
     async def throttle_avatar(self, user: User) -> None:
         """Counted before the image is decoded, so refused and failed uploads cost an attempt too."""
         await self._throttle("avatar_user", str(user.id), self.settings.avatar_uploads_per_user)
+        await self.db.commit()
+
+    async def throttle_files(self, user: User) -> None:
+        """File Library uploads: FILES_UPLOADS_PER_WINDOW per auth window and FILES_UPLOADS_PER_DAY
+        a day. Counted before the body is read, so refused uploads cost an attempt too (every upload
+        costs embedding calls)."""
+        key = str(user.id)
+        if await self._count_attempts("file_upload_user", key, minutes=24 * 60) >= FILES_UPLOADS_PER_DAY:
+            raise RateLimited("You've reached today's upload limit. Please try again tomorrow.")
+        await self._throttle("file_upload_user", key, FILES_UPLOADS_PER_WINDOW)
         await self.db.commit()
 
     async def set_avatar(self, user: User, avatar: ProcessedAvatar) -> User:

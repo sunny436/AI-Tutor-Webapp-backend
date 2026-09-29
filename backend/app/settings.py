@@ -155,6 +155,16 @@ class Settings(BaseSettings):
     embedding_batch_size: int = 64
     embedding_timeout_s: float = 20.0
 
+    # ---- user files: File Library and chat attachments (app/files) ----
+    # Off = no uploads and no processing; READY attachments keep answering. Text chat never
+    # depends on files, and no files setting can stop the API from starting.
+    files_enabled: bool = True
+    # Where untrusted files are parsed. "systemd": a sandboxed transient unit (no network, no
+    # secrets, own memory limit); "subprocess": a plain child process with an empty environment
+    # (development and tests); "auto": systemd in production, subprocess otherwise. Production
+    # never parses unsandboxed: with anything but systemd there, files are unavailable.
+    files_extractor: Literal["auto", "subprocess", "systemd"] = "auto"
+
     @field_validator("default_timezone")
     @classmethod
     def _known_zone(cls, value: str) -> str:
@@ -171,6 +181,16 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.app_env == "production"
+
+    @property
+    def files_runner(self) -> Literal["subprocess", "systemd"] | None:
+        """How files are parsed, or None when that would be unsafe (production without systemd)."""
+        runner = self.files_extractor
+        if runner == "auto":
+            runner = "systemd" if self.is_production else "subprocess"
+        if self.is_production and runner != "systemd":
+            return None
+        return runner
 
     @staticmethod
     def _items(value: str) -> list[str]:

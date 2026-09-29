@@ -74,10 +74,12 @@ Adding an endpoint means adding it to `ROUTES`. `routes.test.ts` fails unless th
 - **Subscriptions:** the message list subscribes to `order` and each message to its own id, and tokens are batched (~50 ms). A token therefore re-renders only the streaming message, which an E2E test checks with a `MutationObserver`.
 - **Stream ownership:** the store owns streams, not pages, so switching chats never stops a reply.
 - **Rules that must hold:**
-  - send only `{conversationId?, message}` and never send history;
+  - send only `{conversationId?, message, attachmentIds?}` (ids of ready files, omitted when there are none) and never send history;
   - never re-send on a failed or cut-off stream; re-read the conversation instead;
   - Stop means `POST cancel`, then read until `done` (≤3 s), then abort.
 - **Drafts** live in a silent map, so typing doesn't notify subscribers.
+- **Attachments** (`features/files/attachment-store.ts`, also created in `ChatProvider`): a draft's files and their way to ready (one upload at a time, polling while read), so uploads survive navigation. Send waits until every chip is ready; Remove only detaches (deleting is a File Library action). A refused send gives the files back (`onSendRefused`). The File Library (`/library`, `features/files/library-view.tsx`) uploads through the same store and is a standalone sidebar link, not a `NAV_ITEMS` entry.
+- **Dictation** (`features/chat/dictation.ts`, `use-dictation.ts`): the browser's Web Speech API, final results only, appended to the draft, never sent by itself; hidden where the browser has no recognizer. Needs `microphone=(self)` in `next.config.mjs`.
 - **Sidebar:** `features/conversations/conversations-store.ts` backs the sidebar list.
 
 **Reply renderer (`features/markdown/`).** `message-content.tsx` runs react-markdown + GFM + math, with rehype-sanitize **first**, then KaTeX (`trust:false`) and highlight.

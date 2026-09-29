@@ -32,6 +32,17 @@ export type ErrorCode =
   | "unsupported_media_type"
   | "invalid_token"
   | "too_many_open_requests"
+  // the File Library
+  | "storage_quota_exceeded"
+  | "unsupported_file_type"
+  | "file_too_large"
+  | "type_mismatch"
+  | "files_unavailable"
+  | "files_capacity_reached"
+  | "too_many_pending_files"
+  | "too_many_files"
+  | "retry_not_allowed"
+  | "busy"
   // client-side only
   | "network_error"
   | "stream_interrupted"
@@ -97,6 +108,16 @@ const KNOWN = new Set<ErrorCode>([
   "unsupported_media_type",
   "invalid_token",
   "too_many_open_requests",
+  "storage_quota_exceeded",
+  "unsupported_file_type",
+  "file_too_large",
+  "type_mismatch",
+  "files_unavailable",
+  "files_capacity_reached",
+  "too_many_pending_files",
+  "too_many_files",
+  "retry_not_allowed",
+  "busy",
   "network_error",
   "stream_interrupted",
   "interrupted",
@@ -265,6 +286,56 @@ const COPY: Record<ErrorCode, { title: string; message: string; action: Recovery
     title: "Many requests are still open",
     message: "You have a lot of open requests. We'll reply to those first.",
     action: "wait",
+  },
+  storage_quota_exceeded: {
+    title: "Storage full",
+    message: "Free up storage in your File Library to upload another file.",
+    action: "edit",
+  },
+  unsupported_file_type: {
+    title: "File type not supported",
+    message: "Upload a PDF, Word, PowerPoint, Excel, CSV, text or image (PNG, JPEG, WebP) file.",
+    action: "edit",
+  },
+  file_too_large: {
+    title: "File too large",
+    message: "PDF, Word and PowerPoint files can be up to 25 MB; Excel and images 10 MB; text files 2 MB.",
+    action: "edit",
+  },
+  type_mismatch: {
+    title: "This file looks damaged",
+    message: "Its contents don't match its type. Save it again and upload the new copy.",
+    action: "edit",
+  },
+  files_unavailable: {
+    title: "Files are unavailable",
+    message: "Files can't be added right now. Please try again later.",
+    action: "wait",
+  },
+  files_capacity_reached: {
+    title: "File storage is full",
+    message: "Files can't be added right now. Please try again later.",
+    action: "wait",
+  },
+  too_many_pending_files: {
+    title: "Files are still being read",
+    message: "Wait for your other files to finish before adding more.",
+    action: "wait",
+  },
+  too_many_files: {
+    title: "Your library is full",
+    message: "Delete some files from your File Library to add more.",
+    action: "edit",
+  },
+  retry_not_allowed: {
+    title: "Can't try again",
+    message: "This file can't be read. Delete it and upload another copy.",
+    action: "none",
+  },
+  busy: {
+    title: "Busy right now",
+    message: "Too many files are uploading at once. Please try again in a moment.",
+    action: "retry",
   },
   network_error: {
     title: "You're offline",

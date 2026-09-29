@@ -45,7 +45,7 @@ async def chat_stream(
     db: AsyncSession = Depends(get_session),
     chat: ChatService = Depends(get_chat_service),
 ):
-    turn = await chat.prepare_message(db, principal.user, body.conversation_id, body.message)
+    turn = await chat.prepare_message(db, principal.user, body.conversation_id, body.message, body.attachment_ids)
     return _stream(chat, turn, request)
 
 
@@ -56,7 +56,7 @@ async def chat_complete(
     db: AsyncSession = Depends(get_session),
     chat: ChatService = Depends(get_chat_service),
 ):
-    turn = await chat.prepare_message(db, principal.user, body.conversation_id, body.message)
+    turn = await chat.prepare_message(db, principal.user, body.conversation_id, body.message, body.attachment_ids)
     generation = chat.start(turn)
     final, _ = await collect(generation)
     if final.type == "error":
@@ -67,7 +67,7 @@ async def chat_complete(
         )
     return ChatResponse(
         conversation=ConversationOut.model_validate(final.data["conversation"]),
-        user_message=message_out(turn.user_message) if turn.user_message else None,
+        user_message=message_out(turn.user_message, turn.user_attachments) if turn.user_message else None,
         message=MessageOut.model_validate(final.data["message"]),
     )
 

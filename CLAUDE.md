@@ -133,6 +133,13 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
     the seam for tutor features.
   - The embedding dimension is fixed at **1536** in three places, kept in sync by a test.
   - Changing the model or dimension needs a migration plus a re-ingest.
+- **Files** (`app/files`, `docs/rag.md` "Files the student attached"): the File Library, 100 MB per
+  student, bytes in PostgreSQL (`user_file_blobs`). One worker in the API process reads uploads
+  (PostgreSQL leases; it recovers and self-tests after start, in the background); untrusted bytes are
+  parsed only by `python -m app.files.extract` in a sandboxed systemd transient unit (production) and
+  the API process never imports a parser. A turn reads only its conversation's attached, owned, ready
+  files, inside the latest user message. No files setting may stop the API: `/health` says `"files"`.
+  Host check: `backend/scripts/sandbox_probe.py`.
 - **Enforced by `tests/test_architecture_guards.py`:**
   - routers never import `app.rag` or pgvector;
   - `app/chat/*` imports only `app.rag.graph`;

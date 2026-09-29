@@ -46,7 +46,18 @@ forwards an allowlist of routes with the session attached, checks Origin on muta
 unbuffered and aborts upstream when the browser leaves ([frontend-integration.md](frontend-integration.md)). Nothing is stored
 outside PostgreSQL: no local files, no vector store on disk, no authoritative in-memory
 state (the in-process generation registry only speeds up stopping a reply; the database
-flag is authoritative).
+flag is authoritative). Students' uploaded files are PostgreSQL rows too (`user_file_blobs`,
+1 MiB each): deleted with the file or the account by foreign keys, backed up with everything else.
+
+**Files** (`app/files`): an upload is stored and then read by one background worker in the API
+process (a PostgreSQL lease per file, so a restart or deploy loses nothing). Untrusted bytes are
+parsed only by a separate process, `python -m app.files.extract`, which in production is a
+sandboxed systemd transient unit (`aichat-extract-*`: a throwaway user, no network, no secrets,
+read-only files, 512 MB and 300 s); the API process never loads a parser. Its text goes through
+LangChain (`Document` → `RecursiveCharacterTextSplitter.split_documents` → `Embeddings`) into
+`file_chunks` (pgvector, 1536). A chat turn reads only the files attached to its conversation
+(owned, ready), exactly and per file, with the attached passages inside the student's message
+([rag.md](rag.md), "Files the student attached").
 
 ## Data model
 
@@ -112,7 +123,7 @@ resolved before, and only when, a native client is started:
 | The theme is stored in the browser (next-themes) | a preference that does not follow the user | move it to `/v1/me/settings` the next time preferences are worked on |
 | Sign-in throttling counts per IP | carrier NAT puts many phones behind one address | review the limits against real mobile traffic |
 | Logs carry request and user ids, but not the client; no metrics or tracing | web and app failures cannot be told apart | log a client identifier; add metrics once there is more than one client |
-| The only upload is a profile photo, re-encoded to at most 64 KB and kept in PostgreSQL (`user_avatars`) | homework photos and PDFs are larger and many | object storage behind the API, never on one device; the photo is read and written only through `AuthService` |
+| Uploads are the profile photo (≤ 64 KB, `user_avatars`) and File Library files (≤ 100 MB per student, PostgreSQL `user_file_blobs`, under a 3 GB database ceiling) | many students' files outgrow one database's disk | object storage behind the same `/v1/files` API when the ceiling is reached; clients never see where bytes live |
 
 Already client-neutral: bearer tokens returned in the response body; 30-day sliding sessions, one
 per device; email flows by 6-digit code, with no web links; a non-streaming `POST /v1/chat`

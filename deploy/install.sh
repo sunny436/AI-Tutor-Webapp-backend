@@ -24,6 +24,8 @@ log "1/5 packages"
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq
 apt-get install -y -qq curl ca-certificates unzip xz-utils git python3.12 python3.12-venv >/dev/null
+# OCR for students' scanned PDFs and photos (app/files/extract.py), English and Hindi.
+apt-get install -y -qq tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin >/dev/null
 if command -v docker >/dev/null 2>&1; then
   note "docker already installed ($(docker --version)); leaving it untouched"
 else

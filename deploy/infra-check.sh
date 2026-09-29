@@ -39,5 +39,13 @@ echo "database"
 [ -f "$SHARED/postgres/docker-compose.yml" ] && ok "compose file in $SHARED/postgres" || bad "missing $SHARED/postgres/docker-compose.yml"
 latest=$(ls -1t /var/backups/aichat/aichat-*.dump 2>/dev/null | head -1)
 if [ -n "$latest" ] && [ "$(find "$latest" -mtime -2 | wc -l)" -eq 1 ]; then ok "recent backup $latest"; else bad "no backup in the last 2 days"; fi
+free_gb=$(( $(df --output=avail -B1 / | tail -1 | tr -dc '0-9') / 1000000000 ))
+[ "$free_gb" -ge 5 ] && ok "disk: ${free_gb} GB free (uploads stop under 5 GB)" || bad "disk: only ${free_gb} GB free: file uploads are refused and backups may fail"
+
+echo "files (app/files)"
+langs=$(tesseract --list-langs 2>/dev/null | tail -n +2 | tr '\n' ' ')
+case " $langs " in *" eng "*" hin "*|*" hin "*" eng "*) ok "tesseract with eng and hin (OCR)" ;; *) bad "tesseract with eng and hin is missing (apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin)" ;; esac
+files=$(curl -fsS --max-time 5 "$API/health" 2>/dev/null | grep -o '"files":"[a-z]*"' | cut -d'"' -f4)
+[ "$files" = available ] && ok "files available (sandbox self-test passed)" || bad "files ${files:-unknown}: see journalctl -u aichat-api (files self-test)"
 
 exit $fail

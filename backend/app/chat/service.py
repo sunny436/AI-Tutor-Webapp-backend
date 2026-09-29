@@ -6,10 +6,11 @@ load / create conversation (owned)                 load the conversation from Po
 sweep stale `streaming` rows, 409 if one is live   run the LangGraph turn graph (retrieve ->
 per-user quota (usage_events)                        assemble -> generate), push token events
 insert user message + assistant placeholder        stop on cancel (event or DB flag)
+  (+ its attached files, owned and ready)
 commit                                             persist content + status + retrieval summary
 
-The browser only ever sends a conversation id and the new text. History, identity
-and message persistence are owned here, in PostgreSQL. Retrieval and prompt assembly
+The browser only ever sends a conversation id, the new text and the ids of files it attaches.
+History, identity, attachments and message persistence are owned here, in PostgreSQL. Retrieval and prompt assembly
 belong to the graph (app/rag/graph.py); this layer never touches embeddings or pgvector.
 """
 
@@ -18,7 +19,7 @@ from __future__ import annotations
 import asyncio
 import time
 import uuid
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 
 from sqlalchemy import case, func, select, update
@@ -29,9 +30,10 @@ from app.chat.streams import ActiveGenerations, ChatEvent, Generation
 from app.chat.titles import topic_title
 from app.conversations.repository import DEFAULT_TITLE, ConversationRepository
 from app.conversations.router import conversation_out, message_out
-from app.db.models import Conversation, Message, UsageEvent, User
+from app.db.models import Conversation, Message, MessageAttachment, UsageEvent, User
 from app.db.session import Database
 from app.errors import Conflict, NotFound, RateLimited, ValidationFailed
+from app.files import service as files
 from app.learning.context import StudentContext, read_student_context
 from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
@@ -77,6 +79,9 @@ class PreparedTurn:
     assistant_id: uuid.UUID
     config: AssistantConfig
     replaces_message_id: uuid.UUID | None = None
+    # Files this turn may read: the conversation's most recently attached ready files.
+    files: list[dict] = field(default_factory=list)
+    user_attachments: list[MessageAttachment] = field(default_factory=list)
 
     def meta_event(self) -> ChatEvent:
         return ChatEvent(
@@ -84,7 +89,9 @@ class PreparedTurn:
             {
                 "conversationId": str(self.conversation.id),
                 "conversation": conversation_out(self.conversation).model_dump(mode="json", by_alias=True),
-                "userMessage": message_out(self.user_message).model_dump(mode="json", by_alias=True)
+                "userMessage": message_out(self.user_message, self.user_attachments).model_dump(
+                    mode="json", by_alias=True
+                )
                 if self.user_message
                 else None,
                 "assistantMessageId": str(self.assistant_id),
@@ -162,7 +169,12 @@ class ChatService:
         return await read_student_context(session, user.id, progress)
 
     async def prepare_message(
-        self, session: AsyncSession, user: User, conversation_id: uuid.UUID | None, text: str
+        self,
+        session: AsyncSession,
+        user: User,
+        conversation_id: uuid.UUID | None,
+        text: str,
+        attachment_ids: list[uuid.UUID] | None = None,
     ) -> PreparedTurn:
         if len(text) > self.settings.chat_max_message_chars:
             raise ValidationFailed("The message is too long.")
@@ -175,20 +187,29 @@ class ChatService:
             if conversation is None:
                 raise NotFound("Conversation not found.")
         await self._check_turn_allowed(session, user.id, conversation.id)
+        attached = await files.resolve_attachments(session, user.id, list(attachment_ids or []))
 
         # Read before this question is counted: the same as the Settings preview showed.
         student = await self._student(session, user)
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
         await session.flush()
+        await files.add_attachments(session, user_message.id, attached)
         await record_question(session, user.id, user.timezone, self.settings.default_timezone)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
         await session.commit()
         await session.refresh(conversation)
         await session.refresh(user_message)
+        attachments = (await repo.attachments([user_message.id])).get(user_message.id, [])
         return PreparedTurn(
-            user, conversation, user_message, assistant.id, resolve_assistant_config(user, conversation, student)
+            user,
+            conversation,
+            user_message,
+            assistant.id,
+            resolve_assistant_config(user, conversation, student),
+            files=await files.conversation_files(session, conversation.id, user.id),
+            user_attachments=attachments,
         )
 
     async def prepare_regenerate(self, session: AsyncSession, user: User, conversation_id: uuid.UUID) -> PreparedTurn:
@@ -229,6 +250,7 @@ class ChatService:
             assistant.id,
             resolve_assistant_config(user, conversation, student),
             replaces_message_id=last.id,
+            files=await files.conversation_files(session, conversation.id, user.id),
         )
 
     # ----------------------------------------------------------------- generate
@@ -329,6 +351,7 @@ class ChatService:
                 "system_prompt": turn.config.system_prompt,
                 "retrieval": turn.config.retrieval,
                 "generation": options,
+                "files": turn.files,
             }
             events = self.rag_graph.astream(state, stream_mode="custom").__aiter__()
             try:

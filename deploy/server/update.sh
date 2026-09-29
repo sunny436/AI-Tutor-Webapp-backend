@@ -59,12 +59,15 @@ on_failure() {
   printf '%s FAILED %s by %s (ssh %s) after: %s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$SHA" \
     "${AICHAT_OPERATOR:-unknown}" "${AICHAT_SSH_CLIENT:-local}" "${DONE[*]:-nothing}" >> "$HISTORY" 2>/dev/null || true
 }
-trap 'rc=$?; if [ "$rc" != 0 ]; then on_failure; fi; status_line; printf "@@END %s\n" "$rc"' EXIT
+trap 'rc=$?; if [ "${MARKER_OWNED:-0}" = 1 ]; then rm -f /run/aichat-deploying; fi; if [ "$rc" != 0 ]; then on_failure; fi; status_line; printf "@@END %s\n" "$rc"' EXIT
 
 is_commit "$SHA" || die "not a commit: $SHA"
 [ "$(id -u)" -eq 0 ] || die "run as root"
 exec 9>/run/aichat-deploy.lock
 flock -n 9 || die "another deploy is running; nothing was changed"
+# While the checkout and its venv change, the API's file worker makes no new claims
+# (app/files/processing.py DEPLOY_MARKER); removed on exit, whatever happens.
+touch /run/aichat-deploying && MARKER_OWNED=1
 
 # ---------------------------------------------------------------- 1. the checkout
 step "production checkout -> $SHA"

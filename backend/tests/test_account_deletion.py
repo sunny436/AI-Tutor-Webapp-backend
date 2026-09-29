@@ -103,6 +103,18 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
     )
     assert phone.status_code == 200
     assert last_code(app, account["email"])
+    uploaded = await client.post(  # a library file, read into chunks and attached to a message
+        "/v1/files",
+        params={"filename": "notes.txt"},
+        content=b"Notes about the water cycle: evaporation, condensation and precipitation.",
+        headers={**headers, "Content-Type": "application/octet-stream"},
+    )
+    assert uploaded.status_code == 201, uploaded.text
+    assert await app.state.file_worker.run_once()
+    attached = await client.post(
+        "/v1/chat/stream", json={"message": "Explain this", "attachmentIds": [uploaded.json()["id"]]}, headers=headers
+    )
+    assert attached.status_code == 200, attached.text
 
     before = await _rows_referencing(database, user_id, account["email"])
     missing = [name for name, count in before.items() if name != "users" and count == 0]

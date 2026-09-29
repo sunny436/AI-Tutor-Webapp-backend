@@ -180,6 +180,7 @@ export function streamChat(
   const body: ChatRequest = request.conversationId
     ? { conversationId: request.conversationId, message: request.message }
     : { message: request.message };
+  if (request.attachmentIds?.length) body.attachmentIds = request.attachmentIds;
   return openStream("POST /v1/chat/stream", {}, body, handlers, options);
 }
 

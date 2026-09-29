@@ -36,8 +36,8 @@ test("the shell lists every tool, and marks what is not real", async ({ page, ac
   await expect(page.getByRole("navigation", { name: "Learning Hub" }).getByRole("link")).toHaveCount(5); // not the chat itself
   await expect(page.getByRole("banner").getByRole("link", { name: /day learning streak/ })).toBeVisible(); // the real one
   await expect(page.getByRole("button", { name: /Leaderboard/ })).toBeDisabled();
-  await expect(page.getByRole("button", { name: "Attach an image or PDF (coming soon)" })).toBeDisabled();
-  await expect(page.getByRole("button", { name: "Voice input (coming soon)" })).toBeDisabled();
+  // Attach and dictation are real now (not preview): the same, enabled buttons in both modes.
+  await expect(page.getByRole("button", { name: "Attach files" })).toBeEnabled();
   await expect(page.getByText("Preview", { exact: true }).first()).toBeVisible();
   await expectAccessible(page);
   await page.emulateMedia({ colorScheme: "dark" });

@@ -144,3 +144,32 @@ async def test_every_data_endpoint_requires_auth(client, app):
         for body in ({"message": "x"}, {}):
             r = await client.request(method, url, json=body if method == "POST" else None)
             assert r.status_code == 401, (method, url, body, r.status_code)
+
+
+async def test_files_are_per_user(client, app):
+    """Another student's file is a 404 on every route, and cannot be attached to a message."""
+    alice = await register(client, app)
+    bob = await register(client, app)
+    uploaded = await client.post(
+        "/v1/files",
+        params={"filename": "private.txt"},
+        content=b"My private revision notes about the nitrogen cycle and bacteria.",
+        headers={**alice["headers"], "Content-Type": "application/octet-stream"},
+    )
+    assert uploaded.status_code == 201, uploaded.text
+    file_id = uploaded.json()["id"]
+    assert await app.state.file_worker.run_once()
+    b = bob["headers"]
+    for method, url in (
+        ("GET", f"/v1/files/{file_id}"),
+        ("POST", f"/v1/files/{file_id}/retry"),
+        ("DELETE", f"/v1/files/{file_id}"),
+    ):
+        response = await client.request(method, url, headers=b)
+        assert response.status_code == 404, (method, url, response.status_code, response.text)
+    assert (await client.get("/v1/files", headers=b)).json()["items"] == []
+    stolen = await client.post("/v1/chat/stream", json={"message": "hi", "attachmentIds": [file_id]}, headers=b)
+    assert stolen.status_code == 422
+    assert stolen.json()["error"]["fields"] == [{"field": "attachmentIds", "reason": "not_found"}]
+    mine = await client.get(f"/v1/files/{file_id}", headers=alice["headers"])
+    assert mine.status_code == 200 and mine.json()["status"] == "ready"

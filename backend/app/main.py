@@ -29,6 +29,9 @@ from app.conversations.router import router as conversations_router
 from app.db.models import EMBEDDING_DIMENSIONS
 from app.db.session import Database
 from app.errors import install_error_handlers
+from app.files.processing import FileWorker
+from app.files.router import router as files_router
+from app.files.service import MAX_UPLOAD_BYTES
 from app.greetings.refresh import GreetingRefresh
 from app.greetings.router import router as greetings_router
 from app.health import router as health_router
@@ -41,7 +44,7 @@ from app.notifications.router import router as notifications_router
 from app.progress.router import router as progress_router
 from app.rag.embeddings import build_embeddings, embedding_model_id, is_configured
 from app.rag.graph import RagDependencies, build_rag_graph
-from app.rag.retriever import PgVectorRetriever
+from app.rag.retriever import AttachedFiles, PgVectorRetriever
 from app.rag.store import KnowledgeStore
 from app.rag.types import AccessScope, RetrievalOptions
 from app.ratelimit import SlidingWindowLimiter
@@ -77,6 +80,7 @@ def build_rag(settings: Settings, db: Database, llm: LLMProvider, embeddings: Em
             has_knowledge=has_knowledge,
             embeddings_configured=is_configured(embeddings),
             settings=settings,
+            attached_files=AttachedFiles(store, embeddings).load,
         )
     )
     return store, graph
@@ -105,6 +109,13 @@ def create_app(
             settings, app.state.db, app.state.llm, app.state.embeddings
         )
         app.state.chat = ChatService(app.state.db, settings, app.state.rag_graph, app.state.generations)
+        # Files never delay startup or stop chat: the worker recovers and tests its sandbox in the
+        # background, and files stay unavailable until that passes. Tests drive it directly.
+        app.state.file_worker = FileWorker(app.state.db, settings, app.state.embeddings)
+        if settings.app_env == "test":
+            app.state.file_worker.available = app.state.file_worker.configured()
+        else:
+            await app.state.file_worker.start()
         try:
             await app.state.chat.sweep_all_stale()
             ignored = await app.state.knowledge.count_other_model_chunks(embedding_model_id(app.state.embeddings))
@@ -119,6 +130,7 @@ def create_app(
         try:
             yield
         finally:
+            await app.state.file_worker.stop()
             await app.state.greeting_refresh.stop()
             await app.state.generations.shutdown()
             await app.state.db.dispose()
@@ -161,7 +173,7 @@ def create_app(
     app.add_middleware(
         RequestContextMiddleware,
         max_body_bytes=settings.max_body_bytes,
-        body_limits={("PUT", "/v1/me/avatar"): settings.avatar_max_bytes},
+        body_limits={("PUT", "/v1/me/avatar"): settings.avatar_max_bytes, ("POST", "/v1/files"): MAX_UPLOAD_BYTES},
     )
 
     app.include_router(health_router)
@@ -174,4 +186,5 @@ def create_app(
     app.include_router(support_router)
     app.include_router(appearance_router)
     app.include_router(greetings_router)
+    app.include_router(files_router)
     return app

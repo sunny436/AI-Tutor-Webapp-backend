@@ -47,6 +47,9 @@ export const CONTRACT = {
     }
   },
   "ChatRequest": {
+    "attachmentIds": {
+      "maxItems": 5
+    },
     "message": {
       "maxLength": 16000,
       "minLength": 1
@@ -90,6 +93,28 @@ export const CONTRACT = {
       "enum": [
         "up",
         "down"
+      ]
+    }
+  },
+  "FileOut": {
+    "kind": {
+      "enum": [
+        "pdf",
+        "docx",
+        "pptx",
+        "xlsx",
+        "csv",
+        "txt",
+        "md",
+        "image"
+      ]
+    },
+    "status": {
+      "enum": [
+        "processing",
+        "ready",
+        "failed",
+        "stored"
       ]
     }
   },

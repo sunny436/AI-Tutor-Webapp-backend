@@ -219,11 +219,33 @@ All production values live in `/etc/aichat/*.env` (root, mode 600), never in git
 | `api.env` | `LLM_PRIMARY_API_KEY`, `LLM_FALLBACK_API_KEY`, `EMBEDDING_API_KEY` | backend | runtime | **yes** |
 | `api.env` | `APP_ENV`, `APP_NAME`, `EMAIL_*`, `SMTP_HOST/PORT/…`, `OLLASTACK_BASE_URL/MAILBOX_ID`, `LLM_*` names/URLs/models, `RAG_*`, `EMBEDDING_*` (other), `CHAT_*`, `STREAM_*`, `DEFAULT_TIMEZONE`, `AVATAR_MAX_BYTES`, limits | backend | runtime | no |
 | `api.env` | `JOBS_ENABLED`, `NOTIFICATIONS_*`, `PUBLIC_APP_URL`, `SUPPORT_EMAIL` | jobs worker (and the API, for support forwards and links) | read on every worker run | no |
+| `api.env` | `FILES_ENABLED` (default on), `FILES_EXTRACTOR` (`auto`: the systemd sandbox in production) | File Library (below) | runtime | no |
 | `postgres.env` | `POSTGRES_PASSWORD` | database, backup | runtime | **yes** |
 | `postgres.env` | `POSTGRES_USER`, `POSTGRES_DB`, `BACKUP_DIR`, `KEEP_DAYS` | database, backup | runtime | no |
 
 A runtime value takes effect on the next restart of the service; a build-time value
 (`NEXT_PUBLIC_*`) on the next deploy (the frontend is rebuilt when they change).
+
+## File Library (app/files)
+
+- **Needs:** embeddings configured (`EMBEDDING_*`, any OpenAI-compatible API, e.g. OpenRouter; the
+  model must return 1536 dimensions with the `dimensions` parameter) and Tesseract with English and
+  Hindi on the host (`apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin`, in `install.sh`).
+- **After a start** the API's file worker, in the background, kills leftover `aichat-extract-*`
+  units, settles files a previous process left, and runs a self-test through the real sandbox. Files
+  are available only if it passes: `GET /health` → `"files": "available"`; `bun run status` and
+  `infra-check.sh` show it. Otherwise uploads get 503 and chat is unaffected.
+- **Sandbox check on the host:** `cd /opt/aichat/app/backend && .venv/bin/python scripts/sandbox_probe.py`
+  (a PDF, OCR of an image, and that secrets, the tunnel's credentials and the network are out of
+  reach); `systemd-analyze security aichat-extract-<…>` on a running unit.
+- **During a deploy** `update.sh` writes `/run/aichat-deploying`; the worker makes no new claims
+  while it exists (the checkout and venv are changing).
+- **Capacity:** uploads stop (503 `files_capacity_reached`) when the database reaches 3 GB or the
+  disk has less than 5 GB free. `backup.sh` refuses to dump with less than twice the database's
+  size free, and leaves out `file_chunks` (derived data; after a restore, re-queue ready files as
+  its header says). Keep `KEEP_DAYS` at 7: up to ~9 dumps share the database's disk.
+- **Kill switch:** `FILES_ENABLED=false` in `api.env` and `systemctl restart aichat-api`: no uploads
+  and no processing (pending files become `stored`); ready attachments keep working.
 
 ## Jobs worker
 

@@ -46,14 +46,12 @@ const securityHeaders = [
   { key: "Content-Security-Policy", value: contentSecurityPolicy },
   // Do not leak full paths (conversation ids) in the Referer header.
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  // Everything denied. microphone=(self) used to be here and was load-bearing:
-  // voice input called getUserMedia({audio:true}), and denying it broke the mic
-  // with a permissions error that looked nothing like a header problem. Voice is
-  // gone, so the permission goes with it - a page that cannot use a capability
-  // should not be asking the browser for it.
+  // The microphone for this site only (dictation: the browser's own speech recognition,
+  // features/chat/use-dictation.ts); denying it makes recognition fail with "not-allowed",
+  // an error that looks nothing like a header problem. Everything else stays denied.
   {
     key: "Permissions-Policy",
-    value: "microphone=(), camera=(), geolocation=(), interest-cohort=()",
+    value: "microphone=(self), camera=(), geolocation=(), interest-cohort=()",
   },
 ];
 

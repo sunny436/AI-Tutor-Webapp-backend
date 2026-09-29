@@ -69,6 +69,29 @@ const FAQ: readonly { topic: string; items: readonly Faq[] }[] = [
         question: "How do I stop a reply?",
         answer: <>Press Stop while it's writing. Leaving the page or closing the tab stops it too.</>,
       },
+      {
+        question: "Can the tutor read my files?",
+        answer: (
+          <>
+            Yes. Attach a PDF, Word, PowerPoint, Excel, CSV, text file or a photo of printed text with the paperclip, or
+            add it in the {inline("/library", "File Library")}. You can send once a file shows Ready. The tutor then uses
+            the files attached in that chat; from a large file it reads the parts that fit your question. You have 100 MB
+            of storage; deleting a file frees its space. Handwriting, maths written by hand, diagrams and charts are not
+            read. To find what a file says, its text is sent to our AI provider, like your messages.
+          </>
+        ),
+      },
+      {
+        question: "How does dictation work?",
+        answer: (
+          <>
+            Press the microphone, speak, and your words appear in the message box; nothing is sent until you press Send.
+            Speech is turned into text by your browser (Chrome and Edge use Google's service, Safari uses Apple's);{" "}
+            {APP_NAME} never receives or stores your voice. Firefox does not support dictation, so the microphone isn't
+            shown there.
+          </>
+        ),
+      },
     ],
   },
   {

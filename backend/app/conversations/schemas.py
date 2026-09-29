@@ -23,6 +23,11 @@ class ConversationPage(ApiModel):
     next_cursor: str | None
 
 
+class MessageAttachmentOut(ApiModel):
+    file_id: uuid.UUID | None  # None: the file was deleted from the library (its name is kept)
+    filename: str
+
+
 class MessageOut(ApiModel):
     id: uuid.UUID
     conversation_id: uuid.UUID
@@ -31,6 +36,7 @@ class MessageOut(ApiModel):
     status: str
     created_at: datetime
     metadata: dict[str, Any] = Field(default_factory=dict)
+    attachments: list[MessageAttachmentOut] = Field(default_factory=list)  # user messages only
 
 
 class MessagePage(ApiModel):

@@ -70,6 +70,7 @@ function useHeading(pathname: string | null): { title: string; subtitle: string 
   const { items } = useConversations();
   if (pathname === "/help") return { title: "Help", subtitle: "Answers to common questions" };
   if (pathname === "/about") return { title: "About", subtitle: `What ${APP_NAME} is and how it uses your data` };
+  if (pathname === "/library") return { title: "File Library", subtitle: "Files you've added for the tutor to read" };
   const item = navItemFor(pathname);
   if (item?.id === "tutor") {
     // The chat's own name (named after its first answered question), "New chat" until then.

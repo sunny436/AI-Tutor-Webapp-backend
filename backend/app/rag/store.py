@@ -19,7 +19,7 @@ from sqlalchemy import delete, func, literal_column, or_, select, text
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.db.models import Document, DocumentChunk, KnowledgeSource
+from app.db.models import Document, DocumentChunk, FileChunk, KnowledgeSource, UserFile
 from app.db.session import Database
 from app.rag.errors import IngestionError, RetrievalError
 from app.rag.types import AccessScope
@@ -40,6 +40,19 @@ class SearchHit:
     content: str
     metadata: dict[str, Any]
     score: float  # cosine similarity, 1 - cosine distance
+
+
+@dataclass(frozen=True)
+class FileHit:
+    """A passage of a file the student attached (app/files)."""
+
+    file_id: uuid.UUID
+    filename: str
+    chunk_count: int
+    ordinal: int
+    content: str
+    metadata: dict[str, Any]
+    score: float | None  # None when read in order, not searched
 
 
 @dataclass(frozen=True)
@@ -191,6 +204,86 @@ class KnowledgeStore:
                 )
             )
         return results
+
+    # ------------------------------------------------------------ attached files
+    # A turn reads only files attached to its conversation, owned by its student and ready. The
+    # few chunks involved are searched exactly (no vector index), ranked within each file.
+    @staticmethod
+    def _file_query(user_id: uuid.UUID, file_ids: list[uuid.UUID], embedding_model: str, *extra):
+        columns = (
+            FileChunk.file_id,
+            UserFile.filename,
+            UserFile.chunk_count,
+            FileChunk.ordinal,
+            FileChunk.content,
+            FileChunk.metadata_.label("metadata"),
+            *extra,
+        )
+        return (
+            select(*columns)
+            .join(UserFile, UserFile.id == FileChunk.file_id)
+            .where(
+                UserFile.user_id == user_id,
+                UserFile.id.in_(file_ids),
+                UserFile.status == "ready",
+                FileChunk.embedding_model == embedding_model,
+            )
+        )
+
+    async def file_chunks_in_order(
+        self, user_id: uuid.UUID, file_ids: list[uuid.UUID], *, embedding_model: str, per_file_limit: int
+    ) -> list[FileHit]:
+        """The first chunks of each file, in reading order (whole small files, or no query vector)."""
+        if not file_ids:
+            return []
+        statement = (
+            self._file_query(user_id, file_ids, embedding_model)
+            .where(FileChunk.ordinal < per_file_limit)
+            .order_by(FileChunk.file_id, FileChunk.ordinal)
+        )
+        return await self._file_hits(statement, scored=False)
+
+    async def search_files(
+        self,
+        user_id: uuid.UUID,
+        file_ids: list[uuid.UUID],
+        vector: list[float],
+        *,
+        embedding_model: str,
+        per_file_k: int,
+    ) -> list[FileHit]:
+        """The per_file_k closest chunks of each file, exactly: every attached file is represented."""
+        if not file_ids:
+            return []
+        distance = FileChunk.embedding.cosine_distance(vector)
+        ranked = self._file_query(
+            user_id,
+            file_ids,
+            embedding_model,
+            distance.label("distance"),
+            func.row_number().over(partition_by=FileChunk.file_id, order_by=distance).label("rank"),
+        ).cte("ranked")
+        statement = select(ranked).where(ranked.c.rank <= per_file_k).order_by(ranked.c.file_id, ranked.c.ordinal)
+        return await self._file_hits(statement, scored=True)
+
+    async def _file_hits(self, statement, *, scored: bool) -> list[FileHit]:
+        try:
+            async with self.db.sessionmaker() as session:
+                rows = (await session.execute(statement)).all()
+        except Exception as error:  # noqa: BLE001
+            raise RetrievalError("database_unavailable", type(error).__name__) from error
+        return [
+            FileHit(
+                file_id=row.file_id,
+                filename=row.filename,
+                chunk_count=int(row.chunk_count or 0),
+                ordinal=row.ordinal,
+                content=row.content,
+                metadata=dict(row.metadata or {}),
+                score=round(1.0 - float(row.distance), 6) if scored else None,
+            )
+            for row in rows
+        ]
 
     async def count_other_model_chunks(self, embedding_model: str) -> int:
         async with self.db.sessionmaker() as session:

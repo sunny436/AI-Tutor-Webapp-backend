@@ -77,7 +77,8 @@ file ─► parse (.md/.markdown/.txt, UTF-8, ≤ RAG_MAX_DOCUMENT_BYTES, no NUL
 - **Concurrency:** concurrent ingestion of the same `(source, uri)` serialises on the document row
   lock; the last commit wins and chunks of two versions never mix.
 - Deleting: `--delete URI`. Files removed from a directory are not pruned automatically.
-- PDF/DOCX are not supported yet.
+- The knowledge base takes `.md`/`.txt` only. Students' own PDF, Word, PowerPoint, Excel, CSV,
+  text and image files go through the File Library instead (below).
 
 ```sh
 python scripts/ingest_documents.py --source handbook --global docs/handbook/
@@ -185,3 +186,30 @@ Calibrate `RAG_MIN_SCORE` with real embeddings: `python scripts/eval_retrieval.p
 | Verified (tests / local runs) | NOT VERIFIED |
 |---|---|
 | schema, migrations, HNSW-compatible query, filters, access boundary, versioning, atomicity, concurrency, graph wiring, skip/failure paths, cancellation, logging hygiene — with a fake embedder | real OpenAI embeddings (no key configured); real retrieval relevance; `RAG_MIN_SCORE` calibration; performance at scale (≥ 100k chunks); production (untouched) |
+
+## Files the student attached (app/files)
+
+Separate from the knowledge base, and never searched globally: a student's files are only ever
+read in that student's own chats, and only once attached to a message in the conversation.
+
+- **Processing** (`app/files/processing.py`): the sandboxed extractor (`app/files/extract.py`:
+  pypdfium2, python-docx, python-pptx, openpyxl, Tesseract `eng+hin` for scanned pages and photos)
+  returns page, slide or sheet texts; LangChain `Document`s → `RecursiveCharacterTextSplitter`
+  (`RAG_CHUNK_SIZE`/`RAG_CHUNK_OVERLAP`) → the same `Embeddings` → `file_chunks` (vector(1536), no
+  vector index). A file is `ready` only when its text is usable (OCR confidence ≥ 60) and every
+  chunk is stored; otherwise `failed` with a reason.
+- **Scope of a turn** (`conversation_files`): the 5 most recently attached ready files of the
+  conversation (≤ 4,000 chunks), so follow-up questions and regenerations keep using them; a
+  deleted file drops out (its attachment keeps only the name).
+- **Retrieval** (`AttachedFiles` in `app/rag/retriever.py`, `KnowledgeStore.search_files`): files
+  of ≤ 12,000 characters are given whole, in reading order; larger ones are searched exactly, the
+  closest chunks of each file (8 spread over the files, at least 2 each). The question is embedded
+  once; if that fails, reading order is used, so an attached file is never silently ignored.
+  `RAG_ENABLED` and the knowledge base's own skip reasons concern the knowledge base only.
+- **Prompt** (`app/rag/context.py`): the passages go inside the latest user message, in an
+  `<attached_files>` block marked as reference material, not instructions (never a system message;
+  anything in a file that could close the block is neutralised), up to 16,000 characters, labelled
+  `[F1] name (whole file)` or `(excerpts: k of N sections, not the full file)`.
+- **Changing the embedding model**: at startup, ready files embedded with another model become
+  `failed(model_changed)` and are read again on Retry.
+

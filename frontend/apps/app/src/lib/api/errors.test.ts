@@ -16,6 +16,16 @@ const CONTRACT_CODES = [
   "llm_unavailable",
   "llm_timeout",
   "llm_bad_request",
+  "storage_quota_exceeded",
+  "unsupported_file_type",
+  "file_too_large",
+  "type_mismatch",
+  "files_unavailable",
+  "files_capacity_reached",
+  "too_many_pending_files",
+  "too_many_files",
+  "retry_not_allowed",
+  "busy",
 ];
 
 describe("describeError", () => {

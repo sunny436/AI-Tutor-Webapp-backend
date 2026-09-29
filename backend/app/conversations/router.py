@@ -11,6 +11,7 @@ from app.conversations.schemas import (
     ConversationOut,
     ConversationPage,
     CreateConversationRequest,
+    MessageAttachmentOut,
     MessageOut,
     MessagePage,
     RenameConversationRequest,
@@ -26,7 +27,7 @@ def conversation_out(c: Conversation) -> ConversationOut:
     return ConversationOut(id=c.id, title=c.title, created_at=c.created_at, updated_at=c.updated_at)
 
 
-def message_out(m: Message) -> MessageOut:
+def message_out(m: Message, attachments=()) -> MessageOut:
     return MessageOut(
         id=m.id,
         conversation_id=m.conversation_id,
@@ -35,6 +36,7 @@ def message_out(m: Message) -> MessageOut:
         status=m.status,
         created_at=m.created_at,
         metadata=public_metadata(m.metadata_),
+        attachments=[MessageAttachmentOut(file_id=a.file_id, filename=a.filename) for a in attachments],
     )
 
 
@@ -116,4 +118,5 @@ async def list_messages(
     repo = ConversationRepository(db)
     await owned_conversation(repo, principal.user.id, conversation_id)
     rows, older = await repo.messages_page(conversation_id, limit, before)
-    return MessagePage(items=[message_out(m) for m in rows], next_cursor=older)
+    attachments = await repo.attachments([m.id for m in rows if m.role == "user"])
+    return MessagePage(items=[message_out(m, attachments.get(m.id, ())) for m in rows], next_cursor=older)

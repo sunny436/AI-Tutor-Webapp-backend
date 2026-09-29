@@ -36,7 +36,7 @@ from langgraph.graph import END, START, StateGraph
 
 from app.llm.base import ChatMessage, GenerationOptions, LLMProvider
 from app.logging import get_logger
-from app.rag.context import build_llm_messages
+from app.rag.context import FILES_MAX_CONTEXT_CHARS, build_llm_messages
 from app.rag.errors import RagError
 from app.rag.types import AccessScope, RetrievalOptions
 from app.settings import Settings
@@ -55,9 +55,13 @@ class TurnState(TypedDict, total=False):
     system_prompt: str
     retrieval: RetrievalOptions | None
     generation: GenerationOptions
+    # files attached to this conversation that the turn may read (app/files): dicts with
+    # id, filename, char_count, chunk_count; most recently attached first
+    files: list[dict]
     # produced by nodes
     question: str
     documents: list[Document]
+    file_documents: list[Document]
     retrieval_summary: dict
     llm_messages: list[ChatMessage]
     answer: str
@@ -70,6 +74,8 @@ class RagDependencies:
     has_knowledge: Callable[[AccessScope], Awaitable[bool]]
     embeddings_configured: bool
     settings: Settings
+    # (user_id, files, question) -> (documents, summary): passages of the attached files.
+    attached_files: Callable[[uuid.UUID | None, list[dict], str], Awaitable[tuple[list[Document], dict]]] | None = None
 
 
 def build_rag_graph(deps: RagDependencies):
@@ -91,9 +97,46 @@ def build_rag_graph(deps: RagDependencies):
         return {"question": question, "retrieval_summary": summary, "documents": []}
 
     async def retrieve_context(state: TurnState) -> dict:
+        # Attached files are read whether or not the knowledge base is searched: RAG_ENABLED and
+        # the knowledge base's own skip reasons concern the knowledge base only.
+        result = await retrieve_knowledge(state)
+        files = state.get("files") or []
+        if files and deps.attached_files is not None:
+            result["file_documents"], result["retrieval_summary"]["files"] = await retrieve_files(state, files)
+        return result
+
+    async def retrieve_files(state: TurnState, files: list[dict]) -> tuple[list[Document], dict]:
+        started = time.perf_counter()
+        documents: list[Document] = []
+        try:
+            async with asyncio.timeout(settings.rag_retrieval_timeout_s):
+                documents, info = await deps.attached_files(state.get("user_id"), files, state.get("question") or "")
+            info = {"status": "ok" if documents else "empty", **info}
+        except TimeoutError:
+            info = {"status": "failed", "reason": "timeout"}
+        except RagError as error:
+            info = {"status": "failed", "reason": error.code}
+        except Exception as error:  # noqa: BLE001 - retrieval must never fail the turn
+            info = {"status": "failed", "reason": "internal_error"}
+            log.warning("file retrieval crashed", extra={"error_type": type(error).__name__})
+        info["latencyMs"] = int((time.perf_counter() - started) * 1000)
+        log.info(
+            "rag.files",
+            extra={
+                "status": info["status"],
+                "reason": info.get("reason"),
+                "files": len(files),
+                "chunks": len(documents),
+                "mode": info.get("mode"),
+                "total_ms": info["latencyMs"],
+            },
+        )
+        return documents, info
+
+    async def retrieve_knowledge(state: TurnState) -> dict:
         summary = dict(state["retrieval_summary"])
         if summary["status"] == "skipped":
-            return {}
+            return {"retrieval_summary": summary}
         options = state["retrieval"]
         scope = AccessScope(state.get("user_id"))
         started = time.perf_counter()
@@ -143,11 +186,15 @@ def build_rag_graph(deps: RagDependencies):
             state.get("documents") or [],
             max_input_chars=settings.llm_max_input_chars,
             max_context_chars=settings.rag_max_context_chars,
+            attached_files=state.get("files") or [],
+            file_documents=state.get("file_documents") or [],
+            max_file_chars=FILES_MAX_CONTEXT_CHARS,
         )
         summary = {
             **state["retrieval_summary"],
             "sources": prompt.sources,
             "contextChars": prompt.context_chars,
+            "fileChars": prompt.file_chars,
             "promptChars": prompt.prompt_chars,
             "historyKept": prompt.history_kept,
             "historyDropped": prompt.history_dropped,

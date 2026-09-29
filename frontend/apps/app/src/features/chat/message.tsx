@@ -5,6 +5,8 @@ import { cn } from "@v1/ui/utils";
 import { type CSSProperties, memo, useState } from "react";
 
 import { BrandMark } from "@/components/brand/brand-mark";
+import { FileKindIcon } from "@/features/files/attachment-chip";
+import { fileTypeOf } from "@/lib/api/files";
 import { MessageContent } from "@/features/markdown/lazy-message-content";
 import type { ChatMessage } from "./chat-store";
 import { useChatEntry, useChatMessage, useStores } from "./chat-context";
@@ -94,6 +96,23 @@ export function UserMessage({ message }: { message: ChatMessage }) {
           message.pending && "opacity-80",
         )}
       >
+        {message.attachments?.length ? (
+          <ul aria-label="Attached files" className="mb-1.5 flex flex-wrap gap-1.5 whitespace-normal">
+            {message.attachments.map((attachment, index) => (
+              <li
+                key={`${attachment.fileId ?? "deleted"}-${index}`}
+                className="flex max-w-[14rem] items-center gap-1.5 rounded-lg border border-border bg-card px-2 py-1 text-xs"
+              >
+                <FileKindIcon
+                  kind={fileTypeOf(attachment.filename)?.kind ?? null}
+                  className="h-3.5 w-3.5 shrink-0 text-text-secondary"
+                />
+                <span className="truncate font-semibold">{attachment.filename}</span>
+                {attachment.fileId === null && <span className="shrink-0 text-text-secondary">(deleted)</span>}
+              </li>
+            ))}
+          </ul>
+        ) : null}
         {message.content}
         <MessageTime value={message.createdAt} className="text-text-secondary" />
       </div>

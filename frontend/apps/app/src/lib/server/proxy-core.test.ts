@@ -391,6 +391,28 @@ describe("files", () => {
     expect(calls.length).toBe(0);
   });
 
+  test("only two uploads are read at once: a third gets 503 busy, and the slots free up afterwards", async () => {
+    let release: () => void = () => undefined;
+    const gate = new Promise<void>((resolve) => {
+      release = resolve;
+    });
+    const { calls, fetchImpl } = upstream(async () => {
+      await gate;
+      return json(200, {});
+    });
+    const first = run(upload(PHOTO, "image/png"), "/v1/me/avatar", fetchImpl);
+    const second = run(upload(PHOTO, "image/png"), "/v1/me/avatar", fetchImpl);
+    await new Promise((resolve) => setTimeout(resolve, 5));
+    const third = await run(upload(PHOTO, "image/png"), "/v1/me/avatar", fetchImpl);
+    expect(third.status).toBe(503);
+    expect(((await third.json()) as { error: { code: string } }).error.code).toBe("busy");
+    release();
+    expect((await first).status).toBe(200);
+    expect((await second).status).toBe(200);
+    expect((await run(upload(PHOTO, "image/png"), "/v1/me/avatar", fetchImpl)).status).toBe(200);
+    expect(calls.length).toBe(3);
+  });
+
   test("the unsupported type has its own code", async () => {
     const { fetchImpl } = upstream(() => json(200, {}));
     const response = await run(upload(PHOTO, "text/html"), "/v1/me/avatar", fetchImpl);

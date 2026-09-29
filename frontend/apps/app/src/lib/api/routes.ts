@@ -46,6 +46,8 @@ export type RouteSpec = {
 };
 
 export const IMAGE_UPLOAD = { types: ["image/jpeg", "image/png", "image/webp"], maxBytes: 5 * 1024 * 1024 } as const;
+/** File Library uploads: any supported file as raw bytes; the API checks the type by name and content. */
+export const FILE_UPLOAD = { types: ["application/octet-stream"], maxBytes: 25 * 1024 * 1024 } as const;
 
 export const ROUTES = {
   "POST /v1/auth/signup": { auth: false, body: "SignupRequest" },
@@ -101,6 +103,12 @@ export const ROUTES = {
   "POST /v1/messages/{message_id}/cancel": { auth: true },
   "PUT /v1/messages/{message_id}/feedback": { auth: true, body: "FeedbackRequest" },
   "DELETE /v1/messages/{message_id}/feedback": { auth: true },
+
+  "GET /v1/files": { auth: true, query: ["sha256"] },
+  "POST /v1/files": { auth: true, query: ["filename"], upload: FILE_UPLOAD },
+  "GET /v1/files/{file_id}": { auth: true },
+  "POST /v1/files/{file_id}/retry": { auth: true },
+  "DELETE /v1/files/{file_id}": { auth: true },
 } as const satisfies Record<string, RouteSpec>;
 
 export type RouteKey = keyof typeof ROUTES;

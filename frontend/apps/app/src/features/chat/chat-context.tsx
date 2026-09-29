@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { type ReactNode, createContext, useContext, useEffect, useState, useSyncExternalStore } from "react";
 
 import { cancelMessage, clearFeedback, setFeedback, streamChat, streamRegenerate } from "@/lib/api/chat";
+import { findFile, getFile, retryFile, sha256Hex, uploadFile } from "@/lib/api/files";
 import { deleteConversation, listConversations, listMessages, renameConversation } from "@/lib/api/conversations";
 import { retargetAppPath } from "@/features/navigation/app-return";
 import { leaving } from "@/features/navigation/leaving";
@@ -19,14 +20,19 @@ import { FALLBACK_GREETING } from "@/lib/greeting";
 import { onUnauthorized } from "@/lib/api/http";
 import type { ConversationPage } from "@/lib/api/types";
 import { ConversationsStore, type ConversationsState } from "@/features/conversations/conversations-store";
+import { AttachmentStore, type Chip } from "@/features/files/attachment-store";
+import { StorageFullDialog } from "@/features/files/storage-full-dialog";
 import { type ChatEntry, type ChatMessage, ChatStore } from "./chat-store";
 
-type Stores = { chat: ChatStore; conversations: ConversationsStore };
+type Stores = { chat: ChatStore; conversations: ConversationsStore; attachments: AttachmentStore };
 
 const ChatContext = createContext<Stores | null>(null);
 /** This week's study greetings, loaded with the page by the signed-in layout (lib/greeting.ts). */
 const GreetingContext = createContext<readonly string[]>([FALLBACK_GREETING]);
 const FALLBACK_POOL = [FALLBACK_GREETING];
+
+/** Opens the "Storage full" dialog (an upload anywhere can be refused for storage). */
+const StorageFullContext = createContext<() => void>(() => {});
 
 /** How often the sidebar may refetch when the window regains focus. */
 const FOCUS_REFRESH_MS = 30_000;
@@ -41,12 +47,21 @@ export function ChatProvider({
   children: ReactNode;
 }) {
   const router = useRouter();
-  const [stores] = useState<Stores>(() => ({
-    conversations: new ConversationsStore({ listConversations, renameConversation }, initialConversations),
-    chat: new ChatStore({
+  const [storageFull, setStorageFull] = useState(false);
+  const [showStorageFull] = useState(() => () => setStorageFull(true));
+  const [stores] = useState<Stores>(() => {
+    const chat = new ChatStore({
       api: { streamChat, streamRegenerate, cancelMessage, listMessages, setFeedback, clearFeedback, deleteConversation },
-    }),
-  }));
+    });
+    return {
+      conversations: new ConversationsStore({ listConversations, renameConversation }, initialConversations),
+      chat,
+      // Keyed like the chat store: a draft and the conversation it becomes share their files.
+      attachments: new AttachmentStore({ sha256Hex, findFile, uploadFile, getFile, retryFile }, (key) =>
+        chat.resolve(key),
+      ),
+    };
+  });
 
   useEffect(() => {
     const { chat, conversations } = stores;
@@ -67,6 +82,8 @@ export function ChatProvider({
     };
     chat.onConversationUpdated = (conversation) => conversations.upsert(conversation);
     chat.onReplyFinished = () => window.dispatchEvent(new Event(LEARNING_EVENT));
+    chat.onSendRefused = (key, attachments) => stores.attachments.restore(key, attachments);
+    stores.attachments.onStorageFull = () => setStorageFull(true);
 
     // Any API call answered with "your session is gone": stop everything and sign in.
     const offUnauthorized = onUnauthorized(() => {
@@ -85,14 +102,23 @@ export function ChatProvider({
       chat.onConversationCreated = undefined;
       chat.onConversationUpdated = undefined;
       chat.onReplyFinished = undefined;
+      chat.onSendRefused = undefined;
+      stores.attachments.onStorageFull = undefined;
     };
   }, [stores, router, initialConversations]);
 
   return (
     <ChatContext.Provider value={stores}>
-      <GreetingContext.Provider value={greetings}>{children}</GreetingContext.Provider>
+      <StorageFullContext.Provider value={showStorageFull}>
+        <GreetingContext.Provider value={greetings}>{children}</GreetingContext.Provider>
+        <StorageFullDialog open={storageFull} onOpenChange={setStorageFull} />
+      </StorageFullContext.Provider>
     </ChatContext.Provider>
   );
+}
+
+export function useShowStorageFull(): () => void {
+  return useContext(StorageFullContext);
 }
 
 /** The lines a new chat's greeting is picked from: this week's pool, the same for everyone. */
@@ -123,6 +149,16 @@ export function useChatMessage(key: string, messageId: string): ChatMessage | un
     (listener) => chat.subscribeMessage(key, messageId, listener),
     () => chat.getMessage(key, messageId),
     () => chat.getMessage(key, messageId),
+  );
+}
+
+/** The files attached to one chat's unsent message. */
+export function useAttachments(key: string): readonly Chip[] {
+  const { attachments } = useStores();
+  return useSyncExternalStore(
+    (listener) => attachments.subscribe(key, listener),
+    () => attachments.get(key),
+    () => attachments.get(key),
   );
 }
 

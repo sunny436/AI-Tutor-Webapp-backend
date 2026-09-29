@@ -12,7 +12,7 @@ import { PromptDialog } from "@v1/ui/prompt-dialog";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@v1/ui/tooltip";
 import { cn } from "@v1/ui/utils";
-import { ChevronsUpDown, LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2 } from "lucide-react";
+import { ChevronsUpDown, FolderOpen, LogOut, MessageSquare, Pencil, Plus, Search, Settings, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { type ReactElement, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
@@ -192,6 +192,28 @@ export function SidebarContent({
             >
               <Plus aria-hidden className="h-5 w-5" />
               {!collapsed && "Ask New Doubt"}
+            </Link>
+          </RailTip>
+        </div>
+
+        {/* A place of its own, not a Learning Hub item: the files the tutor can read. */}
+        <div className={cn("shrink-0", collapsed ? "flex justify-center px-3 pb-3" : "px-3 pb-3")}>
+          <RailTip label="File Library" collapsed={collapsed}>
+            <Link
+              href="/library"
+              onClick={onNavigate}
+              aria-current={pathname?.startsWith("/library") ? "page" : undefined}
+              aria-label={collapsed ? "File Library" : undefined}
+              className={cn(
+                "focus-ring flex items-center gap-3 rounded-xl text-sm font-semibold transition-colors",
+                collapsed ? "h-11 w-11 justify-center" : "w-full px-3 py-2.5",
+                pathname?.startsWith("/library")
+                  ? "bg-brand-soft text-brand"
+                  : "text-text-secondary hover:bg-surface-2 hover:text-foreground",
+              )}
+            >
+              <FolderOpen aria-hidden className="h-5 w-5 shrink-0" />
+              {!collapsed && "File Library"}
             </Link>
           </RailTip>
         </div>

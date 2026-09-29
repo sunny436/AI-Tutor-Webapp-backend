@@ -25,9 +25,11 @@ def read_release(path: Path = RELEASE_FILE) -> str:
 RELEASE = read_release()  # read once: a running process never changes release
 
 
-@router.get("/health", summary="Liveness: the process is up, and the release it runs")
-async def health() -> dict:
-    return {"status": "ok", "release": RELEASE}
+@router.get("/health", summary="Liveness: the process is up, the release it runs, and whether files work")
+async def health(request: Request) -> dict:
+    worker = getattr(request.app.state, "file_worker", None)
+    files = "available" if worker is not None and worker.available else "unavailable"
+    return {"status": "ok", "release": RELEASE, "files": files}
 
 
 @router.get("/ready", summary="Readiness: the database is reachable")

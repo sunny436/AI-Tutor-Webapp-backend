@@ -44,6 +44,8 @@ grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' "$SECRETS/web.env" 2> /dev/
 public=$(sed -n 's/^NEXT_PUBLIC_SITE_URL=//p' "$SECRETS/web.env" 2> /dev/null)
 if [ -n "$public" ]; then info "public $public/login -> $(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "$public/login" || true) (information: Cloudflare/DNS)"; fi
 jobs_timer=$(systemctl is-enabled aichat-jobs.timer 2> /dev/null); info "jobs worker: aichat-jobs.timer ${jobs_timer:-not installed}"
+files=$(curl -fsS --max-time 5 "http://127.0.0.1:$API_PORT/health" 2> /dev/null | grep -o '"files":"[a-z]*"' | cut -d'"' -f4)
+info "files (File Library): ${files:-unknown}; extractor units running: $(systemctl list-units --no-legend 'aichat-extract-*' 2> /dev/null | wc -l)"
 # No stale or old release serving traffic (the owner's production rule): the legacy Ayurveda API
 # (:4000) and its Convex (3210, 3211, 6791) must not listen.
 stale=$(ss -ltnH 2> /dev/null | awk '{print $4}' | grep -cE ':(4000|3210|3211|6791)$' || true)

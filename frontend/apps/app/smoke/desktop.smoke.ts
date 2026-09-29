@@ -451,6 +451,32 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     await page.setViewportSize({ width: 1280, height: 800 });
   });
 
+  await check("files: a fresh .txt is read to Ready within 60 s, then deleted; the mic is allowed for this site", async () => {
+    await page.goto("/");
+    const origin = new URL(page.url()).origin;
+    const policy = (await page.request.get("/")).headers()["permissions-policy"] ?? "";
+    expect(policy).toContain("microphone=(self)");
+    const text = `AI Tutor production smoke ${Date.now()}: photosynthesis makes food in the leaves of green plants.`;
+    const created = await page.request.post(`/api/v1/files?filename=${encodeURIComponent("smoke-check.txt")}`, {
+      headers: { "Content-Type": "application/octet-stream", Origin: origin },
+      data: Buffer.from(text),
+    });
+    expect(created.status(), await created.text()).toBe(201);
+    const file = (await created.json()) as { id: string };
+    try {
+      await expect
+        .poll(async () => ((await (await page.request.get(`/api/v1/files/${file.id}`)).json()) as { status: string }).status, {
+          timeout: 60_000,
+          intervals: [1000],
+        })
+        .toBe("ready");
+    } finally {
+      const gone = await page.request.delete(`/api/v1/files/${file.id}`, { headers: { Origin: origin } });
+      expect(gone.status()).toBe(204);
+    }
+    return `file ${file.id.slice(0, 8)} ready, then deleted; ${policy}`;
+  });
+
   await check("no uncaught errors in the page", async () => {
     expect(errors).toEqual([]);
   });

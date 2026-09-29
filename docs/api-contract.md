@@ -10,7 +10,8 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
   sign-up/login/verify/reset endpoints.
 - Optional `X-Request-ID` (`[A-Za-z0-9._-]{1,64}`); echoed back, otherwise generated.
 - Request bodies are limited to 64 KB (413 `payload_too_large`), except the profile photo upload
-  (`PUT /v1/me/avatar`: a raw image of at most `AVATAR_MAX_BYTES`, 5 MB by default).
+  (`PUT /v1/me/avatar`: a raw image of at most `AVATAR_MAX_BYTES`, 5 MB by default) and a file
+  upload (`POST /v1/files`: raw bytes of at most 25 MB).
 - Resources owned by another user return **404**, exactly like missing ones.
 - Errors: `{"error": {"code": "...", "message": "...", "requestId": "..."}}`, plus `fields` on 422
   and `current` on 409 `version_conflict`.
@@ -215,7 +216,7 @@ Message: `{id, conversationId, role: user|assistant, content, status, createdAt,
 
 | Method | Path | Body | Response |
 |---|---|---|---|
-| POST | `/v1/chat/stream` | `{conversationId?, message (1-16000)}` | `text/event-stream` (below). No `conversationId` → a new conversation |
+| POST | `/v1/chat/stream` | `{conversationId?, message (1-16000), attachmentIds? (≤ 5 ready files)}` | `text/event-stream` (below). No `conversationId` → a new conversation. A file that is not the student's, or not `ready`: 422 `fields: [{field: "attachmentIds", reason: "not_found" \| "not_ready"}]` |
 | POST | `/v1/chat` | same | 200 `{conversation, userMessage, message}`; LLM errors → 502/504/422 with the error envelope |
 | POST | `/v1/conversations/{id}/regenerate/stream` | – | SSE; the last reply becomes `superseded` and a new one streams |
 | POST | `/v1/messages/{id}/cancel` | – | `{status}` — stops a `streaming` reply (idempotent) |
@@ -246,6 +247,31 @@ data: {"code":"llm_unavailable|llm_timeout|llm_bad_request|service_unavailable|i
 - Stopping: call `POST /v1/messages/{assistantMessageId}/cancel`; the stream then ends with `done`
   whose message has `status: "cancelled"`. Closing the connection also stops the reply (same result).
 - Unknown event types may be added later (e.g. citations) and must be ignored by clients.
+
+## Files (the File Library)
+
+Every student has 100 MB (104,857,600 bytes) for files, counted over every file whatever its state.
+A file is read in the background: `processing` → `ready` (the tutor can use it) or `failed`
+(`errorCode`, and `retryable`); `stored` means it is kept but files cannot be read right now.
+
+| Method | Path | Body | Response |
+|---|---|---|---|
+| GET | `/v1/files?sha256=` | – | `{items: FileOut[] (newest first), usage: {usedBytes, quotaBytes, remainingBytes}}`; with `sha256`, only the file with those bytes (0 or 1): lets a client skip an upload |
+| POST | `/v1/files?filename=` | the file's raw bytes (`application/octet-stream`, ≤ 25 MB) | 201 `FileOut` (stored, being read), or 200 with the file already holding these bytes |
+| GET | `/v1/files/{id}` | – | `FileOut` (poll while `processing`) |
+| POST | `/v1/files/{id}/retry` | – | `FileOut`; 409 `retry_not_allowed` unless it failed for a reason a retry can fix and had fewer than 3 attempts |
+| DELETE | `/v1/files/{id}` | – | 204. Frees its storage; messages keep its name with `fileId: null` |
+
+`FileOut`: `{id, filename, kind: pdf|docx|pptx|xlsx|csv|txt|md|image, sizeBytes, status, errorCode, retryable, createdAt, updatedAt}`.
+Types by extension (the content must match): PDF, DOCX, PPTX (25 MB), XLSX, PNG, JPEG, WebP (10 MB),
+CSV, TXT, MD (2 MB). Upload errors: 415 `unsupported_file_type` / `type_mismatch`, 413
+`file_too_large`, 409 `storage_quota_exceeded` / `too_many_files` (500), 429 `too_many_pending_files`
+(5 being read) / `rate_limited` (20 per 15 min, 30 a day), 503 `files_unavailable` /
+`files_capacity_reached`. `errorCode` of a failed file: `corrupt`, `encrypted`, `no_text`,
+`unreadable_text`, `invalid_encoding`, `too_many_pages`, `too_many_scanned_pages`, `too_many_rows`,
+`content_too_large`, `timeout`, `processing_interrupted` (final); `embedding_failed`,
+`extractor_failed`, `chunk_limit_reached`, `files_capacity_reached`, `model_changed` (retryable).
+A message's `attachments`: `[{fileId | null, filename}]` (user messages).
 
 ## Health
 

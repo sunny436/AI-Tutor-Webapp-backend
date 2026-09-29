@@ -101,7 +101,7 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
   TutorPreviewRequest: [{}, { profile: { grade: "class_9" }, subjects: [{ code: "physics" }], preferences: { pace: "fast" } }],
   DeleteMeRequest: [{ password: "x" }],
   RenameConversationRequest: [{ title: "T" }],
-  ChatRequest: [{ message: "hi" }, { conversationId: ID, message: "hi" }],
+  ChatRequest: [{ message: "hi" }, { conversationId: ID, message: "hi" }, { message: "hi", attachmentIds: [ID] }],
   FeedbackRequest: [{ rating: "up" }],
 };
 

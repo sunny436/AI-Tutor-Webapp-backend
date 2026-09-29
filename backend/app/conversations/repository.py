@@ -13,7 +13,7 @@ from datetime import datetime
 from sqlalchemy import and_, delete, func, or_, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.db.models import Conversation, Message
+from app.db.models import Conversation, Message, MessageAttachment
 from app.errors import ValidationFailed
 
 DEFAULT_TITLE = "New chat"
@@ -95,6 +95,20 @@ class ConversationRepository:
         page = rows[:limit]
         page.reverse()  # oldest first, for display
         return page, older
+
+    async def attachments(self, message_ids: list[uuid.UUID]) -> dict[uuid.UUID, list[MessageAttachment]]:
+        """Files attached to these messages (already scoped by the caller's conversation), in order."""
+        found: dict[uuid.UUID, list[MessageAttachment]] = {}
+        if not message_ids:
+            return found
+        rows = await self.db.scalars(
+            select(MessageAttachment)
+            .where(MessageAttachment.message_id.in_(message_ids))
+            .order_by(MessageAttachment.message_id, MessageAttachment.position)
+        )
+        for row in rows:
+            found.setdefault(row.message_id, []).append(row)
+        return found
 
     async def get_message(self, user_id: uuid.UUID, message_id: uuid.UUID) -> Message | None:
         return await self.db.scalar(

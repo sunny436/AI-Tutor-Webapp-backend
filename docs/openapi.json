@@ -338,6 +338,15 @@
       "ChatRequest": {
         "additionalProperties": false,
         "properties": {
+          "attachmentIds": {
+            "items": {
+              "format": "uuid",
+              "type": "string"
+            },
+            "maxItems": 5,
+            "title": "Attachmentids",
+            "type": "array"
+          },
           "conversationId": {
             "anyOf": [
               {
@@ -590,6 +599,128 @@
           "rating"
         ],
         "title": "FeedbackRequest",
+        "type": "object"
+      },
+      "FileList": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/FileOut"
+            },
+            "title": "Items",
+            "type": "array"
+          },
+          "usage": {
+            "$ref": "#/components/schemas/FileUsage"
+          }
+        },
+        "required": [
+          "items",
+          "usage"
+        ],
+        "title": "FileList",
+        "type": "object"
+      },
+      "FileOut": {
+        "properties": {
+          "createdAt": {
+            "format": "date-time",
+            "title": "Createdat",
+            "type": "string"
+          },
+          "errorCode": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Errorcode"
+          },
+          "filename": {
+            "title": "Filename",
+            "type": "string"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "pdf",
+              "docx",
+              "pptx",
+              "xlsx",
+              "csv",
+              "txt",
+              "md",
+              "image"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "retryable": {
+            "title": "Retryable",
+            "type": "boolean"
+          },
+          "sizeBytes": {
+            "title": "Sizebytes",
+            "type": "integer"
+          },
+          "status": {
+            "enum": [
+              "processing",
+              "ready",
+              "failed",
+              "stored"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "title": "Updatedat",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "filename",
+          "kind",
+          "sizeBytes",
+          "status",
+          "errorCode",
+          "retryable",
+          "createdAt",
+          "updatedAt"
+        ],
+        "title": "FileOut",
+        "type": "object"
+      },
+      "FileUsage": {
+        "properties": {
+          "quotaBytes": {
+            "title": "Quotabytes",
+            "type": "integer"
+          },
+          "remainingBytes": {
+            "title": "Remainingbytes",
+            "type": "integer"
+          },
+          "usedBytes": {
+            "title": "Usedbytes",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "usedBytes",
+          "quotaBytes",
+          "remainingBytes"
+        ],
+        "title": "FileUsage",
         "type": "object"
       },
       "ForgotPasswordRequest": {
@@ -1643,8 +1774,41 @@
         "title": "MarkReadRequest",
         "type": "object"
       },
+      "MessageAttachmentOut": {
+        "properties": {
+          "fileId": {
+            "anyOf": [
+              {
+                "format": "uuid",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fileid"
+          },
+          "filename": {
+            "title": "Filename",
+            "type": "string"
+          }
+        },
+        "required": [
+          "fileId",
+          "filename"
+        ],
+        "title": "MessageAttachmentOut",
+        "type": "object"
+      },
       "MessageOut": {
         "properties": {
+          "attachments": {
+            "items": {
+              "$ref": "#/components/schemas/MessageAttachmentOut"
+            },
+            "title": "Attachments",
+            "type": "array"
+          },
           "content": {
             "title": "Content",
             "type": "string"
@@ -3028,7 +3192,7 @@
             "description": "Successful Response"
           }
         },
-        "summary": "Liveness: the process is up, and the release it runs",
+        "summary": "Liveness: the process is up, the release it runs, and whether files work",
         "tags": [
           "health"
         ]
@@ -3862,6 +4026,243 @@
         "summary": "Replace the last reply with a new one (Server-Sent Events)",
         "tags": [
           "chat"
+        ]
+      }
+    },
+    "/v1/files": {
+      "get": {
+        "operationId": "list_files_v1_files_get",
+        "parameters": [
+          {
+            "description": "Only the file with these bytes, if any",
+            "in": "query",
+            "name": "sha256",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "pattern": "^[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Only the file with these bytes, if any",
+              "title": "Sha256"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileList"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "The File Library, newest first, with storage used",
+        "tags": [
+          "files"
+        ]
+      },
+      "post": {
+        "description": "PDF, DOCX, PPTX (25 MB), XLSX, PNG, JPEG, WebP (10 MB), CSV, TXT, MD (2 MB). Counted\nagainst the 100 MB storage of the student. 201 = stored and queued; 200 = already there.",
+        "operationId": "upload_file_v1_files_post",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filename",
+            "required": true,
+            "schema": {
+              "maxLength": 1000,
+              "minLength": 1,
+              "title": "Filename",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "format": "binary",
+                "type": "string"
+              }
+            }
+          },
+          "required": true,
+          "x-max-bytes": 26214400
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileOut"
+                }
+              }
+            },
+            "description": "The same bytes are already in the library"
+          },
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Upload a file (the raw bytes); it is then read in the background",
+        "tags": [
+          "files"
+        ]
+      }
+    },
+    "/v1/files/{file_id}": {
+      "delete": {
+        "operationId": "delete_file_v1_files__file_id__delete",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "file_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "File Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Delete a file (frees its storage)",
+        "tags": [
+          "files"
+        ]
+      },
+      "get": {
+        "operationId": "get_file_v1_files__file_id__get",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "file_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "File Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "One file and its status",
+        "tags": [
+          "files"
+        ]
+      }
+    },
+    "/v1/files/{file_id}/retry": {
+      "post": {
+        "operationId": "retry_file_v1_files__file_id__retry_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "file_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "File Id",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FileOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Read a failed file again (when that can help)",
+        "tags": [
+          "files"
         ]
       }
     },
