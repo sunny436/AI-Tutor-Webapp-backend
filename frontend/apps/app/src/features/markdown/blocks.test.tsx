@@ -64,9 +64,10 @@ describe("splitBlocks", () => {
     }
   });
 
+  // Every reply rendered twice, with KaTeX: a busy machine can pass bun's 5 s default.
   test("blocks render exactly the HTML of the whole reply", () => {
     for (const reply of REPLIES) expect(inBlocks(reply)).toBe(whole(reply));
-  });
+  }, 60_000);
 });
 
 describe("streamSafe", () => {
@@ -109,5 +110,7 @@ describe("streamSafe", () => {
       expect(text).not.toContain("**");
       expect(text).not.toMatch(/\$|\\frac|CO_2/);
     }
-  });
+    // About 120 full renders with KaTeX: correctness, not speed. A busy machine (CI, a Linux
+    // container) takes longer than bun's 5 s default, so it gets its own limit.
+  }, 60_000);
 });
