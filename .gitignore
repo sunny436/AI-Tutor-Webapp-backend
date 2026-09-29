@@ -14,6 +14,8 @@ __pycache__/
 # Local credential notes (LLM keys, mail tokens): never commit
 ollima.txt
 ollastack.txt
+# The owner's sign-in for the production smoke (bun run smoke)
+dummy_account.txt
 
 # Local leftovers of the retired stack
 node_modules/

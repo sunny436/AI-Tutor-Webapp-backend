@@ -13,6 +13,7 @@
     "build": "bun scripts/run.mjs build",
     "contract": "bun scripts/run.mjs contract",
     "lock:backend": "bun scripts/run.mjs lock:backend",
+    "smoke": "bun scripts/run.mjs smoke",
     "verify": "bun deploy/verify.mjs",
     "deploy": "bash deploy/deploy.sh",
     "rollback": "bash deploy/rollback.sh",

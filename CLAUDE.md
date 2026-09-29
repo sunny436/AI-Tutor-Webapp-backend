@@ -20,7 +20,7 @@ History:
 - The frontend was a separate repository (`sunny436/AI-Tutor-Webapp-frontend`). It was imported with
   its history into `frontend/`, and that repository is no longer used.
 - The backend formerly held an Ayurveda chatbot; that code is only at the tag `ayurveda-baseline`.
-- Remotes: `tutor` is `sunny436/AI-Tutor-Webapp-backend` (PRs go to its `main`); `origin` is the old Ayurveda repo.
+- Remotes: `origin` is `sunny436/AI-Tutor-Webapp` (push `main` there; no PRs); `ayurveda` is the old Ayurveda repo.
 
 ## Architecture guardrail: web-first, not web-only
 
@@ -53,6 +53,7 @@ bun run test          # backend pytest + frontend typecheck + unit tests (incl. 
 bun run test:e2e      # Playwright + axe against an API on :4100 with the fake LLM (starts it from backend/)
 bun run lint | build | contract                        # contract: regenerate docs/openapi.json + frontend check
 git push origin main && bun run deploy   # production: GitHub main -> production, only what changed
+bun run smoke         # after every deploy: the live site as the owner (headed Chrome + emulated phones)
 bun run rollback | status                 # previous commit the same way | GitHub main vs production (MATCH)
 bun run verify        # optional: the three CI jobs on HEAD, in a Linux container (Docker, ~30-35 min)
 bun run lock:backend  # after editing backend/requirements.txt: regenerate the hashed requirements.lock
@@ -187,6 +188,13 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   `releases/` in place. Leftovers kept until the owner approves their removal: `releases/`, the old
   checkouts `/opt/aichat/{backend,frontend}`, `/root/aichat-bundles`, saved units `aichat-*.before-*`,
   the legacy Ayurveda services; don't touch them. Production changes need the owner's explicit approval.
+- **Known hazard until the legacy Ayurveda stack is removed:** its `convex.service` (enabled) runs
+  `docker compose up -d --remove-orphans` in a Compose project that is also named `compose`, the
+  project of the live Postgres. Any start of it (a reboot, `systemctl restart convex`, or starting
+  `convex-backup.service`, which `Requires=` it) removes `compose-postgres-1` as an "orphan"
+  (the data volume survives; recover with `systemctl restart aichat-postgres`). Don't reboot the host
+  or start either unit; after any reboot, check `docker ps` for `compose-postgres-1` first.
+  Removing the legacy stack (archive first) awaits the owner's go-ahead.
 - **Never, by hand:** edit files in `/opt/aichat/app`, run migrations outside a deploy, `git clean`
   there, `docker compose down -v`, or change `API_BASE_URL` in `web.env` (the frontend's default
   `:4000` is the old API on that host).
@@ -214,7 +222,7 @@ Follow this for every implementation task unless the owner explicitly overrides 
 5. **Push.** Only when implementation and QA are clean: commit on `main` and `git push origin main` (`origin` is the owner's GitHub repo). No pull requests, no feature branches for deploying. GitHub CI runs by itself; it is advisory and never waited for.
 6. **Production.**
    - `bun run deploy`: it deploys exactly GitHub `main` (the checkout must equal it) and rebuilds/restarts only what changed.
-   - It must end with `Status: MATCH`; then run a final headed Chrome production smoke and regression test of the affected functionality.
+   - It must end with `Status: MATCH`; then `bun run smoke` (headed Chrome production smoke, desktop + emulated phones; every check PASS) and a headed check of the affected functionality.
    - If anything fails, stop and investigate (or `bun run rollback`); don't declare success.
 7. **Invariant.** GitHub `main` = the production checkout = what the backend and frontend run (`bun run status`: MATCH). Never:
    - deploy a dirty tree or a commit that is not GitHub `main` (rollbacks excepted);

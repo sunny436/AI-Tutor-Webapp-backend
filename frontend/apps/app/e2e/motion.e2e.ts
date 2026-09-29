@@ -77,20 +77,24 @@ test("a dialog scales in place; a menu grows from its trigger; nothing animates 
 
   const row = page.locator("li", { has: page.locator(`a[href="/c/${id}"]`) });
   await row.hover();
-  // The dialog's centre, sampled every frame while it opens: it must not move.
+  // The dialog's centre, sampled every frame for 600 ms from the moment it appears (not from the
+  // click, which a busy machine delivers late): it must not move.
   const centres = page.evaluate(
     () =>
       new Promise<number[][]>((resolve) => {
         const points: number[][] = [];
-        const start = performance.now();
+        const deadline = performance.now() + 10_000;
+        let appeared = 0;
         const sample = () => {
+          const now = performance.now();
           const dialog = document.querySelector('[role="dialog"]');
           if (dialog) {
+            appeared ||= now;
             const box = dialog.getBoundingClientRect();
             points.push([box.left + box.width / 2, box.top + box.height / 2]);
           }
-          if (performance.now() - start < 600) requestAnimationFrame(sample);
-          else resolve(points);
+          if ((appeared && now - appeared >= 600) || now > deadline) resolve(points);
+          else requestAnimationFrame(sample);
         };
         requestAnimationFrame(sample);
       }),
@@ -108,6 +112,15 @@ test("a dialog scales in place; a menu grows from its trigger; nothing animates 
 
   // The bell's menu opens below the bell, aligned to its end: it grows from its top-right.
   await bell(page).click();
+  // Read it once Radix has placed the menu and set its origin. Until then the menu waits off-screen
+  // with the default centre origin, a frame a busy machine can land on.
+  await expect
+    .poll(() =>
+      page
+        .getByRole("menu")
+        .evaluate((menu) => getComputedStyle(menu).getPropertyValue("--radix-dropdown-menu-content-transform-origin").trim()),
+    )
+    .not.toBe("");
   const origin = await page.getByRole("menu").evaluate((menu) => {
     const [x, y] = getComputedStyle(menu).transformOrigin.split(" ").map(Number.parseFloat);
     return { x: x as number, y: y as number, width: menu.getBoundingClientRect().width };

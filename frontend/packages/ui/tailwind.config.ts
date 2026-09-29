@@ -67,7 +67,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // The acting colour (indigo). See globals.css.
+        // The acting colour (slate blue). See globals.css.
         brand: {
           DEFAULT: "hsl(var(--brand))",
           foreground: "hsl(var(--brand-foreground))",

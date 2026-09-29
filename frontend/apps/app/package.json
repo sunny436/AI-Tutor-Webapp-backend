@@ -11,7 +11,8 @@
     "start": "next start -p 3000 -H 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "test": "bun test ./src",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "test:smoke": "playwright test -c playwright.smoke.config.ts"
   },
   "dependencies": {
     "@goujon/react-calendar-heatmap": "1.0.0-beta.1",

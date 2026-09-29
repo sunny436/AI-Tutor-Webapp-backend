@@ -10,6 +10,7 @@
    commit that only changes docs or tests restarts nothing.
 6. A small smoke check confirms the app is alive.
 7. Done. It prints GitHub main, what production runs, and `MATCH`.
+8. You run `bun run smoke`: the live site, checked in a browser as the owner (below).
 
 ```
 commit ─► git push origin main ─► bun run deploy ─► production Git ─► production checkout
@@ -86,6 +87,34 @@ tail /opt/aichat/app-state/HISTORY              # every deploy and rollback: who
 git -C /opt/aichat/app log -1                   # the commit production runs
 bash /opt/aichat/app/deploy/infra-check.sh      # status plus ports, database and backups
 ```
+
+## After every deploy: `bun run smoke`
+
+```sh
+bun run smoke         # the live site as the owner: headed Chrome, then an emulated iPhone and Android
+```
+
+The deploy's own smoke check only proves the services answer on the server. `bun run smoke`
+(`frontend/apps/app/playwright.smoke.config.ts`, checks in `frontend/apps/app/smoke/`) uses the
+public site the way a student does: it signs in once, checks the new chat (the greeting's rendered
+contrast), the sidebar, the composer, menus, the bell, the streak, Settings, a 320px window and
+motion, asks one real question and deletes that chat again, then repeats the layout checks on an
+emulated iPhone (WebKit) and Android phone, and logs out. Every page is also checked in dark, by
+switching the page to dark; the account's own theme is never changed.
+
+- It signs in with `SMOKE_EMAIL` and `SMOKE_PASSWORD`, or the first two lines of
+  `dummy_account.txt` in the repository root (git-ignored). The session it saves while running is
+  deleted when it logs out.
+- It writes as little as it can: the one question (which counts toward today's learning day, as any
+  question does) and a sign-in. Marking notifications read is intercepted; nothing in Settings is
+  saved. With student email on, the sign-in can send the owner a sign-in alert.
+- `SMOKE_HEADLESS=1` hides the browser, `SMOKE_SHOTS=<folder>` saves screenshots there,
+  `SMOKE_BASE_URL` points it elsewhere.
+- Emulated phones are the phones' engines and sizes, not real devices: check a real iPhone and
+  Android phone by hand for anything touch or keyboard specific.
+
+Every check prints PASS or FAIL. Any FAIL means the deploy is not done: find out why, and
+`bun run rollback` if production is impaired.
 
 ## Roll back
 

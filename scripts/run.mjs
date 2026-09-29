@@ -14,6 +14,8 @@
  *   build          frontend production build + backend contract check
  *   contract       regenerate docs/openapi.json and the web app's contract.gen.ts, then test both
  *   lock:backend   regenerate backend/requirements.lock (hashed, Linux + Python 3.12, in Docker)
+ *   smoke          the production smoke after a deploy: the live site as the owner, headed Chrome,
+ *                  desktop + emulated iPhone/Android (frontend/apps/app/playwright.smoke.config.ts)
  *
  * Production has exactly two commands, both for the whole application: `bun run deploy` and
  * `bun run rollback` (plus the read-only `bun run status`). There is no per-component deploy.
@@ -123,6 +125,10 @@ const tasks = {
       () => run("frontend tests", "bun", ["run", "test"], frontend),
       () => run("deploy gate tests", "bun", ["test", "deploy/tests"], root),
     ]);
+  },
+  smoke() {
+    // Extra arguments go to Playwright: bun run smoke -- --project desktop
+    all([() => run("production smoke", "bun", ["run", "test:smoke", ...process.argv.slice(3)], app)]);
   },
   "test:e2e"() {
     needVenv();

@@ -70,10 +70,12 @@ json_field() { python3.12 -c "import json,sys; print(json.loads(sys.stdin.read()
 
 # ------------------------------------------------------------------ content keys
 # What each part of the app is made of, as a short hash of the git objects of its files in the
-# checkout's HEAD (tests excluded). A part is rebuilt or restarted only when its key differs
+# checkout's HEAD (tests excluded: tests/, e2e/, *.test.*, and the production smoke, smoke/ and
+# its playwright.smoke.config.ts). A part is rebuilt or restarted only when its key differs
 # from the key it runs with ($STATE/<part>: "<key> <commit it came from>").
+TEST_FILES='(^|/)(tests|e2e|smoke)/|\.test\.[a-z]+$|/playwright\.smoke\.config\.ts$'
 tree_key() { # <path>...
-  git -C "$APP" ls-tree -r HEAD -- "$@" | grep -vE '(^|/)(tests|e2e)/|\.test\.[a-z]+$' | sha256sum | cut -c1-16
+  git -C "$APP" ls-tree -r HEAD -- "$@" | grep -vE "$TEST_FILES" | sha256sum | cut -c1-16
 }
 key_migrations() { tree_key backend/alembic/versions; }
 key_backend_deps() { tree_key backend/requirements.lock; }
