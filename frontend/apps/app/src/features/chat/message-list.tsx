@@ -106,7 +106,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
 
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
-      <div ref={scrollRef} className="scrollbar-subtle min-h-0 flex-1 overflow-y-auto overscroll-contain">
+      <div ref={scrollRef} className="scrollbar-subtle min-h-0 flex-1 overflow-y-auto overscroll-contain [scrollbar-gutter:stable]">
         <section ref={contentRef} aria-label="Conversation" className="flex min-h-full flex-col">
           {body}
         </section>
