@@ -1,3 +1,6 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+
 import { defineConfig, devices } from "@playwright/test";
 
 import { SESSION } from "./smoke/support";
@@ -15,6 +18,15 @@ import { SESSION } from "./smoke/support";
  * device emulation (WebKit for the iPhone), not real devices.
  */
 const headless = process.env.SMOKE_HEADLESS === "1";
+// The installed Google Chrome when this machine has one; Playwright's own Chromium otherwise.
+const chromeInstalled = [
+  join(process.env.LOCALAPPDATA ?? "", "Google", "Chrome", "Application", "chrome.exe"),
+  join(process.env.PROGRAMFILES ?? "", "Google", "Chrome", "Application", "chrome.exe"),
+  join(process.env["PROGRAMFILES(X86)"] ?? "", "Google", "Chrome", "Application", "chrome.exe"),
+  "/opt/google/chrome/chrome",
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+].some((path) => existsSync(path));
+const channel = chromeInstalled ? "chrome" : undefined;
 
 export default defineConfig({
   testDir: "./smoke",
@@ -35,17 +47,17 @@ export default defineConfig({
     screenshot: "only-on-failure",
   },
   projects: [
-    { name: "sign in", testMatch: /sign-in\.setup\.ts$/, use: { ...devices["Desktop Chrome"], channel: "chrome" }, teardown: "sign out" },
+    { name: "sign in", testMatch: /sign-in\.setup\.ts$/, use: { ...devices["Desktop Chrome"], channel }, teardown: "sign out" },
     // Makes its own contexts from the saved session (which may not exist if signing in failed).
-    { name: "sign out", testMatch: /sign-out\.teardown\.ts$/, use: { ...devices["Desktop Chrome"], channel: "chrome" } },
+    { name: "sign out", testMatch: /sign-out\.teardown\.ts$/, use: { ...devices["Desktop Chrome"], channel } },
     {
       name: "desktop",
       testMatch: /desktop\.smoke\.ts$/,
       dependencies: ["sign in"],
-      use: { ...devices["Desktop Chrome"], channel: "chrome", viewport: { width: 1280, height: 800 }, storageState: SESSION },
+      use: { ...devices["Desktop Chrome"], channel, viewport: { width: 1280, height: 800 }, storageState: SESSION },
     },
     // Independent of "desktop": a failure there must not hide what the phones would show.
     { name: "iphone", testMatch: /phone\.smoke\.ts$/, dependencies: ["sign in"], use: { ...devices["iPhone 14"], storageState: SESSION } },
-    { name: "android", testMatch: /phone\.smoke\.ts$/, dependencies: ["sign in"], use: { ...devices["Pixel 7"], channel: "chrome", storageState: SESSION } },
+    { name: "android", testMatch: /phone\.smoke\.ts$/, dependencies: ["sign in"], use: { ...devices["Pixel 7"], channel, storageState: SESSION } },
   ],
 });

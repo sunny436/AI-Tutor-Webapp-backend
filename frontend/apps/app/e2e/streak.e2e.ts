@@ -43,7 +43,7 @@ async function todayInView(page: Page): Promise<boolean> {
 /** The slogan in the sidebar (or the phone's drawer), measured in Noto Sans: lines, and inside the edge. */
 async function sloganFit(page: Page) {
   await expect
-    .poll(() => page.evaluate(() => [...document.fonts].some((face) => /noto sans/i.test(face.family) && face.status === "loaded")))
+    .poll(() => page.evaluate(() => [...document.fonts].some((face) => /noto ?sans/i.test(face.family) && face.status === "loaded")))
     .toBe(true);
   await page.evaluate(() => document.fonts.ready);
   return page
@@ -187,7 +187,7 @@ test("the look: Noto Sans everywhere, the slogan on one line, and a clean chat",
       document.querySelector("button"),
     ].map((element) => (element ? getComputedStyle(element).fontFamily : "missing")),
   );
-  for (const family of fonts) expect(family).toMatch(/Noto Sans/i);
+  for (const family of fonts) expect(family).toMatch(/noto ?sans/i);
 
   // The reply sits on the page (no card), the student's message is a neutral bubble, one composer box.
   const look = await page.evaluate(() => {
