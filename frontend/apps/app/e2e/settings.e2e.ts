@@ -1,6 +1,12 @@
 /**
  * Settings, end to end: every section saves to the account, survives a reload and shows up in
  * a second browser (another device), and two tabs never overwrite each other unnoticed.
+ *
+ * The learning sections have exactly one test each (Academic Profile, Learning Goals, Learning
+ * Preferences, AI Tutor, Subjects & Study, Progress & Goals, Notifications; Learning & Streak is
+ * in streak.e2e.ts). One test is one section's whole workflow, not one assertion: it keeps every
+ * check of the tests it replaced, and ends where the setting takes effect: what the tutor is told
+ * (`tutorKnows`), or, for Notifications, that nothing of it reaches the tutor.
  */
 
 import { type Browser, type Page, expect } from "@playwright/test";
@@ -15,6 +21,7 @@ import {
   openSettingsFromSidebar,
   sendAndWait,
   test,
+  tutorKnows,
   uniqueEmail,
 } from "./support";
 
@@ -214,7 +221,12 @@ test("appearance: applies at once, persists, and follows the account to another 
   await other.context().close();
 });
 
-test("notifications: honest about delivery and time zone, and saved", async ({ page, account: _ }) => {
+test("notifications: honest about delivery, saved here and on another device, and never told to the tutor", async ({
+  page,
+  browser,
+  account,
+}) => {
+  const saved = async (target: Page) => (await target.request.get(`${APP_URL}/api/v1/notifications/preferences`)).json();
   await page.goto("/settings/notifications");
   await expect(page.getByText("PadhAI isn't sending notification emails yet.", { exact: false })).toBeVisible();
   await expect(page.getByRole("link", { name: "Set your time zone" })).toBeVisible();
@@ -228,6 +240,25 @@ test("notifications: honest about delivery and time zone, and saved", async ({ p
   await page.reload();
   await expect(page.getByRole("switch", { name: "Weekly summary" })).toHaveAttribute("aria-checked", "true");
   await expect(page.getByRole("switch", { name: "Sign-in alerts" })).toHaveAttribute("aria-checked", "true");
+
+  // Reminders in the app: off here, still off on another device, and back on from there.
+  const inApp = (target: Page) => target.getByRole("switch", { name: "Reminders in the app" });
+  await expect(inApp(page)).toBeChecked();
+  await inApp(page).click();
+  await expect.poll(async () => (await saved(page)).inAppReminders).toBe(false);
+  await page.reload();
+  await expect(inApp(page)).not.toBeChecked();
+  const other = await secondDevice(browser, account);
+  await other.goto("/settings/notifications");
+  await expect(inApp(other)).not.toBeChecked();
+  await inApp(other).click();
+  await expect.poll(async () => (await saved(other)).inAppReminders).toBe(true);
+  await other.context().close();
+  await page.reload();
+  await expect(inApp(page)).toBeChecked();
+
+  // Delivery settings, not teaching: nothing of them reaches the tutor.
+  expect(await tutorKnows(page)).not.toMatch(/reminder|summary|alert|notification/i);
 });
 
 // ------------------------------------------------------------------ learning
@@ -250,13 +281,26 @@ test("academic profile: catalog choices, a state only with a state board, saved"
   await page.reload();
   await expect(page.getByLabel("Class")).toHaveValue("class_10");
   await expect(page.getByLabel("State", { exact: true })).toHaveValue("maharashtra");
+  const told = await tutorKnows(page);
+  for (const line of [
+    "Class: Class 10",
+    "Board: State board (Maharashtra)",
+    "Medium of instruction at school: Marathi",
+    "Academic year: 2026–27",
+  ]) {
+    expect(told).toContain(line);
+  }
 
+  await page.goto("/settings/academic");
   await page.getByLabel("Board").selectOption({ label: "CBSE" });
   await expect(page.getByLabel("State", { exact: true })).toHaveCount(0);
   await page.getByRole("button", { name: "Save", exact: true }).click();
   await expect(page.getByText("Academic profile saved.")).toBeVisible();
   const profile = await apiJson(page, "/v1/learning/profile");
   expect([profile.board, profile.boardState, profile.medium]).toEqual(["cbse", null, "marathi"]);
+  const now = await tutorKnows(page);
+  expect(now).toContain("Board: CBSE");
+  expect(now).not.toContain("Maharashtra");
 });
 
 test("learning goals: topics, study time and goals, saved", async ({ page, account: _ }) => {
@@ -290,21 +334,50 @@ test("learning goals: topics, study time and goals, saved", async ({ page, accou
     45,
     "18:30",
   ]);
+  const told = await tutorKnows(page);
+  for (const line of [
+    "Main goal: preparing for a competitive exam",
+    'Preparing for: "NEET"',
+    "Target score: 90%",
+    'Topics they find difficult: "Optics"',
+    'Short-term goal: "Finish biology revision"',
+    "Study time: aims for 45 min a day and 300 min a week; usually studies around 6:30 pm",
+  ]) {
+    expect(told).toContain(line);
+  }
 });
 
-test("preferences save as they change, and the preview shows what the tutor is told", async ({ page, account: _ }) => {
+test("learning preferences: saved as they change, in the preview, and told to the tutor", async ({ page, account: _ }) => {
+  const language = page.getByRole("group", { name: "Reply language" });
   await page.goto("/settings/learning");
-  await page.getByRole("group", { name: "Reply language" }).getByRole("radio", { name: "Hindi" }).check();
+  await language.getByRole("radio", { name: "Hindi" }).check();
   await expect.poll(async () => (await apiJson(page, "/v1/learning/preferences")).language).toBe("hindi");
 
   await page.goto("/settings/tutor");
-  await expect(page.getByRole("heading", { name: "What your tutor is told" })).toBeVisible();
   await expect(page.getByText("Reply in Hindi", { exact: false })).toBeVisible();
-  await page.getByRole("group", { name: "How it answers problems" }).getByRole("radio", { name: "Hint first" }).check();
+  expect(await tutorKnows(page)).toContain("Reply in Hindi");
+
+  await page.goto("/settings/learning");
+  await language.getByRole("radio", { name: "No preference" }).check();
+  await expect.poll(async () => (await apiJson(page, "/v1/learning/preferences")).language).toBe("auto");
+  expect(await tutorKnows(page)).not.toContain("Reply in Hindi");
+});
+
+test("AI tutor: choices save, the preview shows what the tutor is told, and the chat is told the same", async ({
+  page,
+  account: _,
+}) => {
+  const answers = page.getByRole("group", { name: "How it answers problems" });
+  await page.goto("/settings/tutor");
+  await expect(page.getByRole("heading", { name: "What your tutor is told" })).toBeVisible();
+  await answers.getByRole("radio", { name: "Hint first" }).check();
   await expect(page.getByText("start with a hint", { exact: false })).toBeVisible();
   await expectAccessible(page);
+  await expect.poll(async () => (await apiJson(page, "/v1/learning/preferences")).answerMode).toBe("hints_first");
+  expect(await tutorKnows(page)).toContain("start with a hint");
 
-  await page.getByRole("group", { name: "How it answers problems" }).getByRole("radio", { name: "No preference" }).check();
+  await page.goto("/settings/tutor");
+  await answers.getByRole("radio", { name: "No preference" }).check();
   await expect(page.getByText("start with a hint", { exact: false })).toHaveCount(0);
 });
 
@@ -334,7 +407,9 @@ test("subjects: added, reordered from the keyboard, flagged and saved", async ({
   const saved = await apiJson(page, "/v1/learning/subjects");
   expect(saved.items.map((item: { code: string }) => item.code)).toEqual(["chemistry", "mathematics", "physics"]);
   expect(saved.items[2].isPriority).toBe(true);
+  expect(await tutorKnows(page)).toContain("Subjects: Chemistry, Mathematics, Physics (a priority)");
 
+  await page.goto("/settings/subjects");
   await page.getByRole("button", { name: "Remove Mathematics" }).click();
   await page.getByRole("button", { name: "Save", exact: true }).click();
   await expect(page.getByText("Subjects saved.")).toBeVisible();
@@ -348,7 +423,10 @@ const headerStreak = (page: Page) => page.getByRole("banner").getByRole("link", 
 const stat = (page: Page, label: string) =>
   page.locator("dt", { hasText: new RegExp(`^${label}$`) }).first().locator("xpath=following-sibling::dd");
 
-test("progress: a question and an active minute count today, and start a streak", async ({ page, account: _ }) => {
+test("progress: a question and an active minute count today, and the tutor is told how the student is doing", async ({
+  page,
+  account: _,
+}) => {
   await page.goto("/");
   await sendAndWait(page, "What is photosynthesis?");
   const report = await page.request.post(`${APP_URL}/api/v1/progress/activity`, { headers: SAME_ORIGIN });
@@ -385,20 +463,11 @@ test("progress: a question and an active minute count today, and start a streak"
   await expectAccessible(page);
   await page.emulateMedia({ colorScheme: "light" });
 
-  // The streak lives in Learning & Streak, and the header's badge can be turned off there.
-  await page.getByRole("navigation", { name: "Settings sections" }).getByRole("link", { name: "Learning & Streak" }).click();
-  await expect(page).toHaveURL("/settings/streak");
-  await expect(page.locator("dt", { hasText: /^Current streak$/ }).locator("xpath=following-sibling::dd")).toHaveText("1 day");
-  await page.getByRole("switch", { name: "Show my streak in the header" }).click();
-  await expect
-    .poll(async () => (await (await page.request.get(`${APP_URL}/api/v1/me/appearance`)).json()).showStreak)
-    .toBe(false);
-  await page.reload();
-  await expect(page.getByRole("switch", { name: "Show my streak in the header" })).not.toBeChecked();
   await page.getByRole("link", { name: "Close settings" }).click();
   await expect(page).toHaveURL(chat);
   await expect(page.getByRole("navigation", { name: "Recent Doubts" })).toBeVisible();
-  await expect(headerStreak(page)).toHaveCount(0);
+  // Before this question is counted: the one real question, and the minute (or more) credited.
+  expect(await tutorKnows(page)).toMatch(/Learning so far: a 1-day learning streak; today \d+ min active and 1 question/);
 });
 
 test("the heartbeat reports a minute while PadhAI is used, and stops when it isn't", async ({ page, account: _ }) => {

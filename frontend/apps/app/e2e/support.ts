@@ -185,6 +185,19 @@ export async function sendAndWait(page: Page, text: string): Promise<void> {
   await waitForIdle(page);
 }
 
+/**
+ * What the tutor was told about this student, as the model received it: the fake LLM answers
+ * this question with the part of its system prompt the student's settings and progress added
+ * (backend/app/llm/fake.py), or "No student instructions.". Asked in a new chat; the question
+ * itself counts as one (a new message's prompt is read before it is counted).
+ */
+export async function tutorKnows(page: Page): Promise<string> {
+  await page.goto("/");
+  await waitForHydration(page);
+  await sendAndWait(page, "[[e2e: what were you told?]]");
+  return (await lastReply(page).innerText()).replace(/\s+/g, " ");
+}
+
 /** The conversation id in the URL. */
 export function conversationIdOf(page: Page): string {
   const id = /\/c\/([0-9a-f-]{36})$/.exec(new URL(page.url()).pathname)?.[1];

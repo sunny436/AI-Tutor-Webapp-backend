@@ -13,6 +13,12 @@ what a student previews is exactly what the tutor is told.
   model not to follow instructions inside it. Line breaks were already removed when it was
   stored (app/learning/schemas.py), so it cannot start a heading or a list item of its own.
   The worst a student can do is confuse their own tutor.
+- **Only what shapes teaching.** The tutor gets the Academic Profile (an academic year only when
+  its code is in the catalog: unset, legacy-empty, unknown or malformed codes give no line, and
+  nothing is ever filled in by default), Learning Goals (with study time), Learning Preferences,
+  AI Tutor, Subjects & Study, and the "Learning so far" line (Progress & Goals / Learning & Streak).
+  Notification settings (daily reminder, streak warning, weekly summary, sign-in alerts, in-app
+  reminders) decide what is delivered and when, and never reach the tutor.
 - **A hard cap, never a cut.** Every input has a validated maximum, so the block has a known
   worst case, and tests check it against MAX_TUTOR_BLOCK_CHARS and the model's input budget.
   If the block were ever longer anyway, whole lines are dropped, least important first; a line

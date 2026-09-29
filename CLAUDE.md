@@ -115,8 +115,10 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   learning context, which `app/learning/tutor.py` turns into instructions after the frozen system
   prompt: every learning setting, including academic year and study time, plus a "Learning so far"
   line (streak and today's activity, `app.progress.learning.tutor_progress`) once they have learnt;
-  it is read before the question is counted, so the Settings preview shows exactly this. Nothing set
-  and nothing learnt means no instructions). *Generate* runs
+  it is read before the question is counted, so the Settings preview shows exactly this; a
+  regenerated answer leaves its own question out of today's count. Nothing set and nothing learnt
+  means no instructions. Notification settings (daily reminder, streak warning, weekly summary,
+  sign-in alerts, in-app reminders) decide delivery only and never reach the tutor). *Generate* runs
   as an independent asyncio task registered in `app/chat/streams.py`. It runs the LangGraph graph
   `receive_query → retrieve_context → assemble_context → generate_answer` (`app/rag/graph.py`), emits
   SSE `meta`/`token`/`done`/`error`, and persists the result. Stop and disconnect cancel the task.
@@ -188,21 +190,18 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **The database is outside the checkout:** `/opt/aichat/shared/postgres`. Its Compose project and
   volume names are pinned (`compose` / `compose_pgdata`); moving or renaming them would start an
   empty database. Migrations must be backward compatible (a rollback runs older code on the newer schema).
-- **Status:** the first deploy of this model moves production from the release layout
-  (`/opt/aichat/current` -> `releases/<commit>`, since 2026-09-25) to `/opt/aichat/app`, and leaves
-  `releases/` in place. Leftovers kept until the owner approves their removal: `releases/`, the old
-  checkouts `/opt/aichat/{backend,frontend}`, `/root/aichat-bundles`, saved units `aichat-*.before-*`,
-  the legacy Ayurveda services; don't touch them. Production changes need the owner's explicit approval.
-- **Known hazard until the legacy Ayurveda stack is removed:** its `convex.service` (enabled) runs
-  `docker compose up -d --remove-orphans` in a Compose project that is also named `compose`, the
-  project of the live Postgres. Any start of it (a reboot, `systemctl restart convex`, or starting
-  `convex-backup.service`, which `Requires=` it) removes `compose-postgres-1` as an "orphan"
-  (the data volume survives; recover with `systemctl restart aichat-postgres`). Don't reboot the host
-  or start either unit; after any reboot, check `docker ps` for `compose-postgres-1` first.
-  Removing the legacy stack (archive first) awaits the owner's go-ahead.
+- **Status:** production runs only the checkout model (`/opt/aichat/app`). The owner removed
+  every leftover on 2026-09-29 (11:46-12:05 UTC, by hand): the legacy Ayurveda services and Convex
+  (units, containers, the `compose_data` volume, images), `/opt/ayurveda`, `/etc/ayurveda`,
+  `/opt/aichat/{releases,current,backend,frontend}`, `/root/aichat-bundles` and the `aichat-*.before-*`
+  units. Before it: a `pg_dump` (`/var/backups/aichat/aichat-2026-09-29-114626.dump`). The Ayurveda
+  archive (32 Convex exports, `/etc/ayurveda` with its secrets, the vector-store backups, the unit
+  files) is kept OFF the host, on the owner's PC: `Desktop\ayurveda-archive-2026-09-29.tgz`; the
+  Ayurveda code is the `ayurveda` remote and the tag `ayurveda-baseline`. Docker now runs only
+  `compose-postgres-1` (volume `compose_pgdata`). Production changes need the owner's explicit approval.
 - **Never, by hand:** edit files in `/opt/aichat/app`, run migrations outside a deploy, `git clean`
-  there, `docker compose down -v`, or change `API_BASE_URL` in `web.env` (the frontend's default
-  `:4000` is the old API on that host).
+  there, `docker compose down -v`, or change `API_BASE_URL` in `web.env` (production's API is
+  `:4100`; the frontend's built-in default `:4000` is the development port).
 - **Changing the deploy scripts:** try it with `bun run rehearse` (optional, local); the host runs
   the deploying checkout's `deploy/` scripts, so a fix takes effect with the next deploy.
 

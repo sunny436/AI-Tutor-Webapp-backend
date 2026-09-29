@@ -1,9 +1,12 @@
 # Production migration runbook (historical record)
 
 > **Status: executed 2026-09-24.** `ayur.namahos.com` serves this application. Phases A and B below
-> were run then, from two repositories and two checkouts. Phase C (retiring the legacy stack) is
-> still pending. Deployment has since moved to one repository and release-based deploys: see
-> [deployment.md](deployment.md). The first release deploy on this host is described there.
+> were run then, from two repositories and two checkouts. Phase C (retiring the legacy stack) was
+> done by the owner by hand on 2026-09-29: the legacy services, Convex and its volume are gone,
+> after a `pg_dump`. The archive (32 Convex exports, `/etc/ayurveda`, the vector-store backups)
+> is kept off the host, and the legacy rollback below is therefore no longer possible (see
+> CLAUDE.md "Status"). Deployment has since moved to one repository and release-based deploys:
+> see [deployment.md](deployment.md).
 
 ## What production runs today (legacy — historical record)
 

@@ -19,7 +19,7 @@ import asyncio
 import time
 import uuid
 from dataclasses import dataclass
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 from sqlalchemy import case, func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -153,9 +153,12 @@ class ChatService:
         )
         return assistant
 
-    async def _student(self, session: AsyncSession, user: User) -> StudentContext:
-        """What the tutor is told about this student: their settings and how they are doing."""
-        progress = await tutor_progress(session, user.id, user.timezone, self.settings.default_timezone, now())
+    async def _student(self, session: AsyncSession, user: User, asked_at: datetime | None = None) -> StudentContext:
+        """What the tutor is told about this student: their settings and how they are doing, as
+        before the question being answered (`asked_at` for a regenerated answer)."""
+        progress = await tutor_progress(
+            session, user.id, user.timezone, self.settings.default_timezone, now(), asked_at
+        )
         return await read_student_context(session, user.id, progress)
 
     async def prepare_message(
@@ -203,7 +206,18 @@ class ChatService:
         if last is None or last.role != "assistant":
             raise Conflict("There is no reply to regenerate.")
         last.status = "superseded"
-        student = await self._student(session, user)
+        # The question this answer is for: left out of today's count, as when it was first sent.
+        asked_at = await session.scalar(
+            select(Message.created_at)
+            .where(
+                Message.conversation_id == conversation.id,
+                Message.role == "user",
+                Message.created_at <= last.created_at,
+            )
+            .order_by(Message.created_at.desc(), Message.id.desc())
+            .limit(1)
+        )
+        student = await self._student(session, user, asked_at)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
         await session.commit()

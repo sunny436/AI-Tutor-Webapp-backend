@@ -261,10 +261,51 @@ journalctl -u aichat-jobs -o cat -n 5                     # "jobs run finished",
 # 4. NOTIFICATIONS_MODE=on
 ```
 
+**Delivery guarantees** (app/notifications/sender.py, app/jobs/runner.py; each has a test in
+`backend/tests/test_jobs.py`):
+- **One run at a time.** The timer starts a oneshot service, and each run takes a PostgreSQL
+  advisory lock; rows are claimed `FOR UPDATE SKIP LOCKED`. The API never runs jobs itself.
+- **One email or bell item per logical event.** Unique dedup keys: `<user>:<kind>:<period>` for
+  reminders, one per event for alerts (`email_outbox.dedup_key`,
+  `user_notifications (user_id, dedup_key)`). Re-running the worker adds nothing twice.
+- **Failures:**
+  - a definite provider refusal goes back to `pending` with backoff (1, 5, 15 minutes) and becomes
+    `failed` after 3 attempts;
+  - a possibly delivered message (a timeout after sending) becomes `unknown` and is never resent;
+  - a run that dies after claiming leaves the row `sending`, and the next run marks it `unknown`.
+  - Nothing is ever marked `sent` without the provider accepting it, and each row is sent on its
+    own, so one failure never blocks the others.
+- `sent` means the provider accepted the email. It does not prove the email reached an inbox.
+
 Inspect the outbox (counts only, never bodies, in shared logs):
 `docker exec compose-postgres-1 psql -U aichat -d aichat -c "select kind, status, count(*) from email_outbox group by 1, 2"`.
 Delivery is at most once: a run that dies between claiming an email and recording the result
 leaves it `unknown`, never resent. `bun run status` prints the timer's state.
+
+## Stop conditions and release order
+
+A release goes in this order, and stops at the first failure:
+1. code and checks;
+2. GitHub `main` equals the checkout;
+3. deploy;
+4. health and MATCH;
+5. `bun run smoke`;
+6. backups/exports verified (before anything destructive);
+7. destructive or infrastructure steps;
+8. enabling features (jobs, email);
+9. live proofs;
+10. a final smoke and SHA check.
+
+STOP, and `bun run rollback` if production is impaired, when:
+- a health check fails, or MATCH or the SHA check fails;
+- the smoke fails;
+- a migration or precheck fails;
+- the jobs worker fails its checks, or the outbox shows an inconsistent state (rows stuck in
+  `sending`, or duplicates);
+- a legacy-removal precondition, or health after it, fails;
+- a temporary change on the owner's account cannot be restored and verified.
+
+Never continue to a later or destructive step after a failure.
 
 ## Changing the database container on purpose
 

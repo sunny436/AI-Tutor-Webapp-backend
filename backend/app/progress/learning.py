@@ -104,18 +104,34 @@ async def streak_state(session: AsyncSession, user_id: uuid.UUID, now: datetime)
 
 
 async def tutor_progress(
-    session: AsyncSession, user_id: uuid.UUID, timezone: str | None, default_timezone: str, now: datetime
+    session: AsyncSession,
+    user_id: uuid.UUID,
+    timezone: str | None,
+    default_timezone: str,
+    now: datetime,
+    asked_at: datetime | None = None,
 ) -> TutorProgress:
     """What the tutor is told of how the student is doing: the header's streak, and today's
-    active minutes and questions as the Progress page counts them. Read before a new question is
-    recorded, so the Settings preview shows exactly what the next message is told."""
+    active minutes and questions as the Progress page counts them. Always the state before the
+    question being answered:
+    - a new message: read before it is recorded, so the Settings preview shows exactly what the
+      next message is told;
+    - a regenerated answer (`asked_at`, when the question was asked): that question is left out
+      of today's count, so it is told the same count as the original answer was.
+    The streak counts days with a fully answered question, so an earlier completed answer to the
+    same question counts, as it does in the header. Two tabs asking at once each read their own
+    state; a question committing in the other tab at that moment may or may not be in it."""
     state = await streak_state(session, user_id, now)
-    today = activity.local_date(now, activity.zone_for(timezone, default_timezone))
+    zone = activity.zone_for(timezone, default_timezone)
+    today = activity.local_date(now, zone)
     day = await session.get(ActivityDay, (user_id, today))
+    questions = day.questions if day else 0
+    if asked_at is not None and activity.local_date(asked_at, zone) == today:
+        questions = max(0, questions - 1)
     return TutorProgress(
         streak_days=state.current,
         today_minutes=day.active_seconds // activity.MINUTE_SECONDS if day else 0,
-        today_questions=day.questions if day else 0,
+        today_questions=questions,
     )
 
 

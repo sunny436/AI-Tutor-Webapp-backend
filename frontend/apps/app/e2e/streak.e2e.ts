@@ -17,6 +17,7 @@ import {
   replies,
   sendAndWait,
   test,
+  tutorKnows,
   waitForHydration,
 } from "./support";
 
@@ -29,7 +30,6 @@ const bell = (page: Page) => banner(page).getByRole("button", { name: /^Notifica
 const stat = (page: Page, name: string) =>
   page.locator("dt", { hasText: new RegExp(`^${name}$`) }).locator("xpath=following-sibling::dd");
 const todayCell = (page: Page) => page.locator('[role="button"][aria-label$=": learning day, 1 learning interaction"]');
-const inAppReminders = (page: Page) => page.getByRole("switch", { name: "Reminders in the app" });
 
 /** Today's square is within the calendar's visible width (a narrow calendar scrolls, opening at today). */
 async function todayInView(page: Page): Promise<boolean> {
@@ -58,10 +58,10 @@ async function sloganFit(page: Page) {
     });
 }
 
-async function preferences(page: Page) {
-  return (await page.request.get(`${APP_URL}/api/v1/notifications/preferences`)).json();
-}
-
+/**
+ * Learning & Streak's one test: the streak from real questions, the section and its calendar,
+ * the header switch (moved here from the Progress test), and what the tutor is told.
+ */
 test("the streak counts real questions only, and opens Learning & Streak with the day's details", async ({
   page,
   account: _,
@@ -97,6 +97,20 @@ test("the streak counts real questions only, and opens Learning & Streak with th
   await expectAccessible(page);
   await page.emulateMedia({ colorScheme: "dark" });
   await expectAccessible(page);
+  await page.emulateMedia({ colorScheme: "light" });
+
+  // The header's badge can be turned off here; the account keeps it.
+  await page.getByRole("switch", { name: "Show my streak in the header" }).click();
+  await expect
+    .poll(async () => (await (await page.request.get(`${APP_URL}/api/v1/me/appearance`)).json()).showStreak)
+    .toBe(false);
+  await page.reload();
+  await expect(page.getByRole("switch", { name: "Show my streak in the header" })).not.toBeChecked();
+  await page.goto("/");
+  await expect(streakBadge(page)).toHaveCount(0);
+
+  // And the tutor is told the streak.
+  expect(await tutorKnows(page)).toContain("Learning so far: a 1-day learning streak");
 });
 
 test("the bell shows a new sign-in, and opening it marks it read", async ({ page, browser, account }) => {
@@ -138,34 +152,6 @@ test("a streak that can't be read shows –, never 0, and the chat still works",
   await expect(lastReply(page)).toContainText(/\S/);
   await bell(page).click();
   await expect(page.getByText("Couldn't load notifications.")).toBeVisible();
-});
-
-test("reminders in the app: the switch saves, and stays off after a reload and on another device", async ({
-  page,
-  browser,
-  account,
-}) => {
-  await page.goto("/settings/notifications");
-  await expect(inAppReminders(page)).toBeChecked();
-  await inAppReminders(page).click();
-  await expect.poll(async () => (await preferences(page)).inAppReminders).toBe(false);
-  await page.reload();
-  await expect(inAppReminders(page)).not.toBeChecked();
-
-  const context = await browser.newContext({ baseURL: APP_URL });
-  const login = await context.request.post("/api/v1/auth/login", {
-    data: { email: account.email, password: account.password },
-    headers: SAME_ORIGIN,
-  });
-  expect(login.status()).toBe(200);
-  const other = await context.newPage();
-  await other.goto("/settings/notifications");
-  await expect(inAppReminders(other)).not.toBeChecked();
-  await inAppReminders(other).click();
-  await expect.poll(async () => (await preferences(other)).inAppReminders).toBe(true);
-  await context.close();
-  await page.reload();
-  await expect(inAppReminders(page)).toBeChecked();
 });
 
 test("the look: Noto Sans everywhere, the slogan on one line, and a clean chat", async ({ page, account: _ }) => {
