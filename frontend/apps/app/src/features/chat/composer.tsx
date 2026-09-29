@@ -103,8 +103,9 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
   const stop = () => void chat.stop(chatKey);
 
   return (
-    <div className="shrink-0 bg-background px-5 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 sm:px-6">
-      <div className="mx-auto w-full max-w-prose">
+    <div className="shrink-0 bg-background pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
+      {/* The chat column (message-list.tsx): the side padding is inside it, so the edges match. */}
+      <div className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))]">
         {error && (
           <div
             role="alert"

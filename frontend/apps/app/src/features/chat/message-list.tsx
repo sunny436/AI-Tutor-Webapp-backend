@@ -79,7 +79,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
     );
   } else if ((status === "loading" || status === "idle") && order.length === 0) {
     body = (
-      <SkeletonGroup label="Loading conversation" className="mx-auto w-full max-w-prose space-y-8 px-5 py-8 sm:px-6">
+      <SkeletonGroup label="Loading conversation" className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))] space-y-8 py-8">
         <Skeleton className="ml-auto h-10 w-2/5 rounded-2xl" />
         <Skeleton className="h-24 w-4/5 rounded-2xl" />
         <Skeleton className="ml-auto h-10 w-1/3 rounded-2xl" />
@@ -89,7 +89,7 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
     body = <ChatEmptyState chatKey={chatKey} />;
   } else {
     body = (
-      <div className="mx-auto w-full max-w-prose space-y-8 px-5 py-8 sm:px-6">
+      <div className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))] space-y-8 py-8">
         {entry?.nextCursor && (
           <div className="flex justify-center">
             <Button type="button" variant="ghost" size="sm" onClick={loadOlder} disabled={entry.loadingOlder}>
@@ -111,15 +111,19 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
           {body}
         </section>
       </div>
+      {/* In the flow, below the transcript and above the composer, in the chat column: it never
+          covers a message. Shown only while the reader is away from the latest. */}
       {!atBottom && order.length > 0 && (
-        <button
-          type="button"
-          onClick={() => scrollToBottom("smooth")}
-          className="focus-ring absolute bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-brand elev-2 transition hover:bg-brand-soft motion-safe:animate-in motion-safe:fade-in-0 motion-safe:slide-in-from-left-1/2 motion-safe:slide-in-from-bottom-1 duration-base ease-enter"
-        >
-          <ArrowDown aria-hidden className="h-3.5 w-3.5" />
-          Jump to latest
-        </button>
+        <div className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))] flex shrink-0 justify-end pt-1.5">
+          <button
+            type="button"
+            onClick={() => scrollToBottom("smooth")}
+            className="focus-ring flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-xs font-semibold text-brand elev-1 transition hover:bg-brand-soft motion-safe:animate-in motion-safe:fade-in-0 duration-base ease-enter"
+          >
+            <ArrowDown aria-hidden className="h-3.5 w-3.5" />
+            Jump to latest
+          </button>
+        </div>
       )}
     </div>
   );
