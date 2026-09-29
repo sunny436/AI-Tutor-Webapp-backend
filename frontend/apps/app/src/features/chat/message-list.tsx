@@ -111,10 +111,10 @@ export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef
           {body}
         </section>
       </div>
-      {/* In the flow, below the transcript and above the composer, in the chat column: it never
-          covers a message. Shown only while the reader is away from the latest. */}
+      {/* Centred just above the composer, as before, but in the flow instead of over the transcript,
+          so it never covers a message. Shown only while the reader is away from the latest. */}
       {!atBottom && order.length > 0 && (
-        <div className="mx-auto w-full px-5 sm:px-6 lg:w-[min(100%,clamp(42.5rem,75%,72rem))] flex shrink-0 justify-end pt-1.5">
+        <div className="flex shrink-0 justify-center pt-1.5">
           <button
             type="button"
             onClick={() => scrollToBottom("smooth")}
