@@ -247,8 +247,8 @@ Every task, in one pass:
 
 ## Repo hygiene
 
-- `ollima.txt` and `ollastack.txt` in the repository root hold live provider keys. They are
-  git-ignored; never print or commit their contents.
+- `ollima.txt`, `ollastack.txt` and `openrouter.txt` in the repository root hold live provider keys.
+  They are git-ignored; never print or commit their contents.
 - `.claude/settings.local.json` holds per-user permission rules. It is untracked and ignored.
 - `.gitattributes` forces LF (`* text=auto eol=lf`), for the shell scripts and for Biome.
 - On this Windows machine, Python's default encoding is cp1252. Pass `encoding="utf-8"` when
