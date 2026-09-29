@@ -44,6 +44,10 @@ grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' "$SECRETS/web.env" 2> /dev/
 public=$(sed -n 's/^NEXT_PUBLIC_SITE_URL=//p' "$SECRETS/web.env" 2> /dev/null)
 if [ -n "$public" ]; then info "public $public/login -> $(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "$public/login" || true) (information: Cloudflare/DNS)"; fi
 jobs_timer=$(systemctl is-enabled aichat-jobs.timer 2> /dev/null); info "jobs worker: aichat-jobs.timer ${jobs_timer:-not installed}"
+# No stale or old release serving traffic (the owner's production rule): the legacy Ayurveda API
+# (:4000) and its Convex (3210, 3211, 6791) must not listen.
+stale=$(ss -ltnH 2> /dev/null | awk '{print $4}' | grep -cE ':(4000|3210|3211|6791)$' || true)
+[ "${stale:-0}" -eq 0 ] && ok "no stale release listening (4000/3210/3211/6791 free)" || bad "a stale release is listening on a legacy port (4000/3210/3211/6791)"
 for legacy in /opt/aichat/backend /opt/aichat/frontend /opt/aichat/releases; do
   [ -e "$legacy" ] && info "note: $legacy is from an older layout (not used; remove after approval)"
 done

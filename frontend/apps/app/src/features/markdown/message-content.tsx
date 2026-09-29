@@ -113,12 +113,12 @@ const heading =
  * becomes an `h3` and the document outline stays sane for screen readers.
  */
 const components: Components = {
-  h1: heading("h3", "mb-2 mt-5 text-lg font-semibold text-foreground first:mt-0"),
-  h2: heading("h4", "mb-2 mt-5 text-base font-semibold text-foreground first:mt-0"),
-  h3: heading("h5", "mb-1.5 mt-4 text-[0.9375rem] font-semibold text-foreground first:mt-0"),
-  h4: heading("h6", "mb-1 mt-3 text-sm font-semibold text-foreground first:mt-0"),
-  h5: heading("h6", "mb-1 mt-3 text-sm font-semibold text-foreground first:mt-0"),
-  h6: heading("h6", "mb-1 mt-3 text-sm font-semibold text-text-secondary first:mt-0"),
+  h1: heading("h3", "mb-2 mt-6 text-[1.375rem] font-semibold leading-[1.3] text-foreground first:mt-0 sm:text-2xl"),
+  h2: heading("h4", "mb-2 mt-5 text-[1.1875rem] font-semibold leading-[1.35] text-foreground first:mt-0 sm:text-xl"),
+  h3: heading("h5", "mb-1.5 mt-4 text-lg font-semibold text-foreground first:mt-0"),
+  h4: heading("h6", "mb-1 mt-3 text-base font-semibold text-foreground first:mt-0"),
+  h5: heading("h6", "mb-1 mt-3 text-base font-semibold text-foreground first:mt-0"),
+  h6: heading("h6", "mb-1 mt-3 text-base font-semibold text-text-secondary first:mt-0"),
   p: ({ children }) => <p className="my-3 first:mt-0 last:mb-0">{children}</p>,
   ul: ({ children, className }) => (
     <ul className={`my-3 space-y-1 pl-6 ${className?.includes("contains-task-list") ? "list-none pl-1" : "list-disc"}`}>
@@ -177,7 +177,7 @@ function MessageContentImpl({ content, streaming = false }: { content: string; s
   const blocks = splitBlocks(content);
   const last = blocks.length - 1;
   return (
-    <div className="message-content min-w-0 break-words text-[0.9375rem] leading-7 text-foreground">
+    <div className="message-content min-w-0 break-words text-base text-foreground">
       {blocks.map((block, index) => (
         // biome-ignore lint/suspicious/noArrayIndexKey: blocks only grow at the end, so a block keeps its place
         <Fragment key={index}>

@@ -90,7 +90,7 @@ export function UserMessage({ message }: { message: ChatMessage }) {
     <article aria-label="You" className={cn("flex justify-end", arrival && "animate-rise-in")} style={arrival}>
       <div
         className={cn(
-          "min-w-0 max-w-[85%] whitespace-pre-wrap break-words rounded-2xl bg-surface-2 px-4 py-2.5 text-[0.9375rem] leading-relaxed text-foreground sm:max-w-[75%]",
+          "min-w-0 max-w-[85%] whitespace-pre-wrap break-words rounded-2xl bg-surface-2 px-4 py-2.5 text-base text-foreground sm:max-w-[75%]",
           message.pending && "opacity-80",
         )}
       >

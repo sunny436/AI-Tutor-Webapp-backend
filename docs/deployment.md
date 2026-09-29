@@ -1,5 +1,13 @@
 # Deployment
 
+> **The owner's production rule (hard):** Keep production simple and deterministic — Git main is the source of truth; deploy the exact verified commit to the server, build/run directly on the production VM, and keep frontend/backend versions strictly matched. No unnecessary containers, infrastructure layers, or deployment complexity; use system services/process supervision, health checks, backups, and rollback capability. After every release: verify the exact commit is live, services are healthy, and no stale/old release is serving traffic.
+>
+> Here: `Status: MATCH` is the match (both processes run the checkout's code); PostgreSQL's pinned
+> Compose project is the only container; systemd supervises the API, the web app and the jobs
+> timer; backups are nightly plus one before any migration; `bun run rollback` goes back. After
+> every release: `bun run status` (MATCH, healthy, no legacy port 4000/3210/3211/6791 listening)
+> and `bun run smoke`.
+
 ## How a change reaches production
 
 1. You commit the change.

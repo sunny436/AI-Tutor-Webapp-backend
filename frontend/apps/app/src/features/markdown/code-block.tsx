@@ -52,7 +52,7 @@ export function CodeBlock({
         tabIndex={0}
         role="region"
         aria-label={language ? `${language} code` : "Code"}
-        className="scrollbar-subtle focus-ring-inset overflow-x-auto p-3 text-[0.8125rem] leading-6"
+        className="scrollbar-subtle focus-ring-inset overflow-x-auto p-3 text-sm leading-6"
       >
         {children}
       </pre>

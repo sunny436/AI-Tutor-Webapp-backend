@@ -11,7 +11,7 @@
  * disappear, and ONE acting colour, a quiet slate blue, used for the primary action, selection
  * and focus and nothing else. A muted sage is the only accent (the greeting's gradient drifts
  * into it); it never means anything, so status colours stay clearly apart from it. Roughly 90%
- * neutral, 8% blue, 2% everything else. Poppins throughout; soft corners (8-20px); shadows
+ * neutral, 8% blue, 2% everything else. Noto Sans throughout; soft corners (8-20px); shadows
  * barely there, borders do the separating.
  *
  * WHAT DID NOT CHANGE
@@ -247,7 +247,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Body text: Noto Sans 16px / 400 / 1.65, -0.005em (tailwind.config.ts, `text-base`). */
+    @apply bg-background text-base font-normal text-foreground;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }

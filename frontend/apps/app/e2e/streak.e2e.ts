@@ -40,10 +40,10 @@ async function todayInView(page: Page): Promise<boolean> {
   });
 }
 
-/** The slogan in the sidebar (or the phone's drawer), measured in Poppins: lines, and inside the edge. */
+/** The slogan in the sidebar (or the phone's drawer), measured in Noto Sans: lines, and inside the edge. */
 async function sloganFit(page: Page) {
   await expect
-    .poll(() => page.evaluate(() => [...document.fonts].some((face) => /poppins/i.test(face.family) && face.status === "loaded")))
+    .poll(() => page.evaluate(() => [...document.fonts].some((face) => /noto sans/i.test(face.family) && face.status === "loaded")))
     .toBe(true);
   await page.evaluate(() => document.fonts.ready);
   return page
@@ -168,7 +168,7 @@ test("reminders in the app: the switch saves, and stays off after a reload and o
   await expect(inAppReminders(page)).toBeChecked();
 });
 
-test("the look: Poppins everywhere, the slogan on one line, and a clean chat", async ({ page, account: _ }) => {
+test("the look: Noto Sans everywhere, the slogan on one line, and a clean chat", async ({ page, account: _ }) => {
   await page.goto("/");
   await waitForHydration(page);
   expect(await page.locator("body").innerText()).not.toMatch(/AI Tutor India/i);
@@ -187,7 +187,7 @@ test("the look: Poppins everywhere, the slogan on one line, and a clean chat", a
       document.querySelector("button"),
     ].map((element) => (element ? getComputedStyle(element).fontFamily : "missing")),
   );
-  for (const family of fonts) expect(family).toMatch(/Poppins/i);
+  for (const family of fonts) expect(family).toMatch(/Noto Sans/i);
 
   // The reply sits on the page (no card), the student's message is a neutral bubble, one composer box.
   const look = await page.evaluate(() => {

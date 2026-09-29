@@ -7,7 +7,7 @@
 .learning-calendar text.month-name,
 .learning-calendar text.day-initial,
 .learning-calendar text.calendar-heatmap-legend-text {
-  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-noto-sans), ui-sans-serif, system-ui, sans-serif;
   font-size: 10px;
   fill: hsl(var(--text-secondary));
 }

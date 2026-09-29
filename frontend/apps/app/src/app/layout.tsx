@@ -6,7 +6,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { Toaster } from "sonner";
 
 import { PREPAINT_SCRIPT } from "@/lib/appearance";
-import { poppins } from "@/lib/fonts";
+import { notoSans, notoSansDevanagari } from "@/lib/fonts";
 import { APP_NAME, BRAND } from "@/lib/brand";
 import { siteUrl } from "@/lib/site";
 
@@ -37,7 +37,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+    <html lang="en" className={`${notoSans.variable} ${notoSansDevanagari.variable}`} suppressHydrationWarning>
       <head>
         {/* Text size, contrast, motion and reading spacing from the last visit, before the
             first paint (lib/appearance.ts); the signed-in app then applies the server's value. */}

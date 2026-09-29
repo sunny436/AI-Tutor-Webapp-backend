@@ -103,8 +103,8 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
   const stop = () => void chat.stop(chatKey);
 
   return (
-    <div className="shrink-0 bg-background px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 sm:px-5">
-      <div className="mx-auto w-full max-w-3xl">
+    <div className="shrink-0 bg-background px-5 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 sm:px-6">
+      <div className="mx-auto w-full max-w-prose">
         {error && (
           <div
             role="alert"
@@ -158,7 +158,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
             }}
             aria-describedby={`composer-hint-${chatKey}`}
             aria-invalid={tooLong || undefined}
-            className="max-h-[200px] min-h-[2.75rem] min-w-0 flex-1 resize-none bg-transparent px-2 py-2.5 text-base leading-relaxed text-foreground outline-none sm:text-sm"
+            className="max-h-[200px] min-h-[2.75rem] min-w-0 flex-1 resize-none bg-transparent px-2 py-2.5 text-base font-normal leading-normal text-foreground outline-none"
           />
           {preview && (
             <SoonButton label="Voice input">

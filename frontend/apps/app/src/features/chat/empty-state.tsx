@@ -25,7 +25,7 @@ export function ChatEmptyState({ chatKey }: { chatKey: string }) {
   const ref = useLineGradient(greeting);
 
   return (
-    <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-end px-4 pb-6 pt-10 sm:px-6">
+    <div className="mx-auto flex w-full max-w-prose flex-1 flex-col justify-end px-5 pb-6 pt-10 sm:px-6">
       <StudyIllustration />
       <h2
         key={greeting ?? ""}

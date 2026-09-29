@@ -53,11 +53,11 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     return `${name}; day ends ${streak.dayEnd}`;
   });
 
-  await check("branding: Poppins, the slogan on one line in the sidebar, no 'AI Tutor India'", async () => {
-    expect(await page.evaluate(() => getComputedStyle(document.body).fontFamily)).toMatch(/poppins/i);
+  await check("branding: Noto Sans, the slogan on one line in the sidebar, no 'AI Tutor India'", async () => {
+    expect(await page.evaluate(() => getComputedStyle(document.body).fontFamily)).toMatch(/noto sans/i);
     const loaded = await page.evaluate(async () => {
       await document.fonts.ready;
-      return [...document.fonts].filter((face) => /poppins/i.test(face.family) && face.status === "loaded").length;
+      return [...document.fonts].filter((face) => /noto sans/i.test(face.family) && face.status === "loaded").length;
     });
     expect(loaded).toBeGreaterThan(0);
     const fit = await page

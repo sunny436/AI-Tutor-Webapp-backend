@@ -28,10 +28,19 @@ const config = {
       //   mono     `--font-mono`, set by the app's root layout: the system code
       //            face, because code is read at length in a tutor's answers.
       fontFamily: {
-        // Poppins everywhere (apps/app/src/lib/fonts.ts sets --font-poppins); code stays monospace.
-        sans: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
+        // Noto Sans everywhere, Latin then its Devanagari companion (apps/app/src/lib/fonts.ts);
+        // code stays monospace.
+        sans: [
+          "var(--font-noto-sans)",
+          "var(--font-noto-sans-devanagari)",
+          ...defaultTheme.fontFamily.sans,
+        ],
         mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
-        display: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
+        display: [
+          "var(--font-noto-sans)",
+          "var(--font-noto-sans-devanagari)",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -152,13 +161,21 @@ const config = {
       // Tailwind's own type scale, plus one step below `xs` for the smallest
       // labels (badges, timestamps). Small sizes get a little positive tracking
       // so they stay legible.
+      // The type scale (Noto Sans), in rem so the student's text-size setting scales it all:
+      // body 16/1.65, UI 14/1.45, captions 13/1.40, and the headings H3 17, H2 20, H1 24 (600).
       fontSize: {
         "2xs": ["0.6875rem", { lineHeight: "1rem", letterSpacing: "0.02em" }],
+        xs: ["0.8125rem", { lineHeight: "1.4" }],
+        sm: ["0.875rem", { lineHeight: "1.45" }],
+        base: ["1rem", { lineHeight: "1.65", letterSpacing: "-0.005em" }],
+        lg: ["1.0625rem", { lineHeight: "1.4" }],
+        xl: ["1.25rem", { lineHeight: "1.35" }],
+        "2xl": ["1.5rem", { lineHeight: "1.3" }],
       },
       maxWidth: {
         // One comfortable measure for conversation, used by the chat column so
         // text never runs the full width of a large monitor.
-        prose: "68ch",
+        prose: "42.5rem", // 680px: the reading width (660-700px)
       },
       // Motion tokens (globals.css, "motion"). DEFAULT retunes every bare `transition*`;
       // tailwindcss-animate derives its durations and easings from these too.

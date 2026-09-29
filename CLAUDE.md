@@ -55,7 +55,7 @@ bun run lint | build | contract                        # contract: regenerate do
 git push origin main && bun run deploy   # production: GitHub main -> production, only what changed
 bun run smoke         # after every deploy: the live site as the owner (headed Chrome + emulated phones)
 bun run rollback | status                 # previous commit the same way | GitHub main vs production (MATCH)
-bun run verify        # optional: the three CI jobs on HEAD, in a Linux container (Docker, ~30-35 min)
+bun run verify        # the three CI jobs in a Linux container: needs Docker, so not on this PC (owner's rule)
 bun run lock:backend  # after editing backend/requirements.txt: regenerate the hashed requirements.lock
 bun run rehearse      # optional: the deploy scripts on a throwaway systemd container (Docker, ~30 min)
 ```
@@ -72,9 +72,11 @@ Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. O
 
 - **Where to install:** never run `bun install` at the repository root. The Bun workspace root is
   `frontend/`, and the root `package.json` has no workspaces and no dependencies.
-- **Backend tests:** they need the dev compose stack. They drop, recreate and migrate their own
-  `aichat_test` database (the name **must** end in `_test`), truncate tables before each test, and
-  use a fake LLM, fake embeddings and an in-memory mailbox.
+- **Backend tests:** they need a PostgreSQL + pgvector and Mailpit, which the development PC no
+  longer has (no Docker, owner's rule). Don't set them up; see "The owner's hard rules". Where
+  they run, they drop, recreate and migrate their own `aichat_test` database (the name **must**
+  end in `_test`), truncate tables before each test, and use a fake LLM, fake embeddings and an
+  in-memory mailbox.
 - **Pipes hide failures:** when piping pytest/ruff/bun output (e.g. `| tail`), check the exit code separately.
 - **Offline dev:** `LLM_PROVIDER=fake` and `EMBEDDING_PROVIDER=fake`. Fake embeddings only measure
   shared vocabulary, so they prove plumbing, not retrieval quality.
@@ -111,7 +113,10 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **A chat turn** (`app/chat/service.py`): *prepare* runs in the request transaction (conversation,
   409 if a reply is already streaming, quotas, user message + assistant placeholder, and the student's
   learning context, which `app/learning/tutor.py` turns into instructions after the frozen system
-  prompt; nothing set means no instructions). *Generate* runs
+  prompt: every learning setting, including academic year and study time, plus a "Learning so far"
+  line (streak and today's activity, `app.progress.learning.tutor_progress`) once they have learnt;
+  it is read before the question is counted, so the Settings preview shows exactly this. Nothing set
+  and nothing learnt means no instructions). *Generate* runs
   as an independent asyncio task registered in `app/chat/streams.py`. It runs the LangGraph graph
   `receive_query → retrieve_context → assemble_context → generate_answer` (`app/rag/graph.py`), emits
   SSE `meta`/`token`/`done`/`error`, and persists the result. Stop and disconnect cancel the task.
@@ -201,40 +206,45 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **Changing the deploy scripts:** try it with `bun run rehearse` (optional, local); the host runs
   the deploying checkout's `deploy/` scripts, so a fix takes effect with the next deploy.
 
-## Implementation and release workflow (owner's standing guardrail)
+## The owner's hard rules (2026-09-29): production, testing and release
 
-Follow this for every implementation task unless the owner explicitly overrides it.
+These override anything else in this file. They are quoted exactly.
 
-1. **Implement.**
-   - Minimum safe code, maximum useful output.
-   - Reuse the existing architecture, utilities, components, APIs and patterns.
-   - No unnecessary dependencies, services, abstractions or refactors, and no scope creep.
-   - No subagents unless the owner asks for them.
-   - Keep behaviour outside the requested scope unchanged.
-2. **Verify before claiming success.**
-   - Run the relevant tests, typecheck, lint, build and contract checks.
-   - Test everything affected, not only the changed file.
-   - A failure is work to do, not an accepted "known issue".
-3. **Headed Chrome red-team QA for every user-facing change.**
-   - Cover: the normal flow, edge cases, loading and error states, mobile and responsive layouts, light and dark, likely regressions, accessibility, and authorization and security boundaries.
-   - Try to break it, check visual quality, spacing and overflow, and confirm unrelated functionality still works.
-4. **Fix and retest** (automated checks plus headed QA) until everything passes. Never knowingly ship a failing test, a broken flow or a regression, and never silently reduce scope to make tests pass.
-5. **Push.** Only when implementation and QA are clean: commit on `main` and `git push origin main` (`origin` is the owner's GitHub repo). No pull requests, no feature branches for deploying. GitHub CI runs by itself; it is advisory and never waited for.
-6. **Production.**
-   - `bun run deploy`: it deploys exactly GitHub `main` (the checkout must equal it) and rebuilds/restarts only what changed.
-   - It must end with `Status: MATCH`; then `bun run smoke` (headed Chrome production smoke, desktop + emulated phones; every check PASS) and a headed check of the affected functionality.
-   - If anything fails, stop and investigate (or `bun run rollback`); don't declare success.
-7. **Invariant.** GitHub `main` = the production checkout = what the backend and frontend run (`bun run status`: MATCH). Never:
-   - deploy a dirty tree or a commit that is not GitHub `main` (rollbacks excepted);
-   - edit production by hand;
-   - skip the headed QA;
-   - leave failures unresolved, or claim completion without verification.
-8. **Speed.** Nothing on the deploy path waits for CI, `bun run verify` or `bun run rehearse`; run those when they help, never as gates.
-9. **Report** concisely, each line PASS or FAIL:
-   - Implementation, Automated tests, Headed Chrome QA;
-   - Pushed to `main` (SHA), GitHub CI (advisory, when it ran);
-   - Production deployment (`Status: MATCH`), Production verification;
-   - plus the final deployed Git SHA.
+> **PRODUCTION RULE:** Keep production simple and deterministic — Git main is the source of truth; deploy the exact verified commit to the server, build/run directly on the production VM, and keep frontend/backend versions strictly matched. No unnecessary containers, infrastructure layers, or deployment complexity; use system services/process supervision, health checks, backups, and rollback capability. After every release: verify the exact commit is live, services are healthy, and no stale/old release is serving traffic.
+
+> **TESTING / WORK RULE:** Minimum safe code, maximum output — no Docker, no local setup, no unnecessary refactor, no test-suite expansion, no time/token waste; only check obvious build/runtime breakage. Commit/push to Git main and deploy directly to production, ensuring production runs the exact final main commit. Finish in one pass; report only what is actually live.
+
+What they mean here:
+- **Strictly matched** = `Status: MATCH`: the backend and the frontend both run the production
+  checkout's code. A part whose code did not change keeps running (content keys, owner's choice);
+  that is still MATCH.
+- **No containers beyond the one that exists.** PostgreSQL's pinned Compose project is the only
+  container in production. Nothing new runs in Docker, and there is no Docker on the development PC
+  (removed 2026-09-29; never reinstall or ask). So there is no local Postgres or Mailpit, and the
+  backend pytest suite, Playwright and `bun run verify` do not run here.
+- **Checks are only for obvious build/runtime breakage.** Before committing:
+  - backend: `ruff check` and `ruff format --check`, plus a Python import/compile check (and a
+    pure-function script when logic changed);
+  - frontend: `bun run typecheck`, `bun run lint`, `bun run test` and `bun run build`;
+  - `bun test deploy/tests` when deploy scripts changed.
+  - Don't add tests or refactor.
+
+Every task, in one pass:
+1. **Implement:** minimum safe code; reuse what exists; no new dependencies, services or
+   abstractions; no scope creep; no subagents unless the owner asks.
+2. **Check** as above. A failure is fixed, never shipped.
+3. **Push:** commit on `main`, then `git push origin main` (`origin` is the owner's GitHub repo). No
+   pull requests, no branches. GitHub CI is advisory and never waited for.
+4. **Release:** `bun run deploy` (it deploys exactly GitHub `main`). It must end with
+   `Status: MATCH`.
+5. **Verify live:**
+   - `bun run status`: MATCH, services healthy, and no stale release serving traffic (it fails if
+     the legacy ports 4000/3210/3211/6791 listen);
+   - `bun run smoke`: every check PASS;
+   - a live check of what changed.
+   - If anything fails: stop, fix, or `bun run rollback`. Never declare success.
+6. **Report only what is actually live:** the final deployed SHA, MATCH, the smoke result, what was
+   proven live, and what was not.
 
 ## Repo hygiene
 
