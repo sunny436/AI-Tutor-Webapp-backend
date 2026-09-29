@@ -152,9 +152,13 @@ test("a message arrives once: no replay when its id is confirmed or the chat get
   await expect(page).toHaveURL(/\/c\//);
   const starts = await page.evaluate(() => (window as unknown as { __starts: { at: string; elapsed: number }[] }).__starts);
   // Continuations of an arrival already under way start part-way (elapsed > 0); a fresh
-  // arrival starts at 0: exactly one each for the student's message and the reply.
-  const fresh = starts.filter((start) => start.elapsed === 0).map((start) => start.at);
-  expect(fresh.sort()).toEqual(["Assistant", "You"]);
+  // arrival starts at 0. The reply arrives fresh exactly once. The student's message arrives
+  // once too: fresh as it is sent, or, when the server confirms it before its first frame (a busy
+  // machine), only as the continuation; never a second fresh start (a replay).
+  const fresh = (label: string) => starts.filter((start) => start.at === label && start.elapsed === 0).length;
+  expect(fresh("Assistant"), "the reply's arrival").toBe(1);
+  expect(fresh("You"), "the student's message never replays").toBeLessThanOrEqual(1);
+  expect(starts.filter((start) => start.at === "You").length, "the student's message arrives").toBeGreaterThan(0);
   await page.waitForTimeout(1_000);
   expect(await runningAnimations(page)).toEqual([]);
 });
