@@ -18,7 +18,7 @@ function status(chip: Chip): { text: string; tone: "muted" | "ok" | "bad"; detai
     case "hashing":
       return { text: "Preparing…", tone: "muted" };
     case "uploading":
-      return { text: `Uploading ${Math.round(chip.progress * 100)}%`, tone: "muted" };
+      return { text: "Uploading", tone: "muted" };
     case "processing":
       return { text: "Reading…", tone: "muted" };
     case "ready":
@@ -71,6 +71,7 @@ export function AttachmentChip({
         >
           {busy && <Loader2 aria-hidden className="h-3 w-3 motion-safe:animate-spin" />}
           <span className="truncate">{text}</span>
+          {chip.state === "uploading" && <span aria-hidden>{Math.round(chip.progress * 100)}%</span>}
           {detail && <span className="sr-only">. {detail}</span>}
         </p>
       </div>

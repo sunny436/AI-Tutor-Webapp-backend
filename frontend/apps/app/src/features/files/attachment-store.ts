@@ -49,7 +49,9 @@ export type AttachmentApi = {
 export type AddResult = { rejected: { name: string; reason: "type" | "size" | "count" }[] };
 
 const POLL_MS = 1500;
-const POLL_FOR_MS = 10 * 60 * 1000;
+/** After this long a file still being read is checked less often (the queue can be long), never given up on. */
+const POLL_SLOW_AFTER_MS = 2 * 60 * 1000;
+const POLL_SLOW_MS = 10_000;
 const EMPTY: readonly Chip[] = Object.freeze([]);
 
 /** Send is allowed only when every attached file is ready (the API refuses anything else too). */
@@ -103,21 +105,6 @@ export class AttachmentStore {
     };
   }
 
-  /** Every chip still uploading or being read, across chats (the File Library shows them). */
-  inFlight(): Chip[] {
-    const seen = new Set<string>();
-    const out: Chip[] = [];
-    for (const list of this.chips.values()) {
-      for (const chip of list) {
-        if ((chip.state === "hashing" || chip.state === "uploading") && !seen.has(chip.localId)) {
-          seen.add(chip.localId);
-          out.push(chip);
-        }
-      }
-    }
-    return out;
-  }
-
   // ---------------------------------------------------------------- changes
   add(key: string, files: Iterable<File>): AddResult {
     const canonical = this.resolve(key);
@@ -168,6 +155,24 @@ export class AttachmentStore {
     };
     this.set(canonical, [...current, chip]);
     if (chip.state === "processing") this.poll(file.id);
+  }
+
+  /** A new chat got its conversation id: its files follow it (they were keyed by the draft). */
+  rekey(from: string, to: string): void {
+    const moved = this.chips.get(from);
+    if (!moved || from === to) return;
+    this.chips.delete(from);
+    this.set(to, [...(this.chips.get(to) ?? []), ...moved]);
+    for (const listener of this.listeners.get(from) ?? []) listener();
+  }
+
+  /** Check every file still being read again now (the window regained focus). */
+  refreshReading(): void {
+    const ids = new Set<string>();
+    for (const list of this.chips.values()) {
+      for (const chip of list) if (chip.state === "processing" && chip.fileId) ids.add(chip.fileId);
+    }
+    for (const id of ids) void this.refresh(id);
   }
 
   /** Take the chip off this message. The file stays in the File Library (only deleting there removes it). */
@@ -288,7 +293,8 @@ export class AttachmentStore {
     const controller = new AbortController();
     this.uploads.set(localId, controller);
     try {
-      const existing = await this.api.findFile(await this.api.sha256Hex(file));
+      // The dedup check needs WebCrypto (secure pages only); without it the server dedups anyway.
+      const existing = globalThis.crypto?.subtle ? await this.api.findFile(await this.api.sha256Hex(file)) : null;
       key = this.where(localId);
       if (!key) return; // removed meanwhile
       let stored = existing;
@@ -324,20 +330,20 @@ export class AttachmentStore {
 
   private poll(fileId: string): void {
     if (this.polls.has(fileId)) return;
-    const until = this.clock.now() + POLL_FOR_MS;
+    const started = this.clock.now();
+    const next = () => (this.clock.now() - started > POLL_SLOW_AFTER_MS ? POLL_SLOW_MS : POLL_MS);
     const tick = async () => {
-      const entry = this.polls.get(fileId);
-      if (!entry) return;
+      if (!this.polls.has(fileId)) return;
       const shown = [...this.chips.values()].some((list) => list.some((chip) => chip.fileId === fileId));
-      if (!shown || this.clock.now() > entry.until) {
+      if (!shown) {
         this.polls.delete(fileId);
         return;
       }
       const done = await this.refresh(fileId);
       if (done) this.polls.delete(fileId);
-      else if (this.polls.has(fileId)) this.clock.later(() => void tick(), POLL_MS);
+      else if (this.polls.has(fileId)) this.clock.later(() => void tick(), next());
     };
-    this.polls.set(fileId, { until });
+    this.polls.set(fileId, { until: started });
     this.clock.later(() => void tick(), POLL_MS);
   }
 

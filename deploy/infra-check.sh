@@ -43,8 +43,10 @@ free_gb=$(( $(df --output=avail -B1 / | tail -1 | tr -dc '0-9') / 1000000000 ))
 [ "$free_gb" -ge 5 ] && ok "disk: ${free_gb} GB free (uploads stop under 5 GB)" || bad "disk: only ${free_gb} GB free: file uploads are refused and backups may fail"
 
 echo "files (app/files)"
-langs=$(tesseract --list-langs 2>/dev/null | tail -n +2 | tr '\n' ' ')
-case " $langs " in *" eng "*" hin "*|*" hin "*" eng "*) ok "tesseract with eng and hin (OCR)" ;; *) bad "tesseract with eng and hin is missing (apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin)" ;; esac
+langs=$(tesseract --list-langs 2>/dev/null | tail -n +2)
+if grep -qx eng <<<"$langs" && grep -qx hin <<<"$langs"; then ok "tesseract with eng and hin (OCR)"; else bad "tesseract with eng and hin is missing (apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-hin)"; fi
+keep=$(sed -n 's/^KEEP_DAYS=//p' /etc/aichat/postgres.env 2>/dev/null)
+[ "${keep:-7}" -le 7 ] 2>/dev/null && ok "backups kept ${keep:-7} days" || bad "KEEP_DAYS=${keep} in postgres.env: keep it at 7 (dumps share the database's disk)"
 files=$(curl -fsS --max-time 5 "$API/health" 2>/dev/null | grep -o '"files":"[a-z]*"' | cut -d'"' -f4)
 [ "$files" = available ] && ok "files available (sandbox self-test passed)" || bad "files ${files:-unknown}: see journalctl -u aichat-api (files self-test)"
 

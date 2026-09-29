@@ -89,11 +89,13 @@ def sanitize_filename(raw: str) -> str | None:
     name = unicodedata.normalize("NFC", raw or "").replace("\\", "/").rsplit("/", 1)[-1]
     name = " ".join(_HIDDEN.sub("", name).split())
     stem, dot, extension = name.rpartition(".")
-    if not dot or not stem.strip(" ."):
-        return None
+    if not dot or not stem.strip(" .") or len(extension.encode("utf-8")) > 16:
+        return None  # no supported extension is longer than 9 characters
     extension = "." + extension
-    while len((stem + extension).encode("utf-8")) > 255:
+    while stem and len((stem + extension).encode("utf-8")) > 255:
         stem = stem[:-1]
+    if not stem.strip(" ."):
+        return None
     return stem.rstrip() + extension
 
 

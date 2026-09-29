@@ -496,6 +496,9 @@ export class ChatStore {
       const refused = optimisticId ? map.get(optimisticId)?.attachments : undefined;
       if (optimisticId) map.delete(optimisticId);
       if (refused?.length) this.onSendRefused?.(canonical, refused);
+      if (refused?.length && failure?.code === "validation_error") {
+        failure = { ...failure, code: "attachment_unavailable" };
+      }
       this.drafts.set(canonical, this.drafts.get(canonical) || sentText || "");
       this.update(canonical, {
         stream: null,

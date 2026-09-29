@@ -190,7 +190,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
           )}
         >
           {chips.length > 0 && (
-            <div className="scrollbar-subtle flex gap-1.5 overflow-x-auto px-1 pb-0.5" aria-label="Attached files">
+            <div className="scrollbar-subtle flex gap-1.5 overflow-x-auto px-1 pb-0.5" role="group" aria-label="Attached files">
               {chips.map((chip) => (
                 <AttachmentChip
                   key={chip.localId}
@@ -251,7 +251,7 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
                 onClick={dictation.toggle}
                 disabled={dictation.state === "stopping"}
                 aria-pressed={dictation.state !== "idle"}
-                aria-label={dictation.state === "idle" ? "Dictate" : "Stop dictation"}
+                aria-label="Dictate"
                 title={dictation.state === "idle" ? "Dictate" : "Stop dictation"}
                 className={cn(
                   "focus-ring grid h-11 w-11 shrink-0 place-items-center rounded-xl transition-colors disabled:opacity-60 sm:h-10 sm:w-10",

@@ -17,6 +17,8 @@ Restart=always
 RestartSec=5
 # In-flight replies are persisted as 'cancelled' on shutdown; give them a moment.
 KillSignal=SIGINT
+# uvicorn alone gets SIGINT; a file extractor's runner is not interrupted mid-answer (app/files).
+KillMode=mixed
 TimeoutStopSec=20
 MemoryMax=900M
 NoNewPrivileges=yes

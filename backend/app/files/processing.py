@@ -200,6 +200,7 @@ async def run_extractor(runner: str, unit: str, kind: str, chunks, timeout_s: fl
         stderr=asyncio.subprocess.PIPE,
         cwd=str(BACKEND_DIR),
         env=env,
+        start_new_session=os.name != "nt",  # a signal to the API does not reach the extractor directly
     )
     too_big = False
 
@@ -223,6 +224,7 @@ async def run_extractor(runner: str, unit: str, kind: str, chunks, timeout_s: fl
             if len(data) + len(block) > limit:
                 if stream is process.stdout:
                     too_big = True
+                    await _kill(process, runner, unit)  # closes both pipes: nothing waits for a timeout
                     return bytes(data)
                 continue  # stderr past the limit is dropped
             data += block
@@ -242,7 +244,9 @@ async def run_extractor(runner: str, unit: str, kind: str, chunks, timeout_s: fl
     except BaseException:
         await _kill(process, runner, unit)
         raise
-    if process.returncode == 3:
+    if process.returncode == 3 or (process.returncode or 0) < 0:
+        # 3: the extractor's machine problem. Negative: the runner itself was signalled (the API
+        # stopping): not the file's fault, so the claim is given back instead of failing the file.
         return Extraction(environment_error=True)
     if process.returncode != 0:
         return Extraction(code="extractor_failed")
@@ -275,6 +279,7 @@ class FileWorker:
         self._wake = asyncio.Event()
         self._task: asyncio.Task | None = None
         self._current: Claim | None = None
+        self._released = False
         self._cancelled: set[uuid.UUID] = set()
 
     # ------------------------------------------------------------------ lifecycle
@@ -305,11 +310,19 @@ class FileWorker:
                 await _systemctl("kill", "-s", "KILL", claim.unit)
 
     async def _main(self) -> None:
-        try:
-            await self.recover(self_test=True)
-        except Exception as error:  # noqa: BLE001 - files stay unavailable; the API keeps serving
-            log.error("files recovery failed", extra={"error_type": type(error).__name__})
-            self.available = False
+        # Until recovery and the sandbox self-test pass, files stay unavailable (the API keeps
+        # serving); they are retried with backoff, so a start during a database restart heals itself.
+        delay = 15
+        while True:
+            try:
+                await self.recover(self_test=True)
+            except Exception as error:  # noqa: BLE001
+                log.error("files recovery failed", extra={"error_type": type(error).__name__})
+                self.available = False
+            if self.available or not self.configured():
+                break
+            await asyncio.sleep(delay)
+            delay = min(300, delay * 2)
         failures = 0
         while True:
             try:
@@ -441,6 +454,7 @@ class FileWorker:
         if claim is None:
             return False
         self._current = claim
+        self._released = False
         started = time.perf_counter()
         outcome, code, stats = "failed", None, {}
         try:
@@ -452,8 +466,9 @@ class FileWorker:
         except FileGone:
             outcome = "deleted"
         except asyncio.CancelledError:
-            with contextlib.suppress(Exception):
-                await asyncio.shield(self._release(claim))
+            if not self._released:
+                with contextlib.suppress(Exception):
+                    await asyncio.shield(self._release(claim))
             raise
         except Exception as error:  # noqa: BLE001
             code = "extractor_failed"
@@ -476,6 +491,8 @@ class FileWorker:
                 **stats,
             },
         )
+        if outcome == "requeued":
+            await asyncio.sleep(ENVIRONMENT_PAUSE_S)  # this machine cannot extract right now
         return True
 
     async def _process(self, claim: Claim) -> tuple[str, str | None, dict]:
@@ -488,9 +505,10 @@ class FileWorker:
         if claim.id in self._cancelled:
             raise FileGone
         if extraction.environment_error:
-            await self._release(claim)
+            # The attempt is given back, but the lease is kept: the file waits LEASE_S instead of
+            # being claimed again at once (and its student moves back in the fair order).
+            await self._release(claim, keep_lease=True)
             log.warning("file extractor environment error; retrying later", extra={"file_id": str(claim.id)})
-            await asyncio.sleep(ENVIRONMENT_PAUSE_S)
             return "requeued", None, stats
         if extraction.code:
             await self._fail(claim, extraction.code)
@@ -616,14 +634,18 @@ class FileWorker:
             )
             await session.commit()
 
-    async def _release(self, claim: Claim) -> None:
+    async def _release(self, claim: Claim, *, keep_lease: bool = False) -> None:
         """Give the claim back (shutdown, or a machine problem): it does not count as an attempt."""
+        self._released = True
         if self.runner == "systemd":
             await _systemctl("kill", "-s", "KILL", claim.unit)
         async with self.db.sessionmaker() as session:
             await session.execute(
                 update(UserFile)
                 .where(and_(UserFile.id == claim.id, UserFile.status == "processing"))
-                .values(processing_started_at=None, attempts=func.greatest(UserFile.attempts - 1, 0))
+                .values(
+                    processing_started_at=func.clock_timestamp() if keep_lease else None,
+                    attempts=func.greatest(UserFile.attempts - 1, 0),
+                )
             )
             await session.commit()

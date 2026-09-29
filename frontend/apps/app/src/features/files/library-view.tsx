@@ -72,7 +72,7 @@ export function LibraryView() {
   const readingKey = reading.join(",");
   useEffect(() => {
     if (!readingKey) return;
-    const timer = setTimeout(async () => {
+    const timer = setInterval(async () => {
       const ids = readingKey.split(",");
       const fresh = await Promise.all(ids.map((id) => getFile(id).catch(() => null)));
       setList((current) =>
@@ -84,7 +84,7 @@ export function LibraryView() {
           : current,
       );
     }, POLL_MS);
-    return () => clearTimeout(timer);
+    return () => clearInterval(timer);
   }, [readingKey]);
 
   const add = (files: globalThis.FileList | null) => {
@@ -216,7 +216,7 @@ export function LibraryView() {
         </p>
       )}
       {uploads.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-2" aria-label="Uploading">
+        <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Uploading">
           {uploads.map((chip) => (
             <AttachmentChip
               key={chip.localId}

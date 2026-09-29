@@ -67,7 +67,8 @@ export function ChatProvider({
     const { chat, conversations } = stores;
     if (!initialConversations) void conversations.refresh();
 
-    chat.onConversationCreated = (conversation) => {
+    chat.onConversationCreated = (conversation, draftKey) => {
+      stores.attachments.rekey(draftKey, conversation.id);
       conversations.upsert(conversation);
       if (chat.activeKey !== conversation.id) return;
       const path = `/c/${conversation.id}`;
@@ -93,7 +94,10 @@ export function ChatProvider({
     });
 
     // A chat started or renamed in another tab shows up when this one is focused.
-    const onFocus = () => void conversations.refresh(FOCUS_REFRESH_MS);
+    const onFocus = () => {
+      void conversations.refresh(FOCUS_REFRESH_MS);
+      stores.attachments.refreshReading();
+    };
     window.addEventListener("focus", onFocus);
 
     return () => {

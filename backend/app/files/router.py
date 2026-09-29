@@ -104,6 +104,8 @@ async def retry_file(
     db: AsyncSession = Depends(get_session),
     auth: AuthService = Depends(get_auth_service),
 ):
+    if not request.app.state.file_worker.available:
+        raise ServiceUnavailable("Files can't be read right now. Please try again later.", code="files_unavailable")
     await auth.throttle_files(principal.user)
     file = await files.retry(db, principal.user.id, file_id)
     request.app.state.file_worker.wake()

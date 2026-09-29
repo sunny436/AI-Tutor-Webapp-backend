@@ -44,6 +44,7 @@ export type ErrorCode =
   | "retry_not_allowed"
   | "busy"
   // client-side only
+  | "attachment_unavailable"
   | "network_error"
   | "stream_interrupted"
   | "interrupted"
@@ -118,6 +119,7 @@ const KNOWN = new Set<ErrorCode>([
   "too_many_files",
   "retry_not_allowed",
   "busy",
+  "attachment_unavailable",
   "network_error",
   "stream_interrupted",
   "interrupted",
@@ -336,6 +338,11 @@ const COPY: Record<ErrorCode, { title: string; message: string; action: Recovery
     title: "Busy right now",
     message: "Too many files are uploading at once. Please try again in a moment.",
     action: "retry",
+  },
+  attachment_unavailable: {
+    title: "A file isn't ready",
+    message: "One of the attached files was deleted or isn't ready yet. Remove it or wait, then send again.",
+    action: "edit",
   },
   network_error: {
     title: "You're offline",

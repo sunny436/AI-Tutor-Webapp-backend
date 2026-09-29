@@ -11,7 +11,7 @@ from tests.conftest import make_settings, register
 
 async def test_health_ready_and_request_id(client):
     r = await client.get("/health")
-    assert r.status_code == 200 and r.json() == {"status": "ok", "release": "development"}
+    assert r.status_code == 200 and r.json() == {"status": "ok", "release": "development", "files": "available"}
     assert len(r.headers["x-request-id"]) == 32
     r = await client.get("/ready", headers={"X-Request-ID": "trace-123"})
     assert r.status_code == 200 and r.json()["database"] is True

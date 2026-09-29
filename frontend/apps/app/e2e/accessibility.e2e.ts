@@ -151,7 +151,9 @@ test("the skip link goes to the page, then Tab reaches the message box", async (
   await expect(skip).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.locator("#main")).toBeFocused();
-  // A new chat is its greeting and the message box: nothing to tab past on the way.
+  // A new chat is its greeting and the message box: only Attach files comes before it.
+  await page.keyboard.press("Tab");
+  await expect(page.getByRole("button", { name: "Attach files" })).toBeFocused();
   await page.keyboard.press("Tab");
   await expect(composer(page)).toBeFocused();
 });

@@ -16,7 +16,7 @@ set -euo pipefail
 
 : "${POSTGRES_USER:?}" "${POSTGRES_DB:?}"
 BACKUP_DIR="${BACKUP_DIR:-/var/backups/aichat}"
-KEEP_DAYS="${KEEP_DAYS:-30}"
+KEEP_DAYS="${KEEP_DAYS:-7}"
 COMPOSE=(docker compose --env-file /etc/aichat/postgres.env -f /opt/aichat/shared/postgres/docker-compose.yml)
 
 mkdir -p "$BACKUP_DIR"

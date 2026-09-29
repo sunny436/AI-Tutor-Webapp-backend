@@ -23,6 +23,7 @@ import csv
 import io
 import json
 import math
+import os
 import re
 import sys
 import unicodedata
@@ -234,17 +235,20 @@ def _docx(data: bytes) -> tuple[list[dict], int]:
 
 
 def _shape_text(shape, out: list[str]) -> None:
-    from pptx.enum.shapes import MSO_SHAPE_TYPE
+    from pptx.shapes.group import GroupShape
 
-    if shape.shape_type == MSO_SHAPE_TYPE.GROUP:
-        for child in shape.shapes:
-            _shape_text(child, out)
-        return
-    if shape.has_text_frame:
-        out.append(shape.text_frame.text)
-    if getattr(shape, "has_table", False) and shape.has_table:
-        for row in shape.table.rows:
-            out.append("\t".join(cell.text for cell in row.cells))
+    try:
+        if isinstance(shape, GroupShape):
+            for child in shape.shapes:
+                _shape_text(child, out)
+            return
+        if shape.has_text_frame:
+            out.append(shape.text_frame.text)
+        if getattr(shape, "has_table", False) and shape.has_table:
+            for row in shape.table.rows:
+                out.append("\t".join(cell.text for cell in row.cells))
+    except NotImplementedError:
+        return  # a shape python-pptx cannot describe (ink, an unusual autoshape): skip it, keep the deck
 
 
 def _pptx(data: bytes) -> tuple[list[dict], int]:
@@ -400,6 +404,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--kind", required=True)
     parser.add_argument("--ocr-langs", default="eng+hin")
     args = parser.parse_args(argv)
+    # Only the JSON answer may reach stdout: anything a parser prints (openpyxl does) goes to
+    # stderr, which the caller drops. The answer is written as UTF-8 bytes, whatever the locale.
+    answer = os.fdopen(os.dup(1), "wb")
+    os.dup2(2, 1)
+    sys.stdout = sys.stderr
     data = sys.stdin.buffer.read(MAX_INPUT_BYTES + 1)
     try:
         if len(data) > MAX_INPUT_BYTES:
@@ -413,8 +422,8 @@ def main(argv: list[str] | None = None) -> int:
         result = {"ok": False, "protocol": PROTOCOL, "code": "content_too_large"}
     except Exception:  # noqa: BLE001 - a parser crash on this file is a corrupt file, never a traceback
         result = {"ok": False, "protocol": PROTOCOL, "code": "corrupt"}
-    sys.stdout.write(json.dumps(result, ensure_ascii=False))
-    sys.stdout.flush()
+    answer.write(json.dumps(result, ensure_ascii=False).encode("utf-8"))
+    answer.flush()
     return 0
 
 

@@ -148,6 +148,7 @@ def test_filenames_are_display_names_only():
     assert sanitize("a\u200bb\u2028c.txt") == "abc.txt"
     assert sanitize(".pdf") is None and sanitize("noextension") is None
     assert len(sanitize("x" * 400 + ".pdf").encode()) <= 255
+    assert sanitize("a." + "b" * 300) is None  # an absurd extension: refused at once, never looped on
 
 
 # ------------------------------------------------------------------------------ quota and duplicates
