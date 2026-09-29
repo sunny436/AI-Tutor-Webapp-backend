@@ -181,6 +181,8 @@ class LearningService:
         would refuse them."""
         stored = await self.get_profile(user_id)
         values = {**profile_values(stored), **(profile or {})}
+        if isinstance(values.get("preferred_study_time"), str):  # a draft's "HH:MM", as a save stores it
+            values["preferred_study_time"] = _as_time(values["preferred_study_time"])
         problems = self._check_codes(profile or {}, {}, "profile.") if profile else []
         problems = [p for p in problems if p["reason"] == "unknown_code"]  # a preview may show a kept, deprecated code
         if subjects is not None:
