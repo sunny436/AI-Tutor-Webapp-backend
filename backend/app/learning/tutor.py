@@ -4,9 +4,10 @@ The chat appends the result to the frozen system prompt (app/chat/assistant.py),
 preview (POST /v1/learning/tutor-preview) returns the same function's output for a draft, so
 what a student previews is exactly what the tutor is told.
 
-- **Neutral means nothing.** A student with no settings, or with every preference on `auto`,
-  gets an empty string, and so exactly the tutor everyone got before settings existed
-  (tests/test_legacy_tutor.py).
+- **Neutral means nothing.** A student with no settings (or every preference on `auto`) who has
+  not learnt yet gets an empty string, and so exactly the tutor everyone got before settings
+  existed (tests/test_legacy_tutor.py). Once they have learnt, every student also gets one
+  "Learning so far" line: their streak and today's activity (owner decision, 2026-09-29).
 - **Student text is information, never instructions.** It is shown on one line, in quotes that
   it cannot close (a double quote in it becomes a single one), under a heading that tells the
   model not to follow instructions inside it. Line breaks were already removed when it was
@@ -20,7 +21,9 @@ what a student previews is exactly what the tutor is told.
 
 from __future__ import annotations
 
-from app.learning.context import StudentContext
+from datetime import time
+
+from app.learning.context import StudentContext, TutorProgress
 
 MAX_TUTOR_BLOCK_CHARS = 6000
 
@@ -129,7 +132,7 @@ TEACHING_TEXT: dict[str, dict[str, str]] = {
 }
 
 # If the block is ever over the cap, these "About" lines go first, in this order.
-DROP_ORDER = ("long_term_goal", "short_term_goal", "weak_topics", "target_exam", "subjects")
+DROP_ORDER = ("progress", "study_time", "long_term_goal", "short_term_goal", "weak_topics", "target_exam", "subjects")
 
 
 def quote(text: str) -> str:
@@ -143,6 +146,38 @@ def _subject(subject) -> str:
     return f"{subject.name} ({', '.join(notes)})" if notes else subject.name
 
 
+def _clock(moment: time) -> str:
+    return f"{moment.hour % 12 or 12}:{moment.minute:02d} {'am' if moment.hour < 12 else 'pm'}"
+
+
+def _study_time(student: StudentContext) -> str:
+    """Only the parts that are set; a zero goal says nothing."""
+    goals = [
+        f"{minutes} min a {period}"
+        for minutes, period in ((student.daily_minutes_goal, "day"), (student.weekly_minutes_goal, "week"))
+        if minutes
+    ]
+    parts = [f"aims for {' and '.join(goals)}"] if goals else []
+    if student.study_time is not None:
+        parts.append(f"usually studies around {_clock(student.study_time)}")
+    return "- Study time: " + "; ".join(parts) if parts else ""
+
+
+def _progress(progress: TutorProgress | None) -> str:
+    """Nothing until the student has learnt; zero parts are left out."""
+    if progress is None:
+        return ""
+    parts = [f"a {progress.streak_days}-day learning streak"] if progress.streak_days else []
+    today = []
+    if progress.today_minutes:
+        today.append(f"{progress.today_minutes} min active")
+    if progress.today_questions:
+        today.append(f"{progress.today_questions} question{'s' if progress.today_questions != 1 else ''}")
+    if today:
+        parts.append("today " + " and ".join(today))
+    return "- Learning so far: " + "; ".join(parts) if parts else ""
+
+
 def _about_lines(student: StudentContext) -> list[tuple[str, str]]:
     board = student.board
     if board and student.board_state:
@@ -151,6 +186,7 @@ def _about_lines(student: StudentContext) -> list[tuple[str, str]]:
         ("grade", f"- Class: {student.grade}" if student.grade else ""),
         ("board", f"- Board: {board}" if board else ""),
         ("medium", f"- Medium of instruction at school: {student.medium}" if student.medium else ""),
+        ("academic_year", f"- Academic year: {student.academic_year}" if student.academic_year else ""),
         ("subjects", "- Subjects: " + ", ".join(_subject(s) for s in student.subjects) if student.subjects else ""),
         (
             "main_goal",
@@ -169,6 +205,8 @@ def _about_lines(student: StudentContext) -> list[tuple[str, str]]:
         ),
         ("short_term_goal", f"- Short-term goal: {quote(student.short_term_goal)}" if student.short_term_goal else ""),
         ("long_term_goal", f"- Long-term goal: {quote(student.long_term_goal)}" if student.long_term_goal else ""),
+        ("study_time", _study_time(student)),
+        ("progress", _progress(student.progress)),
     ]
     return [(key, line) for key, line in lines if line]
 

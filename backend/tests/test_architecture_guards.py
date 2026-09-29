@@ -105,7 +105,9 @@ def test_dependency_direction():
 def test_the_learning_domain_is_reached_only_through_its_public_modules():
     """Other domains read a student's context (app.learning.context) and render the tutor's
     instructions (app.learning.tutor); only the composition root mounts its router. Nothing
-    else reaches into Learning's tables or service, and Learning depends on no other domain."""
+    else reaches into Learning's tables or service, and Learning depends on no other domain, but
+    for one read: its router's tutor preview takes the "Learning so far" line from Progress's
+    public module, exactly as the chat does."""
     app_dir = BACKEND / "app"
     public = {"app.learning.context", "app.learning.tutor"}
     for module in app_dir.rglob("*.py"):
@@ -119,6 +121,8 @@ def test_the_learning_domain_is_reached_only_through_its_public_modules():
             m for m in _imports(module) if m.startswith(("app.chat", "app.conversations", "app.rag", "app.llm"))
         }
         assert not other_domains, (module.name, other_domains)
+        progress = {m for m in _imports(module) if m.startswith("app.progress")}
+        assert progress <= ({"app.progress.learning"} if module.name == "router.py" else set()), (module.name, progress)
 
 
 def test_the_progress_domain_is_reached_only_through_its_public_module():

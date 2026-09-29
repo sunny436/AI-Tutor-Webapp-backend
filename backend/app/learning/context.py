@@ -1,5 +1,6 @@
-"""The Learning domain's public reads: what the tutor may know about a student, and the
-student's active-time goals.
+"""The Learning domain's public reads: what the tutor may know about a student (their settings,
+and how they are doing: TutorProgress, read by app.progress.learning), and the student's
+active-time goals.
 
 Chat reads the context once per turn, inside its prepare transaction (app/chat/service.py);
 Progress reads the goals (app/progress) and reminders the study time (app/notifications). None
@@ -30,11 +31,23 @@ class SubjectContext:
 
 
 @dataclass(frozen=True)
+class TutorProgress:
+    """How the student is doing, as the tutor is told it: the header's learning streak (India
+    days) and today's active minutes and questions (the student's own day). Numbers only; read by
+    app.progress.learning.tutor_progress, before the question being asked is counted."""
+
+    streak_days: int = 0
+    today_minutes: int = 0
+    today_questions: int = 0
+
+
+@dataclass(frozen=True)
 class StudentContext:
     grade: str | None = None
     board: str | None = None
     board_state: str | None = None
     medium: str | None = None
+    academic_year: str | None = None
     subjects: tuple[SubjectContext, ...] = ()
     main_goal: str | None = None  # a MAIN_GOALS code
     target_exam: str | None = None
@@ -42,8 +55,12 @@ class StudentContext:
     weak_topics: tuple[str, ...] = ()
     short_term_goal: str | None = None
     long_term_goal: str | None = None
+    daily_minutes_goal: int | None = None
+    weekly_minutes_goal: int | None = None
+    study_time: time | None = None
     # Only the preferences that are not "auto", in PREFERENCE_CHOICES order.
     preferences: tuple[tuple[str, str], ...] = ()
+    progress: TutorProgress | None = None
 
 
 @dataclass(frozen=True)
@@ -60,10 +77,14 @@ def _name(entries: tuple[catalog.Entry, ...], code: str | None) -> str | None:
 
 
 def build_context(
-    profile: Mapping[str, object], subjects: Iterable[SubjectChoice], preferences: Mapping[str, str]
+    profile: Mapping[str, object],
+    subjects: Iterable[SubjectChoice],
+    preferences: Mapping[str, str],
+    progress: TutorProgress | None = None,
 ) -> StudentContext:
     """Pure: from stored (or draft) values to what the tutor is told. `profile` and
-    `preferences` map column names to values; anything missing counts as unset."""
+    `preferences` map column names to values; anything missing counts as unset. `progress` is
+    read by the caller (app.progress.learning.tutor_progress)."""
     board_state = _name(catalog.BOARD_STATES, profile.get("board_state")) if profile.get("board") == "state" else None
     named_subjects = []
     for subject in subjects:
@@ -75,6 +96,7 @@ def build_context(
         board=_name(catalog.BOARDS, profile.get("board")),
         board_state=board_state,
         medium=_name(catalog.MEDIUMS, profile.get("medium")),
+        academic_year=_name(catalog.ACADEMIC_YEARS, profile.get("academic_year")),
         subjects=tuple(named_subjects),
         main_goal=profile.get("main_goal"),
         target_exam=profile.get("target_exam"),
@@ -82,9 +104,13 @@ def build_context(
         weak_topics=tuple(profile.get("weak_topics") or ()),
         short_term_goal=profile.get("short_term_goal"),
         long_term_goal=profile.get("long_term_goal"),
+        daily_minutes_goal=profile.get("daily_active_minutes_goal"),
+        weekly_minutes_goal=profile.get("weekly_active_minutes_goal"),
+        study_time=profile.get("preferred_study_time"),
         preferences=tuple(
             (name, preferences[name]) for name in PREFERENCE_CHOICES if preferences.get(name, "auto") != "auto"
         ),
+        progress=progress,
     )
 
 
@@ -129,8 +155,10 @@ async def read_study_time(session: AsyncSession, user_id: uuid.UUID) -> time | N
     return row.preferred_study_time if row else None
 
 
-async def read_student_context(session: AsyncSession, user_id: uuid.UUID) -> StudentContext:
+async def read_student_context(
+    session: AsyncSession, user_id: uuid.UUID, progress: TutorProgress | None = None
+) -> StudentContext:
     profile = await session.get(LearnerProfile, user_id)
     preferences = await session.get(LearningPreferences, user_id)
     subjects = await read_subjects(session, user_id) if profile else []  # subjects need a profile row
-    return build_context(profile_values(profile), subject_choices(subjects), preference_values(preferences))
+    return build_context(profile_values(profile), subject_choices(subjects), preference_values(preferences), progress)

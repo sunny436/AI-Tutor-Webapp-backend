@@ -4092,7 +4092,7 @@
     },
     "/v1/learning/tutor-preview": {
       "post": {
-        "description": "What the tutor would be told with these (unsaved) edits: the same function the chat\nuses, so the preview cannot differ from a real conversation. Nothing is saved.",
+        "description": "What the tutor would be told with these (unsaved) edits: the same function the chat\nuses, with the same \"Learning so far\", so the preview is exactly what the next message is\ntold. Nothing is saved.",
         "operationId": "tutor_preview_v1_learning_tutor_preview_post",
         "requestBody": {
           "content": {

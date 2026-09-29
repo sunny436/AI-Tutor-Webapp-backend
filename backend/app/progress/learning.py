@@ -26,7 +26,8 @@ from sqlalchemy import func, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.db.models import LearningDailyActivity
+from app.db.models import ActivityDay, LearningDailyActivity
+from app.learning.context import TutorProgress
 from app.notifications.inbox import notify
 from app.progress import activity
 from app.progress.activity import ONE_DAY, streaks
@@ -100,6 +101,22 @@ async def streak_state(session: AsyncSession, user_id: uuid.UUID, now: datetime)
     today = learning_date(now)
     current, longest = streaks(days, today)
     return StreakState(current=current, longest=longest, today=today, today_active=today in days, day_end=day_end(now))
+
+
+async def tutor_progress(
+    session: AsyncSession, user_id: uuid.UUID, timezone: str | None, default_timezone: str, now: datetime
+) -> TutorProgress:
+    """What the tutor is told of how the student is doing: the header's streak, and today's
+    active minutes and questions as the Progress page counts them. Read before a new question is
+    recorded, so the Settings preview shows exactly what the next message is told."""
+    state = await streak_state(session, user_id, now)
+    today = activity.local_date(now, activity.zone_for(timezone, default_timezone))
+    day = await session.get(ActivityDay, (user_id, today))
+    return TutorProgress(
+        streak_days=state.current,
+        today_minutes=day.active_seconds // activity.MINUTE_SECONDS if day else 0,
+        today_questions=day.questions if day else 0,
+    )
 
 
 async def record_learning(session: AsyncSession, user_id: uuid.UUID, now: datetime) -> StreakState:

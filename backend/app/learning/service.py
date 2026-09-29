@@ -20,6 +20,7 @@ from app.errors import ValidationFailed, VersionConflict
 from app.learning import catalog
 from app.learning.context import (
     SubjectChoice,
+    TutorProgress,
     build_context,
     preference_values,
     profile_values,
@@ -173,9 +174,11 @@ class LearningService:
         profile: dict[str, object] | None,
         subjects: list[SubjectChoice] | None,
         preferences: dict[str, str] | None,
+        progress: TutorProgress | None = None,
     ) -> str:
-        """The stored settings with a draft laid over them, as the tutor would be told. Nothing
-        is written; unknown codes are refused like a save would refuse them."""
+        """The stored settings with a draft laid over them, as the tutor would be told (with
+        `progress`, read by the caller). Nothing is written; unknown codes are refused like a save
+        would refuse them."""
         stored = await self.get_profile(user_id)
         values = {**profile_values(stored), **(profile or {})}
         problems = self._check_codes(profile or {}, {}, "profile.") if profile else []
@@ -191,7 +194,7 @@ class LearningService:
         if subjects is None:
             subjects = subject_choices(await read_subjects(self.db, user_id)) if stored else []
         merged_preferences = {**preference_values(await self.get_preferences(user_id)), **(preferences or {})}
-        return build_tutor_instructions(build_context(values, subjects, merged_preferences))
+        return build_tutor_instructions(build_context(values, subjects, merged_preferences, progress))
 
 
 def _camel(column: str) -> str:

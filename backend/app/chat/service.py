@@ -32,11 +32,11 @@ from app.conversations.router import conversation_out, message_out
 from app.db.models import Conversation, Message, UsageEvent, User
 from app.db.session import Database
 from app.errors import Conflict, NotFound, RateLimited, ValidationFailed
-from app.learning.context import read_student_context
+from app.learning.context import StudentContext, read_student_context
 from app.llm.base import ChatMessage, GenerationOptions, LLMError
 from app.logging import get_logger, request_id_var
 from app.progress.activity import record_question
-from app.progress.learning import is_meaningful, now, record_learning
+from app.progress.learning import is_meaningful, now, record_learning, tutor_progress
 from app.settings import Settings
 
 log = get_logger("app.chat")
@@ -153,6 +153,11 @@ class ChatService:
         )
         return assistant
 
+    async def _student(self, session: AsyncSession, user: User) -> StudentContext:
+        """What the tutor is told about this student: their settings and how they are doing."""
+        progress = await tutor_progress(session, user.id, user.timezone, self.settings.default_timezone, now())
+        return await read_student_context(session, user.id, progress)
+
     async def prepare_message(
         self, session: AsyncSession, user: User, conversation_id: uuid.UUID | None, text: str
     ) -> PreparedTurn:
@@ -168,13 +173,14 @@ class ChatService:
                 raise NotFound("Conversation not found.")
         await self._check_turn_allowed(session, user.id, conversation.id)
 
+        # Read before this question is counted: the same as the Settings preview showed.
+        student = await self._student(session, user)
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
         await session.flush()
         await record_question(session, user.id, user.timezone, self.settings.default_timezone)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
-        student = await read_student_context(session, user.id)
         await session.commit()
         await session.refresh(conversation)
         await session.refresh(user_message)
@@ -197,9 +203,9 @@ class ChatService:
         if last is None or last.role != "assistant":
             raise Conflict("There is no reply to regenerate.")
         last.status = "superseded"
+        student = await self._student(session, user)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
-        student = await read_student_context(session, user.id)
         await session.commit()
         await session.refresh(conversation)
         return PreparedTurn(

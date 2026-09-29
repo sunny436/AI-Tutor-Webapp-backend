@@ -2,6 +2,7 @@
 
 import json
 import re
+from datetime import time
 from pathlib import Path
 
 from sqlalchemy import text
@@ -10,7 +11,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from app.chat.assistant import SYSTEM_PROMPT, resolve_assistant_config
 from app.db.models import MAIN_GOALS, PREFERENCE_CHOICES
 from app.learning import catalog
-from app.learning.context import StudentContext, SubjectChoice, build_context
+from app.learning.context import StudentContext, SubjectChoice, TutorProgress, build_context
 from app.learning.schemas import (
     GOAL_MAX,
     SUBJECTS_MAX,
@@ -56,9 +57,14 @@ def worst_case() -> StudentContext:
             "weak_topics": ["क" * (TOPIC_MAX - 1) + str(n) for n in range(TOPICS_MAX)],
             "short_term_goal": "ख" * GOAL_MAX,
             "long_term_goal": "ग" * GOAL_MAX,
+            "academic_year": _longest(catalog.ACADEMIC_YEARS),
+            "daily_active_minutes_goal": 720,
+            "weekly_active_minutes_goal": 5040,
+            "preferred_study_time": time(23, 59),
         },
         [SubjectChoice(entry.code, True, True) for entry in subjects],
         {name: max(TEACHING_TEXT[name], key=lambda value: len(TEACHING_TEXT[name][value])) for name in TEACHING_TEXT},
+        TutorProgress(streak_days=36500, today_minutes=1440, today_questions=100000),
     )
 
 
@@ -68,9 +74,10 @@ def test_nothing_set_means_no_instructions():
     assert build_tutor_instructions(StudentContext()) == ""
     assert build_tutor_instructions(build_context({}, [], {})) == ""
     neutral = build_context(
-        {"grade": "other", "board": "other", "medium": "other", "main_goal": "other", "academic_year": "2026_27"},
+        {"grade": "other", "board": "other", "medium": "other", "main_goal": "other", "daily_active_minutes_goal": 0},
         [],
         dict.fromkeys(PREFERENCE_CHOICES, "auto"),
+        TutorProgress(),  # has not learnt yet
     )
     assert build_tutor_instructions(neutral) == ""
     assert resolve_assistant_config(None, None, neutral).system_prompt == SYSTEM_PROMPT
@@ -82,7 +89,7 @@ async def test_a_student_whose_settings_are_all_neutral_gets_the_legacy_tutor(cl
     assert (
         await client.patch("/v1/learning/preferences", json={"version": 0, "set": everything_auto}, headers=headers)
     ).status_code == 200
-    profile = {"academicYear": "2026_27", "dailyActiveMinutesGoal": 30, "preferredStudyTime": "18:00", "grade": "other"}
+    profile = {"grade": "other", "board": "other", "dailyActiveMinutesGoal": 0}
     assert (
         await client.patch("/v1/learning/profile", json={"version": 0, "set": profile}, headers=headers)
     ).status_code == 200
@@ -90,7 +97,11 @@ async def test_a_student_whose_settings_are_all_neutral_gets_the_legacy_tutor(cl
     _, first = await stream_chat(client, headers, "What is photosynthesis?")
     await stream_chat(client, headers, "Explain the second step.", first[0][1]["conversationId"])
     sent = [[{"role": m.role, "content": m.content} for m in call] for call in fake_llm.calls]
-    assert sent == LEGACY_MESSAGES
+    # Nothing set and nothing learnt: the legacy tutor. From the second turn, how they are doing.
+    assert sent[0] == LEGACY_MESSAGES[0]
+    assert sent[1][1:] == LEGACY_MESSAGES[1][1:]
+    progress = "- Learning so far: a 1-day learning streak; today 1 question"
+    assert sent[1][0]["content"] == f"{SYSTEM_PROMPT}\n\n{ABOUT_HEADING}\n{progress}"
 
 
 # ------------------------------------------------------------------ exact content
@@ -120,9 +131,14 @@ def test_the_about_section_names_what_the_student_chose():
                 "weak_topics": ["Genetics", "Optics"],
                 "short_term_goal": "Revise biology",
                 "long_term_goal": "Become a doctor",
+                "academic_year": "2026_27",
+                "daily_active_minutes_goal": 45,
+                "weekly_active_minutes_goal": 300,
+                "preferred_study_time": time(18, 30),
             },
             [SubjectChoice("biology", True, False), SubjectChoice("chemistry", False, True), SubjectChoice("physics")],
             {},
+            TutorProgress(streak_days=3, today_minutes=12, today_questions=1),
         )
     )
     assert block == "\n".join(
@@ -131,6 +147,7 @@ def test_the_about_section_names_what_the_student_chose():
             "- Class: Class 12",
             "- Board: State board (Tamil Nadu)",
             "- Medium of instruction at school: Tamil",
+            "- Academic year: 2026–27",
             "- Subjects: Biology (a priority), Chemistry (needs work), Physics",
             "- Main goal: preparing for a competitive exam",
             '- Preparing for: "NEET"',
@@ -138,8 +155,14 @@ def test_the_about_section_names_what_the_student_chose():
             '- Topics they find difficult: "Genetics"; "Optics"',
             '- Short-term goal: "Revise biology"',
             '- Long-term goal: "Become a doctor"',
+            "- Study time: aims for 45 min a day and 300 min a week; usually studies around 6:30 pm",
+            "- Learning so far: a 3-day learning streak; today 12 min active and 1 question",
         ]
     )
+    only_time = build_tutor_instructions(build_context({"preferred_study_time": time(7, 5)}, [], {}))
+    assert only_time == f"{ABOUT_HEADING}\n- Study time: usually studies around 7:05 am"
+    only_questions = build_tutor_instructions(build_context({}, [], {}, TutorProgress(today_questions=2)))
+    assert only_questions == f"{ABOUT_HEADING}\n- Learning so far: today 2 questions"
 
 
 def test_a_board_state_shows_only_with_a_state_board():
@@ -172,7 +195,15 @@ def test_student_text_stays_quoted_information():
 def test_the_worst_case_fits_the_cap_without_dropping_anything():
     block = build_tutor_instructions(worst_case())
     assert len(block) <= MAX_TUTOR_BLOCK_CHARS
-    for heading in ("- Long-term goal:", "- Short-term goal:", "- Topics they find difficult:", "- Subjects:"):
+    for heading in (
+        "- Learning so far:",
+        "- Study time:",
+        "- Academic year:",
+        "- Long-term goal:",
+        "- Short-term goal:",
+        "- Topics they find difficult:",
+        "- Subjects:",
+    ):
         assert heading in block  # the cap is a backstop, not something the worst case reaches
 
 

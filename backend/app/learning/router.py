@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, Request, Response
 from fastapi.responses import JSONResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.auth.dependencies import Principal, get_principal
+from app.auth.dependencies import Principal, get_principal, get_settings_dep
 from app.db.models import PREFERENCE_CHOICES, LearnerProfile, LearnerSubject, LearningPreferences
 from app.db.session import get_session
 from app.errors import RateLimited, VersionConflict
@@ -27,6 +27,10 @@ from app.learning.schemas import (
 )
 from app.learning.service import LearningService
 from app.learning.tutor import MAX_TUTOR_BLOCK_CHARS
+
+# The one reach into another domain: the preview shows the tutor's "Learning so far" line too.
+from app.progress.learning import now, tutor_progress
+from app.settings import Settings
 
 router = APIRouter(prefix="/v1", tags=["learning"])
 
@@ -197,16 +201,21 @@ async def tutor_preview(
     request: Request,
     principal: Principal = Depends(get_principal),
     learning: LearningService = Depends(get_learning_service),
+    db: AsyncSession = Depends(get_session),
+    settings: Settings = Depends(get_settings_dep),
 ):
     """What the tutor would be told with these (unsaved) edits: the same function the chat
-    uses, so the preview cannot differ from a real conversation. Nothing is saved."""
+    uses, with the same "Learning so far", so the preview is exactly what the next message is
+    told. Nothing is saved."""
     user_id = principal.user.id
     if not request.app.state.tutor_preview_limiter.allow(str(user_id)):
         raise RateLimited()
+    progress = await tutor_progress(db, user_id, principal.user.timezone, settings.default_timezone, now())
     instructions = await learning.preview_instructions(
         user_id,
         body.profile.model_dump(include=body.profile.model_fields_set) if body.profile else None,
         _choices(body.subjects) if body.subjects is not None else None,
         body.preferences.model_dump(include=body.preferences.model_fields_set) if body.preferences else None,
+        progress,
     )
     return TutorPreviewOut(instructions=instructions, max_chars=MAX_TUTOR_BLOCK_CHARS)
