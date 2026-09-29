@@ -84,7 +84,9 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     await expect(banner(page).getByRole("heading", { level: 1 })).toHaveText("New chat");
     await expect(page.getByText(/AI Tutor|Personal Doubts Solver|Powered by|can make mistakes/)).toHaveCount(0);
     await expect(page.getByRole("navigation", { name: "Learning Hub" })).toHaveCount(0);
-    await expect(page.getByRole("main").getByRole("button")).toHaveCount(1);
+    // Attach files, Send and (where the browser can dictate) Dictate; nothing else.
+    const buttons = await page.getByRole("main").getByRole("button").evaluateAll((all) => all.map((b) => b.getAttribute("aria-label")));
+    expect(buttons.filter((name) => name !== "Dictate")).toEqual(["Attach files", "Send message"]);
     await expect(page.getByRole("textbox", { name: "Ask your doubt" })).toBeEditable();
     expect(await page.locator("form:has(textarea)").count()).toBe(1);
     const centred = await page.evaluate(() => {
