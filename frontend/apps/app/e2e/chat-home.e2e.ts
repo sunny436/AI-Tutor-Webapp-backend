@@ -259,7 +259,10 @@ test("the account menu, by keyboard: named, expands, arrows, Escape gives focus 
   await waitForHydration(page);
   await trigger.focus();
   await page.keyboard.press("Enter");
+  // Each key once the menu has moved focus: a key pressed before it opened is not the menu's.
+  await expect(page.getByRole("menuitem", { name: "Settings" })).toBeFocused();
   await page.keyboard.press("ArrowDown");
+  await expect(page.getByRole("menuitem", { name: "Log out" })).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page).toHaveURL("/login");
 });
@@ -299,6 +302,31 @@ for (const width of [320, 375]) {
     await expectNoHorizontalOverflow(page);
   });
 }
+
+test("a menu opened while a new chat gets its address stays open, with focus in it", async ({ page, account: _ }) => {
+  await page.goto("/");
+  await waitForHydration(page);
+  // The reply's first event, which gives the chat its address, comes 1.5 s after sending.
+  await page.route(
+    STREAM,
+    async (route) => {
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      await route.continue();
+    },
+    { times: 1 },
+  );
+  await composer(page).fill("A first question, then the account menu");
+  await page.getByRole("button", { name: "Send message" }).click();
+  const menu = await accountMenu(page);
+  await expect(page).toHaveURL(/\/c\/[0-9a-f-]{36}$/, { timeout: 15_000 });
+  await page.waitForTimeout(500);
+  await expect(menu).toBeVisible();
+  expect(await menu.evaluate((element) => element.contains(document.activeElement))).toBe(true);
+  await expect(composer(page)).not.toBeFocused();
+  await page.keyboard.press("Escape");
+  await expect(menu).toHaveCount(0);
+  await waitForIdle(page);
+});
 
 test("Settings opened while a new chat's first reply starts, on a slow server, stays open; Close comes back to the chat", async ({
   page,

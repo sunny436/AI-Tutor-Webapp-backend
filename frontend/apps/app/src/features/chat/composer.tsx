@@ -64,8 +64,14 @@ export function Composer({ chatKey, onSent }: { chatKey: string; onSent?: () => 
   const canSend = Boolean(value.trim()) && !stream && !tooLong;
   const error = entry?.composerError ?? null;
 
-  // Each conversation keeps its own unsent text.
+  // Each conversation keeps its own unsent text. A new chat getting its address (its draft key
+  // becoming the conversation's id) is the same chat, not an arrival: it is left alone, so focus
+  // is not pulled out of a menu the student has just opened (which would close it).
+  const arrivedAt = useRef<string | null>(null);
   useEffect(() => {
+    const previous = arrivedAt.current;
+    arrivedAt.current = chatKey;
+    if (previous !== null && chat.resolve(previous) === chat.resolve(chatKey)) return;
     setValue(chat.getDraft(chatKey));
     // Focus on arrival where a physical keyboard is likely (not on touch, where it
     // would pop the on-screen keyboard over the conversation).
