@@ -63,20 +63,41 @@ DropdownMenuSubContent.displayName =
 const DropdownMenuContent = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>
->(({ className, sideOffset = 4, ...props }, ref) => (
-  <DropdownMenuPrimitive.Portal>
-    <DropdownMenuPrimitive.Content
-      ref={ref}
-      sideOffset={sideOffset}
-      className={cn(
-        "z-50 min-w-[8rem] overflow-hidden rounded-xl border border-border bg-popover p-1.5 text-popover-foreground elev-3",
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 origin-[--radix-dropdown-menu-content-transform-origin] data-[state=open]:duration-fast data-[state=open]:ease-enter data-[state=closed]:duration-fast data-[state=closed]:ease-exit",
-        className,
-      )}
-      {...props}
-    />
-  </DropdownMenuPrimitive.Portal>
-));
+>(({ className, sideOffset = 4, onPointerDownOutside, ...props }, ref) => {
+  const content = React.useRef<HTMLDivElement | null>(null);
+  return (
+    <DropdownMenuPrimitive.Portal>
+      <DropdownMenuPrimitive.Content
+        ref={(node) => {
+          content.current = node;
+          if (typeof ref === "function") ref(node);
+          else if (ref) ref.current = node;
+        }}
+        sideOffset={sideOffset}
+        onPointerDownOutside={(event) => {
+          onPointerDownOutside?.(event);
+          // A press on this menu's own trigger is the trigger's to handle: it toggles the menu.
+          // Dismissing here as well closed a menu reopened while its closing animation still
+          // ran (open, Escape, press again: it stayed shut 17 times in 25 on production).
+          const trigger = content.current?.getAttribute("aria-labelledby");
+          const target = event.target;
+          if (
+            trigger &&
+            target instanceof Element &&
+            target.closest(`[id="${trigger}"]`)
+          )
+            event.preventDefault();
+        }}
+        className={cn(
+          "z-50 min-w-[8rem] overflow-hidden rounded-xl border border-border bg-popover p-1.5 text-popover-foreground elev-3",
+          "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 origin-[--radix-dropdown-menu-content-transform-origin] data-[state=open]:duration-fast data-[state=open]:ease-enter data-[state=closed]:duration-fast data-[state=closed]:ease-exit",
+          className,
+        )}
+        {...props}
+      />
+    </DropdownMenuPrimitive.Portal>
+  );
+});
 DropdownMenuContent.displayName = DropdownMenuPrimitive.Content.displayName;
 
 const DropdownMenuItem = React.forwardRef<
