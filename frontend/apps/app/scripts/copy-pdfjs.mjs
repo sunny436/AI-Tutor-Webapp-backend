@@ -5,7 +5,7 @@
 // module worker. A folder per version, so a rolled-back build still finds the worker that matches
 // its pdf.js (pdf.js refuses a worker of another version). Runs before `next dev` and `next build`;
 // the folder is git-ignored and made again on every build.
-import { copyFileSync, mkdirSync, readFileSync } from "node:fs";
+import { chmodSync, copyFileSync, mkdirSync, readFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -21,5 +21,9 @@ const files = [
   ["wasm/openjpeg_nowasm_fallback.js", "wasm/openjpeg_nowasm_fallback.js"],
 ];
 mkdirSync(join(target, "wasm"), { recursive: true });
-for (const [from, to] of files) copyFileSync(join(source, from), join(target, to));
+for (const [from, to] of files) {
+  copyFileSync(join(source, from), join(target, to));
+  // Served to every browser: writable by its owner only (bun unpacks packages 0666).
+  chmodSync(join(target, to), 0o644);
+}
 console.log(`pdf.js ${version}: worker and decoders copied to public/pdfjs/${version}/`);

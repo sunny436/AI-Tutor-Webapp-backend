@@ -130,6 +130,11 @@ if [ "$DO_FDEPS" = 1 ]; then
   mark frontend-deps "$K_FDEPS"
   DONE+=("frontend-deps")
 fi
+if [ "$DO_FDEPS$DO_BUILD" != 00 ]; then
+  # bun unpacks packages world-writable (0666), and they are code the web app runs and serves:
+  # writable by root only. Idempotent, so it also fixes an install made before this line existed.
+  chmod -R go-w "$APP/frontend/node_modules" 2>/dev/null || true
+fi
 NEW_BUILD=""
 if [ "$DO_BUILD" = 1 ]; then
   if [ "$(cat "$WEBDIR/.next-prev/AICHAT_KEY" 2>/dev/null)" = "$K_FRONT" ]; then

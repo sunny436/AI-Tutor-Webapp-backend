@@ -234,6 +234,10 @@ finished message (`done` and message lists), not while the reply streams.
 event: meta
 data: {"conversationId","conversation":{...},"userMessage":{...}|null,"assistantMessageId","replacesMessageId"|null}
 
+event: citations                         (at most once, before the first token; only when the
+data: {"messageId","citations":[...]}      prompt numbered sources or files: the Message
+                                           `metadata.citations` shape, which `done` repeats)
+
 event: token
 data: {"text":"partial text"}            (repeated)
 
@@ -250,7 +254,8 @@ data: {"code":"llm_unavailable|llm_timeout|llm_bad_request|service_unavailable|i
 - Concatenated `token.text` equals `done.message.content`.
 - Stopping: call `POST /v1/messages/{assistantMessageId}/cancel`; the stream then ends with `done`
   whose message has `status: "cancelled"`. Closing the connection also stops the reply (same result).
-- Unknown event types may be added later (e.g. citations) and must be ignored by clients.
+- Unknown event types may be added later and must be ignored by clients (`citations` was, on
+  2026-09-30).
 
 ## Files (the File Library)
 

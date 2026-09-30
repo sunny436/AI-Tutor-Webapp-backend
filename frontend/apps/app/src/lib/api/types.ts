@@ -360,6 +360,9 @@ export type StreamMeta = {
 
 export type StreamToken = { text: string };
 
+/** What the reply's [1] / [F1] markers point at; sent before the first token when there are any. */
+export type StreamCitations = { messageId: Uuid; citations: Citation[] };
+
 /** Authoritative final state. `message.status` may be `cancelled`. */
 export type StreamDone = { message: Message; conversation: Conversation };
 

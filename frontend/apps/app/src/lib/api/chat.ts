@@ -7,6 +7,7 @@
  *   event: meta    — the conversation (created if new), the persisted user message,
  *                    the assistant message id. Sent after the turn is committed and
  *                    before the model starts, so it arrives almost at once.
+ *   event: citations — at most one, before the first token: what [1] / [F1] point at
  *   event: token   — zero or more; a preview of the reply
  *   : keepalive    — every 15 s of silence
  *   event: done    — OR —   event: error        exactly one, then the stream ends
@@ -33,12 +34,14 @@ import type {
   StreamDone,
   StreamFailure,
   StreamMeta,
+  StreamCitations,
   StreamToken,
 } from "./types";
 
 export type StreamHandlers = {
   onMeta?: (meta: StreamMeta) => void;
   onToken?: (token: StreamToken) => void;
+  onCitations?: (citations: StreamCitations) => void;
   onDone?: (done: StreamDone) => void;
   onError?: (failure: StreamFailure) => void;
 };
@@ -114,6 +117,11 @@ async function openStream(
       case "token": {
         const token = parseJson<StreamToken>(data);
         if (typeof token?.text === "string" && token.text) handlers.onToken?.(token);
+        return;
+      }
+      case "citations": {
+        const found = parseJson<StreamCitations>(data);
+        if (found?.messageId && Array.isArray(found.citations)) handlers.onCitations?.(found);
         return;
       }
       case "done": {

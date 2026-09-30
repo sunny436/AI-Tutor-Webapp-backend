@@ -444,6 +444,11 @@ export class ChatStore {
           });
         }
       },
+      onCitations: ({ messageId, citations }) => {
+        // The reply's [1] / [F1] become chips while it is still being written.
+        const current = this.getMessage(canonical, messageId);
+        if (current) this.putMessage(canonical, { ...current, metadata: { ...current.metadata, citations } });
+      },
       onDone: (done: StreamDone) => {
         this.flush(canonical, done.message.id);
         this.putMessage(canonical, { ...done.message, feedback: this.getMessage(canonical, done.message.id)?.feedback });

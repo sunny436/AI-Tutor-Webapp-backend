@@ -394,6 +394,12 @@ class ChatService:
                         usage, finish_reason = event.get("usage"), event.get("finish_reason")
                     elif kind == "retrieval":
                         retrieval_summary = event["summary"]
+                        # Before the first token, so a client can show [1]/[F1] as chips while it streams.
+                        citations = public_citations(retrieval_summary)
+                        if citations:
+                            await generation.queue.put(
+                                ChatEvent("citations", {"messageId": str(turn.assistant_id), "citations": citations})
+                            )
             finally:
                 await events.aclose()
         except LLMError as error:
@@ -586,5 +592,5 @@ async def collect(generation: Generation) -> tuple[ChatEvent, list[str]]:
             return final, tokens
         if event.type == "token":
             tokens.append(event.data["text"])
-        else:
+        elif event.type in ("done", "error"):
             final = event
