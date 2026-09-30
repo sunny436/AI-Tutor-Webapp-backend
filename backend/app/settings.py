@@ -165,6 +165,12 @@ class Settings(BaseSettings):
     # never parses unsandboxed: with anything but systemd there, files are unavailable.
     files_extractor: Literal["auto", "subprocess", "systemd"] = "auto"
 
+    # ---- tutor ----
+    # Teach the model the interactive practice blocks (quizzes, flashcards, graphs, file previews;
+    # app/chat/assistant.py INTERACTIVE_BLOCKS). The web app renders them either way. Off until
+    # the owner turns it on; it costs prompt characters on every turn.
+    tutor_interactive_blocks: bool = False
+
     @field_validator("default_timezone")
     @classmethod
     def _known_zone(cls, value: str) -> str:

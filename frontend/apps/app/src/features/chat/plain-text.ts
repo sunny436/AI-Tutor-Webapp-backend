@@ -8,6 +8,10 @@
 export function plainText(markdown: string, limit = 1000): string {
   const text = markdown
     .replace(/```[\s\S]*?```/g, " (code) ")
+    // Study cards read as their titles; card fences, ::file lines and alert markers not at all.
+    .replace(/^\s{0,3}:{3,}\s*[\w-]+(?:\[([^\]\n]*)\])?[^\n]*$/gm, "$1")
+    .replace(/^\s{0,3}:{2,}[^\n]*$/gm, "")
+    .replace(/\[!(?:NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/gi, "")
     .replace(/`([^`]*)`/g, "$1")
     .replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1")
     .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")

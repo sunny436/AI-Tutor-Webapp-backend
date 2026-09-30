@@ -162,6 +162,7 @@ async def test_files_are_per_user(client, app):
     b = bob["headers"]
     for method, url in (
         ("GET", f"/v1/files/{file_id}"),
+        ("GET", f"/v1/files/{file_id}/content"),
         ("POST", f"/v1/files/{file_id}/retry"),
         ("DELETE", f"/v1/files/{file_id}"),
     ):

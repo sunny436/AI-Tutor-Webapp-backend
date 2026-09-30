@@ -5,7 +5,8 @@ nothing and not learnt yet must get exactly what every student got before settin
 same system prompt, byte for byte, and the same messages sent to the model. Once they have
 learnt, a "Learning so far" line follows the prompt (owner decision, 2026-09-29). These fixtures
 were recorded from the code before any settings existed; if one of these tests fails, the default
-tutor changed.
+tutor changed. 2026-09-30: the owner asked for study formatting (cards, chemistry, diagrams, charts,
+citations), so the prompt fixtures were re-recorded with that prompt (app/chat/assistant.py).
 """
 
 import json

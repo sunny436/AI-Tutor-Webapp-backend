@@ -60,6 +60,26 @@ PUBLIC_ERRORS = {
 }
 
 
+def public_citations(summary: dict | None) -> list[dict] | None:
+    """What a client may show for a reply's [1] and [F1] markers: titles only (never URIs or
+    scores), every id a string. None when the turn numbered nothing, so the key is left out."""
+    if not summary:
+        return None
+    citations = [
+        {
+            "ref": str(number),
+            "kind": "source",
+            "title": str(source.get("title") or source.get("source") or f"Source {number}"),
+        }
+        for number, source in enumerate(summary.get("sources") or [], start=1)
+    ]
+    citations += [
+        {"ref": str(file["ref"]), "kind": "file", "title": str(file["filename"]), "fileId": str(file["fileId"])}
+        for file in summary.get("fileSources") or []
+    ]
+    return citations or None
+
+
 def public_error(code: str) -> dict:
     # Rate limits and outages are the same thing to a user: try again shortly.
     public_code = "llm_unavailable" if code == "llm_rate_limited" else code
@@ -207,7 +227,7 @@ class ChatService:
             conversation,
             user_message,
             assistant.id,
-            resolve_assistant_config(user, conversation, student),
+            resolve_assistant_config(user, conversation, student, interactive=self.settings.tutor_interactive_blocks),
             files=await files.conversation_files(session, conversation.id, user.id),
             user_attachments=attachments,
         )
@@ -248,7 +268,7 @@ class ChatService:
             conversation,
             None,
             assistant.id,
-            resolve_assistant_config(user, conversation, student),
+            resolve_assistant_config(user, conversation, student, interactive=self.settings.tutor_interactive_blocks),
             replaces_message_id=last.id,
             files=await files.conversation_files(session, conversation.id, user.id),
         )
@@ -399,6 +419,8 @@ class ChatService:
             "errorCode": error_code,
             # Internal (not in the public allowlist): status, reason, sources in [n] order, timings.
             "retrieval": retrieval_summary,
+            # Public: what the reply's [1] and [F1] markers point at (None when nothing is numbered).
+            "citations": public_citations(retrieval_summary),
         }
         metadata = {k: v for k, v in metadata.items() if v is not None}
         log.info(

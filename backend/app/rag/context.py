@@ -51,6 +51,8 @@ _DELIMITER = re.compile(r"<\s*/?\s*attached_files\s*>", re.IGNORECASE)
 class AssembledPrompt:
     messages: list[ChatMessage]
     sources: list[dict] = field(default_factory=list)
+    # The attached files numbered [F1].. in the prompt: {"ref", "fileId", "filename"}, ids as strings.
+    file_sources: list[dict] = field(default_factory=list)
     context_chars: int = 0
     file_chars: int = 0
     prompt_chars: int = 0
@@ -92,8 +94,10 @@ def _location(meta: dict) -> str:
     return ""
 
 
-def file_block(files: list[dict], documents: list[Document], budget: int) -> str:
-    """The attached files' passages, whole passages only, at most `budget` characters. "" if none fit."""
+def file_block(files: list[dict], documents: list[Document], budget: int, refs: list[dict] | None = None) -> str:
+    """The attached files' passages, whole passages only, at most `budget` characters. "" if none fit.
+
+    `refs`, when given, receives each numbered file ({"ref": "F1", "fileId", "filename"})."""
     by_file: dict[str, list[Document]] = {}
     for document in documents:
         by_file.setdefault(str(document.metadata.get("file_id")), []).append(document)
@@ -115,6 +119,8 @@ def file_block(files: list[dict], documents: list[Document], budget: int) -> str
         if not chosen:
             continue
         number += 1
+        if refs is not None:
+            refs.append({"ref": f"F{number}", "fileId": str(file["id"]), "filename": str(file.get("filename", "file"))})
         total = int(file.get("chunk_count") or len(passages))
         heading = (
             f"[F{number}] {name} (whole file)"
@@ -146,8 +152,11 @@ def build_llm_messages(
     used = len(system_prompt) + (len(latest.content) if latest else 0)
 
     files_text = ""
+    file_sources: list[dict] = []
     if latest and file_documents and attached_files and max_file_chars > 0:
-        files_text = file_block(attached_files, file_documents, min(max_file_chars, max_input_chars - used))
+        files_text = file_block(
+            attached_files, file_documents, min(max_file_chars, max_input_chars - used), refs=file_sources
+        )
         if files_text:
             latest = ChatMessage(latest.role, f"{files_text}\n\n{latest.content}")
             used += len(files_text) + 2
@@ -184,6 +193,7 @@ def build_llm_messages(
     return AssembledPrompt(
         messages=messages,
         sources=sources,
+        file_sources=file_sources if files_text else [],
         context_chars=len(context_message),
         file_chars=len(files_text),
         prompt_chars=used,

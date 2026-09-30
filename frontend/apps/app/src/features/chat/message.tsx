@@ -7,7 +7,7 @@ import { type CSSProperties, memo, useState } from "react";
 import { BrandMark } from "@/components/brand/brand-mark";
 import { FileKindIcon } from "@/features/files/attachment-chip";
 import { fileTypeOf } from "@/lib/api/files";
-import { MessageContent } from "@/features/markdown/lazy-message-content";
+import { MessageContent, needsFullWidth } from "@/features/markdown/lazy-message-content";
 import type { ChatMessage } from "./chat-store";
 import { useChatEntry, useChatMessage, useStores } from "./chat-context";
 import { ErrorMessage } from "./error-message";
@@ -169,10 +169,15 @@ function AssistantMessage({
       <BrandMark size={28} className="mt-0.5 rounded-lg" />
       <div className="min-w-0 flex-1">
         {(text || revealing || phase === "stopping" || message.status === "cancelled" || elsewhere) && (
-          <div className="w-fit max-w-full pt-0.5">
+          <div className={cn("max-w-full pt-0.5", needsFullWidth(text) ? "w-full" : "w-fit")}>
             {text ? (
               <>
-                <MessageContent content={text} streaming={revealing} />
+                <MessageContent
+                  content={text}
+                  streaming={revealing}
+                  // A finished reply without citations has none (not "not known yet").
+                  citations={message.metadata?.citations ?? (streaming ? undefined : [])}
+                />
                 {revealing && <StreamingCaret />}
               </>
             ) : revealing ? (

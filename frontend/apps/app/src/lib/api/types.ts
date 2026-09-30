@@ -279,11 +279,19 @@ export type MessageStatus = "complete" | "streaming" | "cancelled" | "error";
  */
 export type MessageRole = "user" | "assistant" | "system";
 
+/**
+ * What a reply's `[1]` (a knowledge source) or `[F1]` (a file the student attached) points at:
+ * titles only. `fileId` for files, to preview their own copy.
+ */
+export type Citation = { ref: string; kind: "source" | "file"; title: string; fileId?: Uuid };
+
 export type MessageMetadata = {
   model?: string;
   /** e.g. `llm_timeout`, or `interrupted` for a reply swept after a crash. */
   errorCode?: string;
   finishReason?: string;
+  /** Only on replies whose prompt numbered sources or files; arrives with the finished reply. */
+  citations?: Citation[];
 };
 
 /** A file attached to a user message. `fileId` is null once the file was deleted (the name stays). */

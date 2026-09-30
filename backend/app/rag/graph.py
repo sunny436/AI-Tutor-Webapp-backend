@@ -193,6 +193,7 @@ def build_rag_graph(deps: RagDependencies):
         summary = {
             **state["retrieval_summary"],
             "sources": prompt.sources,
+            "fileSources": prompt.file_sources,
             "contextChars": prompt.context_chars,
             "fileChars": prompt.file_chars,
             "promptChars": prompt.prompt_chars,

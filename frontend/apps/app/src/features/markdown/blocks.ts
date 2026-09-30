@@ -15,6 +15,10 @@
 
 const FENCE = /^ {0,3}(`{3,}|~{3,})/;
 const MATH = /^ {0,3}\$\$/;
+/** A study card opens (`:::name`, remark-tutor.ts) and closes (a bare run of at least as many colons). */
+const CONTAINER_OPEN = /^ {0,3}(:{3,})[^\s:]/;
+const CONTAINER_CLOSE = /^ {0,3}(:{3,})[ \t]*$/;
+const TABLE_ROW = /^ {0,3}\|/;
 /** A line after a blank line that could belong to what came before (a list item, indented text). */
 const CONTINUES = /^(?:\s|[-*+](?:\s|$)|\d{1,9}[.)](?:\s|$))/;
 /** Enough of a line's start to know whether it CONTINUES, and so a decision that never changes. */
@@ -34,6 +38,8 @@ export function splitBlocks(text: string): string[] {
   let fence: string | null = null;
   let math = false;
   let blank = false; // the previous line was blank (outside fences and maths)
+  // Open study cards, as their colon counts: never split inside one (a card is one element).
+  const cards: number[] = [];
   let position = 0;
   while (position < text.length) {
     const newline = text.indexOf("\n", position);
@@ -42,13 +48,29 @@ export function splitBlocks(text: string): string[] {
 
     // The first line after a blank one starts a new block, unless it may continue the last one.
     // A line too short to tell ("1" may become "1. item") waits until it can.
-    if (blank && position > start && line.trim() !== "" && (complete || DECIDED.test(line)) && !CONTINUES.test(line)) {
+    if (
+      blank &&
+      cards.length === 0 &&
+      position > start &&
+      line.trim() !== "" &&
+      (complete || DECIDED.test(line)) &&
+      !CONTINUES.test(line)
+    ) {
       blocks.push(text.slice(start, position));
       start = position;
     }
 
     const marker = FENCE.exec(line)?.[1];
-    if (fence !== null) {
+    // Inside a card its closing line wins over anything open inside it, as the parser does: it
+    // closes the outermost card with no more colons than it has, and everything inside that.
+    const closer = cards.length ? CONTAINER_CLOSE.exec(line)?.[1]?.length : undefined;
+    const closes = closer === undefined ? -1 : cards.findIndex((count) => count <= closer);
+    if (closes !== -1) {
+      cards.length = closes;
+      fence = null;
+      math = false;
+      blank = false;
+    } else if (fence !== null) {
       // A closing fence: the same character, at least as long, and nothing after it.
       if (marker && marker[0] === fence[0] && marker.length >= fence.length && line.trim() === marker) fence = null;
       blank = false;
@@ -60,6 +82,9 @@ export function splitBlocks(text: string): string[] {
       blank = false;
     } else if (displayMathOpens(line)) {
       math = true;
+      blank = false;
+    } else if (CONTAINER_OPEN.test(line)) {
+      cards.push(CONTAINER_OPEN.exec(line)?.[1]?.length ?? 3);
       blank = false;
     } else {
       blank = complete && line.trim() === "";
@@ -90,12 +115,21 @@ export function streamSafe(block: string): string {
     const completeRows = lines.slice(0, -1).filter((line) => line.trim() !== "").length;
     if (completeRows < 2) return "";
     if (typing.trim() !== "") return block.slice(0, lastComplete);
+  } else if (TABLE_ROW.test(typing)) {
+    // A table after other text (inside a study card): the same rule for its own rows.
+    let first = lines.length - 1;
+    while (first > 0 && TABLE_ROW.test(lines[first - 1] ?? "")) first--;
+    if (lines.length - 1 - first < 2) return lines.slice(0, first).join("\n").trimEnd();
+    return block.slice(0, lastComplete);
   }
 
   // The line being typed.
   const done = block.slice(0, lastComplete + 1);
   // A heading or list marker with nothing after it yet.
   if (/^\s{0,3}(?:#{1,6}|[-*+]|\d{1,9}[.)])\s*$/.test(typing) && typing !== "") return done.trimEnd();
+  // A card's opening or closing line, a `::file` line, or an alert marker (`> [!NOTE`) still
+  // being typed: shown once the line is whole.
+  if (/^ {0,3}:/.test(typing) || /^\s{0,3}>\s*\[!?[A-Za-z]*\]?\s*$/.test(typing)) return done.trimEnd();
   let tail = typing;
   // An unfinished link: its text shows once the whole link has arrived.
   const link = tail.search(/\[[^\]]*\]\([^)]*$/);

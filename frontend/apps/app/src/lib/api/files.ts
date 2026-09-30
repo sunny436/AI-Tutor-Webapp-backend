@@ -62,6 +62,11 @@ export function getFile(fileId: string): Promise<LibraryFile> {
   return callRoute("GET /v1/files/{file_id}", { params: { file_id: fileId } });
 }
 
+/** Where the browser reads a file's own bytes (an <img>, a PDF preview, a download): same origin. */
+export function fileContentUrl(fileId: string): string {
+  return `/api/v1/files/${encodeURIComponent(fileId)}/content`;
+}
+
 export function retryFile(fileId: string): Promise<LibraryFile> {
   return callRoute("POST /v1/files/{file_id}/retry", { params: { file_id: fileId } });
 }

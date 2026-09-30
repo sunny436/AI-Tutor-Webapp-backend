@@ -187,6 +187,15 @@ Calibrate `RAG_MIN_SCORE` with real embeddings: `python scripts/eval_retrieval.p
 |---|---|
 | schema, migrations, HNSW-compatible query, filters, access boundary, versioning, atomicity, concurrency, graph wiring, skip/failure paths, cancellation, logging hygiene — with a fake embedder | real OpenAI embeddings (no key configured); real retrieval relevance; `RAG_MIN_SCORE` calibration; performance at scale (≥ 100k chunks); production (untouched) |
 
+## Citations
+
+The prompt numbers knowledge chunks `[1]..[n]` and attached files `[F1]..`, and the turn keeps
+both lists (`retrieval.sources`, `retrieval.fileSources`, internal). `app/chat/service.py`
+`public_citations` turns them into the public `metadata.citations` (`ref`, `kind`, `title`, and
+`fileId` for files; never URIs or scores), omitted when nothing was numbered. The web app shows
+the markers as chips with a Sources list, and `::file{ref=F1}` / `::pdf{ref=F1}` previews resolve
+through it (`GET /v1/files/{id}/content`, the owner's own files only).
+
 ## Files the student attached (app/files)
 
 Separate from the knowledge base, and never searched globally: a student's files are only ever

@@ -8,6 +8,8 @@ playwright-report/
 
 .next/
 .next-*/
+# pdf.js's worker, copied at build time (apps/app/scripts/copy-pdfjs.mjs)
+apps/app/public/pdfjs/
 out/
 next-env.d.ts
 

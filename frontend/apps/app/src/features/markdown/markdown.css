@@ -75,3 +75,62 @@
 .message-content pre code {
   font-family: var(--font-code, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace);
 }
+
+/* ---- study cards (study-card.tsx) ---- */
+
+/* Space inside a card follows the reply's own rhythm, without doubling at its edges. */
+.message-content .study-card-body > :first-child {
+  margin-top: 0;
+}
+.message-content .study-card-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Nested lists stay close to their item. */
+.message-content li > ul,
+.message-content li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* A worked solution: each step numbered in a brand circle. */
+.message-content [data-card="steps"] ol {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+.message-content [data-card="steps"] ol > li {
+  counter-increment: step;
+  position: relative;
+  min-height: 1.75rem;
+  padding-left: 2.25rem;
+}
+.message-content [data-card="steps"] ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.125rem;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  background: hsl(var(--brand));
+  color: hsl(var(--brand-foreground));
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* The final result reads first. */
+.message-content [data-card="answer"] .study-card-body {
+  font-weight: 500;
+}
+
+/* A key formula: centred and a little larger. */
+.message-content [data-card="formula"] .study-card-body {
+  text-align: center;
+}
+.message-content [data-card="formula"] .katex-display {
+  font-size: 1.1em;
+}

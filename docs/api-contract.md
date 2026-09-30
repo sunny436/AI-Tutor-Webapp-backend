@@ -208,7 +208,11 @@ A title the user set is never changed.
 | DELETE | `/v1/conversations/{id}` | 204; messages and feedback are deleted with it |
 | GET | `/v1/conversations/{id}/messages?limit=50&before=` | oldest-first page; `nextCursor` loads older messages |
 
-Message: `{id, conversationId, role: user|assistant, content, status, createdAt, metadata: {model?, errorCode?, finishReason?}}`.
+Message: `{id, conversationId, role: user|assistant, content, status, createdAt, metadata: {model?, errorCode?, finishReason?, citations?}}`.
+`citations` (a reply whose prompt numbered sources or attached files; additive, 2026-09-30):
+`[{ref: "1" | "F1", kind: "source" | "file", title, fileId?}]`, what the reply's `[1]` and `[F1]`
+markers point at. Titles only, never URIs; absent when nothing was numbered. It arrives with the
+finished message (`done` and message lists), not while the reply streams.
 `status`: `complete`, `streaming`, `cancelled` (stopped, partial text kept), `error` (partial text kept).
 `content` is stored exactly as produced (Markdown, code fences, tables, `$math$`).
 
@@ -259,6 +263,7 @@ A file is read in the background: `processing` → `ready` (the tutor can use it
 | GET | `/v1/files?sha256=` | – | `{items: FileOut[] (newest first), usage: {usedBytes, quotaBytes, remainingBytes}}`; with `sha256`, only the file with those bytes (0 or 1): lets a client skip an upload |
 | POST | `/v1/files?filename=` | the file's raw bytes (`application/octet-stream`, ≤ 25 MB) | 201 `FileOut` (stored, being read), or 200 with the file already holding these bytes |
 | GET | `/v1/files/{id}` | – | `FileOut` (poll while `processing`) |
+| GET | `/v1/files/{id}/content` | – | The file's own bytes as its type (PDF, the three Office types, CSV, text, Markdown, PNG, JPEG, WebP), streamed; `Cache-Control: private, max-age=3600`, `ETag` = its SHA-256. The owner only (404 otherwise). The web app shows previews with it |
 | POST | `/v1/files/{id}/retry` | – | `FileOut`; 409 `retry_not_allowed` unless it failed for a reason a retry can fix and had fewer than 3 attempts |
 | DELETE | `/v1/files/{id}` | – | 204. Frees its storage; messages keep its name with `fileId: null` |
 

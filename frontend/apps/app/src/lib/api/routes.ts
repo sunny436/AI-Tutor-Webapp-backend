@@ -48,6 +48,21 @@ export type RouteSpec = {
 export const IMAGE_UPLOAD = { types: ["image/jpeg", "image/png", "image/webp"], maxBytes: 5 * 1024 * 1024 } as const;
 /** File Library uploads: any supported file as raw bytes; the API checks the type by name and content. */
 export const FILE_UPLOAD = { types: ["application/octet-stream"], maxBytes: 25 * 1024 * 1024 } as const;
+/** A library file's own bytes, as the type it was uploaded as (the API's FILE media types). */
+export const FILE_CONTENT = {
+  types: [
+    "application/pdf",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "text/csv",
+    "text/plain",
+    "text/markdown",
+    "image/png",
+    "image/jpeg",
+    "image/webp",
+  ],
+} as const;
 
 export const ROUTES = {
   "POST /v1/auth/signup": { auth: false, body: "SignupRequest" },
@@ -107,6 +122,7 @@ export const ROUTES = {
   "GET /v1/files": { auth: true, query: ["sha256"] },
   "POST /v1/files": { auth: true, query: ["filename"], upload: FILE_UPLOAD },
   "GET /v1/files/{file_id}": { auth: true },
+  "GET /v1/files/{file_id}/content": { auth: true, file: FILE_CONTENT },
   "POST /v1/files/{file_id}/retry": { auth: true },
   "DELETE /v1/files/{file_id}": { auth: true },
 } as const satisfies Record<string, RouteSpec>;

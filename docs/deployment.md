@@ -220,6 +220,7 @@ All production values live in `/etc/aichat/*.env` (root, mode 600), never in git
 | `api.env` | `APP_ENV`, `APP_NAME`, `EMAIL_*`, `SMTP_HOST/PORT/…`, `OLLASTACK_BASE_URL/MAILBOX_ID`, `LLM_*` names/URLs/models, `RAG_*`, `EMBEDDING_*` (other), `CHAT_*`, `STREAM_*`, `DEFAULT_TIMEZONE`, `AVATAR_MAX_BYTES`, limits | backend | runtime | no |
 | `api.env` | `JOBS_ENABLED`, `NOTIFICATIONS_*`, `PUBLIC_APP_URL`, `SUPPORT_EMAIL` | jobs worker (and the API, for support forwards and links) | read on every worker run | no |
 | `api.env` | `FILES_ENABLED` (default on), `FILES_EXTRACTOR` (`auto`: the systemd sandbox in production) | File Library (below) | runtime | no |
+| `api.env` | `TUTOR_INTERACTIVE_BLOCKS` (default off) | Teaches the tutor the practice blocks (quiz, MCQ, flashcards, fill-in-the-blank, graph, concept diagram, file and PDF previews, downloads); the web app already renders them. Owner decision: it adds about 880 characters to every prompt, and the worst-case history reserve falls from 33% to 32% of `LLM_MAX_INPUT_CHARS`. Restart the API after changing it | runtime | no |
 | `postgres.env` | `POSTGRES_PASSWORD` | database, backup | runtime | **yes** |
 | `postgres.env` | `POSTGRES_USER`, `POSTGRES_DB`, `BACKUP_DIR`, `KEEP_DAYS` | database, backup | runtime | no |
 

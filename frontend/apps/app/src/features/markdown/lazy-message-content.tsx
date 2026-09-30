@@ -2,6 +2,8 @@
 
 import { Suspense, lazy } from "react";
 
+import type { Citation } from "@/lib/api/types";
+
 /**
  * The reply renderer, loaded on its own.
  *
@@ -22,7 +24,26 @@ export function preloadMessageContent(): void {
   void load();
 }
 
-export function MessageContent({ content, streaming = false }: { content: string; streaming?: boolean }) {
+/**
+ * A reply with a study card, a drawn block (diagram, chart, practice) or a file embed. Those
+ * have no width of their own, so such a reply takes the whole column instead of fitting its text.
+ */
+const WIDE =
+  /^ {0,3}(?:`{3,}\s*(?:mermaid|chart|mcq|quiz|flashcards|fill-blank|graph|diagram)\b|:{3,}\s*[\w-]|::(?:file|pdf)\{|>\s*\[![A-Za-z]+\])/m;
+
+export function needsFullWidth(content: string): boolean {
+  return WIDE.test(content);
+}
+
+export function MessageContent({
+  content,
+  streaming = false,
+  citations,
+}: {
+  content: string;
+  streaming?: boolean;
+  citations?: Citation[];
+}) {
   return (
     <Suspense
       fallback={
@@ -31,7 +52,7 @@ export function MessageContent({ content, streaming = false }: { content: string
         </div>
       }
     >
-      <Renderer content={content} streaming={streaming} />
+      <Renderer content={content} streaming={streaming} citations={citations} />
     </Suspense>
   );
 }

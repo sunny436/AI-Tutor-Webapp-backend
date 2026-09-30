@@ -99,6 +99,41 @@ def sanitize_filename(raw: str) -> str | None:
     return stem.rstrip() + extension
 
 
+# What GET /v1/files/{id}/content answers with, per kind; images by the format the upload verified.
+MEDIA_TYPES = {
+    "pdf": "application/pdf",
+    "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "pptx": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "csv": "text/csv",
+    "txt": "text/plain",
+    "md": "text/markdown",
+}
+IMAGE_MEDIA_TYPES = {"png": "image/png", "jpeg": "image/jpeg", "webp": "image/webp"}
+CONTENT_TYPES = (*MEDIA_TYPES.values(), *IMAGE_MEDIA_TYPES.values())
+
+
+def media_type(file: UserFile) -> str:
+    if file.kind == "image":
+        declared = file_type(file.filename)
+        return IMAGE_MEDIA_TYPES[declared.magic if declared and declared.magic in IMAGE_MEDIA_TYPES else "png"]
+    return MEDIA_TYPES[file.kind]
+
+
+async def stream_blobs(sessionmaker, file_id: uuid.UUID):
+    """The file's bytes, one 1 MiB row per query (never the whole file in memory)."""
+    seq = 0
+    while True:
+        async with sessionmaker() as session:
+            data = await session.scalar(
+                select(UserFileBlob.data).where(UserFileBlob.file_id == file_id, UserFileBlob.seq == seq)
+            )
+        if data is None:
+            return
+        yield bytes(data)
+        seq += 1
+
+
 def file_type(name: str) -> FileType | None:
     return TYPES.get("." + name.rsplit(".", 1)[-1].lower())
 

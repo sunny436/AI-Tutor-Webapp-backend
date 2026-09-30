@@ -138,7 +138,7 @@ user's resources indistinguishable from missing ones.
 | Retrieval filters (source, subject, project, any metadata) | `AssistantConfig.retrieval` (`RetrievalOptions`) | set options in `resolve_assistant_config`; no RAG change |
 | A different retriever | `retriever_factory` in `app/main.py` (any LangChain `BaseRetriever`) | swap the factory |
 | Query rewriting / reranking / answer checks | new nodes in `app/rag/graph.py` | insert on an existing edge |
-| Citations in the UI | sources already stored in order in `messages.metadata.retrieval.sources` | add to the public metadata allowlist + an SSE event; existing clients ignore unknown events |
+| Citations in the UI | done (2026-09-30): `metadata.citations` (public) from the numbered sources and files; the web app shows chips and a Sources list | a `citations` SSE event before the first token, if chips are wanted while streaming |
 | More LLM providers / routing | `app/llm/base.py::LLMProvider`, `FallbackProvider` | new provider class; compose |
 | Learner profile, subjects, progress | new tables in a new Alembic migration, keyed by `users.id` | additive |
 | Project/workspace-scoped knowledge | `AccessScope` + a `project_id` column | new migration; retriever and graph unchanged |

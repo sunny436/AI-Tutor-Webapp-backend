@@ -29,7 +29,8 @@
  *               its listed types; the API's cache headers pass only when they are
  *               `private` (a browser may keep a content-addressed photo, a shared
  *               cache never), and the file can never run as a page (nosniff, a
- *               sandboxing CSP).
+ *               sandboxing CSP). Files are read whole, a few at a time (the rest
+ *               queue), like uploads.
  *
  * Pure (no Next.js imports) so it is unit-tested directly.
  */
@@ -175,8 +176,36 @@ function passThrough(upstream: ReadableStream<Uint8Array>, abort: () => void): R
 export const UPLOADS_IN_FLIGHT_MAX = 2;
 let uploadsInFlight = 0;
 
+/**
+ * Files sent back (a PDF or image preview, up to 25 MB) are buffered whole too, so only this many
+ * are read at once; the rest wait their turn rather than fail (a preview is worth the wait).
+ */
+export const FILES_IN_FLIGHT_MAX = 3;
+let filesInFlight = 0;
+const fileQueue: (() => void)[] = [];
+
+async function fileSlot(): Promise<() => void> {
+  if (filesInFlight < FILES_IN_FLIGHT_MAX) filesInFlight += 1;
+  else await new Promise<void>((resolve) => fileQueue.push(resolve));
+  // A freed slot is handed straight to the next in line, so the count never overshoots.
+  return () => {
+    const next = fileQueue.shift();
+    if (next) next();
+    else filesInFlight -= 1;
+  };
+}
+
 export async function proxyRequest(request: Request, segments: string[], deps: ProxyDeps): Promise<Response> {
-  const upload = matchRoute(request.method.toUpperCase(), `/v1/${segments.join("/")}`)?.spec.upload;
+  const spec = matchRoute(request.method.toUpperCase(), `/v1/${segments.join("/")}`)?.spec;
+  if (spec?.file) {
+    const release = await fileSlot();
+    try {
+      return await forward(request, segments, deps);
+    } finally {
+      release();
+    }
+  }
+  const upload = spec?.upload;
   if (!upload || upload.maxBytes <= MAX_BODY_BYTES) return forward(request, segments, deps);
   if (uploadsInFlight >= UPLOADS_IN_FLIGHT_MAX) {
     return envelope(503, "busy", deps.requestId?.() ?? crypto.randomUUID().replace(/-/g, ""));

@@ -42,7 +42,7 @@ def message_out(m: Message, attachments=()) -> MessageOut:
 
 def public_metadata(metadata: dict | None) -> dict:
     # Only fields a client may rely on; internal diagnostics stay server-side.
-    allowed = ("model", "errorCode", "finishReason")
+    allowed = ("model", "errorCode", "finishReason", "citations")
     return {k: v for k, v in (metadata or {}).items() if k in allowed}
 
 

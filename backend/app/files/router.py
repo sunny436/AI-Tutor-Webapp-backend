@@ -7,8 +7,10 @@ first lets a client skip uploading bytes the library already has.
 from __future__ import annotations
 
 import uuid
+from urllib.parse import quote
 
 from fastapi import APIRouter, Depends, Query, Request, Response
+from fastapi.responses import StreamingResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.dependencies import Principal, get_auth_service, get_principal
@@ -29,6 +31,8 @@ UPLOAD_BODY = {
     }
 }
 SHA256 = r"^[0-9a-f]{64}$"
+BINARY = {"schema": {"type": "string", "format": "binary"}}
+CONTENT_RESPONSE = {200: {"content": {media: BINARY for media in files.CONTENT_TYPES}}}
 
 
 @router.get("", response_model=FileList, summary="The File Library, newest first, with storage used")
@@ -94,6 +98,34 @@ async def get_file(
     file_id: uuid.UUID, principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)
 ):
     return files.file_out(await files.get_file(db, principal.user.id, file_id))
+
+
+@router.get(
+    "/{file_id}/content",
+    response_class=Response,
+    responses=CONTENT_RESPONSE,
+    summary="The file's original bytes (its owner only)",
+)
+async def file_content(
+    file_id: uuid.UUID,
+    request: Request,
+    principal: Principal = Depends(get_principal),
+    db: AsyncSession = Depends(get_session),
+):
+    """Streamed one stored row at a time. Bytes per id never change (a new upload is a new id), so a
+    browser may keep them an hour; `Content-Length` makes a cut-short stream fail, not look whole."""
+    file = await files.get_file(db, principal.user.id, file_id)
+    return StreamingResponse(
+        files.stream_blobs(request.app.state.db.sessionmaker, file.id),
+        media_type=files.media_type(file),
+        headers={
+            "Content-Length": str(file.size_bytes),
+            "Cache-Control": "private, max-age=3600",
+            "ETag": f'"{file.sha256}"',
+            "X-Content-Type-Options": "nosniff",
+            "Content-Disposition": f"inline; filename*=UTF-8''{quote(file.filename, safe='')}",
+        },
+    )
 
 
 @router.post("/{file_id}/retry", response_model=FileOut, summary="Read a failed file again (when that can help)")

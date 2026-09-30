@@ -146,7 +146,10 @@ const config = {
           3: "hsl(var(--chart-3))",
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
+          6: "hsl(var(--chart-6))",
         },
+        // The tutor's study cards (features/markdown): the brand, 50 points lighter.
+        "study-card": "hsl(var(--study-card-background))",
       },
       borderRadius: {
         // With --radius at 0.5rem these equal Tailwind's own steps (md 6, lg 8,

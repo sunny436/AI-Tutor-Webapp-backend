@@ -1,5 +1,14 @@
+import { createRequire } from "node:module";
+
 import "./src/env.mjs";
 import { withSentryConfig } from "@sentry/nextjs";
+
+/**
+ * ONE KaTeX for the whole app. rehype-katex and mermaid import "katex" too, and a copy nested
+ * under one of them (an older install leaves it behind; bun does not remove it) would be a second
+ * KaTeX without the mhchem chemistry macros the reply renderer registers (features/markdown).
+ */
+const KATEX = createRequire(import.meta.url).resolve("katex").replace(/katex\.js$/, "katex.mjs");
 
 /**
  * Security headers.
@@ -73,6 +82,10 @@ const nextConfig = {
    * served output. Unset, behaviour is exactly what it always was.
    */
   distDir: process.env.NEXT_DIST_DIR || ".next",
+  // The host builds under a 2 GB memory cap (deploy/server/lib.sh). Compile in a worker that exits
+  // after each compiler (a custom webpack config would otherwise turn it off) and prerender on
+  // one CPU, so mermaid, pdf.js and the other reply libraries do not push the build over it.
+  experimental: { webpackBuildWorker: true, cpus: 1 },
   // Do not advertise the framework version to scanners.
   poweredByHeader: false,
   // The previous app lived under /en, /fr and /es, and the chat at /consult.
@@ -86,6 +99,10 @@ const nextConfig = {
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
+  },
+  webpack(config) {
+    config.resolve.alias = { ...config.resolve.alias, katex$: KATEX };
+    return config;
   },
 };
 
