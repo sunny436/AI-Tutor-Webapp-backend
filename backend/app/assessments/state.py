@@ -372,8 +372,10 @@ def _latest(record: dict) -> str:
         last = responses[-1]["question"]
         lines.append(f"- Why Q{last + 1}: {_quote(questions[last]['explanation'], 100)}")
     lines.append(
-        "- This is the app's record and is authoritative: the student answers in the test card, one question at "
-        "a time. Never rewrite this test, re-ask its questions or grade it again."
+        "- The app's record, authoritative: the student answers in the test card, one question at a time. "
+        "Never rewrite, re-ask or re-grade this test."
+        # A new block would become the test that a typed letter or "next" reaches.
+        + ("" if answered >= total else " Until it is finished, write no other mcq or quiz block unless asked.")
     )
     return "\n".join(lines)
 
