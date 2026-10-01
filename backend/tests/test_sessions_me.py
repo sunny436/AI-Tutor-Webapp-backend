@@ -3,7 +3,7 @@ from datetime import UTC, datetime, timedelta
 from sqlalchemy import func, select, update
 
 from app.db.models import AuthSession, Conversation, Message, User, UserSettings
-from tests.conftest import PASSWORD, register, stream_chat
+from tests.conftest import PASSWORD, register, sign_in, stream_chat
 
 
 async def test_missing_malformed_and_unknown_tokens_are_401(client, app):
@@ -20,22 +20,9 @@ async def test_expired_session_is_401(client, app):
     assert (await client.get("/v1/me", headers=account["headers"])).status_code == 401
 
 
-async def test_session_expiry_slides_forward(client, app):
-    account = await register(client, app)
-    old = datetime.now(UTC) - timedelta(days=2)
-    async with app.state.db.sessionmaker() as s:
-        await s.execute(update(AuthSession).values(last_seen_at=old, expires_at=old + timedelta(days=30)))
-        await s.commit()
-    assert (await client.get("/v1/me", headers=account["headers"])).status_code == 200
-    async with app.state.db.sessionmaker() as s:
-        row = await s.scalar(select(AuthSession))
-    assert row.expires_at > datetime.now(UTC) + timedelta(days=29)
-
-
 async def test_revoke_other_sessions(client, app):
     account = await register(client, app)
-    other = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    other_headers = {"Authorization": f"Bearer {other.json()['session']['token']}"}
+    other_headers = (await sign_in(app, account["email"]))["headers"]
     assert (await client.post("/v1/auth/sessions/revoke-others", headers=account["headers"])).status_code == 204
     assert (await client.get("/v1/me", headers=other_headers)).status_code == 401
     assert (await client.get("/v1/me", headers=account["headers"])).status_code == 200

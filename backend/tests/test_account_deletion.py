@@ -6,11 +6,13 @@ test. Rows keyed by the email address rather than the user id are checked by add
 """
 
 import uuid
+from datetime import UTC, datetime, timedelta
 
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import create_async_engine
 
-from tests.conftest import PASSWORD, image_bytes, ingest_docs, last_code, register, stream_chat
+from app.notifications.outbox import WEEKLY_SUMMARY, queue_email
+from tests.conftest import PASSWORD, image_bytes, ingest_docs, register, sign_in, stream_chat
 
 USER_REFERENCES = text(
     """
@@ -37,8 +39,9 @@ async def _rows_referencing(database: str, user_id: str, email: str) -> dict[str
                     text(f'SELECT count(*) FROM "{table}" WHERE "{column}" = :id'), {"id": uuid.UUID(user_id)}
                 )
             counts["users"] = await conn.scalar(text("SELECT count(*) FROM users WHERE id = :id"), {"id": user_id})
-            counts["email_codes (by address)"] = await conn.scalar(
-                text("SELECT count(*) FROM email_codes WHERE email = :email"), {"email": email}
+            counts["auth_verifications (by address)"] = await conn.scalar(
+                text("SELECT count(*) FROM auth_verifications WHERE identifier LIKE '%-otp-' || :email"),
+                {"email": email.lower()},
             )
             counts["email_outbox (by address)"] = await conn.scalar(
                 text("SELECT count(*) FROM email_outbox WHERE to_address = :email"), {"email": email}
@@ -59,15 +62,31 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
     feedback = await client.put(f"/v1/messages/{message_id}/feedback", json={"rating": "up"}, headers=headers)
     assert feedback.status_code == 200
     assert (await client.patch("/v1/me/settings", json={"preferences": {"k": "v"}}, headers=headers)).status_code == 200
-    login = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    other_headers = {"Authorization": f"Bearer {login.json()['session']['token']}"}  # a second session
+    other_headers = (await sign_in(app, account["email"]))["headers"]  # a second session
     await ingest_docs(
         app,
         {"private.md": "# Private notes\n\nMine only."},
         source=f"private-{uuid.uuid4().hex[:8]}",
         owner_user_id=uuid.UUID(user_id),
     )
-    await client.post("/v1/auth/password/forgot", json={"email": account["email"]})  # a pending code by address
+    async with app.state.db.sessionmaker() as db:  # a pending Better Auth code, by address
+        await db.execute(
+            text(
+                "INSERT INTO auth_verifications (identifier, value, expires_at) "
+                "VALUES (:i, 'hash:0', now() + interval '15 minutes')"
+            ),
+            {"i": f"forget-password-otp-{account['email']}"},
+        )
+        await queue_email(  # an email waiting in the outbox for this student
+            db,
+            kind=WEEKLY_SUMMARY,
+            to=account["email"],
+            subject="Your week",
+            body="...",
+            send_before=datetime.now(UTC) + timedelta(days=1),
+            user_id=uuid.UUID(user_id),
+        )
+        await db.commit()
     photo = await client.put("/v1/me/avatar", content=image_bytes(), headers={**headers, "Content-Type": "image/png"})
     assert photo.status_code == 200, photo.text
     change = await client.post(  # a pending change-email code, bound to the user
@@ -96,13 +115,12 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
         headers=headers,
     )
     assert support.status_code == 201, support.text
-    phone = await client.post(  # a sign-in from a new kind of device queues an alert email
-        "/v1/auth/login",
-        json={"email": account["email"], "password": PASSWORD},
-        headers={"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) Version/18.0 Safari/604.1"},
+    notice = await client.post(  # a security notice in the bell (Better Auth reports a password change)
+        "/internal/auth/events",
+        json={"kind": "password_changed", "userId": user_id},
+        headers={"X-Internal-Token": app.state.settings.auth_internal_token.get_secret_value()},
     )
-    assert phone.status_code == 200
-    assert last_code(app, account["email"])
+    assert notice.status_code == 202
     uploaded = await client.post(  # a library file, read into chunks and attached to a message
         "/v1/files",
         params={"filename": "notes.txt"},
@@ -132,17 +150,23 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
             assert (await client.get(url, headers=token_headers)).status_code == 401, url
 
 
-async def test_a_reset_code_of_a_deleted_account_cannot_reset_a_new_account_with_the_same_address(client, app):
+async def test_a_code_of_a_deleted_account_dies_with_it(client, app, database):
+    """Better Auth's codes are keyed by address: one left behind would still work on a new account
+    registered with the same address."""
     account = await register(client, app)
-    await client.post("/v1/auth/password/forgot", json={"email": account["email"]})
-    old_code = last_code(app, account["email"])
-    deleted = await client.request("DELETE", "/v1/me", json={"password": PASSWORD}, headers=account["headers"])
-    assert deleted.status_code == 204
-
-    await register(client, app, email=account["email"])  # someone else registers the address
-    reset = await client.post(
-        "/v1/auth/password/reset",
-        json={"email": account["email"], "code": old_code, "newPassword": "someone-elses-password"},
-    )
-    assert reset.status_code == 400, reset.text
-    assert reset.json()["error"]["code"] == "invalid_code"
+    engine = create_async_engine(database)
+    try:
+        async with engine.begin() as conn:
+            await conn.execute(
+                text(
+                    "INSERT INTO auth_verifications (identifier, value, expires_at) "
+                    "VALUES (:i, 'hash:0', now() + interval '15 minutes')"
+                ),
+                {"i": f"forget-password-otp-{account['email']}"},
+            )
+        deleted = await client.request("DELETE", "/v1/me", json={"password": PASSWORD}, headers=account["headers"])
+        assert deleted.status_code == 204
+        async with engine.connect() as conn:
+            assert (await conn.execute(text("SELECT count(*) FROM auth_verifications"))).scalar_one() == 0
+    finally:
+        await engine.dispose()

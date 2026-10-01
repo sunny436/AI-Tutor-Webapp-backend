@@ -96,8 +96,15 @@ Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. O
 **Browser → BFF → API.**
 - The browser only ever calls its own origin, `/api/v1/*`.
 - `frontend/apps/app/src/lib/server/proxy-core.ts` forwards the allowlist in `lib/api/routes.ts` to
-  `API_BASE_URL`, which is server-only. It adds `Authorization: Bearer <token>`; the token comes from the
-  httpOnly cookie `__Host-aichat_session`.
+  `API_BASE_URL`, which is server-only. It adds `Authorization: Bearer <token>`; the token comes from
+  Better Auth's httpOnly cookie `__Host-padhai_session`, whose HMAC signature it verifies first.
+- **Sign-in is Better Auth** (`frontend/apps/app/src/lib/auth`, `/api/auth/*`, an exact allowlist of
+  routes; docs/architecture.md "Identity" in "Clients", docs/deployment.md "Sign-in"): email-first
+  sign-up (a code, then a password), password and email-code sign-in, Google, reset and change. It
+  writes `users`/`auth_sessions`/`auth_accounts`/`auth_verifications` as role `aichat_auth`, never
+  returns a token to page code, and asks the API's loopback `/internal/auth/*` (shared
+  `AUTH_INTERNAL_TOKEN`) to email codes and security notices. The API finds each session by its
+  token's SHA-256, requires a verified address, and owns devices, email change and deletion.
 - It enforces Origin on mutations, a 64 KB body limit and JSON bodies. It passes SSE through
   unbuffered, and aborts upstream when the browser leaves, which the API treats as stop.
 - Server components call the API directly with `lib/server/backend.ts`. If the API is unreachable,
@@ -155,7 +162,8 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **Cross-cutting:**
   - one error envelope `{"error": {code, message, requestId}}`;
   - JSON logs that never contain message or document text, or keys;
-  - email-code auth with anti-enumeration;
+  - identity on Better Auth (web) + per-request checks here; per-account limits in `auth_attempts`
+    under an advisory lock (`app/auth/service.py` `_throttle`, `frontend/.../lib/auth/guard.ts`);
   - `EMAIL_BACKEND=smtp|ollastack|memory`;
   - asyncpg on purpose (psycopg async fails on Windows' Proactor loop).
 - **Schema changes:** edit `app/db/models.py` and add a hand-written Alembic revision.

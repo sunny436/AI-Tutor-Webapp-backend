@@ -85,7 +85,7 @@ export function removeAvatar(): Promise<User> {
 /** Always 202 for an allowed request: a code goes to the new address if it is free. */
 export function requestEmailChange(request: EmailChangeRequest): Promise<void> {
   return callRoute("POST /v1/me/email/change", {
-    body: { newEmail: request.newEmail, password: request.password },
+    body: request.password ? { newEmail: request.newEmail, password: request.password } : { newEmail: request.newEmail },
   });
 }
 

@@ -128,6 +128,9 @@ def code_email(app_name: str, purpose: str, code: str, ttl_minutes: int) -> tupl
     elif purpose == "change_email":
         subject = f"Your {app_name} email change code"
         intro = f"Use this code to make this address the email of your {app_name} account:"
+    elif purpose == "sign_in":
+        subject = f"Your {app_name} sign-in code"
+        intro = f"Use this code to sign in to {app_name} (or to create your account, if you are new):"
     else:
         raise ValueError(f"no email text for code purpose {purpose!r}")
     body = (
@@ -158,4 +161,14 @@ def email_changed_email(app_name: str, new_address: str) -> tuple[str, str]:
         "every other device was signed out.\n\n"
         "If you did not do this, someone knows your password: reset it from the sign-in page with the "
         "new address, or contact support from the app.",
+    )
+
+
+def account_deleted_email(app_name: str) -> tuple[str, str]:
+    return (
+        f"Your {app_name} account was deleted",
+        f"Your {app_name} account and everything in it (chats, files, learning history) were deleted "
+        "just now, and every device was signed out.\n\n"
+        "If you did not do this, someone had access to your account: contact support, and check "
+        "the security of this email address.",
     )

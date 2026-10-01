@@ -2,14 +2,18 @@
 
 from __future__ import annotations
 
+import base64
+import hashlib
 import json
+from datetime import UTC, datetime, timedelta
 
 import httpx
 import pytest
 
 from app.auth.emails import EmailDeliveryError, OllastackEmailSender, SmtpEmailSender, build_email_sender
+from app.db.models import AuthVerification
 from app.main import create_app
-from tests.conftest import make_settings
+from tests.conftest import PASSWORD, make_settings, register
 from tests.test_platform import PRODUCTION_LIKE
 
 TOKEN = "olla-test-token-do-not-log"
@@ -84,23 +88,38 @@ def test_production_accepts_ollastack_only_when_configured():
         create_app(make_settings(**{**PRODUCTION_LIKE, "email_backend": "memory"}))
 
 
-async def test_signup_code_goes_out_through_ollastack(app, client):
+async def test_a_sign_in_code_goes_out_through_ollastack(app, client):
+    """Better Auth stores the code (hashed); the API emails it through the configured sender."""
     sender, seen = sender_with(ok)
     app.state.email_sender = sender
+    stored = base64.urlsafe_b64encode(hashlib.sha256(b"135790").digest()).rstrip(b"=").decode()
+    async with app.state.db.sessionmaker() as db:
+        db.add(
+            AuthVerification(
+                identifier="sign-in-otp-gil@example.com",
+                value=f"{stored}:0",
+                expires_at=datetime.now(UTC) + timedelta(minutes=15),
+            )
+        )
+        await db.commit()
+    internal = {"X-Internal-Token": app.state.settings.auth_internal_token.get_secret_value()}
     response = await client.post(
-        "/v1/auth/signup", json={"email": "gil@example.com", "password": "correct horse battery"}
+        "/internal/auth/code", json={"email": "gil@example.com", "type": "sign-in", "otp": "135790"}, headers=internal
     )
     assert response.status_code == 202
     (request,) = seen
     body = json.loads(request.content)
-    assert body["to"] == "gil@example.com" and "verification code" in body["subject"]
-    assert any(line.strip().isdigit() for line in body["text"].splitlines())
+    assert body["to"] == "gil@example.com" and "sign-in code" in body["subject"]
+    assert "135790" in body["text"]
 
 
-async def test_signup_reports_503_when_ollastack_refuses(app, client):
+async def test_an_email_change_reports_503_when_ollastack_refuses(app, client):
+    account = await register(client, app)
     sender, _ = sender_with(lambda request: httpx.Response(401, json={"error": {"code": "UNAUTHORIZED"}}))
     app.state.email_sender = sender
     response = await client.post(
-        "/v1/auth/signup", json={"email": "hal@example.com", "password": "correct horse battery"}
+        "/v1/me/email/change",
+        json={"newEmail": "hal@example.com", "password": PASSWORD},
+        headers=account["headers"],
     )
     assert response.status_code == 503

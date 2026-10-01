@@ -108,6 +108,13 @@ for f in api.env web.env postgres.env; do [ -s "$SECRETS/$f" ] || die "missing $
 # not this API.
 grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' "$SECRETS/web.env" || die "$SECRETS/web.env must set API_BASE_URL=http://127.0.0.1:4100"
 grep -qE '^NEXT_PUBLIC_SITE_URL=https?://.+' "$SECRETS/web.env" || die "$SECRETS/web.env must set NEXT_PUBLIC_SITE_URL"
+# Sign-in is Better Auth in the web app (docs/deployment.md, "Sign-in"): its database role and
+# secret, and the token it and the API share. Checked before anything changes.
+for name in AUTH_DATABASE_URL BETTER_AUTH_SECRET AUTH_INTERNAL_TOKEN; do
+  grep -qE "^$name=.+" "$SECRETS/web.env" || die "$SECRETS/web.env must set $name (docs/deployment.md, \"Sign-in\")"
+done
+[ -n "$(env_value AUTH_INTERNAL_TOKEN api.env)" ] && [ "$(env_value AUTH_INTERNAL_TOKEN api.env)" = "$(env_value AUTH_INTERNAL_TOKEN web.env)" ] \
+  || die "AUTH_INTERNAL_TOKEN must be set, and the same, in $SECRETS/api.env and web.env"
 systemctl is-active --quiet aichat-postgres || die "aichat-postgres is not running"
 if [ "$DO_BDEPS$DO_FDEPS$DO_BUILD" != 000 ]; then preflight_resources; fi
 
@@ -192,6 +199,11 @@ if [ "$DO_MIG" = 1 ]; then
   mark migrations "$K_MIG"
 fi
 
+# Before anything restarts: the web app's database role reaches its tables (role, password, and
+# the grants of the migrations just run). Without it nobody could sign in after the restart.
+step "sign-in database (AUTH_DATABASE_URL)"
+auth_database_ok || die "the web app cannot reach its identity tables with AUTH_DATABASE_URL (role aichat_auth); nothing was restarted"
+
 # ---------------------------------------------------------------- 6. restarts (only what changed)
 if [ "$DO_API" = 1 ]; then
   step "backend: restart aichat-api"
@@ -236,6 +248,7 @@ systemctl is-active --quiet aichat-web || die "aichat-web is not running"
 wait_http "http://127.0.0.1:$API_PORT/ready" 30 || die "API /ready fails (database?)"
 curl -fsS -o /dev/null --max-time 5 "http://127.0.0.1:$API_PORT/health" || die "API /health fails"
 wait_http "http://127.0.0.1:$WEB_PORT/login" 30 || die "web /login fails"
+web_auth_ok "$WEB_PORT" || die "the web app reports its sign-in database unavailable (/api/health)"
 check_chain "$WEB_PORT" aichat-api || die "web -> API -> database fails"
 note "aichat-api and aichat-web active; /health, /ready and /login answer"
 

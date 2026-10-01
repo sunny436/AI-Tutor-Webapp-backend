@@ -17,3 +17,11 @@ export function apiBaseUrl(env: Record<string, string | undefined> = process.env
   }
   return raw.replace(/\/+$/, "");
 }
+
+/**
+ * The secret Better Auth signs its session cookie with (web.env BETTER_AUTH_SECRET): the BFF and
+ * server components verify the signature before using a token. Empty = no session is accepted.
+ */
+export function authSecret(env: Record<string, string | undefined> = process.env): string {
+  return env.BETTER_AUTH_SECRET?.trim() ?? "";
+}

@@ -10,49 +10,10 @@ from pydantic import EmailStr, Field, field_validator, model_validator
 
 from app.schemas import ApiModel, RequestModel, check_set_reset
 
-Password = Field(min_length=8, max_length=128)
 Code = Field(pattern=r"^\d{6}$")
-
-
-class SignupRequest(RequestModel):
-    email: EmailStr
-    password: str = Password
-    display_name: str | None = Field(default=None, max_length=80)
-
-    @field_validator("display_name")
-    @classmethod
-    def _strip(cls, v: str | None) -> str | None:
-        return (v or "").strip() or None
-
-
-class VerifyEmailRequest(RequestModel):
-    email: EmailStr
-    code: str = Code
-
-
-class LoginRequest(RequestModel):
-    email: EmailStr
-    password: str = Field(min_length=1, max_length=128)
-
-
-class ResendCodeRequest(RequestModel):
-    email: EmailStr
-    purpose: Literal["verify_email", "reset_password"] = "verify_email"
-
-
-class ForgotPasswordRequest(RequestModel):
-    email: EmailStr
-
-
-class ResetPasswordRequest(RequestModel):
-    email: EmailStr
-    code: str = Code
-    new_password: str = Password
-
-
-class ChangePasswordRequest(RequestModel):
-    current_password: str = Field(min_length=1, max_length=128)
-    new_password: str = Password
+# Re-authentication: the password, or nothing for an account without one (Google only), which
+# must then have signed in within 15 minutes.
+ReauthPassword = Field(default=None, min_length=1, max_length=128)
 
 
 class UpdateMeRequest(RequestModel):
@@ -60,7 +21,7 @@ class UpdateMeRequest(RequestModel):
 
 
 class DeleteMeRequest(RequestModel):
-    password: str = Field(min_length=1, max_length=128)
+    password: str | None = ReauthPassword
 
 
 class UpdateSettingsRequest(RequestModel):
@@ -153,22 +114,12 @@ class SessionListOut(ApiModel):
 
 class EmailChangeRequest(RequestModel):
     new_email: EmailStr
-    password: str = Field(min_length=1, max_length=128)
+    password: str | None = ReauthPassword
 
 
 class EmailConfirmRequest(RequestModel):
     new_email: EmailStr
     code: str = Code
-
-
-class SessionOut(ApiModel):
-    token: str
-    expires_at: datetime
-
-
-class AuthResult(ApiModel):
-    user: UserOut
-    session: SessionOut
 
 
 class AcceptedOut(ApiModel):

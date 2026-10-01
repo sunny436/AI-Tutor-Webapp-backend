@@ -85,16 +85,6 @@ export const CONTRACT = {
       "minimum": 0
     }
   },
-  "ChangePasswordRequest": {
-    "currentPassword": {
-      "maxLength": 128,
-      "minLength": 1
-    },
-    "newPassword": {
-      "maxLength": 128,
-      "minLength": 8
-    }
-  },
   "ChatRequest": {
     "attachmentIds": {
       "maxItems": 5
@@ -470,12 +460,6 @@ export const CONTRACT = {
       ]
     }
   },
-  "LoginRequest": {
-    "password": {
-      "maxLength": 128,
-      "minLength": 1
-    }
-  },
   "MarkReadRequest": {
     "ids": {
       "maxItems": 30
@@ -510,32 +494,6 @@ export const CONTRACT = {
     },
     "version": {
       "minimum": 0
-    }
-  },
-  "ResendCodeRequest": {
-    "purpose": {
-      "enum": [
-        "verify_email",
-        "reset_password"
-      ]
-    }
-  },
-  "ResetPasswordRequest": {
-    "code": {
-      "pattern": "^\\d{6}$"
-    },
-    "newPassword": {
-      "maxLength": 128,
-      "minLength": 8
-    }
-  },
-  "SignupRequest": {
-    "displayName": {
-      "maxLength": 80
-    },
-    "password": {
-      "maxLength": 128,
-      "minLength": 8
     }
   },
   "SubjectIn": {
@@ -698,11 +656,6 @@ export const CONTRACT = {
     },
     "version": {
       "minimum": 0
-    }
-  },
-  "VerifyEmailRequest": {
-    "code": {
-      "pattern": "^\\d{6}$"
     }
   }
 } as const;

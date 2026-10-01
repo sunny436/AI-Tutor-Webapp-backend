@@ -85,7 +85,9 @@ const nextConfig = {
   // The host builds under a 2 GB memory cap (deploy/server/lib.sh). Compile in a worker that exits
   // after each compiler (a custom webpack config would otherwise turn it off) and prerender on
   // one CPU, so mermaid, pdf.js and the other reply libraries do not push the build over it.
-  experimental: { webpackBuildWorker: true, cpus: 1 },
+  // `pg` (Better Auth's database, lib/auth) stays a plain Node require: bundling it pulls in its
+  // optional native driver.
+  experimental: { webpackBuildWorker: true, cpus: 1, serverComponentsExternalPackages: ["pg"] },
   // Do not advertise the framework version to scanners.
   poweredByHeader: false,
   // The previous app lived under /en, /fr and /es, and the chat at /consult.

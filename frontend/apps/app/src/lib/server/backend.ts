@@ -32,7 +32,8 @@ export async function backendGet<T>(
       cache: "no-store",
       signal: controller.signal,
     });
-    if (response.status === 401) return { status: "unauthorized" };
+    // 403 is a session the API will not use (an unverified address): signed out, not an outage.
+    if (response.status === 401 || response.status === 403) return { status: "unauthorized" };
     if (response.status === 404) return { status: "not_found" };
     if (!response.ok) return { status: "unavailable" };
     return { status: "ok", data: (await response.json()) as T };

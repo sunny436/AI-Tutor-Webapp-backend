@@ -8,7 +8,7 @@ import pytest
 from app.progress import activity
 from app.progress.activity import streaks
 from app.ratelimit import SlidingWindowLimiter
-from tests.conftest import PASSWORD, make_settings, register, stream_chat
+from tests.conftest import make_settings, register, sign_in, stream_chat
 
 
 class Clock:
@@ -56,8 +56,7 @@ async def test_a_minute_is_credited_once(client, app, clock):
 
 async def test_two_devices_reporting_the_same_minute_count_it_once(client, app, clock):
     account = await register(client, app)
-    login = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    phone = {"Authorization": f"Bearer {login.json()['session']['token']}"}
+    phone = (await sign_in(app, account["email"]))["headers"]
     results = await asyncio.gather(*(_beat(client, headers) for headers in (account["headers"], phone) * 2))
     assert sorted(result["credited"] for result in results) == [False, False, False, True]
     assert (await _progress(client, phone))["today"]["activeMinutes"] == 1

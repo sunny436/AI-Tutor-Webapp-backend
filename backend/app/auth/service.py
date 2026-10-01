@@ -1,7 +1,13 @@
 """Account and session logic. All state lives in PostgreSQL.
 
-Anti-enumeration: sign-up, resend and forgot-password always answer 202, and a
-login for an unknown email costs the same argon2 time as a wrong password.
+Signing in, signing up, email codes, password reset and password change happen in the web
+app's Better Auth (frontend/apps/app/src/lib/auth), on the same tables. This service keeps what
+the API owns: the sessions list and revocation, the profile, photo and settings, the email
+change and the account deletion, both behind re-authentication.
+
+Throttling counts attempts in auth_attempts under a per-key advisory lock, so a burst of
+parallel requests can never pass more attempts than the limit (Better Auth's hooks use the same
+scopes, keys and lock).
 """
 
 from __future__ import annotations
@@ -11,19 +17,26 @@ import uuid
 from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import delete, func, or_, select, update
+from sqlalchemy import delete, func, or_, select, text, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.auth.avatar import ProcessedAvatar
-from app.auth.devices import device_label
-from app.auth.emails import EmailSender, code_email, email_changed_email, email_in_use_email
-from app.auth.security import Passwords, hash_code, hash_key, hash_token, new_email_code, new_session_token
-from app.db.models import AuthAttempt, AuthSession, EmailCode, User, UserAvatar, UserSettings
+from app.auth.emails import EmailSender, account_deleted_email, code_email, email_changed_email, email_in_use_email
+from app.auth.security import Passwords, hash_code, hash_key, new_email_code
+from app.db.models import (
+    AuthAccount,
+    AuthAttempt,
+    AuthSession,
+    AuthVerification,
+    EmailCode,
+    User,
+    UserAvatar,
+    UserSettings,
+)
 from app.errors import (
     Conflict,
-    EmailNotVerified,
     InvalidCode,
     InvalidCredentials,
     NotFound,
@@ -33,7 +46,6 @@ from app.errors import (
     VersionConflict,
 )
 from app.logging import get_logger
-from app.notifications.alerts import queue_password_changed, queue_sign_in_alert
 from app.settings import Settings
 
 log = get_logger("app.auth")
@@ -42,6 +54,19 @@ MAX_PREFERENCES_BYTES = 4096
 # File Library uploads per student (app/files): per AUTH_WINDOW_MINUTES, and per day.
 FILES_UPLOADS_PER_WINDOW = 20
 FILES_UPLOADS_PER_DAY = 30
+# Password checks per account, wherever they happen (Better Auth's sign-in and change-password,
+# and the re-authentication here): the same scope, key and window in both runtimes.
+SIGNIN_SCOPE = "signin_email"
+SIGNIN_LIMIT = 10
+SIGNIN_WINDOW_MINUTES = 15
+# An account without a password re-authenticates by having signed in this recently.
+REAUTH_FRESH = timedelta(minutes=15)
+# Better Auth's email-code types, as its verification identifiers name them ("<type>-otp-<email>").
+OTP_TYPES = ("sign-in", "forget-password", "email-verification", "change-email")
+
+
+def otp_identifiers(email: str) -> list[str]:
+    return [f"{kind}-otp-{email.lower()}" for kind in OTP_TYPES]
 
 
 def utcnow() -> datetime:
@@ -52,13 +77,6 @@ def utcnow() -> datetime:
 class ClientInfo:
     ip: str | None
     user_agent: str | None
-
-
-@dataclass
-class IssuedSession:
-    user: User
-    token: str
-    expires_at: datetime
 
 
 class AuthService:
@@ -84,48 +102,24 @@ class AuthService:
             or 0
         )
 
-    async def _record_attempt(self, scope: str, key: str) -> None:
-        self.db.add(AuthAttempt(scope=scope, key_hash=hash_key(key)))
-
-    async def _throttle(self, scope: str, key: str | None, limit: int, record: bool = True) -> None:
+    async def _throttle(self, scope: str, key: str | None, limit: int, minutes: int | None = None) -> None:
+        """Count this attempt, or refuse it when `limit` were made in the window. The advisory lock
+        (held until the caller commits) makes count-and-insert atomic per scope and key: parallel
+        attempts queue on it instead of all reading the same count. A refused attempt is not
+        recorded, so the limit lifts once the window passes."""
         if not key:
             return
-        if await self._count_attempts(scope, key) >= limit:
+        await self.db.execute(
+            text("SELECT pg_advisory_xact_lock(hashtextextended(:k, 0))"), {"k": f"{scope}|{hash_key(key)}"}
+        )
+        if await self._count_attempts(scope, key, minutes) >= limit:
             raise RateLimited()
-        if record:
-            await self._record_attempt(scope, key)
+        self.db.add(AuthAttempt(scope=scope, key_hash=hash_key(key)))
+        await self.db.flush()
 
     # ------------------------------------------------------------------ helpers
     async def _user_by_email(self, email: str) -> User | None:
         return await self.db.scalar(select(User).where(User.email == email))
-
-    async def _issue_session(self, user: User, client: ClientInfo) -> IssuedSession:
-        token = new_session_token()
-        expires_at = utcnow() + timedelta(days=self.settings.session_ttl_days)
-        self.db.add(
-            AuthSession(
-                user_id=user.id,
-                token_hash=hash_token(token),
-                expires_at=expires_at,
-                user_agent=(client.user_agent or "")[:300] or None,
-                ip=(client.ip or "")[:64] or None,
-            )
-        )
-        return IssuedSession(user=user, token=token, expires_at=expires_at)
-
-    async def _send_code(self, email: str, purpose: str) -> None:
-        code = new_email_code()
-        await self.db.execute(delete(EmailCode).where(EmailCode.email == email, EmailCode.purpose == purpose))
-        self.db.add(
-            EmailCode(
-                email=email,
-                purpose=purpose,
-                code_hash=hash_code(self.settings, email, purpose, code),
-                expires_at=utcnow() + timedelta(minutes=self.settings.email_code_ttl_minutes),
-            )
-        )
-        subject, body = code_email(self.settings.app_name, purpose, code, self.settings.email_code_ttl_minutes)
-        await self._deliver(email, subject, body)
 
     async def _deliver(self, to: str, subject: str, body: str) -> None:
         try:
@@ -134,129 +128,28 @@ class AuthService:
             log.error("email delivery failed", extra={"error_type": type(error).__name__})
             raise ServiceUnavailable("We could not send the email. Please try again shortly.") from error
 
-    async def _consume_code(self, email: str, purpose: str, code: str) -> None:
-        row = await self.db.scalar(
-            select(EmailCode)
-            .where(EmailCode.email == email, EmailCode.purpose == purpose, EmailCode.consumed_at.is_(None))
-            .order_by(EmailCode.created_at.desc())
-            .limit(1)
-            .with_for_update()
+    async def reauthenticate(self, user: User, session: AuthSession, password: str | None) -> None:
+        """Confirm it is the owner before a sensitive change: the account's password, throttled
+        per account, or, for an account without one (Google only), a sign-in within REAUTH_FRESH.
+        The attempt is committed before argon2 runs, so no pooled connection waits on the hash."""
+        stored = await self.db.scalar(
+            select(AuthAccount.password).where(AuthAccount.user_id == user.id, AuthAccount.provider_id == "credential")
         )
-        if row is None or row.expires_at <= utcnow() or row.attempts >= self.settings.email_code_max_attempts:
-            raise InvalidCode()
-        if row.code_hash != hash_code(self.settings, email, purpose, code):
-            row.attempts += 1
+        if not stored:
             await self.db.commit()
-            raise InvalidCode()
-        row.consumed_at = utcnow()
-
-    # ---------------------------------------------------------------- flows
-    async def signup(self, email: str, password: str, display_name: str | None, client: ClientInfo) -> None:
-        await self._throttle("signup_ip", client.ip, self.settings.signup_attempts_per_ip)
-        await self._throttle("code_email", email, self.settings.code_requests_per_email)
-        user = await self._user_by_email(email)
-        if user is not None and user.email_verified_at is not None:
-            # Already registered: tell the owner, reveal nothing to the caller.
-            await self._deliver(
-                email,
-                f"Sign-up attempt on your {self.settings.app_name} account",
-                "Someone tried to create an account with this email address. "
-                "If it was you, sign in or reset your password instead.",
-            )
-            await self.db.commit()
+            if session.created_at <= utcnow() - REAUTH_FRESH:
+                raise Conflict("Sign in again to confirm it's you.", code="reauth_required")
             return
-        password_hash = await self.passwords.hash(password)
-        if user is None:
-            user = User(email=email, password_hash=password_hash, display_name=display_name)
-            self.db.add(user)
-        else:  # unverified: the latest sign-up wins; only the mailbox owner can verify it
-            user.password_hash = password_hash
-            user.display_name = display_name or user.display_name
-            user.updated_at = utcnow()
-        await self.db.flush()
-        await self._send_code(email, "verify_email")
-        await self.db.commit()
-
-    async def verify_email(self, email: str, code: str, client: ClientInfo) -> IssuedSession:
-        await self._consume_code(email, "verify_email", code)
-        user = await self._user_by_email(email)
-        if user is None:
-            raise InvalidCode()
-        if user.email_verified_at is None:
-            user.email_verified_at = utcnow()
-        issued = await self._issue_session(user, client)
-        await self.db.commit()
-        return issued
-
-    async def login(self, email: str, password: str, client: ClientInfo) -> IssuedSession:
-        await self._throttle("login_ip", client.ip, self.settings.login_attempts_per_ip)
-        await self._throttle("login_fail", email, self.settings.login_failures_per_email, record=False)
-        user = await self._user_by_email(email)
-        valid, needs_rehash = await self.passwords.verify(user.password_hash if user else None, password)
-        if not valid or user is None:
-            await self._record_attempt("login_fail", email)
+        if not password:
             await self.db.commit()
-            raise InvalidCredentials()
-        if user.email_verified_at is None:
-            await self.db.commit()
-            raise EmailNotVerified()
-        if needs_rehash:
-            user.password_hash = await self.passwords.hash(password)
-        new_device = not await self._device_known(user.id, client.user_agent)
-        issued = await self._issue_session(user, client)
-        if new_device:
-            await queue_sign_in_alert(self.db, self.settings, user, device_label(client.user_agent), utcnow())
+            raise ValidationFailed("Enter your password.", fields=[{"field": "password", "reason": "missing"}])
+        await self._throttle(SIGNIN_SCOPE, user.email, SIGNIN_LIMIT, SIGNIN_WINDOW_MINUTES)
         await self.db.commit()
-        return issued
-
-    async def _device_known(self, user_id: uuid.UUID, user_agent: str | None) -> bool:
-        """Whether a live session of this account already signed in with the same kind of
-        device ("Chrome on Windows"): the test for a sign-in alert."""
-        label = device_label(user_agent)
-        agents = await self.db.scalars(
-            select(AuthSession.user_agent).where(AuthSession.user_id == user_id, AuthSession.expires_at > utcnow())
-        )
-        return any(device_label(agent) == label for agent in agents)
-
-    async def resend_code(self, email: str, purpose: str, client: ClientInfo) -> None:
-        await self._throttle("code_ip", client.ip, self.settings.signup_attempts_per_ip)
-        await self._throttle("code_email", email, self.settings.code_requests_per_email)
-        user = await self._user_by_email(email)
-        if user is not None:
-            unverified = user.email_verified_at is None
-            if (purpose == "verify_email" and unverified) or (purpose == "reset_password" and not unverified):
-                await self._send_code(email, purpose)
-        await self.db.commit()
-
-    async def forgot_password(self, email: str, client: ClientInfo) -> None:
-        await self.resend_code(email, "reset_password", client)
-
-    async def reset_password(self, email: str, code: str, new_password: str, client: ClientInfo) -> IssuedSession:
-        await self._consume_code(email, "reset_password", code)
-        user = await self._user_by_email(email)
-        if user is None:
-            raise InvalidCode()
-        user.password_hash = await self.passwords.hash(new_password)
-        user.email_verified_at = user.email_verified_at or utcnow()
-        user.updated_at = utcnow()
-        user.password_changed_at = user.updated_at
-        await self.db.execute(delete(AuthSession).where(AuthSession.user_id == user.id))
-        issued = await self._issue_session(user, client)
-        await queue_password_changed(self.db, self.settings, user, user.updated_at)
-        await self.db.commit()
-        return issued
-
-    async def change_password(self, user: User, session_id: uuid.UUID, current: str, new: str) -> None:
-        valid, _ = await self.passwords.verify(user.password_hash, current)
+        valid, _ = await self.passwords.verify(stored, password)
         if not valid:
-            raise InvalidCredentials("The current password is incorrect.")
-        user.password_hash = await self.passwords.hash(new)
-        user.updated_at = utcnow()
-        user.password_changed_at = user.updated_at
-        await self.revoke_other_sessions(user.id, session_id, commit=False)
-        await queue_password_changed(self.db, self.settings, user, user.updated_at)
-        await self.db.commit()
+            raise InvalidCredentials("The password is incorrect.")
 
+    # -------------------------------------------------------------------- sessions
     async def logout(self, session_id: uuid.UUID) -> None:
         await self.db.execute(delete(AuthSession).where(AuthSession.id == session_id))
         await self.db.commit()
@@ -375,30 +268,28 @@ class AuthService:
         # The HMAC names the user: a change code can only ever move the account that asked for it.
         return f"change_email:{user_id}"
 
-    async def request_email_change(self, user: User, new_email: str, password: str) -> None:
+    async def request_email_change(
+        self, user: User, session: AuthSession, new_email: str, password: str | None
+    ) -> None:
         """Answers 202 whatever the address. If it is free, a code goes to it; if another account
         has it, a notice goes to it instead. Either way exactly one email is sent, so the caller
-        cannot tell which happened."""
+        cannot tell which happened. The email goes out after the commit, so no pooled connection
+        waits on the mail provider."""
         if new_email.lower() == user.email.lower():
             raise ValidationFailed(
                 "That is already your email address.", fields=[{"field": "newEmail", "reason": "unchanged"}]
             )
-        await self._throttle("login_fail", user.email, self.settings.login_failures_per_email, record=False)
+        await self.reauthenticate(user, session, password)
         await self._throttle("email_change_user", str(user.id), self.settings.email_change_requests_per_user)
         await self._throttle("code_email", new_email, self.settings.code_requests_per_email)
-        valid, _ = await self.passwords.verify(user.password_hash, password)
-        if not valid:
-            await self._record_attempt("login_fail", user.email)
-            await self.db.commit()
-            raise InvalidCredentials("The password is incorrect.")
         # Only the latest request can be confirmed.
         await self.db.execute(
             delete(EmailCode).where(EmailCode.purpose == "change_email", EmailCode.user_id == user.id)
         )
         if await self._user_by_email(new_email) is not None:
+            await self.db.commit()
             subject, body = email_in_use_email(self.settings.app_name)
             await self._deliver(new_email, subject, body)
-            await self.db.commit()
             return
         code = new_email_code()
         self.db.add(
@@ -410,9 +301,9 @@ class AuthService:
                 expires_at=utcnow() + timedelta(minutes=self.settings.email_code_ttl_minutes),
             )
         )
+        await self.db.commit()
         subject, body = code_email(self.settings.app_name, "change_email", code, self.settings.email_code_ttl_minutes)
         await self._deliver(new_email, subject, body)
-        await self.db.commit()
 
     async def confirm_email_change(self, user: User, current_session_id: uuid.UUID, new_email: str, code: str) -> User:
         row = await self.db.scalar(
@@ -456,6 +347,11 @@ class AuthService:
                 or_(EmailCode.email == old_email, EmailCode.email == new_email, EmailCode.user_id == user.id)
             )
         )
+        await self.db.execute(
+            delete(AuthVerification).where(
+                AuthVerification.identifier.in_(otp_identifiers(old_email) + otp_identifiers(new_email))
+            )
+        )
         await self.revoke_other_sessions(user.id, current_session_id, commit=False)
         await self.db.commit()
         await self.db.refresh(user)
@@ -467,15 +363,21 @@ class AuthService:
             log.error("email change notice failed", extra={"error_type": type(error).__name__})
         return user
 
-    async def delete_account(self, user: User, password: str) -> None:
-        valid, _ = await self.passwords.verify(user.password_hash, password)
-        if not valid:
-            raise InvalidCredentials("The password is incorrect.")
+    async def delete_account(self, user: User, session: AuthSession, password: str | None) -> None:
+        await self.reauthenticate(user, session, password)
+        address = user.email
         await self.db.execute(delete(User).where(User.id == user.id))  # cascades to all user data
         # Codes are keyed by address, not by user, so the cascade misses them. A reset code left
         # behind would still work on a new account registered with the same address.
-        await self.db.execute(delete(EmailCode).where(EmailCode.email == user.email))
+        await self.db.execute(delete(EmailCode).where(EmailCode.email == address))
+        await self.db.execute(delete(AuthVerification).where(AuthVerification.identifier.in_(otp_identifiers(address))))
         await self.db.commit()
+        # After the commit, and best effort: the account is gone whether or not this arrives.
+        subject, body = account_deleted_email(self.settings.app_name)
+        try:
+            await self.email.send(address, subject, body)
+        except Exception as error:  # noqa: BLE001
+            log.error("account deleted notice failed", extra={"error_type": type(error).__name__})
 
     async def get_settings(self, user_id: uuid.UUID) -> UserSettings | None:
         return await self.db.get(UserSettings, user_id)

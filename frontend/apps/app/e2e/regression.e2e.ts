@@ -140,7 +140,7 @@ test("changing the password: a wrong current one is refused, the new one signs i
 test("signing out other devices ends their sessions, not this one", async ({ page, browser, account }) => {
   const other = await browser.newContext({ baseURL: APP_URL });
   try {
-    const login = await other.request.post("/api/v1/auth/login", {
+    const login = await other.request.post("/api/auth/sign-in/email", {
       data: { email: account.email, password: account.password },
       headers: SAME_ORIGIN,
     });

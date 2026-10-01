@@ -125,8 +125,19 @@ resolved before, and only when, a native client is started:
 | Logs carry request and user ids, but not the client; no metrics or tracing | web and app failures cannot be told apart | log a client identifier; add metrics once there is more than one client |
 | Uploads are the profile photo (≤ 64 KB, `user_avatars`) and File Library files (≤ 100 MB per student, PostgreSQL `user_file_blobs`, under a 3 GB database ceiling) | many students' files outgrow one database's disk | object storage behind the same `/v1/files` API when the ceiling is reached; clients never see where bytes live |
 
-Already client-neutral: bearer tokens returned in the response body; 30-day sliding sessions, one
-per device; email flows by 6-digit code, with no web links; a non-streaming `POST /v1/chat`
+Identity (2026-10-01): Better Auth runs inside the web app's server (`/api/auth/*`, no extra
+service) on the same PostgreSQL: it signs people up (email first: a code proves the address, then a
+password), in (password, email code, Google) and resets passwords, and owns the session's expiry
+and cookie. The API stays the authority on every request: it finds the session by the SHA-256 of
+its token (`auth_sessions.token_hash`, kept by a trigger), requires a verified address and
+authorizes per user; sessions, devices, the email change and account deletion are still `/v1`.
+Better Auth reaches the database as `aichat_auth`, a role limited to the identity tables, and calls
+the API's loopback-only `/internal/auth/*` (shared token) to send codes and security notices. A
+native client would sign in at `/api/auth` (with Better Auth's bearer plugin, not enabled today)
+and call `/v1` with `Authorization: Bearer` exactly as now.
+
+Already client-neutral: bearer tokens on `/v1`; 30-day sliding sessions, one per device; email
+flows by 6-digit code, with no web links; a non-streaming `POST /v1/chat`
 alongside SSE; opaque pagination cursors; ISO-8601 timestamps; errors identified by `code`; another
 user's resources indistinguishable from missing ones.
 

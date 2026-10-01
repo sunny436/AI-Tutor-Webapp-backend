@@ -5,12 +5,13 @@ import { join, relative } from "node:path";
 /**
  * Colour comes from the design tokens (packages/ui/src/globals.css), never from literals in the
  * app: a raw hex, rgb() or hsl() in a component is a colour the themes, high contrast and the next
- * palette change cannot reach. Three places are allowed, each for a reason no token can serve.
+ * palette change cannot reach. Four places are allowed, each for a reason no token can serve.
  */
 const SRC = join(import.meta.dir, "..");
 const ALLOWED: Record<string, string> = {
   "app/global-error.tsx": "renders when the app itself has failed, so it carries its own tiny palette",
   "app/layout.tsx": "the browser's theme-color meta takes a literal colour",
+  "components/google-mark.tsx": "Google's sign-in mark must keep Google's own colours (its branding guidelines)",
   "features/streak/LearningActivityCalendar.tsx": "the calendar draws on a canvas: fallbacks until the tokens are read",
 };
 const RAW_COLOUR = /#[0-9a-fA-F]{3}(?:[0-9a-fA-F]{3})?(?:[0-9a-fA-F]{2})?\b|rgba?\(|hsla?\((?!var\(|\$\{)/;

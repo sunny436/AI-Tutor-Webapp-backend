@@ -14,12 +14,6 @@ from pathlib import Path
 PUBLIC = {
     ("GET", "/health"): "liveness probe",
     ("GET", "/ready"): "readiness probe",
-    ("POST", "/v1/auth/signup"): "creating an account",
-    ("POST", "/v1/auth/verify-email"): "signs in",
-    ("POST", "/v1/auth/login"): "signs in",
-    ("POST", "/v1/auth/resend-code"): "before signing in",
-    ("POST", "/v1/auth/password/forgot"): "before signing in",
-    ("POST", "/v1/auth/password/reset"): "signs in",
     ("GET", "/v1/catalog/academic"): "the same reference data for everyone, needed before sign-up is complete",
     ("POST", "/v1/notifications/unsubscribe"): "the link in an email; authorised by its signed token, not a session",
 }
@@ -40,13 +34,21 @@ def _routes(app) -> list[tuple[str, str]]:
     ]
 
 
+# Hidden from the public contract on purpose, each with how it is guarded instead of a session.
+HIDDEN = {
+    "auth/internal.py": "the web app's Better Auth to the API, loopback only: X-Internal-Token, "
+    "404 without it (tests/test_auth.py test_internal_routes_need_the_token)",
+}
+
+
 def test_no_route_is_hidden_from_the_api_description():
     hidden = [
-        str(path.relative_to(APP_DIR))
+        path.relative_to(APP_DIR).as_posix()
         for path in APP_DIR.rglob("*.py")
         if "include_in_schema=False" in path.read_text(encoding="utf-8")
     ]
-    assert not hidden, f"routes hidden from OpenAPI escape the auth check: {hidden}"
+    unexplained = sorted(set(hidden) - set(HIDDEN))
+    assert not unexplained, f"routes hidden from OpenAPI escape the auth check: {unexplained}"
 
 
 def test_the_public_list_names_only_routes_that_exist(app):

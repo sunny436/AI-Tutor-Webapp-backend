@@ -47,21 +47,23 @@ test("a user's whole journey", async ({ page, context }) => {
   const email = uniqueEmail("journey");
   const newPassword = `${PASSWORD}-new`;
 
-  await test.step("sign up and verify the email", async () => {
+  await test.step("sign up: email, the emailed code, then a password", async () => {
     await page.goto("/signup");
     await page.getByLabel("Name (optional)").fill("E2E Journey");
     await page.getByLabel("Email").fill(email);
-    await page.getByLabel("Password", { exact: true }).fill(PASSWORD);
-    await page.getByRole("button", { name: "Create account" }).click();
+    await page.getByRole("button", { name: "Send code" }).click();
     await expect(page.getByRole("status")).toContainText("a 6-digit code is on its way");
-    await page.getByLabel("Code").fill(await mailCode(email, "verify"));
-    await page.getByRole("button", { name: "Verify email" }).click();
+    await page.getByLabel("Code").fill(await mailCode(email, "signin"));
+    await page.getByRole("button", { name: "Create account" }).click();
+    await expect(page.getByRole("heading", { name: "Choose a password" })).toBeVisible();
+    await page.getByLabel("Password", { exact: true }).fill(PASSWORD);
+    await page.getByRole("button", { name: "Save password" }).click();
     await expect(page).toHaveURL("/");
     await expectStudyGreeting(page);
   });
 
-  await test.step("the session is an httpOnly cookie the page cannot read", async () => {
-    const session = (await context.cookies()).find((cookie) => cookie.name === "aichat_session");
+  await test.step("the session is an httpOnly cookie the page cannot read, and no answer carries it", async () => {
+    const session = (await context.cookies()).find((cookie) => cookie.name === "padhai_session");
     expect(session, "session cookie").toBeTruthy();
     expect(session?.httpOnly).toBe(true);
     expect(session?.sameSite).toBe("Lax");
@@ -69,8 +71,12 @@ test("a user's whole journey", async ({ page, context }) => {
       cookie: document.cookie,
       storage: JSON.stringify({ ...window.localStorage, ...window.sessionStorage }),
     }));
-    expect(visible.cookie).not.toContain("aichat_session");
+    expect(visible.cookie).not.toContain("padhai_session");
     expect(visible.storage).not.toContain(session?.value ?? "<none>");
+    const token = decodeURIComponent(session?.value ?? "").split(".")[0] ?? "<none>";
+    const answer = await page.request.get("/api/auth/get-session");
+    expect(answer.status()).toBe(200);
+    expect(await answer.text()).not.toContain(token);
   });
 
   let first = "";
@@ -218,7 +224,7 @@ test("a user's whole journey", async ({ page, context }) => {
   await test.step("log out; a chat link then asks to sign in and comes back", async () => {
     await logOutFromSidebar(page);
     await expect(page).toHaveURL("/login");
-    expect((await context.cookies()).some((cookie) => cookie.name === "aichat_session" && cookie.value)).toBe(false);
+    expect((await context.cookies()).some((cookie) => cookie.name === "padhai_session" && cookie.value)).toBe(false);
 
     await page.goto(`/c/${first}`);
     await expect(page).toHaveURL(`/login?redirect=${encodeURIComponent(`/c/${first}`)}`);

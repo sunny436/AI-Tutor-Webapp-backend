@@ -10,8 +10,9 @@
  *               an open proxy.
  *   CSRF        Mutations must carry an `Origin` equal to the public origin (or, with
  *               no Origin, `Sec-Fetch-Site: same-origin`) and a JSON content type.
- *   TOKENS      The session lives in an httpOnly cookie. It is attached here and
- *               stripped from every response; the browser never sees it.
+ *   TOKENS      The session lives in Better Auth's httpOnly cookie (lib/auth). Its
+ *               signature is verified here, then the token is attached; the browser
+ *               never sees it.
  *   IDENTITY    X-Forwarded-For is set from `cf-connecting-ip` only. The API trusts the
  *               FIRST address it is given, so passing a client-supplied chain on would
  *               let anyone choose the IP that sign-in throttling counts.
@@ -36,7 +37,7 @@
  */
 
 import { matchRoute } from "@/lib/api/routes";
-import { clearedSessionCookies, readSessionToken, sessionCookie } from "./cookies";
+import { clearedSessionCookies, readSessionToken } from "./cookies";
 import { publicOrigin, publicProtocol } from "./public-origin";
 
 export const MAX_BODY_BYTES = 64 * 1024;
@@ -45,6 +46,8 @@ const MUTATIONS = new Set(["POST", "PATCH", "PUT", "DELETE"]);
 
 export type ProxyDeps = {
   apiBaseUrl: string;
+  /** BETTER_AUTH_SECRET: the session cookie's signature is checked with it. */
+  cookieSecret: string;
   fetchImpl?: typeof fetch;
   requestId?: () => string;
   jsonTimeoutMs?: number;
@@ -234,7 +237,7 @@ async function forward(request: Request, segments: string[], deps: ProxyDeps): P
     return envelope(403, "forbidden", requestId);
   }
 
-  const token = readSessionToken(request.headers.get("cookie"), https);
+  const token = await readSessionToken(request.headers.get("cookie"), https, deps.cookieSecret);
   if (spec.auth && !token) {
     return envelope(401, "unauthorized", requestId, { cookies: clearedSessionCookies(https) });
   }
@@ -391,23 +394,6 @@ async function forward(request: Request, segments: string[], deps: ProxyDeps): P
     }
     if (upstream.status >= 500) log(`[bff] ${key} ${upstream.status} ${requestId}`);
     return envelope(upstream.status, code, requestId, { fields, current });
-  }
-
-  if (spec.session === "issue") {
-    let user: unknown;
-    let session: { token?: unknown; expiresAt?: unknown } | undefined;
-    try {
-      ({ user, session } = JSON.parse(text) as { user: unknown; session: typeof session });
-    } catch {
-      return envelope(502, "service_unavailable", requestId);
-    }
-    if (typeof session?.token !== "string" || typeof session.expiresAt !== "string" || !user) {
-      return envelope(502, "service_unavailable", requestId);
-    }
-    responseHeaders.set("Content-Type", "application/json");
-    responseHeaders.append("Set-Cookie", sessionCookie(session.token, session.expiresAt, https));
-    // The token is deliberately NOT in the body: the browser only ever gets `user`.
-    return new Response(JSON.stringify({ user }), { status: upstream.status, headers: responseHeaders });
   }
 
   if (spec.session === "clear") {

@@ -3,7 +3,7 @@
  * tests) lives in `lib/server/proxy-core.ts`; this file only wires it to Next.js.
  */
 
-import { apiBaseUrl } from "@/lib/server/config";
+import { apiBaseUrl, authSecret } from "@/lib/server/config";
 import { proxyRequest } from "@/lib/server/proxy-core";
 
 // Reads a cookie and streams: never prerendered, never cached, Node runtime.
@@ -13,7 +13,7 @@ export const runtime = "nodejs";
 type Context = { params: { path?: string[] } };
 
 async function handle(request: Request, { params }: Context): Promise<Response> {
-  return proxyRequest(request, params.path ?? [], { apiBaseUrl: apiBaseUrl() });
+  return proxyRequest(request, params.path ?? [], { apiBaseUrl: apiBaseUrl(), cookieSecret: authSecret() });
 }
 
 export { handle as DELETE, handle as GET, handle as PATCH, handle as POST, handle as PUT };

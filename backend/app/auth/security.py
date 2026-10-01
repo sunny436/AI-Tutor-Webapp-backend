@@ -12,9 +12,14 @@ from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatc
 
 from app.settings import Settings
 
+# argon2id costs 64 MiB and a few hundred ms per call: at most this many run at once, so a burst
+# of password checks queues instead of taking the host's memory and every worker thread.
+CONCURRENT_HASHES = 2
+
 
 class Passwords:
-    """argon2id hashing, run off the event loop (it is deliberately CPU/memory heavy)."""
+    """argon2id hashing, run off the event loop (it is deliberately CPU/memory heavy). The web
+    app's Better Auth writes and checks the same PHC strings (frontend/apps/app/src/lib/auth)."""
 
     def __init__(self, settings: Settings) -> None:
         self._hasher = PasswordHasher(
@@ -25,9 +30,11 @@ class Passwords:
         # Verified against when an email is unknown, so a missing account costs the
         # same time as a wrong password (no account enumeration by timing).
         self._dummy_hash = self._hasher.hash(secrets.token_hex(16))
+        self._slots = asyncio.Semaphore(CONCURRENT_HASHES)
 
     async def hash(self, password: str) -> str:
-        return await asyncio.to_thread(self._hasher.hash, password)
+        async with self._slots:
+            return await asyncio.to_thread(self._hasher.hash, password)
 
     async def verify(self, password_hash: str | None, password: str) -> tuple[bool, bool]:
         """Returns (valid, needs_rehash)."""
@@ -40,11 +47,8 @@ class Passwords:
                 return False, False
             return password_hash is not None, self._hasher.check_needs_rehash(target)
 
-        return await asyncio.to_thread(_verify)
-
-
-def new_session_token() -> str:
-    return secrets.token_urlsafe(32)  # 256 bits
+        async with self._slots:
+            return await asyncio.to_thread(_verify)
 
 
 def hash_token(token: str) -> str:

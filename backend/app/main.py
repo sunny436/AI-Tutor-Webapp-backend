@@ -20,8 +20,11 @@ from langchain_core.embeddings import Embeddings
 from app.appearance.router import router as appearance_router
 from app.auth.avatar import AVATAR_DECODES
 from app.auth.emails import EmailSender, build_email_sender
+from app.auth.internal import router as internal_auth_router
+from app.auth.retention import purge_expired
 from app.auth.router import router as auth_router
 from app.auth.security import Passwords
+from app.auth.service import utcnow
 from app.chat.router import router as chat_router
 from app.chat.service import ChatService
 from app.chat.streams import ActiveGenerations
@@ -52,6 +55,9 @@ from app.settings import Settings, get_settings
 from app.support.router import router as support_router
 
 log = get_logger("app")
+# Auth retention (app/auth/retention.py): first run a few minutes after start, then hourly.
+RETENTION_FIRST_RUN_S = 300
+RETENTION_EVERY_S = 3600
 
 
 def build_rag(settings: Settings, db: Database, llm: LLMProvider, embeddings: Embeddings):
@@ -102,6 +108,19 @@ def create_app(
         )
     configure_logging(settings.log_level)
 
+    async def auth_retention() -> None:
+        # Hourly, in this process: the jobs worker that also runs it is off in production.
+        await asyncio.sleep(RETENTION_FIRST_RUN_S)
+        while True:
+            try:
+                async with app.state.db.sessionmaker() as session:
+                    purged = await purge_expired(session, utcnow())
+                    await session.commit()
+                log.info("auth retention", extra=purged)
+            except Exception as error:  # noqa: BLE001 - try again next hour
+                log.warning("auth retention failed", extra={"error_type": type(error).__name__})
+            await asyncio.sleep(RETENTION_EVERY_S)
+
     @asynccontextmanager
     async def lifespan(app: FastAPI):
         app.state.db = Database(settings)
@@ -127,9 +146,12 @@ def create_app(
         except Exception as error:  # noqa: BLE001 - start anyway; /ready reports the database
             log.warning("startup checks skipped", extra={"error_type": type(error).__name__})
         log.info("started", extra={"env": settings.app_env, "llm": app.state.llm.name})
+        retention = None if settings.app_env == "test" else asyncio.create_task(auth_retention())
         try:
             yield
         finally:
+            if retention is not None:
+                retention.cancel()
             await app.state.file_worker.stop()
             await app.state.greeting_refresh.stop()
             await app.state.generations.shutdown()
@@ -178,6 +200,7 @@ def create_app(
 
     app.include_router(health_router)
     app.include_router(auth_router)
+    app.include_router(internal_auth_router)
     app.include_router(conversations_router)
     app.include_router(chat_router)
     app.include_router(learning_router)

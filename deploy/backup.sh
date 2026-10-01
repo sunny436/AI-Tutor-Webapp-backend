@@ -11,6 +11,10 @@
 #   ... exec -T postgres psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c \
 #     "UPDATE user_files SET status='processing', attempts=0, error_code=NULL WHERE status='ready'"
 #
+# auth_sessions and auth_verifications are not dumped either: Better Auth keeps live session tokens
+# and sign-in codes in them (raw tokens, unlike the hashes before 0012), and a copy on disk must
+# never be a way into an account. After a restore everyone simply signs in again.
+#
 # A copy of the docker volume is not a backup: it can catch the database mid-write.
 set -euo pipefail
 
@@ -34,7 +38,7 @@ if [ -n "$db_bytes" ] && [ -n "$free_bytes" ] && [ "$free_bytes" -lt $((2 * db_b
 fi
 
 "${COMPOSE[@]}" exec -T postgres pg_dump -U "$POSTGRES_USER" -d "$POSTGRES_DB" --format=custom \
-  --exclude-table-data=file_chunks > "$out"
+  --exclude-table-data=file_chunks --exclude-table-data=auth_sessions --exclude-table-data=auth_verifications > "$out"
 
 # Fail loudly on an empty dump rather than rotating away the last good copy.
 if [ ! -s "$out" ]; then

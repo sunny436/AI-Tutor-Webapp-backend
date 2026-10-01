@@ -41,6 +41,13 @@ done
 curl -fsS -o /dev/null --max-time 5 "http://127.0.0.1:$API_PORT/ready" && ok "API /health and /ready (database reachable)" || bad "API /ready fails"
 curl -fsS -o /dev/null --max-time 5 "http://127.0.0.1:$WEB_PORT/login" && ok "web /login" || bad "web /login fails"
 grep -qE '^API_BASE_URL=http://127\.0\.0\.1:4100/?$' "$SECRETS/web.env" 2> /dev/null && ok "web.env API_BASE_URL -> the API on :4100" || bad "web.env API_BASE_URL is not http://127.0.0.1:4100"
+missing=""
+for name in AUTH_DATABASE_URL BETTER_AUTH_SECRET AUTH_INTERNAL_TOKEN; do grep -qE "^$name=.+" "$SECRETS/web.env" 2> /dev/null || missing="$missing $name"; done
+[ -z "$missing" ] && ok "web.env has the sign-in settings (values not shown)" || bad "web.env is missing:$missing"
+[ -n "$(env_value AUTH_INTERNAL_TOKEN api.env)" ] && [ "$(env_value AUTH_INTERNAL_TOKEN api.env)" = "$(env_value AUTH_INTERNAL_TOKEN web.env)" ] \
+  && ok "AUTH_INTERNAL_TOKEN set and the same in api.env and web.env" || bad "AUTH_INTERNAL_TOKEN missing or different in api.env and web.env"
+web_auth_ok "$WEB_PORT" && ok "web sign-in database reachable (/api/health)" || bad "web reports its sign-in database unavailable (/api/health)"
+grep -qE '^GOOGLE_CLIENT_ID=.+' "$SECRETS/web.env" 2> /dev/null && info "Google sign-in: configured" || info "Google sign-in: not configured (the button is hidden)"
 public=$(sed -n 's/^NEXT_PUBLIC_SITE_URL=//p' "$SECRETS/web.env" 2> /dev/null)
 if [ -n "$public" ]; then info "public $public/login -> $(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "$public/login" || true) (information: Cloudflare/DNS)"; fi
 jobs_timer=$(systemctl is-enabled aichat-jobs.timer 2> /dev/null); info "jobs worker: aichat-jobs.timer ${jobs_timer:-not installed}"

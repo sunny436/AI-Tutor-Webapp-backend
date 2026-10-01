@@ -8,6 +8,7 @@ import { type ChangeEvent, type FormEvent, useEffect, useMemo, useRef, useState 
 import { toast } from "sonner";
 
 import { useUser } from "@/components/user-context";
+import { authClient } from "@/lib/auth/client";
 import { ApiError, describeError } from "@/lib/api/errors";
 import {
   AVATAR_MAX_BYTES,
@@ -301,6 +302,15 @@ function EmailCard() {
   const [code, setCode] = useState("");
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  // An account without a password (Google, or email codes only) confirms by a recent sign-in.
+  const [hasPassword, setHasPassword] = useState(true);
+
+  useEffect(() => {
+    if (!open) return;
+    void authClient.listAccounts().then(({ data }) => {
+      if (data) setHasPassword(data.some((account) => account.providerId === "credential"));
+    });
+  }, [open]);
 
   const reset = () => {
     setState({ step: "address" });
@@ -316,11 +326,13 @@ function EmailCard() {
     setPending(true);
     try {
       const address = newEmail.trim();
-      await requestEmailChange({ newEmail: address, password });
+      await requestEmailChange(hasPassword ? { newEmail: address, password } : { newEmail: address });
       setPassword("");
       setState({ step: "code", newEmail: address });
     } catch (caught) {
       if (caught instanceof ApiError && caught.code === "invalid_credentials") setError("That password isn't right.");
+      else if (caught instanceof ApiError && caught.code === "reauth_required")
+        setError("For your security, sign out and sign in again, then try within 15 minutes.");
       else if (caught instanceof ApiError && caught.reasonFor("newEmail") === "unchanged")
         setError("That's already your email address.");
       else setError(describeError(caught).message);
@@ -393,18 +405,20 @@ function EmailCard() {
                     />
                   )}
                 </Field>
-                <Field label="Current password">
-                  {(props) => (
-                    <Input
-                      {...props}
-                      type="password"
-                      required
-                      autoComplete="current-password"
-                      value={password}
-                      onChange={(event) => setPassword(event.target.value)}
-                    />
-                  )}
-                </Field>
+                {hasPassword && (
+                  <Field label="Current password">
+                    {(props) => (
+                      <Input
+                        {...props}
+                        type="password"
+                        required
+                        autoComplete="current-password"
+                        value={password}
+                        onChange={(event) => setPassword(event.target.value)}
+                      />
+                    )}
+                  </Field>
+                )}
                 {error && (
                   <p role="alert" className="text-sm text-destructive">
                     {error}
@@ -415,7 +429,7 @@ function EmailCard() {
                 <Button type="button" variant="outline" onClick={() => setOpen(false)} disabled={pending}>
                   Cancel
                 </Button>
-                <Button type="submit" disabled={pending || !newEmail || !password}>
+                <Button type="submit" disabled={pending || !newEmail || (hasPassword && !password)}>
                   {pending ? "Sending…" : "Send code"}
                 </Button>
               </DialogFooter>

@@ -14,11 +14,11 @@ import { publicProtocol, publicUrlFor } from "./public-origin";
 
 export async function handleSessionExpired(
   request: Request,
-  deps: { apiBaseUrl: string; fetchImpl?: typeof fetch },
+  deps: { apiBaseUrl: string; cookieSecret: string; fetchImpl?: typeof fetch },
 ): Promise<Response> {
   const https = publicProtocol(request.headers, request.url) === "https";
   const next = safeRedirect(new URL(request.url).searchParams.get("redirect"));
-  const token = readSessionToken(request.headers.get("cookie"), https);
+  const token = await readSessionToken(request.headers.get("cookie"), https, deps.cookieSecret);
 
   const result = await backendGet(deps.apiBaseUrl, "/v1/me", token, { fetchImpl: deps.fetchImpl });
 

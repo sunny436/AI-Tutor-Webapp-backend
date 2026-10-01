@@ -23,6 +23,9 @@ const requested = process.env.E2E_BACKEND_DIR;
 const backendDir =
   requested === "none" ? undefined : requested || (existsSync(join(repoBackend, python)) ? repoBackend : undefined);
 
+/** Shared by the e2e API and web servers (never a real token). */
+const E2E_INTERNAL_TOKEN = "e2e-only-internal-token-0123456789abcdef";
+
 export default defineConfig({
   testDir: "./e2e",
   testMatch: "**/*.e2e.ts",
@@ -65,12 +68,11 @@ export default defineConfig({
               // Slow enough to press Stop and switch chats mid-reply.
               LLM_FAKE_TOKEN_DELAY_S: "0.05",
               // Every test signs up and chats; the production limits would trip.
-              SIGNUP_ATTEMPTS_PER_IP: "1000",
-              LOGIN_ATTEMPTS_PER_IP: "1000",
-              LOGIN_FAILURES_PER_EMAIL: "1000",
               CODE_REQUESTS_PER_EMAIL: "1000",
               CHAT_GENERATIONS_PER_MINUTE: "1000",
               CHAT_GENERATIONS_PER_DAY: "100000",
+              // Shared with the web app's Better Auth (below): it asks the API to email codes.
+              AUTH_INTERNAL_TOKEN: E2E_INTERNAL_TOKEN,
             },
           },
         ]
@@ -90,6 +92,14 @@ export default defineConfig({
         NEXT_DIST_DIR: ".next-e2e",
         API_BASE_URL: API_URL,
         NEXT_PUBLIC_SITE_URL: APP_URL,
+        // Better Auth (lib/auth): the API's own test database (the API's default DATABASE_URL, as CI
+        // runs it), a throwaway secret, and no per-IP limit (every test comes from one address;
+        // the per-account limits stay on).
+        AUTH_DATABASE_URL: process.env.E2E_AUTH_DATABASE_URL ?? "postgresql://aichat:aichat@127.0.0.1:5432/aichat",
+        BETTER_AUTH_SECRET: "e2e-only-better-auth-secret-0123456789abcdef",
+        AUTH_INTERNAL_TOKEN: E2E_INTERNAL_TOKEN,
+        AUTH_RATE_LIMIT: "off",
+        ...(process.env.E2E_GOOGLE ? { GOOGLE_CLIENT_ID: "e2e-client-id", GOOGLE_CLIENT_SECRET: "e2e-client-secret" } : {}),
         // Whatever a local .env.local says: no error reporting from test runs.
         NEXT_PUBLIC_SENTRY_DSN: "",
       },

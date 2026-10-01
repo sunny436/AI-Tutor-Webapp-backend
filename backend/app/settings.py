@@ -28,6 +28,9 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     # Keys HMACs of one-time email codes. Must be set to a long random value in production.
     secret_key: SecretStr = SecretStr(DEV_SECRET_KEY)
+    # Shared with the web app's Better Auth (web.env): it authenticates its calls to
+    # /internal/auth/* (app/auth/internal.py). Empty = those routes do not exist (404).
+    auth_internal_token: SecretStr = SecretStr("")
 
     # ---- database (PostgreSQL + pgvector: the single source of truth) ----
     database_url: str = "postgresql+asyncpg://aichat:aichat@127.0.0.1:5432/aichat"
@@ -44,12 +47,8 @@ class Settings(BaseSettings):
     max_body_bytes: int = 64 * 1024
 
     # ---- auth ----
-    session_ttl_days: int = 30
     email_code_ttl_minutes: int = 15
     email_code_max_attempts: int = 5
-    login_failures_per_email: int = 10  # per auth_window_minutes
-    login_attempts_per_ip: int = 50  # per auth_window_minutes
-    signup_attempts_per_ip: int = 20  # per auth_window_minutes
     code_requests_per_email: int = 5  # per auth_window_minutes
     auth_window_minutes: int = 15
     email_change_requests_per_user: int = 3  # per auth_window_minutes
@@ -226,6 +225,8 @@ class Settings(BaseSettings):
         problems = []
         if self.secret_key.get_secret_value() in ("", DEV_SECRET_KEY) or len(self.secret_key.get_secret_value()) < 32:
             problems.append("SECRET_KEY must be a random value of at least 32 characters")
+        if len(self.auth_internal_token.get_secret_value()) < 32:
+            problems.append("AUTH_INTERNAL_TOKEN must be a random value of at least 32 characters")
         if "aichat:aichat@" in self.database_url:
             problems.append("DATABASE_URL uses the development credentials")
         if self.llm_provider == "fake":

@@ -227,6 +227,42 @@ All production values live in `/etc/aichat/*.env` (root, mode 600), never in git
 A runtime value takes effect on the next restart of the service; a build-time value
 (`NEXT_PUBLIC_*`) on the next deploy (the frontend is rebuilt when they change).
 
+## Sign-in (Better Auth)
+
+Better Auth runs in the web app (`frontend/apps/app/src/lib/auth`, docs/architecture.md); the API
+checks every session. A deploy refuses to start without these (and the smoke checks them):
+
+| File | Variable | What |
+|---|---|---|
+| `web.env` | `AUTH_DATABASE_URL` | `postgresql://aichat_auth:<password>@127.0.0.1:5432/aichat`. The role is created once on the host (`CREATE ROLE aichat_auth LOGIN PASSWORD '…'`); migration 0012 grants it the identity tables only (`users`, `auth_sessions`, `auth_accounts`, `auth_verifications`, read/insert on `auth_attempts`) |
+| `web.env` | `BETTER_AUTH_SECRET` | signs the session cookie (`__Host-padhai_session`). At least 32 random characters |
+| `web.env` + `api.env` | `AUTH_INTERNAL_TOKEN` | the same value in both: Better Auth's calls to the API's `/internal/auth/*` (codes and security notices). At least 32 random characters |
+| `web.env` | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | optional; unset hides "Continue with Google". Google Cloud: an OAuth client of type "Web application", authorized redirect URI `https://<host>/api/auth/callback/google`, consent screen published with the basic scopes (openid, email, profile) |
+
+Generate secrets on the host and append them without printing them, e.g.
+`printf 'BETTER_AUTH_SECRET=%s\n' "$(openssl rand -base64 48)" >> /etc/aichat/web.env`.
+
+**Rotating** (each needs a deploy or a restart of what reads it):
+- `BETTER_AUTH_SECRET`: every session cookie stops verifying, so everyone signs in again; Google
+  sign-ins in progress fail once. Restart `aichat-web`.
+- `AUTH_INTERNAL_TOKEN`: change it in both files, then restart `aichat-api` and `aichat-web`
+  together; until both run the new value, codes and notices are not sent.
+- The role's password: `ALTER ROLE aichat_auth PASSWORD '…'` and `AUTH_DATABASE_URL`, then restart
+  `aichat-web`.
+- The Google secret: create a second secret in Google Cloud, switch web.env, restart `aichat-web`,
+  then delete the old secret.
+
+**Limits** (per account, in `auth_attempts`, atomic across both processes): 10 password checks per
+15 minutes (sign-in, change, re-authentication), 20 code checks a day, 5 codes sent per 15 minutes
+and 20 a day per address. Per address (Better Auth, in memory, by `CF-Connecting-IP`): sign-in 60 a
+minute, codes 30, Google 20. Security notices (a new device, a password changed, Google added, an
+account deleted) are emailed at once, whatever `NOTIFICATIONS_MODE` says (owner's decision,
+2026-10-01). Auth retention (expired sessions, codes, counters, never-verified accounts after a
+week) runs hourly in the API itself.
+
+**Backups** leave out `auth_sessions` and `auth_verifications` (live tokens and codes): after a
+restore everyone signs in again.
+
 ## File Library (app/files)
 
 - **Needs:** embeddings configured (`EMBEDDING_*`, any OpenAI-compatible API, e.g. OpenRouter; the

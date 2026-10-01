@@ -25,9 +25,11 @@ describe("generated contract", () => {
   test("the web app's limits are the backend's", () => {
     expect(MESSAGE_MAX).toBe(CONTRACT.ChatRequest.message.maxLength);
     expect(TITLE_MAX).toBe(CONTRACT.RenameConversationRequest.title.maxLength);
-    expect(PASSWORD_MIN).toBe(CONTRACT.SignupRequest.password.minLength);
-    expect(PASSWORD_MAX).toBe(CONTRACT.SignupRequest.password.maxLength);
+    // Passwords are set by Better Auth (8 to 128, lib/auth/config.ts); the API re-authenticates
+    // with the same longest password.
+    expect([PASSWORD_MIN, PASSWORD_MAX]).toEqual([8, 128]);
+    expect(PASSWORD_MAX).toBe(CONTRACT.DeleteMeRequest.password.maxLength);
     expect(DISPLAY_NAME_MAX).toBe(CONTRACT.ProfileSet.displayName.maxLength);
-    expect(CONTRACT.VerifyEmailRequest.code.pattern).toBe(`^\\d{${CODE_LENGTH}}$`);
+    expect(CONTRACT.EmailConfirmRequest.code.pattern).toBe(`^\\d{${CODE_LENGTH}}$`);
   });
 });

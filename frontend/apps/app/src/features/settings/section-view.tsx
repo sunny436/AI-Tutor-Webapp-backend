@@ -13,7 +13,10 @@ import { StreakSection } from "./streak-section";
 import type { SectionSlug } from "./sections";
 import { SubjectsSection } from "./subjects-section";
 
-const VIEWS: Record<SectionSlug, () => JSX.Element> = {
+/** What a section may need from the server: whether Google sign-in is configured (Privacy). */
+export type SectionProps = { googleEnabled: boolean };
+
+const VIEWS: Record<SectionSlug, (props: SectionProps) => JSX.Element> = {
   profile: ProfileSection,
   academic: AcademicSection,
   goals: GoalsSection,
@@ -28,7 +31,7 @@ const VIEWS: Record<SectionSlug, () => JSX.Element> = {
   help: HelpSection,
 };
 
-export function SectionView({ slug }: { slug: SectionSlug }) {
+export function SectionView({ slug, googleEnabled }: { slug: SectionSlug } & SectionProps) {
   const View = VIEWS[slug];
-  return <View />;
+  return <View googleEnabled={googleEnabled} />;
 }

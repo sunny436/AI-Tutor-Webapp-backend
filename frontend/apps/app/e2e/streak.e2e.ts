@@ -123,7 +123,7 @@ test("the bell shows a new sign-in; opening it reads nothing; Read all and Clear
   await expect(bell(page)).toHaveAccessibleName("Notifications");
 
   const other = await browser.newContext({ baseURL: APP_URL });
-  const login = await other.request.post("/api/v1/auth/login", {
+  const login = await other.request.post("/api/auth/sign-in/email", {
     data: { email: account.email, password: account.password },
     headers: { ...SAME_ORIGIN, "User-Agent": FIREFOX },
   });

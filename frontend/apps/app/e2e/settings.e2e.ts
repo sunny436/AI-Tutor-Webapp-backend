@@ -35,7 +35,7 @@ const PHOTO = Buffer.from(
 async function secondDevice(browser: Browser, account: { email: string; password: string }): Promise<Page> {
   const context = await browser.newContext({ baseURL: APP_URL });
   const page = await context.newPage();
-  const login = await context.request.post("/api/v1/auth/login", {
+  const login = await context.request.post("/api/auth/sign-in/email", {
     data: { email: account.email, password: account.password },
     headers: { ...SAME_ORIGIN, "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0" },
   });
@@ -163,12 +163,12 @@ test("email: changed only after the code from the new address", async ({ page, a
   await expect(page.getByRole("main").getByText(next)).toBeVisible();
 
   await page.request.post(`${APP_URL}/api/v1/auth/logout`, { headers: SAME_ORIGIN });
-  const old = await page.request.post(`${APP_URL}/api/v1/auth/login`, {
+  const old = await page.request.post(`${APP_URL}/api/auth/sign-in/email`, {
     data: { email: account.email, password: PASSWORD },
     headers: SAME_ORIGIN,
   });
   expect(old.status()).toBe(401);
-  const moved = await page.request.post(`${APP_URL}/api/v1/auth/login`, {
+  const moved = await page.request.post(`${APP_URL}/api/auth/sign-in/email`, {
     data: { email: next, password: PASSWORD },
     headers: SAME_ORIGIN,
   });

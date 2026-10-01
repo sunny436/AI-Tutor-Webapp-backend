@@ -56,13 +56,6 @@ describe("route table vs backend contract", () => {
  * property must be present.
  */
 const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
-  SignupRequest: [{ email: "a@b.c", password: "x" }, { email: "a@b.c", password: "x", displayName: "A" }],
-  VerifyEmailRequest: [{ email: "a@b.c", code: "123456" }],
-  LoginRequest: [{ email: "a@b.c", password: "x" }],
-  ResendCodeRequest: [{ email: "a@b.c", purpose: "verify_email" }],
-  ForgotPasswordRequest: [{ email: "a@b.c" }],
-  ResetPasswordRequest: [{ email: "a@b.c", code: "123456", newPassword: "x" }],
-  ChangePasswordRequest: [{ currentPassword: "x", newPassword: "y" }],
   UpdateProfileRequest: [
     { version: 0 },
     { version: 1, set: { displayName: "A", timezone: "Asia/Kolkata" } },
@@ -99,7 +92,7 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
     },
   ],
   TutorPreviewRequest: [{}, { profile: { grade: "class_9" }, subjects: [{ code: "physics" }], preferences: { pace: "fast" } }],
-  DeleteMeRequest: [{ password: "x" }],
+  DeleteMeRequest: [{ password: "x" }, {}],
   RenameConversationRequest: [{ title: "T" }],
   ChatRequest: [{ message: "hi" }, { conversationId: ID, message: "hi" }, { message: "hi", attachmentIds: [ID] }],
   FeedbackRequest: [{ rating: "up" }],

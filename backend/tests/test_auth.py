@@ -1,148 +1,249 @@
+"""The API's side of identity, now that the web app's Better Auth signs people in: the session
+lookup, re-authentication and its throttle, deletion, the internal routes Better Auth calls, and
+retention. (Sign-up, codes and password flows are Better Auth's: e2e/auth.e2e.ts.)"""
+
+import asyncio
+import base64
+import hashlib
 from datetime import UTC, datetime, timedelta
 
-from sqlalchemy import select, update
-from sqlalchemy.ext.asyncio import create_async_engine
+from sqlalchemy import func, select, update
 
-from app.db.models import AuthAttempt, AuthSession, EmailCode, User
-from tests.conftest import PASSWORD, last_code, register
+from app.auth.retention import purge_expired
+from app.auth.service import SIGNIN_LIMIT, SIGNIN_SCOPE
+from app.db.models import AuthAccount, AuthAttempt, AuthSession, AuthVerification, User, UserNotification
+from tests.conftest import PASSWORD, register, sign_in
+
+INTERNAL = {"X-Internal-Token": "test-internal-token-that-is-long-enough-1234"}
 
 
-async def _db(app):
-    return create_async_engine(app.state.settings.database_url)
+def _code_hash(code: str) -> str:
+    return base64.urlsafe_b64encode(hashlib.sha256(code.encode()).digest()).rstrip(b"=").decode()
 
 
-async def test_signup_verify_creates_session_and_user(client, app):
-    account = await register(client, app, email="Alice@Example.com")
-    assert account["user"]["email"].lower() == "alice@example.com"
-    assert account["user"]["emailVerified"] is True
-    me = await client.get("/v1/me", headers=account["headers"])
-    assert me.status_code == 200 and me.json()["id"] == account["user"]["id"]
-    # the password is stored as argon2id, never in clear
+async def test_sessions_are_found_by_token_hash_old_and_new(client, app):
+    account = await register(client, app)
     async with app.state.db.sessionmaker() as s:
-        user = await s.scalar(select(User))
-        assert user.password_hash.startswith("$argon2id$") and PASSWORD not in user.password_hash
-
-
-async def test_signup_always_202_and_does_not_reveal_existing_account(client, app):
-    await register(client, app, email="bob@example.com")
-    again = await client.post("/v1/auth/signup", json={"email": "bob@example.com", "password": "another-password"})
-    assert again.status_code == 202
-    assert "Sign-up attempt" in app.state.email_sender.outbox[-1]["subject"]
-    # the existing password still works; the attempt changed nothing
-    login = await client.post("/v1/auth/login", json={"email": "bob@example.com", "password": PASSWORD})
-    assert login.status_code == 200
-
-
-async def test_wrong_code_is_rejected_and_attempts_are_limited(client, app):
-    await client.post("/v1/auth/signup", json={"email": "carol@example.com", "password": PASSWORD})
-    code = last_code(app, "carol@example.com")
-    wrong = "000000" if code != "000000" else "111111"
-    for _ in range(5):
-        r = await client.post("/v1/auth/verify-email", json={"email": "carol@example.com", "code": wrong})
-        assert r.status_code == 400 and r.json()["error"]["code"] == "invalid_code"
-    # after max attempts even the right code no longer works
-    r = await client.post("/v1/auth/verify-email", json={"email": "carol@example.com", "code": code})
-    assert r.status_code == 400
-
-
-async def test_expired_code_is_rejected(client, app):
-    await client.post("/v1/auth/signup", json={"email": "dan@example.com", "password": PASSWORD})
-    code = last_code(app, "dan@example.com")
-    async with app.state.db.sessionmaker() as s:
-        await s.execute(update(EmailCode).values(expires_at=datetime.now(UTC) - timedelta(seconds=1)))
+        row = await s.scalar(select(AuthSession).where(AuthSession.token == account["token"]))
+        # Better Auth writes only the token; the 0012 trigger stores its SHA-256 beside it.
+        assert row.token_hash == hashlib.sha256(account["token"].encode()).hexdigest()
+        # A session from before 0012 has only the hash, and still works (deploy or rollback window).
+        legacy = "legacy-token-made-by-older-code"
+        s.add(
+            AuthSession(
+                user_id=row.user_id,
+                token_hash=hashlib.sha256(legacy.encode()).hexdigest(),
+                expires_at=datetime.now(UTC) + timedelta(days=1),
+            )
+        )
         await s.commit()
-    r = await client.post("/v1/auth/verify-email", json={"email": "dan@example.com", "code": code})
-    assert r.status_code == 400
+    assert (await client.get("/v1/me", headers={"Authorization": f"Bearer {legacy}"})).status_code == 200
+    assert (await client.get("/v1/me", headers={"Authorization": "Bearer not-a-session"})).status_code == 401
 
 
-async def test_login_unverified_and_wrong_password(client, app):
-    await client.post("/v1/auth/signup", json={"email": "erin@example.com", "password": PASSWORD})
-    r = await client.post("/v1/auth/login", json={"email": "erin@example.com", "password": PASSWORD})
-    assert r.status_code == 403 and r.json()["error"]["code"] == "email_not_verified"
-    r = await client.post("/v1/auth/login", json={"email": "erin@example.com", "password": "wrong-password"})
-    assert r.status_code == 401 and r.json()["error"]["code"] == "invalid_credentials"
-    r = await client.post("/v1/auth/login", json={"email": "nobody@example.com", "password": "wrong-password"})
-    assert r.status_code == 401 and r.json()["error"]["code"] == "invalid_credentials"
-
-
-async def test_login_logout(client, app):
+async def test_expired_and_unverified_sessions_are_refused(client, app):
     account = await register(client, app)
-    login = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    assert login.status_code == 200
-    headers = {"Authorization": f"Bearer {login.json()['session']['token']}"}
-    assert (await client.post("/v1/auth/logout", headers=headers)).status_code == 204
-    assert (await client.get("/v1/me", headers=headers)).status_code == 401
-    # the other session is unaffected
-    assert (await client.get("/v1/me", headers=account["headers"])).status_code == 200
-
-
-async def test_failed_logins_are_throttled_in_postgres(client, app, settings):
-    account = await register(client, app)
-    for _ in range(settings.login_failures_per_email):
-        await client.post("/v1/auth/login", json={"email": account["email"], "password": "wrong-password"})
-    blocked = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    assert blocked.status_code == 429 and blocked.json()["error"]["code"] == "rate_limited"
     async with app.state.db.sessionmaker() as s:
-        rows = list(await s.scalars(select(AuthAttempt).where(AuthAttempt.scope == "login_fail")))
-        assert len(rows) == settings.login_failures_per_email
-        assert all(account["email"] not in r.key_hash for r in rows)  # hashed, not raw
-
-
-async def test_forgot_and_reset_password_revokes_all_sessions(client, app):
-    account = await register(client, app)
-    r = await client.post("/v1/auth/password/forgot", json={"email": account["email"]})
-    assert r.status_code == 202
-    r = await client.post("/v1/auth/password/forgot", json={"email": "unknown@example.com"})
-    assert r.status_code == 202  # no enumeration
-    code = last_code(app, account["email"])
-    r = await client.post(
-        "/v1/auth/password/reset",
-        json={"email": account["email"], "code": code, "newPassword": "a brand new password"},
-    )
-    assert r.status_code == 200
+        await s.execute(update(User).where(User.email == account["email"]).values(email_verified=False))
+        await s.commit()
+    refused = await client.get("/v1/me", headers=account["headers"])
+    assert refused.status_code == 403 and refused.json()["error"]["code"] == "email_not_verified"
+    async with app.state.db.sessionmaker() as s:
+        await s.execute(update(User).where(User.email == account["email"]).values(email_verified=True))
+        await s.execute(
+            update(AuthSession)
+            .where(AuthSession.token == account["token"])
+            .values(expires_at=datetime.now(UTC) - timedelta(seconds=1))
+        )
+        await s.commit()
     assert (await client.get("/v1/me", headers=account["headers"])).status_code == 401
-    new = {"Authorization": f"Bearer {r.json()['session']['token']}"}
-    assert (await client.get("/v1/me", headers=new)).status_code == 200
-    ok = await client.post("/v1/auth/login", json={"email": account["email"], "password": "a brand new password"})
-    assert ok.status_code == 200
 
 
-async def test_change_password_keeps_current_session_only(client, app):
+async def test_the_api_moves_last_seen_but_never_the_expiry(client, app):
     account = await register(client, app)
-    other = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    other_headers = {"Authorization": f"Bearer {other.json()['session']['token']}"}
-    bad = await client.post(
-        "/v1/auth/password/change",
-        json={"currentPassword": "wrong", "newPassword": "another long password"},
-        headers=account["headers"],
-    )
-    assert bad.status_code == 401
-    ok = await client.post(
-        "/v1/auth/password/change",
-        json={"currentPassword": PASSWORD, "newPassword": "another long password"},
-        headers=account["headers"],
-    )
-    assert ok.status_code == 204
+    hour_ago = datetime.now(UTC) - timedelta(hours=2)
+    async with app.state.db.sessionmaker() as s:
+        await s.execute(update(AuthSession).where(AuthSession.token == account["token"]).values(last_seen_at=hour_ago))
+        await s.commit()
+        before = await s.scalar(select(AuthSession.expires_at).where(AuthSession.token == account["token"]))
     assert (await client.get("/v1/me", headers=account["headers"])).status_code == 200
-    assert (await client.get("/v1/me", headers=other_headers)).status_code == 401
+    async with app.state.db.sessionmaker() as s:
+        row = await s.scalar(select(AuthSession).where(AuthSession.token == account["token"]))
+    assert row.last_seen_at > hour_ago and row.expires_at == before
 
 
-async def test_resend_code_for_unverified_account(client, app):
-    await client.post("/v1/auth/signup", json={"email": "fay@example.com", "password": PASSWORD})
-    first = last_code(app, "fay@example.com")
-    r = await client.post("/v1/auth/resend-code", json={"email": "fay@example.com"})
-    assert r.status_code == 202
-    second = last_code(app, "fay@example.com")
-    # the old code is invalidated; the new one works
-    if first != second:
-        bad = await client.post("/v1/auth/verify-email", json={"email": "fay@example.com", "code": first})
-        assert bad.status_code == 400
-    good = await client.post("/v1/auth/verify-email", json={"email": "fay@example.com", "code": second})
-    assert good.status_code == 200
+async def test_logout_ends_the_session(client, app):
+    account = await register(client, app)
+    assert (await client.post("/v1/auth/logout", headers=account["headers"])).status_code == 204
+    assert (await client.get("/v1/me", headers=account["headers"])).status_code == 401
 
 
-async def test_session_token_is_stored_hashed(client, app):
+async def test_parallel_wrong_passwords_never_pass_the_limit(client, app):
+    """The per-account limit holds under a burst: the attempt is counted under an advisory lock
+    before argon2 runs, so parallel requests cannot all read the same count. The pool is not held
+    while hashing: the student's other requests keep answering during the burst."""
+    account = await register(client, app)
+    burst = [
+        client.request("DELETE", "/v1/me", json={"password": "wrong-password"}, headers=account["headers"])
+        for _ in range(SIGNIN_LIMIT + 5)
+    ]
+    reads = [client.get("/v1/me", headers=account["headers"]) for _ in range(5)]
+    results = await asyncio.gather(*burst, *reads)
+    statuses = sorted(r.status_code for r in results[: len(burst)])
+    assert statuses.count(401) == SIGNIN_LIMIT and statuses.count(429) == 5, statuses
+    assert all(r.status_code == 200 for r in results[len(burst) :])
+    async with app.state.db.sessionmaker() as s:
+        counted = await s.scalar(select(func.count()).select_from(AuthAttempt).where(AuthAttempt.scope == SIGNIN_SCOPE))
+    assert counted == SIGNIN_LIMIT
+    # Even the right password waits for the window now.
+    late = await client.request("DELETE", "/v1/me", json={"password": PASSWORD}, headers=account["headers"])
+    assert late.status_code == 429
+
+
+async def test_an_account_without_a_password_reauthenticates_by_a_recent_sign_in(client, app):
+    fresh = await register(client, app, password=None)
+    assert (await client.request("DELETE", "/v1/me", json={}, headers=fresh["headers"])).status_code == 204
+
+    stale = await register(client, app, password=None)
+    old = await sign_in(app, stale["email"], created_at=datetime.now(UTC) - timedelta(hours=1))
+    refused = await client.request("DELETE", "/v1/me", json={}, headers=old["headers"])
+    assert refused.status_code == 409 and refused.json()["error"]["code"] == "reauth_required"
+
+    with_password = await register(client, app)
+    missing = await client.request("DELETE", "/v1/me", json={}, headers=with_password["headers"])
+    assert missing.status_code == 422
+
+
+async def test_deletion_removes_the_address_codes_and_says_so(client, app):
     account = await register(client, app)
     async with app.state.db.sessionmaker() as s:
-        rows = list(await s.scalars(select(AuthSession)))
-    assert rows and all(account["token"] != r.token_hash for r in rows)
+        s.add(
+            AuthVerification(
+                identifier=f"forget-password-otp-{account['email']}",
+                value=f"{_code_hash('123456')}:0",
+                expires_at=datetime.now(UTC) + timedelta(minutes=15),
+            )
+        )
+        await s.commit()
+    deleted = await client.request("DELETE", "/v1/me", json={"password": PASSWORD}, headers=account["headers"])
+    assert deleted.status_code == 204
+    async with app.state.db.sessionmaker() as s:
+        assert await s.scalar(select(func.count()).select_from(AuthVerification)) == 0
+        assert await s.scalar(select(func.count()).select_from(AuthAccount)) == 0
+    mail = app.state.email_sender.outbox[-1]
+    assert mail["to"] == account["email"] and "deleted" in mail["subject"]
+
+
+async def test_internal_routes_need_the_token(client, app):
+    body = {"email": "x@example.com", "type": "sign-in", "otp": "123456"}
+    assert (await client.post("/internal/auth/code", json=body)).status_code == 404
+    wrong = {"X-Internal-Token": "test-internal-token-that-is-long-enough-XXXX"}
+    assert (await client.post("/internal/auth/code", json=body, headers=wrong)).status_code == 404
+    assert "/internal/auth/code" not in app.openapi()["paths"]
+
+
+async def test_a_code_is_emailed_only_when_better_auth_just_stored_it(client, app):
+    email = "kit@example.com"
+    async with app.state.db.sessionmaker() as s:
+        s.add(
+            AuthVerification(
+                identifier=f"sign-in-otp-{email}",
+                value=f"{_code_hash('424242')}:0",
+                expires_at=datetime.now(UTC) + timedelta(minutes=15),
+            )
+        )
+        await s.commit()
+    outbox = app.state.email_sender.outbox
+    forged = await client.post(
+        "/internal/auth/code", json={"email": email, "type": "sign-in", "otp": "111111"}, headers=INTERNAL
+    )
+    assert forged.status_code == 202 and outbox == []
+    other = await client.post(
+        "/internal/auth/code",
+        json={"email": "victim@example.com", "type": "sign-in", "otp": "424242"},
+        headers=INTERNAL,
+    )
+    assert other.status_code == 202 and outbox == []
+    sent = await client.post(
+        "/internal/auth/code", json={"email": email.upper(), "type": "sign-in", "otp": "424242"}, headers=INTERNAL
+    )
+    assert sent.status_code == 202
+    assert len(outbox) == 1 and outbox[0]["to"] == email and "424242" in outbox[0]["body"]
+
+
+async def test_sign_in_alert_only_for_a_new_device_and_only_for_real_sessions(client, app):
+    phone = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) Version/17.0 Mobile Safari/604.1"
+    laptop = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/126.0 Safari/537.36"
+    account = await register(client, app, user_agent=laptop)
+    async with app.state.db.sessionmaker() as s:
+        user = await s.scalar(select(User).where(User.email == account["email"]))
+        user_id = user.id
+
+    async def event(session_token: str) -> None:
+        async with app.state.db.sessionmaker() as s:
+            session_id = await s.scalar(select(AuthSession.id).where(AuthSession.token == session_token))
+        body = {"kind": "sign_in", "userId": str(user_id), "sessionId": str(session_id)}
+        assert (await client.post("/internal/auth/events", json=body, headers=INTERNAL)).status_code == 202
+
+    outbox = app.state.email_sender.outbox
+    await event(account["token"])
+    assert outbox == []  # the sign-up's own session, made with the account
+    async with app.state.db.sessionmaker() as s:
+        user = await s.get(User, user_id)
+        user.created_at = datetime.now(UTC) - timedelta(days=3)  # not a brand-new account
+        await s.commit()
+    await event((await sign_in(app, account["email"], user_agent=laptop))["token"])
+    assert outbox == []  # a device this account already uses
+    await event((await sign_in(app, account["email"], user_agent=phone))["token"])
+    assert len(outbox) == 1 and "New sign-in" in outbox[0]["subject"]
+    # Forged: a session id that does not exist, or one that is not fresh, counts for nothing.
+    old = await sign_in(app, account["email"], user_agent=phone, created_at=datetime.now(UTC) - timedelta(hours=1))
+    await event(old["token"])
+    forged = {"kind": "sign_in", "userId": str(user_id), "sessionId": "00000000-0000-0000-0000-000000000000"}
+    assert (await client.post("/internal/auth/events", json=forged, headers=INTERNAL)).status_code == 202
+    assert len(outbox) == 1
+    async with app.state.db.sessionmaker() as s:
+        kinds = list(await s.scalars(select(UserNotification.kind).where(UserNotification.user_id == user_id)))
+    assert kinds == ["security_sign_in"]
+
+
+async def test_password_and_google_notices_need_the_change_to_be_real(client, app):
+    account = await register(client, app)
+    async with app.state.db.sessionmaker() as s:
+        user = await s.scalar(select(User).where(User.email == account["email"]))
+        user.created_at = datetime.now(UTC) - timedelta(days=3)
+        await s.commit()
+        user_id = str(user.id)
+    outbox = app.state.email_sender.outbox
+    # The credential was written moments ago (register): a password event counts.
+    body = {"kind": "password_reset", "userId": user_id}
+    assert (await client.post("/internal/auth/events", json=body, headers=INTERNAL)).status_code == 202
+    assert len(outbox) == 1 and "password was changed" in outbox[0]["subject"]
+    # No Google account: a google_linked event is ignored.
+    body = {"kind": "google_linked", "userId": user_id}
+    await client.post("/internal/auth/events", json=body, headers=INTERNAL)
+    assert len(outbox) == 1
+    async with app.state.db.sessionmaker() as s:
+        s.add(AuthAccount(user_id=user.id, account_id="google-sub-1", provider_id="google"))
+        await s.commit()
+    await client.post("/internal/auth/events", json=body, headers=INTERNAL)
+    assert len(outbox) == 2 and "Google" in outbox[1]["subject"]
+
+
+async def test_retention_purges_auth_leftovers_and_never_a_verified_user(client, app):
+    keep = await register(client, app)
+    now = datetime.now(UTC)
+    async with app.state.db.sessionmaker() as s:
+        s.add(User(email="never-verified@example.com", created_at=now - timedelta(days=8)))
+        s.add(User(email="recent-unverified@example.com"))
+        s.add(AuthVerification(identifier="sign-in-otp-a@example.com", value="x:0", expires_at=now - timedelta(days=2)))
+        s.add(
+            AuthVerification(identifier="sign-in-otp-b@example.com", value="x:0", expires_at=now + timedelta(minutes=5))
+        )
+        s.add(AuthAttempt(scope=SIGNIN_SCOPE, key_hash="k", created_at=now - timedelta(days=2)))
+        await s.commit()
+        purged = await purge_expired(s, now)
+        await s.commit()
+        emails = set(await s.scalars(select(User.email)))
+    assert purged["unverified_users"] == 1 and purged["auth_verifications"] == 1 and purged["auth_attempts"] == 1
+    assert emails == {keep["email"], "recent-unverified@example.com"}

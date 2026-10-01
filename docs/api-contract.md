@@ -38,15 +38,18 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 
 ## Auth and account
 
+**Signing in is not in `/v1` any more.** Since 2026-10-01 accounts are created and signed in by the
+web app's Better Auth (`/api/auth/*` on the web origin; `frontend/apps/app/src/lib/auth`): email
+codes, password sign-in, Google, password reset and change. The API checks every request against
+the same sessions (`Authorization: Bearer <session token>`, found by its SHA-256 in
+`auth_sessions`), refuses an unverified address (403 `email_not_verified`) and keeps everything
+below. `POST /v1/auth/{signup, verify-email, login, resend-code, password/forgot, password/reset,
+password/change}` were removed in the same release that moved the web app (no other client existed;
+the one deliberate exception to "additive" below). A future native client signs in at `/api/auth`
+(docs/architecture.md, "Clients").
+
 | Method | Path | Body | Success |
 |---|---|---|---|
-| POST | `/v1/auth/signup` | `{email, password (8-128), displayName?}` | 202 — a 6-digit code is emailed (always 202) |
-| POST | `/v1/auth/verify-email` | `{email, code}` | 200 `{user, session:{token, expiresAt}}` |
-| POST | `/v1/auth/login` | `{email, password}` | 200 `{user, session}` |
-| POST | `/v1/auth/resend-code` | `{email, purpose: verify_email\|reset_password}` | 202 (always) |
-| POST | `/v1/auth/password/forgot` | `{email}` | 202 (always) |
-| POST | `/v1/auth/password/reset` | `{email, code, newPassword}` | 200 `{user, session}`; all other sessions revoked |
-| POST | `/v1/auth/password/change` | `{currentPassword, newPassword}` | 204; other sessions revoked |
 | POST | `/v1/auth/logout` | – | 204 (this session) |
 | POST | `/v1/auth/sessions/revoke-others` | – | 204 |
 | GET | `/v1/auth/sessions` | – | `{items: [{id, current, device, ipMasked, createdAt, lastSeenAt, expiresAt}]}`, most recently used first |
@@ -57,9 +60,9 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 | PUT | `/v1/me/avatar` | the raw image; `Content-Type: image/jpeg\|png\|webp` | the user, with a new `avatar.url` |
 | DELETE | `/v1/me/avatar` | – | the user, `avatar: null` (idempotent) |
 | GET | `/v1/me/avatar?v=<hash>` | – | `image/webp`, cacheable forever; 404 (never cached) unless `v` is the current photo |
-| POST | `/v1/me/email/change` | `{newEmail, password}` | 202 (always, [below](#changing-the-email-address)) |
+| POST | `/v1/me/email/change` | `{newEmail, password?}` | 202 (always, [below](#changing-the-email-address)) |
 | POST | `/v1/me/email/confirm` | `{newEmail, code}` | the user, with the new email; other sessions revoked |
-| DELETE | `/v1/me` | `{password}` | 204 — deletes the account and all its data |
+| DELETE | `/v1/me` | `{password?}` | 204 — deletes the account and all its data, then emails the address that it was |
 | GET / PATCH | `/v1/me/appearance` | PATCH [versioned](#versioned-edits): `theme` (system\|light\|dark), `fontSize` (small\|medium\|large\|x_large), `highContrast`, `reduceMotion`, `readingComfort`, `showStreak` | the appearance, the same on every device |
 | GET / PATCH | `/v1/me/settings` | PATCH `{preferences: {...}}` (merged; `null` removes a key; ≤ 4 KB) | `{preferences, updatedAt}`. Unused by the web app; appearance is `/v1/me/appearance` |
 | GET | `/v1/greetings` | – | `{weekOf, items}`: this week's study greetings, the same pool for every user (`items` empty when none is live; the web app then shows its own fallback). The web app shows a random one per new chat. The first request of a week whose pool is older than that week starts a background refresh by the LLM (10-15 checked lines replace the pool; any failure keeps it) and never waits for it. Weeks start Monday in `DEFAULT_TIMEZONE`; greetings are retired, never deleted |
@@ -68,6 +71,11 @@ Base URL: the API listens on `127.0.0.1:4000` in development and `127.0.0.1:4100
 The user: `{id, email, displayName, emailVerified, createdAt, profileVersion, timezone, avatar: {url} | null,
 passwordChangedAt}`. `timezone` is an IANA name (`Asia/Kolkata`) or null. `passwordChangedAt` is null
 until the password is first changed or reset.
+
+**Re-authentication** (email change, account deletion): the account's password, or, for an account
+without one (it signs in with Google or email codes), a sign-in within the last 15 minutes; otherwise
+409 `reauth_required` (sign in again). Password checks share one per-account limit with Better Auth's
+sign-in: 10 per 15 minutes, counted atomically, then 429 even for the right password.
 
 **Signed-in devices** show a label parsed from the user agent ("Chrome on Windows", or "Unknown device")
 and the network only (`203.0.113.x`, or an IPv6 /48). The raw IP address and user agent never leave the
@@ -82,14 +90,14 @@ not change `profileVersion`.
 
 ### Changing the email address
 
-1. `POST /v1/me/email/change {newEmail, password}` needs the current password (a wrong one counts as
-   a failed sign-in). It always answers 202: if the address is free, a code goes to it; if another
+1. `POST /v1/me/email/change {newEmail, password?}` needs [re-authentication](#auth-and-account)
+   (a wrong password counts as a failed sign-in). It always answers 202: if the address is free, a code goes to it; if another
    account has it, that address gets a notice instead, so the caller cannot tell which. A new request
    cancels the previous one. 3 requests per 15 minutes; the same address as now is 422.
 2. `POST /v1/me/email/confirm {newEmail, code}` with a code sent for **this** account (15 minutes, 5
    attempts). The email changes and counts as verified, every other session is signed out, every
-   pending code for the old and the new address is deleted, and the old address is told (with the
-   new one masked). If someone registered the address in the meantime: 409 `email_unavailable`.
+   pending code for the old and the new address is deleted (the API's and Better Auth's), and the old
+   address is told (with the new one masked). If someone registered the address in the meantime: 409 `email_unavailable`.
 
 ### Versioned edits
 

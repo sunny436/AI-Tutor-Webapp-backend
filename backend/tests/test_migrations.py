@@ -174,3 +174,104 @@ def test_migration_0010_upgrades_downgrades_and_upgrades_again_without_touching_
         assert run(_query("SELECT count(*) AS n FROM user_files"))[0]["n"] == 0
     finally:
         run(_admin('DROP DATABASE IF EXISTS "aichat_migrations_test" WITH (FORCE)'))
+
+
+AUTH_BEFORE = "0011_notification_cleared_at"
+AUTH_AFTER = "0012_better_auth"
+
+
+def test_migration_0012_keeps_every_account_and_both_releases_agree():
+    """Better Auth's tables on the existing identity data: no user id changes, every password
+    becomes the same hash in a credential account, and the mirrors keep 0011's code and 0012's in
+    agreement in both directions (the rollback path). Its role, aichat_auth, is created without a
+    login when missing; it stays in the cluster, inert."""
+    run(_admin('DROP DATABASE IF EXISTS "aichat_migrations_test" WITH (FORCE)'))
+    run(_admin('CREATE DATABASE "aichat_migrations_test"'))
+    try:
+        alembic("upgrade", AUTH_BEFORE)
+        run(
+            _query(
+                "INSERT INTO users (email, password_hash, email_verified_at) VALUES "
+                "('kept@example.com', '$argon2id$kept', now()), ('pending@example.com', '$argon2id$pending', NULL)"
+            )
+        )
+        run(
+            _query(
+                "INSERT INTO auth_sessions (user_id, token_hash, expires_at) "
+                "SELECT id, repeat('a', 64), now() + interval '1 day' FROM users WHERE email = 'kept@example.com'"
+            )
+        )
+        ids = {row["email"]: row["id"] for row in run(_query("SELECT id, email FROM users"))}
+
+        alembic("upgrade", AUTH_AFTER)
+        users = {row["email"]: row for row in run(_query("SELECT * FROM users"))}
+        assert {email: row["id"] for email, row in users.items()} == ids
+        assert users["kept@example.com"]["email_verified"] and not users["pending@example.com"]["email_verified"]
+        accounts = {
+            row["user_id"]: row
+            for row in run(_query("SELECT user_id, account_id, provider_id, password FROM auth_accounts"))
+        }
+        assert {accounts[ids[e]]["password"] for e in ids} == {"$argon2id$kept", "$argon2id$pending"}
+        assert all(
+            row["provider_id"] == "credential" and row["account_id"] == str(row["user_id"]) for row in accounts.values()
+        )
+        assert tuple(run(_query("SELECT token_hash, token FROM auth_sessions"))[0]) == ("a" * 64, None)
+
+        # A Better Auth session: only the token is written; the trigger stores its SHA-256.
+        run(
+            _query(
+                "INSERT INTO auth_sessions (user_id, token, expires_at) "
+                "VALUES ($1, 'better-auth-token', now() + interval '1 day')",
+                ids["kept@example.com"],
+            )
+        )
+        hashed = run(_query("SELECT token_hash FROM auth_sessions WHERE token = 'better-auth-token'"))[0]["token_hash"]
+        assert hashed == run(_query("SELECT encode(sha256('better-auth-token'::bytea), 'hex') AS h"))[0]["h"]
+
+        # 0012's code changes a password (Better Auth): 0011's column follows, and the change is dated.
+        run(_query("UPDATE auth_accounts SET password = '$argon2id$new' WHERE user_id = $1", ids["kept@example.com"]))
+        kept = run(_query("SELECT password_hash, password_changed_at FROM users WHERE email = 'kept@example.com'"))[0]
+        assert kept["password_hash"] == "$argon2id$new" and kept["password_changed_at"] is not None
+        # 0011's code (after a rollback) changes one: the credential follows.
+        run(_query("UPDATE users SET password_hash = '$argon2id$old-code' WHERE email = 'kept@example.com'"))
+        assert run(_query("SELECT password FROM auth_accounts WHERE user_id = $1", ids["kept@example.com"]))[0][0] == (
+            "$argon2id$old-code"
+        )
+        # 0011's code verifies an address and signs someone up: 0012's flag and credential follow.
+        run(_query("UPDATE users SET email_verified_at = now() WHERE email = 'pending@example.com'"))
+        assert run(_query("SELECT email_verified FROM users WHERE email = 'pending@example.com'"))[0][0] is True
+        run(_query("INSERT INTO users (email, password_hash) VALUES ('old-code@example.com', '$argon2id$signup')"))
+        assert (
+            run(
+                _query(
+                    "SELECT a.password FROM auth_accounts a JOIN users u ON u.id = a.user_id "
+                    "WHERE u.email = 'old-code@example.com' AND a.provider_id = 'credential'"
+                )
+            )[0][0]
+            == "$argon2id$signup"
+        )
+        # Removing the credential (no password any more) clears 0011's column; deletion cascades.
+        run(_query("DELETE FROM auth_accounts WHERE user_id = $1", ids["pending@example.com"]))
+        assert run(_query("SELECT password_hash FROM users WHERE email = 'pending@example.com'"))[0][0] is None
+        run(_query("DELETE FROM users WHERE email = 'kept@example.com'"))
+        assert run(_query("SELECT count(*) FROM auth_accounts WHERE user_id = $1", ids["kept@example.com"]))[0][0] == 0
+
+        # The web app's role reaches identity tables only.
+        grants = {
+            row["table_name"]
+            for row in run(
+                _query(
+                    "SELECT DISTINCT table_name FROM information_schema.role_table_grants WHERE grantee = 'aichat_auth'"
+                )
+            )
+        }
+        assert grants == {"users", "auth_sessions", "auth_accounts", "auth_verifications", "auth_attempts"}
+
+        alembic("downgrade", AUTH_BEFORE)
+        assert run(_query("SELECT to_regclass('public.auth_accounts') AS t"))[0]["t"] is None
+        # The account left without a password gets an unusable hash 0011's code refuses.
+        assert run(_query("SELECT password_hash FROM users WHERE email = 'pending@example.com'"))[0][0] == "!"
+        alembic("upgrade", AUTH_AFTER)
+        assert run(_query("SELECT count(*) FROM auth_accounts"))[0][0] == 2
+    finally:
+        run(_admin('DROP DATABASE IF EXISTS "aichat_migrations_test" WITH (FORCE)'))

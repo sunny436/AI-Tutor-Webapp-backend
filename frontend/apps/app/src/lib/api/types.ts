@@ -35,21 +35,9 @@ export type User = {
   passwordChangedAt: Timestamp | null;
 };
 
-/**
- * What the BFF returns after verify-email / login / password reset. The backend
- * also returns `session: {token, expiresAt}`; the BFF moves the token into an
- * httpOnly cookie and strips it, so the browser never sees it.
- */
-export type SignedIn = { user: User };
-
-export type SignupRequest = { email: string; password: string; displayName?: string | null };
-export type VerifyEmailRequest = { email: string; code: string };
-export type LoginRequest = { email: string; password: string };
-export type ResendCodeRequest = { email: string; purpose?: "verify_email" | "reset_password" };
-export type ForgotPasswordRequest = { email: string };
-export type ResetPasswordRequest = { email: string; code: string; newPassword: string };
-export type ChangePasswordRequest = { currentPassword: string; newPassword: string };
-export type DeleteMeRequest = { password: string };
+/** Re-authentication: the password, or none for an account without one (Google only), which
+ * must then have signed in within 15 minutes (else 409 `reauth_required`). */
+export type DeleteMeRequest = { password?: string };
 
 /**
  * Every Settings resource is edited the same way (docs/api-contract.md, "Versioned edits"):
@@ -78,7 +66,8 @@ export type SessionInfo = {
 };
 export type SessionList = { items: SessionInfo[] };
 
-export type EmailChangeRequest = { newEmail: string; password: string };
+/** `password` is left out for an account without one: it must have signed in within 15 minutes. */
+export type EmailChangeRequest = { newEmail: string; password?: string };
 export type EmailConfirmRequest = { newEmail: string; code: string };
 
 export type Theme = (typeof CONTRACT.AppearanceSet.theme.enum)[number];
@@ -246,9 +235,9 @@ export const SUPPORT_SUBJECT_MAX = CONTRACT.SupportRequestIn.subject.maxLength;
 export const SUPPORT_MESSAGE_MIN = CONTRACT.SupportRequestIn.message.minLength;
 export const SUPPORT_MESSAGE_MAX = CONTRACT.SupportRequestIn.message.maxLength;
 
-/** The backend's password rule, from the contract (contract.gen.ts). */
-export const PASSWORD_MIN = CONTRACT.SignupRequest.password.minLength;
-export const PASSWORD_MAX = CONTRACT.SignupRequest.password.maxLength;
+/** The password rule Better Auth enforces (lib/auth/config.ts, emailAndPassword). */
+export const PASSWORD_MIN = 8;
+export const PASSWORD_MAX = 128;
 export const DISPLAY_NAME_MAX = CONTRACT.ProfileSet.displayName.maxLength;
 /** Email codes are six digits. */
 export const CODE_LENGTH = 6;

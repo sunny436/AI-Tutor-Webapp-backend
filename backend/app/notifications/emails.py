@@ -31,6 +31,15 @@ def password_changed(app: str, when: str, settings_url: str) -> tuple[str, str]:
     )
 
 
+def google_linked(app: str, when: str, settings_url: str) -> tuple[str, str]:
+    return (
+        f"Google sign-in was added to your {app} account",
+        f"Your {app} account can now be signed in to with a Google account ({when}).\n\n"
+        f"If you didn't do this, disconnect Google in {app}'s Settings, under Privacy & Security, "
+        "and change your password." + _footer(settings_url, None),
+    )
+
+
 def daily_reminder(app: str, app_url: str, settings_url: str, unsubscribe_url: str) -> tuple[str, str]:
     return (
         f"Time for today's {app} session",

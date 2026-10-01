@@ -17,9 +17,9 @@ export function uniqueEmail(tag: string): string {
 type MailSummary = { ID: string; Subject: string };
 const usedMail = new Set<string>();
 
-/** The newest unused sign-up, reset or email-change code emailed to `email`, from Mailpit. */
-export async function mailCode(email: string, purpose: "verify" | "reset" | "change"): Promise<string> {
-  const subject = purpose === "reset" ? /reset/i : purpose === "change" ? /email change code/i : /verification/i;
+/** The newest unused sign-in, reset or email-change code emailed to `email`, from Mailpit. */
+export async function mailCode(email: string, purpose: "signin" | "reset" | "change"): Promise<string> {
+  const subject = purpose === "reset" ? /reset/i : purpose === "change" ? /email change code/i : /sign-in code/i;
   let code: string | undefined;
   await expect
     .poll(
@@ -46,24 +46,32 @@ export async function mailCode(email: string, purpose: "verify" | "reset" | "cha
 export const SAME_ORIGIN = { Origin: APP_URL };
 
 /**
- * A fresh, verified account, signed in within `page`'s browser context: the
- * session cookie lands in the context's jar exactly as it does for a browser.
+ * A fresh, verified account with a password, signed in within `page`'s browser context, made the
+ * way the sign-up page makes it (Better Auth, email first): a code to the address, the code (the
+ * account now exists, verified), then the password. The session cookie lands in the context's jar
+ * exactly as it does for a browser.
  *
  * Always through the main server (APP_URL), whose Origin these requests carry.
  * The cookie is per host, not per port, so it signs in the preview server too.
  */
 export async function createAccount(page: Page, tag = "user"): Promise<{ email: string; password: string }> {
   const email = uniqueEmail(tag);
-  const signup = await page.request.post(`${APP_URL}/api/v1/auth/signup`, {
-    data: { email, password: PASSWORD, displayName: "E2E" },
+  const send = await page.request.post(`${APP_URL}/api/auth/email-otp/send-verification-otp`, {
+    data: { email, type: "sign-in" },
     headers: SAME_ORIGIN,
   });
-  expect(signup.status(), "signup").toBe(202);
-  const verify = await page.request.post(`${APP_URL}/api/v1/auth/verify-email`, {
-    data: { email, code: await mailCode(email, "verify") },
+  expect(send.status(), "send a sign-in code").toBe(200);
+  const otp = await mailCode(email, "signin");
+  const signedIn = await page.request.post(`${APP_URL}/api/auth/sign-in/email-otp`, {
+    data: { email, otp, name: "E2E" },
     headers: SAME_ORIGIN,
   });
-  expect(verify.status(), "verify-email").toBe(200);
+  expect(signedIn.status(), "sign in with the code").toBe(200);
+  const password = await page.request.post(`${APP_URL}/api/account/password`, {
+    data: { newPassword: PASSWORD },
+    headers: SAME_ORIGIN,
+  });
+  expect(password.status(), "set the password").toBe(204);
   return { email, password: PASSWORD };
 }
 
@@ -132,9 +140,11 @@ export const emptyGreeting = (page: Page) => page.getByRole("main").getByRole("h
 
 /** This week's study greetings, straight from the API with this page's session. */
 export async function studyGreetings(page: Page): Promise<string[]> {
-  const session = (await page.context().cookies()).find((cookie) => cookie.name === "aichat_session")?.value ?? "";
+  // Better Auth's cookie is `<token>.<signature>`; the API takes the token.
+  const cookie = (await page.context().cookies()).find((each) => each.name === "padhai_session")?.value ?? "";
+  const token = decodeURIComponent(cookie).split(".")[0];
   const response = await page.request.get(`${API_URL}/v1/greetings`, {
-    headers: { Authorization: `Bearer ${decodeURIComponent(session)}` },
+    headers: { Authorization: `Bearer ${token}` },
   });
   expect(response.status(), "GET /v1/greetings").toBe(200);
   return (await response.json()).items;

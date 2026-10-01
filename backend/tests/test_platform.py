@@ -40,7 +40,7 @@ async def test_database_unavailable_is_503_without_details():
     application = create_app(settings, llm=FakeProvider(), email_sender=MemoryEmailSender())
     async with application.router.lifespan_context(application):
         async with httpx.AsyncClient(transport=httpx.ASGITransport(app=application), base_url="http://t") as client:
-            r = await client.post("/v1/auth/login", json={"email": "a@example.com", "password": "whatever-password"})
+            r = await client.get("/v1/me", headers={"Authorization": "Bearer any-token"})
             assert r.status_code == 503
             assert r.json()["error"]["code"] == "service_unavailable"
             assert "127.0.0.1" not in r.text and "asyncpg" not in r.text.lower()
@@ -61,6 +61,8 @@ PRODUCTION_LIKE = dict(
 def test_production_refuses_unsafe_configuration():
     with pytest.raises(RuntimeError, match="SECRET_KEY"):
         create_app(make_settings(**{**PRODUCTION_LIKE, "secret_key": "short"}))
+    with pytest.raises(RuntimeError, match="AUTH_INTERNAL_TOKEN"):
+        create_app(make_settings(**{**PRODUCTION_LIKE, "auth_internal_token": ""}))
     with pytest.raises(RuntimeError, match="LLM_PROVIDER=fake"):
         create_app(make_settings(**{**PRODUCTION_LIKE, "llm_provider": "fake"}))
     with pytest.raises(RuntimeError, match="EMBEDDING_PROVIDER=fake"):

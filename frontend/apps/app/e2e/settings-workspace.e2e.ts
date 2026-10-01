@@ -121,7 +121,7 @@ test("every section has its own address and title; with nowhere to return to, Cl
   // A fresh browser: nothing remembered.
   const context = await browser.newContext({ baseURL: APP_URL });
   const page = await context.newPage();
-  const login = await context.request.post("/api/v1/auth/login", {
+  const login = await context.request.post("/api/auth/sign-in/email", {
     data: { email: account.email, password: account.password },
     headers: SAME_ORIGIN,
   });
@@ -435,7 +435,7 @@ test("a session ended from another device: the next action goes to sign-in and b
   await waitForHydration(page);
 
   const other = await browser.newContext({ baseURL: APP_URL });
-  const login = await other.request.post("/api/v1/auth/login", {
+  const login = await other.request.post("/api/auth/sign-in/email", {
     data: { email: account.email, password: account.password },
     headers: SAME_ORIGIN,
   });

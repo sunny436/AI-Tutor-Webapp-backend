@@ -9,7 +9,8 @@ from sqlalchemy.ext.asyncio import create_async_engine
 
 from app.auth.emails import EmailDeliveryError
 from app.jobs.runner import LOCK_KEY, run_once
-from tests.conftest import PASSWORD, make_settings, register
+from app.notifications.outbox import SECURITY_PASSWORD_CHANGED, SECURITY_SIGN_IN, queue_email
+from tests.conftest import make_settings, register
 
 IPHONE = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Safari/604.1"
 APP_URL = "https://padhai.example"
@@ -45,22 +46,33 @@ async def statuses(database: str, user_id: str) -> list[tuple[str, str]]:
     return [(row["kind"], row["status"]) for row in rows]
 
 
-async def new_device_sign_in(client, account) -> None:
-    response = await client.post(
-        "/v1/auth/login",
-        json={"email": account["email"], "password": PASSWORD},
-        headers={"User-Agent": IPHONE},
-    )
-    assert response.status_code == 200
+async def queue_alert(app, account, kind: str = SECURITY_SIGN_IN) -> None:
+    """An email waiting in the outbox for this student. (Security alerts are sent at once now;
+    the worker still sends whatever is queued, such as reminders and summaries.)"""
+    subject = {
+        SECURITY_SIGN_IN: "New sign-in to your PadhAI account",
+        SECURITY_PASSWORD_CHANGED: "Your PadhAI password was changed",
+    }[kind]
+    async with app.state.db.sessionmaker() as db:
+        await queue_email(
+            db,
+            kind=kind,
+            to=account["email"],
+            subject=subject,
+            body=f"{subject}.\n\n    Device: Safari on iPhone",
+            send_before=datetime.now(UTC) + timedelta(days=1),
+            user_id=uuid.UUID(account["user"]["id"]),
+        )
+        await db.commit()
 
 
 # --------------------------------------------------------------------- the switch
 async def test_a_disabled_worker_does_nothing(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     assert await run(app, jobs_enabled=False) == {"skipped": "JOBS_ENABLED is false"}
     assert await statuses(database, account["user"]["id"]) == [("security_sign_in", "pending")]
-    assert sent_to(app, account["email"])[-1]["subject"].endswith("verification code")  # nothing new
+    assert sent_to(app, account["email"]) == []  # nothing sent
 
 
 async def test_a_second_worker_finds_the_lock_taken(client, app, database):
@@ -78,7 +90,7 @@ async def test_a_second_worker_finds_the_lock_taken(client, app, database):
 # ----------------------------------------------------------------- rollout modes
 async def test_mode_off_sends_no_student_email(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     report = await run(app, notifications_mode="off")
     assert report["reminders"] == "off"
     assert await statuses(database, account["user"]["id"]) == [("security_sign_in", "pending")]
@@ -86,7 +98,7 @@ async def test_mode_off_sends_no_student_email(client, app, database):
 
 async def test_dry_run_records_what_would_be_sent(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     before = len(app.state.email_sender.outbox)
     await run(app, notifications_mode="dry_run")
     assert await statuses(database, account["user"]["id"]) == [("security_sign_in", "dry_run")]
@@ -97,7 +109,7 @@ async def test_allowlist_sends_only_to_the_allowlisted(client, app, database):
     listed = await register(client, app)
     other = await register(client, app)
     for account in (listed, other):
-        await new_device_sign_in(client, account)
+        await queue_alert(app, account)
     await run(app, notifications_mode="allowlist", notifications_allowlist=f" {listed['email'].upper()} , x@y.z")
     assert await statuses(database, listed["user"]["id"]) == [("security_sign_in", "sent")]
     assert await statuses(database, other["user"]["id"]) == [("security_sign_in", "suppressed")]
@@ -107,12 +119,8 @@ async def test_allowlist_sends_only_to_the_allowlisted(client, app, database):
 
 async def test_on_sends_and_a_kind_outside_the_list_is_suppressed(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
-    await client.post(
-        "/v1/auth/password/change",
-        json={"currentPassword": PASSWORD, "newPassword": "a brand new password"},
-        headers=account["headers"],
-    )
+    await queue_alert(app, account)
+    await queue_alert(app, account, SECURITY_PASSWORD_CHANGED)
     await run(app, notifications_kinds="security_password_changed")
     assert await statuses(database, account["user"]["id"]) == [
         ("security_sign_in", "suppressed"),
@@ -123,7 +131,7 @@ async def test_on_sends_and_a_kind_outside_the_list_is_suppressed(client, app, d
 
 async def test_notifications_without_a_public_address_stay_off(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     report = await run(app, public_app_url="")
     assert report["reminders"] == "off"
     assert await statuses(database, account["user"]["id"]) == [("security_sign_in", "pending")]
@@ -132,14 +140,14 @@ async def test_notifications_without_a_public_address_stay_off(client, app, data
 # -------------------------------------------------------------- at most once
 async def test_stale_news_expires_instead_of_being_sent(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     await run(app, now=datetime.now(UTC) + timedelta(days=2))
     assert await statuses(database, account["user"]["id"]) == [("security_sign_in", "expired")]
 
 
 async def test_a_row_left_sending_by_a_crash_is_never_sent_again(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     await sql(
         database,
         "UPDATE email_outbox SET status = 'sending', attempts = 1, claimed_at = now() - interval '10 minutes' "
@@ -165,7 +173,7 @@ class FlakySender:
 
 async def test_a_refused_email_is_retried_with_backoff_then_fails(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     flaky = FlakySender(EmailDeliveryError("rejected (HTTP 500)"))
     now = datetime.now(UTC) + timedelta(seconds=5)
     settings = worker_settings()
@@ -183,7 +191,7 @@ async def test_a_refused_email_is_retried_with_backoff_then_fails(client, app, d
 
 async def test_an_email_that_may_have_gone_out_is_not_retried(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     flaky = FlakySender(EmailDeliveryError("timed out after sending", definite=False))
     await run_once(worker_settings(), app.state.db, flaky, datetime.now(UTC) + timedelta(seconds=5))
     assert await statuses(database, account["user"]["id"]) == [("security_sign_in", "unknown")]
@@ -306,9 +314,11 @@ async def test_retention_deletes_expired_sessions_and_old_counters_and_codes(cli
         database,
         "INSERT INTO auth_attempts (scope, key_hash, created_at) VALUES ('login_fail', 'x', now() - interval '2 days')",
     )
-    await client.post("/v1/auth/password/forgot", json={"email": account["email"]})
     await sql(
-        database, "UPDATE email_codes SET expires_at = now() - interval '2 days' WHERE email = :e", e=account["email"]
+        database,
+        "INSERT INTO email_codes (email, purpose, code_hash, expires_at) "
+        "VALUES (:e, 'reset_password', 'x', now() - interval '2 days')",
+        e=account["email"],
     )
     report = await run(app)
     assert report["retention"]["sessions"] == 1
@@ -319,7 +329,7 @@ async def test_retention_deletes_expired_sessions_and_old_counters_and_codes(cli
 
 async def test_sent_emails_lose_their_address_and_text_after_a_week(client, app, database):
     account = await register(client, app)
-    await new_device_sign_in(client, account)
+    await queue_alert(app, account)
     await run(app)
     await run(app, now=datetime.now(UTC) + timedelta(days=8))
     [row] = await sql(database, "SELECT kind, status, to_address, subject, body FROM email_outbox")

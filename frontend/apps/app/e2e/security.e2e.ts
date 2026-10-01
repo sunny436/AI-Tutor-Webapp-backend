@@ -53,11 +53,11 @@ test("the API proxy refuses other sites, unknown routes and oversized bodies", a
   expect(huge.status()).toBe(413);
 
   // The browser never receives the token, even from the endpoints that issue it.
-  const login = await page.request.post("/api/v1/auth/login", {
+  const login = await page.request.post("/api/auth/sign-in/email", {
     data: { email: account.email, password: PASSWORD },
     headers: SAME_ORIGIN,
   });
   expect(login.status()).toBe(200);
-  expect(Object.keys(await login.json())).toEqual(["user"]);
+  expect(Object.keys(await login.json()).sort()).toEqual(["redirect", "user"]);
   expect(await login.text()).not.toMatch(/token/i);
 });

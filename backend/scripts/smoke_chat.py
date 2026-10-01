@@ -1,25 +1,28 @@
 """Live smoke test of a RUNNING local API with the REAL LLM provider.
 
-    python scripts/smoke_chat.py [--base-url http://127.0.0.1:4000] [--mailpit http://127.0.0.1:8025]
+    python scripts/smoke_chat.py [--base-url http://127.0.0.1:4000]
 
-Signs up a throwaway account (the verification code is read from Mailpit), streams a
-reply, stops a second reply mid-stream, regenerates, leaves feedback, renames and deletes
-the conversation, then deletes the account. Prints one line per step; exits 1 on failure.
-Never point this at production.
+Writes a throwaway account and a session into the database the local API uses (sign-up itself
+is the web app's Better Auth), streams a reply, stops a second reply mid-stream, regenerates,
+leaves feedback, renames and deletes the conversation, then deletes the account. Prints one line
+per step; exits 1 on failure. Never point this at production.
 """
 
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
 import re
+import secrets
 import sys
 import time
 import uuid
+from pathlib import Path
 
 import httpx
 
-PASSWORD = "smoke-test-password-123"
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 
 def step(name: str, ok: bool, detail: str = "") -> None:
@@ -28,16 +31,34 @@ def step(name: str, ok: bool, detail: str = "") -> None:
         raise SystemExit(1)
 
 
-def mailpit_code(mailpit: str, email: str) -> str:
-    for _ in range(50):
-        messages = httpx.get(f"{mailpit}/api/v1/search", params={"query": f"to:{email}"}, timeout=5).json()
-        for message in messages.get("messages", []):
-            body = httpx.get(f"{mailpit}/api/v1/message/{message['ID']}", timeout=5).json().get("Text", "")
-            match = re.search(r"\b(\d{6})\b", body)
-            if match:
-                return match.group(1)
-        time.sleep(0.2)
-    raise SystemExit("no verification email arrived in Mailpit")
+def throwaway_session(email: str) -> str:
+    """A verified account without a password and a fresh session, as Better Auth writes them, in
+    the database of this checkout's settings (backend/.env). Returns the session token."""
+    from sqlalchemy import text
+    from sqlalchemy.ext.asyncio import create_async_engine
+
+    from app.settings import get_settings
+
+    async def write() -> str:
+        token = secrets.token_urlsafe(24)
+        engine = create_async_engine(get_settings().database_url)
+        try:
+            async with engine.begin() as conn:
+                user_id = await conn.scalar(
+                    text("INSERT INTO users (email, email_verified) VALUES (:e, true) RETURNING id"), {"e": email}
+                )
+                await conn.execute(
+                    text(
+                        "INSERT INTO auth_sessions (user_id, token, expires_at) "
+                        "VALUES (:u, :t, now() + interval '1 day')"
+                    ),
+                    {"u": user_id, "t": token},
+                )
+        finally:
+            await engine.dispose()
+        return token
+
+    return asyncio.run(write())
 
 
 def stream(http: httpx.Client, url: str, headers: dict, body: dict | None = None, stop_after: int | None = None):
@@ -68,16 +89,13 @@ def stream(http: httpx.Client, url: str, headers: dict, body: dict | None = None
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-url", default="http://127.0.0.1:4000")
-    parser.add_argument("--mailpit", default="http://127.0.0.1:8025")
     args = parser.parse_args()
     email = f"smoke-{uuid.uuid4().hex[:8]}@example.com"
 
     with httpx.Client(base_url=args.base_url, timeout=120) as http:
         step("ready", http.get("/ready").json().get("database") is True)
-        step("sign up", http.post("/v1/auth/signup", json={"email": email, "password": PASSWORD}).status_code == 202)
-        verified = http.post("/v1/auth/verify-email", json={"email": email, "code": mailpit_code(args.mailpit, email)})
-        step("verify email (code from Mailpit)", verified.status_code == 200)
-        headers = {"Authorization": f"Bearer {verified.json()['session']['token']}"}
+        headers = {"Authorization": f"Bearer {throwaway_session(email)}"}
+        step("throwaway account and session", http.get("/v1/me", headers=headers).status_code == 200)
 
         events, ttft = stream(http, "/v1/chat/stream", headers, {"message": "In one sentence, what is a prime number?"})
         done = events[-1]
@@ -118,7 +136,7 @@ def main() -> int:
         listed = http.get("/v1/conversations", headers=headers).json()["items"]
         step("history persisted", [c["title"] for c in listed] == ["Smoke"])
         step("delete conversation", http.delete(f"/v1/conversations/{cid}", headers=headers).status_code == 204)
-        gone = http.request("DELETE", "/v1/me", json={"password": PASSWORD}, headers=headers)
+        gone = http.request("DELETE", "/v1/me", json={}, headers=headers)  # no password: a fresh session
         step("delete account", gone.status_code == 204)
     return 0
 

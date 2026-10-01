@@ -1,6 +1,14 @@
 import { describe, expect, test } from "bun:test";
+import { serializeSignedCookie } from "better-call";
+
 import { PLAIN_COOKIE, SECURE_COOKIE } from "./cookies";
 import { MAX_BODY_BYTES, proxyRequest } from "./proxy-core";
+
+const SECRET = "a-test-secret-that-is-long-enough-for-better-auth";
+/** A session token as Better Auth makes them (32 letters and digits). */
+const TOKEN = "tok123AbCdEfGhIjKlMnOpQrStUvWxYz";
+/** The session cookie as Better Auth writes it: TOKEN, signed. */
+const SIGNED = (await serializeSignedCookie(SECURE_COOKIE, TOKEN, SECRET)).split(";")[0] as string;
 
 const API = "http://127.0.0.1:4000";
 const APP = "https://chat.example.com";
@@ -37,7 +45,7 @@ function browser(
     ...(options.body !== undefined ? { "content-type": "application/json" } : {}),
     ...options.headers,
   });
-  if (options.cookie !== null) headers.set("cookie", options.cookie ?? `${SECURE_COOKIE}=tok123`);
+  if (options.cookie !== null) headers.set("cookie", options.cookie ?? SIGNED);
   // Next.js hands the route the internal URL (plain HTTP on loopback).
   return new Request(`http://localhost:3000/api${path}`, {
     method,
@@ -52,6 +60,7 @@ const segments = (path: string) => path.replace(/^\/v1\//, "").split("?")[0]?.sp
 function run(request: Request, path: string, fetchImpl: typeof fetch, extra: Record<string, unknown> = {}) {
   return proxyRequest(request, segments(path), {
     apiBaseUrl: API,
+    cookieSecret: SECRET,
     fetchImpl,
     requestId: () => "req1",
     log: () => undefined,
@@ -96,7 +105,7 @@ describe("CSRF", () => {
 
   test("a mutation with no Origin needs Sec-Fetch-Site: same-origin", async () => {
     const { fetchImpl } = upstream(() => new Response(null, { status: 204 }));
-    const headers = new Headers({ host: "chat.example.com", "x-forwarded-proto": "https", cookie: `${SECURE_COOKIE}=t` });
+    const headers = new Headers({ host: "chat.example.com", "x-forwarded-proto": "https", cookie: SIGNED });
     const bare = new Request("http://localhost:3000/api/v1/auth/logout", { method: "POST", headers });
     expect((await run(bare, "/v1/auth/logout", fetchImpl)).status).toBe(403);
 
@@ -113,11 +122,11 @@ describe("CSRF", () => {
 
   test("a body route requires a JSON content type", async () => {
     const { fetchImpl } = upstream(() => json(200, {}));
-    const request = browser("POST", "/v1/auth/login", {
-      body: "email=a",
+    const request = browser("POST", "/v1/me/email/change", {
+      body: "newEmail=a",
       headers: { "content-type": "application/x-www-form-urlencoded" },
     });
-    expect((await run(request, "/v1/auth/login", fetchImpl)).status).toBe(415);
+    expect((await run(request, "/v1/me/email/change", fetchImpl)).status).toBe(415);
   });
 });
 
@@ -156,7 +165,7 @@ describe("session and identity", () => {
     });
     await run(request, "/v1/me", fetchImpl);
     const sent = new Headers(calls[0]?.init.headers);
-    expect(sent.get("authorization")).toBe("Bearer tok123");
+    expect(sent.get("authorization")).toBe(`Bearer ${TOKEN}`);
     expect(sent.get("x-request-id")).toBe("req1");
     expect(sent.get("user-agent")).toBe("TestBrowser/1.0");
     expect(sent.get("x-forwarded-for")).toBe("203.0.113.9");
@@ -178,44 +187,13 @@ describe("session and identity", () => {
 });
 
 describe("session cookie handling", () => {
-  const signedIn = {
-    user: { id: "u1", email: "a@b.c", displayName: null, emailVerified: true, createdAt: "t" },
-    session: { token: "SECRET-TOKEN", expiresAt: new Date(Date.now() + 3_600_000).toISOString() },
-  };
-
-  test("login sets the httpOnly cookie and never returns the token", async () => {
-    const { fetchImpl } = upstream(() => json(200, signedIn));
-    const request = browser("POST", "/v1/auth/login", {
-      body: JSON.stringify({ email: "a@b.c", password: "p" }),
-      cookie: null,
-    });
-    const response = await run(request, "/v1/auth/login", fetchImpl);
-    const body = await response.text();
-    expect(response.status).toBe(200);
-    expect(body).not.toContain("SECRET-TOKEN");
-    expect(JSON.parse(body)).toEqual({ user: signedIn.user });
-    const cookie = response.headers.get("set-cookie") ?? "";
-    expect(cookie).toContain(`${SECURE_COOKIE}=SECRET-TOKEN`);
-    expect(cookie).toContain("HttpOnly");
-    expect(cookie).toContain("Secure");
-    expect(cookie).toContain("SameSite=Lax");
-  });
-
-  test("local plain HTTP gets the unprefixed, non-Secure cookie", async () => {
-    const { fetchImpl } = upstream(() => json(200, signedIn));
-    const request = new Request("http://127.0.0.1:3100/api/v1/auth/verify-email", {
-      method: "POST",
-      headers: {
-        host: "127.0.0.1:3100",
-        origin: "http://127.0.0.1:3100",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ email: "a@b.c", code: "123456" }),
-    });
-    const response = await run(request, "/v1/auth/verify-email", fetchImpl);
-    const cookie = response.headers.get("set-cookie") ?? "";
-    expect(cookie.startsWith(`${PLAIN_COOKIE}=SECRET-TOKEN`)).toBe(true);
-    expect(cookie).not.toContain("Secure");
+  test("a token without Better Auth's signature is not a session: 401, the API is never called", async () => {
+    const { calls, fetchImpl } = upstream(() => json(200, { id: "u1" }));
+    for (const cookie of [`${SECURE_COOKIE}=${TOKEN}`, `${SECURE_COOKIE}=${TOKEN}.${"A".repeat(43)}=`]) {
+      const response = await run(browser("GET", "/v1/me", { cookie }), "/v1/me", fetchImpl);
+      expect(response.status).toBe(401);
+    }
+    expect(calls.length).toBe(0);
   });
 
   test("logout and account deletion clear the cookie", async () => {
@@ -236,10 +214,8 @@ describe("session cookie handling", () => {
 
   test("a wrong current password (401 invalid_credentials) does NOT sign the user out", async () => {
     const { fetchImpl } = upstream(() => json(401, { error: { code: "invalid_credentials" } }));
-    const request = browser("POST", "/v1/auth/password/change", {
-      body: JSON.stringify({ currentPassword: "wrong", newPassword: "new-password-1" }),
-    });
-    const response = await run(request, "/v1/auth/password/change", fetchImpl);
+    const request = browser("DELETE", "/v1/me", { body: JSON.stringify({ password: "wrong" }) });
+    const response = await run(request, "/v1/me", fetchImpl);
     expect(response.status).toBe(401);
     expect(response.headers.get("set-cookie")).toBeNull();
     expect(((await response.json()) as { error: { code: string } }).error.code).toBe("invalid_credentials");
@@ -258,8 +234,8 @@ describe("errors", () => {
         },
       }),
     );
-    const request = browser("POST", "/v1/auth/signup", { body: JSON.stringify({ email: "a@b.c", password: "x" }) });
-    const response = await run(request, "/v1/auth/signup", fetchImpl);
+    const request = browser("POST", "/v1/me/email/change", { body: JSON.stringify({ newEmail: "a@b.c", password: "x" }) });
+    const response = await run(request, "/v1/me/email/change", fetchImpl);
     const body = await response.text();
     expect(response.status).toBe(422);
     expect(body).not.toContain("internal wording");
@@ -366,7 +342,7 @@ describe("files", () => {
 
   function upload(body: BodyInit, type: string, extra: { cookie?: string | null } = {}): Request {
     const headers = new Headers({ host: "chat.example.com", "x-forwarded-proto": "https", origin: APP, "content-type": type });
-    if (extra.cookie !== null) headers.set("cookie", extra.cookie ?? `${SECURE_COOKIE}=tok123`);
+    if (extra.cookie !== null) headers.set("cookie", extra.cookie ?? SIGNED);
     return new Request("http://localhost:3000/api/v1/me/avatar", { method: "PUT", headers, body });
   }
 
@@ -376,7 +352,7 @@ describe("files", () => {
     expect(response.status).toBe(200);
     const sent = calls[0]?.init;
     expect(new Headers(sent?.headers).get("content-type")).toBe("image/png");
-    expect(new Headers(sent?.headers).get("authorization")).toBe("Bearer tok123");
+    expect(new Headers(sent?.headers).get("authorization")).toBe(`Bearer ${TOKEN}`);
     expect(Array.from(sent?.body as Uint8Array)).toEqual(Array.from(PHOTO));
   });
 

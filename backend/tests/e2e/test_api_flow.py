@@ -1,7 +1,7 @@
 """End-to-end over real HTTP: a uvicorn server on a local port, real SSE streaming, real PostgreSQL.
 
 The acceptance flow, API-level (the browser UI lives in the separate frontend repo):
- 1 sign up + verify + sign in   2 new chat          3 send a message
+ 1 an account and a session    2 new chat          3 send a message
  4 streamed reply               5 "refresh" (new session, reload)
  6 conversation still exists    7 open another conversation
  8 return to the first          9 rename it         10 delete it
@@ -9,6 +9,7 @@ The acceptance flow, API-level (the browser UI lives in the separate frontend re
 
 import asyncio
 import json
+import secrets
 import socket
 import threading
 import time
@@ -16,11 +17,13 @@ import time
 import httpx
 import pytest
 import uvicorn
+from sqlalchemy import text
+from sqlalchemy.ext.asyncio import create_async_engine
 
 from app.auth.emails import MemoryEmailSender
 from app.llm.fake import FakeProvider
 from app.main import create_app
-from tests.conftest import PASSWORD, last_code, make_settings
+from tests.conftest import make_settings
 
 pytestmark = pytest.mark.e2e
 
@@ -70,16 +73,35 @@ async def _stream(http, headers, body, url="/v1/chat/stream"):
     return events, first_token_at, done_at
 
 
+async def _session(app, email: str) -> dict:
+    """Signing up and in happen in the web app's Better Auth: the account (once) and a session are
+    written the way it writes them, and the API only ever sees the session token."""
+    token = secrets.token_urlsafe(24)
+    engine = create_async_engine(app.state.settings.database_url)
+    try:
+        async with engine.begin() as conn:
+            user_id = await conn.scalar(text("SELECT id FROM users WHERE email = :e"), {"e": email})
+            if user_id is None:
+                user_id = await conn.scalar(
+                    text("INSERT INTO users (email, email_verified) VALUES (:e, true) RETURNING id"), {"e": email}
+                )
+            await conn.execute(
+                text(
+                    "INSERT INTO auth_sessions (user_id, token, expires_at) VALUES (:u, :t, now() + interval '30 days')"
+                ),
+                {"u": user_id, "t": token},
+            )
+    finally:
+        await engine.dispose()
+    return {"Authorization": f"Bearer {token}"}
+
+
 async def test_full_chat_flow_over_http(server):
     app, base = server
     email = "e2e-user@example.com"
     async with httpx.AsyncClient(base_url=base, timeout=30) as http:
-        # 1. sign up, verify, sign in
-        assert (await http.post("/v1/auth/signup", json={"email": email, "password": PASSWORD})).status_code == 202
-        verified = await http.post("/v1/auth/verify-email", json={"email": email, "code": last_code(app, email)})
-        assert verified.status_code == 200
-        login = await http.post("/v1/auth/login", json={"email": email, "password": PASSWORD})
-        headers = {"Authorization": f"Bearer {login.json()['session']['token']}"}
+        # 1. an account and a session
+        headers = await _session(app, email)
 
         # 2-4. new chat, send, receive a progressively streamed reply
         events, first_token, done_at = await _stream(http, headers, {"message": "What is 2 + 2?"})
@@ -92,8 +114,7 @@ async def test_full_chat_flow_over_http(server):
         assert events[-1][1]["message"]["content"] == "You said: What is 2 + 2?"
 
         # 5-6. "refresh": a brand-new session reloads everything from the server
-        relogin = await http.post("/v1/auth/login", json={"email": email, "password": PASSWORD})
-        headers = {"Authorization": f"Bearer {relogin.json()['session']['token']}"}
+        headers = await _session(app, email)
         listed = (await http.get("/v1/conversations", headers=headers)).json()["items"]
         assert [c["id"] for c in listed] == [first_id]
         history = (await http.get(f"/v1/conversations/{first_id}/messages", headers=headers)).json()["items"]
@@ -126,9 +147,7 @@ async def test_client_disconnect_stops_generation_and_persists_partial(server):
     app, base = server
     email = "e2e-disconnect@example.com"
     async with httpx.AsyncClient(base_url=base, timeout=30) as http:
-        await http.post("/v1/auth/signup", json={"email": email, "password": PASSWORD})
-        verified = await http.post("/v1/auth/verify-email", json={"email": email, "code": last_code(app, email)})
-        headers = {"Authorization": f"Bearer {verified.json()['session']['token']}"}
+        headers = await _session(app, email)
         app.state.llm.reply = lambda m: " ".join(f"w{i}" for i in range(400))
         conversation_id = None
         async with http.stream("POST", "/v1/chat/stream", json={"message": "long"}, headers=headers) as response:

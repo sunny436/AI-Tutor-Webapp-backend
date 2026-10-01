@@ -14,11 +14,11 @@ from app.auth.security import Passwords, hash_token
 from app.auth.service import AuthService, ClientInfo, utcnow
 from app.db.models import AuthSession, User
 from app.db.session import get_session
-from app.errors import Unauthorized
+from app.errors import EmailNotVerified, Unauthorized
 from app.logging import user_id_var
 from app.settings import Settings
 
-# Refresh last_seen/expiry at most this often, not on every request.
+# Move last_seen_at at most this often, not on every request.
 SLIDE_EVERY = timedelta(hours=1)
 
 
@@ -57,6 +57,10 @@ def _bearer(request: Request) -> str:
 
 
 async def get_principal(request: Request, db: AsyncSession = Depends(get_session)) -> Principal:
+    """The session is found by the SHA-256 of its token: Better Auth's sessions (a trigger
+    computes the hash, 0012) and older ones alike, so a release and its predecessor both accept
+    the sessions in use while a deploy or a rollback swaps the halves. Better Auth owns the
+    expiry and refreshes it with the cookie; here only last_seen_at moves."""
     token = _bearer(request)
     row = (
         await db.execute(
@@ -69,11 +73,10 @@ async def get_principal(request: Request, db: AsyncSession = Depends(get_session
     if row is None or row.AuthSession.expires_at <= now:
         raise Unauthorized()
     session, user = row.AuthSession, row.User
+    if not user.email_verified:
+        raise EmailNotVerified()
     if now - session.last_seen_at > SLIDE_EVERY:
-        ttl = timedelta(days=request.app.state.settings.session_ttl_days)
-        await db.execute(
-            update(AuthSession).where(AuthSession.id == session.id).values(last_seen_at=now, expires_at=now + ttl)
-        )
+        await db.execute(update(AuthSession).where(AuthSession.id == session.id).values(last_seen_at=now))
         await db.commit()
     user_id_var.set(str(user.id))
     return Principal(user=user, session=session)

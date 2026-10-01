@@ -10,13 +10,14 @@ import uuid
 from datetime import UTC, date, datetime
 
 import pytest
-from sqlalchemy import text
+from sqlalchemy import select, text, update
 from sqlalchemy.ext.asyncio import create_async_engine
 
+from app.db.models import AuthSession, User
 from app.llm.base import LLMError
 from app.progress import activity
 from app.progress.learning import day_end, intensity, is_meaningful, learning_date
-from tests.conftest import PASSWORD, register, stream_chat
+from tests.conftest import register, sign_in, stream_chat
 
 QUESTION = "Explain photosynthesis in simple words"
 IPHONE = (
@@ -370,11 +371,17 @@ async def test_each_student_sees_only_their_own_streak_and_days(client, app, clo
 
 async def test_security_alerts_also_appear_in_the_bell(client, app, clock):
     account = await register(client, app)
-    await client.post(
-        "/v1/auth/login",
-        json={"email": account["email"], "password": PASSWORD},
-        headers={"User-Agent": IPHONE},
-    )
+    async with app.state.db.sessionmaker() as s:  # not a brand-new account: its sign-ins can alert
+        await s.execute(
+            update(User).where(User.email == account["email"]).values(created_at=datetime(2026, 1, 1, tzinfo=UTC))
+        )
+        await s.commit()
+    phone = await sign_in(app, account["email"], user_agent=IPHONE)
+    async with app.state.db.sessionmaker() as s:
+        session = await s.scalar(select(AuthSession).where(AuthSession.token == phone["token"]))
+    event = {"kind": "sign_in", "userId": str(session.user_id), "sessionId": str(session.id)}
+    internal = {"X-Internal-Token": app.state.settings.auth_internal_token.get_secret_value()}
+    assert (await client.post("/internal/auth/events", json=event, headers=internal)).status_code == 202
     items = (await inbox(client, account["headers"]))["items"]
     assert [item["kind"] for item in items] == ["security_sign_in"]
     assert "Safari on iPhone" in items[0]["body"] and "127.0.0" not in items[0]["body"]

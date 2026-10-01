@@ -1,31 +1,32 @@
-"""Security emails, queued by the auth flows in their own transaction (app/auth/service.py).
+"""Security notices, raised by the internal auth events (app/auth/internal.py) after the web app's
+Better Auth signed someone in or changed how they sign in.
 
-- A sign-in from a device the account has no live session on: an alert, unless the student
-  turned sign-in alerts off.
-- A password change or reset: always, since it is the one email that tells the owner someone
-  else may have taken the account.
+- A sign-in from a device the account has no other live session on: an alert, emailed unless
+  the student turned sign-in alerts off.
+- A password change or reset, and a Google account linked: always emailed, since each is how the
+  owner learns that someone else may have taken the account.
 
-Both go through the outbox, so they follow NOTIFICATIONS_MODE like every student email, and
-both may be sent up to a day late (after that they expire, unsent). Both also appear in the
-app's bell at once (app/notifications/inbox.py), whatever the email switches say.
+Each notice is written to the app's bell at once (app/notifications/inbox.py) and returned as an
+email for the caller to send right after it commits. They are transactional, like sign-in codes:
+they do not wait for the outbox or follow NOTIFICATIONS_MODE (owner's decision, 2026-10-01).
 """
 
 from __future__ import annotations
 
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db.models import NotificationPreferences, User
 from app.notifications import emails
 from app.notifications.inbox import notify
-from app.notifications.outbox import SECURITY_PASSWORD_CHANGED, SECURITY_SIGN_IN, queue_email
+from app.notifications.outbox import SECURITY_SIGN_IN
 from app.notifications.tokens import unsubscribe_url
 from app.progress.activity import zone_for
 from app.settings import Settings
 
-ALERT_LIFETIME = timedelta(days=1)
+Email = tuple[str, str]
 
 
 def settings_link(settings: Settings, section: str = "notifications") -> str:
@@ -38,9 +39,9 @@ def local_time(settings: Settings, user: User, moment: datetime) -> str:
     return f"{moment.astimezone(zone):%d %b %Y, %H:%M} ({zone.key})"
 
 
-async def queue_sign_in_alert(
+async def sign_in_alert(
     session: AsyncSession, settings: Settings, user: User, device: str, moment: datetime
-) -> bool:
+) -> Email | None:
     # In the app always; by email unless the student turned sign-in alerts off.
     await notify(
         session,
@@ -53,23 +54,14 @@ async def queue_sign_in_alert(
     )
     preferences = await session.get(NotificationPreferences, user.id)
     if preferences is not None and not preferences.security_alerts:
-        return False
+        return None
     unsubscribe = unsubscribe_url(settings, user.id, SECURITY_SIGN_IN) if settings.public_app_url else None
-    subject, body = emails.sign_in_alert(
+    return emails.sign_in_alert(
         settings.app_name, device, local_time(settings, user, moment), settings_link(settings), unsubscribe
     )
-    return await queue_email(
-        session,
-        kind=SECURITY_SIGN_IN,
-        to=user.email,
-        subject=subject,
-        body=body,
-        send_before=moment + ALERT_LIFETIME,
-        user_id=user.id,
-    )
 
 
-async def queue_password_changed(session: AsyncSession, settings: Settings, user: User, moment: datetime) -> bool:
+async def password_changed_alert(session: AsyncSession, settings: Settings, user: User, moment: datetime) -> Email:
     await notify(
         session,
         user.id,
@@ -79,15 +71,21 @@ async def queue_password_changed(session: AsyncSession, settings: Settings, user
         link="/settings/privacy",
         dedup_key=f"security-password:{uuid.uuid4()}",
     )
-    subject, body = emails.password_changed(
+    return emails.password_changed(
         settings.app_name, local_time(settings, user, moment), settings_link(settings, "privacy")
     )
-    return await queue_email(
+
+
+async def google_linked_alert(session: AsyncSession, settings: Settings, user: User, moment: datetime) -> Email:
+    await notify(
         session,
-        kind=SECURITY_PASSWORD_CHANGED,
-        to=user.email,
-        subject=subject,
-        body=body,
-        send_before=moment + ALERT_LIFETIME,
-        user_id=user.id,
+        user.id,
+        kind="security_google_linked",
+        title="Google sign-in was added",
+        body=f"{local_time(settings, user, moment)}. Not you? Disconnect it in Settings and change your password.",
+        link="/settings/privacy",
+        dedup_key=f"security-google:{uuid.uuid4()}",
+    )
+    return emails.google_linked(
+        settings.app_name, local_time(settings, user, moment), settings_link(settings, "privacy")
     )

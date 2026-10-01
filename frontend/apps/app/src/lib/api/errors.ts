@@ -29,6 +29,7 @@ export type ErrorCode =
   | "version_conflict"
   | "current_session"
   | "email_unavailable"
+  | "reauth_required"
   | "unsupported_media_type"
   | "invalid_token"
   | "too_many_open_requests"
@@ -106,6 +107,7 @@ const KNOWN = new Set<ErrorCode>([
   "version_conflict",
   "current_session",
   "email_unavailable",
+  "reauth_required",
   "unsupported_media_type",
   "invalid_token",
   "too_many_open_requests",
@@ -273,6 +275,11 @@ const COPY: Record<ErrorCode, { title: string; message: string; action: Recovery
     title: "Email address taken",
     message: "That email address is no longer available. Try a different one.",
     action: "edit",
+  },
+  reauth_required: {
+    title: "Sign in again to confirm",
+    message: "For your security, sign out and sign in again, then try within 15 minutes.",
+    action: "none",
   },
   unsupported_media_type: {
     title: "Unsupported file",

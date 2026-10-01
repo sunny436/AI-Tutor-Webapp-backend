@@ -9,7 +9,7 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import create_async_engine
 
 from app.auth.security import hash_token
-from tests.conftest import PASSWORD, image_bytes, last_code, register
+from tests.conftest import PASSWORD, image_bytes, last_code, register, sign_in
 
 RED, BLUE = (220, 30, 30), (30, 30, 220)
 
@@ -115,15 +115,16 @@ async def test_the_old_profile_route_moves_the_version_on(client, app):
     assert stale.status_code == 409
 
 
-async def test_changing_the_password_records_when(client, app):
-    headers = (await register(client, app))["headers"]
-    response = await client.post(
-        "/v1/auth/password/change",
-        json={"currentPassword": PASSWORD, "newPassword": "another long password"},
-        headers=headers,
+async def test_a_password_change_records_when(client, app, database):
+    account = await register(client, app)
+    assert (await client.get("/v1/me", headers=account["headers"])).json()["passwordChangedAt"] is None
+    # Better Auth changes the credential's hash; the 0012 trigger mirrors it and records when.
+    await _sql(
+        database,
+        "UPDATE auth_accounts SET password = 'new-hash' WHERE provider_id = 'credential' AND user_id = :id",
+        id=uuid.UUID(account["user"]["id"]),
     )
-    assert response.status_code == 204
-    assert (await client.get("/v1/me", headers=headers)).json()["passwordChangedAt"] is not None
+    assert (await client.get("/v1/me", headers=account["headers"])).json()["passwordChangedAt"] is not None
 
 
 # ------------------------------------------------------------------ profile photo
@@ -247,12 +248,7 @@ async def test_devices_are_listed_with_masked_details_only(client, app):
     chrome = (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
     )
-    login = await client.post(
-        "/v1/auth/login",
-        json={"email": account["email"], "password": PASSWORD},
-        headers={"User-Agent": chrome},
-    )
-    assert login.status_code == 200
+    await sign_in(app, account["email"], user_agent=chrome)
 
     response = await client.get("/v1/auth/sessions", headers=account["headers"])
     assert response.status_code == 200
@@ -268,8 +264,7 @@ async def test_devices_are_listed_with_masked_details_only(client, app):
 
 async def test_one_other_device_can_be_signed_out(client, app):
     account = await register(client, app)
-    login = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    other_headers = {"Authorization": f"Bearer {login.json()['session']['token']}"}
+    other_headers = (await sign_in(app, account["email"]))["headers"]
     items = (await client.get("/v1/auth/sessions", headers=account["headers"])).json()["items"]
     other = next(item for item in items if not item["current"])
     current = next(item for item in items if item["current"])
@@ -286,7 +281,7 @@ async def test_one_other_device_can_be_signed_out(client, app):
 
 async def test_expired_sessions_are_not_listed(client, app, database):
     account = await register(client, app)
-    await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
+    await sign_in(app, account["email"])
     await _sql(
         database,
         "UPDATE auth_sessions SET expires_at = now() - interval '1 minute' WHERE user_id = :id AND token_hash <> :own",
@@ -308,8 +303,7 @@ async def _confirm(client, headers, new_email: str, code: str):
 
 async def test_the_email_moves_after_the_new_address_is_proven(client, app):
     account = await register(client, app)
-    login = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    other_headers = {"Authorization": f"Bearer {login.json()['session']['token']}"}
+    other_headers = (await sign_in(app, account["email"]))["headers"]
     new_email = _new_address()
 
     requested = await _request_change(client, account["headers"], new_email)
@@ -327,11 +321,6 @@ async def test_the_email_moves_after_the_new_address_is_proven(client, app):
     notice = _outbox(app, account["email"])[-1]
     assert "was changed" in notice["subject"]
     assert new_email not in notice["body"] and new_email[:2] + "***@example.com" in notice["body"]
-
-    old = await client.post("/v1/auth/login", json={"email": account["email"], "password": PASSWORD})
-    assert old.status_code == 401
-    new = await client.post("/v1/auth/login", json={"email": new_email, "password": PASSWORD})
-    assert new.status_code == 200
 
 
 async def test_an_email_change_needs_the_password(client, app):
@@ -413,21 +402,24 @@ async def test_an_address_taken_after_the_code_was_sent_is_a_conflict(client, ap
     assert (await client.get("/v1/me", headers=account["headers"])).json()["email"] == account["email"]
 
 
-async def test_a_reset_code_for_the_old_address_dies_with_the_change(client, app):
+async def test_codes_for_either_address_die_with_the_change(client, app, database):
+    """A reset or sign-in code Better Auth sent to the old address must not reach the account
+    again, and nobody's pending code for the new address survives the move."""
     account = await register(client, app)
-    await client.post("/v1/auth/password/forgot", json={"email": account["email"]})
-    reset_code = last_code(app, account["email"])
     new_email = _new_address()
+    for identifier in (f"forget-password-otp-{account['email']}", f"sign-in-otp-{new_email}"):
+        await _sql(
+            database,
+            "INSERT INTO auth_verifications (identifier, value, expires_at) "
+            "VALUES (:i, 'hash:0', now() + interval '15 minutes')",
+            i=identifier,
+        )
     await _request_change(client, account["headers"], new_email)
     assert (await _confirm(client, account["headers"], new_email, last_code(app, new_email))).status_code == 200
-
-    reset = await client.post(
-        "/v1/auth/password/reset",
-        json={"email": account["email"], "code": reset_code, "newPassword": "hijacked password 1"},
-    )
-    assert reset.status_code == 400
-    reset = await client.post(
-        "/v1/auth/password/reset",
-        json={"email": new_email, "code": reset_code, "newPassword": "hijacked password 1"},
-    )
-    assert reset.status_code == 400
+    engine = create_async_engine(database)
+    try:
+        async with engine.connect() as conn:
+            left = (await conn.execute(text("SELECT count(*) FROM auth_verifications"))).scalar_one()
+    finally:
+        await engine.dispose()
+    assert left == 0

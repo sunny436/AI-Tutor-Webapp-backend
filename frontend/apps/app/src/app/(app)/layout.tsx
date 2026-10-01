@@ -12,6 +12,7 @@ import { UserProvider } from "@/components/user-context";
 import { ChatProvider } from "@/features/chat/chat-context";
 import { NavigationGuardRoot } from "@/features/navigation/navigation-guard-root";
 import { ActivityHeartbeat } from "@/features/progress/activity-heartbeat";
+import { SessionKeeper } from "@/features/progress/session-keeper";
 import { greetingPool } from "@/lib/greeting";
 import { previewEnabled } from "@/lib/preview";
 import { safeRedirect } from "@/lib/safe-redirect";
@@ -57,6 +58,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
             greetings={greetingPool(greetings)}
           >
             <ActivityHeartbeat />
+            <SessionKeeper />
             <NavigationGuardRoot />
             {children}
           </ChatProvider>

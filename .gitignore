@@ -17,6 +17,8 @@ ollastack.txt
 openrouter.txt
 # The owner's sign-in for the production smoke (bun run smoke)
 dummy_account.txt
+# The Google OAuth client for sign-in with Google (line 1 the id, line 2 the secret)
+google_oauth.txt
 
 # Local leftovers of the retired stack
 node_modules/

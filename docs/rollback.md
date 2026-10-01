@@ -32,6 +32,15 @@ new migration and deploy it. Never downgrade the production database by hand. Ev
 preceded by a backup in `/var/backups/aichat`; restoring one loses everything written since, so it
 is a last resort (header of `deploy/backup.sh`).
 
+**Sign-in across a rollback past 2026-10-01 (Better Auth, migration 0012).** The older code runs on
+the newer schema: the triggers keep `users.password_hash` and `email_verified_at` up to date in both
+directions, so every password and verification still holds. The older web app reads its own cookie,
+so everyone signs in again once; an account made with Google (no password) uses "forgot password".
+While a deploy or rollback swaps the halves, sessions keep working: the API finds every session by
+the SHA-256 of its token, whichever release wrote it. If a deploy stops after restarting the API but
+with the old web build back (`STOP: the new frontend did not start`), roll back at once:
+`bun run rollback`.
+
 Students' files are database rows: a rollback keeps them (older code ignores the tables that hold
 them), and deploying `main` again brings the File Library back. To stop only file processing, use
 the kill switch instead of a rollback (`FILES_ENABLED=false`, [deployment.md](deployment.md#file-library-appfiles)).

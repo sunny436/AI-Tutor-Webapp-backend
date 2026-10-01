@@ -40,14 +40,63 @@ reported_release() {
     | python3.12 -c 'import json,sys; print(json.load(sys.stdin).get("release", ""))' 2>/dev/null || true
 }
 
+# One value from one of the secrets files, never printed by itself.
+env_value() { sed -n "s/^$1=//p" "$SECRETS/$2" 2> /dev/null | tail -1 | tr -d '\r"'"'"''; }
+
+# The session cookie as the web app's Better Auth signs it (lib/server/cookies.ts):
+# urlencode(token + "." + base64(HMAC-SHA256(BETTER_AUTH_SECRET, token))). Made here for a token
+# that is no session, so the request passes the BFF's signature check and reaches the API.
+signed_session_cookie() {
+  local token=$1 secret signature
+  secret=$(env_value BETTER_AUTH_SECRET web.env)
+  [ -n "$secret" ] || return 1
+  signature=$(printf '%s' "$token" | openssl dgst -sha256 -hmac "$secret" -binary | base64 | tr -d '\n')
+  python3.12 -c 'import sys, urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$token.$signature"
+}
+
+# The web app's database role reaches its identity tables (AUTH_DATABASE_URL, from web.env).
+auth_database_ok() {
+  systemd-run --pipe --wait --collect --quiet -p EnvironmentFile="$SECRETS/web.env" \
+    "$APP/backend/.venv/bin/python" -c '
+import asyncio, os, asyncpg
+async def main():
+    conn = await asyncpg.connect(os.environ["AUTH_DATABASE_URL"], timeout=10)
+    try:
+        await conn.fetchval("SELECT count(*) FROM auth_accounts")
+    finally:
+        await conn.close()
+asyncio.run(main())' > /dev/null 2>&1
+}
+
+# The web app's own check of the same (its /api/health, local requests only): Better Auth
+# started (the first check starts it) and its tables answer. A web build from before Better Auth
+# reports no "auth" at all: nothing to check then (a rollback).
+web_auth_ok() {
+  local body i
+  for i in 1 2 3 4 5; do
+    body=$(curl -fsS --max-time 10 "http://127.0.0.1:$1/api/health" 2> /dev/null) || body=""
+    case "$body" in
+      '') ;;
+      *'"auth":"ok"'*) return 0 ;;
+      *'"auth":'*) ;;
+      *) return 0 ;;
+    esac
+    sleep 2
+  done
+  return 1
+}
+
 # Prove browser -> web -> API -> database on a web port: a request with a made-up session
 # must travel through the BFF to the API (which looks the session up in PostgreSQL) and
-# come back 401, and the API's own log must show the same request id.
+# come back 401, and the API's own log must show the same request id. It carries both the
+# Better Auth cookie (signed, so the BFF forwards it) and the cookie of the release before it,
+# so it holds for either web build: a rollback runs today's tools against an older web app.
 check_chain() {
-  local port=$1 api_unit=$2 headers body status rid i
+  local port=$1 api_unit=$2 headers body status rid i signed
   headers=$(mktemp) body=$(mktemp)
+  signed=$(signed_session_cookie "deploychaincheck$(date +%s)") || signed=""
   status=$(curl -s -o "$body" -D "$headers" -w '%{http_code}' --max-time 20 \
-    -H "Cookie: aichat_session=deploy-chain-check" "http://127.0.0.1:$port/api/v1/conversations" || true)
+    -H "Cookie: aichat_session=deploy-chain-check; padhai_session=$signed" "http://127.0.0.1:$port/api/v1/conversations" || true)
   rid=$(grep -i '^x-request-id:' "$headers" | tr -d '\r' | awk '{print $2}')
   if [ "$status" != 401 ] || ! grep -q '"unauthorized"' "$body" || [ -z "$rid" ]; then
     rm -f "$headers" "$body"

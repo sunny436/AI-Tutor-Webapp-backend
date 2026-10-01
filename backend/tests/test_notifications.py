@@ -1,14 +1,19 @@
-"""Notification preferences, security alerts (queued, not sent by the API) and unsubscribe links."""
+"""Notification preferences, security alerts (emailed at once, never through the outbox) and
+unsubscribe links."""
 
 import uuid
+from datetime import UTC, datetime, timedelta
 
 import pytest
-from sqlalchemy import text
+from sqlalchemy import select, text, update
 from sqlalchemy.ext.asyncio import create_async_engine
 
+from app.db.models import AuthSession, User
 from app.notifications.tokens import make_token, read_token
 from app.ratelimit import SlidingWindowLimiter
-from tests.conftest import PASSWORD, last_code, make_settings, register
+from tests.conftest import PASSWORD, make_settings, register, sign_in
+
+INTERNAL = {"X-Internal-Token": "test-internal-token-that-is-long-enough-1234"}
 
 IPHONE = "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Safari/604.1"
 WINDOWS = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0 Safari/537.36"
@@ -29,12 +34,26 @@ async def outbox(database: str, user_id: str | None = None) -> list[dict]:
         await engine.dispose()
 
 
-async def _login(client, email: str, agent: str):
-    response = await client.post(
-        "/v1/auth/login", json={"email": email, "password": PASSWORD}, headers={"User-Agent": agent}
-    )
-    assert response.status_code == 200, response.text
-    return {"Authorization": f"Bearer {response.json()['session']['token']}"}
+async def _established(app, email: str) -> None:
+    """An account that is not brand new (a brand-new account's first session is its sign-up)."""
+    old = datetime.now(UTC) - timedelta(days=3)
+    async with app.state.db.sessionmaker() as s:
+        await s.execute(update(User).where(User.email == email).values(created_at=old))
+        await s.commit()
+
+
+async def _event(client, app, kind: str, email: str, token: str | None = None) -> None:
+    """What the web app's Better Auth reports after it acts (app/auth/internal.py)."""
+    async with app.state.db.sessionmaker() as s:
+        user_id = await s.scalar(select(User.id).where(User.email == email))
+        session_id = await s.scalar(select(AuthSession.id).where(AuthSession.token == token)) if token else None
+    body = {"kind": kind, "userId": str(user_id), **({"sessionId": str(session_id)} if session_id else {})}
+    assert (await client.post("/internal/auth/events", json=body, headers=INTERNAL)).status_code == 202
+
+
+async def _login(client, app, email: str, agent: str) -> None:
+    session = await sign_in(app, email, user_agent=agent)
+    await _event(client, app, "sign_in", email, session["token"])
 
 
 # ------------------------------------------------------------------- preferences
@@ -88,18 +107,16 @@ async def test_reminders_need_a_time_zone(client, app):
 
 
 # ---------------------------------------------------------------- security alerts
-async def test_a_sign_in_from_a_new_kind_of_device_queues_an_alert(client, app, database):
-    account = await register(client, app)
-    sent_before = len(app.state.email_sender.outbox)
-    await _login(client, account["email"], IPHONE)
-    await _login(client, account["email"], IPHONE)  # the same kind of device again: no second alert
-    alerts = await outbox(database, account["user"]["id"])
-    assert [row["kind"] for row in alerts] == ["security_sign_in"]
-    alert = alerts[0]
-    assert alert["status"] == "pending" and alert["to_address"] == account["email"]
-    assert "Safari on iPhone" in alert["body"]
-    assert "127.0.0" not in alert["body"]  # a device, never an address
-    assert len(app.state.email_sender.outbox) == sent_before  # the API queues; only the worker sends
+async def test_a_sign_in_from_a_new_kind_of_device_sends_an_alert(client, app, database):
+    account = await register(client, app, user_agent=WINDOWS)
+    await _established(app, account["email"])
+    await _login(client, app, account["email"], IPHONE)
+    await _login(client, app, account["email"], IPHONE)  # the same kind of device again: no second alert
+    sent = [mail for mail in app.state.email_sender.outbox if mail["to"] == account["email"]]
+    assert len(sent) == 1 and "New sign-in" in sent[0]["subject"]
+    assert "Safari on iPhone" in sent[0]["body"]
+    assert "127.0.0" not in sent[0]["body"]  # a device, never an address
+    assert await outbox(database, account["user"]["id"]) == []  # sent at once, not queued
 
 
 async def test_no_sign_in_alert_when_alerts_are_off(client, app, database):
@@ -109,31 +126,25 @@ async def test_no_sign_in_alert_when_alerts_are_off(client, app, database):
         json={"version": 0, "set": {"securityAlerts": False}},
         headers=account["headers"],
     )
-    await _login(client, account["email"], WINDOWS)
+    await _established(app, account["email"])
+    await _login(client, app, account["email"], IPHONE)
+    assert app.state.email_sender.outbox == []
     assert await outbox(database, account["user"]["id"]) == []
 
 
 async def test_a_password_change_or_reset_is_always_reported(client, app, database):
     account = await register(client, app)
+    await _established(app, account["email"])
     await client.patch(
         "/v1/notifications/preferences",
         json={"version": 0, "set": {"securityAlerts": False}},
         headers=account["headers"],
     )
-    changed = await client.post(
-        "/v1/auth/password/change",
-        json={"currentPassword": PASSWORD, "newPassword": "a brand new password"},
-        headers=account["headers"],
-    )
-    assert changed.status_code == 204
-    await client.post("/v1/auth/password/forgot", json={"email": account["email"]})
-    reset = await client.post(
-        "/v1/auth/password/reset",
-        json={"email": account["email"], "code": last_code(app, account["email"]), "newPassword": "and another one!"},
-    )
-    assert reset.status_code == 200
-    kinds = [row["kind"] for row in await outbox(database, account["user"]["id"])]
-    assert kinds == ["security_password_changed", "security_password_changed"]
+    # The credential was just written (as Better Auth's change or reset writes it).
+    await _event(client, app, "password_changed", account["email"])
+    await _event(client, app, "password_reset", account["email"])
+    subjects = [mail["subject"] for mail in app.state.email_sender.outbox if mail["to"] == account["email"]]
+    assert len(subjects) == 2 and all("password was changed" in subject for subject in subjects)
 
 
 # ------------------------------------------------------------------- unsubscribe

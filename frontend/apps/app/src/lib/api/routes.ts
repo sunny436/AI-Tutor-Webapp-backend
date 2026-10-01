@@ -31,11 +31,10 @@ export type RouteSpec = {
   /** Server-Sent Events response. */
   stream?: boolean;
   /**
-   * What the BFF does with the session cookie:
-   *   issue — the response carries `{user, session}`; set the cookie, strip the token
+   * What the BFF does with the session cookie (Better Auth sets it; lib/auth):
    *   clear — the session has ended; delete the cookie
    */
-  session?: "issue" | "clear";
+  session?: "clear";
   /**
    * A raw file as the request body instead of JSON: the content types the API accepts
    * and the most bytes the BFF reads (the contract's `x-max-bytes`; the API checks too).
@@ -65,13 +64,6 @@ export const FILE_CONTENT = {
 } as const;
 
 export const ROUTES = {
-  "POST /v1/auth/signup": { auth: false, body: "SignupRequest" },
-  "POST /v1/auth/verify-email": { auth: false, body: "VerifyEmailRequest", session: "issue" },
-  "POST /v1/auth/login": { auth: false, body: "LoginRequest", session: "issue" },
-  "POST /v1/auth/resend-code": { auth: false, body: "ResendCodeRequest" },
-  "POST /v1/auth/password/forgot": { auth: false, body: "ForgotPasswordRequest" },
-  "POST /v1/auth/password/reset": { auth: false, body: "ResetPasswordRequest", session: "issue" },
-  "POST /v1/auth/password/change": { auth: true, body: "ChangePasswordRequest" },
   "POST /v1/auth/logout": { auth: true, session: "clear" },
   "POST /v1/auth/sessions/revoke-others": { auth: true },
   "GET /v1/auth/sessions": { auth: true },

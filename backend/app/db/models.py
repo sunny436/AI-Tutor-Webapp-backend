@@ -92,6 +92,7 @@ IN_APP_KINDS = (
     "weekly_summary",
     "security_sign_in",
     "security_password_changed",
+    "security_google_linked",
 )
 THEMES = ("system", "light", "dark")
 FONT_SIZES = ("small", "medium", "large", "x_large")
@@ -115,8 +116,12 @@ class User(Base):
 
     id: Mapped[uuid.UUID] = _uuid_pk()
     email: Mapped[str] = mapped_column(CITEXT, nullable=False, unique=True)
+    # Better Auth's flag. email_verified_at follows it both ways (trigger, 0012), for older code.
+    email_verified: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
     email_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
-    password_hash: Mapped[str] = mapped_column(Text, nullable=False)
+    # The credential's argon2 hash, mirrored from auth_accounts both ways (trigger, 0012) so a
+    # rollback signs people in with the password in force; None = no password (Google only).
+    password_hash: Mapped[str | None] = mapped_column(Text)
     display_name: Mapped[str | None] = mapped_column(String(80))
     created_at: Mapped[datetime] = _created()
     updated_at: Mapped[datetime] = _created()
@@ -126,6 +131,7 @@ class User(Base):
     timezone: Mapped[str | None] = mapped_column(String(64))  # IANA name, set by the user
     avatar_hash: Mapped[str | None] = mapped_column(String(32))  # names the current photo; None = no photo
     password_changed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    image: Mapped[str | None] = mapped_column(Text)  # Better Auth's field; never filled (no Google photos)
 
 
 class UserAvatar(Base):
@@ -447,12 +453,62 @@ class AuthSession(Base):
     user_id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
     )
-    token_hash: Mapped[str] = mapped_column(String(64), nullable=False, unique=True)
+    # SHA-256 of the token: the API finds sessions by it. For Better Auth's sessions a trigger
+    # computes it from `token` (0012); older sessions have only the hash. Nullable only because
+    # Better Auth refuses to start while a column it never writes is required.
+    token_hash: Mapped[str | None] = mapped_column(String(64), unique=True)
+    token: Mapped[str | None] = mapped_column(Text, unique=True)  # Better Auth's session token
     created_at: Mapped[datetime] = _created()
-    last_seen_at: Mapped[datetime] = _created()
+    last_seen_at: Mapped[datetime] = _created()  # Better Auth's updatedAt
     expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     user_agent: Mapped[str | None] = mapped_column(String(300))
     ip: Mapped[str | None] = mapped_column(String(64))
+
+
+class AuthAccount(Base):
+    """A way to sign in (Better Auth's `account`): provider_id "credential" holds the argon2 hash
+    (account_id = the user id), "google" the Google user id. Written by the web app's Better Auth;
+    the API reads the password to re-authenticate. Google's tokens are never stored."""
+
+    __tablename__ = "auth_accounts"
+    __table_args__ = (
+        UniqueConstraint("provider_id", "account_id"),
+        Index("ix_auth_accounts_user_id", "user_id"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    account_id: Mapped[str] = mapped_column(Text, nullable=False)
+    provider_id: Mapped[str] = mapped_column(Text, nullable=False)
+    access_token: Mapped[str | None] = mapped_column(Text)
+    refresh_token: Mapped[str | None] = mapped_column(Text)
+    id_token: Mapped[str | None] = mapped_column(Text)
+    access_token_expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    refresh_token_expires_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    scope: Mapped[str | None] = mapped_column(Text)
+    password: Mapped[str | None] = mapped_column(Text)
+    created_at: Mapped[datetime] = _created()
+    updated_at: Mapped[datetime] = _created()
+
+
+class AuthVerification(Base):
+    """Better Auth's `verification`: email codes (identifier "<type>-otp-<email>", value the
+    code's SHA-256 + ":" + attempts) and OAuth states. Short-lived; retention deletes expired rows."""
+
+    __tablename__ = "auth_verifications"
+    __table_args__ = (
+        Index("ix_auth_verifications_identifier", "identifier"),
+        Index("ix_auth_verifications_expires_at", "expires_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    identifier: Mapped[str] = mapped_column(Text, nullable=False)
+    value: Mapped[str] = mapped_column(Text, nullable=False)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    created_at: Mapped[datetime] = _created()
+    updated_at: Mapped[datetime] = _created()
 
 
 class EmailCode(Base):
