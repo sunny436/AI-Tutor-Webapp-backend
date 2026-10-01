@@ -45,8 +45,9 @@ USE_RECORD = (
     "- When the student asks how they did, answer from this record: the score, what they got right and "
     "wrong, and the ideas behind the wrong answers. Never say you cannot see their answers."
 )
-SUMMARY_MAX = 2000  # the whole block; the latest record comes first and is never cut
-LATEST_MAX = 1500
+SUMMARY_MAX = 2600  # the whole block; the latest record comes first and is never cut
+LATEST_MAX = 2100
+MISSED_SHOWN = 5  # missed questions told with their wording
 
 # A fence (``` or ~~~), after anything that can hold one: indentation, list markers, quote marks.
 _FENCE = re.compile(r"^(?P<prefix>[ \t>]*(?:(?:[-+*]|\d{1,9}[.)])[ \t]+[ \t>]*)*)(?P<fence>`{3,}|~{3,})(?P<info>.*)$")
@@ -326,6 +327,23 @@ def build(content: str, question: str | None) -> tuple[list[dict] | None, str | 
     return [record], None
 
 
+def records_for(metadata: dict | None, content: str, status: str) -> list[dict]:
+    """A reply's practice records: the stored ones; or, for a complete reply saved before its kind
+    of block was recorded (no record and no `assessmentError`), the record its text gives now. That
+    is built the same way on every read, so what a client is shown and its first answer agree; the
+    first answer stores it (app/chat/router.py). A block the server can't accept stays read-only."""
+    stored = (metadata or {}).get("assessments")
+    if stored:
+        return stored
+    if status != "complete" or (metadata or {}).get("assessmentError") or not has_test(content):
+        return []
+    try:
+        records, _ = build(content, None)
+    except Exception:  # noqa: BLE001 - a reply is never unreadable because of its practice block
+        return []
+    return records or []
+
+
 # ------------------------------------------------------------------ answering
 def _possible(question: dict) -> int:
     """What a question is worth: 1 for multiple choice, one per blank for an exercise."""
@@ -479,6 +497,21 @@ def _test_lines(record: dict) -> list[str]:
     if responses:  # every answered question: the tutor is asked about any of them
         marks = "; ".join(_mark(response, questions) for response in responses)
         lines.append(f"- Answers (letter chosen; right answer in brackets): {marks}")
+    # The wording of the latest missed questions, so "explain my mistakes" still works once a long
+    # chat has pushed the test itself out of the transcript the tutor sees.
+    missed = [response for response in responses if not response["earned"]][-MISSED_SHOWN:]
+    if missed:
+        details = []
+        for response in missed:
+            question = questions[response["question"]]
+            chosen = (
+                "skipped"
+                if response["status"] == "skipped"
+                else f"chose {_quote(question['options'][response['value']], 30)}"
+            )
+            right = _quote(question["options"][question["correct"]], 30)
+            details.append(f"Q{response['question'] + 1} {_quote(question['text'], 80)}: {chosen}, right {right}")
+        lines.append(f"- Missed questions (the latest {len(missed)}): {'; '.join(details)}")
     lines.append(USE_RECORD)
     if answered < total:
         # A new block would become the test that a typed letter or "next" reaches.
@@ -504,6 +537,13 @@ def _exercise_lines(record: dict) -> list[str]:
             f"- Latest exercise (fill in the blanks): CHECKED. Score {right} out of {blanks} blanks "
             f"({right} right, {blanks - right} wrong)."
         ]
+    # Its text with the blanks numbered, for when a long chat has pushed it out of the transcript.
+    text = "".join(
+        segment + (f"__{number}__" if number <= blanks else "")
+        for number, segment in enumerate(exercise["segments"], start=1)
+    )
+    lines.append(f"- Text: {_quote(text, 200)}")
+    if response is not None and response["status"] != "skipped":
         # Every blank, with what they typed: the exercise's own answers are in the transcript too,
         # and a model told only the wrong ones may read those as the student's.
         typed = [

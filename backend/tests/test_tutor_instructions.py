@@ -2,7 +2,7 @@
 
 import json
 import re
-from datetime import time
+from datetime import UTC, datetime, time
 from pathlib import Path
 
 from sqlalchemy import text
@@ -30,6 +30,7 @@ from app.learning.tutor import (
     _render,
     build_tutor_instructions,
 )
+from app.progress import activity
 from app.rag.context import CONTEXT_HEADER
 from tests.conftest import make_settings, register, stream_chat
 
@@ -83,7 +84,9 @@ def test_nothing_set_means_no_instructions():
     assert resolve_assistant_config(None, None, neutral).system_prompt == SYSTEM_PROMPT
 
 
-async def test_a_student_whose_settings_are_all_neutral_gets_the_legacy_tutor(client, app, fake_llm):
+async def test_a_student_whose_settings_are_all_neutral_gets_the_legacy_tutor(client, app, fake_llm, monkeypatch):
+    # 11:30 India time: the learning day has 12h 30m left (the line's countdown is then fixed).
+    monkeypatch.setattr(activity, "utcnow", lambda: datetime(2026, 9, 26, 6, 0, tzinfo=UTC))
     headers = (await register(client, app))["headers"]
     everything_auto = dict.fromkeys((field.alias for field in LearningPreferencesSet.model_fields.values()), "auto")
     assert (
@@ -100,7 +103,10 @@ async def test_a_student_whose_settings_are_all_neutral_gets_the_legacy_tutor(cl
     # Nothing set and nothing learnt: the legacy tutor. From the second turn, how they are doing.
     assert sent[0] == LEGACY_MESSAGES[0]
     assert sent[1][1:] == LEGACY_MESSAGES[1][1:]
-    progress = "- Learning so far: a 1-day learning streak; today 1 question"
+    progress = (
+        "- Learning so far: a 1-day learning streak; today 1 question; "
+        "today already counts toward the streak, and the learning day ends in 12h 30m (India time)"
+    )
     assert sent[1][0]["content"] == f"{SYSTEM_PROMPT}\n\n{ABOUT_HEADING}\n{progress}"
 
 

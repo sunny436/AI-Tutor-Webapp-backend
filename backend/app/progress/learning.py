@@ -132,6 +132,8 @@ async def tutor_progress(
         streak_days=state.current,
         today_minutes=day.active_seconds // activity.MINUTE_SECONDS if day else 0,
         today_questions=questions,
+        day_left=remaining_label(state.day_end - now),
+        today_counts=state.today_active,
     )
 
 

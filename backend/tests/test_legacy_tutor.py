@@ -10,10 +10,12 @@ citations), so the prompt fixtures were re-recorded with that prompt (app/chat/a
 """
 
 import json
+from datetime import UTC, datetime
 from pathlib import Path
 
 from app.chat.assistant import SYSTEM_PROMPT, AssistantConfig, resolve_assistant_config
 from app.learning.tutor import ABOUT_HEADING
+from app.progress import activity
 from app.rag.graph import RetrievalOptions
 from tests.conftest import register, stream_chat
 
@@ -32,7 +34,9 @@ def test_the_default_assistant_configuration_is_unchanged():
     )
 
 
-async def test_a_conversation_sends_the_model_exactly_the_legacy_messages(client, app, fake_llm):
+async def test_a_conversation_sends_the_model_exactly_the_legacy_messages(client, app, fake_llm, monkeypatch):
+    # 11:30 India time: the learning day has 12h 30m left (the line's countdown is then fixed).
+    monkeypatch.setattr(activity, "utcnow", lambda: datetime(2026, 9, 26, 6, 0, tzinfo=UTC))
     account = await register(client, app)
     _, first = await stream_chat(client, account["headers"], "What is photosynthesis?")
     conversation_id = first[0][1]["conversationId"]
@@ -42,5 +46,8 @@ async def test_a_conversation_sends_the_model_exactly_the_legacy_messages(client
     assert sent[0] == LEGACY_MESSAGES[0]
     # The second turn: the same messages, the prompt followed by how the student is doing.
     assert sent[1][1:] == LEGACY_MESSAGES[1][1:]
-    progress = "- Learning so far: a 1-day learning streak; today 1 question"
+    progress = (
+        "- Learning so far: a 1-day learning streak; today 1 question; "
+        "today already counts toward the streak, and the learning day ends in 12h 30m (India time)"
+    )
     assert sent[1][0] == {"role": "system", "content": f"{LEGACY_PROMPT}\n\n{ABOUT_HEADING}\n{progress}"}

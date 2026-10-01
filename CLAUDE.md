@@ -119,7 +119,8 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   409 if a reply is already streaming, quotas, user message + assistant placeholder, and the student's
   learning context, which `app/learning/tutor.py` turns into instructions after the frozen system
   prompt: every learning setting, including academic year and study time, plus a "Learning so far"
-  line (streak and today's activity, `app.progress.learning.tutor_progress`) once they have learnt;
+  line (streak, today's activity, and the header's countdown: whether today counts yet and the time
+  left in the India learning day; `app.progress.learning.tutor_progress`) once they have learnt;
   it is read before the question is counted, so the Settings preview shows exactly this; a
   regenerated answer leaves its own question out of today's count. Nothing set and nothing learnt
   means no instructions. Notification settings (daily reminder, streak warning, weekly summary,

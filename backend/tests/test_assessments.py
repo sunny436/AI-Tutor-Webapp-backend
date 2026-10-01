@@ -7,6 +7,8 @@ import asyncio
 import json
 import uuid
 
+from sqlalchemy import update
+
 from app.db.models import Message
 from tests.conftest import parse_sse, register, stream_chat
 
@@ -172,6 +174,11 @@ async def test_the_tutor_is_told_the_recorded_test_first(client, app, fake_llm):
     tests = await told("how was my performance?")
     assert 'Latest test "Cells": FINISHED. Score 1 out of 3 (1 right, 1 wrong, 1 skipped).' in tests
     assert "Q1 A wrong (B); Q2 A right; Q3 skipped (A)" in tests and "test card" not in tests
+    # The wording of what they missed: still there once a long chat pushes the test out of view.
+    assert (
+        '- Missed questions (the latest 2): Q1 "Which organelle makes most of a cell\'s ATP?": '
+        'chose "Nucleus", right "Mitochondrion"; Q3 "Which part only plant cells have?": skipped, right "Cell wall"'
+    ) in tests
 
 
 EXERCISE = (
@@ -215,3 +222,22 @@ async def test_a_fill_in_the_blanks_exercise_is_recorded_graded_and_told_to_the_
     system = fake_llm.calls[-1][0].content
     assert "CHECKED. Score 2 out of 3 blanks (2 right, 1 wrong)." in system
     assert '1 "Hundred." right; 2 "ZERO" right; 3 "liquid" wrong ("solid")' in system
+    assert '- Text: "Water boils at __1__ °C and freezes at __2__ °C. Ice is __3__."' in system
+
+
+async def test_a_reply_saved_before_its_block_was_recorded_becomes_answerable(client, app, fake_llm):
+    # Before 2026-10-01 a reply's test or exercise had no record: its text gives one when read.
+    account, message = await quiz_reply(client, app, fake_llm, reply="Plain words.", ask="Hello there, tutor")
+    h = account["headers"]
+    async with app.state.db.sessionmaker() as session:
+        await session.execute(
+            update(Message).where(Message.id == uuid.UUID(message["id"])).values(content=EXERCISE, metadata_={})
+        )
+        await session.commit()
+    page = await client.get(f"/v1/conversations/{message['conversationId']}/messages", headers=h)
+    message = page.json()["items"][-1]
+    [exercise] = message["metadata"]["assessments"]
+    assert (exercise["kind"], exercise["state"], exercise["answerable"]) == ("exercise", "not_started", True)
+    answered = await respond(client, h, message, 0, value=["100", "0", "ice"])
+    assert answered.status_code == 200 and answered.json()["earned"] == 2
+    assert await stored(app, message["id"]) == [(0, "answered", ["100", "0", "ice"], 2)]  # stored by the answer

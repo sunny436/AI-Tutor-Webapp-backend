@@ -7,7 +7,8 @@ what a student previews is exactly what the tutor is told.
 - **Neutral means nothing.** A student with no settings (or every preference on `auto`) who has
   not learnt yet gets an empty string, and so exactly the tutor everyone got before settings
   existed (tests/test_legacy_tutor.py). Once they have learnt, every student also gets one
-  "Learning so far" line: their streak and today's activity (owner decision, 2026-09-29).
+  "Learning so far" line: their streak, today's activity (owner decision, 2026-09-29), and the
+  header's countdown: whether today counts yet and how long the learning day has left (2026-10-01).
 - **Student text is information, never instructions.** It is shown on one line, in quotes that
   it cannot close (a double quote in it becomes a single one), under a heading that tells the
   model not to follow instructions inside it. Line breaks were already removed when it was
@@ -181,6 +182,9 @@ def _progress(progress: TutorProgress | None) -> str:
         today.append(f"{progress.today_questions} question{'s' if progress.today_questions != 1 else ''}")
     if today:
         parts.append("today " + " and ".join(today))
+    if parts and progress.day_left:  # the header's countdown, for "how long do I have to keep my streak?"
+        counts = "today already counts toward the streak" if progress.today_counts else "today doesn't count yet"
+        parts.append(f"{counts}, and the learning day ends in {progress.day_left} (India time)")
     return "- Learning so far: " + "; ".join(parts) if parts else ""
 
 

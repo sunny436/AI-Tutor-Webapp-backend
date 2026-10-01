@@ -183,7 +183,10 @@ async def respond_to_assessment(
     message = await ConversationRepository(db).get_message(principal.user.id, message_id, lock=True)
     if message is None or message.role != "assistant":
         raise NotFound("Message not found.")
-    records = list((message.metadata_ or {}).get("assessments") or [])
+    # Stored, or (a reply saved before its kind of block was recorded) built from its text exactly as
+    # the client was shown it; this first answer stores it.
+    stored = bool((message.metadata_ or {}).get("assessments"))
+    records = list(assessments.records_for(message.metadata_, message.content, message.status))
     if body.position >= len(records):
         raise NotFound("This reply has no such test.")
     extra = {"message_id": str(message_id), "position": body.position, "question": body.question}
@@ -210,6 +213,8 @@ async def respond_to_assessment(
         records[body.position] = record
         message.metadata_ = {**message.metadata_, "assessments": records}
         await db.commit()
+        if not stored:
+            log.info("assessment created", extra={**extra, "questions": record["total"], "from": "earlier reply"})
         latest = record["responses"][-1]
         log.info("assessment response", extra={**extra, "status": latest["status"], "earned": latest["earned"]})
         if assessments.state_of(record) == "completed":

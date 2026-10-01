@@ -248,8 +248,10 @@ tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on. The server owns them
   student asked for. An exercise needs 1-20 blanks, each with an accepted answer. A reply that wrote
   a block the server can't accept has none, and `metadata.assessmentError: {code}` (`multiple_tests`,
   `nested_test`, `incomplete_test`, `invalid_json`, `invalid_test`, `invalid_question`,
-  `too_many_questions`, `count_mismatch`). Regenerate is the retry. Replies saved before 2026-10-01
-  have neither, and exercises from before the next release are not recorded.
+  `too_many_questions`, `count_mismatch`). Regenerate is the retry. A reply saved before its kind of block
+  was recorded (tests before 2026-10-01, exercises before the same day's second release) has neither
+  stored: its record is built from its text when read (the same each time, so it can be answered;
+  the first answer stores it). A block the server can't accept stays read-only.
 - **An item of `assessments`:** `{id: "<messageId>:<position>", position, schemaVersion: 1,
   kind: test|exercise, title, hash, locator, state: not_started|active|completed, answerable, total,
   answered, current, earned, possible, questions: [...]}`. Every question has every field, null

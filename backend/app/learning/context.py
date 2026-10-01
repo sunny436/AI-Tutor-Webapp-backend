@@ -39,6 +39,10 @@ class TutorProgress:
     streak_days: int = 0
     today_minutes: int = 0
     today_questions: int = 0
+    # The header's countdown: what is left of today's learning day (India time), e.g. "9h 01m",
+    # and whether today already counts toward the streak. None when not read.
+    day_left: str | None = None
+    today_counts: bool | None = None
 
 
 @dataclass(frozen=True)

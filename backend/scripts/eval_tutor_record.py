@@ -104,7 +104,7 @@ def score(right: int, total: int) -> str:
     """ "2 out of 5", "2/5", "**2** of the 5", "5 mein se 2"."""
     return (
         rf"\b{number(right)}\s*(?:/|out of|of)\s*(?:the\s+)?{number(total)}\b|"
-        rf"\b{number(total)}\s*(?:mein|me|में)\s*(?:se|से)\s*{number(right)}\b"
+        rf"\b{number(total)}\s*(?:[^\W\d]+\s+)?(?:mein|me|में)\s*(?:se|से)\s*{number(right)}\b"
     )
 
 
@@ -148,6 +148,19 @@ def build_cases() -> list[dict]:
             ],
             "expect": score(2, 5),
             "forbid": f"{BLIND}|{NOT_DONE}",
+        },
+        {
+            # A long chat: the test itself has left the transcript the tutor sees; the record's
+            # wording of what was missed must still let it say what the mistakes were about.
+            "name": "test out of view",
+            "chat": (
+                "Explain how plants make their food.",
+                "Plants make food by photosynthesis: light, water and carbon dioxide become sugar.",
+            ),
+            "record": record(quiz, quiz_request, QUIZ_ANSWERS),
+            "questions": ["which questions did I get wrong in my test, and what were they about?"],
+            "expect": r"cellulose|cell wall|chlorophyll|chloroplast|carbon dioxide",
+            "forbid": rf"{BLIND}|don'?t have (?:the|your) (?:questions|test)",
         },
         {
             "name": "test in progress",
