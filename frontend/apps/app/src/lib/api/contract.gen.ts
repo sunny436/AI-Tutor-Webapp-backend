@@ -45,11 +45,25 @@ export const CONTRACT = {
     }
   },
   "AssessmentOut": {
+    "kind": {
+      "enum": [
+        "test",
+        "exercise"
+      ]
+    },
     "state": {
       "enum": [
         "not_started",
         "active",
         "completed"
+      ]
+    }
+  },
+  "AssessmentQuestionOut": {
+    "kind": {
+      "enum": [
+        "mcq",
+        "fill_blank"
       ]
     }
   },
@@ -68,9 +82,6 @@ export const CONTRACT = {
       "minimum": 0
     },
     "question": {
-      "minimum": 0
-    },
-    "value": {
       "minimum": 0
     }
   },

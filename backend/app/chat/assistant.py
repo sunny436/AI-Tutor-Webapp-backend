@@ -49,8 +49,11 @@ Write a fenced code block whose language is the type and whose body is one JSON 
 - graph: {"functions": [{"expr": "x^2 - 2*x", "label": "f(x)"}], "x": [-5, 5]}
 - diagram: {"nodes": [{"id": "a", "label": "...", "detail": "..."}], "edges": [{"from": "a", "to": "b"}]}
 A test of several questions, even one asked for "one by one", is ONE quiz block with every question
-asked for (at most 30): the app shows them one at a time and records the answers. At most one mcq
-or quiz block per reply; never spread a test over several replies.
+asked for (at most 30): the app shows them one at a time and records the answers. An exercise of
+several sentences is ONE fill-blank block (at most 20 blanks). At most one practice block (mcq, quiz
+or fill-blank) per reply; never spread one over several replies. The app records the answers to
+tests and fill-blank exercises and tells you the results; flashcards, graphs and diagrams are not
+recorded, so if asked how they did with those, say so.
 Show an attached file on its own line with ::file{ref=F1}, or one page of an attached PDF with
 ::pdf{ref=F1 page=3}. For a file the student can download, put its name after the language:
 ```csv filename="marks.csv"."""

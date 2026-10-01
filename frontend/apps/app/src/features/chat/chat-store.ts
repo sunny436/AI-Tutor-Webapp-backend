@@ -622,8 +622,9 @@ export class ChatStore {
   }
 
   /**
-   * The test typed commands reach: the chat's latest test, only while it waits for an answer.
-   * An older unfinished test is answered through its own card; a finished latest one takes none.
+   * The test typed commands reach: the chat's latest practice block, only when it is a test that
+   * waits for an answer. An older unfinished test is answered through its own card; a finished
+   * test, or an exercise, takes none.
    */
   testTarget(key: string): { messageId: string; test: Assessment } | null {
     const canonical = this.resolve(key);
@@ -633,7 +634,8 @@ export class ChatStore {
       if (message?.role !== "assistant" || message.status !== "complete") continue;
       const test = message.metadata?.assessments?.at(-1);
       if (!test) continue;
-      return test.answerable && test.current !== null ? { messageId: message.id, test } : null;
+      // A typed letter, skip or next is for a multiple-choice test; never for an exercise.
+      return test.kind === "test" && test.answerable && test.current !== null ? { messageId: message.id, test } : null;
     }
     return null;
   }
@@ -645,7 +647,7 @@ export class ChatStore {
     { messageId, test }: { messageId: string; test: Assessment },
   ): Promise<void> {
     const question = test.current ?? 0;
-    const options = test.questions[question]?.options.length ?? 0;
+    const options = test.questions[question]?.options?.length ?? 0;
     const say = (notice: string) => this.noticeTest(canonical, messageId, test.position, notice);
     if (command.kind === "show") {
       say(`Question ${question + 1} of ${test.total} is waiting: pick an option, or type skip.`);

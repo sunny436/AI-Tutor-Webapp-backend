@@ -257,6 +257,20 @@
             "title": "Earned",
             "type": "integer"
           },
+          "marks": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "boolean"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Marks"
+          },
           "possible": {
             "title": "Possible",
             "type": "integer"
@@ -275,6 +289,12 @@
                 "type": "integer"
               },
               {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
                 "type": "null"
               }
             ],
@@ -286,13 +306,14 @@
           "value",
           "earned",
           "possible",
-          "at"
+          "at",
+          "marks"
         ],
         "title": "AssessmentAnswerOut",
         "type": "object"
       },
       "AssessmentOut": {
-        "description": "A practice test as the student may see it now; also each item of a reply's\n`metadata.assessments`.",
+        "description": "A practice test or exercise as the student may see it now; also each item of a reply's\n`metadata.assessments`.",
         "properties": {
           "answerable": {
             "title": "Answerable",
@@ -326,7 +347,10 @@
             "type": "string"
           },
           "kind": {
-            "const": "test",
+            "enum": [
+              "test",
+              "exercise"
+            ],
             "title": "Kind",
             "type": "string"
           },
@@ -399,7 +423,36 @@
         "type": "object"
       },
       "AssessmentQuestionOut": {
+        "description": "One question. A multiple-choice question has `text` and `options`; a fill-in-the-blanks\nexercise has `segments` (the text around the blanks) and `blanks`. The rest are null.",
         "properties": {
+          "answers": {
+            "anyOf": [
+              {
+                "items": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Answers"
+          },
+          "blanks": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Blanks"
+          },
           "correct": {
             "anyOf": [
               {
@@ -423,16 +476,26 @@
             "title": "Explanation"
           },
           "kind": {
-            "const": "mcq",
+            "enum": [
+              "mcq",
+              "fill_blank"
+            ],
             "title": "Kind",
             "type": "string"
           },
           "options": {
-            "items": {
-              "type": "string"
-            },
-            "title": "Options",
-            "type": "array"
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Options"
           },
           "response": {
             "anyOf": [
@@ -444,17 +507,41 @@
               }
             ]
           },
+          "segments": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Segments"
+          },
           "text": {
-            "title": "Text",
-            "type": "string"
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
           }
         },
         "required": [
           "kind",
           "text",
           "options",
+          "segments",
+          "blanks",
           "response",
           "correct",
+          "answers",
           "explanation"
         ],
         "title": "AssessmentQuestionOut",
@@ -462,7 +549,7 @@
       },
       "AssessmentResponseRequest": {
         "additionalProperties": false,
-        "description": "Answer or skip the waiting question of a practice test in a reply. Only which question and\nwhich option: the questions and the grading come from the reply the server saved.",
+        "description": "Answer or skip the waiting question of a practice test or exercise in a reply. Only which\nquestion and what was chosen or typed: the questions and the grading come from the reply the\nserver saved.",
         "properties": {
           "action": {
             "enum": [
@@ -473,13 +560,13 @@
             "type": "string"
           },
           "hash": {
-            "description": "The test's `hash`, as it was shown.",
+            "description": "The record's `hash`, as it was shown.",
             "pattern": "^[0-9a-f]{64}$",
             "title": "Hash",
             "type": "string"
           },
           "position": {
-            "description": "Which test of the reply (0: replies hold one).",
+            "description": "Which block of the reply (0: replies hold one).",
             "maximum": 9.0,
             "minimum": 0.0,
             "title": "Position",
@@ -500,10 +587,18 @@
                 "type": "integer"
               },
               {
+                "items": {
+                  "maxLength": 200,
+                  "type": "string"
+                },
+                "maxItems": 20,
+                "type": "array"
+              },
+              {
                 "type": "null"
               }
             ],
-            "description": "The chosen option (0-based); answers only.",
+            "description": "Answers only: the chosen option (0-based) of a multiple-choice question, or one text per blank of a fill-in-the-blanks exercise.",
             "title": "Value"
           }
         },

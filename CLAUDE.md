@@ -84,6 +84,11 @@ Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. O
   - `smoke_chat.py`: live check against a running server; never point it at production.
   - `ingest_documents.py`: knowledge base; `--global` or `--owner-email` is mandatory.
   - `eval_retrieval.py`: retrieval quality.
+  - `eval_tutor_record.py`: does the model USE the practice-test and exercise record the app gives it (synthetic
+    records, real model, pass-rate gate)? Run it on the host (`systemd-run ... -p EnvironmentFile=/etc/aichat/api.env`)
+    after any change to what the tutor is told. A fact in the prompt is not a fact the model uses: on 2026-10-01 a
+    finished test was in the prompt and 26 of 30 replies were still wrong ("you haven't finished", "I can't see"
+    your results").
   - `migration_status.py`: schema vs code, as JSON.
 
 ## How the halves connect

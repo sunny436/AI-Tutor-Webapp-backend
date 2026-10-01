@@ -155,10 +155,10 @@ async def get_feedback(
 
 
 REFUSED = {
-    "closed": "This test can no longer be answered.",
-    "changed": "This test has changed. Reload to see it.",
-    "corrupt": "This test can't be answered. Ask for a new one.",
-    "unsupported": "This test can't be answered. Ask for a new one.",
+    "closed": "This can no longer be answered.",
+    "changed": "This has changed. Reload to see it.",
+    "corrupt": "This can't be answered. Ask for a new one.",
+    "unsupported": "This can't be answered. Ask for a new one.",
     "answered": "This question already has an answer.",
     "out_of_order": "Answer the waiting question first.",
 }
@@ -205,7 +205,7 @@ async def respond_to_assessment(
         raise Conflict(REFUSED[refused.reason], code=f"assessment_{refused.reason}") from None
     except assessments.Invalid as invalid:
         log.info("assessment invalid", extra={**extra, "reason": str(invalid)})
-        raise ValidationFailed("This test has no such question or option.") from None
+        raise ValidationFailed("No such question, option or blank.") from None
     if changed:
         records[body.position] = record
         message.metadata_ = {**message.metadata_, "assessments": records}

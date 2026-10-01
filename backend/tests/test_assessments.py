@@ -1,6 +1,7 @@
-"""Practice tests in a reply (app/assessments/state.py): built with the reply, all or nothing;
-answered in order, graded and recorded by the server; a retry records nothing twice; a
-regenerated reply's test is closed; the tutor is told the record, latest test first."""
+"""Practice tests and fill-in-the-blanks exercises in a reply (app/assessments/state.py): built
+with the reply, all or nothing; answered in order, graded and recorded by the server; a retry
+records nothing twice; a regenerated reply's test is closed; the tutor is told the record, latest
+first, in words it uses (scripts/eval_tutor_record.py checks that against the model)."""
 
 import asyncio
 import json
@@ -98,6 +99,7 @@ async def test_answers_are_final_and_in_order(client, app, fake_llm):
     ]:
         assert response.status_code == 409 and response.json()["error"]["code"] == code, response.text
     assert (await respond(client, h, message, 1, value=7)).status_code == 422  # no such option
+    assert (await respond(client, h, message, 1, value=["A"])).status_code == 422  # texts are for blanks
     url = f"/v1/messages/{message['id']}/assessment-responses"
     test = message["metadata"]["assessments"][0]
     no_value = {"position": 0, "hash": test["hash"], "question": 1, "action": "answer"}
@@ -152,10 +154,64 @@ async def test_a_malformed_test_is_never_kept_in_part(client, app, fake_llm):
 async def test_the_tutor_is_told_the_recorded_test_first(client, app, fake_llm):
     account, message = await quiz_reply(client, app, fake_llm)
     h = account["headers"]
+
+    async def told(question: str) -> str:
+        fake_llm.reply = lambda messages: "Here is how it went."
+        await stream_chat(client, h, question, message["conversationId"])
+        system = fake_llm.calls[-1][0].content
+        return system[system.index("## Practice tests in this chat") :]
+
     await respond(client, h, message, 0, value=0)  # wrong: the answer is B
-    fake_llm.reply = lambda messages: "Because the mitochondrion makes ATP."
-    await stream_chat(client, h, "why was that wrong?", message["conversationId"])
+    tests = await told("why was that wrong?")
+    assert 'Latest test "Cells": IN PROGRESS, 1 of 3 answered (0 right); question 2 is waiting.' in tests
+    assert "Q1 A wrong (B)" in tests and "Never say you cannot see their answers." in tests
+    await respond(client, h, message, 1, value=0)  # right
+    await respond(client, h, message, 2, action="skip")
+    # The state that went wrong live (2026-10-01): a finished test must read as finished, with
+    # every answer, and no longer as something answered in the card.
+    tests = await told("how was my performance?")
+    assert 'Latest test "Cells": FINISHED. Score 1 out of 3 (1 right, 1 wrong, 1 skipped).' in tests
+    assert "Q1 A wrong (B); Q2 A right; Q3 skipped (A)" in tests and "test card" not in tests
+
+
+EXERCISE = (
+    "Fill these in.\n\n```fill-blank\n"
+    + json.dumps(
+        {
+            "text": "Water boils at [[100|hundred]] °C and freezes at [[0|zero]] °C. Ice is [[solid]].",
+            "explanation": "At sea level.",
+        }
+    )
+    + "\n```"
+)
+
+
+async def test_a_fill_in_the_blanks_exercise_is_recorded_graded_and_told_to_the_tutor(client, app, fake_llm):
+    account, message = await quiz_reply(client, app, fake_llm, reply=EXERCISE, ask="Give me a fill in the blanks")
+    h = account["headers"]
+    [exercise] = message["metadata"]["assessments"]
+    blank = exercise["questions"][0]
+    assert (exercise["kind"], exercise["total"], exercise["possible"]) == ("exercise", 1, 3)
+    assert (blank["kind"], blank["blanks"], blank["segments"][0]) == ("fill_blank", 3, "Water boils at ")
+    assert blank["answers"] is None and blank["explanation"] is None  # nothing given away before checking
+    assert (await respond(client, h, message, 0, value=["100", "0"])).status_code == 422  # one text per blank
+
+    typed = ["Hundred.", " ZERO ", "liquid"]
+    checked = await respond(client, h, message, 0, value=typed)
+    assert checked.status_code == 200, checked.text
+    checked = checked.json()
+    assert (checked["state"], checked["earned"], checked["possible"]) == ("completed", 2, 3)
+    assert checked["questions"][0]["response"]["marks"] == [True, True, False]  # case, spaces, a trailing stop
+    assert checked["questions"][0]["answers"] == [["100", "hundred"], ["0", "zero"], ["solid"]]
+    again = await respond(client, h, message, 0, value=typed)
+    assert again.status_code == 200 and again.json() == checked  # a retry records nothing new
+    other = await respond(client, h, message, 0, value=["100", "0", "solid"])
+    assert other.status_code == 409 and other.json()["error"]["code"] == "assessment_answered"
+    page = await client.get(f"/v1/conversations/{message['conversationId']}/messages", headers=h)
+    assert page.json()["items"][-1]["metadata"]["assessments"] == [checked]
+
+    fake_llm.reply = lambda messages: "Nice work."
+    await stream_chat(client, h, "did I get the blanks right?", message["conversationId"])
     system = fake_llm.calls[-1][0].content
-    tests = system[system.index("## Practice tests in this chat") :]
-    assert "question 2 of 3 is waiting" in tests and "Q1 A wrong (answer B)" in tests
-    assert 'Why Q1: "Respiration happens there."' in tests
+    assert "CHECKED. Score 2 out of 3 blanks (2 right, 1 wrong)." in system
+    assert '1 "Hundred." right; 2 "ZERO" right; 3 "liquid" wrong ("solid")' in system

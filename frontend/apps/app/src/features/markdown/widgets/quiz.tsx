@@ -15,12 +15,12 @@ import { CardFrame } from "../study-card";
 import { prefersReducedMotion } from "./tokens";
 
 /**
- * ```mcq and ```quiz: a practice test the server keeps (app/assessments). The card draws only what
- * the server recorded for this reply: the questions, the answers given (final, graded there), the
- * waiting question and the score. Nothing is scored or remembered here; a reload shows the same.
- * A block with no record (an old reply, or one the server could not accept) shows its source.
+ * The server's record for a practice block (app/assessments), shared by the test and exercise
+ * cards: found by the block's locator in what the reply's metadata says. While the reply is still
+ * being written there is none yet (`waiting`). A block with no record (an old reply, or one the
+ * server could not accept) gives up, so the block's source shows with the reason.
  */
-function TestBlock({ source, onError, single }: WidgetProps & { single: boolean }) {
+export function useRecord(source: string, onError: (note?: string) => void, noun: "test" | "exercise") {
   const tests = useContext(TestContext);
   // undefined while hashing; null when this browser cannot hash (the card then cannot bind).
   const [locator, setLocator] = useState<string | null | undefined>(undefined);
@@ -35,31 +35,42 @@ function TestBlock({ source, onError, single }: WidgetProps & { single: boolean 
     };
   }, [source]);
 
-  const test = locator ? tests?.assessments.find((item) => item.locator === locator) : undefined;
-  const waiting = tests?.streaming || locator === undefined;
+  const record = locator ? tests?.assessments.find((item) => item.locator === locator) : undefined;
+  const waiting = Boolean(tests?.streaming) || locator === undefined;
   const reason = tests?.error
-    ? "This test couldn't be set up, so it can't be answered. Tap Regenerate for a new one."
-    : "This test can't be answered here (it was written before answers were saved). Ask for a new one.";
+    ? `This ${noun} couldn't be set up, so it can't be answered. Tap Regenerate for a new one.`
+    : `This ${noun} can't be answered here (it was written before answers were saved). Ask for a new one.`;
   useEffect(() => {
-    if (!waiting && !test) onError(reason);
-  }, [waiting, test, reason, onError]);
-
-  if (waiting) {
-    return (
-      <p role="status" className="my-3 rounded-xl border border-border bg-study-card px-3.5 py-3 text-sm text-text-secondary">
-        Preparing your test…
-      </p>
-    );
-  }
-  if (!test || !tests) return null;
-  return <TestCard test={test} single={single} tests={tests} />;
+    if (!waiting && !record) onError(reason);
+  }, [waiting, record, reason, onError]);
+  return { tests, record, waiting };
 }
 
-function failure(error: unknown): string {
+export function Preparing({ noun }: { noun: string }) {
+  return (
+    <p role="status" className="my-3 rounded-xl border border-border bg-study-card px-3.5 py-3 text-sm text-text-secondary">
+      Preparing your {noun}…
+    </p>
+  );
+}
+
+export function failure(error: unknown, noun = "test"): string {
   if (error instanceof ApiError && error.status === 409) {
-    return "This test moved on elsewhere (another tab?) or was replaced. It now shows where it is.";
+    return `This ${noun} moved on elsewhere (another tab?) or was replaced. It now shows where it is.`;
   }
   return "Your answer wasn't saved. Check your connection and try again.";
+}
+
+/**
+ * ```mcq and ```quiz: a practice test the server keeps. The card draws only what the server
+ * recorded for this reply: the questions, the answers given (final, graded there), the waiting
+ * question and the score. Nothing is scored or remembered here; a reload shows the same.
+ */
+function TestBlock({ source, onError, single }: WidgetProps & { single: boolean }) {
+  const { tests, record, waiting } = useRecord(source, onError, "test");
+  if (waiting) return <Preparing noun="test" />;
+  if (!record || !tests) return null;
+  return <TestCard test={record} single={single} tests={tests} />;
 }
 
 function TestCard({ test, single, tests }: { test: Assessment; single: boolean; tests: TestState }) {
@@ -142,10 +153,10 @@ function TestCard({ test, single, tests }: { test: Assessment; single: boolean; 
             <fieldset className="min-w-0" disabled={!test.answerable || saving}>
               <legend className="mb-2 font-medium leading-6">
                 {!single && <span className="mr-1 text-text-secondary">Q{current + 1}.</span>}
-                <InlineMarkdown text={waiting.text} />
+                <InlineMarkdown text={waiting.text ?? ""} />
               </legend>
               <div className="space-y-2">
-                {waiting.options.map((option, index) => (
+                {(waiting.options ?? []).map((option, index) => (
                   <label
                     // biome-ignore lint/suspicious/noArrayIndexKey: options are positions in the question
                     key={index}
@@ -207,7 +218,7 @@ function Answered({ number, question, open }: { number: number | null; question:
     <li className="rounded-lg border border-border bg-card px-3 py-2 text-sm leading-6">
       <p className="font-medium">
         {number !== null && <span className="mr-1 text-text-secondary">Q{number}.</span>}
-        <InlineMarkdown text={question.text} />
+        <InlineMarkdown text={question.text ?? ""} />
       </p>
       <p className="mt-1 flex items-start gap-1.5">
         {response.status === "skipped" ? (
@@ -224,10 +235,10 @@ function Answered({ number, question, open }: { number: number | null; question:
             <>Correct! You chose {right}</>
           ) : (
             <>
-              Not quite: you chose {LETTERS[response.value ?? 0]}, the answer is {right}
+              Not quite: you chose {LETTERS[typeof response.value === "number" ? response.value : 0]}, the answer is {right}
             </>
           )}
-          <InlineMarkdown text={question.options[question.correct] ?? ""} />
+          <InlineMarkdown text={question.options?.[question.correct] ?? ""} />
         </span>
       </p>
       {question.explanation ? (

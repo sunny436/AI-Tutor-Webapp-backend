@@ -2,130 +2,131 @@
 
 import { Button } from "@v1/ui/button";
 import { cn } from "@v1/ui/utils";
-import { CircleCheck, CircleX, PencilLine, RotateCcw } from "lucide-react";
-import { Fragment, useEffect, useMemo, useState } from "react";
-import { z } from "zod";
+import { CircleCheck, CircleX, PencilLine } from "lucide-react";
+import { Fragment, useState } from "react";
 
+import type { Assessment } from "@/lib/api/types";
+import type { TestState } from "../context";
 import { InlineMarkdown } from "../message-content";
 import type { WidgetProps } from "../rich-block";
 import { CardFrame } from "../study-card";
-import { parseJson } from "./tokens";
+import { Preparing, failure, useRecord } from "./quiz";
 
-const Spec = z.object({ text: z.string().min(1).max(3000), explanation: z.string().max(2000).optional() });
-type Part = string | { answers: string[] };
-
-/** "Water boils at [[100|hundred]] °C" → text and blanks (each with its accepted answers). */
-export function splitBlanks(text: string): Part[] {
-  const parts: Part[] = [];
-  let last = 0;
-  for (const match of text.matchAll(/\[\[([^\]\n]{1,80})\]\]/g)) {
-    const index = match.index ?? 0;
-    if (index > last) parts.push(text.slice(last, index));
-    parts.push({ answers: (match[1] ?? "").split("|").map((answer) => answer.trim()).filter(Boolean) });
-    last = index + match[0].length;
-  }
-  if (last < text.length) parts.push(text.slice(last));
-  return parts;
-}
-
-/** Same answer, ignoring case, spacing and a trailing full stop. */
-export function sameAnswer(given: string, expected: string): boolean {
-  const norm = (value: string) => value.trim().toLowerCase().replace(/\s+/g, " ").replace(/[.;,!]+$/, "");
-  return norm(given) === norm(expected);
-}
-
-/** ```fill-blank: a sentence with gaps to type into, checked with alternatives allowed. */
+/**
+ * ```fill-blank: an exercise the server keeps (app/assessments). The student types into the blanks
+ * and checks once; the server grades each blank (ignoring case, spacing and a trailing full stop),
+ * records it, and tells the tutor. The card draws only the record: the text and its blanks, then
+ * what was typed, each blank right or wrong with its answer, the score and the explanation. A reload
+ * shows the same; nothing is graded or kept here.
+ */
 export default function FillBlank({ source, onError }: WidgetProps) {
-  const spec = useMemo(() => {
-    const parsed = Spec.safeParse(parseJson(source));
-    if (!parsed.success) return null;
-    const parts = splitBlanks(parsed.data.text);
-    const blanks = parts.filter((part) => typeof part !== "string").length;
-    return blanks > 0 && blanks <= 20 ? { ...parsed.data, parts } : null;
-  }, [source]);
-  const [given, setGiven] = useState<string[]>([]);
-  const [checked, setChecked] = useState(false);
-  useEffect(() => {
-    if (!spec) onError();
-  }, [spec, onError]);
-  if (!spec) return null;
+  const { tests, record, waiting } = useRecord(source, onError, "exercise");
+  if (waiting) return <Preparing noun="exercise" />;
+  if (!record || !tests) return null;
+  return <Exercise record={record} tests={tests} />;
+}
 
-  const blanks = spec.parts.filter((part): part is { answers: string[] } => typeof part !== "string");
-  const right = blanks.map((blank, index) => blank.answers.some((answer) => sameAnswer(given[index] ?? "", answer)));
-  const score = right.filter(Boolean).length;
-  let blank = -1;
+function Exercise({ record, tests }: { record: Assessment; tests: TestState }) {
+  const exercise = record.questions[0];
+  const segments = exercise?.segments ?? [];
+  const blanks = exercise?.blanks ?? 0;
+  const response = exercise?.response ?? null;
+  const [given, setGiven] = useState<string[]>([]);
+  const [saving, setSaving] = useState(false);
+  const [problem, setProblem] = useState<string | null>(null);
+  const done = response !== null;
+  const typed = Array.isArray(response?.value) ? response.value : given;
+  const open = !done && record.answerable;
+
+  const send = async (action: "answer" | "skip") => {
+    if (!open || saving) return;
+    setSaving(true);
+    setProblem(null);
+    try {
+      await tests.respond(record.position, {
+        hash: record.hash,
+        question: 0,
+        action,
+        ...(action === "answer" ? { value: Array.from({ length: blanks }, (_, index) => given[index] ?? "") } : {}),
+      });
+    } catch (error) {
+      setProblem(failure(error, "exercise"));
+    } finally {
+      setSaving(false);
+    }
+  };
 
   return (
     <CardFrame kind="fill-blank" icon={PencilLine} label="Fill in the blanks">
       <p className="leading-9">
-        {spec.parts.map((part, index) => {
-          if (typeof part === "string") {
-            return (
-              // biome-ignore lint/suspicious/noArrayIndexKey: parts are positions in the sentence
-              <Fragment key={index}>
-                <InlineMarkdown text={part} />
-              </Fragment>
-            );
-          }
-          blank += 1;
-          const which = blank;
-          const width = Math.min(16, Math.max(4, ...part.answers.map((answer) => answer.length))) + 2;
+        {segments.map((segment, index) => {
+          const value = typed[index] ?? "";
+          const mark = response?.marks?.[index];
+          const answer = exercise?.answers?.[index]?.[0];
           return (
-            // biome-ignore lint/suspicious/noArrayIndexKey: parts are positions in the sentence
-            <span key={index} className="mx-1 inline-flex max-w-full items-center gap-1 align-baseline">
-              <input
-                type="text"
-                aria-label={`Blank ${which + 1}`}
-                value={given[which] ?? ""}
-                disabled={checked}
-                onChange={(event) => setGiven((all) => Object.assign([...all], { [which]: event.target.value }))}
-                style={{ width: `${width}ch` }}
-                className={cn(
-                  "max-w-full rounded-md border bg-card px-1.5 py-0.5 text-center text-sm leading-6 focus-ring",
-                  checked ? (right[which] ? "border-success" : "border-destructive") : "border-input",
-                )}
-              />
-              {checked &&
-                (right[which] ? (
-                  <CircleCheck aria-label="correct" className="h-4 w-4 shrink-0 text-success" />
-                ) : (
-                  <span className="inline-flex items-center gap-0.5 text-xs text-destructive">
-                    <CircleX aria-hidden className="h-4 w-4 shrink-0" />
-                    <span>{part.answers[0]}</span>
-                  </span>
-                ))}
-            </span>
+            // biome-ignore lint/suspicious/noArrayIndexKey: segments are positions in the sentence
+            <Fragment key={index}>
+              <InlineMarkdown text={segment} />
+              {index < blanks && (
+                <span className="mx-1 inline-flex max-w-full items-center gap-1 align-baseline">
+                  <input
+                    type="text"
+                    aria-label={`Blank ${index + 1}`}
+                    value={value}
+                    disabled={!open || saving}
+                    maxLength={200}
+                    onChange={(event) =>
+                      setGiven((all) => Object.assign([...all], { [index]: event.target.value }))
+                    }
+                    style={{ width: `${Math.min(16, Math.max(6, value.length)) + 2}ch` }}
+                    className={cn(
+                      "max-w-full rounded-md border bg-card px-1.5 py-0.5 text-center text-sm leading-6 focus-ring",
+                      done ? (mark ? "border-success" : "border-destructive") : "border-input",
+                    )}
+                  />
+                  {done &&
+                    (mark ? (
+                      <CircleCheck aria-label="correct" className="h-4 w-4 shrink-0 text-success" />
+                    ) : (
+                      <span className="inline-flex items-center gap-0.5 text-xs text-destructive">
+                        <CircleX aria-hidden className="h-4 w-4 shrink-0" />
+                        <span aria-label={`the answer is ${answer ?? ""}`}>{answer}</span>
+                      </span>
+                    ))}
+                </span>
+              )}
+            </Fragment>
           );
         })}
       </p>
-      <div className="mt-2 flex flex-wrap items-center gap-2">
-        {!checked ? (
-          <Button type="button" size="sm" onClick={() => setChecked(true)} disabled={!given.some((value) => value?.trim())}>
-            Check answers
-          </Button>
-        ) : (
+      {open ? (
+        <div className="mt-2 flex flex-wrap items-center gap-2">
           <Button
             type="button"
-            variant="outline"
             size="sm"
-            onClick={() => {
-              setGiven([]);
-              setChecked(false);
-            }}
+            disabled={saving || !given.some((value) => value?.trim())}
+            onClick={() => void send("answer")}
           >
-            <RotateCcw aria-hidden className="mr-1.5 h-3.5 w-3.5" />
-            Try again
+            {saving ? "Saving…" : "Check answers"}
           </Button>
-        )}
-        {checked && (
-          <p role="status" className="text-sm font-semibold">
-            {score} of {blanks.length} right
-          </p>
-        )}
-      </div>
-      {checked && spec.explanation ? (
+          <Button type="button" size="sm" variant="outline" disabled={saving} onClick={() => void send("skip")}>
+            Show answers
+          </Button>
+        </div>
+      ) : !done ? (
+        <p className="mt-2 text-xs text-text-secondary">This exercise can no longer be answered.</p>
+      ) : null}
+      <p role="status" className={cn("text-sm", done || problem ? "mt-2" : "sr-only", problem && "text-destructive")}>
+        {problem ??
+          (done
+            ? response.status === "skipped"
+              ? "Answers shown."
+              : `${response.earned} of ${blanks} right.`
+            : "")}
+      </p>
+      {done && exercise?.explanation ? (
         <p className="mt-2 text-sm leading-6">
-          <InlineMarkdown text={spec.explanation} />
+          <InlineMarkdown text={exercise.explanation} />
         </p>
       ) : null}
     </CardFrame>

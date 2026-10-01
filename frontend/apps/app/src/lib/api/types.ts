@@ -303,33 +303,43 @@ export type MessageMetadata = {
 /** One question's recorded response: final, graded by the server. */
 export type AssessmentAnswer = {
   status: "answered" | "skipped";
-  /** The chosen option (0-based); null when skipped. */
-  value: number | null;
+  /** The chosen option (0-based) of a multiple-choice question, or the text typed into each blank; null when skipped. */
+  value: number | string[] | null;
   earned: number;
   possible: number;
   at: string;
+  /** Fill-in-the-blanks: whether each blank was right. */
+  marks: boolean[] | null;
 };
 
+/**
+ * One question. Multiple choice (`mcq`) has `text` and `options`; a fill-in-the-blanks exercise
+ * (`fill_blank`) has `segments` (the text around the blanks) and `blanks`. The rest are null.
+ */
 export type AssessmentQuestion = {
-  kind: "mcq";
-  text: string;
-  options: string[];
+  kind: "mcq" | "fill_blank";
+  text: string | null;
+  options: string[] | null;
+  segments: string[] | null;
+  blanks: number | null;
   response: AssessmentAnswer | null;
-  /** The right option and why: only once this question has a response. */
+  /** The right option (multiple choice): only once this question has a response. */
   correct: number | null;
+  /** The accepted answers of each blank (fill-in-the-blanks): only once answered or skipped. */
+  answers: string[][] | null;
   explanation: string | null;
 };
 
 /**
- * A practice test in a reply (`POST /v1/messages/{id}/assessment-responses`). The server owns it:
- * questions come from the saved reply, answers are final, in order and graded there. `locator`
- * says which block of the reply it is (sha256 of the block's source, trimmed).
+ * A practice test or fill-in-the-blanks exercise in a reply (`POST /v1/messages/{id}/assessment-responses`).
+ * The server owns it: questions come from the saved reply, answers are final, in order and graded
+ * there. `locator` says which block of the reply it is (sha256 of the block's source, trimmed).
  */
 export type Assessment = {
   id: string;
   position: number;
   schemaVersion: number;
-  kind: "test";
+  kind: "test" | "exercise";
   title: string | null;
   hash: string;
   locator: string;
@@ -349,7 +359,8 @@ export type AssessmentResponseRequest = {
   hash: string;
   question: number;
   action: "answer" | "skip";
-  value?: number;
+  /** Answers only: an option's index, or one text per blank. */
+  value?: number | string[];
 };
 
 /** A file attached to a user message. `fileId` is null once the file was deleted (the name stays). */

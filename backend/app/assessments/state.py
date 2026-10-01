@@ -1,12 +1,17 @@
-"""Practice tests: a test the tutor writes into a reply, answered one question at a time, graded
-and recorded by the server (docs/api-contract.md, "Practice tests").
+"""Practice tests and exercises: what the tutor writes into a reply for the student to answer,
+graded and recorded by the server (docs/api-contract.md, "Practice tests").
 
 - **Built with the reply, all or nothing.** `build` runs when the reply is saved
-  (ChatService._finalize), in the same UPDATE. A reply holds at most one test: one ```quiz block,
-  or one ```mcq for a single question. The whole test is checked first: every question, its
-  options and its answer, and the number of questions the student asked for. Anything wrong
-  keeps no test at all (the reason is `assessmentError`), never part of one. There is no retry
+  (ChatService._finalize), in the same UPDATE. A reply holds at most one practice block: a test
+  (one ```quiz block, or one ```mcq for a single question) or an exercise (one ```fill-blank). The
+  whole block is checked first: every question, its options and its answer (for a test, also the
+  number of questions the student asked for), every blank and its accepted answers. Anything
+  wrong keeps nothing (the reason is `assessmentError`), never part of it. There is no retry
   behind the student's back: Regenerate is the retry.
+- **The tutor is told the record** (`tutor_summary`), latest first, in words a model reads as
+  fact: what was answered, the score, what to do when asked. A model that is only given the
+  score tends to believe the transcript instead, where no answer appears (scripts/eval_tutor_record.py
+  measures this against the configured model).
 - **Questions and grading come only from the saved reply.** The record keeps the test's
   canonical form and its sha256 (`hash`). A client names a question and an option, never content
   or a result, and must send the hash it was shown.
@@ -28,11 +33,20 @@ from typing import Any
 SCHEMA_VERSION = 1
 MAX_QUESTIONS = 30
 MAX_OPTIONS = 8
+MAX_BLANKS = 20
 LETTERS = "ABCDEFGH"
-LANGUAGES = ("quiz", "mcq")
+LANGUAGES = ("quiz", "mcq", "fill-blank")  # the practice blocks the app records
 SUMMARY_HEADING = "## Practice tests in this chat"
-SUMMARY_MAX = 1200  # the whole block; the latest test comes first and is never cut
-LATEST_MAX = 700
+SUMMARY_FRAME = (
+    "The app records the student's answers to the tests and exercises you write (they are not in the "
+    "chat transcript). This record is authoritative."
+)
+USE_RECORD = (
+    "- When the student asks how they did, answer from this record: the score, what they got right and "
+    "wrong, and the ideas behind the wrong answers. Never say you cannot see their answers."
+)
+SUMMARY_MAX = 2000  # the whole block; the latest record comes first and is never cut
+LATEST_MAX = 1500
 
 # A fence (``` or ~~~), after anything that can hold one: indentation, list markers, quote marks.
 _FENCE = re.compile(r"^(?P<prefix>[ \t>]*(?:(?:[-+*]|\d{1,9}[.)])[ \t]+[ \t>]*)*)(?P<fence>`{3,}|~{3,})(?P<info>.*)$")
@@ -56,6 +70,8 @@ _NOT_A_COUNT = {
     "q", "set", "module", "week", "day", "topic",
 }  # fmt: skip
 _CLAIMED = re.compile(r"\bquestion\s+1\s+(?:of|/)\s+(\d{1,3})\b|\b(\d{1,3})[\s-]+question\s+(?:quiz|test)\b", re.I)
+# A blank in a fill-blank exercise, as the web app reads it: [[answer|alternative]].
+_BLANK = re.compile(r"\[\[([^\]\n]{1,80})\]\]")
 
 
 class Refused(Exception):
@@ -108,11 +124,11 @@ def _blocks(content: str) -> tuple[list[_Block], list[str]]:
     return blocks, prose
 
 
-_TEST_FENCE = re.compile(r"(?:`{3,}|~{3,})[ \t]*(?:quiz|mcq)(?=\s|$)", re.M)
+_TEST_FENCE = re.compile(r"(?:`{3,}|~{3,})[ \t]*(?:quiz|mcq|fill-blank)(?=\s|$)", re.M)
 
 
 def has_test(content: str) -> bool:
-    """Whether a reply may hold a test (a fence named quiz or mcq somewhere); `build` decides."""
+    """Whether a reply may hold a practice block (a fence named quiz, mcq or fill-blank); `build` decides."""
     return _TEST_FENCE.search(content) is not None
 
 
@@ -178,6 +194,48 @@ def _question(raw: Any) -> dict | None:
     }
 
 
+def _fill_blank(spec: Any) -> dict | None:
+    """A fill-in-the-blanks exercise, read the way the web app reads it: blanks `[[answer|alternative]]`
+    of 1-80 characters, 1-20 of them, each with at least one accepted answer."""
+    if not isinstance(spec, dict):
+        return None
+    text, explanation = spec.get("text"), spec.get("explanation")
+    if not _text(text, 3000):
+        return None
+    if explanation is not None and not (
+        isinstance(explanation, str) and len(explanation) <= 2000 and "\x00" not in explanation
+    ):
+        return None
+    segments: list[str] = []
+    answers: list[list[str]] = []
+    last = 0
+    for match in _BLANK.finditer(text):
+        accepted = [answer.strip() for answer in match[1].split("|") if answer.strip()]
+        if not accepted:
+            return None
+        segments.append(text[last : match.start()])
+        answers.append(accepted)
+        last = match.end()
+    segments.append(text[last:])
+    if not 1 <= len(answers) <= MAX_BLANKS:
+        return None
+    return {
+        "kind": "fill_blank",
+        "segments": segments,
+        "answers": answers,
+        "explanation": explanation if explanation and explanation.strip() else None,
+    }
+
+
+def _same(given: str, expected: str) -> bool:
+    """The web app's rule (widgets/fill-blank.tsx): ignoring case, spacing and trailing `.;,!`."""
+
+    def norm(value: str) -> str:
+        return re.sub(r"[.;,!]+$", "", re.sub(r"\s+", " ", value.strip().lower()))
+
+    return norm(given) == norm(expected)
+
+
 def asked_count(question: str | None) -> int | None:
     """How many questions the student asked for ("10 MCQs", "give me five questions"), at most
     MAX_QUESTIONS; None when the message names no count ("class 10 questions" names a class)."""
@@ -218,6 +276,22 @@ def build(content: str, question: str | None) -> tuple[list[dict] | None, str | 
         spec = json.loads(test.body)
     except ValueError:
         return None, "invalid_json"
+    if test.language == "fill-blank":
+        exercise = _fill_blank(spec)
+        if exercise is None:
+            return None, "invalid_question"
+        record = {
+            "schemaVersion": SCHEMA_VERSION,
+            "kind": "exercise",
+            "position": 0,
+            "title": None,
+            "questions": [exercise],
+            "total": 1,
+            "locator": locator(test.body),
+            "responses": [],
+        }
+        record["hash"] = fingerprint(record)
+        return [record], None
     title = None
     if test.language == "mcq":
         raw_questions: Any = [spec]
@@ -253,11 +327,43 @@ def build(content: str, question: str | None) -> tuple[list[dict] | None, str | 
 
 
 # ------------------------------------------------------------------ answering
+def _possible(question: dict) -> int:
+    """What a question is worth: 1 for multiple choice, one per blank for an exercise."""
+    return len(question["answers"]) if question["kind"] == "fill_blank" else 1
+
+
+def _answer(question: dict, value: Any) -> int | list[str]:
+    """The response's value, if it fits the question: an option's index, or one text per blank."""
+    if question["kind"] == "fill_blank":
+        if (
+            isinstance(value, list)
+            and len(value) == len(question["answers"])
+            and all(isinstance(given, str) and len(given) <= 200 and "\x00" not in given for given in value)
+        ):
+            return list(value)
+    elif isinstance(value, int) and not isinstance(value, bool) and 0 <= value < len(question["options"]):
+        return value
+    raise Invalid("value")
+
+
+def _graded(question: dict, index: int, wanted: str, value: Any, at: str) -> dict:
+    response = {"question": index, "status": wanted, "value": value, "possible": _possible(question), "at": at}
+    if question["kind"] == "fill_blank":
+        accepted = question["answers"]
+        marks = (
+            [any(_same(given, answer) for answer in answers) for given, answers in zip(value, accepted, strict=True)]
+            if wanted == "answered"
+            else [False] * len(accepted)
+        )
+        return {**response, "earned": sum(marks), "marks": marks}
+    return {**response, "earned": 1 if wanted == "answered" and value == question["correct"] else 0}
+
+
 def respond(
-    record: dict, *, status: str, client_hash: str, question: int, action: str, value: int | None, at: str
+    record: dict, *, status: str, client_hash: str, question: int, action: str, value: Any, at: str
 ) -> tuple[dict, bool]:
     """The record after this response, and whether it changed (False: the same response again).
-    Raises Refused (409) or Invalid (422); never trusts anything but the question and option named."""
+    Raises Refused (409) or Invalid (422); never trusts anything but the question and answer named."""
     if record.get("schemaVersion") != SCHEMA_VERSION:
         raise Refused("unsupported")
     if status != "complete":
@@ -269,10 +375,8 @@ def respond(
     questions = record["questions"]
     if question >= len(questions):
         raise Invalid("question")
-    if action == "answer" and (value is None or value >= len(questions[question]["options"])):
-        raise Invalid("value")
     wanted = "answered" if action == "answer" else "skipped"
-    value = value if action == "answer" else None
+    value = _answer(questions[question], value) if action == "answer" else None
     for response in record["responses"]:
         if response["question"] == question:
             if response["status"] == wanted and response["value"] == value:
@@ -280,8 +384,7 @@ def respond(
             raise Refused("answered")
     if question != len(record["responses"]):
         raise Refused("out_of_order")
-    earned = 1 if wanted == "answered" and value == questions[question]["correct"] else 0
-    response = {"question": question, "status": wanted, "value": value, "earned": earned, "possible": 1, "at": at}
+    response = _graded(questions[question], question, wanted, value, at)
     return {**record, "responses": [*record["responses"], response]}, True
 
 
@@ -291,23 +394,32 @@ def state_of(record: dict) -> str:
 
 
 def public(record: dict, message_id: Any, status: str) -> dict | None:
-    """What a client may show: the questions, and the right answer and explanation only of those
-    already answered or skipped. None for a record this code cannot read."""
+    """What a client may show: the questions, and the right answers and explanation only of those
+    already answered or skipped. Every question has every field (null where it does not apply), so a
+    reply's metadata and the response endpoint give the same shape. None for a record this code
+    cannot read."""
     if record.get("schemaVersion") != SCHEMA_VERSION:
         return None
     responses = {response["question"]: response for response in record["responses"]}
     questions = []
     for index, question in enumerate(record["questions"]):
         response = responses.get(index)
+        blank = question["kind"] == "fill_blank"
         questions.append(
             {
                 "kind": question["kind"],
-                "text": question["text"],
-                "options": question["options"],
+                "text": None if blank else question["text"],
+                "options": None if blank else question["options"],
+                "segments": question["segments"] if blank else None,
+                "blanks": len(question["answers"]) if blank else None,
                 "response": None
                 if response is None
-                else {key: response[key] for key in ("status", "value", "earned", "possible", "at")},
-                "correct": question["correct"] if response is not None else None,
+                else {
+                    **{key: response[key] for key in ("status", "value", "earned", "possible", "at")},
+                    "marks": response.get("marks"),
+                },
+                "correct": None if blank or response is None else question["correct"],
+                "answers": question["answers"] if blank and response is not None else None,
                 "explanation": question.get("explanation") if response is not None else None,
             }
         )
@@ -327,75 +439,114 @@ def public(record: dict, message_id: Any, status: str) -> dict | None:
         "answered": answered,
         "current": answered if answered < record["total"] else None,
         "earned": sum(response["earned"] for response in record["responses"]),
-        "possible": len(record["questions"]),  # every multiple-choice question is worth 1
+        "possible": sum(_possible(question) for question in record["questions"]),
         "questions": questions,
     }
 
 
 # ------------------------------------------------------------------ what the tutor is told
 def _quote(text: str, limit: int) -> str:
-    """Model-written text on one line, in quotes it cannot close, at most `limit` characters."""
+    """Text on one line, in quotes it cannot close, at most `limit` characters. Student-typed text
+    is only ever shown this way: information, never instructions (as in app/learning/tutor.py)."""
     flat = " ".join(str(text).split()).replace('"', "'")
     return f'"{flat if len(flat) <= limit else flat[: limit - 1] + "…"}"'
+
+
+def _title(record: dict) -> str:
+    return f" {_quote(record['title'], 80)}" if record.get("title") else ""
 
 
 def _mark(response: dict, questions: list[dict]) -> str:
     number, right = response["question"] + 1, LETTERS[questions[response["question"]]["correct"]]
     if response["status"] == "skipped":
-        return f"Q{number} skipped (answer {right})"
+        return f"Q{number} skipped ({right})"
     chosen = LETTERS[response["value"]]
-    return f"Q{number} {chosen} right" if response["earned"] else f"Q{number} {chosen} wrong (answer {right})"
+    return f"Q{number} {chosen} right" if response["earned"] else f"Q{number} {chosen} wrong ({right})"
+
+
+def _test_lines(record: dict) -> list[str]:
+    questions, responses, total = record["questions"], record["responses"], record["total"]
+    answered, right = len(responses), sum(response["earned"] for response in responses)
+    skipped = sum(1 for response in responses if response["status"] == "skipped")
+    if answered >= total:
+        wrong = answered - right - skipped
+        state = f"FINISHED. Score {right} out of {total} ({right} right, {wrong} wrong, {skipped} skipped)."
+    elif answered:
+        state = f"IN PROGRESS, {answered} of {total} answered ({right} right); question {answered + 1} is waiting."
+    else:
+        state = f"NOT STARTED; question 1 of {total} is waiting."
+    lines = [f"- Latest test{_title(record)}: {state}"]
+    if responses:  # every answered question: the tutor is asked about any of them
+        marks = "; ".join(_mark(response, questions) for response in responses)
+        lines.append(f"- Answers (letter chosen; right answer in brackets): {marks}")
+    lines.append(USE_RECORD)
+    if answered < total:
+        # A new block would become the test that a typed letter or "next" reaches.
+        lines.append(
+            "- They answer in the test card, one question at a time; encourage them to finish it there. "
+            "Until it is finished, write no other practice block unless asked."
+        )
+    lines.append("- Never rewrite, re-ask or re-grade this test.")
+    return lines
+
+
+def _exercise_lines(record: dict) -> list[str]:
+    exercise = record["questions"][0]
+    blanks = len(exercise["answers"])
+    response = record["responses"][0] if record["responses"] else None
+    if response is None:
+        lines = [f"- Latest exercise (fill in the blanks, {blanks} blanks): NOT ANSWERED YET."]
+    elif response["status"] == "skipped":
+        lines = [f"- Latest exercise (fill in the blanks): SKIPPED (answers shown), 0 of {blanks} blanks right."]
+    else:
+        right = response["earned"]
+        lines = [
+            f"- Latest exercise (fill in the blanks): CHECKED. Score {right} out of {blanks} blanks "
+            f"({right} right, {blanks - right} wrong)."
+        ]
+        # Every blank, with what they typed: the exercise's own answers are in the transcript too,
+        # and a model told only the wrong ones may read those as the student's.
+        typed = [
+            f"{number} {_quote(given, 16)} " + ("right" if mark else f"wrong ({_quote(accepted[0], 16)})")
+            for number, (given, mark, accepted) in enumerate(
+                zip(response["value"], response["marks"], exercise["answers"], strict=True), start=1
+            )
+        ]
+        lines.append(f"- Blanks (what they typed; right answer in brackets): {'; '.join(typed)}")
+    lines.append(USE_RECORD)
+    if response is None:
+        lines.append("- They type into the blanks in the exercise card and press Check answers.")
+    lines.append("- Never rewrite or re-grade this exercise.")
+    return lines
 
 
 def _latest(record: dict) -> str:
-    questions, responses, total = record["questions"], record["responses"], record["total"]
-    answered, correct = len(responses), sum(response["earned"] for response in responses)
-    skipped = sum(1 for response in responses if response["status"] == "skipped")
-    lines = []
-    if answered >= total:
-        lines.append(
-            f"- Latest test: finished, {correct} of {total} correct" + (f", {skipped} skipped." if skipped else ".")
-        )
-    else:
-        lines.append(
-            f"- Latest test: question {answered + 1} of {total} is waiting; {correct} of {answered} answered correctly."
-            if answered
-            else f"- Latest test: {total} questions, none answered yet; question 1 is waiting."
-        )
-        lines.append(f"- Waiting: Q{answered + 1} {_quote(questions[answered]['text'], 100)}")
-    marks = [_mark(response, questions) for response in responses]
-    while marks and len("; ".join(marks)) > 180:
-        marks = marks[1:]
-    if marks:
-        lines.append("- Answers: " + ("…; " if len(marks) < answered else "") + "; ".join(marks))
-    if responses and questions[responses[-1]["question"]].get("explanation"):
-        last = responses[-1]["question"]
-        lines.append(f"- Why Q{last + 1}: {_quote(questions[last]['explanation'], 100)}")
-    lines.append(
-        "- The app's record, authoritative: the student answers in the test card, one question at a time. "
-        "Never rewrite, re-ask or re-grade this test."
-        # A new block would become the test that a typed letter or "next" reaches.
-        + ("" if answered >= total else " Until it is finished, write no other mcq or quiz block unless asked.")
-    )
-    return "\n".join(lines)
+    return "\n".join(_exercise_lines(record) if record["kind"] == "exercise" else _test_lines(record))
 
 
 def _earlier(record: dict) -> str:
-    answered = len(record["responses"])
-    correct = sum(response["earned"] for response in record["responses"])
-    if answered >= record["total"]:
-        return f"- Earlier test: {record['total']} questions, finished, {correct} correct."
-    return f"- Earlier test: {record['total']} questions, {answered} answered, {correct} correct; unfinished."
+    answered, total = len(record["responses"]), record["total"]
+    right = sum(response["earned"] for response in record["responses"])
+    if record["kind"] == "exercise":
+        blanks = len(record["questions"][0]["answers"])
+        if not answered:
+            return f"- Earlier exercise (fill in the blanks): NOT ANSWERED ({blanks} blanks)."
+        return f"- Earlier exercise (fill in the blanks): {right} of {blanks} blanks right."
+    if answered >= total:
+        return f"- Earlier test{_title(record)}: FINISHED, score {right} out of {total}."
+    if answered:
+        return f"- Earlier test{_title(record)}: IN PROGRESS, {answered} of {total} answered ({right} right)."
+    return f"- Earlier test{_title(record)}: NOT STARTED ({total} questions)."
 
 
 def tutor_summary(newest_first: list[dict]) -> str:
-    """The chat's practice tests for the system prompt, newest first: the latest one whole (at most
-    LATEST_MAX characters by construction), then earlier ones while the block stays within
-    SUMMARY_MAX. Empty when the chat has none, so the prompt is unchanged."""
+    """The chat's practice tests and exercises for the system prompt, newest first: the latest one
+    whole (at most LATEST_MAX characters by construction), then earlier ones while the block stays
+    within SUMMARY_MAX. Empty when the chat has none, so the prompt is unchanged."""
     records = [record for record in newest_first if record.get("schemaVersion") == SCHEMA_VERSION]
     if not records:
         return ""
-    text = f"{SUMMARY_HEADING}\n{_latest(records[0])}"
+    text = f"{SUMMARY_HEADING}\n{SUMMARY_FRAME}\n{_latest(records[0])}"
     for record in records[1:]:
         line = _earlier(record)
         if len(text) + 1 + len(line) > SUMMARY_MAX:

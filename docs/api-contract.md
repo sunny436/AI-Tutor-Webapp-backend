@@ -233,33 +233,47 @@ finished message (`done` and message lists), not while the reply streams.
 | POST | `/v1/messages/{id}/cancel` | – | `{status}` — stops a `streaming` reply (idempotent) |
 | PUT | `/v1/messages/{id}/feedback` | `{rating: up\|down, comment?}` | `{messageId, rating, comment}` (assistant messages only; upsert) |
 | GET / DELETE | `/v1/messages/{id}/feedback` | – | read / remove your feedback |
-| POST | `/v1/messages/{id}/assessment-responses` | `{position, hash, question, action: answer\|skip, value? (answers only)}` | The test as recorded (below). 409 `assessment_answered` / `assessment_out_of_order` / `assessment_changed` / `assessment_closed`, 422 no such question or option, 404 not the student's reply or no such test |
+| POST | `/v1/messages/{id}/assessment-responses` | `{position, hash, question, action: answer\|skip, value? (answers only: an option index, or one text per blank)}` | The test as recorded (below). 409 `assessment_answered` / `assessment_out_of_order` / `assessment_changed` / `assessment_closed`, 422 no such question or option, 404 not the student's reply or no such test |
 
 ### Practice tests
 
-A reply may hold one practice test: one ```` ```quiz ```` block, or one ```` ```mcq ```` for a single
-question (the tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on). The server owns it
+A reply may hold one practice block: a test (one ```` ```quiz ```` block, or one ```` ```mcq ```` for a
+single question) or an exercise (one ```` ```fill-blank ```` with `[[answer|alternative]]` blanks). The
+tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on. The server owns them
 (`app/assessments/state.py`):
 
-- **Built with the reply, whole or not at all.** When a reply completes, its test is checked (one
-  test block, 1–30 questions, 2–8 distinct options each, an answer naming exactly one option, the
-  number of questions the student asked for) and saved by the same write as the reply, in
-  `metadata.assessments`. A reply that wrote a test the server can't accept has no test and
-  `metadata.assessmentError: {code}` (`multiple_tests`, `nested_test`, `incomplete_test`,
-  `invalid_json`, `invalid_test`, `invalid_question`, `too_many_questions`, `count_mismatch`).
-  Regenerate is the retry. Replies saved before 2026-10-01 have neither.
-- **An item of `assessments`:** `{id: "<messageId>:<position>", position, schemaVersion: 1, kind: "test",
-  title, hash, locator, state: not_started|active|completed, answerable, total, answered, current,
-  earned, possible, questions: [{kind: "mcq", text, options, response, correct, explanation}]}`.
-  `response` is `{status: answered|skipped, value, earned, possible, at}` or null; `correct` and
-  `explanation` are null until the question has a response. `hash` is the sha256 of the test's
-  canonical form; `locator` is the sha256 of its block's source, trimmed (which block it is).
-  `current` is the waiting question (null once completed); a skip earns 0 of 1.
+- **Built with the reply, whole or not at all.** When a reply completes, its block is checked and
+  saved by the same write as the reply, in `metadata.assessments`. A test needs 1-30 questions, 2-8
+  distinct options each, an answer naming exactly one option, and the number of questions the
+  student asked for. An exercise needs 1-20 blanks, each with an accepted answer. A reply that wrote
+  a block the server can't accept has none, and `metadata.assessmentError: {code}` (`multiple_tests`,
+  `nested_test`, `incomplete_test`, `invalid_json`, `invalid_test`, `invalid_question`,
+  `too_many_questions`, `count_mismatch`). Regenerate is the retry. Replies saved before 2026-10-01
+  have neither, and exercises from before the next release are not recorded.
+- **An item of `assessments`:** `{id: "<messageId>:<position>", position, schemaVersion: 1,
+  kind: test|exercise, title, hash, locator, state: not_started|active|completed, answerable, total,
+  answered, current, earned, possible, questions: [...]}`. Every question has every field, null
+  where it doesn't apply: `{kind: mcq|fill_blank, text, options, segments, blanks, response,
+  correct, answers, explanation}`. A multiple-choice question has `text` and `options`; an exercise
+  (one question) has `segments`, the text around its `blanks`.
+  - `response` is `{status: answered|skipped, value, earned, possible, at, marks}` or null. `value`
+    is the chosen option's index, or what was typed into each blank; `marks` says which blanks were
+    right (exercises only).
+  - `correct` (multiple choice), `answers` (the accepted answers of each blank) and `explanation`
+    are null until the question has a response.
+  - `hash` is the sha256 of the block's canonical form; `locator` is the sha256 of its source,
+    trimmed (which block it is). `current` is the waiting question (null once completed).
+  - A test question is worth 1; an exercise is worth one per blank. A skip earns 0.
 - **Answering:** only the waiting question, only in a `complete` reply (a regenerated one is closed
-  with its test), naming the `hash` it was shown. Answers are final. The same response sent again
-  returns the test unchanged (a safe retry); any other response to an answered question is 409.
-  The questions and the grading never come from the client.
-- **The tutor** is told the chat's tests on every turn, the latest first: answered, waiting, score.
+  with its block), naming the `hash` it was shown. `value` is an option's index for a multiple-choice
+  question, or one text (at most 200 characters) per blank for an exercise, graded ignoring case,
+  spacing and a trailing `.;,!`. Answers are final. The same response sent again returns the record
+  unchanged (a safe retry); any other response to an answered question is 409. The questions and the
+  grading never come from the client.
+- **The tutor** is told the chat's practice record on every turn, the latest first, in words checked
+  against the model (`scripts/eval_tutor_record.py`): finished or not, the score, every answer,
+  and what to do when asked how they did. Flashcards, graphs and diagrams are not recorded, and the
+  tutor is told so.
 
 ### Server-Sent Events
 

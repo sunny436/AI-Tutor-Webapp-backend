@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import uuid
-from typing import Literal
+from typing import Annotated, Literal
 
 from pydantic import Field, field_validator, model_validator
 
@@ -49,15 +49,23 @@ class FeedbackOut(ApiModel):
     comment: str | None
 
 
-class AssessmentResponseRequest(RequestModel):
-    """Answer or skip the waiting question of a practice test in a reply. Only which question and
-    which option: the questions and the grading come from the reply the server saved."""
+BlankText = Annotated[str, Field(max_length=200)]
 
-    position: int = Field(ge=0, le=9, description="Which test of the reply (0: replies hold one).")
-    hash: str = Field(pattern=r"^[0-9a-f]{64}$", description="The test's `hash`, as it was shown.")
+
+class AssessmentResponseRequest(RequestModel):
+    """Answer or skip the waiting question of a practice test or exercise in a reply. Only which
+    question and what was chosen or typed: the questions and the grading come from the reply the
+    server saved."""
+
+    position: int = Field(ge=0, le=9, description="Which block of the reply (0: replies hold one).")
+    hash: str = Field(pattern=r"^[0-9a-f]{64}$", description="The record's `hash`, as it was shown.")
     question: int = Field(ge=0, lt=30, description="0-based; must be the waiting question.")
     action: Literal["answer", "skip"]
-    value: int | None = Field(default=None, ge=0, lt=8, description="The chosen option (0-based); answers only.")
+    value: Annotated[int, Field(ge=0, lt=8)] | Annotated[list[BlankText], Field(max_length=20)] | None = Field(
+        default=None,
+        description="Answers only: the chosen option (0-based) of a multiple-choice question, or one text "
+        "per blank of a fill-in-the-blanks exercise.",
+    )
 
     @model_validator(mode="after")
     def _value_only_to_answer(self) -> AssessmentResponseRequest:
@@ -68,30 +76,37 @@ class AssessmentResponseRequest(RequestModel):
 
 class AssessmentAnswerOut(ApiModel):
     status: Literal["answered", "skipped"]
-    value: int | None
+    value: int | list[str] | None
     earned: int
     possible: int
     at: str
+    marks: list[bool] | None  # fill-in-the-blanks: whether each blank was right
 
 
 class AssessmentQuestionOut(ApiModel):
-    kind: Literal["mcq"]
-    text: str
-    options: list[str]
+    """One question. A multiple-choice question has `text` and `options`; a fill-in-the-blanks
+    exercise has `segments` (the text around the blanks) and `blanks`. The rest are null."""
+
+    kind: Literal["mcq", "fill_blank"]
+    text: str | None
+    options: list[str] | None
+    segments: list[str] | None
+    blanks: int | None
     response: AssessmentAnswerOut | None
     # Only once the question has a response.
-    correct: int | None
+    correct: int | None  # multiple choice: the right option
+    answers: list[list[str]] | None  # fill-in-the-blanks: the accepted answers of each blank
     explanation: str | None
 
 
 class AssessmentOut(ApiModel):
-    """A practice test as the student may see it now; also each item of a reply's
+    """A practice test or exercise as the student may see it now; also each item of a reply's
     `metadata.assessments`."""
 
     id: str  # "<message id>:<position>"
     position: int
     schema_version: int
-    kind: Literal["test"]
+    kind: Literal["test", "exercise"]
     title: str | None
     hash: str
     locator: str  # sha256 of the reply's block, trimmed: which card this is
