@@ -110,9 +110,12 @@ class ConversationRepository:
             found.setdefault(row.message_id, []).append(row)
         return found
 
-    async def get_message(self, user_id: uuid.UUID, message_id: uuid.UUID) -> Message | None:
-        return await self.db.scalar(
+    async def get_message(self, user_id: uuid.UUID, message_id: uuid.UUID, *, lock: bool = False) -> Message | None:
+        query = (
             select(Message)
             .join(Conversation, Conversation.id == Message.conversation_id)
             .where(Message.id == message_id, Conversation.user_id == user_id)
         )
+        if lock:  # the message row only: writes to it wait for this transaction
+            query = query.with_for_update(of=Message)
+        return await self.db.scalar(query)

@@ -41,7 +41,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { splitBlocks, streamSafe } from "./blocks";
 import { CitationMark, Sources } from "./citation";
 import { CodeBlock } from "./code-block";
-import { CitationsContext, LiveContext } from "./context";
+import { CitationsContext, LiveContext, TestContext, type TestState } from "./context";
 import { FileEmbed } from "./file-embed";
 import { type HastNode, hastText, languageOf, rehypeMarkBlockCode, rehypeRawAsText } from "./hast";
 import { remarkTutor } from "./remark-tutor";
@@ -304,28 +304,33 @@ function MessageContentImpl({
   content,
   streaming = false,
   citations,
+  tests = null,
 }: {
   content: string;
   streaming?: boolean;
   citations?: Citation[];
+  /** The reply's practice test as the server recorded it (features/chat/message.tsx). */
+  tests?: TestState | null;
 }) {
   const blocks = splitBlocks(content);
   const last = blocks.length - 1;
   return (
     <CitationsContext.Provider value={citations}>
-      <div className="message-content min-w-0 break-words text-base text-foreground">
-        {blocks.map((block, index) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: blocks only grow at the end, so a block keeps its place
-          <Fragment key={index}>
-            {/* The same line break the parser puts between top-level elements: identical HTML. */}
-            {index > 0 && "\n"}
-            <LiveContext.Provider value={streaming && index === last}>
-              <Markdown text={streaming && index === last ? streamSafe(block) : block} />
-            </LiveContext.Provider>
-          </Fragment>
-        ))}
-        {citations && !streaming ? <Sources citations={citations} content={content} /> : null}
-      </div>
+      <TestContext.Provider value={tests}>
+        <div className="message-content min-w-0 break-words text-base text-foreground">
+          {blocks.map((block, index) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: blocks only grow at the end, so a block keeps its place
+            <Fragment key={index}>
+              {/* The same line break the parser puts between top-level elements: identical HTML. */}
+              {index > 0 && "\n"}
+              <LiveContext.Provider value={streaming && index === last}>
+                <Markdown text={streaming && index === last ? streamSafe(block) : block} />
+              </LiveContext.Provider>
+            </Fragment>
+          ))}
+          {citations && !streaming ? <Sources citations={citations} content={content} /> : null}
+        </div>
+      </TestContext.Provider>
     </CitationsContext.Provider>
   );
 }

@@ -36,8 +36,9 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
   const { check, finish } = checklist("PRODUCTION SMOKE: desktop");
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
-  // Opening the bell marks what it shows read: keep production's data as it is.
-  await page.route("**/api/v1/notifications/read", (route) => route.fulfill({ status: 204, body: "" }));
+  // Nothing here reads or clears notifications (opening the bell reads nothing); both stay blocked
+  // anyway, so production's data is kept as it is.
+  await page.route(/\/api\/v1\/notifications\/(read|clear)$/, (route) => route.fulfill({ status: 204, body: "" }));
   await noActivityReports(page);
   await page.goto("/");
   await hydrated(page);

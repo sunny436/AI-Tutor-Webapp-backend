@@ -25,6 +25,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import case, func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.assessments import state as assessments
 from app.chat.assistant import AssistantConfig, resolve_assistant_config
 from app.chat.streams import ActiveGenerations, ChatEvent, Generation
 from app.chat.titles import topic_title
@@ -211,6 +212,7 @@ class ChatService:
 
         # Read before this question is counted: the same as the Settings preview showed.
         student = await self._student(session, user)
+        tests = await self._tests(session, conversation.id)
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
         await session.flush()
@@ -227,7 +229,9 @@ class ChatService:
             conversation,
             user_message,
             assistant.id,
-            resolve_assistant_config(user, conversation, student, interactive=self.settings.tutor_interactive_blocks),
+            resolve_assistant_config(
+                user, conversation, student, interactive=self.settings.tutor_interactive_blocks, tests=tests
+            ),
             files=await files.conversation_files(session, conversation.id, user.id),
             user_attachments=attachments,
         )
@@ -259,6 +263,7 @@ class ChatService:
             .limit(1)
         )
         student = await self._student(session, user, asked_at)
+        tests = await self._tests(session, conversation.id, exclude=last.id)
         assistant = await self._add_placeholder(session, user.id, conversation.id)
         await repo.touch(conversation.id)
         await session.commit()
@@ -268,7 +273,9 @@ class ChatService:
             conversation,
             None,
             assistant.id,
-            resolve_assistant_config(user, conversation, student, interactive=self.settings.tutor_interactive_blocks),
+            resolve_assistant_config(
+                user, conversation, student, interactive=self.settings.tutor_interactive_blocks, tests=tests
+            ),
             replaces_message_id=last.id,
             files=await files.conversation_files(session, conversation.id, user.id),
         )
@@ -476,8 +483,54 @@ class ChatService:
         event.data["requestId"] = request_id_var.get()
         await generation.queue.put(event)
 
+    async def _with_test(self, session: AsyncSession, turn: PreparedTurn, content: str, metadata: dict) -> dict:
+        """The reply's practice test, checked whole (app/assessments/state.py) and saved by the same
+        UPDATE as the reply: a test exists exactly when its reply does, and never in part."""
+        if not assessments.has_test(content):
+            return metadata
+        question = (
+            turn.user_message.content
+            if turn.user_message is not None
+            else await session.scalar(  # a regeneration answers the latest question
+                select(Message.content)
+                .where(Message.conversation_id == turn.conversation.id, Message.role == "user")
+                .order_by(Message.created_at.desc(), Message.id.desc())
+                .limit(1)
+            )
+        )
+        records, problem = assessments.build(content, question)
+        extra = {"message_id": str(turn.assistant_id)}
+        if records:
+            log.info("assessment created", extra={**extra, "questions": records[0]["total"]})
+            return {**metadata, "assessments": records}
+        if problem:
+            log.warning("assessment rejected", extra={**extra, "code": problem})
+            return {**metadata, "assessmentError": {"code": problem}}
+        return metadata  # the fence named a test only inside another block: no test
+
+    async def _tests(self, session: AsyncSession, conversation_id: uuid.UUID, exclude: uuid.UUID | None = None) -> str:
+        """The chat's practice tests for the tutor, newest first. Complete replies only: a
+        regenerated (superseded) reply is gone, and its test with it."""
+        query = (
+            select(Message.metadata_["assessments"])
+            .where(
+                Message.conversation_id == conversation_id,
+                Message.role == "assistant",
+                Message.status == "complete",
+                Message.metadata_.has_key("assessments"),
+            )
+            .order_by(Message.created_at.desc(), Message.id.desc())
+            .limit(5)
+        )
+        if exclude is not None:
+            query = query.where(Message.id != exclude)
+        found = await session.scalars(query)
+        return assessments.tutor_summary([record for records in found for record in reversed(records or [])])
+
     async def _finalize(self, turn, content, status, metadata, latency_ms, ttft_ms, usage):
         async with self.db.sessionmaker() as session:
+            if status == "complete":
+                metadata = await self._with_test(session, turn, content, metadata)
             # A cancel written by the cancel endpoint wins over "complete".
             final_status = await session.scalar(
                 update(Message)

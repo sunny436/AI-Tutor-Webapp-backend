@@ -72,6 +72,9 @@ class FakeApi implements ChatApi {
   deleteConversation = async (id: string) => {
     this.deleted.push(id);
   };
+  respondToAssessment = async (): Promise<never> => {
+    throw new ApiError(404, "not_found");
+  };
 }
 
 /** A scheduler the test drives: nothing flushes until `tick()`. */

@@ -11,6 +11,7 @@ from app.auth.dependencies import Principal, client_info, get_principal
 from app.db.models import NotificationPreferences, User
 from app.db.session import get_session
 from app.errors import AppError, RateLimited, VersionConflict
+from app.logging import get_logger
 from app.notifications import inbox
 from app.notifications.schemas import (
     MarkReadRequest,
@@ -27,6 +28,7 @@ from app.progress.learning import now
 from app.settings import Settings
 
 router = APIRouter(prefix="/v1/notifications", tags=["notifications"])
+log = get_logger("app.notifications")
 
 COLUMNS = {field.alias or name: name for name, field in NotificationPreferencesSet.model_fields.items()}
 DEFAULTS = {
@@ -102,9 +104,20 @@ async def list_notifications(
 async def mark_notifications_read(
     body: MarkReadRequest, principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)
 ):
-    """Mark notifications read: the ones listed, or all of the student's. Only their own."""
-    await inbox.mark_read(db, principal.user.id, body.ids)
+    """Mark notifications read: the ones listed, or (no `ids`) every one of the student's, also
+    those beyond the 30 the list shows. Only their own. Opening the bell reads nothing."""
+    rows = await inbox.mark_read(db, principal.user.id, body.ids)
     await db.commit()
+    log.info("notifications read", extra={"rows": rows, "all": body.ids is None})
+
+
+@router.post("/clear", status_code=status.HTTP_204_NO_CONTENT, response_class=Response)
+async def clear_notifications(principal: Principal = Depends(get_principal), db: AsyncSession = Depends(get_session)):
+    """Clear all: every notification of the student's leaves the list and counts as read; new
+    ones still arrive. Clearing again changes nothing."""
+    rows = await inbox.clear_all(db, principal.user.id)
+    await db.commit()
+    log.info("notifications cleared", extra={"rows": rows})
 
 
 @router.get("/preferences", response_model=NotificationPreferencesOut)

@@ -5,6 +5,7 @@ import uuid
 from fastapi import APIRouter, Depends, Query, Response, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.assessments import state as assessments
 from app.auth.dependencies import Principal, get_principal
 from app.conversations.repository import ConversationRepository
 from app.conversations.schemas import (
@@ -35,15 +36,22 @@ def message_out(m: Message, attachments=()) -> MessageOut:
         content=m.content,
         status=m.status,
         created_at=m.created_at,
-        metadata=public_metadata(m.metadata_),
+        metadata=public_metadata(m.metadata_, m.id, m.status),
         attachments=[MessageAttachmentOut(file_id=a.file_id, filename=a.filename) for a in attachments],
     )
 
 
-def public_metadata(metadata: dict | None) -> dict:
+def public_metadata(metadata: dict | None, message_id: uuid.UUID | None = None, status: str | None = None) -> dict:
     # Only fields a client may rely on; internal diagnostics stay server-side.
-    allowed = ("model", "errorCode", "finishReason", "citations")
-    return {k: v for k, v in (metadata or {}).items() if k in allowed}
+    allowed = ("model", "errorCode", "finishReason", "citations", "assessmentError")
+    public = {k: v for k, v in (metadata or {}).items() if k in allowed}
+    # A practice test as the student may see it now (app/assessments/state.py): the answers of
+    # questions not yet answered stay server-side.
+    records = (metadata or {}).get("assessments")
+    if records and message_id is not None:
+        tests = [assessments.public(record, message_id, status or "") for record in records]
+        public["assessments"] = [test for test in tests if test is not None]
+    return public
 
 
 async def owned_conversation(repo: ConversationRepository, user_id: uuid.UUID, conversation_id: uuid.UUID):

@@ -10,7 +10,14 @@
 import { useRouter } from "next/navigation";
 import { type ReactNode, createContext, useContext, useEffect, useState, useSyncExternalStore } from "react";
 
-import { cancelMessage, clearFeedback, setFeedback, streamChat, streamRegenerate } from "@/lib/api/chat";
+import {
+  cancelMessage,
+  clearFeedback,
+  respondToAssessment,
+  setFeedback,
+  streamChat,
+  streamRegenerate,
+} from "@/lib/api/chat";
 import { findFile, getFile, retryFile, sha256Hex, uploadFile } from "@/lib/api/files";
 import { deleteConversation, listConversations, listMessages, renameConversation } from "@/lib/api/conversations";
 import { retargetAppPath } from "@/features/navigation/app-return";
@@ -51,7 +58,16 @@ export function ChatProvider({
   const [showStorageFull] = useState(() => () => setStorageFull(true));
   const [stores] = useState<Stores>(() => {
     const chat = new ChatStore({
-      api: { streamChat, streamRegenerate, cancelMessage, listMessages, setFeedback, clearFeedback, deleteConversation },
+      api: {
+        streamChat,
+        streamRegenerate,
+        cancelMessage,
+        listMessages,
+        setFeedback,
+        clearFeedback,
+        deleteConversation,
+        respondToAssessment,
+      },
     });
     return {
       conversations: new ConversationsStore({ listConversations, renameConversation }, initialConversations),

@@ -36,6 +36,44 @@ export const CONTRACT = {
       ]
     }
   },
+  "AssessmentAnswerOut": {
+    "status": {
+      "enum": [
+        "answered",
+        "skipped"
+      ]
+    }
+  },
+  "AssessmentOut": {
+    "state": {
+      "enum": [
+        "not_started",
+        "active",
+        "completed"
+      ]
+    }
+  },
+  "AssessmentResponseRequest": {
+    "action": {
+      "enum": [
+        "answer",
+        "skip"
+      ]
+    },
+    "hash": {
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "position": {
+      "maximum": 9,
+      "minimum": 0
+    },
+    "question": {
+      "minimum": 0
+    },
+    "value": {
+      "minimum": 0
+    }
+  },
   "ChangePasswordRequest": {
     "currentPassword": {
       "maxLength": 128,

@@ -4,8 +4,11 @@ import { Component, type ComponentType, type ReactNode, Suspense, lazy, useCallb
 
 import { LiveContext } from "./context";
 
-/** What every widget gets: its fence's source, and a way to give up (the code block shows instead). */
-export type WidgetProps = { source: string; onError: () => void };
+/**
+ * What every widget gets: its fence's source, and a way to give up (the code block shows instead,
+ * under `note` when the widget says why).
+ */
+export type WidgetProps = { source: string; onError: (note?: string) => void };
 
 const WIDGETS = new Map<string, { label: string; load: ComponentType<WidgetProps> }>([
   ["mermaid", { label: "diagram", load: lazy(() => import("./widgets/mermaid-diagram")) }],
@@ -52,18 +55,20 @@ function Placeholder({ label }: { label: string }) {
  */
 export function RichBlock({ language, source, fallback }: { language: string; source: string; fallback: ReactNode }) {
   const live = useContext(LiveContext);
-  const [failed, setFailed] = useState(false);
-  const fail = useCallback(() => setFailed(true), []);
+  const [failed, setFailed] = useState<string | null>(null);
+  const fail = useCallback((note?: string) => setFailed(note ?? ""), []);
   const widget = WIDGETS.get(language);
   if (!widget) return fallback;
   if (live) return <Placeholder label={widget.label} />;
   const shown = (
     <div>
-      <p className="mb-[-0.25rem] mt-3 text-2xs text-text-secondary">This {widget.label} couldn't be shown; here is its source.</p>
+      <p className="mb-[-0.25rem] mt-3 text-2xs text-text-secondary">
+        {failed || `This ${widget.label} couldn't be shown; here is its source.`}
+      </p>
       {fallback}
     </div>
   );
-  if (failed) return shown;
+  if (failed !== null) return shown;
   const Widget = widget.load;
   return (
     <Boundary fallback={shown}>

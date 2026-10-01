@@ -2,11 +2,12 @@
 
 import { Button } from "@v1/ui/button";
 import { cn } from "@v1/ui/utils";
-import { type CSSProperties, memo, useState } from "react";
+import { type CSSProperties, memo, useMemo, useState } from "react";
 
 import { BrandMark } from "@/components/brand/brand-mark";
 import { FileKindIcon } from "@/features/files/attachment-chip";
 import { fileTypeOf } from "@/lib/api/files";
+import type { TestState } from "@/features/markdown/context";
 import { MessageContent, needsFullWidth } from "@/features/markdown/lazy-message-content";
 import type { ChatMessage } from "./chat-store";
 import { useChatEntry, useChatMessage, useStores } from "./chat-context";
@@ -151,6 +152,20 @@ function AssistantMessage({
   const { chat } = useStores();
   const streaming = message.status === "streaming";
   const revealing = live && streaming;
+  const assessments = message.metadata?.assessments;
+  const testError = message.metadata?.assessmentError?.code ?? null;
+  const testNotice = message.testNotice ?? null;
+  // The reply's practice test as the server recorded it: its card draws only this.
+  const tests = useMemo<TestState>(
+    () => ({
+      streaming,
+      assessments: assessments ?? [],
+      error: testError,
+      notice: testNotice,
+      respond: (position, request) => chat.respondToTest(chatKey, message.id, position, request),
+    }),
+    [chat, chatKey, message.id, streaming, assessments, testError, testNotice],
+  );
   // The reply as it should read now: at an even pace while it streams (smooth-text.ts).
   const text = useSmoothText(message.content, revealing);
   const arrival = useArrival(message.id, revealing ? "live" : null);
@@ -177,6 +192,7 @@ function AssistantMessage({
                   streaming={revealing}
                   // A finished reply without citations has none (not "not known yet").
                   citations={message.metadata?.citations ?? (streaming ? undefined : [])}
+                  tests={tests}
                 />
                 {revealing && <StreamingCaret />}
               </>

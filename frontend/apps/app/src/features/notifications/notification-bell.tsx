@@ -15,7 +15,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 import { LEARNING_EVENT } from "@/lib/activity";
-import { getNotifications, markNotificationsRead } from "@/lib/api/progress";
+import { clearNotifications, getNotifications, markNotificationsRead } from "@/lib/api/progress";
 import type { AppNotification, NotificationList } from "@/lib/api/types";
 import { relativeTime } from "@/lib/time";
 import { milestonesToCelebrate, unreadBadge } from "./celebrate";
@@ -41,19 +41,24 @@ function saveCelebrated(ids: Set<string>): void {
 /**
  * The header's bell: every in-app notification (streak reminders and milestones, security
  * alerts, reminders the worker plans), newest first. Plain text only. Fetched when shown, when
- * the window regains focus and after a reply finishes; no polling. Opening it marks what it
- * shows as read. If it can't load, the bell stays and says so; the header keeps working.
+ * the window regains focus and after a reply finishes; no polling. Opening it reads nothing:
+ * choosing a notification marks that one read, "Read all" marks every one read (also those
+ * beyond the 30 shown) and "Clear all" empties it; the server keeps both after a reload. If it
+ * can't load, the bell stays and says so; the header keeps working.
  */
 export function NotificationBell() {
   const [list, setList] = useState<NotificationList | null>(null);
   const [failed, setFailed] = useState(false);
-  const loading = useRef(false);
+  const [busy, setBusy] = useState(false);
+  // Each load and each change made here takes a number; only the latest load's list is shown, so
+  // a list fetched before a change never puts back what the change removed.
+  const latest = useRef(0);
 
   const load = useCallback(async () => {
-    if (loading.current) return;
-    loading.current = true;
+    const mine = ++latest.current;
     try {
       const next = await getNotifications();
+      if (mine !== latest.current) return;
       setList(next);
       setFailed(false);
       const celebrated = readCelebrated();
@@ -63,9 +68,7 @@ export function NotificationBell() {
       }
       saveCelebrated(celebrated);
     } catch {
-      setFailed(true);
-    } finally {
-      loading.current = false;
+      if (mine === latest.current) setFailed(true);
     }
   }, []);
 
@@ -83,22 +86,49 @@ export function NotificationBell() {
   const unread = list?.unreadCount ?? 0;
   const badge = unreadBadge(unread);
 
-  const markShownRead = (items: AppNotification[]) => {
-    const ids = items.filter((item) => item.readAt === null).map((item) => item.id);
-    if (!ids.length) return;
-    const now = new Date().toISOString();
-    setList((current) =>
-      current && {
-        items: current.items.map((item) => (ids.includes(item.id) ? { ...item, readAt: now } : item)),
-        unreadCount: Math.max(0, current.unreadCount - ids.length),
-      },
-    );
-    markNotificationsRead(ids).catch(() => void load());
+  /** Show the change at once, make it on the server, then show the server's list (either way). */
+  const change = async (shown: (current: NotificationList) => NotificationList, request: () => Promise<void>, failure: string) => {
+    latest.current += 1; // whatever is loading now was asked for before this change
+    setList((current) => current && shown(current));
+    try {
+      await request();
+    } catch {
+      toast.error(failure);
+    } finally {
+      void load();
+    }
   };
 
-  const markAll = () => {
-    setList((current) => current && { items: current.items.map((item) => ({ ...item, readAt: item.readAt ?? new Date().toISOString() })), unreadCount: 0 });
-    markNotificationsRead().catch(() => void load());
+  const changeAll = async (shown: (current: NotificationList) => NotificationList, request: () => Promise<void>, failure: string) => {
+    if (busy) return;
+    setBusy(true);
+    await change(shown, request, failure);
+    setBusy(false);
+  };
+
+  const readAll = () =>
+    changeAll(
+      (current) => ({
+        items: current.items.map((item) => ({ ...item, readAt: item.readAt ?? new Date().toISOString() })),
+        unreadCount: 0,
+      }),
+      () => markNotificationsRead(),
+      "Couldn't mark your notifications read. Try again.",
+    );
+
+  const clearAll = () =>
+    changeAll(() => ({ items: [], unreadCount: 0 }), clearNotifications, "Couldn't clear your notifications. Try again.");
+
+  const readOne = (chosen: AppNotification) => {
+    if (chosen.readAt !== null) return;
+    void change(
+      (current) => ({
+        items: current.items.map((item) => (item.id === chosen.id ? { ...item, readAt: new Date().toISOString() } : item)),
+        unreadCount: Math.max(0, current.unreadCount - 1),
+      }),
+      () => markNotificationsRead([chosen.id]),
+      "Couldn't mark that notification read.",
+    );
   };
 
   return (
@@ -106,9 +136,6 @@ export function NotificationBell() {
       // Not modal: the page stays in the accessibility tree while the list is open (a modal menu
       // hides it with aria-hidden while its controls remain focusable).
       modal={false}
-      onOpenChange={(open) => {
-        if (open && list) markShownRead(list.items);
-      }}
     >
       <DropdownMenuTrigger asChild>
         <button
@@ -128,16 +155,32 @@ export function NotificationBell() {
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[min(22rem,calc(100vw-1.5rem))] p-0">
-        <div className="flex items-center justify-between px-3 py-2.5">
+        <div className="flex items-center justify-between gap-2 px-3 py-2">
           <DropdownMenuLabel className="p-0 text-sm font-semibold text-foreground">Notifications</DropdownMenuLabel>
-          {list?.items.some((item) => item.readAt === null) && (
-            <button
-              type="button"
-              onClick={markAll}
-              className="focus-ring rounded text-xs font-medium text-brand hover:underline"
-            >
-              Mark all as read
-            </button>
+          {list && list.items.length > 0 && (
+            <div className="flex shrink-0 items-center gap-1">
+              {/* Menu items, so the keyboard reaches them; choosing one keeps the list open. */}
+              <DropdownMenuItem
+                disabled={busy || unread === 0}
+                onSelect={(event) => {
+                  event.preventDefault();
+                  void readAll();
+                }}
+                className="h-8 px-2 text-xs font-medium text-brand"
+              >
+                Read all
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                disabled={busy}
+                onSelect={(event) => {
+                  event.preventDefault();
+                  void clearAll();
+                }}
+                className="h-8 px-2 text-xs font-medium text-text-secondary"
+              >
+                Clear all
+              </DropdownMenuItem>
+            </div>
           )}
         </div>
         <DropdownMenuSeparator className="m-0" />
@@ -172,11 +215,16 @@ export function NotificationBell() {
                 </div>
               );
               return item.link ? (
-                <DropdownMenuItem key={item.id} asChild className="cursor-pointer items-start px-3 py-2.5">
+                <DropdownMenuItem
+                  key={item.id}
+                  asChild
+                  onSelect={() => readOne(item)}
+                  className="cursor-pointer items-start px-3 py-2.5"
+                >
                   <Link href={item.link}>{content}</Link>
                 </DropdownMenuItem>
               ) : (
-                <DropdownMenuItem key={item.id} className="items-start px-3 py-2.5">
+                <DropdownMenuItem key={item.id} onSelect={() => readOne(item)} className="items-start px-3 py-2.5">
                   {content}
                 </DropdownMenuItem>
               );

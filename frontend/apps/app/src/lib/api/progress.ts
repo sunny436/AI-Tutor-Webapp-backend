@@ -45,7 +45,12 @@ export function getNotifications(): Promise<NotificationList> {
   return callRoute("GET /v1/notifications");
 }
 
-/** Mark notifications read: the ones given, or all of yours. */
+/** Mark notifications read: the ones given, or all of yours (also those beyond the 30 listed). */
 export function markNotificationsRead(ids?: string[]): Promise<void> {
   return callRoute("POST /v1/notifications/read", { body: ids ? { ids } : {} });
+}
+
+/** Clear the bell: every notification of yours leaves the list and counts as read. */
+export function clearNotifications(): Promise<void> {
+  return callRoute("POST /v1/notifications/clear");
 }

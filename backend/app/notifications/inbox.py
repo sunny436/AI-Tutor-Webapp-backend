@@ -62,31 +62,48 @@ async def in_app_reminders_on(session: AsyncSession, user_id: uuid.UUID) -> bool
 
 
 async def list_for(session: AsyncSession, user_id: uuid.UUID, limit: int = LIST_MAX) -> Inbox:
-    """The newest notifications (never more than LIST_MAX) and how many are unread."""
+    """The newest notifications not cleared (never more than LIST_MAX), and how many are unread:
+    all of them, not only the ones listed."""
     limit = max(1, min(limit, LIST_MAX))
+    shown = (UserNotification.user_id == user_id, UserNotification.cleared_at.is_(None))
     items = (
         await session.scalars(
             select(UserNotification)
-            .where(UserNotification.user_id == user_id)
+            .where(*shown)
             .order_by(UserNotification.created_at.desc(), UserNotification.id.desc())
             .limit(limit)
         )
     ).all()
     unread = await session.scalar(
-        select(func.count())
-        .select_from(UserNotification)
-        .where(UserNotification.user_id == user_id, UserNotification.read_at.is_(None))
+        select(func.count()).select_from(UserNotification).where(*shown, UserNotification.read_at.is_(None))
     )
     return Inbox(items=list(items), unread=unread or 0)
 
 
-async def mark_read(session: AsyncSession, user_id: uuid.UUID, ids: list[uuid.UUID] | None) -> None:
-    """Mark the student's own notifications read: the ones listed, or all of them. Ids of
-    anyone else's notifications match nothing."""
+async def mark_read(session: AsyncSession, user_id: uuid.UUID, ids: list[uuid.UUID] | None) -> int:
+    """Mark the student's own notifications read: the ones listed, or all of them (also those
+    beyond the LIST_MAX shown). Ids of anyone else's notifications match nothing. Returns how
+    many changed; marking again changes nothing."""
     statement = update(UserNotification).where(UserNotification.user_id == user_id, UserNotification.read_at.is_(None))
     if ids is not None:
         statement = statement.where(UserNotification.id.in_(ids))
-    await session.execute(statement.values(read_at=func.clock_timestamp()))
+    return (await session.execute(statement.values(read_at=func.clock_timestamp()))).rowcount
+
+
+async def clear_all(session: AsyncSession, user_id: uuid.UUID) -> int:
+    """Clear all: every notification of the student's leaves the bell and counts as read. Rows
+    stay until `purge_read` deletes them, so a cleared one keeps its dedup_key (today's reminder is
+    not made again) and anything new still arrives. Returns how many changed; clearing again, or
+    alongside "Read all", changes nothing more (each touches only rows still not cleared / unread)."""
+    result = await session.execute(
+        update(UserNotification)
+        .where(UserNotification.user_id == user_id, UserNotification.cleared_at.is_(None))
+        .values(
+            cleared_at=func.clock_timestamp(),
+            read_at=func.coalesce(UserNotification.read_at, func.clock_timestamp()),
+        )
+    )
+    return result.rowcount
 
 
 async def purge_read(session: AsyncSession, now: datetime) -> int:

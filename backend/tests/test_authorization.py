@@ -26,6 +26,11 @@ async def test_other_users_resources_are_404(client, app):
         ("PUT", f"/v1/messages/{mid}/feedback", {"rating": "down"}),
         ("GET", f"/v1/messages/{mid}/feedback", None),
         ("DELETE", f"/v1/messages/{mid}/feedback", None),
+        (
+            "POST",
+            f"/v1/messages/{mid}/assessment-responses",
+            {"position": 0, "hash": "0" * 64, "question": 0, "action": "skip"},
+        ),
     ]
     for method, url, body in checks:
         r = await client.request(method, url, json=body, headers=b)

@@ -169,7 +169,13 @@ version, and every edit sends the version it read. One shape, for every such res
 |---|---|---|---|
 | GET / PATCH | `/v1/notifications/preferences` | PATCH [versioned](#versioned-edits): `dailyReminder`, `streakWarning`, `weeklySummary`, `securityAlerts` | `{version, dailyReminder, streakWarning, weeklySummary, securityAlerts, remindersNeedTimezone, delivery, updatedAt}`; `delivery` is `paused` while this server sends no notification email to the user (its rollout), `active` otherwise |
 | POST | `/v1/notifications/unsubscribe` | `{token}` from an email's link. **No session needed** | `{kind, unsubscribed: true}`; using it again changes nothing |
+| GET | `/v1/notifications?limit=30` | – | The bell: `{items: [{id, kind, title, body, link, createdAt, readAt}], unreadCount}`, newest first, at most 30, never a cleared one. `unreadCount` counts every unread one, also beyond the 30 listed |
+| POST | `/v1/notifications/read` | `{ids?}` (≤ 30) | 204. The listed ones read, or, with no `ids`, every one of the student's ("Read all", also beyond the 30 listed). Someone else's ids match nothing. Idempotent |
+| POST | `/v1/notifications/clear` | – | 204. "Clear all": every one of the student's leaves the list and counts as read; new ones still arrive. Idempotent, and safe alongside Read all (additive, 2026-10-01) |
 
+- **The bell:** opening it reads nothing; the web app marks a notification read when it is chosen. A cleared
+  notification keeps its row (and its dedup key) until retention deletes read ones after 90 days, so the same
+  reminder or alert is never made again because it was cleared.
 - **Emails:** all are plain text, and none contains an IP address.
   - Reminders are off until chosen: a daily reminder at the learner profile's `preferredStudyTime` (or 18:00), a
     streak warning at 20:00–22:00, and a weekly summary on Monday mornings. All three need a confirmed `timezone`,
@@ -208,7 +214,8 @@ A title the user set is never changed.
 | DELETE | `/v1/conversations/{id}` | 204; messages and feedback are deleted with it |
 | GET | `/v1/conversations/{id}/messages?limit=50&before=` | oldest-first page; `nextCursor` loads older messages |
 
-Message: `{id, conversationId, role: user|assistant, content, status, createdAt, metadata: {model?, errorCode?, finishReason?, citations?}}`.
+Message: `{id, conversationId, role: user|assistant, content, status, createdAt, metadata: {model?, errorCode?, finishReason?, citations?, assessments?, assessmentError?}}`.
+`assessments` and `assessmentError`: a reply's practice test (below, [Practice tests](#practice-tests); additive, 2026-10-01).
 `citations` (a reply whose prompt numbered sources or attached files; additive, 2026-09-30):
 `[{ref: "1" | "F1", kind: "source" | "file", title, fileId?}]`, what the reply's `[1]` and `[F1]`
 markers point at. Titles only, never URIs; absent when nothing was numbered. It arrives with the
@@ -226,6 +233,33 @@ finished message (`done` and message lists), not while the reply streams.
 | POST | `/v1/messages/{id}/cancel` | – | `{status}` — stops a `streaming` reply (idempotent) |
 | PUT | `/v1/messages/{id}/feedback` | `{rating: up\|down, comment?}` | `{messageId, rating, comment}` (assistant messages only; upsert) |
 | GET / DELETE | `/v1/messages/{id}/feedback` | – | read / remove your feedback |
+| POST | `/v1/messages/{id}/assessment-responses` | `{position, hash, question, action: answer\|skip, value? (answers only)}` | The test as recorded (below). 409 `assessment_answered` / `assessment_out_of_order` / `assessment_changed` / `assessment_closed`, 422 no such question or option, 404 not the student's reply or no such test |
+
+### Practice tests
+
+A reply may hold one practice test: one ```` ```quiz ```` block, or one ```` ```mcq ```` for a single
+question (the tutor writes them when `TUTOR_INTERACTIVE_BLOCKS` is on). The server owns it
+(`app/assessments/state.py`):
+
+- **Built with the reply, whole or not at all.** When a reply completes, its test is checked (one
+  test block, 1–30 questions, 2–8 distinct options each, an answer naming exactly one option, the
+  number of questions the student asked for) and saved by the same write as the reply, in
+  `metadata.assessments`. A reply that wrote a test the server can't accept has no test and
+  `metadata.assessmentError: {code}` (`multiple_tests`, `nested_test`, `incomplete_test`,
+  `invalid_json`, `invalid_test`, `invalid_question`, `too_many_questions`, `count_mismatch`).
+  Regenerate is the retry. Replies saved before 2026-10-01 have neither.
+- **An item of `assessments`:** `{id: "<messageId>:<position>", position, schemaVersion: 1, kind: "test",
+  title, hash, locator, state: not_started|active|completed, answerable, total, answered, current,
+  earned, possible, questions: [{kind: "mcq", text, options, response, correct, explanation}]}`.
+  `response` is `{status: answered|skipped, value, earned, possible, at}` or null; `correct` and
+  `explanation` are null until the question has a response. `hash` is the sha256 of the test's
+  canonical form; `locator` is the sha256 of its block's source, trimmed (which block it is).
+  `current` is the waiting question (null once completed); a skip earns 0 of 1.
+- **Answering:** only the waiting question, only in a `complete` reply (a regenerated one is closed
+  with its test), naming the `hash` it was shown. Answers are final. The same response sent again
+  returns the test unchanged (a safe retry); any other response to an answered question is 409.
+  The questions and the grading never come from the client.
+- **The tutor** is told the chat's tests on every turn, the latest first: answered, waiting, score.
 
 ### Server-Sent Events
 

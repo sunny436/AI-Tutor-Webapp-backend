@@ -102,6 +102,7 @@ export const ROUTES = {
   "GET /v1/progress/learning-days": { auth: true, query: ["from", "to"] },
   "GET /v1/notifications": { auth: true, query: ["limit"] },
   "POST /v1/notifications/read": { auth: true, body: "MarkReadRequest" },
+  "POST /v1/notifications/clear": { auth: true },
   "GET /v1/notifications/preferences": { auth: true },
   "PATCH /v1/notifications/preferences": { auth: true, body: "UpdateNotificationPreferencesRequest" },
   "POST /v1/notifications/unsubscribe": { auth: false, body: "UnsubscribeRequest" },
@@ -118,6 +119,7 @@ export const ROUTES = {
   "POST /v1/messages/{message_id}/cancel": { auth: true },
   "PUT /v1/messages/{message_id}/feedback": { auth: true, body: "FeedbackRequest" },
   "DELETE /v1/messages/{message_id}/feedback": { auth: true },
+  "POST /v1/messages/{message_id}/assessment-responses": { auth: true, body: "AssessmentResponseRequest" },
 
   "GET /v1/files": { auth: true, query: ["sha256"] },
   "POST /v1/files": { auth: true, query: ["filename"], upload: FILE_UPLOAD },

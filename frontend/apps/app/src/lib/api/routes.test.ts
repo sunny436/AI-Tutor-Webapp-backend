@@ -103,6 +103,10 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
   RenameConversationRequest: [{ title: "T" }],
   ChatRequest: [{ message: "hi" }, { conversationId: ID, message: "hi" }, { message: "hi", attachmentIds: [ID] }],
   FeedbackRequest: [{ rating: "up" }],
+  AssessmentResponseRequest: [
+    { position: 0, hash: "a".repeat(64), question: 0, action: "answer", value: 1 },
+    { position: 0, hash: "a".repeat(64), question: 1, action: "skip" },
+  ],
 };
 
 describe("request bodies the client sends", () => {

@@ -292,6 +292,64 @@ export type MessageMetadata = {
   finishReason?: string;
   /** Only on replies whose prompt numbered sources or files; arrives with the finished reply. */
   citations?: Citation[];
+  /** The reply's practice test as the server recorded it (at most one per reply). */
+  assessments?: Assessment[];
+  /** The reply wrote a test the server could not accept whole (no test was kept). */
+  assessmentError?: { code: string };
+};
+
+// --------------------------------------------------------- practice tests
+
+/** One question's recorded response: final, graded by the server. */
+export type AssessmentAnswer = {
+  status: "answered" | "skipped";
+  /** The chosen option (0-based); null when skipped. */
+  value: number | null;
+  earned: number;
+  possible: number;
+  at: string;
+};
+
+export type AssessmentQuestion = {
+  kind: "mcq";
+  text: string;
+  options: string[];
+  response: AssessmentAnswer | null;
+  /** The right option and why: only once this question has a response. */
+  correct: number | null;
+  explanation: string | null;
+};
+
+/**
+ * A practice test in a reply (`POST /v1/messages/{id}/assessment-responses`). The server owns it:
+ * questions come from the saved reply, answers are final, in order and graded there. `locator`
+ * says which block of the reply it is (sha256 of the block's source, trimmed).
+ */
+export type Assessment = {
+  id: string;
+  position: number;
+  schemaVersion: number;
+  kind: "test";
+  title: string | null;
+  hash: string;
+  locator: string;
+  state: "not_started" | "active" | "completed";
+  answerable: boolean;
+  total: number;
+  answered: number;
+  /** The waiting question; null once completed. */
+  current: number | null;
+  earned: number;
+  possible: number;
+  questions: AssessmentQuestion[];
+};
+
+export type AssessmentResponseRequest = {
+  position: number;
+  hash: string;
+  question: number;
+  action: "answer" | "skip";
+  value?: number;
 };
 
 /** A file attached to a user message. `fileId` is null once the file was deleted (the name stays). */

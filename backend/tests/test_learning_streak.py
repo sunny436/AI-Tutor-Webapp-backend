@@ -2,7 +2,7 @@
 
 Meaningful, fully answered questions only; India days; one row per day however it is sent;
 the streak derived from the days; milestones once; the evening reminder once a day and never
-after learning; the bell's list bounded and per user.
+after learning; the bell's list bounded and per user; Read all and Clear all.
 """
 
 import asyncio
@@ -295,6 +295,65 @@ async def test_marking_read_and_other_students_notifications(client, app, clock,
     await client.post("/v1/notifications/read", json={}, headers=alice["headers"])
     assert (await inbox(client, alice["headers"]))["unreadCount"] == 0
     assert (await inbox(client, bob["headers"]))["unreadCount"] == 1
+
+
+async def add_notifications(database: str, account: dict, *keys: str) -> None:
+    for key in keys:
+        await sql(
+            database,
+            "INSERT INTO user_notifications (user_id, kind, title, body, dedup_key) "
+            "VALUES (:id, 'streak_milestone', 'T', 'B', :key)",
+            id=uuid.UUID(account["user"]["id"]),
+            key=key,
+        )
+
+
+async def test_read_all_reaches_beyond_the_thirty_shown(client, app, clock, database):
+    account = await register(client, app)
+    await add_notifications(database, account, *(f"k{n}" for n in range(35)))
+    assert (await inbox(client, account["headers"]))["unreadCount"] == 35
+    assert (await client.post("/v1/notifications/read", json={}, headers=account["headers"])).status_code == 204
+    listed = await inbox(client, account["headers"])
+    assert listed["unreadCount"] == 0 and all(item["readAt"] for item in listed["items"])
+    assert (await sql(database, "SELECT count(*) AS n FROM user_notifications WHERE read_at IS NULL"))[0]["n"] == 0
+
+
+async def test_clear_all_empties_the_bell_keeps_each_dedup_key_and_new_ones_still_arrive(client, app, clock, database):
+    from app.notifications.inbox import notify
+
+    alice = await register(client, app)
+    bob = await register(client, app)
+    await add_notifications(database, alice, "a0", "a1", "a2")
+    await add_notifications(database, bob, "b0")
+    assert (await client.post("/v1/notifications/clear", headers=alice["headers"])).status_code == 204
+    cleared = await inbox(client, alice["headers"])
+    assert cleared["items"] == [] and cleared["unreadCount"] == 0
+    assert (await inbox(client, bob["headers"]))["unreadCount"] == 1  # only her own
+    async with app.state.db.sessionmaker() as session:
+        alice_id = uuid.UUID(alice["user"]["id"])
+        again = await notify(session, alice_id, kind="streak_milestone", title="T", body="B", dedup_key="a0")
+        fresh = await notify(session, alice_id, kind="streak_milestone", title="New", body="B", dedup_key="a3")
+        await session.commit()
+    assert (again, fresh) == (False, True)  # a cleared one is not made again; a new one arrives
+    listed = await inbox(client, alice["headers"])
+    assert [item["title"] for item in listed["items"]] == ["New"] and listed["unreadCount"] == 1
+    assert (await client.post("/v1/notifications/clear", headers=alice["headers"])).status_code == 204
+    assert (await client.post("/v1/notifications/clear", headers=alice["headers"])).status_code == 204
+    assert (await inbox(client, alice["headers"]))["items"] == []
+
+
+async def test_read_all_and_clear_all_at_once_agree(client, app, clock, database):
+    account = await register(client, app)
+    await add_notifications(database, account, *(f"k{n}" for n in range(5)))
+    both = await asyncio.gather(
+        client.post("/v1/notifications/read", json={}, headers=account["headers"]),
+        client.post("/v1/notifications/clear", headers=account["headers"]),
+    )
+    assert [response.status_code for response in both] == [204, 204]
+    listed = await inbox(client, account["headers"])
+    assert listed["items"] == [] and listed["unreadCount"] == 0
+    left = "SELECT count(*) AS n FROM user_notifications WHERE read_at IS NULL OR cleared_at IS NULL"
+    assert (await sql(database, left))[0]["n"] == 0
 
 
 async def test_each_student_sees_only_their_own_streak_and_days(client, app, clock):

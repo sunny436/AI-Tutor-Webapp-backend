@@ -327,6 +327,9 @@ class UserNotification(Base):
     dedup_key: Mapped[str] = mapped_column(String(120), nullable=False)
     created_at: Mapped[datetime] = _created()
     read_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    # "Clear all": no longer in the bell, and read. The row (and its dedup_key) stays until
+    # retention deletes it with the other read notifications.
+    cleared_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
 
 class EmailOutbox(Base):

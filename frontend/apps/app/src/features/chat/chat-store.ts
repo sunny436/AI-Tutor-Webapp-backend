@@ -26,9 +26,13 @@
  *     could be resurrected by a late reply.
  */
 
+import { LETTERS, type TestCommand, parseTestCommand } from "@/features/markdown/assessment";
+import type { TestNotice } from "@/features/markdown/context";
 import type { StreamHandlers, StreamOutcome } from "@/lib/api/chat";
 import { ApiError, type ErrorCode, describeError, isAbortError } from "@/lib/api/errors";
 import type {
+  Assessment,
+  AssessmentResponseRequest,
   ChatRequest,
   Conversation,
   FeedbackRating,
@@ -56,6 +60,7 @@ export type ChatApi = {
   setFeedback: (messageId: string, rating: FeedbackRating) => Promise<unknown>;
   clearFeedback: (messageId: string) => Promise<unknown>;
   deleteConversation: (conversationId: string) => Promise<void>;
+  respondToAssessment: (messageId: string, request: AssessmentResponseRequest) => Promise<Assessment>;
 };
 
 export type MessageError = { code: ErrorCode; retryable: boolean; requestId?: string };
@@ -68,6 +73,8 @@ export type ChatMessage = Message & {
   feedback?: FeedbackRating | null;
   /** Shown optimistically; not yet confirmed by the server. */
   pending?: boolean;
+  /** The last typed command that reached this reply's practice test (its card shows it). */
+  testNotice?: TestNotice;
 };
 
 export type EntryStatus = "idle" | "loading" | "ready" | "not_found" | "error";
@@ -160,6 +167,7 @@ export class ChatStore {
 
   private draftCounter = 0;
   private localCounter = 0;
+  private noticeCounter = 0;
   /** The conversation (or draft) currently on screen. */
   activeKey: string | null = null;
 
@@ -334,6 +342,10 @@ export class ChatStore {
       this.update(canonical, { composerError: { code: "payload_too_large", retryable: false } });
       return;
     }
+    // A letter, "skip" or "next" goes to the chat's latest unfinished practice test, not the tutor.
+    const command = attachments.length ? null : parseTestCommand(text);
+    const target = command ? this.testTarget(canonical) : null;
+    if (command && target) return this.typedTestCommand(canonical, command, target);
 
     const optimisticId = `local:${++this.localCounter}`;
     const optimistic: ChatMessage = {
@@ -577,6 +589,95 @@ export class ChatStore {
       if (latest) this.putMessage(this.resolve(key), { ...latest, feedback: previous });
       throw error;
     }
+  }
+
+  // -------------------------------------------------------- practice tests
+
+  /**
+   * Answer or skip the waiting question of a reply's practice test. The server grades and records
+   * it, and the reply's test becomes what it returns. A 409 means the test moved on elsewhere
+   * (another tab) or was replaced: the conversation is read again. Errors are rethrown for the card.
+   */
+  async respondToTest(
+    key: string,
+    messageId: string,
+    position: number,
+    request: Omit<AssessmentResponseRequest, "position">,
+  ): Promise<void> {
+    const canonical = this.resolve(key);
+    try {
+      const test = await this.api.respondToAssessment(messageId, { position, ...request });
+      const current = this.getMessage(canonical, messageId);
+      const tests = current?.metadata?.assessments;
+      const index = tests?.findIndex((item) => item.position === position) ?? -1;
+      // Responses only ever grow: a late reply never puts an older state back.
+      if (!current || !tests || index < 0 || (tests[index]?.answered ?? 0) > test.answered) return;
+      const next = tests.map((item, at) => (at === index ? test : item));
+      this.putMessage(canonical, { ...current, metadata: { ...current.metadata, assessments: next } });
+    } catch (error) {
+      const conversationId = this.entries.get(canonical)?.conversationId;
+      if (error instanceof ApiError && error.status === 409 && conversationId) void this.reload(conversationId);
+      throw error;
+    }
+  }
+
+  /**
+   * The test typed commands reach: the chat's latest test, only while it waits for an answer.
+   * An older unfinished test is answered through its own card; a finished latest one takes none.
+   */
+  testTarget(key: string): { messageId: string; test: Assessment } | null {
+    const canonical = this.resolve(key);
+    const order = this.entries.get(canonical)?.order ?? [];
+    for (let index = order.length - 1; index >= 0; index -= 1) {
+      const message = this.getMessage(canonical, order[index] ?? "");
+      if (message?.role !== "assistant" || message.status !== "complete") continue;
+      const test = message.metadata?.assessments?.at(-1);
+      if (!test) continue;
+      return test.answerable && test.current !== null ? { messageId: message.id, test } : null;
+    }
+    return null;
+  }
+
+  /** A typed letter / skip / next, applied to the latest unfinished test (never sent to the tutor). */
+  private async typedTestCommand(
+    canonical: string,
+    command: TestCommand,
+    { messageId, test }: { messageId: string; test: Assessment },
+  ): Promise<void> {
+    const question = test.current ?? 0;
+    const options = test.questions[question]?.options.length ?? 0;
+    const say = (notice: string) => this.noticeTest(canonical, messageId, test.position, notice);
+    if (command.kind === "show") {
+      say(`Question ${question + 1} of ${test.total} is waiting: pick an option, or type skip.`);
+      return;
+    }
+    if (command.kind === "answer" && command.value >= options) {
+      say(`Question ${question + 1} has options A to ${LETTERS[options - 1]}.`);
+      return;
+    }
+    try {
+      await this.respondToTest(canonical, messageId, test.position, {
+        hash: test.hash,
+        question,
+        ...(command.kind === "answer" ? { action: "answer", value: command.value } : { action: "skip" }),
+      });
+      say(
+        command.kind === "answer"
+          ? `You answered ${LETTERS[command.value]} to question ${question + 1}.`
+          : `You skipped question ${question + 1}.`,
+      );
+    } catch (error) {
+      say(
+        error instanceof ApiError && error.status === 409
+          ? "This test moved on elsewhere (another tab?). It now shows where it is."
+          : "Your answer wasn't saved. Check your connection and try again.",
+      );
+    }
+  }
+
+  private noticeTest(canonical: string, messageId: string, position: number, text: string): void {
+    const current = this.getMessage(canonical, messageId);
+    if (current) this.putMessage(canonical, { ...current, testNotice: { position, text, seq: ++this.noticeCounter } });
   }
 
   // ------------------------------------------------------------- deleting

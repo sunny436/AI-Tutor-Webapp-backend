@@ -113,7 +113,11 @@ test("the streak counts real questions only, and opens Learning & Streak with th
   expect(await tutorKnows(page)).toContain("Learning so far: a 1-day learning streak");
 });
 
-test("the bell shows a new sign-in, and opening it marks it read", async ({ page, browser, account }) => {
+test("the bell shows a new sign-in; opening it reads nothing; Read all and Clear all outlast a reload", async ({
+  page,
+  browser,
+  account,
+}) => {
   await page.goto("/");
   await waitForHydration(page);
   await expect(bell(page)).toHaveAccessibleName("Notifications");
@@ -134,10 +138,23 @@ test("the bell shows a new sign-in, and opening it marks it read", async ({ page
   await expect(menu.getByText(/^Firefox on Linux, /)).toBeVisible();
   await expectAccessible(page);
   await page.keyboard.press("Escape");
-  await expect(bell(page)).toHaveAccessibleName("Notifications"); // the menu hides the page while open
+  await expect(bell(page)).toHaveAccessibleName("Notifications, 1 unread"); // opening it read nothing
+
+  await bell(page).click();
+  await page.getByRole("menuitem", { name: "Read all" }).click();
+  await expect(bell(page)).toHaveAccessibleName("Notifications");
   await expect
     .poll(async () => (await (await page.request.get(`${APP_URL}/api/v1/notifications`)).json()).unreadCount)
     .toBe(0);
+  await page.reload();
+  await expect(bell(page)).toHaveAccessibleName("Notifications");
+
+  await bell(page).click();
+  await page.getByRole("menuitem", { name: "Clear all" }).click();
+  await expect(page.getByRole("menu").getByText("You're all caught up.")).toBeVisible();
+  await page.reload();
+  await bell(page).click();
+  await expect(page.getByRole("menu").getByText("You're all caught up.")).toBeVisible();
 });
 
 test("a streak that can't be read shows –, never 0, and the chat still works", async ({ page, account: _ }) => {

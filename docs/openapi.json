@@ -247,6 +247,275 @@
         "title": "AppearanceSet",
         "type": "object"
       },
+      "AssessmentAnswerOut": {
+        "properties": {
+          "at": {
+            "title": "At",
+            "type": "string"
+          },
+          "earned": {
+            "title": "Earned",
+            "type": "integer"
+          },
+          "possible": {
+            "title": "Possible",
+            "type": "integer"
+          },
+          "status": {
+            "enum": [
+              "answered",
+              "skipped"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          }
+        },
+        "required": [
+          "status",
+          "value",
+          "earned",
+          "possible",
+          "at"
+        ],
+        "title": "AssessmentAnswerOut",
+        "type": "object"
+      },
+      "AssessmentOut": {
+        "description": "A practice test as the student may see it now; also each item of a reply's\n`metadata.assessments`.",
+        "properties": {
+          "answerable": {
+            "title": "Answerable",
+            "type": "boolean"
+          },
+          "answered": {
+            "title": "Answered",
+            "type": "integer"
+          },
+          "current": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Current"
+          },
+          "earned": {
+            "title": "Earned",
+            "type": "integer"
+          },
+          "hash": {
+            "title": "Hash",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "const": "test",
+            "title": "Kind",
+            "type": "string"
+          },
+          "locator": {
+            "title": "Locator",
+            "type": "string"
+          },
+          "position": {
+            "title": "Position",
+            "type": "integer"
+          },
+          "possible": {
+            "title": "Possible",
+            "type": "integer"
+          },
+          "questions": {
+            "items": {
+              "$ref": "#/components/schemas/AssessmentQuestionOut"
+            },
+            "title": "Questions",
+            "type": "array"
+          },
+          "schemaVersion": {
+            "title": "Schemaversion",
+            "type": "integer"
+          },
+          "state": {
+            "enum": [
+              "not_started",
+              "active",
+              "completed"
+            ],
+            "title": "State",
+            "type": "string"
+          },
+          "title": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Title"
+          },
+          "total": {
+            "title": "Total",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "id",
+          "position",
+          "schemaVersion",
+          "kind",
+          "title",
+          "hash",
+          "locator",
+          "state",
+          "answerable",
+          "total",
+          "answered",
+          "current",
+          "earned",
+          "possible",
+          "questions"
+        ],
+        "title": "AssessmentOut",
+        "type": "object"
+      },
+      "AssessmentQuestionOut": {
+        "properties": {
+          "correct": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Correct"
+          },
+          "explanation": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Explanation"
+          },
+          "kind": {
+            "const": "mcq",
+            "title": "Kind",
+            "type": "string"
+          },
+          "options": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Options",
+            "type": "array"
+          },
+          "response": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AssessmentAnswerOut"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "text",
+          "options",
+          "response",
+          "correct",
+          "explanation"
+        ],
+        "title": "AssessmentQuestionOut",
+        "type": "object"
+      },
+      "AssessmentResponseRequest": {
+        "additionalProperties": false,
+        "description": "Answer or skip the waiting question of a practice test in a reply. Only which question and\nwhich option: the questions and the grading come from the reply the server saved.",
+        "properties": {
+          "action": {
+            "enum": [
+              "answer",
+              "skip"
+            ],
+            "title": "Action",
+            "type": "string"
+          },
+          "hash": {
+            "description": "The test's `hash`, as it was shown.",
+            "pattern": "^[0-9a-f]{64}$",
+            "title": "Hash",
+            "type": "string"
+          },
+          "position": {
+            "description": "Which test of the reply (0: replies hold one).",
+            "maximum": 9.0,
+            "minimum": 0.0,
+            "title": "Position",
+            "type": "integer"
+          },
+          "question": {
+            "description": "0-based; must be the waiting question.",
+            "exclusiveMaximum": 30.0,
+            "minimum": 0.0,
+            "title": "Question",
+            "type": "integer"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "exclusiveMaximum": 8.0,
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The chosen option (0-based); answers only.",
+            "title": "Value"
+          }
+        },
+        "required": [
+          "position",
+          "hash",
+          "question",
+          "action"
+        ],
+        "title": "AssessmentResponseRequest",
+        "type": "object"
+      },
       "AuthResult": {
         "properties": {
           "session": {
@@ -5093,6 +5362,61 @@
         ]
       }
     },
+    "/v1/messages/{message_id}/assessment-responses": {
+      "post": {
+        "description": "Answers are final, in order and graded here. Sending the same response again returns the\nsame test unchanged (a safe retry); any other response to an answered question, or to a\nquestion after the waiting one, is 409. The message row is locked while the response is\nrecorded, so two tabs or a double tap record one response.",
+        "operationId": "respond_to_assessment_v1_messages__message_id__assessment_responses_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "message_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Message Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssessmentResponseRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssessmentOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Answer or skip the waiting question of a practice test in a reply",
+        "tags": [
+          "chat",
+          "assessments"
+        ]
+      }
+    },
     "/v1/messages/{message_id}/cancel": {
       "post": {
         "operationId": "cancel_message_v1_messages__message_id__cancel_post",
@@ -5315,6 +5639,21 @@
         ]
       }
     },
+    "/v1/notifications/clear": {
+      "post": {
+        "description": "Clear all: every notification of the student's leaves the list and counts as read; new\nones still arrive. Clearing again changes nothing.",
+        "operationId": "clear_notifications_v1_notifications_clear_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Clear Notifications",
+        "tags": [
+          "notifications"
+        ]
+      }
+    },
     "/v1/notifications/preferences": {
       "get": {
         "operationId": "get_notification_preferences_v1_notifications_preferences_get",
@@ -5378,7 +5717,7 @@
     },
     "/v1/notifications/read": {
       "post": {
-        "description": "Mark notifications read: the ones listed, or all of the student's. Only their own.",
+        "description": "Mark notifications read: the ones listed, or (no `ids`) every one of the student's, also\nthose beyond the 30 the list shows. Only their own. Opening the bell reads nothing.",
         "operationId": "mark_notifications_read_v1_notifications_read_post",
         "requestBody": {
           "content": {

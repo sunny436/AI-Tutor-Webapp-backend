@@ -27,6 +27,8 @@ import { callRoute, notifyUnauthorized, urlFor } from "./http";
 import type { RouteKey, RouteParams } from "./routes";
 import { type SseEvent, SseParser } from "./sse";
 import type {
+  Assessment,
+  AssessmentResponseRequest,
   CancelResult,
   ChatRequest,
   Feedback,
@@ -228,5 +230,17 @@ export function setFeedback(messageId: string, rating: FeedbackRating): Promise<
 export function clearFeedback(messageId: string): Promise<void> {
   return callRoute<void>("DELETE /v1/messages/{message_id}/feedback", {
     params: { message_id: messageId },
+  });
+}
+
+/**
+ * Answer or skip the waiting question of a reply's practice test; returns the test as recorded.
+ * Sending the same response again is a safe retry (the same test back). 409: the test moved on
+ * (another tab, an earlier tap) or was replaced; re-read the conversation.
+ */
+export function respondToAssessment(messageId: string, request: AssessmentResponseRequest): Promise<Assessment> {
+  return callRoute<Assessment>("POST /v1/messages/{message_id}/assessment-responses", {
+    params: { message_id: messageId },
+    body: request,
   });
 }

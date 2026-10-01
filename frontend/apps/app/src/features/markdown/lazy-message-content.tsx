@@ -3,6 +3,7 @@
 import { Suspense, lazy } from "react";
 
 import type { Citation } from "@/lib/api/types";
+import type { TestState } from "./context";
 
 /**
  * The reply renderer, loaded on its own.
@@ -39,10 +40,12 @@ export function MessageContent({
   content,
   streaming = false,
   citations,
+  tests = null,
 }: {
   content: string;
   streaming?: boolean;
   citations?: Citation[];
+  tests?: TestState | null;
 }) {
   return (
     <Suspense
@@ -52,7 +55,7 @@ export function MessageContent({
         </div>
       }
     >
-      <Renderer content={content} streaming={streaming} citations={citations} />
+      <Renderer content={content} streaming={streaming} citations={citations} tests={tests} />
     </Suspense>
   );
 }
