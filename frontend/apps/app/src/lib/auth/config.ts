@@ -188,6 +188,11 @@ export function createAuth(env: AuthEnv) {
       maxPasswordLength: 128,
       revokeSessionsOnPasswordReset: true,
       password: { hash: hashPassword, verify: verifyPassword },
+      // A reset writes the hash with a bulk update, whose after-hook gets a row count, not the
+      // account (databaseHooks below): the reset has its own notice.
+      onPasswordReset: async ({ user }) => {
+        postInternal(api, "events", { kind: "password_reset", userId: String(user.id) });
+      },
     },
     emailVerification: { sendOnSignUp: false, sendOnSignIn: false },
     socialProviders: env.google
@@ -292,7 +297,8 @@ export function createAuth(env: AuthEnv) {
             data: { ...account, accessToken: null, refreshToken: null, idToken: null, scope: null },
           }),
           after: async (account) => {
-            // A credential's new hash: a change or a reset (the first password is a create).
+            // A credential's new hash from a change (a reset is onPasswordReset above; the first
+            // password is a create).
             if (account.password) postInternal(api, "events", { kind: "password_changed", userId: String(account.userId) });
           },
         },

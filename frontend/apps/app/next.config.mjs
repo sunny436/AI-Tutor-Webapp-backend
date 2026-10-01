@@ -90,6 +90,10 @@ const nextConfig = {
   experimental: { webpackBuildWorker: true, cpus: 1, serverComponentsExternalPackages: ["pg"] },
   // Do not advertise the framework version to scanners.
   poweredByHeader: false,
+  // No next/image here, so no image optimizer: /_next/image answers 404 (Next 14 has open
+  // advisories in it, e.g. GHSA-2xp9-vwfh-vxw4). Middleware can't block it: Next serves that
+  // route before middleware runs.
+  images: { unoptimized: true },
   // The previous app lived under /en, /fr and /es, and the chat at /consult.
   // Temporary redirects, so old bookmarks land somewhere sensible.
   async redirects() {

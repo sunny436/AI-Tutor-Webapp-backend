@@ -12,6 +12,7 @@
 export type AuthEvent =
   | { kind: "sign_in"; userId: string; sessionId: string }
   | { kind: "password_changed"; userId: string }
+  | { kind: "password_reset"; userId: string }
   | { kind: "google_linked"; userId: string };
 
 export type CodeMail = { email: string; type: "sign-in" | "forget-password"; otp: string };

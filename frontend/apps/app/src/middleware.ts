@@ -19,10 +19,6 @@ import { publicUrlFor } from "@/lib/server/public-origin";
  *           `request.nextUrl`, which says localhost:3000 behind the tunnel.
  */
 export function middleware(request: NextRequest) {
-  // The image optimizer is unused here (no next/image) and Next 14 has open advisories in it
-  // (GHSA-2xp9-vwfh-vxw4): it does not exist.
-  if (request.nextUrl.pathname.startsWith("/_next/image")) return new NextResponse(null, { status: 404 });
-
   if (request.headers.has("cf-ray") && request.headers.get("x-forwarded-proto") === "http") {
     const secure = publicUrlFor(request.headers, request.url, `${request.nextUrl.pathname}${request.nextUrl.search}`);
     secure.protocol = "https:";
@@ -47,6 +43,6 @@ export const config = {
   matcher: [
     // Everything except static assets, the app icon, robots.txt and the Sentry
     // tunnel (`/monitoring`), which must never be redirected to a sign-in page.
-    "/((?!_next/static|favicon\\.ico|icon\\.svg|robots\\.txt|monitoring|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml|css|js|woff2?)$).*)",
+    "/((?!_next/static|_next/image|favicon\\.ico|icon\\.svg|robots\\.txt|monitoring|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|txt|xml|css|js|woff2?)$).*)",
   ],
 };
