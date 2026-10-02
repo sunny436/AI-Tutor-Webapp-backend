@@ -16,6 +16,7 @@ const TOOLS = [
 ];
 
 const SHELL_CALLS = new Set([
+  "/api/auth/get-session", // SessionKeeper: once per page load, keeps the session and its cookie in step
   "/api/v1/conversations",
   "/api/v1/progress",
   "/api/v1/progress/activity",

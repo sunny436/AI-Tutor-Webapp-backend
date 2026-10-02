@@ -40,6 +40,22 @@ def google_linked(app: str, when: str, settings_url: str) -> tuple[str, str]:
     )
 
 
+def two_factor(app: str, on: bool, when: str, settings_url: str) -> tuple[str, str]:
+    if on:
+        return (
+            f"Two-step sign-in was turned on for your {app} account",
+            f"Signing in to your {app} account now also needs a code from an authenticator app ({when}).\n\n"
+            'If you didn\'t do this, reset your password with "Forgot password?" on the sign-in page '
+            "right away, then contact us: someone else may control your account." + _footer(settings_url, None),
+        )
+    return (
+        f"Two-step sign-in was turned off for your {app} account",
+        f"Signing in to your {app} account no longer needs an authenticator code ({when}).\n\n"
+        f"If you didn't do this, change your password and turn two-step sign-in back on in {app}'s "
+        "Settings, under Privacy & Security." + _footer(settings_url, None),
+    )
+
+
 def daily_reminder(app: str, app_url: str, settings_url: str, unsubscribe_url: str) -> tuple[str, str]:
     return (
         f"Time for today's {app} session",

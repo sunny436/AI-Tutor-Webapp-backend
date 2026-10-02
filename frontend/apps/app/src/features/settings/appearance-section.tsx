@@ -3,6 +3,7 @@
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import type { JSX } from "react";
 
 import { useAppearance } from "@/components/appearance-provider";
 import type { FontSize, Theme } from "@/lib/api/types";

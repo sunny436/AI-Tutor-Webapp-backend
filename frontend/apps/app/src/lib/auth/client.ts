@@ -5,9 +5,9 @@
  */
 
 import { createAuthClient } from "better-auth/client";
-import { emailOTPClient } from "better-auth/client/plugins";
+import { emailOTPClient, twoFactorClient } from "better-auth/client/plugins";
 
-export const authClient = createAuthClient({ basePath: "/api/auth", plugins: [emailOTPClient()] });
+export const authClient = createAuthClient({ basePath: "/api/auth", plugins: [emailOTPClient(), twoFactorClient()] });
 
 /** Better Auth's error, flattened: its code (e.g. INVALID_EMAIL_OR_PASSWORD) and HTTP status. */
 export type AuthFailure = { code: string; status: number };

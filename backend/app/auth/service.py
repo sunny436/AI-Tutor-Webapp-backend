@@ -131,7 +131,12 @@ class AuthService:
     async def reauthenticate(self, user: User, session: AuthSession, password: str | None) -> None:
         """Confirm it is the owner before a sensitive change: the account's password, throttled
         per account, or, for an account without one (Google only), a sign-in within REAUTH_FRESH.
-        The attempt is committed before argon2 runs, so no pooled connection waits on the hash."""
+        The attempt is committed before argon2 runs, so no pooled connection waits on the hash.
+        An account with two-step sign-in also needs a full sign-in (both steps) within
+        REAUTH_FRESH: a stolen session plus the password is not enough."""
+        if user.two_factor_enabled and session.created_at <= utcnow() - REAUTH_FRESH:
+            await self.db.commit()
+            raise Conflict("Sign in again to confirm it's you.", code="reauth_required")
         stored = await self.db.scalar(
             select(AuthAccount.password).where(AuthAccount.user_id == user.id, AuthAccount.provider_id == "credential")
         )

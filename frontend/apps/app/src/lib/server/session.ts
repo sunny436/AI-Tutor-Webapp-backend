@@ -14,7 +14,7 @@ import { publicProtocol } from "./public-origin";
  * is verified. Same trust rule as the BFF: on HTTPS only the `__Host-` cookie counts.
  */
 export const sessionToken = cache(async (): Promise<string | null> => {
-  const requestHeaders = headers();
+  const requestHeaders = await headers();
   const https = publicProtocol(requestHeaders, "http://localhost/") === "https";
   return readSessionToken(requestHeaders.get("cookie"), https, authSecret());
 });

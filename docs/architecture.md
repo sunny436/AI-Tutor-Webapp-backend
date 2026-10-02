@@ -6,7 +6,7 @@ The whole application is one repository, and every commit is one complete, consi
 
 | Folder | What | Tooling |
 |---|---|---|
-| `frontend/` | Next.js 14 web app + its server-side proxy (BFF), a Bun + Turborepo workspace (`apps/app`, `packages/ui`) | Bun 1.3.14, Biome, bun test, Playwright |
+| `frontend/` | Next.js 15 web app + its server-side proxy (BFF), a Bun + Turborepo workspace (`apps/app`, `packages/ui`) | Bun 1.3.14, Biome, bun test, Playwright |
 | `backend/` | FastAPI chat API, SQLAlchemy async + Alembic, LangGraph/LangChain RAG | Python 3.12 venv, ruff, pytest |
 | `docs/openapi.json` | The API contract: generated from the backend, tested by the frontend (`routes.test.ts`) | `bun run contract` |
 | `deploy/` | One deploy for both: Git push to production, only the changed part rebuilt ([deployment.md](deployment.md), [rollback.md](rollback.md)) | bash, systemd |
@@ -128,7 +128,9 @@ resolved before, and only when, a native client is started:
 Identity (2026-10-01): Better Auth runs inside the web app's server (`/api/auth/*`, no extra
 service) on the same PostgreSQL: it signs people up (email first: a code proves the address, then a
 password), in (password, email code, Google) and resets passwords, and owns the session's expiry
-and cookie. The API stays the authority on every request: it finds the session by the SHA-256 of
+and cookie, plus two-step sign-in (an authenticator app and recovery codes, asked for at every way
+in), the adaptive CAPTCHA (Cloudflare Turnstile) and the breached-password check. The API stays
+the authority on every request: it finds the session by the SHA-256 of
 its token (`auth_sessions.token_hash`, kept by a trigger), requires a verified address and
 authorizes per user; sessions, devices, the email change and account deletion are still `/v1`.
 Better Auth reaches the database as `aichat_auth`, a role limited to the identity tables, and calls

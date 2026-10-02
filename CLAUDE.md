@@ -8,7 +8,7 @@ The whole ChatGPT-style chat application, which will grow into an AI tutor. Ther
 repository, and each commit is one release** of both halves:
 
 - `backend/`: FastAPI API on PostgreSQL 16 + pgvector (the only datastore). It has its own Python 3.12 venv, ruff and pytest.
-- `frontend/`: Next.js 14 web app with its server-side proxy (BFF). It's a Bun + Turborepo workspace:
+- `frontend/`: Next.js 15 (React 19) web app with its server-side proxy (BFF). It's a Bun + Turborepo workspace:
   `apps/app`, `packages/ui`, `tooling/typescript`. `frontend/CLAUDE.md` has the frontend detail;
   Claude Code loads it when you work there.
 
@@ -100,7 +100,9 @@ Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. O
   Better Auth's httpOnly cookie `__Host-padhai_session`, whose HMAC signature it verifies first.
 - **Sign-in is Better Auth** (`frontend/apps/app/src/lib/auth`, `/api/auth/*`, an exact allowlist of
   routes; docs/architecture.md "Identity" in "Clients", docs/deployment.md "Sign-in"): email-first
-  sign-up (a code, then a password), password and email-code sign-in, Google, reset and change. It
+  sign-up (a code, then a password), password and email-code sign-in, Google, reset and change,
+  two-step sign-in (TOTP + recovery codes, asked for at every way in), an adaptive CAPTCHA
+  (Turnstile) and a breached-password check (HIBP, k-anonymity). It
   writes `users`/`auth_sessions`/`auth_accounts`/`auth_verifications` as role `aichat_auth`, never
   returns a token to page code, and asks the API's loopback `/internal/auth/*` (shared
   `AUTH_INTERNAL_TOKEN`) to email codes and security notices. The API finds each session by its

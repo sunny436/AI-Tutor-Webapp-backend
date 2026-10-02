@@ -238,6 +238,7 @@ checks every session. A deploy refuses to start without these (and the smoke che
 | `web.env` | `BETTER_AUTH_SECRET` | signs the session cookie (`__Host-padhai_session`). At least 32 random characters |
 | `web.env` + `api.env` | `AUTH_INTERNAL_TOKEN` | the same value in both: Better Auth's calls to the API's `/internal/auth/*` (codes and security notices). At least 32 random characters |
 | `web.env` | `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET` | optional; unset hides "Continue with Google". Google Cloud: an OAuth client of type "Web application", authorized redirect URI `https://<host>/api/auth/callback/google`, consent screen published with the basic scopes (openid, email, profile) |
+| `web.env` | `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY` | optional; unset turns the adaptive CAPTCHA off (the hard limits stay). Cloudflare dashboard → Turnstile → a widget for the app's hostname, mode Managed |
 
 Generate secrets on the host and append them without printing them, e.g.
 `printf 'BETTER_AUTH_SECRET=%s\n' "$(openssl rand -base64 48)" >> /etc/aichat/web.env`.
@@ -251,12 +252,47 @@ Generate secrets on the host and append them without printing them, e.g.
   `aichat-web`.
 - The Google secret: create a second secret in Google Cloud, switch web.env, restart `aichat-web`,
   then delete the old secret.
+- The Turnstile secret: rotate it on the widget in Cloudflare, switch web.env, restart `aichat-web`.
+- The API's database password (role `aichat`, a superuser; in `api.env` `DATABASE_URL` and
+  `postgres.env` `POSTGRES_PASSWORD`): back both files up, `ALTER ROLE aichat PASSWORD '…'` with the
+  SQL on stdin (`docker exec -i compose-postgres-1 psql -U aichat -d aichat`, never on a command
+  line), rewrite only the password in both files, restart `aichat-api`, and prove the old one is
+  refused over TCP. Done 2026-10-02 (the old one had reached a developer's scratch logs). Backups run
+  inside the container and need no password.
 
 **Limits** (per account, in `auth_attempts`, atomic across both processes): 10 password checks per
 15 minutes (sign-in, change, re-authentication), 20 code checks a day, 5 codes sent per 15 minutes
 and 20 a day per address. Per address (Better Auth, in memory, by `CF-Connecting-IP`): sign-in 60 a
-minute, codes 30, Google 20. Security notices (a new device, a password changed, Google added, an
-account deleted) are emailed at once, whatever `NOTIFICATIONS_MODE` says (owner's decision,
+minute, codes 30, Google 20, two-step 20.
+
+**CAPTCHA (adaptive, when Turnstile is configured):** asked for once an address has 3 password
+checks in 15 minutes, 5 code checks in a day or 2 code requests in 15 minutes, or a network
+(`CF-Connecting-IP`) 20 sign-ins in 15 minutes, 30 code checks or 10 code requests in an hour.
+Code requests are counted whether or not the address has an account (no enumeration). The token
+is verified with Cloudflare's siteverify; it never lifts a hard limit. The CSP allows
+`https://challenges.cloudflare.com` for its script and iframe only.
+
+**Two-step sign-in** (Better Auth's twoFactor, migration 0013): an authenticator app (TOTP) and
+10 recovery codes, both stored encrypted with `BETTER_AUTH_SECRET` in `auth_two_factors`. Once on,
+every way in asks for the second step: password, email code and Google. A code works once (kept
+as used for 2 minutes); 5 wrong codes in a row lock the second step for 30 minutes; no "trust this
+device". On such an account, changing the password, turning it off, new recovery codes, linking
+Google, the email change and deletion need a sign-in (both steps) in the last 15 minutes. Lost
+authenticator and recovery codes: there is no self-service bypass (an email reset keeps the
+second step); the owner turns it off by hand after checking who is asking:
+`UPDATE users SET two_factor_enabled = false WHERE email = '…'; DELETE FROM auth_two_factors WHERE
+user_id = (SELECT id FROM users WHERE email = '…');`
+
+**Breached passwords:** every password set (sign-up, Settings, change, reset) is checked against Have
+I Been Pwned's range API (k-anonymity: only 5 characters of its SHA-1 leave the server, padded
+answers). A breached one is refused; if the service can't answer, so is the change (an email code
+still signs in). The web app reaches `api.pwnedpasswords.com` and `challenges.cloudflare.com`.
+
+**Google** never attaches itself to an existing account by matching its address
+(`disableImplicitLinking`): the owner connects it in Settings › Privacy, signed in.
+
+Security notices (a new device, a password changed, Google added, two-step sign-in turned on or
+off, an account deleted) are emailed at once, whatever `NOTIFICATIONS_MODE` says (owner's decision,
 2026-10-01). Auth retention (expired sessions, codes, counters, never-verified accounts after a
 week) runs hourly in the API itself.
 

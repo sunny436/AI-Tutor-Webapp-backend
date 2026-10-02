@@ -74,7 +74,8 @@ until the password is first changed or reset.
 
 **Re-authentication** (email change, account deletion): the account's password, or, for an account
 without one (it signs in with Google or email codes), a sign-in within the last 15 minutes; otherwise
-409 `reauth_required` (sign in again). Password checks share one per-account limit with Better Auth's
+409 `reauth_required` (sign in again). An account with two-step sign-in needs both: the password and
+a sign-in (both steps) within the last 15 minutes. Password checks share one per-account limit with Better Auth's
 sign-in: 10 per 15 minutes, counted atomically, then 429 even for the right password.
 
 **Signed-in devices** show a label parsed from the user agent ("Chrome on Windows", or "Unknown device")

@@ -8,6 +8,7 @@ import { type FormEvent, type ReactNode, useEffect, useId, useRef, useState } fr
 import { CODE_LENGTH, DISPLAY_NAME_MAX, PASSWORD_MAX, PASSWORD_MIN } from "@/lib/api/types";
 import { authClient } from "@/lib/auth/client";
 import { GoogleMark } from "./google-mark";
+import { Turnstile } from "./turnstile";
 
 /**
  * Signing in and up, email codes and password reset, through Better Auth (lib/auth). The session
@@ -21,8 +22,17 @@ import { GoogleMark } from "./google-mark";
  *   code      the 6-digit code (signs in, or creates the account)
  *   password  the new account's password (can be skipped: codes and Google still sign in)
  *   forgot -> reset
+ *   twoFactor the second step, when the account has two-step sign-in: an authenticator code or
+ *             a recovery code. Every first step can lead here: password, email code, a reset
+ *             (which signs in), and Google (which comes back to /login?step=two-factor).
+ *
+ * When the server asks for a CAPTCHA (CAPTCHA_REQUIRED: an address or a network is being
+ * hammered), Cloudflare Turnstile appears and the next attempt carries its single-use token.
  */
-export type AuthMode = "signIn" | "signUp" | "code" | "password" | "forgot" | "reset";
+export type AuthMode = "signIn" | "signUp" | "code" | "password" | "forgot" | "reset" | "twoFactor";
+
+/** The steps whose requests may be asked for a CAPTCHA (lib/auth/config.ts). */
+const GUARDED: ReadonlySet<AuthMode> = new Set(["signIn", "signUp", "code", "forgot", "reset"]);
 
 const RESEND_SECONDS = 30;
 
@@ -40,6 +50,7 @@ const TITLES: Record<AuthMode, string> = {
   password: "Choose a password",
   forgot: "Reset your password",
   reset: "Choose a new password",
+  twoFactor: "Two-step sign-in",
 };
 
 // Better Auth's codes in this app's own words (its message text is never shown).
@@ -52,11 +63,29 @@ const ERRORS: Record<string, string> = {
   INVALID_EMAIL: "Enter a valid email address.",
   PASSWORD_TOO_SHORT: `Passwords must be ${PASSWORD_MIN}–${PASSWORD_MAX} characters.`,
   PASSWORD_TOO_LONG: `Passwords must be ${PASSWORD_MIN}–${PASSWORD_MAX} characters.`,
+  PASSWORD_COMPROMISED: "This password has appeared in a data breach, so it isn't safe. Choose a different one.",
+  PASSWORD_CHECK_UNAVAILABLE: "We couldn't check that password just now. Please try again in a minute.",
+  CAPTCHA_REQUIRED: "Please confirm you're not a robot, then try again.",
+  CAPTCHA_INVALID: "That check didn't go through. Please try it again.",
+  CAPTCHA_UNAVAILABLE: "The robot check isn't available right now. Please try again in a minute.",
+  INVALID_CODE: "That code isn't right. Check the time on your phone, and use the newest code.",
+  INVALID_BACKUP_CODE: "That recovery code isn't right, or it was already used.",
+  CODE_ALREADY_USED: "That code was just used. Wait for the next one your app shows.",
+  ACCOUNT_TEMPORARILY_LOCKED: "Too many wrong codes. Two-step sign-in is locked for 30 minutes.",
+  TOO_MANY_ATTEMPTS_REQUEST_NEW_CODE: "Too many wrong codes. Please sign in again.",
+  INVALID_TWO_FACTOR_COOKIE: "This sign-in timed out. Please sign in again.",
+  SESSION_NOT_FRESH: "For your security, sign out and sign in again, then try within 15 minutes.",
 };
 
 export function authErrorMessage(error: { code?: string; status?: number } | null | undefined): string {
+  if (error?.code && ERRORS[error.code]) return ERRORS[error.code]!;
   if (error?.status === 429) return "Too many attempts. Please wait a few minutes and try again.";
-  return (error?.code && ERRORS[error.code]) || "Something went wrong. Please try again.";
+  return "Something went wrong. Please try again.";
+}
+
+/** A first step's answer when the account has two-step sign-in. */
+function needsSecondStep(data: unknown): boolean {
+  return (data as { twoFactorRedirect?: unknown } | null | undefined)?.twoFactorRedirect === true;
 }
 
 /** Google sign-in comes back to /login?error=<code> when it does not end in a session. */
@@ -65,7 +94,7 @@ export function oauthErrorMessage(code: string | null | undefined): string | nul
   const key = code.toLowerCase().replace(/[\s-]+/g, "_");
   if (key === "access_denied") return "Google sign-in was cancelled.";
   if (key === "account_not_linked") {
-    return "This email has an unfinished sign-up. Sign in with an email code first; you can then add Google in Settings.";
+    return "This email already has a PadhAI account. Sign in with your password or an email code, then connect Google in Settings › Privacy.";
   }
   if (key.includes("email_not_verified")) {
     return "Google hasn't confirmed this email address. Sign in with an email code instead.";
@@ -97,12 +126,14 @@ export function AuthForm({
   redirectTo,
   notice,
   googleEnabled = false,
+  turnstileSiteKey = null,
   oauthError,
 }: {
-  initialMode: "signIn" | "signUp";
+  initialMode: "signIn" | "signUp" | "twoFactor";
   redirectTo: string;
   notice?: string | null;
   googleEnabled?: boolean;
+  turnstileSiteKey?: string | null;
   oauthError?: string | null;
 }) {
   const router = useRouter();
@@ -117,6 +148,13 @@ export function AuthForm({
   const [error, setError] = useState<string | null>(oauthErrorMessage(oauthError));
   const [info, setInfo] = useState<string | null>(notice ?? null);
   const [cooldown, setCooldown] = useState(0);
+  const [recovery, setRecovery] = useState(false); // the second step with a recovery code
+  // `round` remounts the widget: each token is single-use.
+  const [captcha, setCaptcha] = useState<{ needed: boolean; token: string | null; round: number }>({
+    needed: false,
+    token: null,
+    round: 0,
+  });
   const heading = useRef<HTMLHeadingElement>(null);
   const firstStep = useRef(true);
 
@@ -141,7 +179,23 @@ export function AuthForm({
     setInfo(message);
     setCode("");
     setShowPassword(false);
+    setRecovery(false);
     if (next !== "signIn") setPassword("");
+  };
+
+  /** The CAPTCHA token for this attempt, if there is one; spent once sent. */
+  const captchaOptions = () => {
+    if (!captcha.token) return undefined;
+    const token = captcha.token;
+    setCaptcha((current) => ({ ...current, token: null, round: current.round + 1 }));
+    return { headers: { "x-captcha-response": token } };
+  };
+
+  const failedWith = (failure: { code?: string; status?: number }) => {
+    if ((failure.code === "CAPTCHA_REQUIRED" || failure.code === "CAPTCHA_INVALID") && turnstileSiteKey) {
+      setCaptcha((current) => (current.needed ? current : { needed: true, token: null, round: current.round + 1 }));
+    }
+    setError(authErrorMessage(failure));
   };
 
   const signedIn = () => {
@@ -151,6 +205,10 @@ export function AuthForm({
 
   const run = (action: () => Promise<void>) => async (event?: FormEvent) => {
     event?.preventDefault();
+    if (captcha.needed && !captcha.token && GUARDED.has(mode)) {
+      setError("Please confirm you're not a robot first.");
+      return;
+    }
     setError(null);
     setPending(true);
     try {
@@ -163,12 +221,13 @@ export function AuthForm({
   };
 
   const sendCode = async (purpose: "sign-in" | "forget-password"): Promise<boolean> => {
+    const options = captchaOptions();
     const { error: failed } =
       purpose === "sign-in"
-        ? await authClient.emailOtp.sendVerificationOtp({ email: email.trim(), type: "sign-in" })
-        : await authClient.emailOtp.requestPasswordReset({ email: email.trim() });
+        ? await authClient.emailOtp.sendVerificationOtp({ email: email.trim(), type: "sign-in" }, options)
+        : await authClient.emailOtp.requestPasswordReset({ email: email.trim() }, options);
     if (failed) {
-      setError(authErrorMessage(failed));
+      failedWith(failed);
       return false;
     }
     setCooldown(RESEND_SECONDS);
@@ -183,18 +242,23 @@ export function AuthForm({
     });
 
   const submitSignIn = run(async () => {
-    const { error: failed } = await authClient.signIn.email({ email: email.trim(), password });
-    if (failed) setError(authErrorMessage(failed));
+    const { data, error: failed } = await authClient.signIn.email({ email: email.trim(), password }, captchaOptions());
+    if (failed) failedWith(failed);
+    else if (needsSecondStep(data)) go("twoFactor");
     else signedIn();
   });
 
   const submitCode = run(async () => {
-    const { error: failed } = await authClient.signIn.emailOtp({
-      email: email.trim(),
-      otp: code.trim(),
-      ...(creating && name.trim() ? { name: name.trim() } : {}),
-    });
-    if (failed) setError(authErrorMessage(failed));
+    const { data, error: failed } = await authClient.signIn.emailOtp(
+      {
+        email: email.trim(),
+        otp: code.trim(),
+        ...(creating && name.trim() ? { name: name.trim() } : {}),
+      },
+      captchaOptions(),
+    );
+    if (failed) failedWith(failed);
+    else if (needsSecondStep(data)) go("twoFactor");
     else if (creating) go("password");
     else signedIn();
   });
@@ -208,7 +272,10 @@ export function AuthForm({
     // 409 password_already_set: the address already had an account with a password; the code
     // proved it is theirs, so they are simply signed in.
     if (response.ok || response.status === 409) signedIn();
-    else setError(response.status === 422 ? ERRORS.PASSWORD_TOO_SHORT! : "Something went wrong. Please try again.");
+    else if (response.status === 422) setError(ERRORS.PASSWORD_TOO_SHORT!);
+    else if (response.status === 400) setError(ERRORS.PASSWORD_COMPROMISED!);
+    else if (response.status === 503) setError(ERRORS.PASSWORD_CHECK_UNAVAILABLE!);
+    else setError("Something went wrong. Please try again.");
   });
 
   const submitForgot = run(async () => {
@@ -216,15 +283,33 @@ export function AuthForm({
   });
 
   const submitReset = run(async () => {
-    const { error: failed } = await authClient.emailOtp.resetPassword({ email: email.trim(), otp: code.trim(), password });
+    const { error: failed } = await authClient.emailOtp.resetPassword(
+      { email: email.trim(), otp: code.trim(), password },
+      captchaOptions(),
+    );
     if (failed) {
-      setError(authErrorMessage(failed));
+      failedWith(failed);
       return;
     }
     // Every device was signed out; this one signs in with the new password.
     const signed = await authClient.signIn.email({ email: email.trim(), password });
     if (signed.error) go("signIn", "Password changed. Sign in with your new password.");
+    else if (needsSecondStep(signed.data)) go("twoFactor", "Password changed. Now the second step.");
     else signedIn();
+  });
+
+  const submitSecondStep = run(async () => {
+    const { error: failed } = recovery
+      ? await authClient.twoFactor.verifyBackupCode({ code: code.trim() })
+      : await authClient.twoFactor.verifyTotp({ code: code.trim() });
+    if (!failed) {
+      signedIn();
+      return;
+    }
+    if (failed.code === "INVALID_TWO_FACTOR_COOKIE" || failed.code === "TOO_MANY_ATTEMPTS_REQUEST_NEW_CODE") {
+      go("signIn");
+    }
+    setError(authErrorMessage(failed));
   });
 
   const withGoogle = run(async () => {
@@ -333,6 +418,42 @@ export function AuthForm({
       </div>
     </>
   ) : null;
+
+  const secondStepField = recovery ? (
+    <Field label="Recovery code" hint="One of the codes you saved when you turned on two-step sign-in. Each works once.">
+      {(id, hintId) => (
+        <input
+          id={id}
+          autoComplete="off"
+          autoCapitalize="none"
+          spellCheck={false}
+          maxLength={20}
+          required
+          aria-describedby={hintId}
+          value={code}
+          onChange={(event) => setCode(event.target.value.trim())}
+          className={`${inputClass} font-mono tracking-[0.15em]`}
+        />
+      )}
+    </Field>
+  ) : (
+    <Field label="Authenticator code" hint="The 6-digit code your authenticator app shows for PadhAI.">
+      {(id, hintId) => (
+        <input
+          id={id}
+          inputMode="numeric"
+          autoComplete="one-time-code"
+          pattern={"\\d{6}"}
+          maxLength={6}
+          required
+          aria-describedby={hintId}
+          value={code}
+          onChange={(event) => setCode(event.target.value.replace(/\D/g, ""))}
+          className={`${inputClass} font-mono tracking-[0.3em]`}
+        />
+      )}
+    </Field>
+  );
 
   const resendButton = (
     <button type="button" onClick={() => void resend()} disabled={cooldown > 0 || pending || !email} className={linkClass}>
@@ -459,7 +580,35 @@ export function AuthForm({
         </>
       );
       break;
+    case "twoFactor":
+      lead = recovery
+        ? "Lost your phone? Use one of your recovery codes."
+        : "Your account has two-step sign-in. Enter the code from your authenticator app.";
+      cta = "Continue";
+      onSubmit = submitSecondStep;
+      body = secondStepField;
+      footer = (
+        <>
+          <button
+            type="button"
+            onClick={() => {
+              setRecovery((using) => !using);
+              setCode("");
+              setError(null);
+            }}
+            className={linkClass}
+          >
+            {recovery ? "Use my authenticator app" : "Use a recovery code"}
+          </button>
+          <button type="button" onClick={() => go("signIn")} className={linkClass}>
+            Start again
+          </button>
+        </>
+      );
+      break;
   }
+
+  const showCaptcha = captcha.needed && turnstileSiteKey !== null && GUARDED.has(mode);
 
   return (
     <div className="w-full">
@@ -473,6 +622,13 @@ export function AuthForm({
         {(mode === "signIn" || mode === "signUp") && googleButton}
         <form onSubmit={onSubmit} className="flex flex-col gap-4" aria-busy={pending}>
           {body}
+          {showCaptcha && (
+            <Turnstile
+              key={captcha.round}
+              siteKey={turnstileSiteKey}
+              onToken={(token) => setCaptcha((current) => ({ ...current, token }))}
+            />
+          )}
           <div aria-live="polite">
             {info && !error && (
               <p role="status" className="rounded-xl border border-info/20 bg-info-soft px-3 py-2 text-sm text-info">

@@ -28,7 +28,7 @@
 import "katex/contrib/mhchem";
 import { Image as ImageIcon } from "lucide-react";
 import { Fragment, memo } from "react";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, JSX, ReactNode } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import rehypeKatex from "rehype-katex";

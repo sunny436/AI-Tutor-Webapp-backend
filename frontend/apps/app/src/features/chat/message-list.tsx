@@ -22,7 +22,7 @@ export function isEmptyChat(entry: ChatEntry | undefined): boolean {
  * The scrolling transcript. Subscribes to the conversation's `order` and status
  * only — never to message content — so streaming does not re-render it.
  */
-export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef: React.RefObject<HTMLDivElement> }) {
+export function MessageList({ chatKey, scrollRef }: { chatKey: string; scrollRef: React.RefObject<HTMLDivElement | null> }) {
   const { chat } = useStores();
   const entry = useChatEntry(chatKey);
   const contentRef = useRef<HTMLDivElement>(null);

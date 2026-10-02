@@ -44,7 +44,7 @@ export default async function AppLayout({ children }: { children: ReactNode }) {
   ]);
 
   if (session.status === "unauthorized") {
-    const here = safeRedirect(headers().get("x-pathname"));
+    const here = safeRedirect((await headers()).get("x-pathname"));
     redirect(`/api/session/expired${here !== "/" ? `?redirect=${encodeURIComponent(here)}` : ""}`);
   }
   if (session.status !== "ok") return <ServiceUnavailable />;

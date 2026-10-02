@@ -14,7 +14,8 @@ export const metadata: Metadata = {
  * The link at the bottom of a reminder or alert email. Public (lib/server/gate.ts): it works
  * signed in, signed out, or on a device that was never signed in.
  */
-export default function UnsubscribePage({ searchParams }: { searchParams: { token?: string | string[] } }) {
+export default async function UnsubscribePage(props: { searchParams: Promise<{ token?: string | string[] }> }) {
+  const searchParams = await props.searchParams;
   const token = typeof searchParams.token === "string" && searchParams.token ? searchParams.token : null;
   return (
     <div className="relative flex min-h-dvh w-full flex-col bg-background">

@@ -275,3 +275,49 @@ def test_migration_0012_keeps_every_account_and_both_releases_agree():
         assert run(_query("SELECT count(*) FROM auth_accounts"))[0][0] == 2
     finally:
         run(_admin('DROP DATABASE IF EXISTS "aichat_migrations_test" WITH (FORCE)'))
+
+
+def test_migration_0013_two_step_sign_in_is_additive_and_rolls_back_cleanly():
+    """0013 adds a column with a default and a table: every existing row is untouched (the release
+    before it runs on this schema), the web app's role can reach the new table, and a downgrade
+    leaves exactly the 0012 schema again."""
+    run(_admin('DROP DATABASE IF EXISTS "aichat_migrations_test" WITH (FORCE)'))
+    run(_admin('CREATE DATABASE "aichat_migrations_test"'))
+    try:
+        alembic("upgrade", AUTH_AFTER)
+        run(
+            _query(
+                "INSERT INTO users (email, password_hash, email_verified_at) VALUES ('two@example.com', '$a', now())"
+            )
+        )
+        before = run(_snapshot(new_tables=()))
+
+        alembic("upgrade", "0013_two_factor")
+        assert run(_query("SELECT two_factor_enabled FROM users"))[0][0] is False
+        user_id = run(_query("SELECT id FROM users"))[0][0]
+        run(_query("INSERT INTO auth_two_factors (user_id, secret, backup_codes) VALUES ($1, 's', 'b')", user_id))
+        run(
+            _query(
+                "INSERT INTO user_notifications (user_id, kind, title, body, dedup_key) "
+                "VALUES ($1, 'security_two_factor_on', 't', 'b', 'k')",
+                user_id,
+            )
+        )
+        grants = {
+            row["privilege_type"]
+            for row in run(
+                _query(
+                    "SELECT privilege_type FROM information_schema.role_table_grants "
+                    "WHERE grantee = 'aichat_auth' AND table_name = 'auth_two_factors'"
+                )
+            )
+        }
+        assert grants == {"SELECT", "INSERT", "UPDATE", "DELETE"}
+
+        alembic("downgrade", AUTH_AFTER)
+        assert run(_query("SELECT to_regclass('public.auth_two_factors') AS t"))[0]["t"] is None
+        assert run(_snapshot(new_tables=())) == before
+        alembic("upgrade", "0013_two_factor")
+        assert run(_query("SELECT count(*) FROM users"))[0][0] == 1
+    finally:
+        run(_admin('DROP DATABASE IF EXISTS "aichat_migrations_test" WITH (FORCE)'))

@@ -15,8 +15,8 @@ const NEAR_BOTTOM_PX = 80;
  * message) re-attaches it.
  */
 export function useStickToBottom(
-  scrollRef: RefObject<HTMLElement>,
-  contentRef: RefObject<HTMLElement>,
+  scrollRef: RefObject<HTMLElement | null>,
+  contentRef: RefObject<HTMLElement | null>,
   resetKey: string,
 ) {
   const stick = useRef(true);

@@ -11,7 +11,15 @@ from sqlalchemy import func, select, update
 
 from app.auth.retention import purge_expired
 from app.auth.service import SIGNIN_LIMIT, SIGNIN_SCOPE
-from app.db.models import AuthAccount, AuthAttempt, AuthSession, AuthVerification, User, UserNotification
+from app.db.models import (
+    AuthAccount,
+    AuthAttempt,
+    AuthSession,
+    AuthTwoFactor,
+    AuthVerification,
+    User,
+    UserNotification,
+)
 from tests.conftest import PASSWORD, register, sign_in
 
 INTERNAL = {"X-Internal-Token": "test-internal-token-that-is-long-enough-1234"}
@@ -228,6 +236,32 @@ async def test_password_and_google_notices_need_the_change_to_be_real(client, ap
         await s.commit()
     await client.post("/internal/auth/events", json=body, headers=INTERNAL)
     assert len(outbox) == 2 and "Google" in outbox[1]["subject"]
+
+
+async def test_two_step_accounts_confirm_with_a_recent_full_sign_in_and_are_told_of_changes(client, app):
+    account = await register(client, app)
+    async with app.state.db.sessionmaker() as s:
+        user = await s.scalar(select(User).where(User.email == account["email"]))
+        user.two_factor_enabled = True
+        s.add(AuthTwoFactor(user_id=user.id, secret="encrypted", backup_codes="encrypted", verified=True))
+        await s.commit()
+        user_id = str(user.id)
+    # The password alone, on a session older than 15 minutes, does not delete a two-step account.
+    old = await sign_in(app, account["email"], created_at=datetime.now(UTC) - timedelta(hours=1))
+    refused = await client.request("DELETE", "/v1/me", json={"password": PASSWORD}, headers=old["headers"])
+    assert refused.status_code == 409 and refused.json()["error"]["code"] == "reauth_required"
+
+    # Turned on moments ago (users.updated_at is fresh): told. A forged "off" is not.
+    outbox = app.state.email_sender.outbox
+    on = {"kind": "two_factor_on", "userId": user_id}
+    assert (await client.post("/internal/auth/events", json=on, headers=INTERNAL)).status_code == 202
+    assert len(outbox) == 1 and "turned on" in outbox[0]["subject"]
+    await client.post("/internal/auth/events", json={"kind": "two_factor_off", "userId": user_id}, headers=INTERNAL)
+    assert len(outbox) == 1
+
+    # A fresh sign-in (both steps) with the password does.
+    deleted = await client.request("DELETE", "/v1/me", json={"password": PASSWORD}, headers=account["headers"])
+    assert deleted.status_code == 204
 
 
 async def test_retention_purges_auth_leftovers_and_never_a_verified_user(client, app):

@@ -48,6 +48,7 @@ for name in AUTH_DATABASE_URL BETTER_AUTH_SECRET AUTH_INTERNAL_TOKEN; do grep -q
   && ok "AUTH_INTERNAL_TOKEN set and the same in api.env and web.env" || bad "AUTH_INTERNAL_TOKEN missing or different in api.env and web.env"
 web_auth_ok "$WEB_PORT" && ok "web sign-in database reachable (/api/health)" || bad "web reports its sign-in database unavailable (/api/health)"
 grep -qE '^GOOGLE_CLIENT_ID=.+' "$SECRETS/web.env" 2> /dev/null && info "Google sign-in: configured" || info "Google sign-in: not configured (the button is hidden)"
+grep -qE '^TURNSTILE_SECRET_KEY=.+' "$SECRETS/web.env" 2> /dev/null && info "CAPTCHA (Turnstile): configured" || info "CAPTCHA (Turnstile): not configured (adaptive CAPTCHA off)"
 public=$(sed -n 's/^NEXT_PUBLIC_SITE_URL=//p' "$SECRETS/web.env" 2> /dev/null)
 if [ -n "$public" ]; then info "public $public/login -> $(curl -s -o /dev/null -w '%{http_code}' --max-time 5 "$public/login" || true) (information: Cloudflare/DNS)"; fi
 jobs_timer=$(systemctl is-enabled aichat-jobs.timer 2> /dev/null); info "jobs worker: aichat-jobs.timer ${jobs_timer:-not installed}"

@@ -10,10 +10,10 @@ import { proxyRequest } from "@/lib/server/proxy-core";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-type Context = { params: { path?: string[] } };
+type Context = { params: Promise<{ path?: string[] }> };
 
 async function handle(request: Request, { params }: Context): Promise<Response> {
-  return proxyRequest(request, params.path ?? [], { apiBaseUrl: apiBaseUrl(), cookieSecret: authSecret() });
+  return proxyRequest(request, (await params).path ?? [], { apiBaseUrl: apiBaseUrl(), cookieSecret: authSecret() });
 }
 
 export { handle as DELETE, handle as GET, handle as PATCH, handle as POST, handle as PUT };

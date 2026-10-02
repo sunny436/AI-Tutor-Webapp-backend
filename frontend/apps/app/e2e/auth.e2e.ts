@@ -1,7 +1,7 @@
 import type { APIRequestContext, Browser } from "@playwright/test";
 
 import { APP_URL } from "./env";
-import { PASSWORD, SAME_ORIGIN, createAccount, deleteAccount, expect, mailCode, test, uniqueEmail } from "./support";
+import { PASSWORD, SAME_ORIGIN, createAccount, deleteAccount, expect, mailCode, test, totp, uniqueEmail } from "./support";
 
 /**
  * The critical identity flows on Better Auth (lib/auth) with the API checking every session
@@ -121,6 +121,67 @@ test("only the Better Auth routes this app uses exist", async ({ request }) => {
     const response = await request.post(`${APP_URL}${path}`, { data: {}, headers: SAME_ORIGIN });
     expect(response.status(), path).toBe(404);
   }
+});
+
+test("two-step sign-in: turned on in Settings, then asked for by password, by email code and at deletion", async ({
+  page,
+  browser,
+}) => {
+  const { email, password } = await createAccount(page, "twostep");
+  await page.goto("/settings/privacy");
+  await page.getByRole("button", { name: "Turn on two-step sign-in" }).click();
+  await page.getByLabel("Your password").fill(password);
+  await page.getByRole("button", { name: "Continue" }).click();
+  await expect(page.getByRole("img", { name: "QR code for your authenticator app" })).toBeVisible();
+  await expect(page.getByRole("list", { name: "Recovery codes" }).getByRole("listitem")).toHaveCount(10);
+  const recovery = (await page.getByRole("list", { name: "Recovery codes" }).getByRole("listitem").first().textContent()) ?? "";
+  const setupKey = ((await page.getByText(/^Setup key:/).textContent()) ?? "").replace("Setup key:", "");
+  await page.getByLabel("3. Enter the 6-digit code the app shows").fill(totp(setupKey));
+  await page.getByRole("button", { name: "Turn on", exact: true }).click();
+  await expect(page.getByText("Two-step sign-in is on.")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Turn off" })).toBeVisible();
+
+  // A password alone no longer signs in: the form asks for the second step, and no session exists yet.
+  const other = await browser.newContext({ baseURL: APP_URL });
+  const form = await other.newPage();
+  await form.goto("/login");
+  await form.getByLabel("Email").fill(email);
+  await form.getByLabel("Password", { exact: true }).fill(password);
+  await form.getByRole("button", { name: "Sign in" }).click();
+  await expect(form.getByRole("heading", { name: "Two-step sign-in" })).toBeVisible();
+  expect((await form.request.get("/api/v1/me")).status()).toBe(401);
+  // The code used to turn it on is spent; the app's next code works.
+  await form.getByLabel("Authenticator code").fill(totp(setupKey));
+  await form.getByRole("button", { name: "Continue" }).click();
+  await expect(form.getByRole("alert").filter({ hasText: "That code was just used" })).toBeVisible();
+  await form.getByLabel("Authenticator code").fill(totp(setupKey, Date.now() + 30_000));
+  await form.getByRole("button", { name: "Continue" }).click();
+  await expect(form).toHaveURL(`${APP_URL}/`);
+  expect((await form.request.get("/api/v1/me")).status()).toBe(200);
+  await other.close();
+
+  // An email code is a first step too: then a recovery code (once).
+  const third = await browser.newContext({ baseURL: APP_URL });
+  await third.request.post("/api/auth/email-otp/send-verification-otp", { data: { email, type: "sign-in" }, headers: SAME_ORIGIN });
+  const byCode = await third.request.post("/api/auth/sign-in/email-otp", {
+    data: { email, otp: await mailCode(email, "signin") },
+    headers: SAME_ORIGIN,
+  });
+  expect(byCode.status()).toBe(200);
+  expect(await byCode.json()).toMatchObject({ twoFactorRedirect: true });
+  expect((await third.request.get("/api/v1/me")).status()).toBe(401);
+  const second = await third.request.post("/api/auth/two-factor/verify-backup-code", {
+    data: { code: recovery.trim() },
+    headers: SAME_ORIGIN,
+  });
+  expect(second.status()).toBe(200);
+  expect(await second.text()).not.toMatch(/"token"/);
+  expect((await third.request.get("/api/v1/me")).status()).toBe(200);
+  await third.close();
+
+  // The first session is fresh (both steps, minutes ago): the password deletes the account.
+  await deleteAccount(page, password);
+  expect((await page.request.get("/api/v1/me")).status()).toBe(401);
 });
 
 test("Google: offered only when configured, and a cancelled sign-in says so", async ({ page }) => {

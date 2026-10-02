@@ -3,8 +3,8 @@ Better Auth signed someone in or changed how they sign in.
 
 - A sign-in from a device the account has no other live session on: an alert, emailed unless
   the student turned sign-in alerts off.
-- A password change or reset, and a Google account linked: always emailed, since each is how the
-  owner learns that someone else may have taken the account.
+- A password change or reset, a Google account linked, and two-step sign-in turned on or off:
+  always emailed, since each is how the owner learns that someone else may have taken the account.
 
 Each notice is written to the app's bell at once (app/notifications/inbox.py) and returned as an
 email for the caller to send right after it commits. They are transactional, like sign-in codes:
@@ -88,4 +88,19 @@ async def google_linked_alert(session: AsyncSession, settings: Settings, user: U
     )
     return emails.google_linked(
         settings.app_name, local_time(settings, user, moment), settings_link(settings, "privacy")
+    )
+
+
+async def two_factor_alert(session: AsyncSession, settings: Settings, user: User, on: bool, moment: datetime) -> Email:
+    await notify(
+        session,
+        user.id,
+        kind="security_two_factor_on" if on else "security_two_factor_off",
+        title="Two-step sign-in was turned on" if on else "Two-step sign-in was turned off",
+        body=f"{local_time(settings, user, moment)}. Not you? Change your password now.",
+        link="/settings/privacy",
+        dedup_key=f"security-two-factor:{uuid.uuid4()}",
+    )
+    return emails.two_factor(
+        settings.app_name, on, local_time(settings, user, moment), settings_link(settings, "privacy")
     )

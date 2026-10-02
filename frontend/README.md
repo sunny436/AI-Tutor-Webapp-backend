@@ -1,7 +1,7 @@
 # Assistant — web app
 
 A ChatGPT-style chat app: sign in, chat with an AI assistant, keep your
-conversations. Next.js 14 (App Router), React 18, TypeScript, Tailwind 3,
+conversations. Next.js 15 (App Router), React 19, TypeScript, Tailwind 3,
 Radix.
 
 This folder is the **frontend** of the application repository. Accounts,

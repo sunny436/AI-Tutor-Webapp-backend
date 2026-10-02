@@ -1,5 +1,7 @@
 "use client";
 
+import type { JSX } from "react";
+
 import { AcademicSection } from "./academic-section";
 import { AppearanceSection } from "./appearance-section";
 import { GoalsSection } from "./goals-section";

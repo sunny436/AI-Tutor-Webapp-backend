@@ -8,7 +8,7 @@ import { isUuid } from "@/lib/api/routes";
  * (A well-formed id that is missing, or not yours, is handled in the chat view:
  * the API answers 404 either way.)
  */
-export default function ConversationPage({ params }: { params: { conversationId: string } }) {
-  if (!isUuid(params.conversationId)) notFound();
+export default async function ConversationPage({ params }: { params: Promise<{ conversationId: string }> }) {
+  if (!isUuid((await params).conversationId)) notFound();
   return null;
 }

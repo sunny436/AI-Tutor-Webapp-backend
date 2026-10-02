@@ -30,11 +30,17 @@ const KATEX = createRequire(import.meta.url).resolve("katex").replace(/katex\.js
  * XSS defence; this policy is the second line — it stops injected content from
  * loading remote scripts or sending data anywhere but here. Dev adds
  * 'unsafe-eval' and ws: for Fast Refresh only.
+ *
+ * One outside origin: Cloudflare Turnstile (challenges.cloudflare.com), the CAPTCHA the sign-in
+ * form shows only when an address is being hammered (lib/auth/config.ts). Its script, and the
+ * iframe it draws the check in.
  */
 const isDev = process.env.NODE_ENV !== "production";
+const TURNSTILE = "https://challenges.cloudflare.com";
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' ${TURNSTILE}${isDev ? " 'unsafe-eval'" : ""}`,
+  `frame-src ${TURNSTILE}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
@@ -87,7 +93,8 @@ const nextConfig = {
   // one CPU, so mermaid, pdf.js and the other reply libraries do not push the build over it.
   // `pg` (Better Auth's database, lib/auth) stays a plain Node require: bundling it pulls in its
   // optional native driver.
-  experimental: { webpackBuildWorker: true, cpus: 1, serverComponentsExternalPackages: ["pg"] },
+  experimental: { webpackBuildWorker: true, cpus: 1 },
+  serverExternalPackages: ["pg"],
   // Do not advertise the framework version to scanners.
   poweredByHeader: false,
   // No next/image here, so no image optimizer: /_next/image answers 404 (Next 14 has open

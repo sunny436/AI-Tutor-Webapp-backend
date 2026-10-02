@@ -6,9 +6,11 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Input } from "@v1/ui/input";
 import { Skeleton, SkeletonGroup } from "@v1/ui/skeleton";
 import { Laptop } from "lucide-react";
-import { type FormEvent, useCallback, useEffect, useId, useState } from "react";
+import { type FormEvent, type ReactNode, useCallback, useEffect, useId, useState } from "react";
 import { toast } from "sonner";
 
+import { authErrorMessage } from "@/components/auth-form";
+import { QrCode } from "@/components/qr-code";
 import { useUser } from "@/components/user-context";
 import { useStores } from "@/features/chat/chat-context";
 import { deleteAccount, getMe, revokeOtherSessions } from "@/lib/api/auth";
@@ -32,17 +34,21 @@ function needsFreshSignIn(error: unknown): boolean {
 
 const SIGN_IN_AGAIN = "For your security, sign out and sign in again, then try within 15 minutes.";
 
-/** The account's ways to sign in (Better Auth's accounts): a password, Google (its account row id). */
-type Methods = { password: boolean; google: string | null } | null;
+/**
+ * The account's ways to sign in (Better Auth's accounts): a password, Google (its account row id),
+ * and whether two-step sign-in is on (Better Auth's session user).
+ */
+type Methods = { password: boolean; google: string | null; twoFactor: boolean } | null;
 
 function useSignInMethods(): [Methods, () => Promise<void>] {
   const [methods, setMethods] = useState<Methods>(null);
   const load = useCallback(async () => {
-    const { data } = await authClient.listAccounts();
+    const [{ data }, session] = await Promise.all([authClient.listAccounts(), authClient.getSession()]);
     const accounts = data ?? [];
     setMethods({
       password: accounts.some((account) => account.providerId === "credential"),
       google: accounts.find((account) => account.providerId === "google")?.id ?? null,
+      twoFactor: (session.data?.user as { twoFactorEnabled?: boolean } | undefined)?.twoFactorEnabled === true,
     });
   }, []);
   useEffect(() => {
@@ -81,11 +87,11 @@ function PasswordCard({ hasPassword, onSet }: { hasPassword: boolean; onSet: () 
         });
         if (failed) {
           setError(
-            failed.status === 429
-              ? "Too many attempts. Please wait a few minutes and try again."
-              : failed.code === "INVALID_PASSWORD"
-                ? "Your current password isn't right."
-                : "Something went wrong. Please try again.",
+            failed.code === "INVALID_PASSWORD"
+              ? "Your current password isn't right."
+              : failed.code === "SESSION_NOT_FRESH"
+                ? SIGN_IN_AGAIN
+                : authErrorMessage(failed),
           );
           return;
         }
@@ -102,7 +108,13 @@ function PasswordCard({ hasPassword, onSet }: { hasPassword: boolean; onSet: () 
           return;
         }
         if (!response.ok) {
-          setError("Something went wrong. Please try again.");
+          setError(
+            response.status === 400
+              ? authErrorMessage({ code: "PASSWORD_COMPROMISED" })
+              : response.status === 503
+                ? authErrorMessage({ code: "PASSWORD_CHECK_UNAVAILABLE" })
+                : "Something went wrong. Please try again.",
+          );
           return;
         }
         toast.success("Password set. Your other devices have been signed out.");
@@ -327,7 +339,7 @@ function GoogleCard({ accountId, onChange }: { accountId: string | null; onChang
     });
     if (failed) {
       setPending(false);
-      setError("Google didn't connect. Please try again.");
+      setError(failed.code === "SESSION_NOT_FRESH" ? SIGN_IN_AGAIN : "Google didn't connect. Please try again.");
     }
   };
 
@@ -374,6 +386,239 @@ function GoogleCard({ accountId, onChange }: { accountId: string | null; onChang
         )
       }
     >
+      {error && (
+        <p role="alert" className="text-sm text-destructive">
+          {error}
+        </p>
+      )}
+    </SettingsCard>
+  );
+}
+
+type TwoFactorStage =
+  | { step: "idle" }
+  | { step: "password"; action: "enable" | "disable" | "codes" }
+  | { step: "scan"; uri: string; secret: string; codes: string[] }
+  | { step: "codes"; codes: string[] };
+
+/** Better Auth's two-step answers in this app's words. */
+function twoFactorError(failure: { code?: string; status?: number }): string {
+  if (failure.code === "INVALID_PASSWORD") return "That password isn't right.";
+  if (failure.code === "SESSION_NOT_FRESH") return SIGN_IN_AGAIN;
+  return authErrorMessage(failure);
+}
+
+function RecoveryCodes({ codes }: { codes: string[] }) {
+  return (
+    <div className="flex flex-col gap-2">
+      <p className="text-sm text-text-secondary">
+        Save these recovery codes somewhere safe (not on the phone with your authenticator). Each one signs you
+        in once if you lose your phone. They are shown only now.
+      </p>
+      <ul aria-label="Recovery codes" className="grid grid-cols-2 gap-1.5 rounded-xl border border-border bg-surface-2 p-3 font-mono text-sm">
+        {codes.map((code) => (
+          <li key={code}>{code}</li>
+        ))}
+      </ul>
+      <div>
+        <Button
+          type="button"
+          size="sm"
+          variant="outline"
+          onClick={() =>
+            void navigator.clipboard
+              .writeText(codes.join("\n"))
+              .then(() => toast.success("Recovery codes copied."))
+              .catch(() => toast.error("Couldn't copy. Write them down instead."))
+          }
+        >
+          Copy codes
+        </Button>
+      </div>
+    </div>
+  );
+}
+
+function TwoFactorCard({ enabled, hasPassword, onChange }: { enabled: boolean; hasPassword: boolean; onChange: () => Promise<void> }) {
+  const [stage, setStage] = useState<TwoFactorStage>({ step: "idle" });
+  const [password, setPassword] = useState("");
+  const [code, setCode] = useState("");
+  const [pending, setPending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const passwordId = useId();
+  const codeId = useId();
+  useUnsavedChanges(stage.step === "scan");
+
+  const reset = (next: TwoFactorStage = { step: "idle" }) => {
+    setStage(next);
+    setPassword("");
+    setCode("");
+    setError(null);
+  };
+
+  const withPending = async (action: () => Promise<void>) => {
+    setError(null);
+    setPending(true);
+    try {
+      await action();
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setPending(false);
+    }
+  };
+
+  const confirmPassword = (event: FormEvent) => {
+    event.preventDefault();
+    if (stage.step !== "password") return;
+    void withPending(async () => {
+      if (stage.action === "enable") {
+        const { data, error: failed } = await authClient.twoFactor.enable({ password });
+        if (failed || !data || !("totpURI" in data) || !data.totpURI) {
+          setError(failed ? twoFactorError(failed) : "Something went wrong. Please try again.");
+          return;
+        }
+        const secret = new URL(data.totpURI).searchParams.get("secret") ?? "";
+        reset({ step: "scan", uri: data.totpURI, secret, codes: data.backupCodes ?? [] });
+      } else if (stage.action === "disable") {
+        const { error: failed } = await authClient.twoFactor.disable({ password });
+        if (failed) {
+          setError(twoFactorError(failed));
+          return;
+        }
+        toast.success("Two-step sign-in is off.");
+        reset();
+        await onChange();
+      } else {
+        const { data, error: failed } = await authClient.twoFactor.generateBackupCodes({ password });
+        if (failed || !data) {
+          setError(failed ? twoFactorError(failed) : "Something went wrong. Please try again.");
+          return;
+        }
+        reset({ step: "codes", codes: data.backupCodes });
+      }
+    });
+  };
+
+  const confirmCode = (event: FormEvent) => {
+    event.preventDefault();
+    void withPending(async () => {
+      const { error: failed } = await authClient.twoFactor.verifyTotp({ code: code.trim() });
+      if (failed) {
+        setError(twoFactorError(failed));
+        return;
+      }
+      toast.success("Two-step sign-in is on.");
+      reset();
+      await onChange();
+    });
+  };
+
+  const description = enabled
+    ? "On. Signing in asks for a code from your authenticator app, whichever way you sign in."
+    : hasPassword
+      ? "Protect your account with a code from an authenticator app (such as Google Authenticator or Microsoft Authenticator) each time you sign in."
+      : "Set a password first: turning two-step sign-in on or off needs it.";
+
+  let footer: ReactNode = null;
+  if (stage.step === "idle" && enabled) {
+    footer = (
+      <div className="flex flex-wrap gap-2">
+        <Button type="button" size="sm" variant="outline" onClick={() => reset({ step: "password", action: "codes" })}>
+          New recovery codes
+        </Button>
+        <Button type="button" size="sm" variant="outline" onClick={() => reset({ step: "password", action: "disable" })}>
+          Turn off
+        </Button>
+      </div>
+    );
+  } else if (stage.step === "idle" && hasPassword) {
+    footer = (
+      <Button type="button" size="sm" onClick={() => reset({ step: "password", action: "enable" })}>
+        Turn on two-step sign-in
+      </Button>
+    );
+  }
+
+  return (
+    <SettingsCard title="Two-step sign-in" description={description} footer={footer}>
+      {stage.step === "password" && (
+        <form onSubmit={confirmPassword} className="flex flex-col gap-3">
+          <label htmlFor={passwordId} className="text-sm font-bold text-foreground">
+            Your password
+          </label>
+          <Input
+            id={passwordId}
+            className="w-full sm:max-w-[20rem]"
+            type="password"
+            autoComplete="current-password"
+            required
+            maxLength={PASSWORD_MAX}
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          <div className="flex flex-wrap gap-2">
+            <Button type="submit" size="sm" disabled={pending || !password}>
+              {pending
+                ? "Please wait…"
+                : stage.action === "enable"
+                  ? "Continue"
+                  : stage.action === "disable"
+                    ? "Turn off two-step sign-in"
+                    : "Make new codes"}
+            </Button>
+            <Button type="button" size="sm" variant="outline" onClick={() => reset()} disabled={pending}>
+              Cancel
+            </Button>
+          </div>
+        </form>
+      )}
+      {stage.step === "scan" && (
+        <form onSubmit={confirmCode} className="flex flex-col gap-4">
+          <p className="text-sm text-text-secondary">
+            1. Scan this code with your authenticator app, or enter the setup key by hand.
+          </p>
+          <QrCode value={stage.uri} label="QR code for your authenticator app" />
+          <p className="text-sm">
+            Setup key: <span className="break-all font-mono">{stage.secret.replace(/(.{4})/g, "$1 ").trim()}</span>
+          </p>
+          <p className="text-sm text-text-secondary">2. Save your recovery codes.</p>
+          <RecoveryCodes codes={stage.codes} />
+          <label htmlFor={codeId} className="text-sm font-bold text-foreground">
+            3. Enter the 6-digit code the app shows
+          </label>
+          <Input
+            id={codeId}
+            className="w-full font-mono tracking-[0.3em] sm:max-w-[12rem]"
+            inputMode="numeric"
+            autoComplete="one-time-code"
+            pattern={"\\d{6}"}
+            maxLength={6}
+            required
+            value={code}
+            onChange={(event) => setCode(event.target.value.replace(/\D/g, ""))}
+          />
+          <div className="flex flex-wrap gap-2">
+            <Button type="submit" size="sm" disabled={pending || code.length !== 6}>
+              {pending ? "Checking…" : "Turn on"}
+            </Button>
+            <Button type="button" size="sm" variant="outline" onClick={() => reset()} disabled={pending}>
+              Cancel
+            </Button>
+          </div>
+        </form>
+      )}
+      {stage.step === "codes" && (
+        <div className="flex flex-col gap-3">
+          <RecoveryCodes codes={stage.codes} />
+          <p className="text-sm text-text-secondary">Your old recovery codes no longer work.</p>
+          <div>
+            <Button type="button" size="sm" onClick={() => reset()}>
+              Done
+            </Button>
+          </div>
+        </div>
+      )}
       {error && (
         <p role="alert" className="text-sm text-destructive">
           {error}
@@ -497,6 +742,7 @@ export function PrivacySection({ googleEnabled }: SectionProps) {
         ) : (
           <>
             <PasswordCard hasPassword={methods.password} onSet={reload} />
+            <TwoFactorCard enabled={methods.twoFactor} hasPassword={methods.password} onChange={reload} />
             {(googleEnabled || methods.google) && <GoogleCard accountId={methods.google} onChange={reload} />}
           </>
         )}

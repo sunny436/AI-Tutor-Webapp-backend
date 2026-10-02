@@ -19,6 +19,8 @@ openrouter.txt
 dummy_account.txt
 # The Google OAuth client for sign-in with Google (line 1 the id, line 2 the secret)
 google_oauth.txt
+google_auth.txt
+turnstile.txt
 
 # Local leftovers of the retired stack
 node_modules/

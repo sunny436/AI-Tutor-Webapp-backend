@@ -16,7 +16,7 @@ Browser ──► Cloudflare ──► frontend/  Next.js web app + server-side 
 
 | What | Where |
 |---|---|
-| Web app (Next.js 14, Bun + Turborepo) | [frontend/](frontend/) |
+| Web app (Next.js 15, Bun + Turborepo) | [frontend/](frontend/) |
 | API (FastAPI, SQLAlchemy async, Alembic) | [backend/](backend/) |
 | The contract between them | [docs/openapi.json](docs/openapi.json), [docs/api-contract.md](docs/api-contract.md), [docs/frontend-integration.md](docs/frontend-integration.md) |
 | Architecture and extension points | [docs/architecture.md](docs/architecture.md), [docs/rag.md](docs/rag.md) |

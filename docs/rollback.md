@@ -41,6 +41,12 @@ the SHA-256 of its token, whichever release wrote it. If a deploy stops after re
 with the old web build back (`STOP: the new frontend did not start`), roll back at once:
 `bun run rollback`.
 
+**Two-step sign-in across a rollback past 2026-10-02 (migration 0013).** The older release runs on
+this schema, but it does not know two-step sign-in: until this release is deployed again, accounts
+that turned it on sign in with their password or an email code alone. Their authenticator setup is
+kept and applies again after the redeploy. The older release also runs on Next 14.2.35 (open
+advisories): roll forward as soon as possible.
+
 Students' files are database rows: a rollback keeps them (older code ignores the tables that hold
 them), and deploying `main` again brings the File Library back. To stop only file processing, use
 the kill switch instead of a rollback (`FILES_ENABLED=false`, [deployment.md](deployment.md#file-library-appfiles)).

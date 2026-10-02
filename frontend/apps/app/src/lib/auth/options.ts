@@ -5,3 +5,9 @@
 export function googleEnabled(env: Record<string, string | undefined> = process.env): boolean {
   return Boolean(env.GOOGLE_CLIENT_ID?.trim() && env.GOOGLE_CLIENT_SECRET?.trim());
 }
+
+/** Turnstile's public site key when the CAPTCHA is configured (both keys), else null. */
+export function turnstileSiteKey(env: Record<string, string | undefined> = process.env): string | null {
+  const siteKey = env.TURNSTILE_SITE_KEY?.trim();
+  return siteKey && env.TURNSTILE_SECRET_KEY?.trim() ? siteKey : null;
+}

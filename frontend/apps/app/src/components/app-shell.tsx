@@ -89,7 +89,7 @@ function Header({
 }: {
   collapsed: boolean;
   onToggleCollapse: () => void;
-  headingRef: RefObject<HTMLHeadingElement>;
+  headingRef: RefObject<HTMLHeadingElement | null>;
 }) {
   const pathname = usePathname();
   const preview = usePreview();

@@ -77,6 +77,10 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
             ),
             {"i": f"forget-password-otp-{account['email']}"},
         )
+        await db.execute(  # an authenticator secret and recovery codes (two-step sign-in, set up)
+            text("INSERT INTO auth_two_factors (user_id, secret, backup_codes) VALUES (:u, 'enc', 'enc')"),
+            {"u": uuid.UUID(user_id)},
+        )
         await queue_email(  # an email waiting in the outbox for this student
             db,
             kind=WEEKLY_SUMMARY,

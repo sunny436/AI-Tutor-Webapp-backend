@@ -29,6 +29,13 @@ export const AUTH_ROUTES: ReadonlySet<string> = new Set([
   "POST /change-password",
   "POST /link-social",
   "POST /unlink-account",
+  // Two-step sign-in: turning it on (then the first code), off, new recovery codes, and the
+  // second step at sign-in (an authenticator code, or a recovery code).
+  "POST /two-factor/enable",
+  "POST /two-factor/disable",
+  "POST /two-factor/generate-backup-codes",
+  "POST /two-factor/verify-totp",
+  "POST /two-factor/verify-backup-code",
 ]);
 
 /** Better Auth routes this app never uses (its own 404, behind the allowlist). */
@@ -55,6 +62,10 @@ export const DISABLED_PATHS = [
   "/forget-password/email-otp",
   "/email-otp/request-email-change",
   "/email-otp/change-email",
+  "/two-factor/get-totp-uri", // the secret is shown once, when it is turned on
+  "/two-factor/send-otp", // the second step is an authenticator, not another email
+  "/two-factor/verify-otp",
+  "/two-factor/view-backup-codes",
 ];
 
 const PATH = /^\/[a-z]+(?:-[a-z]+)*(?:\/[a-z]+(?:-[a-z]+)*)?$/;

@@ -29,11 +29,11 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.auth.devices import device_label
 from app.auth.emails import EmailSender, code_email
 from app.auth.service import utcnow
-from app.db.models import AuthAccount, AuthSession, AuthVerification, User
+from app.db.models import AuthAccount, AuthSession, AuthTwoFactor, AuthVerification, User
 from app.db.session import get_session
 from app.errors import NotFound
 from app.logging import get_logger
-from app.notifications.alerts import google_linked_alert, password_changed_alert, sign_in_alert
+from app.notifications.alerts import google_linked_alert, password_changed_alert, sign_in_alert, two_factor_alert
 from app.schemas import RequestModel
 
 log = get_logger("app.auth.internal")
@@ -62,7 +62,7 @@ class CodeIn(RequestModel):
 
 
 class EventIn(RequestModel):
-    kind: Literal["sign_in", "password_changed", "password_reset", "google_linked"]
+    kind: Literal["sign_in", "password_changed", "password_reset", "google_linked", "two_factor_on", "two_factor_off"]
     user_id: uuid.UUID
     session_id: uuid.UUID | None = None
 
@@ -145,6 +145,13 @@ async def auth_event(
         if linked is not None and linked > now - FRESH and user.created_at < linked - FRESH:
             counted = True
             email = await google_linked_alert(db, settings, user, now)
+    elif user is not None and body.kind in ("two_factor_on", "two_factor_off"):
+        # Better Auth moves users.updated_at when it flips the flag; the row says which way.
+        on = body.kind == "two_factor_on"
+        verified = await db.scalar(select(AuthTwoFactor.verified).where(AuthTwoFactor.user_id == user.id))
+        if user.updated_at > now - FRESH and user.two_factor_enabled == on and (verified is True) == on:
+            counted = True
+            email = await two_factor_alert(db, settings, user, on, now)
     await db.commit()
     log.info(
         "auth event",

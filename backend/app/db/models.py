@@ -93,6 +93,8 @@ IN_APP_KINDS = (
     "security_sign_in",
     "security_password_changed",
     "security_google_linked",
+    "security_two_factor_on",
+    "security_two_factor_off",
 )
 THEMES = ("system", "light", "dark")
 FONT_SIZES = ("small", "medium", "large", "x_large")
@@ -132,6 +134,8 @@ class User(Base):
     avatar_hash: Mapped[str | None] = mapped_column(String(32))  # names the current photo; None = no photo
     password_changed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     image: Mapped[str | None] = mapped_column(Text)  # Better Auth's field; never filled (no Google photos)
+    # Better Auth's two-step sign-in (0013): once true, every sign-in asks for the second step.
+    two_factor_enabled: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
 
 
 class UserAvatar(Base):
@@ -491,6 +495,26 @@ class AuthAccount(Base):
     password: Mapped[str | None] = mapped_column(Text)
     created_at: Mapped[datetime] = _created()
     updated_at: Mapped[datetime] = _created()
+
+
+class AuthTwoFactor(Base):
+    """Better Auth's `twoFactor` (0013): one user's authenticator secret and recovery codes, both
+    encrypted with the web app's BETTER_AUTH_SECRET (the API never reads them), and the failure
+    count that locks the second step after repeated wrong codes. Written by Better Auth only."""
+
+    __tablename__ = "auth_two_factors"
+    __table_args__ = (UniqueConstraint("user_id"),)
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    secret: Mapped[str] = mapped_column(Text, nullable=False)
+    backup_codes: Mapped[str] = mapped_column(Text, nullable=False)
+    verified: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("true"))
+    failed_verification_count: Mapped[int] = mapped_column(Integer, nullable=False, server_default=text("0"))
+    locked_until: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[datetime] = _created()
 
 
 class AuthVerification(Base):

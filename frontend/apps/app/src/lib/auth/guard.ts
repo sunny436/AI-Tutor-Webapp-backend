@@ -53,3 +53,28 @@ export async function reserve(pool: Pool, limit: Limit, key: string): Promise<bo
     client.release();
   }
 }
+
+/**
+ * Counters that only decide when the CAPTCHA is asked for (config.ts): attempts per network
+ * (CF-Connecting-IP) and code requests per address, recorded whether or not the address has an
+ * account, so asking for a CAPTCHA never says which addresses exist.
+ */
+export const WATCH = {
+  signinIp: "signin_ip",
+  codeAskEmail: "code_ask_email",
+  codeAskIp: "code_ask_ip",
+  codeCheckIp: "code_check_ip",
+} as const;
+
+export async function record(pool: Pool, scope: string, key: string): Promise<void> {
+  await pool.query("INSERT INTO auth_attempts (scope, key_hash) VALUES ($1, $2)", [scope, keyHash(key)]);
+}
+
+export async function recent(pool: Pool, scope: string, key: string, minutes: number): Promise<number> {
+  const { rows } = await pool.query<{ n: number }>(
+    "SELECT count(*)::int AS n FROM auth_attempts " +
+      "WHERE scope = $1 AND key_hash = $2 AND created_at > now() - make_interval(mins => $3)",
+    [scope, keyHash(key), minutes],
+  );
+  return rows[0]?.n ?? 0;
+}

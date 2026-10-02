@@ -5,12 +5,14 @@
  * and refuses an account that already has one (that is a change, at /api/auth/change-password).
  *
  * It needs a sign-in in the last 15 minutes: a stolen older session cannot add a password and
- * keep the account. Every other device is signed out, and an established account is told.
+ * keep the account. A password seen in a breach is refused (lib/auth/protection.ts). Every other
+ * device is signed out, and an established account is told.
  */
 
 import { APIError } from "better-auth/api";
 
 import { postInternal } from "@/lib/auth/events";
+import { passwordBreached } from "@/lib/auth/protection";
 import { getAuth } from "@/lib/auth/server";
 import { apiBaseUrl } from "@/lib/server/config";
 import { isSameOrigin } from "@/lib/server/proxy-core";
@@ -35,6 +37,12 @@ export async function POST(request: Request): Promise<Response> {
   const newPassword = body?.newPassword;
   if (typeof newPassword !== "string" || newPassword.length < 8 || newPassword.length > 128) {
     return fail(422, "validation_error");
+  }
+  try {
+    if (await passwordBreached(newPassword)) return fail(400, "password_compromised");
+  } catch {
+    console.error("[auth] breached-password check unavailable");
+    return fail(503, "password_check_unavailable");
   }
   try {
     await auth.api.setPassword({ body: { newPassword }, headers: request.headers });
