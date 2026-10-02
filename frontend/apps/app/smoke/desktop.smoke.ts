@@ -264,7 +264,10 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
       await item.getByRole("button", { name: /^Delete/ }).click();
       await page.getByRole("dialog", { name: "Delete this chat?" }).getByRole("button", { name: "Delete" }).click();
       await expect(row).toHaveCount(0);
-      expect((await page.request.get(`/api/v1/conversations/${id}`)).status()).toBe(404);
+      // The sidebar removes the row at once and deletes in the background: wait for the server.
+      await expect
+        .poll(async () => (await page.request.get(`/api/v1/conversations/${id}`)).status(), { timeout: 15_000 })
+        .toBe(404);
       return `${watch.lengths.length} visible steps; named "${named}"; deleted`;
     } finally {
       // Whatever failed above, the smoke's chat never stays on the account: found by its address,
