@@ -279,7 +279,7 @@ rm -f "$WT/stray.txt"
 (cd "$WT" && printf '\n// never pushed\n' >> frontend/apps/app/src/lib/brand.ts) && "${G[@]}" commit -qam "not pushed"
 ! deploy > "$LOGS/r2.log" 2>&1 && grep -q "is not GitHub main" "$LOGS/r2.log" && pass "a commit that is not GitHub main is refused" || fail "not main (see $LOGS/r2.log)"
 git -C "$WT" reset -q --hard HEAD~1
-! DEPLOY_HOST=root@10.1.30.37 deploy > "$LOGS/r3.log" 2>&1 && grep -q "never deploys to production" "$LOGS/r3.log" && pass "rehearsal mode refuses the production host" || fail "production host (see $LOGS/r3.log)"
+! DEPLOY_HOST=root@10.1.50.94 deploy > "$LOGS/r3.log" 2>&1 && grep -q "never deploys to production" "$LOGS/r3.log" && pass "rehearsal mode refuses the production host" || fail "production host (see $LOGS/r3.log)"
 
 step "data and secrets survived everything"
 [ "$(ssh rehearsal "su postgres -c \"psql -d aichat -tAc 'select note from rehearsal_keep'\"")" = survives ] && pass "database rows survived the cutover and every deploy" || fail "database rows"

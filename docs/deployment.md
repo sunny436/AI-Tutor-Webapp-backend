@@ -85,7 +85,7 @@ what was there before) is a swap without a build. Next.js's build cache is kept 
 bun run status        # read-only: health, what each part runs, GitHub main vs production, MATCH
 ```
 
-On the server (`ssh root@10.1.30.37`):
+On the server (`ssh root@10.1.50.94`):
 
 ```sh
 systemctl status aichat-api aichat-web          # the two services
@@ -227,6 +227,15 @@ All production values live in `/etc/aichat/*.env` (root, mode 600), never in git
 A runtime value takes effect on the next restart of the service; a build-time value
 (`NEXT_PUBLIC_*`) on the next deploy (the frontend is rebuilt when they change).
 
+## Network move (2026-10-12)
+
+The VMs moved networks. Production is now `10.1.50.94` (`ssh root@10.1.50.94`; the deploy, rollback
+and status scripts default to it). Ollima's internal VM address (`http://10.1.30.34:8088/v1`) stopped
+answering, and every reply failed with `llm_timeout`: production's `LLM_PRIMARY_BASE_URL` is now
+Ollima's public gateway, `https://api.ollima.com/v1` (same key, same model `gemini-3.1-flash-lite`).
+When Ollima's new internal address is known, it can replace the gateway: test a chat completion from
+the host with `api.env`'s key first, then restart `aichat-api`.
+
 ## Sign-in (Better Auth)
 
 Better Auth runs in the web app (`frontend/apps/app/src/lib/auth`, docs/architecture.md); the API
@@ -346,7 +355,7 @@ so Settings says the same as the worker does.
 Suggested order, checking the outbox and deliverability at each step:
 
 ```sh
-ssh root@10.1.30.37
+ssh root@10.1.50.94
 # 1. enable the worker, emails still off: retention runs, support forwards go out
 printf 'JOBS_ENABLED=true\nPUBLIC_APP_URL=https://ayur.namahos.com\n' >> /etc/aichat/api.env
 systemctl enable --now aichat-jobs.timer

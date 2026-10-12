@@ -7,9 +7,9 @@
 # Runs deploy/server/status.sh on the host over ssh (units, health, what each part runs, the
 # public URL, the last deploys), then prints GitHub main, the production checkout, the commit
 # the backend and the frontend run, and MATCH or MISMATCH. GitHub CI's verdict on the checkout
-# is shown as information only. --host <user@host>, default root@10.1.30.37 (or $DEPLOY_HOST).
+# is shown as information only. --host <user@host>, default root@10.1.50.94 (or $DEPLOY_HOST).
 set -uo pipefail
-HOST=${DEPLOY_HOST:-root@10.1.30.37}
+HOST=${DEPLOY_HOST:-root@10.1.50.94}
 [ "${1:-}" = --host ] && HOST=${2:?--host needs a value}
 cd "$(git rev-parse --show-toplevel)" || exit 1
 . deploy/summary.sh

@@ -7,13 +7,13 @@
 #
 #   bun run rollback                  the commit that was live before the last deploy
 #   bun run rollback -- <commit>      any earlier commit (see the host's HISTORY or git log)
-#   (--host <user@host>, default root@10.1.30.37)
+#   (--host <user@host>, default root@10.1.50.94)
 #
 # The database is never rolled back: migrations are backward compatible (docs/deployment.md).
 # Afterwards `bun run status` says MISMATCH (production is not GitHub main) until main is
 # deployed again, usually with a fix.
 set -euo pipefail
-HOST=${DEPLOY_HOST:-root@10.1.30.37}
+HOST=${DEPLOY_HOST:-root@10.1.50.94}
 TARGET=""
 while [ $# -gt 0 ]; do
   case "$1" in

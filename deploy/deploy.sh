@@ -15,12 +15,12 @@
 # 4. It prints GitHub main, the production checkout, what the backend and the frontend run, and
 #    MATCH or MISMATCH.
 #
-#   --host <user@host>   default root@10.1.30.37 (or $DEPLOY_HOST)
+#   --host <user@host>   default root@10.1.50.94 (or $DEPLOY_HOST)
 # Roll back: bun run rollback (deploy/rollback.sh). Docs: docs/deployment.md.
 set -euo pipefail
 
 CANONICAL=https://github.com/sunny436/AI-Tutor-Webapp-backend.git
-PRODUCTION=10.1.30.37
+PRODUCTION=10.1.50.94
 HOST=${DEPLOY_HOST:-root@$PRODUCTION}
 TARGET="" # set by deploy/rollback.sh: an earlier commit
 while [ $# -gt 0 ]; do

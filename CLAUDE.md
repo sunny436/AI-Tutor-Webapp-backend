@@ -204,7 +204,7 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
   (`docs/deployment.md`, "Jobs worker").
 - **Rollback:** `bun run rollback [-- <commit>]` deploys the previous (or a named) commit the same way;
   status says MISMATCH until main is deployed again. Details in `docs/deployment.md` and `docs/rollback.md`.
-- **Host:** Ubuntu 24.04 VM `10.1.30.37` (`ssh root@10.1.30.37`). The public site `ayur.namahos.com`
+- **Host:** Ubuntu 24.04 VM `10.1.50.94` (`ssh root@10.1.50.94`). The public site `ayur.namahos.com`
   goes through a Cloudflare Tunnel to web `127.0.0.1:3000`. The API is on `127.0.0.1:4100` (4000 is
   dev), and PostgreSQL is Docker on `127.0.0.1:5432`.
 - **Secrets:** only in `/etc/aichat/{api,web,postgres}.env` (mode 600), never touched by a deploy.
