@@ -169,6 +169,10 @@ class Settings(BaseSettings):
     # app/chat/assistant.py INTERACTIVE_BLOCKS). The web app renders them either way. Off until
     # the owner turns it on; it costs prompt characters on every turn.
     tutor_interactive_blocks: bool = False
+    # Give the tutor its teaching defaults (app/chat/teaching.py: direct answers when asked, mistakes
+    # diagnosed before they are corrected, one hint at a time when stuck); the student's own settings
+    # still come first. Off until the owner turns it on; it costs prompt characters on every turn.
+    tutor_teaching_policy: bool = False
 
     @field_validator("default_timezone")
     @classmethod

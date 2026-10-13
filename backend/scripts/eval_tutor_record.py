@@ -217,10 +217,13 @@ async def run(args: argparse.Namespace) -> int:
             return "".join([part.text async for part in stream.parts])
 
     model = f"{settings.llm_primary_model} (temperature {settings.llm_temperature})"
-    print(f"model: {model}, {args.runs} runs per question")
+    policy = "on" if settings.tutor_teaching_policy else "off"
+    print(f"model: {model}, {args.runs} runs per question, teaching policy {policy}")
     failed_cases = []
     for case in build_cases():
-        system = system_prompt_for(None, True, state.tutor_summary([case["record"]]))
+        system = system_prompt_for(
+            None, True, state.tutor_summary([case["record"]]), teaching=settings.tutor_teaching_policy
+        )
         request, reply = case["chat"]
         passed = total = 0
         for question in case["questions"]:

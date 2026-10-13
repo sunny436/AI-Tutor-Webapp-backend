@@ -230,7 +230,12 @@ class ChatService:
             user_message,
             assistant.id,
             resolve_assistant_config(
-                user, conversation, student, interactive=self.settings.tutor_interactive_blocks, tests=tests
+                user,
+                conversation,
+                student,
+                interactive=self.settings.tutor_interactive_blocks,
+                tests=tests,
+                teaching=self.settings.tutor_teaching_policy,
             ),
             files=await files.conversation_files(session, conversation.id, user.id),
             user_attachments=attachments,
@@ -274,7 +279,12 @@ class ChatService:
             None,
             assistant.id,
             resolve_assistant_config(
-                user, conversation, student, interactive=self.settings.tutor_interactive_blocks, tests=tests
+                user,
+                conversation,
+                student,
+                interactive=self.settings.tutor_interactive_blocks,
+                tests=tests,
+                teaching=self.settings.tutor_teaching_policy,
             ),
             replaces_message_id=last.id,
             files=await files.conversation_files(session, conversation.id, user.id),

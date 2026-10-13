@@ -6,13 +6,15 @@ client can never supply them.
 
 The system prompt is the frozen SYSTEM_PROMPT, followed by what the student's own settings add
 (app/learning/tutor.py) when they add anything. A student who has set nothing gets exactly
-SYSTEM_PROMPT (tests/test_legacy_tutor.py).
+SYSTEM_PROMPT (tests/test_legacy_tutor.py). The teaching defaults (app/chat/teaching.py, only when
+TUTOR_TEACHING_POLICY is on) go just before the student's settings, which come first.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass, field
 
+from app.chat.teaching import TEACHING_POLICY
 from app.db.models import Conversation, User
 from app.learning.context import StudentContext
 from app.learning.tutor import build_tutor_instructions
@@ -68,12 +70,16 @@ class AssistantConfig:
     temperature: float | None = None  # None = settings.llm_temperature
 
 
-def system_prompt_for(student: StudentContext | None, interactive: bool = False, tests: str = "") -> str:
-    """The frozen prompt, then what the student's settings add, then the chat's practice tests as
-    the app recorded them (app/assessments/state.py). Each part only when it says something."""
+def system_prompt_for(
+    student: StudentContext | None, interactive: bool = False, tests: str = "", *, teaching: bool = False
+) -> str:
+    """The frozen prompt, then the teaching defaults, then what the student's settings add, then the
+    chat's practice tests as the app recorded them (app/assessments/state.py). Each part only when
+    it says something."""
     prompt = f"{SYSTEM_PROMPT}\n\n{INTERACTIVE_BLOCKS}" if interactive else SYSTEM_PROMPT
+    policy = TEACHING_POLICY if teaching else ""
     instructions = build_tutor_instructions(student)
-    return "\n\n".join(part for part in (prompt, instructions, tests) if part)
+    return "\n\n".join(part for part in (prompt, policy, instructions, tests) if part)
 
 
 def resolve_assistant_config(
@@ -83,5 +89,6 @@ def resolve_assistant_config(
     *,
     interactive: bool = False,
     tests: str = "",
+    teaching: bool = False,
 ) -> AssistantConfig:
-    return AssistantConfig(system_prompt=system_prompt_for(student, interactive, tests))
+    return AssistantConfig(system_prompt=system_prompt_for(student, interactive, tests, teaching=teaching))
