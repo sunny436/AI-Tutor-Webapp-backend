@@ -7,6 +7,7 @@ import {
   banner,
   bell,
   checklist,
+  closeCelebrations,
   forceDark,
   hydrated,
   legacyColours,
@@ -40,6 +41,7 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
   // anyway, so production's data is kept as it is.
   await page.route(/\/api\/v1\/notifications\/(read|clear)$/, (route) => route.fulfill({ status: 204, body: "" }));
   await noActivityReports(page);
+  await closeCelebrations(page);
   await page.goto("/");
   await hydrated(page);
 

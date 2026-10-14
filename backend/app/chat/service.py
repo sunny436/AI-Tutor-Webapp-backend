@@ -103,6 +103,8 @@ class PreparedTurn:
     # Files this turn may read: the conversation's most recently attached ready files.
     files: list[dict] = field(default_factory=list)
     user_attachments: list[MessageAttachment] = field(default_factory=list)
+    # When the question was accepted (the app's clock): the learning day it counts for.
+    asked_at: datetime | None = None
 
     def meta_event(self) -> ChatEvent:
         return ChatEvent(
@@ -213,6 +215,7 @@ class ChatService:
         # Read before this question is counted: the same as the Settings preview showed.
         student = await self._student(session, user)
         tests = await self._tests(session, conversation.id)
+        asked_at = now()
         user_message = Message(conversation_id=conversation.id, role="user", content=text, status="complete")
         session.add(user_message)
         await session.flush()
@@ -239,6 +242,7 @@ class ChatService:
             ),
             files=await files.conversation_files(session, conversation.id, user.id),
             user_attachments=attachments,
+            asked_at=asked_at,
         )
 
     async def prepare_regenerate(self, session: AsyncSession, user: User, conversation_id: uuid.UUID) -> PreparedTurn:
@@ -471,19 +475,21 @@ class ChatService:
                 },
             )
         try:
-            message, conversation = await self._finalize(turn, content, status, metadata, latency_ms, ttft_ms, usage)
+            message, conversation, learning = await self._finalize(
+                turn, content, status, metadata, latency_ms, ttft_ms, usage
+            )
             if message.status == "error":
                 event = ChatEvent(
                     "error", {**public_error(error_code or "internal_error"), "messageId": str(message.id)}
                 )
             else:
-                event = ChatEvent(
-                    "done",
-                    {
-                        "message": message_out(message).model_dump(mode="json", by_alias=True),
-                        "conversation": conversation_out(conversation).model_dump(mode="json", by_alias=True),
-                    },
-                )
+                done = {
+                    "message": message_out(message).model_dump(mode="json", by_alias=True),
+                    "conversation": conversation_out(conversation).model_dump(mode="json", by_alias=True),
+                }
+                if learning is not None:  # this answer made today a learning day (committed)
+                    done["learning"] = {"event": learning.kind, "streak": learning.streak}
+                event = ChatEvent("done", done)
         except Exception as error:  # noqa: BLE001 - the database is down; tell the client, keep the row for the sweep
             log.error(
                 "could not persist generation",
@@ -552,13 +558,14 @@ class ChatService:
                 )
                 .returning(Message.status)
             )
-            # A fully answered, meaningful question makes today a learning day (app/progress/learning.py).
+            # A fully answered, meaningful question makes its day a learning day (app/progress/learning.py).
+            learning = None
             if (
                 final_status == "complete"
                 and turn.user_message is not None
                 and is_meaningful(turn.user_message.content)
             ):
-                await record_learning(session, turn.user.id, now())
+                learning = await record_learning(session, turn.user.id, now(), turn.asked_at)
             if final_status == "complete" and turn.conversation.title == DEFAULT_TITLE:
                 await self._name_conversation(session, turn, content)
             await session.execute(
@@ -578,7 +585,7 @@ class ChatService:
             await session.commit()
             message = await session.get(Message, turn.assistant_id)
             conversation = await session.get(Conversation, turn.conversation.id)
-            return message, conversation
+            return message, conversation, learning
 
     async def _name_conversation(self, session: AsyncSession, turn: PreparedTurn, reply: str) -> None:
         """Name a "New chat" after its first answered, meaningful question (app/chat/titles.py).

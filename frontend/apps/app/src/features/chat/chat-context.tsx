@@ -22,7 +22,8 @@ import { findFile, getFile, retryFile, sha256Hex, uploadFile } from "@/lib/api/f
 import { deleteConversation, listConversations, listMessages, renameConversation } from "@/lib/api/conversations";
 import { retargetAppPath } from "@/features/navigation/app-return";
 import { leaving } from "@/features/navigation/leaving";
-import { LEARNING_EVENT } from "@/lib/activity";
+import { fromReply } from "@/features/streak/celebrations/queue";
+import { CELEBRATE_EVENT, LEARNING_EVENT } from "@/lib/activity";
 import { FALLBACK_GREETING } from "@/lib/greeting";
 import { onUnauthorized } from "@/lib/api/http";
 import type { ConversationPage } from "@/lib/api/types";
@@ -98,7 +99,13 @@ export function ChatProvider({
       if (window.location.pathname === "/" && leaving.current() === null) router.replace(path);
     };
     chat.onConversationUpdated = (conversation) => conversations.upsert(conversation);
-    chat.onReplyFinished = () => window.dispatchEvent(new Event(LEARNING_EVENT));
+    chat.onReplyFinished = (done) => {
+      window.dispatchEvent(new Event(LEARNING_EVENT));
+      // This answer made its day a learning day (the server says so once): celebrate it.
+      if (done.learning) {
+        window.dispatchEvent(new CustomEvent(CELEBRATE_EVENT, { detail: fromReply(done.learning, done.message.id) }));
+      }
+    };
     chat.onSendRefused = (key, attachments) => stores.attachments.restore(key, attachments);
     stores.attachments.onStorageFull = () => setStorageFull(true);
 

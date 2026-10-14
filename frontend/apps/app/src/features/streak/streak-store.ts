@@ -20,6 +20,9 @@ export type StreakState = { status: "loading" | "ready" | "error"; data: Learnin
 const LOADING: StreakState = { status: "loading", data: null };
 let state: StreakState = LOADING;
 let inflight: Promise<void> | null = null;
+// Asked again while a request was on its way: its answer may predate what changed (a reply that
+// just finished), so one more request follows it.
+let again = false;
 const listeners = new Set<() => void>();
 
 function publish(next: StreakState): void {
@@ -28,13 +31,21 @@ function publish(next: StreakState): void {
 }
 
 export function refreshStreak(): Promise<void> {
-  inflight ??= getStreak()
+  if (inflight) {
+    again = true;
+    return inflight;
+  }
+  inflight = getStreak()
     .then(
       (data) => publish({ status: "ready", data }),
       () => publish(state.data ? state : { status: "error", data: null }),
     )
     .finally(() => {
       inflight = null;
+      if (again) {
+        again = false;
+        void refreshStreak();
+      }
     });
   return inflight;
 }

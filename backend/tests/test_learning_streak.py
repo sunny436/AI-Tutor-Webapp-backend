@@ -1,13 +1,14 @@
 """The learning streak and the in-app notifications.
 
 Meaningful, fully answered questions only; India days; one row per day however it is sent;
-the streak derived from the days; milestones once; the evening reminder once a day and never
-after learning; the bell's list bounded and per user; Read all and Clear all.
+the streak derived from the days; one streak event per learning day; weekly milestones once
+per streak; the evening reminder once a day and never after learning; the bell's list bounded
+and per user; Read all and Clear all.
 """
 
 import asyncio
 import uuid
-from datetime import UTC, date, datetime
+from datetime import UTC, date, datetime, timedelta
 
 import pytest
 from sqlalchemy import select, text, update
@@ -16,7 +17,7 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from app.db.models import AuthSession, User
 from app.llm.base import LLMError
 from app.progress import activity
-from app.progress.learning import day_end, intensity, is_meaningful, learning_date
+from app.progress.learning import StreakEvent, day_end, intensity, is_meaningful, learning_date, record_learning
 from tests.conftest import register, sign_in, stream_chat
 
 QUESTION = "Explain photosynthesis in simple words"
@@ -65,10 +66,27 @@ async def learned_on(database: str, account: dict, *days: date) -> None:
         )
 
 
+async def learned_for(database: str, account: dict, days: int, last: date) -> None:
+    """`days` learning days in a row, ending on `last`: one statement, however many."""
+    await sql(
+        database,
+        "INSERT INTO learning_daily_activity (user_id, activity_date) "
+        "SELECT :id, day::date FROM generate_series(CAST(:first AS date), CAST(:last AS date), interval '1 day') day",
+        id=uuid.UUID(account["user"]["id"]),
+        first=last - timedelta(days=days - 1),
+        last=last,
+    )
+
+
 async def ask(client, headers, message: str = QUESTION) -> list:
     response, events = await stream_chat(client, headers, message)
     assert response.status_code == 200, response.text
     return events
+
+
+def learning_of(events: list) -> dict | None:
+    """What the reply's `done` event says this answer did to the streak (None: nothing)."""
+    return next(data for name, data in events if name == "done").get("learning")
 
 
 async def streak(client, headers) -> dict:
@@ -115,10 +133,13 @@ async def test_first_learning_day_and_today_status(client, app, clock):
         "todayDate": "2026-09-26",
         "timezone": "Asia/Kolkata",
         "dayEnd": "2026-09-26T18:30:00Z",
+        "previousStreak": 0,
+        "lastLearningDate": None,
     }
-    await ask(client, headers)
+    assert learning_of(await ask(client, headers)) == {"event": "started", "streak": 1}
     after = await streak(client, headers)
     assert (after["currentStreak"], after["longestStreak"], after["todayActive"]) == (1, 1, True)
+    assert (after["previousStreak"], after["lastLearningDate"]) == (0, "2026-09-26")
 
 
 async def test_small_talk_and_failed_replies_do_not_count(client, app, clock, fake_llm):
@@ -142,8 +163,14 @@ async def test_a_regenerated_answer_does_not_count_again(client, app, clock, dat
 
 async def test_many_questions_a_day_and_parallel_sends_make_one_day(client, app, clock, database):
     headers = (await register(client, app))["headers"]
-    await ask(client, headers)
-    await asyncio.gather(*(ask(client, headers, f"{QUESTION} number {n}") for n in range(3)))
+    # The day's first answers, finishing together: exactly one of them reports the new streak.
+    parallel = await asyncio.gather(*(ask(client, headers, f"{QUESTION} number {n}") for n in range(3)))
+    assert sorted(map(str, (learning_of(events) for events in parallel))) == [
+        "None",
+        "None",
+        str({"event": "started", "streak": 1}),
+    ]
+    assert learning_of(await ask(client, headers)) is None
     rows = await sql(database, "SELECT activity_date, interactions FROM learning_daily_activity")
     assert rows == [{"activity_date": date(2026, 9, 26), "interactions": 4}]
     days = (await client.get("/v1/progress/learning-days", headers=headers)).json()
@@ -197,22 +224,67 @@ async def test_the_calendar_range_is_bounded(client, app, clock):
 
 
 # ------------------------------------------------------------------ milestones
-async def test_a_milestone_is_announced_once(client, app, clock, database):
+@pytest.mark.parametrize(
+    ("days_before", "event"),
+    [
+        (0, {"event": "started", "streak": 1}),
+        (6, {"event": "milestone", "streak": 7}),
+        (7, {"event": "extended", "streak": 8}),
+        (13, {"event": "milestone", "streak": 14}),
+        (69, {"event": "milestone", "streak": 70}),  # no upper limit
+    ],
+)
+async def test_each_first_answer_of_the_day_reports_one_streak_event(client, app, clock, database, days_before, event):
+    account = await register(client, app)
+    if days_before:
+        await learned_for(database, account, days_before, date(2026, 9, 25))
+    assert learning_of(await ask(client, account["headers"])) == event
+    assert learning_of(await ask(client, account["headers"])) is None  # the day's later answers: nothing
+
+
+async def test_a_milestone_is_announced_once_per_streak(client, app, clock, database):
     account = await register(client, app)
     headers = account["headers"]
-    await learned_on(database, account, date(2026, 9, 24), date(2026, 9, 25))
-    await ask(client, headers)  # the third day
+    await learned_for(database, account, 6, date(2026, 9, 25))
+    await ask(client, headers)  # the seventh day
     await ask(client, headers)  # again the same day
     milestones = [item for item in (await inbox(client, headers))["items"] if item["kind"] == "streak_milestone"]
     assert [(item["title"], item["body"]) for item in milestones] == [
-        ("🔥 3 Day Streak!", "You've learned for 3 days in a row.")
+        ("🔥 7 Day Streak!", "You've learned for 7 days in a row.")
     ]
-    # Broken, then three days again: the 3-day milestone is not announced a second time.
-    await sql(database, "DELETE FROM learning_daily_activity")
-    await learned_on(database, account, date(2026, 9, 24), date(2026, 9, 25))
+    # Broken, then built again: the new streak's seventh day is announced too, once.
+    clock.ist("2026-10-10T11:30")
+    await learned_for(database, account, 6, date(2026, 10, 9))
+    await ask(client, headers)
     await ask(client, headers)
     kinds = [item["kind"] for item in (await inbox(client, headers))["items"]]
-    assert kinds.count("streak_milestone") == 1
+    assert kinds.count("streak_milestone") == 2
+
+
+async def test_a_streak_is_lost_only_after_a_whole_missed_day(client, app, clock, database):
+    account = await register(client, app)
+    headers = account["headers"]
+    await learned_on(database, account, date(2026, 9, 25))
+    # Asked at 23:59:30, answered after midnight: it counts for the day it was asked.
+    async with app.state.db.sessionmaker() as session:
+        event = await record_learning(
+            session,
+            uuid.UUID(account["user"]["id"]),
+            datetime.fromisoformat("2026-09-27T00:00:05+05:30"),
+            datetime.fromisoformat("2026-09-26T23:59:30+05:30"),
+        )
+        await session.commit()
+    assert event == StreakEvent("extended", 2)
+    clock.ist("2026-09-27T23:59")  # the 27th has no learning yet: pending, not lost
+    state = await streak(client, headers)
+    assert (state["currentStreak"], state["previousStreak"], state["lastLearningDate"]) == (2, 0, "2026-09-26")
+    clock.ist("2026-09-28T00:00")  # the 27th ended without learning: lost
+    state = await streak(client, headers)
+    assert (state["currentStreak"], state["previousStreak"], state["lastLearningDate"]) == (0, 2, "2026-09-26")
+    clock.ist("2026-09-28T09:00")  # a fresh start
+    assert learning_of(await ask(client, headers)) == {"event": "started", "streak": 1}
+    state = await streak(client, headers)
+    assert (state["currentStreak"], state["previousStreak"], state["lastLearningDate"]) == (1, 0, "2026-09-28")
 
 
 # ------------------------------------------------------------------- reminders

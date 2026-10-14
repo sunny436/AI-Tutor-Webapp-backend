@@ -5,6 +5,7 @@ import {
   badge,
   bell,
   checklist,
+  closeCelebrations,
   forceDark,
   hydrated,
   legacyColours,
@@ -25,6 +26,7 @@ test("phone: the new chat, the drawer, a chat and Settings fit, light and dark",
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await noActivityReports(page);
+  await closeCelebrations(page);
   await page.goto("/");
   await hydrated(page);
 

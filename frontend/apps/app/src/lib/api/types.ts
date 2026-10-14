@@ -184,6 +184,10 @@ export type LearningStreak = {
   timezone: string;
   /** When today's learning day ends (UTC instant). */
   dayEnd: Timestamp;
+  /** The streak that ended, once `currentStreak` is 0 after a whole missed India day; else 0. */
+  previousStreak: number;
+  /** The latest learning day (India date); null before the first. */
+  lastLearningDate: string | null;
 };
 export type LearningDay = { date: string; interactions: number; intensity: number };
 export type LearningDays = { start: string; end: string; days: LearningDay[] };
@@ -422,7 +426,9 @@ export type StreamToken = { text: string };
 export type StreamCitations = { messageId: Uuid; citations: Citation[] };
 
 /** Authoritative final state. `message.status` may be `cancelled`. */
-export type StreamDone = { message: Message; conversation: Conversation };
+/** What the answer did to the learning streak: only on the answer that made its day a learning day. */
+export type StreamLearning = { event: "started" | "extended" | "milestone"; streak: number };
+export type StreamDone = { message: Message; conversation: Conversation; learning?: StreamLearning };
 
 /** Terminal failure. The partial reply is persisted with status `error`. */
 export type StreamFailure = {

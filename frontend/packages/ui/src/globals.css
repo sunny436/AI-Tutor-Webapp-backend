@@ -151,6 +151,16 @@
     /* Amber fill behind the streak's flame. Decorative only, never text. */
     --streak: 36.9 69.6% 51%;
 
+    /* The streak celebrations' flame (features/streak/celebrations), as the owner's animations
+       draw it. Decorative only, never text. The flame keeps its colours in dark mode; the soft
+       accent (the check's circle) and the muted, resting flame get darker twins there. */
+    --flame: 24.6 86.9% 61%; /* #F28C45 */
+    --flame-tip: 23 100% 73.9%; /* #FFAD7A */
+    --flame-gold: 36.1 100% 71%; /* #FFC46B */
+    --flame-gold-tip: 36.3 100% 85.1%; /* #FFE1B3 */
+    --accent-soft: 207.3 45.8% 90.6%; /* #DCE8F2 */
+    --flame-muted: 209.3 42.3% 81%; /* #BACFE3 */
+
     /* Chart series, in this order (never cycled): a categorical palette checked for colour-blind
        and normal-vision separation of neighbours (the dataviz reference order, slots 1-6). Some
        sit under 3:1 on a card, so every chart also has a legend, tooltips and a data table. */
@@ -241,6 +251,13 @@
     --hero-muted: 208.4 37.3% 90%;
 
     --streak: 36.9 69.6% 51%;
+
+    --flame: 24.6 86.9% 61%; /* #F28C45 */
+    --flame-tip: 23 100% 73.9%; /* #FFAD7A */
+    --flame-gold: 36.1 100% 71%; /* #FFC46B */
+    --flame-gold-tip: 36.3 100% 85.1%; /* #FFE1B3 */
+    --accent-soft: 213.3 32.1% 22%; /* #26364A */
+    --flame-muted: 212.3 24.2% 31.6%; /* #3D4F64 */
 
     --chart-1: 212.8 76.8% 56.1%; /* #3987E5 */
     --chart-2: 17.1 70.2% 50%; /* #D95926 */

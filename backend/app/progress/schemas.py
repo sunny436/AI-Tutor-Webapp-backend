@@ -49,6 +49,11 @@ class LearningStreakOut(ApiModel):
     today_date: dt.date = Field(description="Today's learning date, in `timezone`.")
     timezone: str = Field(description="The time zone of learning days: Asia/Kolkata for everyone.")
     day_end: dt.datetime = Field(description="When today's learning day ends (the next midnight in `timezone`).")
+    previous_streak: int = Field(
+        description="The streak that ended: its length once `currentStreak` is 0 after a whole India day "
+        "without learning; 0 otherwise (also while today is only pending)."
+    )
+    last_learning_date: dt.date | None = Field(description="The latest learning day; null before the first.")
 
 
 class LearningDayOut(ApiModel):

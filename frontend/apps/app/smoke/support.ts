@@ -81,6 +81,18 @@ export async function noActivityReports(page: Page) {
   await page.route("**/api/v1/progress/activity", (route) => route.abort());
 }
 
+/**
+ * The owner's real account may be celebrated while the smoke runs: its question can be the day's
+ * first answer, and a lost streak is told when the chat opens (features/streak/celebrations). A
+ * celebration is a dialog over the page, so whenever one is in the way it is closed, as a student
+ * would close it.
+ */
+export async function closeCelebrations(page: Page) {
+  await page.addLocatorHandler(page.locator("[data-celebration$='-dialog']"), async () => {
+    await page.keyboard.press("Escape");
+  });
+}
+
 export const hydrated = (page: Page) => page.waitForFunction(() => document.querySelector("next-route-announcer") !== null);
 export const banner = (page: Page) => page.getByRole("banner");
 export const badge = (page: Page) => banner(page).getByRole("link", { name: /learning streak/i });

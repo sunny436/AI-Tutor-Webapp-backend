@@ -121,6 +121,11 @@ export const test = base.extend<Fixtures>({
         if (browserName === "webkit" && /localhost:\d+\/\S* due to access control checks/.test(error.message)) return;
         problems.push(`Uncaught: ${error.message}`);
       });
+      // Every new account's first answer starts a streak, and a streak is celebrated in a dialog
+      // over the page (features/streak/celebrations): whenever one is in a test's way, close it.
+      await page.addLocatorHandler(page.locator("[data-celebration$='-dialog']"), async () => {
+        await page.keyboard.press("Escape");
+      });
       await use(undefined);
       expect(problems, "no CSP violations or uncaught errors in the page").toEqual([]);
     },

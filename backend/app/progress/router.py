@@ -53,6 +53,8 @@ async def get_learning_streak(principal: Principal = Depends(get_principal), db:
         today_date=state.today,
         timezone=learning.LEARNING_ZONE.key,
         day_end=state.day_end,
+        previous_streak=state.previous,
+        last_learning_date=state.last_day,
     )
 
 

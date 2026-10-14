@@ -10,6 +10,7 @@ import { useConversations } from "@/features/chat/chat-context";
 import { rememberAppPath } from "@/features/navigation/app-return";
 import { useFocusOnArrival } from "@/features/navigation/route-focus";
 import { NotificationBell } from "@/features/notifications/notification-bell";
+import { CelebrationHost } from "@/features/streak/celebrations/celebration-host";
 import { DayCountdown, StreakBadge } from "@/features/streak/header-streak";
 import { APP_NAME } from "@/lib/brand";
 import { navItemFor } from "./nav-items";
@@ -58,6 +59,8 @@ export function AppShell({ children }: { children: ReactNode }) {
           </main>
         </div>
       </Sheet>
+      {/* Streak celebrations, from the server's events only (features/streak/celebrations). */}
+      <CelebrationHost />
     </div>
   );
 }

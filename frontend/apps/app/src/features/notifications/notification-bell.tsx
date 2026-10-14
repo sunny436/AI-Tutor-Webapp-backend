@@ -18,29 +18,12 @@ import { LEARNING_EVENT } from "@/lib/activity";
 import { clearNotifications, getNotifications, markNotificationsRead } from "@/lib/api/progress";
 import type { AppNotification, NotificationList } from "@/lib/api/types";
 import { relativeTime } from "@/lib/time";
-import { milestonesToCelebrate, unreadBadge } from "./celebrate";
-
-const CELEBRATED_KEY = "padhai.celebrated";
-
-function readCelebrated(): Set<string> {
-  try {
-    return new Set(JSON.parse(window.sessionStorage.getItem(CELEBRATED_KEY) ?? "[]") as string[]);
-  } catch {
-    return new Set();
-  }
-}
-
-function saveCelebrated(ids: Set<string>): void {
-  try {
-    window.sessionStorage.setItem(CELEBRATED_KEY, JSON.stringify([...ids].slice(-50)));
-  } catch {
-    // storage unavailable: a milestone may be celebrated again after a reload, nothing worse
-  }
-}
+import { unreadBadge } from "./celebrate";
 
 /**
  * The header's bell: every in-app notification (streak reminders and milestones, security
- * alerts, reminders the worker plans), newest first. Plain text only. Fetched when shown, when
+ * alerts, reminders the worker plans), newest first. Plain text only. A milestone is celebrated
+ * where it is reached (features/streak/celebrations), never again here. Fetched when shown, when
  * the window regains focus and after a reply finishes; no polling. Opening it reads nothing:
  * choosing a notification marks that one read, "Read all" marks every one read (also those
  * beyond the 30 shown) and "Clear all" empties it; the server keeps both after a reload. If it
@@ -61,12 +44,6 @@ export function NotificationBell() {
       if (mine !== latest.current) return;
       setList(next);
       setFailed(false);
-      const celebrated = readCelebrated();
-      for (const milestone of milestonesToCelebrate(next.items, celebrated)) {
-        toast(milestone.title, { description: milestone.body, duration: 5000 });
-        celebrated.add(milestone.id);
-      }
-      saveCelebrated(celebrated);
     } catch {
       if (mine === latest.current) setFailed(true);
     }

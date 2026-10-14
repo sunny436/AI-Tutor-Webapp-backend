@@ -2016,8 +2016,26 @@
             "title": "Dayend",
             "type": "string"
           },
+          "lastLearningDate": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The latest learning day; null before the first.",
+            "title": "Lastlearningdate"
+          },
           "longestStreak": {
             "title": "Longeststreak",
+            "type": "integer"
+          },
+          "previousStreak": {
+            "description": "The streak that ended: its length once `currentStreak` is 0 after a whole India day without learning; 0 otherwise (also while today is only pending).",
+            "title": "Previousstreak",
             "type": "integer"
           },
           "timezone": {
@@ -2043,7 +2061,9 @@
           "todayActive",
           "todayDate",
           "timezone",
-          "dayEnd"
+          "dayEnd",
+          "previousStreak",
+          "lastLearningDate"
         ],
         "title": "LearningStreakOut",
         "type": "object"

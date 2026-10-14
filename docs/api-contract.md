@@ -155,6 +155,7 @@ version, and every edit sends the version it read. One shape, for every such res
 |---|---|---|---|
 | POST | `/v1/progress/activity` | – | `{credited, date}`: one active minute; 6 reports per minute at most |
 | GET | `/v1/progress?days=14` | – (`days` 7–90) | `{timezone, timezoneIsDefault, today, thisWeek, streak, goals, days}` |
+| GET | `/v1/progress/streak` | – | `{currentStreak, longestStreak, todayActive, todayDate, timezone, dayEnd, previousStreak, lastLearningDate}`: the learning streak (India days with a meaningful, fully answered question; app/progress/learning.py). `previousStreak` is the streak that ended, > 0 only once `currentStreak` is 0 after a whole missed day (never while today is pending); `lastLearningDate` the latest learning day, null before the first |
 
 - **What is measured:** time active in PadhAI, not study time. A client reports a minute while PadhAI is open and
   visible and the student interacted with it (or a reply was streaming) within the last two minutes. The server
@@ -303,7 +304,8 @@ data: {"text":"partial text"}            (repeated)
 : keepalive                              (every 15 s without output)
 
 event: done
-data: {"message":{...final assistant message...},"conversation":{...}}
+data: {"message":{...final assistant message...},"conversation":{...},
+       "learning":{"event":"started|extended|milestone","streak":7}}   (learning: see below)
   — or —
 event: error
 data: {"code":"llm_unavailable|llm_timeout|llm_bad_request|service_unavailable|internal_error",
@@ -311,6 +313,11 @@ data: {"code":"llm_unavailable|llm_timeout|llm_bad_request|service_unavailable|i
 ```
 
 - Concatenated `token.text` equals `done.message.content`.
+- `done.learning` (optional, added 2026-10-14) is present only on the answer that made its India day a
+  learning day, once per day per student, after it was saved: `started` (day 1 of a new streak),
+  `extended`, or `milestone` (every 7th day: 7, 14, 21, …, which takes `extended`'s place). Clients
+  celebrate it; it is never repeated, so a client that missed it (a dropped connection) shows nothing
+  later. An answer counts for the day its question was asked.
 - Stopping: call `POST /v1/messages/{assistantMessageId}/cancel`; the stream then ends with `done`
   whose message has `status: "cancelled"`. Closing the connection also stops the reply (same result).
 - Unknown event types may be added later and must be ignored by clients (`citations` was, on
