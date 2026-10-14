@@ -5,10 +5,14 @@ import re
 from datetime import UTC, datetime, time
 from pathlib import Path
 
+import httpx
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import create_async_engine
 
-from app.chat.assistant import SYSTEM_PROMPT, resolve_assistant_config
+from app.assessments.state import SUMMARY_MAX
+from app.auth.emails import MemoryEmailSender
+from app.chat.assistant import INTERACTIVE_BLOCKS, SYSTEM_PROMPT, resolve_assistant_config, system_prompt_for
+from app.chat.teaching import TEACHING_POLICY
 from app.db.models import MAIN_GOALS, PREFERENCE_CHOICES
 from app.learning import catalog
 from app.learning.context import StudentContext, SubjectChoice, TutorProgress, build_context
@@ -30,6 +34,7 @@ from app.learning.tutor import (
     _render,
     build_tutor_instructions,
 )
+from app.main import create_app
 from app.progress import activity
 from app.rag.context import CONTEXT_HEADER
 from tests.conftest import make_settings, register, stream_chat
@@ -282,6 +287,48 @@ async def test_the_chat_sends_the_students_instructions_and_the_preview_matches(
     regenerate = await client.post(f"/v1/conversations/{conversation_id}/regenerate/stream", headers=headers)
     assert regenerate.status_code == 200
     assert "hint" not in fake_llm.calls[-1][0].content and "Fractions" in fake_llm.calls[-1][0].content
+
+
+def test_the_teaching_defaults_come_only_with_the_flag_and_defer_to_the_students_settings():
+    assert make_settings().tutor_teaching_policy is False
+    student = build_context({"grade": "class_8"}, [], {"answer_mode": "hints_first"})
+    instructions = build_tutor_instructions(student)
+    record = "## Practice tests in this chat"
+    assert system_prompt_for(student, True, record) == "\n\n".join(
+        [SYSTEM_PROMPT, INTERACTIVE_BLOCKS, instructions, record]
+    )
+    on = system_prompt_for(student, True, record, teaching=True)
+    assert on == "\n\n".join([SYSTEM_PROMPT, INTERACTIVE_BLOCKS, TEACHING_POLICY, instructions, record])
+    # The settings it would otherwise contradict are named; the student's own sentences come after it.
+    for deferral in ("settings ask for direct answers", "settings ask for hints first", "turn practice questions off"):
+        assert deferral in TEACHING_POLICY
+    # Everything on, at its worst, still leaves a fifth of the input budget for earlier messages.
+    settings = make_settings()
+    fixed = (
+        len(SYSTEM_PROMPT) + len(INTERACTIVE_BLOCKS) + len(TEACHING_POLICY) + MAX_TUTOR_BLOCK_CHARS + SUMMARY_MAX + 8
+    )
+    fixed += settings.chat_max_message_chars + settings.rag_max_context_chars + len(CONTEXT_HEADER)
+    assert settings.llm_max_input_chars - fixed >= settings.llm_max_input_chars // 5
+
+
+async def test_with_the_flag_on_every_chat_path_puts_the_teaching_defaults_before_the_settings(fake_llm):
+    application = create_app(make_settings(tutor_teaching_policy=True), llm=fake_llm, email_sender=MemoryEmailSender())
+    async with application.router.lifespan_context(application):
+        async with httpx.AsyncClient(transport=httpx.ASGITransport(app=application), base_url="http://t") as client:
+            headers = (await register(client, application))["headers"]
+            await client.patch(
+                "/v1/learning/preferences", json={"version": 0, "set": {"answerMode": "hints_first"}}, headers=headers
+            )
+            preview = (await client.post("/v1/learning/tutor-preview", json={}, headers=headers)).json()
+            _, events = await stream_chat(client, headers, "Solve: 2x + 3 = 11")
+            assert fake_llm.calls[-1][0].content == f"{SYSTEM_PROMPT}\n\n{TEACHING_POLICY}\n\n{preview['instructions']}"
+            assert TEACHING_POLICY not in preview["instructions"]  # the preview shows the student's part only
+            conversation_id = events[0][1]["conversationId"]
+            regenerate = await client.post(f"/v1/conversations/{conversation_id}/regenerate/stream", headers=headers)
+            assert regenerate.status_code == 200
+            system = fake_llm.calls[-1][0].content
+            assert system.startswith(f"{SYSTEM_PROMPT}\n\n{TEACHING_POLICY}\n\n")
+            assert system.index(TEACHING_POLICY) < system.index(TEACHING_TEXT["answer_mode"]["hints_first"])
 
 
 async def test_one_students_settings_never_reach_another_students_tutor(client, app, fake_llm):

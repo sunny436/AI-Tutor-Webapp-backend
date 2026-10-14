@@ -201,7 +201,7 @@ def build_cases() -> list[dict]:
 async def run(args: argparse.Namespace) -> int:
     from app.assessments import state
     from app.chat.assistant import system_prompt_for
-    from app.llm.base import ChatMessage, GenerationOptions
+    from app.llm.base import ChatMessage, GenerationOptions, LLMRateLimited
     from app.llm.factory import build_llm
     from app.rag.context import build_llm_messages
     from app.settings import get_settings
@@ -209,12 +209,21 @@ async def run(args: argparse.Namespace) -> int:
     settings = get_settings()
     llm = build_llm(settings)
     options = GenerationOptions(temperature=settings.llm_temperature, max_output_tokens=500)
-    gate = asyncio.Semaphore(4)
+    # One call at a time: the gateway allows 50 requests a minute per key, and on the server that key
+    # also answers the students.
+    gate = asyncio.Semaphore(1)
 
     async def ask(messages: list[ChatMessage]) -> str:
-        async with gate:
-            stream = await llm.stream(messages, options)
-            return "".join([part.text async for part in stream.parts])
+        for attempt in range(4):
+            async with gate:
+                try:
+                    stream = await llm.stream(messages, options)
+                    return "".join([part.text async for part in stream.parts])
+                except LLMRateLimited:
+                    if attempt == 3:
+                        raise
+            await asyncio.sleep(15 * 2**attempt)
+        raise AssertionError("unreachable")
 
     model = f"{settings.llm_primary_model} (temperature {settings.llm_temperature})"
     policy = "on" if settings.tutor_teaching_policy else "off"
