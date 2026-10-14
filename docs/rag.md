@@ -126,6 +126,26 @@ proven HNSW-compatible by `test_search_query_can_use_the_hnsw_index`.
 Each `Document` carries `chunk_id, document_id, source_id, source, title, uri, ordinal, score,
 embedding_model, attributes` — everything a citation needs.
 
+## NCERT textbooks (`app/rag/ncert.py`)
+
+With `NCERT_KB_BASE_URL` and `NCERT_KB_API_KEY` set, the knowledge source is the NCERT Knowledge Service
+(a separate service and repository, `sunny436/graphrag`; production `ncert-kb-api` on 127.0.0.1:4200) instead
+of pgvector; attached files stay in pgvector.
+
+- **Request:** `POST /api/v1/retrieval/search` with `Authorization: Bearer <key>`, `mode: vector`, `top_k`
+  (`RAG_TOP_K`), and the student's curriculum from their settings (`retrieval_for` in `app/chat/assistant.py`):
+  `filters: {enforcement: prefer, any_of: [{classes: [their class], subjects: [their subjects]}]}`. `prefer`
+  ranks their books first and never excludes anything. Subject ids are the names in slug form.
+- **Query:** the latest question; a short follow-up (six words or fewer) is searched together with the question
+  before it (`search_query_for` in `app/rag/graph.py`). A rule, not a model call.
+- **Response:** results are validated field by field and malformed ones dropped; each passage is capped at
+  4,000 characters, and the context budget below still decides what fits. `[n]` is titled
+  "NCERT <book> (Class n), Ch k: <chapter>, p. <printed page>".
+- **Failure:** `ncert_timeout` (`NCERT_KB_TIMEOUT_S`, 2 s; the service's vector search is p50 0.26 s, p95 0.51 s),
+  `ncert_unauthorized`, `ncert_unavailable`, `ncert_bad_response`; after 3 in a row, `ncert_paused` for 30 s
+  (no call). Each is a retrieval failure with that reason: the reply goes on without textbook context.
+- **Privacy:** only the question and the class and subjects are sent: no user id, name or email.
+
 ## Context budget (`app/rag/context.py`)
 
 All sizes in characters (≈ 4 chars/token for English; Devanagari costs ~2.6× more tokens per char):

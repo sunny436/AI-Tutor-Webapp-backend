@@ -38,10 +38,6 @@ class Database:
         await self.engine.dispose()
 
 
-def get_database(request: Request) -> Database:
-    return request.app.state.db
-
-
 async def get_session(request: Request) -> AsyncIterator[AsyncSession]:
     async with request.app.state.db.sessionmaker() as session:
         yield session

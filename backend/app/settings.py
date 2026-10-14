@@ -138,6 +138,12 @@ class Settings(BaseSettings):
     rag_max_context_chars: int = 8_000
     rag_retrieval_timeout_s: float = 8.0
     rag_hnsw_ef_search: int = 100
+    # The NCERT Knowledge Service (app/rag/ncert.py): with a URL and a key, the tutor's knowledge
+    # source; empty = the pgvector knowledge base. The key is the service's client key (a secret).
+    # The timeout is the whole call; the service's vector search takes ~0.3 s (p95 0.5 s).
+    ncert_kb_base_url: str = ""
+    ncert_kb_api_key: SecretStr = SecretStr("")
+    ncert_kb_timeout_s: float = Field(default=2.0, gt=0, le=10)
     rag_chunk_size: int = 1_000
     rag_chunk_overlap: int = 150
     rag_max_document_bytes: int = 5 * 1024 * 1024
@@ -192,6 +198,10 @@ class Settings(BaseSettings):
         return self.app_env == "production"
 
     @property
+    def ncert_kb_enabled(self) -> bool:
+        return bool(self.ncert_kb_base_url and self.ncert_kb_api_key.get_secret_value())
+
+    @property
     def files_runner(self) -> Literal["subprocess", "systemd"] | None:
         """How files are parsed, or None when that would be unsafe (production without systemd)."""
         runner = self.files_extractor
@@ -243,6 +253,10 @@ class Settings(BaseSettings):
             problems.append("EMAIL_BACKEND=ollastack needs OLLASTACK_TOKEN and OLLASTACK_MAILBOX_ID")
         if self.rag_enabled and self.embedding_provider == "fake":
             problems.append("EMBEDDING_PROVIDER=fake is not allowed in production while RAG is enabled")
+        if self.ncert_kb_base_url and not self.ncert_kb_base_url.startswith(
+            ("https://", "http://127.0.0.1:", "http://localhost:")
+        ):
+            problems.append("NCERT_KB_BASE_URL must be https:// or loopback (the key travels with every call)")
         if problems:
             raise RuntimeError("Unsafe production configuration: " + "; ".join(problems))
 

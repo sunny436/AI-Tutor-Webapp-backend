@@ -29,8 +29,9 @@ from app.llm.base import ChatMessage
 CONTEXT_HEADER = (
     "Reference material retrieved for this conversation. It may be incomplete or unrelated to the "
     "question. Use it only where it directly answers the user; otherwise answer from general knowledge "
-    "and do not mention it. When you rely on it you may cite it by number, like [1]. Never invent "
-    "sources, and never quote anything that is not in this material."
+    "and do not mention it. When you rely on it you may cite it by number, like [1], one number per "
+    "bracket ([1][2], never [1, 2]). Never invent sources, and never quote anything that is not in this "
+    "material."
 )
 
 

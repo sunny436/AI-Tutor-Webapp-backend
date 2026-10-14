@@ -142,7 +142,11 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **Retrieval never fails a turn:** it is skipped or fails with a reason code.
 - **Context budget** (`app/rag/context.py`): system prompt → latest message → whole chunks up to
   `RAG_MAX_CONTEXT_CHARS` → history up to `LLM_MAX_INPUT_CHARS`.
-- **RAG** (`docs/rag.md`): `PgVectorRetriever` → `KnowledgeStore` → pgvector HNSW.
+- **RAG** (`docs/rag.md`): `PgVectorRetriever` → `KnowledgeStore` → pgvector HNSW; or, when
+  `NCERT_KB_BASE_URL` + `NCERT_KB_API_KEY` are set, `NcertRetriever` (`app/rag/ncert.py`): the separate
+  NCERT Knowledge Service (`ncert-kb-api` :4200, repository `sunny436/graphrag`) through its API only,
+  vector mode, the student's class and subjects as a `prefer` scope, follow-ups searched with the
+  question before them (`search_query_for`). Its own data and releases; never read its tables.
   - Every search is scoped by `AccessScope(user_id)`: global sources plus the user's own.
   - Retrieval options come only from `resolve_assistant_config` (`app/chat/assistant.py`), which is
     the seam for tutor features.

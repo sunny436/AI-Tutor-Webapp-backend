@@ -12,6 +12,7 @@ TUTOR_TEACHING_POLICY is on) go just before the student's settings, which come f
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 
 from app.chat.teaching import TEACHING_POLICY
@@ -82,6 +83,18 @@ def system_prompt_for(
     return "\n\n".join(part for part in (prompt, policy, instructions, tests) if part)
 
 
+def retrieval_for(student: StudentContext | None) -> RetrievalOptions:
+    """The student's curriculum from their settings (their class, their subjects): the NCERT source
+    ranks those books first (app/rag/ncert.py). Nothing set: no preference."""
+    if student is None:
+        return RetrievalOptions()
+    grade = re.fullmatch(r"Class (\d{1,2})", student.grade or "")
+    return RetrievalOptions(
+        classes=(int(grade.group(1)),) if grade else (),
+        subjects=tuple(subject.name for subject in student.subjects),
+    )
+
+
 def resolve_assistant_config(
     user: User | None,
     conversation: Conversation | None,
@@ -91,4 +104,7 @@ def resolve_assistant_config(
     tests: str = "",
     teaching: bool = False,
 ) -> AssistantConfig:
-    return AssistantConfig(system_prompt=system_prompt_for(student, interactive, tests, teaching=teaching))
+    return AssistantConfig(
+        system_prompt=system_prompt_for(student, interactive, tests, teaching=teaching),
+        retrieval=retrieval_for(student),
+    )

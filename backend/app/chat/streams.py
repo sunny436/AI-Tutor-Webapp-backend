@@ -61,14 +61,6 @@ class ActiveGenerations:
             await asyncio.wait(tasks, timeout=timeout_s)
 
 
-async def events_from_queue(queue: asyncio.Queue) -> AsyncIterator[ChatEvent]:
-    while True:
-        event = await queue.get()
-        if event is None:
-            return
-        yield event
-
-
 async def sse_body(first: ChatEvent, generation: Generation, keepalive_s: float) -> AsyncIterator[bytes]:
     """The HTTP body: meta, then events as they are produced, with keepalive comments.
 

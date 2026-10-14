@@ -60,6 +60,7 @@ class TurnState(TypedDict, total=False):
     files: list[dict]
     # produced by nodes
     question: str
+    search_query: str  # what the knowledge base is searched with (search_query_for)
     documents: list[Document]
     file_documents: list[Document]
     retrieval_summary: dict
@@ -78,6 +79,22 @@ class RagDependencies:
     attached_files: Callable[[uuid.UUID | None, list[dict], str], Awaitable[tuple[list[Document], dict]]] | None = None
 
 
+FOLLOW_UP_MAX_WORDS = 6
+SEARCH_QUERY_MAX_CHARS = 1_000
+
+
+def search_query_for(conversation: list[ChatMessage]) -> str:
+    """The latest question, plus the one before it when the latest is a short follow-up ("explain
+    step 2", "why?"): those few words alone would search for nothing. A rule, not a model call."""
+    users = [message.content.strip() for message in conversation if message.role == "user" and message.content.strip()]
+    if not users:
+        return ""
+    latest = users[-1]
+    if len(users) > 1 and len(latest.split()) <= FOLLOW_UP_MAX_WORDS:
+        latest = f"{users[-2][: SEARCH_QUERY_MAX_CHARS // 2]}\n{latest}"
+    return latest[:SEARCH_QUERY_MAX_CHARS]
+
+
 def build_rag_graph(deps: RagDependencies):
     settings = deps.settings
 
@@ -94,7 +111,8 @@ def build_rag_graph(deps: RagDependencies):
         elif not deps.embeddings_configured:
             reason = "embeddings_unconfigured"
         summary = {"status": "skipped", "reason": reason} if reason else {"status": "pending"}
-        return {"question": question, "retrieval_summary": summary, "documents": []}
+        search_query = search_query_for(conversation) if question else ""
+        return {"question": question, "search_query": search_query, "retrieval_summary": summary, "documents": []}
 
     async def retrieve_context(state: TurnState) -> dict:
         # Attached files are read whether or not the knowledge base is searched: RAG_ENABLED and
@@ -148,7 +166,7 @@ def build_rag_graph(deps: RagDependencies):
                     summary = {"status": "skipped", "reason": "empty_knowledge_base"}
                 else:
                     retriever = deps.retriever_factory(scope, options)
-                    documents = await retriever.ainvoke(state["question"])
+                    documents = await retriever.ainvoke(state.get("search_query") or state["question"])
                     timings = dict(getattr(retriever, "last_timings", {}) or {})
                     summary = {"status": "ok" if documents else "empty", "reason": None}
         except TimeoutError:
