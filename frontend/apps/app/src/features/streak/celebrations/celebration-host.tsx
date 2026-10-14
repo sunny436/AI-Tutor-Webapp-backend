@@ -7,7 +7,11 @@ import { type ComponentType, useCallback, useEffect, useRef, useState, useSyncEx
 import { useUser } from "@/components/user-context";
 import { CELEBRATE_EVENT } from "@/lib/activity";
 import { useStreak } from "../streak-store";
+import { GoalExtended } from "./goal-extended";
 import { type Celebration, EMPTY_QUEUE, type QueueState, finish, lostFor, offer } from "./queue";
+import { StreakLost } from "./streak-lost";
+import { StreakMilestone } from "./streak-milestone";
+import { StreakStarted } from "./streak-started";
 
 /**
  * The streak celebrations, one at a time (queue.ts), wherever the student chats (AppShell): the
@@ -18,19 +22,21 @@ import { type Celebration, EMPTY_QUEUE, type QueueState, finish, lostFor, offer 
  *   Milestone  "milestone": every 7th day (7, 14, 21, …)
  *   Lost       the streak store: 0 after a whole missed India day (never while today is pending)
  *
- * A dialog: focus moves to its button and comes back where the student was; Esc, ✕, a click
- * outside or the button close it. Started, Extended and Lost close by themselves after a few
- * seconds, so learning goes on; a milestone waits for the student. Each drawing loads only when it
- * plays and is decorative: the text says what happened, and a drawing that cannot load leaves it.
+ * - Never over an answer still appearing: a celebration waits until no reply is streaming and the
+ *   chat has been still for a moment (the last words have arrived, maths and diagrams are drawn).
+ * - The card and its drawing appear in the same frame: the drawings are part of this code (a few
+ *   KB), never fetched when the card opens.
+ * - A dialog: focus moves to its button and comes back where the student was; Esc, ✕, a click
+ *   outside or the button close it. Started, Extended and Lost close by themselves after a few
+ *   seconds, so learning goes on; a milestone waits for the student. The drawing is decorative:
+ *   the text says what happened.
  */
 
-type Asset = ComponentType<{ className?: string }>;
-
-const ASSETS: Record<Celebration["kind"], () => Promise<Asset>> = {
-  started: () => import("./streak-started").then((module) => module.StreakStarted),
-  extended: () => import("./goal-extended").then((module) => module.GoalExtended),
-  milestone: () => import("./streak-milestone").then((module) => module.StreakMilestone),
-  lost: () => import("./streak-lost").then((module) => module.StreakLost),
+const DRAWINGS: Record<Celebration["kind"], ComponentType<{ className?: string }>> = {
+  started: StreakStarted,
+  extended: GoalExtended,
+  milestone: StreakMilestone,
+  lost: StreakLost,
 };
 
 /** How long a celebration stays by itself; null: until the student closes it. */
@@ -41,22 +47,38 @@ const STAYS_MS: Record<Celebration["kind"], number | null> = {
   lost: 7000,
 };
 const LOST_SEEN = "padhai.streak-lost.";
+/** The chat still this long (no reply streaming, nothing changing) before a celebration shows. */
+const SETTLE_MS = 700;
+/** Never wait longer than this (a reply streaming in another tab keeps one busy): never lost. */
+const SETTLE_MAX_MS = 15_000;
 
-function useAsset(kind: Celebration["kind"]): Asset | null {
-  const [asset, setAsset] = useState<Asset | null>(null);
-  useEffect(() => {
-    let alive = true;
-    ASSETS[kind]().then(
-      (loaded) => {
-        if (alive) setAsset(() => loaded);
-      },
-      () => undefined, // no drawing: the text alone
-    );
-    return () => {
-      alive = false;
+/** Resolves once the chat has settled (see SETTLE_MS); `cancel` stops waiting. */
+function whenChatSettled(): { settled: Promise<void>; cancel: () => void } {
+  const chat = document.getElementById("main") ?? document.body;
+  const busy = () => chat.querySelector("article[aria-label='Assistant'][aria-busy='true']") !== null;
+  let quiet: number | undefined;
+  let limit: number | undefined;
+  let observer: MutationObserver | undefined;
+  const cancel = () => {
+    observer?.disconnect();
+    window.clearTimeout(quiet);
+    window.clearTimeout(limit);
+  };
+  const settled = new Promise<void>((resolve) => {
+    const done = () => {
+      cancel();
+      resolve();
     };
-  }, [kind]);
-  return asset;
+    const arm = () => {
+      window.clearTimeout(quiet);
+      quiet = window.setTimeout(() => (busy() ? arm() : done()), SETTLE_MS);
+    };
+    observer = new MutationObserver(arm);
+    observer.observe(chat, { subtree: true, childList: true, characterData: true });
+    limit = window.setTimeout(done, SETTLE_MAX_MS);
+    arm();
+  });
+  return { settled, cancel };
 }
 
 // The queue lives as long as the page, so a route change or a remount never replays a celebration.
@@ -129,7 +151,16 @@ export function CelebrationHost() {
     if (key) update(finish(queue, key));
   }, [key]);
 
-  return shown ? <CelebrationDialog key={shown.key} item={shown} onClose={close} /> : null;
+  // Shown only once the chat has settled: never over an answer still appearing.
+  const [settledFor, setSettledFor] = useState<string | null>(null);
+  useEffect(() => {
+    if (!key) return;
+    const { settled, cancel } = whenChatSettled();
+    void settled.then(() => setSettledFor(key));
+    return cancel;
+  }, [key]);
+
+  return shown && settledFor === shown.key ? <CelebrationDialog key={shown.key} item={shown} onClose={close} /> : null;
 }
 
 function words(item: Celebration): { title: string; body: string; action: string } {
@@ -154,7 +185,7 @@ function words(item: Celebration): { title: string; body: string; action: string
 }
 
 function CelebrationDialog({ item, onClose }: { item: Celebration; onClose: () => void }) {
-  const Drawing = useAsset(item.kind);
+  const Drawing = DRAWINGS[item.kind];
   const action = useRef<HTMLButtonElement>(null);
   const { title, body, action: label } = words(item);
   const stays = STAYS_MS[item.kind];
@@ -182,7 +213,7 @@ function CelebrationDialog({ item, onClose }: { item: Celebration; onClose: () =
         }}
       >
         <span aria-hidden className="block h-44 w-44">
-          {Drawing && <Drawing className="h-44 w-44" />}
+          <Drawing className="h-44 w-44" />
         </span>
         {item.kind === "extended" && <StreakCount streak={item.streak} />}
         <DialogTitle className="text-center text-xl">{title}</DialogTitle>
