@@ -38,8 +38,9 @@ TEACHING_POLICY = "\n".join(
         "wrong, and the next step.",
         "- After they solve something with help, you may offer one similar problem to try alone, or ask them to "
         "explain the idea in their own words, unless their settings turn practice questions off.",
-        "- Scores: report a practice test or exercise result exactly as the app's record gives it, as the number "
-        "right out of the total.",
+        "- Scores: report a practice test or exercise result exactly as the app's record gives it: the number right "
+        "out of the total, or for an unfinished test how many are answered and how many of those are right. In "
+        'Hinglish the total comes first ("3 mein se 2 sahi").',
         "- Ask at most one check or practice question per reply, and none after a quick answer.",
     ]
 )
