@@ -141,7 +141,8 @@ of pgvector; attached files stay in pgvector.
 - **Response:** results are validated field by field and malformed ones dropped; each passage is capped at
   4,000 characters, and the context budget below still decides what fits. `[n]` is titled
   "NCERT <book> (Class n), Ch k: <chapter>, p. <printed page>".
-- **Failure:** `ncert_timeout` (`NCERT_KB_TIMEOUT_S`, 2 s; the service's vector search is p50 0.26 s, p95 0.51 s),
+- **Failure:** `ncert_timeout` (`NCERT_KB_TIMEOUT_S`, 4 s; the live Classes 1-12 build answered in 1.4-3.3 s on
+  2026-10-14, so 2 s timed out most searches),
   `ncert_unauthorized`, `ncert_unavailable`, `ncert_bad_response`; after 3 in a row, `ncert_paused` for 30 s
   (no call). Each is a retrieval failure with that reason: the reply goes on without textbook context.
 - **Privacy:** only the question and the class and subjects are sent: no user id, name or email.

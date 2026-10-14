@@ -143,7 +143,7 @@ class Settings(BaseSettings):
     # The timeout is the whole call; the service's vector search takes ~0.3 s (p95 0.5 s).
     ncert_kb_base_url: str = ""
     ncert_kb_api_key: SecretStr = SecretStr("")
-    ncert_kb_timeout_s: float = Field(default=2.0, gt=0, le=10)
+    ncert_kb_timeout_s: float = Field(default=4.0, gt=0, le=10)
     rag_chunk_size: int = 1_000
     rag_chunk_overlap: int = 150
     rag_max_document_bytes: int = 5 * 1024 * 1024
