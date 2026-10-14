@@ -9,7 +9,10 @@ knowledge base, which is empty in production).
   are never searched, and a result outside it is dropped here too). The student's class and subjects
   never leave this app: they only rank the results here (their own books first). Never who the
   student is: no id, name or email.
-- **Vector mode only:** one pass; the service's query encoder is most of its time (~0.6 s on the VM).
+- **Vector mode only:** one pass. The service's query encoder is most of its time and grows with the
+  query (on the VM, 2026-10-14: 4 words 0.55 s, 13 words 1.0 s, 30 words 1.8 s, 70 words 3.3 s), so
+  the search query is at most MAX_QUERY_WORDS: the first and last half (the topic usually comes first,
+  the ask last). The tutor still gets the whole question.
 - **Fast failure:** one pooled client with keep-alive; a hard timeout (NCERT_KB_TIMEOUT_S); after
   FAILURES_TO_PAUSE failures in a row, calls are skipped for PAUSE_S. Every failure is a RagError,
   so the turn goes on without textbook context (app/rag/graph.py), never fails.
@@ -35,6 +38,7 @@ log = get_logger("app.rag.ncert")
 
 SEARCH_PATH = "/api/v1/retrieval/search"
 MAX_QUERY_CHARS = 2_000  # the service's own limit
+MAX_QUERY_WORDS = 32
 MAX_PASSAGE_CHARS = 4_000
 FAILURES_TO_PAUSE = 3
 PAUSE_S = 30.0
@@ -45,6 +49,15 @@ SERVED_CLASSES = (6, 7, 8, 9, 10, 11, 12)
 def subject_id(name: str) -> str:
     """The service's subject ids are its names in slug form: "Social Science" -> "social-science"."""
     return "-".join(name.lower().replace("&", "and").split())
+
+
+def search_text(query: str) -> str:
+    """The query as searched: at most MAX_QUERY_WORDS words, the first and the last half of a longer one."""
+    words = query.split()
+    if len(words) <= MAX_QUERY_WORDS:
+        return query[:MAX_QUERY_CHARS]
+    half = MAX_QUERY_WORDS // 2
+    return " ".join(words[:half] + words[-half:])[:MAX_QUERY_CHARS]
 
 
 def citation_title(result: dict[str, Any]) -> str:
@@ -94,7 +107,7 @@ class NcertKnowledge:
             raise RagError("ncert_paused")
         wanted = {subject_id(name) for name in subjects}
         body: dict[str, Any] = {
-            "query": query[:MAX_QUERY_CHARS],
+            "query": search_text(query),
             "mode": "vector",
             # Over-fetched for a student with a curriculum, so their own books can rank first below.
             "top_k": max(1, min(k * 3 if classes or wanted else k, 50)),

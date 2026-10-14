@@ -140,7 +140,9 @@ of pgvector; attached files stay in pgvector.
   are never sent: they rank the results here, their own books first, then the top `RAG_TOP_K` are kept.
   Subject ids are the names in slug form.
 - **Query:** the latest question; a short follow-up (six words or fewer) is searched together with the question
-  before it (`search_query_for` in `app/rag/graph.py`). A rule, not a model call.
+  before it (`search_query_for` in `app/rag/graph.py`). A rule, not a model call. At most 32 words are sent
+  (`search_text`: the first and last 16 of a longer query), because the service's encoder time grows with
+  every word (4 words 0.55 s, 30 words 1.8 s, 70 words 3.3 s on the VM); the tutor still gets the whole question.
 - **Response:** results are validated field by field and malformed ones dropped; each passage is capped at
   4,000 characters, and the context budget below still decides what fits. `[n]` is titled
   "NCERT <book> (Class n), Ch k: <chapter>, p. <printed page>".
