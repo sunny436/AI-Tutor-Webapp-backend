@@ -133,9 +133,12 @@ With `NCERT_KB_BASE_URL` and `NCERT_KB_API_KEY` set, the knowledge source is the
 of pgvector; attached files stay in pgvector.
 
 - **Request:** `POST /api/v1/retrieval/search` with `Authorization: Bearer <key>`, `mode: vector`, `top_k`
-  (`RAG_TOP_K`), and the student's curriculum from their settings (`retrieval_for` in `app/chat/assistant.py`):
-  `filters: {enforcement: prefer, any_of: [{classes: [their class], subjects: [their subjects]}]}`. `prefer`
-  ranks their books first and never excludes anything. Subject ids are the names in slug form.
+  (`RAG_TOP_K`, three times that for a student with a curriculum) and
+  `filters: {enforcement: strict, any_of: [{classes: [6..12]}]}`: the tutor serves Classes 6-12 only
+  (`SERVED_CLASSES`, owner decision 2026-10-14); Classes 1-5 are never searched, and a result outside 6-12
+  is dropped here as well. The student's class and subjects (`retrieval_for` in `app/chat/assistant.py`)
+  are never sent: they rank the results here, their own books first, then the top `RAG_TOP_K` are kept.
+  Subject ids are the names in slug form.
 - **Query:** the latest question; a short follow-up (six words or fewer) is searched together with the question
   before it (`search_query_for` in `app/rag/graph.py`). A rule, not a model call.
 - **Response:** results are validated field by field and malformed ones dropped; each passage is capped at

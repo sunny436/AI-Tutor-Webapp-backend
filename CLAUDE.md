@@ -145,7 +145,7 @@ file is current. A new endpoint for the browser must also be added to `routes.ts
 - **RAG** (`docs/rag.md`): `PgVectorRetriever` → `KnowledgeStore` → pgvector HNSW; or, when
   `NCERT_KB_BASE_URL` + `NCERT_KB_API_KEY` are set, `NcertRetriever` (`app/rag/ncert.py`): the separate
   NCERT Knowledge Service (`ncert-kb-api` :4200, repository `sunny436/graphrag`) through its API only,
-  vector mode, the student's class and subjects as a `prefer` scope, follow-ups searched with the
+  vector mode, Classes 6-12 only (`SERVED_CLASSES`), the student's class and subjects ranked first here, follow-ups searched with the
   question before them (`search_query_for`). Its own data and releases; never read its tables.
   - Every search is scoped by `AccessScope(user_id)`: global sources plus the user's own.
   - Retrieval options come only from `resolve_assistant_config` (`app/chat/assistant.py`), which is

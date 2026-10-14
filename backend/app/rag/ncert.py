@@ -5,9 +5,11 @@ app only calls its versioned API, `POST /api/v1/retrieval/search`, never its dat
 NCERT_KB_BASE_URL and NCERT_KB_API_KEY are set (app/main.py wires it instead of the pgvector
 knowledge base, which is empty in production).
 
-- **What is sent:** the question and the student's class and subjects as a `prefer` scope (their
-  books rank first, nothing is excluded). Never who the student is: no id, name or email.
-- **Vector mode only:** the cheap path (p50 260 ms on the VM, docs/RETRIEVAL.md of the service).
+- **What is sent:** the question, with Classes 6-12 as a `strict` scope (SERVED_CLASSES: Classes 1-5
+  are never searched, and a result outside it is dropped here too). The student's class and subjects
+  never leave this app: they only rank the results here (their own books first). Never who the
+  student is: no id, name or email.
+- **Vector mode only:** one pass; the service's query encoder is most of its time (~0.6 s on the VM).
 - **Fast failure:** one pooled client with keep-alive; a hard timeout (NCERT_KB_TIMEOUT_S); after
   FAILURES_TO_PAUSE failures in a row, calls are skipped for PAUSE_S. Every failure is a RagError,
   so the turn goes on without textbook context (app/rag/graph.py), never fails.
@@ -36,6 +38,8 @@ MAX_QUERY_CHARS = 2_000  # the service's own limit
 MAX_PASSAGE_CHARS = 4_000
 FAILURES_TO_PAUSE = 3
 PAUSE_S = 30.0
+# Owner decision (2026-10-14): the tutor serves Classes 6-12 only.
+SERVED_CLASSES = (6, 7, 8, 9, 10, 11, 12)
 
 
 def subject_id(name: str) -> str:
@@ -88,14 +92,14 @@ class NcertKnowledge:
     async def search(self, query: str, k: int, classes: tuple[int, ...], subjects: tuple[str, ...]) -> list[Document]:
         if time.monotonic() < self._paused_until:
             raise RagError("ncert_paused")
-        clause: dict[str, Any] = {}
-        if classes:
-            clause["classes"] = list(classes)
-        if subjects:
-            clause["subjects"] = [subject_id(name) for name in subjects]
-        body: dict[str, Any] = {"query": query[:MAX_QUERY_CHARS], "mode": "vector", "top_k": max(1, min(k, 50))}
-        if clause:
-            body["filters"] = {"enforcement": "prefer", "any_of": [clause]}
+        wanted = {subject_id(name) for name in subjects}
+        body: dict[str, Any] = {
+            "query": query[:MAX_QUERY_CHARS],
+            "mode": "vector",
+            # Over-fetched for a student with a curriculum, so their own books can rank first below.
+            "top_k": max(1, min(k * 3 if classes or wanted else k, 50)),
+            "filters": {"enforcement": "strict", "any_of": [{"classes": list(SERVED_CLASSES)}]},
+        }
         try:
             response = await self._client.post(SEARCH_PATH, json=body)
         except httpx.TimeoutException as error:
@@ -116,7 +120,9 @@ class NcertKnowledge:
         for result in results if isinstance(results, list) else []:
             try:
                 content = str(result["content"]).strip()[:MAX_PASSAGE_CHARS]
-                if not content:
+                curriculum = result["curriculum"]
+                served = [c for c in curriculum.get("classes") or [] if c in SERVED_CLASSES]
+                if not content or not served:
                     continue
                 documents.append(
                     Document(
@@ -130,14 +136,16 @@ class NcertKnowledge:
                             "uri": None,
                             "ordinal": int(result.get("rank") or len(documents) + 1),
                             "score": float(result["score"]),
-                            "in_scope": bool(result.get("in_scope", True)),
+                            "in_scope": (not classes or any(c in classes for c in served))
+                            and (not wanted or curriculum["subject"]["id"] in wanted),
                             "kb_version": kb_version,
                         },
                     )
                 )
             except (KeyError, TypeError, ValueError):
                 continue  # one malformed result never costs the others
-        return documents
+        documents.sort(key=lambda document: not document.metadata["in_scope"])  # stable: service order within
+        return documents[:k]
 
 
 class NcertRetriever(BaseRetriever):

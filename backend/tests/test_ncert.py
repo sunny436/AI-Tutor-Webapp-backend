@@ -38,10 +38,12 @@ def knowledge(handler, calls=None):
     return NcertKnowledge("http://127.0.0.1:4200", "ncertkb_test", 2.0, transport=httpx.MockTransport(record))
 
 
-async def test_the_search_sends_the_question_and_the_curriculum_and_maps_cited_passages():
+async def test_the_search_is_classes_6_to_12_and_ranks_the_students_own_books_first():
     calls = []
+    other = {**RESULT, "chunk_id": "c0", "curriculum": {**RESULT["curriculum"], "classes": [11]}}
+    junior = {**RESULT, "chunk_id": "c9", "curriculum": {**RESULT["curriculum"], "classes": [3]}}
     payload = {
-        "results": [RESULT, {"rank": 2, "content": "malformed: no provenance"}],
+        "results": [other, junior, RESULT, {"rank": 2, "content": "malformed: no provenance"}],
         "meta": {"kb_version": "c01-c08-v3"},
     }
     kb = knowledge(lambda request: httpx.Response(200, json=payload), calls)
@@ -54,10 +56,11 @@ async def test_the_search_sends_the_question_and_the_curriculum_and_maps_cited_p
     assert json.loads(request.content) == {
         "query": "What are stomata?",
         "mode": "vector",
-        "top_k": 5,
-        "filters": {"enforcement": "prefer", "any_of": [{"classes": [7], "subjects": ["science", "social-science"]}]},
+        "top_k": 15,
+        "filters": {"enforcement": "strict", "any_of": [{"classes": [6, 7, 8, 9, 10, 11, 12]}]},
     }
-    assert len(documents) == 1  # the malformed result is dropped, the good one kept
+    # Class 3 and the malformed result are dropped; the student's Class 7 book comes before Class 11.
+    assert [d.metadata["chunk_id"] for d in documents] == ["c1", "c0"]
     meta = documents[0].metadata
     assert meta["title"] == "NCERT Curiosity (Class 7), Ch 1: Nutrition in Plants, p. 12"
     assert (meta["source"], meta["chunk_id"], meta["kb_version"]) == ("NCERT", "c1", "c01-c08-v3")
@@ -65,11 +68,12 @@ async def test_the_search_sends_the_question_and_the_curriculum_and_maps_cited_p
     await kb.aclose()
 
 
-async def test_no_curriculum_means_no_filter():
+async def test_no_curriculum_still_means_classes_6_to_12():
     calls = []
     kb = knowledge(lambda request: httpx.Response(200, json={"results": [], "meta": {}}), calls)
     assert await NcertRetriever(knowledge=kb).ainvoke("photosynthesis") == []
-    assert "filters" not in json.loads(calls[0].content)
+    body = json.loads(calls[0].content)
+    assert body["top_k"] == 5 and body["filters"]["any_of"] == [{"classes": [6, 7, 8, 9, 10, 11, 12]}]
     await kb.aclose()
 
 
