@@ -36,7 +36,7 @@ from sqlalchemy.orm import aliased
 
 from app.db.models import FileChunk, UserFile, UserFileBlob
 from app.db.session import Database
-from app.files.service import DB_CEILING_BYTES, MAX_ATTEMPTS
+from app.files.service import DB_CEILING_BYTES, MAX_ATTEMPTS, OWN_DATA_BYTES
 from app.logging import get_logger
 from app.rag.embeddings import embedding_model_id, is_configured
 from app.rag.errors import EmbeddingError
@@ -613,7 +613,7 @@ class FileWorker:
                     UserFile.user_id == claim.user_id, UserFile.status == "ready", UserFile.id != claim.id
                 )
             )
-            size = await session.scalar(text("SELECT pg_database_size(current_database())"))
+            size = await session.scalar(OWN_DATA_BYTES)
         if int(held or 0) + chunks > MAX_USER_CHUNKS:
             return "chunk_limit_reached"
         if int(size or 0) >= DB_CEILING_BYTES:

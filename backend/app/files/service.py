@@ -48,6 +48,13 @@ SCOPE_FILES = 5  # a turn uses the most recently attached files of its conversat
 SCOPE_CHUNKS = 4_000  # ...up to this many chunks in total (exact search stays cheap)
 DB_CEILING_BYTES = 3 * 1024**3  # physical guard for the shared disk and its backups
 MIN_FREE_DISK_BYTES = 5 * 10**9
+# What DB_CEILING_BYTES limits: this app's own tables (schema public), indexes and TOAST included. The
+# database is shared: the NCERT knowledge service keeps its own, much larger schema in it, which must not
+# stop students' uploads (the disk itself stays guarded by MIN_FREE_DISK_BYTES).
+OWN_DATA_BYTES = text(
+    "SELECT coalesce(sum(pg_total_relation_size(c.oid)), 0) FROM pg_class c "
+    "JOIN pg_namespace n ON n.oid = c.relnamespace WHERE n.nspname = 'public' AND c.relkind IN ('r', 'm')"
+)
 # Failures a retry can fix. Everything else is a property of the file itself.
 RETRYABLE = frozenset(
     {"embedding_failed", "extractor_failed", "chunk_limit_reached", "files_capacity_reached", "model_changed"}
@@ -207,7 +214,7 @@ async def check_capacity(session: AsyncSession) -> None:
         free = shutil.disk_usage("/").free
     except OSError:
         free = MIN_FREE_DISK_BYTES
-    size = int(await session.scalar(text("SELECT pg_database_size(current_database())")) or 0)
+    size = int(await session.scalar(OWN_DATA_BYTES) or 0)
     if free < MIN_FREE_DISK_BYTES or size >= DB_CEILING_BYTES:
         raise ServiceUnavailable(
             "File storage is full right now. Please try again later.", code="files_capacity_reached"
