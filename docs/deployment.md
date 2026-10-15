@@ -325,9 +325,11 @@ restore everyone signs in again.
 - **During a deploy** `update.sh` writes `/run/aichat-deploying`; the worker makes no new claims
   while it exists (the checkout and venv are changing).
 - **Capacity:** uploads stop (503 `files_capacity_reached`) when the database reaches 3 GB or the
-  disk has less than 5 GB free. `backup.sh` refuses to dump with less than twice the database's
-  size free, and leaves out `file_chunks` (derived data; after a restore, re-queue ready files as
-  its header says). Keep `KEEP_DAYS` at 7: up to ~9 dumps share the database's disk.
+  disk has less than 5 GB free. `backup.sh` refuses to dump with less than twice the size of what
+  it dumps free, and leaves out `file_chunks` (derived data; after a restore, re-queue ready files
+  as its header says) and the whole `ncert_knowledge` schema (the NCERT Knowledge Service's own
+  data in the same database, 19 GB on 2026-10-15; that service owns its backups). Keep `KEEP_DAYS`
+  at 7: up to ~9 dumps share the database's disk.
 - **Kill switch:** `FILES_ENABLED=false` in `api.env` and `systemctl restart aichat-api`: no uploads
   and no processing (pending files become `stored`); ready attachments keep working.
 
