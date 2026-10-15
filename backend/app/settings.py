@@ -130,6 +130,11 @@ class Settings(BaseSettings):
     stream_stale_after_s: int = 300
     stream_cancel_poll_s: float = 1.0
 
+    # ---- Study time (app/study): how long without input counts as idle, by mode. Reading allows
+    # longer (reading and thinking need no clicks); the reading prompt is always shorter than this.
+    study_idle_reading_s: int = Field(default=300, ge=60, le=1800)
+    study_idle_solving_s: int = Field(default=120, ge=30, le=1800)
+
     # ---- RAG (LangGraph + LangChain retriever over PostgreSQL/pgvector) ----
     rag_enabled: bool = True
     rag_top_k: int = 5

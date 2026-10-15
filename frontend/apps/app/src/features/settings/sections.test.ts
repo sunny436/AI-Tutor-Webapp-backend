@@ -7,7 +7,7 @@ const slugs = (query: string) => matchSections(query).map((section) => section.s
 describe("Settings search", () => {
   test("an empty or blank query lists every section, in order", () => {
     const all = SETTINGS_SECTIONS.map((section) => section.slug);
-    expect(all).toHaveLength(12);
+    expect(all).toHaveLength(13);
     expect(slugs("")).toEqual(all);
     expect(slugs("   ")).toEqual(all);
   });

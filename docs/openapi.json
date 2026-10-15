@@ -93,6 +93,30 @@
         "title": "ActivityOut",
         "type": "object"
       },
+      "ActivityTimeOut": {
+        "properties": {
+          "activeSeconds": {
+            "title": "Activeseconds",
+            "type": "integer"
+          },
+          "activity": {
+            "enum": [
+              "reading",
+              "practice",
+              "revision",
+              "test"
+            ],
+            "title": "Activity",
+            "type": "string"
+          }
+        },
+        "required": [
+          "activity",
+          "activeSeconds"
+        ],
+        "title": "ActivityTimeOut",
+        "type": "object"
+      },
       "AppearanceOut": {
         "properties": {
           "fontSize": {
@@ -660,6 +684,132 @@
         "title": "CatalogEntryOut",
         "type": "object"
       },
+      "ChapterOut": {
+        "properties": {
+          "bookId": {
+            "title": "Bookid",
+            "type": "string"
+          },
+          "chapterId": {
+            "title": "Chapterid",
+            "type": "string"
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "number": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Number"
+          },
+          "title": {
+            "title": "Title",
+            "type": "string"
+          }
+        },
+        "required": [
+          "chapterId",
+          "bookId",
+          "number",
+          "label",
+          "title"
+        ],
+        "title": "ChapterOut",
+        "type": "object"
+      },
+      "ChapterTimeOut": {
+        "properties": {
+          "activeSeconds": {
+            "title": "Activeseconds",
+            "type": "integer"
+          },
+          "bookId": {
+            "title": "Bookid",
+            "type": "string"
+          },
+          "chapterId": {
+            "title": "Chapterid",
+            "type": "string"
+          },
+          "chapterTitle": {
+            "title": "Chaptertitle",
+            "type": "string"
+          },
+          "subject": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subject"
+          }
+        },
+        "required": [
+          "subject",
+          "chapterId",
+          "bookId",
+          "chapterTitle",
+          "activeSeconds"
+        ],
+        "title": "ChapterTimeOut",
+        "type": "object"
+      },
+      "ChaptersOut": {
+        "properties": {
+          "available": {
+            "title": "Available",
+            "type": "boolean"
+          },
+          "chapters": {
+            "items": {
+              "$ref": "#/components/schemas/ChapterOut"
+            },
+            "title": "Chapters",
+            "type": "array"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "enum": [
+                  "no_class",
+                  "unavailable",
+                  "not_configured"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Why there is no list: no_class (set a Class 6-12 in Academic Profile), unavailable (the textbook service did not answer), not_configured.",
+            "title": "Reason"
+          }
+        },
+        "required": [
+          "available",
+          "reason",
+          "chapters"
+        ],
+        "title": "ChaptersOut",
+        "type": "object"
+      },
       "ChatRequest": {
         "additionalProperties": false,
         "properties": {
@@ -1126,6 +1276,26 @@
           }
         },
         "title": "HTTPValidationError",
+        "type": "object"
+      },
+      "IdleThresholdsOut": {
+        "properties": {
+          "readingSeconds": {
+            "description": "Reading and revision: idle after this long without input.",
+            "title": "Readingseconds",
+            "type": "integer"
+          },
+          "solvingSeconds": {
+            "description": "Practice and tests: idle after this long without input.",
+            "title": "Solvingseconds",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "readingSeconds",
+          "solvingSeconds"
+        ],
+        "title": "IdleThresholdsOut",
         "type": "object"
       },
       "LearnerProfileOut": {
@@ -2543,6 +2713,125 @@
         "title": "ProgressWeekOut",
         "type": "object"
       },
+      "RecentSessionOut": {
+        "properties": {
+          "activeSeconds": {
+            "title": "Activeseconds",
+            "type": "integer"
+          },
+          "activities": {
+            "items": {
+              "enum": [
+                "reading",
+                "practice",
+                "revision",
+                "test"
+              ],
+              "type": "string"
+            },
+            "title": "Activities",
+            "type": "array"
+          },
+          "chapters": {
+            "description": "Each chapter title, in order.",
+            "items": {
+              "type": "string"
+            },
+            "title": "Chapters",
+            "type": "array"
+          },
+          "durationSeconds": {
+            "title": "Durationseconds",
+            "type": "integer"
+          },
+          "endReason": {
+            "anyOf": [
+              {
+                "enum": [
+                  "ended",
+                  "stale",
+                  "limit"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Endreason"
+          },
+          "endedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Endedat"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "idleSeconds": {
+            "title": "Idleseconds",
+            "type": "integer"
+          },
+          "pausedSeconds": {
+            "title": "Pausedseconds",
+            "type": "integer"
+          },
+          "startedAt": {
+            "format": "date-time",
+            "title": "Startedat",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "paused",
+              "ended"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "subjects": {
+            "description": "Each subject the session had, in order (null: none chosen).",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "title": "Subjects",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "endReason",
+          "startedAt",
+          "endedAt",
+          "activeSeconds",
+          "idleSeconds",
+          "pausedSeconds",
+          "durationSeconds",
+          "subjects",
+          "chapters",
+          "activities"
+        ],
+        "title": "RecentSessionOut",
+        "type": "object"
+      },
       "RenameConversationRequest": {
         "additionalProperties": false,
         "properties": {
@@ -2582,6 +2871,94 @@
           "items"
         ],
         "title": "ReplaceSubjectsRequest",
+        "type": "object"
+      },
+      "SegmentOut": {
+        "properties": {
+          "activity": {
+            "enum": [
+              "reading",
+              "practice",
+              "revision",
+              "test"
+            ],
+            "title": "Activity",
+            "type": "string"
+          },
+          "bookId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bookid"
+          },
+          "chapterId": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chapterid"
+          },
+          "chapterTitle": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chaptertitle"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "study",
+              "paused"
+            ],
+            "title": "Kind",
+            "type": "string"
+          },
+          "startedAt": {
+            "format": "date-time",
+            "title": "Startedat",
+            "type": "string"
+          },
+          "subject": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Subject"
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "subject",
+          "chapterId",
+          "bookId",
+          "chapterTitle",
+          "activity",
+          "startedAt"
+        ],
+        "title": "SegmentOut",
         "type": "object"
       },
       "SessionInfo": {
@@ -2701,6 +3078,146 @@
         "title": "StreakOut",
         "type": "object"
       },
+      "StudyBeatIn": {
+        "additionalProperties": false,
+        "properties": {
+          "beatId": {
+            "description": "New for every beat; a retry repeats it, and a repeat changes nothing.",
+            "format": "uuid",
+            "title": "Beatid",
+            "type": "string"
+          },
+          "clientId": {
+            "format": "uuid",
+            "title": "Clientid",
+            "type": "string"
+          },
+          "nowActive": {
+            "description": "This client is studying now.",
+            "title": "Nowactive",
+            "type": "boolean"
+          },
+          "studyView": {
+            "description": "A learning view is on screen.",
+            "title": "Studyview",
+            "type": "boolean"
+          },
+          "visible": {
+            "description": "The page is visible.",
+            "title": "Visible",
+            "type": "boolean"
+          },
+          "wasActive": {
+            "description": "This client was studying (visible, on a learning view, not paused, not idle) the whole time since its previous beat.",
+            "title": "Wasactive",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "beatId",
+          "clientId",
+          "wasActive",
+          "nowActive",
+          "studyView",
+          "visible"
+        ],
+        "title": "StudyBeatIn",
+        "type": "object"
+      },
+      "StudyContextChangeIn": {
+        "additionalProperties": false,
+        "properties": {
+          "activity": {
+            "default": "reading",
+            "enum": [
+              "reading",
+              "practice",
+              "revision",
+              "test"
+            ],
+            "title": "Activity",
+            "type": "string"
+          },
+          "chapterId": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "From GET /v1/study/chapters for this subject; needs `subject`.",
+            "title": "Chapterid"
+          },
+          "clientId": {
+            "format": "uuid",
+            "title": "Clientid",
+            "type": "string"
+          },
+          "expectedSegmentId": {
+            "description": "The segment the client last saw; 409 if it changed since.",
+            "format": "uuid",
+            "title": "Expectedsegmentid",
+            "type": "string"
+          },
+          "subject": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "A subject code from /v1/catalog/academic.",
+            "title": "Subject"
+          }
+        },
+        "required": [
+          "clientId",
+          "expectedSegmentId"
+        ],
+        "title": "StudyContextChangeIn",
+        "type": "object"
+      },
+      "StudyDayOut": {
+        "properties": {
+          "activeSeconds": {
+            "title": "Activeseconds",
+            "type": "integer"
+          },
+          "appSeconds": {
+            "description": "Time PadhAI was open (visible or not), studying or not.",
+            "title": "Appseconds",
+            "type": "integer"
+          },
+          "date": {
+            "format": "date",
+            "title": "Date",
+            "type": "string"
+          },
+          "idleSeconds": {
+            "title": "Idleseconds",
+            "type": "integer"
+          },
+          "pausedSeconds": {
+            "title": "Pausedseconds",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "date",
+          "activeSeconds",
+          "idleSeconds",
+          "pausedSeconds",
+          "appSeconds"
+        ],
+        "title": "StudyDayOut",
+        "type": "object"
+      },
       "StudyGreetingPool": {
         "properties": {
           "items": {
@@ -2740,6 +3257,358 @@
           "weekOf"
         ],
         "title": "StudyGreetingResponse",
+        "type": "object"
+      },
+      "StudySessionOut": {
+        "properties": {
+          "activeSeconds": {
+            "description": "Estimated active study time, credited by the server.",
+            "title": "Activeseconds",
+            "type": "integer"
+          },
+          "durationSeconds": {
+            "description": "active + idle + paused, exactly.",
+            "title": "Durationseconds",
+            "type": "integer"
+          },
+          "endReason": {
+            "anyOf": [
+              {
+                "enum": [
+                  "ended",
+                  "stale",
+                  "limit"
+                ],
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "ended: the student ended it; stale: no study activity for 15 minutes (or paused for 60), so it ended at the last activity; limit: it reached 8 hours.",
+            "title": "Endreason"
+          },
+          "endedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Endedat"
+          },
+          "id": {
+            "format": "uuid",
+            "title": "Id",
+            "type": "string"
+          },
+          "idleSeconds": {
+            "description": "Studying, but no activity was observed (or not on a learning view).",
+            "title": "Idleseconds",
+            "type": "integer"
+          },
+          "pausedAt": {
+            "anyOf": [
+              {
+                "format": "date-time",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Pausedat"
+          },
+          "pausedSeconds": {
+            "title": "Pausedseconds",
+            "type": "integer"
+          },
+          "segment": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/SegmentOut"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "What the session is in now; null once it has ended."
+          },
+          "startedAt": {
+            "format": "date-time",
+            "title": "Startedat",
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "active",
+              "paused",
+              "ended"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "timezone": {
+            "title": "Timezone",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "startedAt",
+          "pausedAt",
+          "endedAt",
+          "endReason",
+          "timezone",
+          "segment",
+          "activeSeconds",
+          "idleSeconds",
+          "pausedSeconds",
+          "durationSeconds"
+        ],
+        "title": "StudySessionOut",
+        "type": "object"
+      },
+      "StudyStartIn": {
+        "additionalProperties": false,
+        "properties": {
+          "activity": {
+            "default": "reading",
+            "enum": [
+              "reading",
+              "practice",
+              "revision",
+              "test"
+            ],
+            "title": "Activity",
+            "type": "string"
+          },
+          "chapterId": {
+            "anyOf": [
+              {
+                "maxLength": 120,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "From GET /v1/study/chapters for this subject; needs `subject`.",
+            "title": "Chapterid"
+          },
+          "clientId": {
+            "description": "This page load of the app (a new one on every load).",
+            "format": "uuid",
+            "title": "Clientid",
+            "type": "string"
+          },
+          "subject": {
+            "anyOf": [
+              {
+                "maxLength": 40,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "A subject code from /v1/catalog/academic.",
+            "title": "Subject"
+          }
+        },
+        "required": [
+          "clientId"
+        ],
+        "title": "StudyStartIn",
+        "type": "object"
+      },
+      "StudyStateOut": {
+        "properties": {
+          "idle": {
+            "$ref": "#/components/schemas/IdleThresholdsOut"
+          },
+          "lastEnded": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StudySessionOut"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The latest session that ended in the last 24 hours."
+          },
+          "serverTime": {
+            "format": "date-time",
+            "title": "Servertime",
+            "type": "string"
+          },
+          "session": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/StudySessionOut"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The open session (active or paused), if any."
+          }
+        },
+        "required": [
+          "session",
+          "lastEnded",
+          "idle",
+          "serverTime"
+        ],
+        "title": "StudyStateOut",
+        "type": "object"
+      },
+      "StudySummaryOut": {
+        "properties": {
+          "activities": {
+            "description": "Active time per activity, most first.",
+            "items": {
+              "$ref": "#/components/schemas/ActivityTimeOut"
+            },
+            "title": "Activities",
+            "type": "array"
+          },
+          "chapters": {
+            "description": "Active time per chapter (when one was chosen), most first.",
+            "items": {
+              "$ref": "#/components/schemas/ChapterTimeOut"
+            },
+            "title": "Chapters",
+            "type": "array"
+          },
+          "days": {
+            "description": "Days from `from` (or the first recorded day) to `to`, oldest first.",
+            "items": {
+              "$ref": "#/components/schemas/StudyDayOut"
+            },
+            "title": "Days",
+            "type": "array"
+          },
+          "firstRecordedDate": {
+            "anyOf": [
+              {
+                "format": "date",
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "The first day with any study or app time ever recorded; days before it have no data (they are not listed) rather than zero.",
+            "title": "Firstrecordeddate"
+          },
+          "from": {
+            "format": "date",
+            "title": "From",
+            "type": "string"
+          },
+          "sessions": {
+            "description": "Sessions in the range, newest first, at most 20.",
+            "items": {
+              "$ref": "#/components/schemas/RecentSessionOut"
+            },
+            "title": "Sessions",
+            "type": "array"
+          },
+          "subjects": {
+            "description": "Active time per subject, most first.",
+            "items": {
+              "$ref": "#/components/schemas/SubjectTimeOut"
+            },
+            "title": "Subjects",
+            "type": "array"
+          },
+          "timezone": {
+            "description": "The time zone of `from`/`to` and of each day: the student's.",
+            "title": "Timezone",
+            "type": "string"
+          },
+          "to": {
+            "format": "date",
+            "title": "To",
+            "type": "string"
+          },
+          "totals": {
+            "$ref": "#/components/schemas/StudyTotalsOut"
+          }
+        },
+        "required": [
+          "timezone",
+          "from",
+          "to",
+          "firstRecordedDate",
+          "totals",
+          "days",
+          "subjects",
+          "chapters",
+          "activities",
+          "sessions"
+        ],
+        "title": "StudySummaryOut",
+        "type": "object"
+      },
+      "StudyTotalsOut": {
+        "properties": {
+          "activeSeconds": {
+            "title": "Activeseconds",
+            "type": "integer"
+          },
+          "appSeconds": {
+            "title": "Appseconds",
+            "type": "integer"
+          },
+          "idleSeconds": {
+            "title": "Idleseconds",
+            "type": "integer"
+          },
+          "pausedSeconds": {
+            "title": "Pausedseconds",
+            "type": "integer"
+          },
+          "sessions": {
+            "title": "Sessions",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "activeSeconds",
+          "idleSeconds",
+          "pausedSeconds",
+          "appSeconds",
+          "sessions"
+        ],
+        "title": "StudyTotalsOut",
+        "type": "object"
+      },
+      "StudyTransitionIn": {
+        "additionalProperties": false,
+        "properties": {
+          "clientId": {
+            "format": "uuid",
+            "title": "Clientid",
+            "type": "string"
+          },
+          "expectedSegmentId": {
+            "format": "uuid",
+            "title": "Expectedsegmentid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "clientId",
+          "expectedSegmentId"
+        ],
+        "title": "StudyTransitionIn",
         "type": "object"
       },
       "SubjectIn": {
@@ -2790,6 +3659,32 @@
           "needsImprovement"
         ],
         "title": "SubjectOut",
+        "type": "object"
+      },
+      "SubjectTimeOut": {
+        "properties": {
+          "activeSeconds": {
+            "title": "Activeseconds",
+            "type": "integer"
+          },
+          "subject": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "A subject code; null when no subject was chosen.",
+            "title": "Subject"
+          }
+        },
+        "required": [
+          "subject",
+          "activeSeconds"
+        ],
+        "title": "SubjectTimeOut",
         "type": "object"
       },
       "SubjectsOut": {
@@ -5597,6 +6492,420 @@
         "summary": "Get Learning Streak",
         "tags": [
           "progress"
+        ]
+      }
+    },
+    "/v1/study/beat": {
+      "post": {
+        "description": "One observation from one client, every 30 s and at every change. Credits active time only\nbetween two of this client's observations at most 75 s apart, both active, inside studying\ntime; never twice for the same moment, however many tabs or devices report it.",
+        "operationId": "study_beat_v1_study_beat_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyBeatIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyStateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Study Beat",
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/study/chapters": {
+      "get": {
+        "description": "NCERT chapters of this subject for the student's class (Academic Profile), for choosing what\na session is about. No list (`available: false`) is a normal state: studying needs no chapter.",
+        "operationId": "get_study_chapters_v1_study_chapters_get",
+        "parameters": [
+          {
+            "description": "A subject code.",
+            "in": "query",
+            "name": "subject",
+            "required": true,
+            "schema": {
+              "description": "A subject code.",
+              "maxLength": 40,
+              "title": "Subject",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChaptersOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Study Chapters",
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/study/session": {
+      "get": {
+        "description": "The open study session (if any) and the latest one that ended in the last day, as of now: a\nsession that ended on its own (no study activity for 15 minutes, paused for 60, or 8 hours) is\nshown as ended. Only reads.",
+        "operationId": "get_study_session_v1_study_session_get",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyStateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          }
+        },
+        "summary": "Get Study Session",
+        "tags": [
+          "study"
+        ]
+      },
+      "post": {
+        "description": "Start studying, or join the session already open on another tab or device (as it is).",
+        "operationId": "start_study_session_v1_study_session_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyStartIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyStateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Start Study Session",
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/study/session/{session_id}": {
+      "patch": {
+        "description": "Change the subject, chapter or activity. 409 study_state_changed if the session changed since\n`expectedSegmentId` (unless it already has this context); 409 study_session_ended once ended.",
+        "operationId": "change_study_context_v1_study_session__session_id__patch",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "session_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyContextChangeIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyStateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Change Study Context",
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/study/session/{session_id}/end": {
+      "post": {
+        "description": "End the session (already ended: nothing changes).",
+        "operationId": "end_study_session_v1_study_session__session_id__end_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "session_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyTransitionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyStateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "End Study Session",
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/study/session/{session_id}/pause": {
+      "post": {
+        "description": "Pause (already paused: nothing changes). Paused time is never active time.",
+        "operationId": "pause_study_session_v1_study_session__session_id__pause_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "session_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyTransitionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyStateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Pause Study Session",
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/study/session/{session_id}/resume": {
+      "post": {
+        "description": "Resume (already studying: nothing changes).",
+        "operationId": "resume_study_session_v1_study_session__session_id__resume_post",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "session_id",
+            "required": true,
+            "schema": {
+              "format": "uuid",
+              "title": "Session Id",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyTransitionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudyStateOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Resume Study Session",
+        "tags": [
+          "study"
+        ]
+      }
+    },
+    "/v1/study/summary": {
+      "get": {
+        "description": "Estimated active, idle and paused study time and app time per day, by subject, chapter and\nactivity, and the sessions in the range. Days are in the student's time zone; days before\nanything was recorded are left out rather than shown as zero.",
+        "operationId": "get_study_summary_v1_study_summary_get",
+        "parameters": [
+          {
+            "description": "The last `days` days, ending today.",
+            "in": "query",
+            "name": "days",
+            "required": false,
+            "schema": {
+              "default": 7,
+              "description": "The last `days` days, ending today.",
+              "maximum": 92,
+              "minimum": 1,
+              "title": "Days",
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudySummaryOut"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            },
+            "description": "Validation Error"
+          }
+        },
+        "summary": "Get Study Summary",
+        "tags": [
+          "study"
         ]
       }
     },

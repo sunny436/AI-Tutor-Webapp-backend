@@ -12,6 +12,7 @@ import { PrivacySection } from "./privacy-section";
 import { ProfileSection } from "./profile-section";
 import { ProgressSection } from "./progress-section";
 import { StreakSection } from "./streak-section";
+import { StudyTrackingSection } from "./study-tracking-section";
 import type { SectionSlug } from "./sections";
 import { SubjectsSection } from "./subjects-section";
 
@@ -26,6 +27,7 @@ const VIEWS: Record<SectionSlug, (props: SectionProps) => JSX.Element> = {
   tutor: TutorSection,
   subjects: SubjectsSection,
   progress: ProgressSection,
+  "study-tracking": StudyTrackingSection,
   streak: StreakSection,
   notifications: NotificationsSection,
   appearance: AppearanceSection,

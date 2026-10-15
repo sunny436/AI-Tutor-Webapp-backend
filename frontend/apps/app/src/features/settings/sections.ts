@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   SlidersHorizontal,
   Target,
+  Timer,
   TrendingUp,
   UserRound,
 } from "lucide-react";
@@ -25,7 +26,7 @@ export type SettingsSectionInfo = {
 
 /**
  * The Settings sections, in the product's order: Profile, Academic Profile, Learning Goals,
- * Learning Preferences, AI Tutor, Subjects & Study, Progress & Goals, Notifications,
+ * Learning Preferences, AI Tutor, Subjects & Study, Progress & Goals, Study Tracking, Notifications,
  * Appearance & Accessibility, Privacy & Security, Help & Support. Only sections that work
  * end to end are listed; there are no placeholder pages.
  */
@@ -88,6 +89,13 @@ export const SETTINGS_SECTIONS = [
     description: "Your active time, questions and goals.",
     icon: TrendingUp,
     keywords: ["chart", "goals met", "study time", "active time"],
+  },
+  {
+    slug: "study-tracking",
+    title: "Study Tracking",
+    description: "What counts as study time: idle, hidden tabs and pauses.",
+    icon: Timer,
+    keywords: ["study session", "study activity", "idle", "inactivity", "pause", "resume", "hidden tab", "estimate"],
   },
   {
     slug: "streak",

@@ -137,6 +137,12 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
         "/v1/chat/stream", json={"message": "Explain this", "attachmentIds": [uploaded.json()["id"]]}, headers=headers
     )
     assert attached.status_code == 200, attached.text
+    tab = str(uuid.uuid4())  # a study session, and a beat (app time too)
+    studying = await client.post("/v1/study/session", json={"clientId": tab}, headers=headers)
+    assert studying.status_code == 200, studying.text
+    beat = {"beatId": str(uuid.uuid4()), "clientId": tab, "wasActive": False, "nowActive": True}
+    beat = await client.post("/v1/study/beat", json={**beat, "studyView": True, "visible": True}, headers=headers)
+    assert beat.status_code == 200, beat.text
 
     before = await _rows_referencing(database, user_id, account["email"])
     missing = [name for name, count in before.items() if name != "users" and count == 0]

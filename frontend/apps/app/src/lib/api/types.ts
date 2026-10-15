@@ -222,6 +222,92 @@ export type Progress = {
 };
 export type ActivityReport = { credited: boolean; date: string };
 
+// --------------------------------------------------------------- study time
+
+export type StudyActivity = (typeof CONTRACT.StudyStartIn.activity.enum)[number];
+export const STUDY_ACTIVITIES = CONTRACT.StudyStartIn.activity.enum;
+export type StudyStatus = (typeof CONTRACT.StudySessionOut.status.enum)[number];
+export type StudyEndReason = (typeof CONTRACT.StudySessionOut.endReason.enum)[number];
+export type StudyContext = { subject?: string | null; chapterId?: string | null; activity: StudyActivity };
+
+export type StudySegment = {
+  id: Uuid;
+  kind: "study" | "paused";
+  subject: string | null;
+  chapterId: string | null;
+  bookId: string | null;
+  chapterTitle: string | null;
+  activity: StudyActivity;
+  startedAt: Timestamp;
+};
+/** Seconds are the server's: the client never counts study time itself. */
+export type StudySession = {
+  id: Uuid;
+  status: StudyStatus;
+  startedAt: Timestamp;
+  pausedAt: Timestamp | null;
+  endedAt: Timestamp | null;
+  endReason: StudyEndReason | null;
+  timezone: string;
+  segment: StudySegment | null;
+  activeSeconds: number;
+  idleSeconds: number;
+  pausedSeconds: number;
+  durationSeconds: number;
+};
+export type StudyState = {
+  session: StudySession | null;
+  lastEnded: StudySession | null;
+  idle: { readingSeconds: number; solvingSeconds: number };
+  serverTime: Timestamp;
+};
+export type StudyBeat = {
+  beatId: Uuid;
+  clientId: Uuid;
+  wasActive: boolean;
+  nowActive: boolean;
+  studyView: boolean;
+  visible: boolean;
+};
+export type StudyDay = {
+  date: string;
+  activeSeconds: number;
+  idleSeconds: number;
+  pausedSeconds: number;
+  appSeconds: number;
+};
+export type StudySummary = {
+  timezone: string;
+  from: string;
+  to: string;
+  /** Days before it have no data (not listed) rather than zero. */
+  firstRecordedDate: string | null;
+  totals: { activeSeconds: number; idleSeconds: number; pausedSeconds: number; appSeconds: number; sessions: number };
+  days: StudyDay[];
+  subjects: { subject: string | null; activeSeconds: number }[];
+  chapters: { subject: string | null; chapterId: string; bookId: string; chapterTitle: string; activeSeconds: number }[];
+  activities: { activity: StudyActivity; activeSeconds: number }[];
+  sessions: {
+    id: Uuid;
+    status: StudyStatus;
+    endReason: StudyEndReason | null;
+    startedAt: Timestamp;
+    endedAt: Timestamp | null;
+    activeSeconds: number;
+    idleSeconds: number;
+    pausedSeconds: number;
+    durationSeconds: number;
+    subjects: (string | null)[];
+    chapters: string[];
+    activities: StudyActivity[];
+  }[];
+};
+export type StudyChapters = {
+  available: boolean;
+  reason: "no_class" | "unavailable" | "not_configured" | null;
+  chapters: { chapterId: string; bookId: string; number: number | null; label: string | null; title: string }[];
+};
+
 // ------------------------------------------------------------------- support
 
 export type SupportKind = (typeof CONTRACT.SupportRequestIn.kind.enum)[number];

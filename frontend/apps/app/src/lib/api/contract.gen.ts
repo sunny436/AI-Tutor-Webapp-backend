@@ -2,6 +2,16 @@
 // The backend owns these enums and limits; the web app reads them from here.
 
 export const CONTRACT = {
+  "ActivityTimeOut": {
+    "activity": {
+      "enum": [
+        "reading",
+        "practice",
+        "revision",
+        "test"
+      ]
+    }
+  },
   "AppearanceOut": {
     "fontSize": {
       "enum": [
@@ -83,6 +93,15 @@ export const CONTRACT = {
     },
     "question": {
       "minimum": 0
+    }
+  },
+  "ChaptersOut": {
+    "reason": {
+      "enum": [
+        "no_class",
+        "unavailable",
+        "not_configured"
+      ]
     }
   },
   "ChatRequest": {
@@ -482,6 +501,32 @@ export const CONTRACT = {
       "maxLength": 64
     }
   },
+  "RecentSessionOut": {
+    "activities": {
+      "items": {
+        "enum": [
+          "reading",
+          "practice",
+          "revision",
+          "test"
+        ]
+      }
+    },
+    "endReason": {
+      "enum": [
+        "ended",
+        "stale",
+        "limit"
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "paused",
+        "ended"
+      ]
+    }
+  },
   "RenameConversationRequest": {
     "title": {
       "maxLength": 120,
@@ -494,6 +539,70 @@ export const CONTRACT = {
     },
     "version": {
       "minimum": 0
+    }
+  },
+  "SegmentOut": {
+    "activity": {
+      "enum": [
+        "reading",
+        "practice",
+        "revision",
+        "test"
+      ]
+    },
+    "kind": {
+      "enum": [
+        "study",
+        "paused"
+      ]
+    }
+  },
+  "StudyContextChangeIn": {
+    "activity": {
+      "enum": [
+        "reading",
+        "practice",
+        "revision",
+        "test"
+      ]
+    },
+    "chapterId": {
+      "maxLength": 120
+    },
+    "subject": {
+      "maxLength": 40
+    }
+  },
+  "StudySessionOut": {
+    "endReason": {
+      "enum": [
+        "ended",
+        "stale",
+        "limit"
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "paused",
+        "ended"
+      ]
+    }
+  },
+  "StudyStartIn": {
+    "activity": {
+      "enum": [
+        "reading",
+        "practice",
+        "revision",
+        "test"
+      ]
+    },
+    "chapterId": {
+      "maxLength": 120
+    },
+    "subject": {
+      "maxLength": 40
     }
   },
   "SubjectIn": {

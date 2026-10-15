@@ -2,7 +2,8 @@
 
 import { type CSSProperties, type KeyboardEvent, useId, useRef, useState } from "react";
 
-import type { ProgressDay } from "@/lib/api/types";
+/** A day's minutes; `questions` only where the chart shows them (Progress & Goals). */
+export type ChartDay = { date: string; activeMinutes: number; questions?: number };
 
 function dayLabel(iso: string, style: "short" | "long"): string {
   const [year, month, day] = iso.split("-").map(Number);
@@ -38,8 +39,13 @@ function tooltipPosition(index: number, count: number): CSSProperties {
   return { left: `${((index + 0.5) / count) * 100}%` };
 }
 
+function questions(count: number): string {
+  return `${count} ${count === 1 ? "question" : "questions"}`;
+}
+
 /**
- * Active minutes per day, as columns. One series, so no legend: the title names it.
+ * Minutes per day, as columns (active time in PadhAI, or estimated study time). One series, so no
+ * legend: the title names it.
  * - Marks: at most 24px wide, 4px rounded at the top and square on the baseline, 2px apart.
  * - Hover or focus a day for its tooltip; the chart is one tab stop and the arrow keys move
  *   between days. Every value is also in the table below the chart ("Show as table").
@@ -47,7 +53,21 @@ function tooltipPosition(index: number, count: number): CSSProperties {
  * Colours are tokens: the bars' brand colour measures 6.31:1 on a card in light, 6.02:1 in
  * dark; text never takes the bar colour.
  */
-export function ActivityChart({ days, goal }: { days: ProgressDay[]; goal: number | null }) {
+export function ActivityChart({
+  days,
+  goal,
+  title = `Active minutes, last ${days.length} days`,
+  valueLabel = "active",
+  columnLabel = "Active time",
+}: {
+  days: ChartDay[];
+  goal: number | null;
+  title?: string;
+  /** After each day's minutes in its spoken label: "12 min active". */
+  valueLabel?: string;
+  columnLabel?: string;
+}) {
+  const withQuestions = days.some((day) => day.questions !== undefined);
   const [active, setActive] = useState<number | null>(null);
   const [focused, setFocused] = useState(days.length - 1);
   const [table, setTable] = useState(false);
@@ -70,7 +90,7 @@ export function ActivityChart({ days, goal }: { days: ProgressDay[]; goal: numbe
   return (
     <figure className="flex flex-col gap-2">
       <figcaption id={titleId} className="text-sm font-bold text-foreground">
-        Active minutes, last {days.length} days
+        {title}
       </figcaption>
       {/* The top padding is room for the tooltip over the tallest bar: it never covers the title. */}
       <div className="pt-8">
@@ -95,7 +115,7 @@ export function ActivityChart({ days, goal }: { days: ProgressDay[]; goal: numbe
               }}
               role="img"
               tabIndex={index === focused ? 0 : -1}
-              aria-label={`${dayLabel(day.date, "long")}: ${minutes(day.activeMinutes)} active, ${day.questions} ${day.questions === 1 ? "question" : "questions"}`}
+              aria-label={`${dayLabel(day.date, "long")}: ${minutes(day.activeMinutes)} ${valueLabel}${day.questions === undefined ? "" : `, ${questions(day.questions)}`}`}
               onPointerEnter={() => setActive(index)}
               onPointerLeave={() => setActive((current) => (current === index ? null : current))}
               onFocus={() => {
@@ -124,7 +144,7 @@ export function ActivityChart({ days, goal }: { days: ProgressDay[]; goal: numbe
             >
               <strong className="font-bold">{minutes(shown.activeMinutes)}</strong>{" "}
               <span className="text-text-secondary">
-                · {shown.questions} {shown.questions === 1 ? "question" : "questions"} · {dayLabel(shown.date, "short")}
+                {shown.questions === undefined ? "" : ` · ${questions(shown.questions)}`} · {dayLabel(shown.date, "short")}
               </span>
             </div>
           )}
@@ -145,18 +165,20 @@ export function ActivityChart({ days, goal }: { days: ProgressDay[]; goal: numbe
       </button>
       <div id={tableId} hidden={!table} className="overflow-hidden rounded-xl border border-border">
         <table className="w-full text-left text-sm">
-          <caption className="sr-only">Active minutes and questions, last {days.length} days</caption>
+          <caption className="sr-only">{title}</caption>
           <thead className="bg-surface text-xs text-text-secondary">
             <tr>
               <th scope="col" className="px-3 py-2 font-semibold">
                 Day
               </th>
               <th scope="col" className="px-3 py-2 text-right font-semibold">
-                Active time
+                {columnLabel}
               </th>
-              <th scope="col" className="px-3 py-2 text-right font-semibold">
-                Questions
-              </th>
+              {withQuestions && (
+                <th scope="col" className="px-3 py-2 text-right font-semibold">
+                  Questions
+                </th>
+              )}
             </tr>
           </thead>
           <tbody className="divide-y divide-border">
@@ -166,7 +188,7 @@ export function ActivityChart({ days, goal }: { days: ProgressDay[]; goal: numbe
                   {dayLabel(day.date, "long")}
                 </th>
                 <td className="px-3 py-1.5 text-right tabular-nums text-foreground">{minutes(day.activeMinutes)}</td>
-                <td className="px-3 py-1.5 text-right tabular-nums text-foreground">{day.questions}</td>
+                {withQuestions && <td className="px-3 py-1.5 text-right tabular-nums text-foreground">{day.questions}</td>}
               </tr>
             ))}
           </tbody>

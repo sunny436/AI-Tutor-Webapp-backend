@@ -12,6 +12,7 @@ import { useFocusOnArrival } from "@/features/navigation/route-focus";
 import { NotificationBell } from "@/features/notifications/notification-bell";
 import { CelebrationHost } from "@/features/streak/celebrations/celebration-host";
 import { DayCountdown, StreakBadge } from "@/features/streak/header-streak";
+import { StudyControl } from "@/features/study/study-control";
 import { APP_NAME } from "@/lib/brand";
 import { navItemFor } from "./nav-items";
 import { PreviewBadge } from "./preview-badge";
@@ -74,6 +75,7 @@ function useHeading(pathname: string | null): { title: string; subtitle: string 
   if (pathname === "/help") return { title: "Help", subtitle: "Answers to common questions" };
   if (pathname === "/about") return { title: "About", subtitle: `What ${APP_NAME} is and how it uses your data` };
   if (pathname === "/library") return { title: "File Library", subtitle: "Files you've added for the tutor to read" };
+  if (pathname === "/study") return { title: "Study Activity", subtitle: "Your estimated study time" };
   const item = navItemFor(pathname);
   if (item?.id === "tutor") {
     // The chat's own name (named after its first answered question), "New chat" until then.
@@ -142,6 +144,7 @@ function Header({
       )}
 
       <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+        <StudyControl />
         <StreakBadge />
         <DayCountdown className="hidden sm:inline-flex" />
         <NotificationBell />

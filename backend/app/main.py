@@ -53,6 +53,8 @@ from app.rag.store import KnowledgeStore
 from app.rag.types import AccessScope, RetrievalOptions
 from app.ratelimit import SlidingWindowLimiter
 from app.settings import Settings, get_settings
+from app.study.router import router as study_router
+from app.study.service import Chapters
 from app.support.router import router as support_router
 
 log = get_logger("app")
@@ -140,6 +142,7 @@ def create_app(
             if settings.ncert_kb_enabled
             else None
         )
+        app.state.study_chapters = Chapters(ncert)
         app.state.knowledge, app.state.rag_graph = build_rag(
             settings, app.state.db, app.state.llm, app.state.embeddings, ncert
         )
@@ -201,6 +204,9 @@ def create_app(
     app.state.tutor_preview_limiter = SlidingWindowLimiter(limit=60, window_s=60)
     # One active minute a minute is all a client reports; a little slack for retries.
     app.state.activity_limiter = SlidingWindowLimiter(limit=6, window_s=60)
+    # Study time: a beat every 30 s per tab plus one at each change; start, pause, resume, end.
+    app.state.study_beat_limiter = SlidingWindowLimiter(limit=30, window_s=60)
+    app.state.study_action_limiter = SlidingWindowLimiter(limit=30, window_s=60)
     # Unsubscribe links need no sign-in: limited per client address instead.
     app.state.unsubscribe_limiter = SlidingWindowLimiter(limit=30, window_s=60)
 
@@ -231,4 +237,5 @@ def create_app(
     app.include_router(appearance_router)
     app.include_router(greetings_router)
     app.include_router(files_router)
+    app.include_router(study_router)
     return app

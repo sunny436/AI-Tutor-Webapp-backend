@@ -101,6 +101,13 @@ const SENT_BODIES: Record<string, Record<string, unknown>[]> = {
     { position: 0, hash: "a".repeat(64), question: 1, action: "skip" },
     { position: 0, hash: "a".repeat(64), question: 0, action: "answer", value: ["100", "zero"] },
   ],
+  StudyStartIn: [
+    { clientId: ID, activity: "reading" },
+    { clientId: ID, subject: "science", chapterId: "sci-8-en-ch02", activity: "practice" },
+  ],
+  StudyContextChangeIn: [{ clientId: ID, expectedSegmentId: ID, subject: null, chapterId: null, activity: "test" }],
+  StudyTransitionIn: [{ clientId: ID, expectedSegmentId: ID }],
+  StudyBeatIn: [{ beatId: ID, clientId: ID, wasActive: true, nowActive: false, studyView: true, visible: true }],
 };
 
 describe("request bodies the client sends", () => {

@@ -15,7 +15,7 @@ function about(value: number): string {
   return value === 0 ? "0 min" : `about ${value} min`;
 }
 
-function GoalBar({ done, goal, label }: { done: number; goal: number; label: string }) {
+export function GoalBar({ done, goal, label }: { done: number; goal: number; label: string }) {
   const percent = Math.min(Math.round((done / goal) * 100), 100);
   return (
     <div className="flex flex-col gap-1">
@@ -139,6 +139,13 @@ export function ProgressSection() {
               .
             </p>
           )}
+          <p className="text-sm text-text-secondary">
+            Your estimated study time, from the study sessions you start, is in{" "}
+            <Link href="/study" className="focus-ring rounded font-semibold text-brand underline underline-offset-2">
+              Study Activity
+            </Link>
+            .
+          </p>
           <p className="text-sm text-text-secondary">
             Your learning streak and calendar are in{" "}
             <Link href="/settings/streak" className="focus-ring rounded font-semibold text-brand underline underline-offset-2">

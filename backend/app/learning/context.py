@@ -80,6 +80,12 @@ def _name(entries: tuple[catalog.Entry, ...], code: str | None) -> str | None:
     return entry.name if entry and entry.code != "other" else None
 
 
+def subject_name(code: str | None) -> str | None:
+    """A subject's name from its catalog code; None for a code the catalog doesn't have (app/study)."""
+    entry = catalog.lookup(catalog.SUBJECTS, code)
+    return entry.name if entry else None
+
+
 def build_context(
     profile: Mapping[str, object],
     subjects: Iterable[SubjectChoice],

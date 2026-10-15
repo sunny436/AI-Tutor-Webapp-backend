@@ -37,6 +37,7 @@ from app.rag.errors import RagError
 log = get_logger("app.rag.ncert")
 
 SEARCH_PATH = "/api/v1/retrieval/search"
+CHAPTERS_PATH = "/api/v1/knowledge/chapters"
 MAX_QUERY_CHARS = 2_000  # the service's own limit
 MAX_QUERY_WORDS = 32
 MAX_PASSAGE_CHARS = 4_000
@@ -159,6 +160,34 @@ class NcertKnowledge:
                 continue  # one malformed result never costs the others
         documents.sort(key=lambda document: not document.metadata["in_scope"])  # stable: service order within
         return documents[:k]
+
+    async def chapters(self, class_level: int, subject: str, language: str) -> list[dict[str, Any]]:
+        """The chapters of one class's books in one subject (a subject name) and language, in book
+        order: {chapter_id, book_id, number, label, title}. For study time (app/study); its failures
+        never pause the tutor's search. Raises RagError."""
+        params = {"classes": class_level, "subjects": subject_id(subject), "languages": language, "limit": 500}
+        try:
+            response = await self._client.get(CHAPTERS_PATH, params=params)
+            response.raise_for_status()
+            items = response.json()["items"]
+        except (httpx.HTTPError, ValueError, KeyError, TypeError) as error:
+            log.warning("ncert chapters failed", extra={"reason": type(error).__name__})
+            raise RagError("ncert_unavailable") from error
+        chapters = []
+        for item in items if isinstance(items, list) else []:
+            try:
+                chapters.append(
+                    {
+                        "chapter_id": str(item["chapter_id"])[:120],
+                        "book_id": str(item["book_id"])[:120],
+                        "number": int(item["number"]) if item.get("number") is not None else None,
+                        "label": str(item["label"])[:40] if item.get("label") else None,
+                        "title": str(item["title"]).strip()[:200],
+                    }
+                )
+            except (KeyError, TypeError, ValueError):
+                continue
+        return [chapter for chapter in chapters if chapter["title"]]
 
 
 class NcertRetriever(BaseRetriever):

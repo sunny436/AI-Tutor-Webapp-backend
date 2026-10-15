@@ -173,6 +173,38 @@ version, and every edit sends the version it read. One shape, for every such res
 - `today`/`days[]`: `{date, activeMinutes, questions}`; `days` lists the last `days` days, oldest first,
   including days without activity.
 
+## Study time: estimated, in the sessions a student starts
+
+| Method | Path | Body | Success |
+|---|---|---|---|
+| GET | `/v1/study/session` | – | `{session, lastEnded, idle, serverTime}`: the open session (active or paused) and the latest that ended in the last 24 h, as of now. Only reads |
+| POST | `/v1/study/session` | `{clientId, subject?, chapterId?, activity}` | the same: starts a session, or joins the one already open (as it is) |
+| PATCH | `/v1/study/session/{id}` | `{clientId, expectedSegmentId, subject?, chapterId?, activity}` | the same: a new subject, chapter or activity |
+| POST | `/v1/study/session/{id}/pause` · `/resume` · `/end` | `{clientId, expectedSegmentId}` | the same |
+| POST | `/v1/study/beat` | `{beatId, clientId, wasActive, nowActive, studyView, visible}` | the same |
+| GET | `/v1/study/summary?days=7` | – (`days` 1–92) | `{timezone, from, to, firstRecordedDate, totals, days, subjects, chapters, activities, sessions}` |
+| GET | `/v1/study/chapters?subject=` | – | `{available, reason, chapters}`: NCERT chapters for the student's class (6–12) in that subject |
+
+- **A client** is one page load (a tab or a device): a new `clientId` each time, never stored. It beats every 30 s
+  and at once whenever it starts or stops studying. `wasActive`: it was studying the whole time since the server last
+  heard from it (visible, on a learning view, session running, not idle); `nowActive`: it is now.
+- **Credit** (server time only) for a client's `[previous observation, now)` needs both observations active and at
+  most 75 s apart; it is clipped to the session's studying time and added only where no other client already
+  covered it, so tabs and devices never add up. Hidden, idle, paused, offline and unobserved time is never credited;
+  two or more lost beats in a row lose that span. A repeated `beatId` changes nothing (retry with the same one).
+- **Transitions** are idempotent by target (pausing a paused session is a 200); `expectedSegmentId` older than the
+  session's current segment is `409 study_state_changed` (another tab or device changed it: reload); acting on an
+  ended session is `409 study_session_ended`; another student's session is 404. Start, pause, resume, end and
+  context changes count 30 a minute per student, beats 30 a minute.
+- **Ends on its own** at the last study activity after 15 minutes without one (an hour after a pause), and after
+  8 hours (`endReason`: `stale`, `limit`; `ended` when the student ends it). Reads show this at once; the next write
+  stores it.
+- **Totals:** `activeSeconds + idleSeconds + pausedSeconds = durationSeconds`, exactly (idle is studying time not
+  credited). Days are each session's own time zone; `days[]` also has `appSeconds` (PadhAI open, visible or not;
+  a gap over 3 minutes starts a new app session). Days before `firstRecordedDate` are not listed: no data, not zero.
+- **Idle limits** (`idle`): reading and revision `STUDY_IDLE_READING_S` (300 s), practice and tests
+  `STUDY_IDLE_SOLVING_S` (120 s), the same for every student. Goals stay on active time (above).
+
 ## Notifications
 
 | Method | Path | Body | Success |

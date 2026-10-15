@@ -35,6 +35,7 @@ from sqlalchemy import (
     Date,
     DateTime,
     ForeignKey,
+    ForeignKeyConstraint,
     Identity,
     Index,
     Integer,
@@ -46,7 +47,7 @@ from sqlalchemy import (
     UniqueConstraint,
     text,
 )
-from sqlalchemy.dialects.postgresql import ARRAY, CITEXT, JSONB, UUID
+from sqlalchemy.dialects.postgresql import ARRAY, CITEXT, JSONB, UUID, ExcludeConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -830,3 +831,156 @@ class MessageAttachment(Base):
     filename: Mapped[str] = mapped_column(String(255), nullable=False)
     position: Mapped[int] = mapped_column(SmallInteger, nullable=False)
     created_at: Mapped[datetime] = _created()
+
+
+# ---------------------------------------------------------------------------------- study time
+# app/study: study sessions made of segments (studying or paused, each with its subject, chapter
+# and activity), the active time credited inside them, and app presence. Every rule is in
+# app/study/service.py; the database enforces what can be enforced (0014_study_time).
+STUDY_STATUSES = ("active", "paused", "ended")
+STUDY_END_REASONS = ("ended", "stale", "limit")
+STUDY_SEGMENT_KINDS = ("study", "paused")
+STUDY_ACTIVITIES = ("reading", "practice", "revision", "test")
+
+
+class StudySession(Base):
+    """One study session: from the student's Start to End, a stale end (no study activity for a
+    while) or the length limit. At most one open session per student, on every device."""
+
+    __tablename__ = "study_sessions"
+    __table_args__ = (
+        CheckConstraint(f"status in {STUDY_STATUSES}", name="status"),
+        CheckConstraint(f"end_reason is null or end_reason in {STUDY_END_REASONS}", name="end_reason"),
+        CheckConstraint("(status = 'ended') = (ended_at is not null)", name="ended"),
+        CheckConstraint("(status = 'ended') = (end_reason is not null)", name="ended_reason"),
+        CheckConstraint("(status = 'paused') = (paused_at is not null)", name="paused"),
+        CheckConstraint("ended_at is null or ended_at >= started_at", name="order"),
+        UniqueConstraint("id", "user_id"),
+        Index("uq_study_sessions_open", "user_id", unique=True, postgresql_where=text("ended_at is null")),
+        Index("ix_study_sessions_user_id_started_at", "user_id", "started_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    timezone: Mapped[str] = mapped_column(String(64), nullable=False)
+    status: Mapped[str] = mapped_column(String(16), nullable=False)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    paused_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    ended_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    end_reason: Mapped[str | None] = mapped_column(String(16))
+    alive_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+
+
+class StudySegment(Base):
+    """A stretch of one session in one state (studying or paused) and one context."""
+
+    __tablename__ = "study_segments"
+    __table_args__ = (
+        CheckConstraint(f"kind in {STUDY_SEGMENT_KINDS}", name="kind"),
+        CheckConstraint(f"activity in {STUDY_ACTIVITIES}", name="activity"),
+        CheckConstraint("ended_at is null or ended_at >= started_at", name="order"),
+        CheckConstraint(
+            "(chapter_id is null) = (chapter_title is null) and (chapter_id is null) = (book_id is null)",
+            name="chapter",
+        ),
+        UniqueConstraint("id", "user_id", "kind"),
+        ForeignKeyConstraint(
+            ["session_id", "user_id"], ["study_sessions.id", "study_sessions.user_id"], ondelete="CASCADE"
+        ),
+        Index("uq_study_segments_open", "session_id", unique=True, postgresql_where=text("ended_at is null")),
+        Index("ix_study_segments_user_id_started_at", "user_id", "started_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    session_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    user_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    kind: Mapped[str] = mapped_column(String(16), nullable=False)
+    subject_code: Mapped[str | None] = mapped_column(String(40))
+    chapter_id: Mapped[str | None] = mapped_column(String(120))
+    book_id: Mapped[str | None] = mapped_column(String(120))
+    chapter_title: Mapped[str | None] = mapped_column(String(200))
+    activity: Mapped[str] = mapped_column(String(16), nullable=False)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    ended_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class StudyActiveInterval(Base):
+    """Credited active study time: only inside a studying segment (the composite key includes the
+    segment's kind, fixed to 'study'), and never overlapping another of the same student's."""
+
+    __tablename__ = "study_active_intervals"
+    __table_args__ = (
+        CheckConstraint("segment_kind = 'study'", name="segment_kind"),
+        CheckConstraint("started_at < ended_at", name="order"),
+        ForeignKeyConstraint(
+            ["segment_id", "user_id", "segment_kind"],
+            ["study_segments.id", "study_segments.user_id", "study_segments.kind"],
+            ondelete="CASCADE",
+        ),
+        ExcludeConstraint(
+            ("user_id", "="),
+            (text("tstzrange(started_at, ended_at)"), "&&"),
+            name="ex_study_active_intervals_overlap",
+            using="gist",
+        ),
+        Index("ix_study_active_intervals_user_id_started_at", "user_id", "started_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    segment_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    user_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    segment_kind: Mapped[str] = mapped_column(String(16), nullable=False, server_default=text("'study'"))
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    ended_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+
+
+class StudyClient(Base):
+    """One page load of PadhAI (a tab or a device): its last observation, from which its next
+    active report is credited."""
+
+    __tablename__ = "study_clients"
+    __table_args__ = (Index("ix_study_clients_user_id_last_beat_at", "user_id", "last_beat_at"),)
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    client_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True)
+    last_beat_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    last_beat_active: Mapped[bool] = mapped_column(Boolean, nullable=False)
+
+
+class StudyBeat(Base):
+    """Beats already received (by their id), so a retried or replayed beat changes nothing."""
+
+    __tablename__ = "study_beats"
+    __table_args__ = (Index("ix_study_beats_user_id_received_at", "user_id", "received_at"),)
+
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), primary_key=True
+    )
+    beat_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True)
+    received_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+
+
+class AppSession(Base):
+    """A run of time with PadhAI open (visible or not) on any of the student's tabs or devices:
+    one row per run, however many are open."""
+
+    __tablename__ = "app_sessions"
+    __table_args__ = (
+        CheckConstraint("last_seen_at >= started_at", name="order"),
+        CheckConstraint("ended_at is null or ended_at = last_seen_at", name="ended"),
+        Index("uq_app_sessions_open", "user_id", unique=True, postgresql_where=text("ended_at is null")),
+        Index("ix_app_sessions_user_id_started_at", "user_id", "started_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    timezone: Mapped[str] = mapped_column(String(64), nullable=False)
+    started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    last_seen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+    ended_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
