@@ -391,12 +391,25 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     return `reduced ${reduced}s, normal ${normal}s`;
   });
 
-  await check("Settings: 12 sections; Learning & Streak with stats and calendar (one Tab stop, today in view)", async () => {
+  await check("Study Activity: in the sidebar; the page, the header's Study button and the API (nothing started)", async () => {
+    await page.goto("/");
+    await expect(page.getByRole("button", { name: /^(Start a study session|.*Study session controls)$/ })).toBeVisible();
+    await page.getByRole("complementary").getByRole("link", { name: "Study Activity" }).click();
+    await expect(page).toHaveURL("/study");
+    await expect(page.getByRole("heading", { level: 1, name: "Study Activity" })).toBeVisible();
+    await expect(page.getByRole("region", { name: "Study Activity" }).getByText("Current session")).toBeVisible();
+    for (const path of ["/api/v1/study/session", "/api/v1/study/summary?days=7"]) {
+      expect((await page.request.get(path)).status(), path).toBe(200);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth)).toBeLessThanOrEqual(0);
+  });
+
+  await check("Settings: 13 sections; Learning & Streak with stats and calendar (one Tab stop, today in view)", async () => {
     await page.getByRole("complementary").getByRole("button", { name: /^Account: / }).click();
     await page.getByRole("menuitem", { name: "Settings" }).click();
     await expect(page).toHaveURL("/settings/profile");
     const nav = page.getByRole("navigation", { name: "Settings sections" });
-    await expect(nav.getByRole("link")).toHaveCount(12);
+    await expect(nav.getByRole("link")).toHaveCount(13);
     await nav.getByRole("link", { name: "Learning & Streak", exact: true }).click();
     await expect(page).toHaveURL("/settings/streak");
     await expect(page.locator("dt", { hasText: /^Current streak$/ })).toBeVisible();
@@ -413,6 +426,8 @@ test("desktop, 1280px: the chat, menus, streak, bell, branding, dark, a real que
     await expect(page.getByRole("switch", { name: "Reminders in the app" })).toBeVisible();
     await nav.getByRole("link", { name: "Progress & Goals", exact: true }).click();
     await expect(page.getByRole("heading", { level: 2, name: "Progress & Goals" })).toBeVisible();
+    await nav.getByRole("link", { name: "Study Tracking", exact: true }).click();
+    await expect(page.getByRole("heading", { level: 2, name: "Study Tracking" })).toBeVisible();
     await nav.getByRole("link", { name: "Profile", exact: true }).click();
     const label = await page.getByText("Display name", { exact: true }).boundingBox();
     const input = await page.getByLabel("Display name").boundingBox();
