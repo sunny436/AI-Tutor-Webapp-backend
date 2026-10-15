@@ -16,7 +16,7 @@
 # never be a way into an account. After a restore everyone simply signs in again.
 #
 # The `ncert_knowledge` schema is not dumped at all: it is the NCERT Knowledge Service's own data
-# (repository sunny436/graphrag; 19 GB on 2026-10-15, against PadhAI's few MB), and that service
+# (its own repository; 19 GB on 2026-10-15, against PadhAI's few MB), and that service
 # owns its backups (owner decision, 2026-10-15). A restore with --clean leaves the schema alone.
 #
 # A copy of the docker volume is not a backup: it can catch the database mid-write.
