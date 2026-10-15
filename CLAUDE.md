@@ -90,6 +90,8 @@ Directly, in `frontend/`: `bun run test`, `bun run typecheck`, `bun run lint`. O
     finished test was in the prompt and 26 of 30 replies were still wrong ("you haven't finished", "I can't see"
     your results").
   - `migration_status.py`: schema vs code, as JSON.
+  - `import_questions.py ../qbank`: the question bank (`docs/question_bank.md`); dry run by default, `--apply`
+    writes (one transaction; production only with the owner's approval). `qbank_coverage.py`: real counts per topic.
 
 ## How the halves connect
 

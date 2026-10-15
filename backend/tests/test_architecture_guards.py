@@ -143,6 +143,21 @@ def test_the_progress_domain_is_reached_only_through_its_public_module():
         assert not reached, (module.name, reached)
 
 
+def test_the_question_bank_never_calls_a_model():
+    """Questions are picked, served and checked by SQL and fixed rules only (docs/question_bank.md):
+    the bank's code and its scripts import no model, retrieval, chat or HTTP client."""
+    files = [
+        *BACKEND.joinpath("app", "qbank").glob("*.py"),
+        BACKEND / "scripts" / "import_questions.py",
+        BACKEND / "scripts" / "qbank_coverage.py",
+    ]
+    assert len(files) >= 6
+    forbidden = ("app.llm", "app.rag", "app.chat", "app.assessments", "langchain", "langgraph", "openai", "httpx")
+    for path in files:
+        bad = {m for m in _imports(path) if m.startswith(forbidden)}
+        assert not bad, (path.name, bad)
+
+
 async def test_embedding_dimension_matches_everywhere(database):
     assert Settings(_env_file=None).embedding_dimensions == EMBEDDING_DIMENSIONS == 1536
     engine = create_async_engine(database)

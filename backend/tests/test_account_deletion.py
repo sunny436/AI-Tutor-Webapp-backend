@@ -81,6 +81,13 @@ async def test_deleting_an_account_leaves_no_row_that_belongs_to_it(client, app,
             text("INSERT INTO auth_two_factors (user_id, secret, backup_codes) VALUES (:u, 'enc', 'enc')"),
             {"u": uuid.UUID(user_id)},
         )
+        await db.execute(  # a practice set from the question bank (its served questions go with it)
+            text(
+                "INSERT INTO qb_sets (user_id, request_id, mode, filters, requested) "
+                "VALUES (:u, gen_random_uuid(), 'test', '{}', 1)"
+            ),
+            {"u": uuid.UUID(user_id)},
+        )
         await queue_email(  # an email waiting in the outbox for this student
             db,
             kind=WEEKLY_SUMMARY,

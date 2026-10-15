@@ -18,6 +18,11 @@ User files (app/files): UserFile ─┬─ UserFileBlob   the original bytes, in
                                   └─ FileChunk      extracted text with its embedding (derived data)
 Message ── MessageAttachment ── UserFile   (SET NULL when the file is deleted; the name is kept)
 
+Question bank (app/qbank): QbSyllabusVersion, QbBook ── QbChapter ── QbTopic ─┬─ QbConcept
+                                                                         ├─ QbCase
+                                                                         └─ QbQuestion
+User ── QbSet ── QbSetItem   (a question served to the student, and their answer)
+
 `metadata` JSONB columns absorb per-feature data without schema churn.
 """
 
@@ -29,9 +34,11 @@ from typing import Any
 
 from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
+    CHAR,
     BigInteger,
     Boolean,
     CheckConstraint,
+    Computed,
     Date,
     DateTime,
     ForeignKey,
@@ -984,3 +991,258 @@ class AppSession(Base):
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     last_seen_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
     ended_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+# ------------------------------------------------------------------ question bank (app/qbank)
+QB_LANGUAGES = ("english", "hindi", "sanskrit")  # the language the content is written in
+QB_DIFFICULTIES = ("easy", "medium", "hard")
+QB_FORMATS = ("mcq", "assertion_reason", "case_based", "source_based")
+QB_COMPETENCIES = ("knowledge_understanding", "application", "analysis_evaluation")
+QB_SOURCE_KINDS = ("original", "ncert_exercise", "cbse_official")
+QB_REVIEW_STATUSES = ("draft", "needs_review", "approved", "rejected")
+QB_SET_MODES = ("adaptive", "test")
+QB_SERVABLE = "review_status = 'approved' AND is_active"
+
+
+class QbSyllabusVersion(Base):
+    """A curriculum's syllabus for one academic session (e.g. CBSE 2026-27): what a question was
+    reviewed against."""
+
+    __tablename__ = "qb_syllabus_versions"
+    __table_args__ = (
+        UniqueConstraint("curriculum", "academic_session"),
+        CheckConstraint("curriculum IN ('cbse')", name="curriculum"),
+    )
+
+    code: Mapped[str] = mapped_column(Text, primary_key=True)
+    curriculum: Mapped[str] = mapped_column(Text, nullable=False)
+    academic_session: Mapped[str] = mapped_column(Text, nullable=False)
+    title: Mapped[str] = mapped_column(Text, nullable=False)
+    source_url: Mapped[str] = mapped_column(Text, nullable=False)
+
+
+class QbBook(Base):
+    """A textbook in one language (NCERT's id, e.g. science-c10-en): it fixes class, subject and language."""
+
+    __tablename__ = "qb_books"
+    __table_args__ = (
+        UniqueConstraint("book_id", "class_level", "subject_code", "language"),
+        CheckConstraint("curriculum IN ('cbse')", name="curriculum"),
+        CheckConstraint("class_level BETWEEN 6 AND 12", name="class_level"),
+        CheckConstraint(f"language IN {QB_LANGUAGES}", name="language"),
+        CheckConstraint("subject_code ~ '^[a-z_]+$'", name="subject_code"),
+    )
+
+    book_id: Mapped[str] = mapped_column(Text, primary_key=True)
+    curriculum: Mapped[str] = mapped_column(Text, nullable=False)
+    class_level: Mapped[int] = mapped_column(SmallInteger, nullable=False)
+    subject_code: Mapped[str] = mapped_column(Text, nullable=False)
+    language: Mapped[str] = mapped_column(Text, nullable=False)
+    title: Mapped[str] = mapped_column(Text, nullable=False)
+    edition: Mapped[str] = mapped_column(Text, nullable=False)
+
+
+class QbChapter(Base):
+    """A chapter of one book. question_count is kept by the database (0015's triggers) and checked
+    against max_questions, so the cap holds under concurrent writes."""
+
+    __tablename__ = "qb_chapters"
+    __table_args__ = (
+        UniqueConstraint("book_id", "chapter_number"),
+        UniqueConstraint("chapter_id", "book_id"),
+        CheckConstraint("max_questions BETWEEN 1 AND 1000", name="max_questions"),
+        CheckConstraint("question_count BETWEEN 0 AND max_questions", name="question_count"),
+    )
+
+    chapter_id: Mapped[str] = mapped_column(Text, primary_key=True)
+    book_id: Mapped[str] = mapped_column(Text, ForeignKey("qb_books.book_id"), nullable=False)
+    chapter_number: Mapped[int] = mapped_column(SmallInteger, nullable=False)
+    old_chapter_number: Mapped[int | None] = mapped_column(SmallInteger)
+    title: Mapped[str] = mapped_column(Text, nullable=False)
+    ncert_chapter_id: Mapped[str | None] = mapped_column(Text)
+    max_questions: Mapped[int] = mapped_column(SmallInteger, nullable=False, server_default=text("1000"))
+    question_count: Mapped[int] = mapped_column(SmallInteger, nullable=False, server_default=text("0"))
+
+
+class QbTopic(Base):
+    __tablename__ = "qb_topics"
+    __table_args__ = (UniqueConstraint("chapter_id", "topic_number"), UniqueConstraint("topic_id", "chapter_id"))
+
+    topic_id: Mapped[str] = mapped_column(Text, primary_key=True)
+    chapter_id: Mapped[str] = mapped_column(Text, ForeignKey("qb_chapters.chapter_id"), nullable=False)
+    topic_number: Mapped[int] = mapped_column(SmallInteger, nullable=False)
+    title: Mapped[str] = mapped_column(Text, nullable=False)
+    ncert_sections: Mapped[str | None] = mapped_column(Text)
+
+
+class QbConcept(Base):
+    """What a question in a topic practises, and the learning objective behind it."""
+
+    __tablename__ = "qb_concepts"
+    __table_args__ = (CheckConstraint("concept_tag ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="concept_tag"),)
+
+    topic_id: Mapped[str] = mapped_column(Text, ForeignKey("qb_topics.topic_id"), primary_key=True)
+    concept_tag: Mapped[str] = mapped_column(Text, primary_key=True)
+    learning_objective: Mapped[str] = mapped_column(Text, nullable=False)
+
+
+class QbCase(Base):
+    """A shared passage for case- and source-based questions of one topic."""
+
+    __tablename__ = "qb_cases"
+    __table_args__ = (
+        UniqueConstraint("case_id", "topic_id"),
+        CheckConstraint("length(body) BETWEEN 100 AND 4000", name="body"),
+    )
+
+    case_id: Mapped[str] = mapped_column(Text, primary_key=True)
+    topic_id: Mapped[str] = mapped_column(Text, ForeignKey("qb_topics.topic_id"), nullable=False)
+    title: Mapped[str] = mapped_column(Text, nullable=False)
+    body: Mapped[str] = mapped_column(Text, nullable=False)
+
+
+class QbQuestion(Base):
+    """One stored MCQ. Its place (book, class, subject, language, chapter, topic, concept, case) is
+    tied together by composite keys; it is served only when approved and active."""
+
+    __tablename__ = "qb_questions"
+    __table_args__ = (
+        UniqueConstraint("question_id", "topic_id"),
+        UniqueConstraint("fingerprint"),
+        ForeignKeyConstraint(
+            ["book_id", "class_level", "subject_code", "language"],
+            ["qb_books.book_id", "qb_books.class_level", "qb_books.subject_code", "qb_books.language"],
+        ),
+        ForeignKeyConstraint(["chapter_id", "book_id"], ["qb_chapters.chapter_id", "qb_chapters.book_id"]),
+        ForeignKeyConstraint(["topic_id", "chapter_id"], ["qb_topics.topic_id", "qb_topics.chapter_id"]),
+        ForeignKeyConstraint(["topic_id", "concept_tag"], ["qb_concepts.topic_id", "qb_concepts.concept_tag"]),
+        ForeignKeyConstraint(["case_id", "topic_id"], ["qb_cases.case_id", "qb_cases.topic_id"]),
+        ForeignKeyConstraint(["syllabus_version"], ["qb_syllabus_versions.code"]),
+        CheckConstraint(f"difficulty IN {QB_DIFFICULTIES}", name="difficulty"),
+        CheckConstraint(f"question_format IN {QB_FORMATS}", name="question_format"),
+        CheckConstraint(f"competency IN {QB_COMPETENCIES}", name="competency"),
+        CheckConstraint("(question_format IN ('case_based', 'source_based')) = (case_id IS NOT NULL)", name="case"),
+        CheckConstraint("correct_option IN ('A', 'B', 'C', 'D')", name="correct_option"),
+        CheckConstraint(
+            "lower(option_a) NOT IN (lower(option_b), lower(option_c), lower(option_d)) "
+            "AND lower(option_b) NOT IN (lower(option_c), lower(option_d)) AND lower(option_c) <> lower(option_d)",
+            name="distinct_options",
+        ),
+        CheckConstraint("marks BETWEEN 1 AND 5", name="marks"),
+        CheckConstraint(f"source_kind IN {QB_SOURCE_KINDS}", name="source_kind"),
+        CheckConstraint("source_kind <> 'cbse_official' OR source_url IS NOT NULL", name="official_source"),
+        CheckConstraint(f"review_status IN {QB_REVIEW_STATUSES}", name="review_status"),
+        CheckConstraint(
+            "review_status <> 'approved' OR "
+            "(reviewed_by IS NOT NULL AND reviewed_at IS NOT NULL AND reviewed_hash = content_hash)",
+            name="approved",
+        ),
+        CheckConstraint("fingerprint ~ '^[0-9a-f]{64}$' AND content_hash ~ '^[0-9a-f]{64}$'", name="hashes"),
+        Index(
+            "ix_qb_questions_select",
+            "language",
+            "class_level",
+            "subject_code",
+            "chapter_id",
+            "topic_id",
+            "difficulty",
+            postgresql_where=text(QB_SERVABLE),
+        ),
+        Index("ix_qb_questions_adaptive", "topic_id", "level", "concept_tag", postgresql_where=text(QB_SERVABLE)),
+    )
+
+    question_id: Mapped[str] = mapped_column(Text, primary_key=True)
+    book_id: Mapped[str] = mapped_column(Text, nullable=False)
+    class_level: Mapped[int] = mapped_column(SmallInteger, nullable=False)
+    subject_code: Mapped[str] = mapped_column(Text, nullable=False)
+    language: Mapped[str] = mapped_column(Text, nullable=False)
+    chapter_id: Mapped[str] = mapped_column(Text, nullable=False)
+    topic_id: Mapped[str] = mapped_column(Text, nullable=False)
+    concept_tag: Mapped[str] = mapped_column(Text, nullable=False)
+    syllabus_version: Mapped[str] = mapped_column(Text, nullable=False)
+    difficulty: Mapped[str] = mapped_column(Text, nullable=False)
+    level: Mapped[int] = mapped_column(
+        SmallInteger,
+        Computed("CASE difficulty WHEN 'easy' THEN 1 WHEN 'medium' THEN 2 ELSE 3 END", persisted=True),
+        nullable=False,
+    )
+    question_format: Mapped[str] = mapped_column(Text, nullable=False)
+    competency: Mapped[str] = mapped_column(Text, nullable=False)
+    case_id: Mapped[str | None] = mapped_column(Text)
+    stem: Mapped[str] = mapped_column(Text, nullable=False)
+    option_a: Mapped[str] = mapped_column(Text, nullable=False)
+    option_b: Mapped[str] = mapped_column(Text, nullable=False)
+    option_c: Mapped[str] = mapped_column(Text, nullable=False)
+    option_d: Mapped[str] = mapped_column(Text, nullable=False)
+    correct_option: Mapped[str] = mapped_column(CHAR(1), nullable=False)
+    explanation: Mapped[str] = mapped_column(Text, nullable=False)
+    marks: Mapped[int] = mapped_column(SmallInteger, nullable=False, server_default=text("1"))
+    source_kind: Mapped[str] = mapped_column(Text, nullable=False)
+    source_ref: Mapped[str] = mapped_column(Text, nullable=False)
+    source_url: Mapped[str | None] = mapped_column(Text)
+    review_status: Mapped[str] = mapped_column(Text, nullable=False, server_default=text("'draft'"))
+    reviewed_by: Mapped[str | None] = mapped_column(Text)
+    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    reviewed_hash: Mapped[str | None] = mapped_column(Text)
+    review_note: Mapped[str | None] = mapped_column(Text)
+    is_active: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("true"))
+    fingerprint: Mapped[str] = mapped_column(Text, nullable=False)
+    content_hash: Mapped[str] = mapped_column(Text, nullable=False)
+    created_at: Mapped[datetime] = _created()
+    updated_at: Mapped[datetime] = _created()
+
+
+class QbSet(Base):
+    """A practice set (adaptive, one question at a time) or a test, owned by one student.
+    request_id makes creating it idempotent."""
+
+    __tablename__ = "qb_sets"
+    __table_args__ = (
+        UniqueConstraint("id", "user_id"),
+        UniqueConstraint("user_id", "request_id"),
+        CheckConstraint(f"mode IN {QB_SET_MODES}", name="mode"),
+        CheckConstraint("requested BETWEEN 1 AND 100", name="requested"),
+        CheckConstraint("served BETWEEN 0 AND requested", name="served"),
+        Index("ix_qb_sets_user_id_created_at", "user_id", "created_at"),
+    )
+
+    id: Mapped[uuid.UUID] = _uuid_pk()
+    user_id: Mapped[uuid.UUID] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False
+    )
+    request_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    mode: Mapped[str] = mapped_column(Text, nullable=False)
+    filters: Mapped[dict[str, Any]] = mapped_column(JSONB, nullable=False)
+    requested: Mapped[int] = mapped_column(SmallInteger, nullable=False)
+    served: Mapped[int] = mapped_column(SmallInteger, nullable=False, server_default=text("0"))
+    created_at: Mapped[datetime] = _created()
+    closed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+
+
+class QbSetItem(Base):
+    """A question served in a set, and the student's answer: graded by the database, final once given."""
+
+    __tablename__ = "qb_set_items"
+    __table_args__ = (
+        UniqueConstraint("set_id", "question_id"),
+        ForeignKeyConstraint(["set_id", "user_id"], ["qb_sets.id", "qb_sets.user_id"], ondelete="CASCADE"),
+        ForeignKeyConstraint(["question_id", "topic_id"], ["qb_questions.question_id", "qb_questions.topic_id"]),
+        CheckConstraint("position >= 1", name="position"),
+        CheckConstraint("chosen IN ('A', 'B', 'C', 'D')", name="chosen"),
+        CheckConstraint(
+            "(chosen IS NULL) = (answered_at IS NULL) AND (chosen IS NULL) = (is_correct IS NULL)", name="answer"
+        ),
+        CheckConstraint("answered_at IS NULL OR answered_at >= served_at", name="order"),
+        Index("ix_qb_set_items_user_id_topic_id_answered_at", "user_id", "topic_id", "answered_at"),
+    )
+
+    set_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True)
+    position: Mapped[int] = mapped_column(SmallInteger, primary_key=True)
+    user_id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), nullable=False)
+    question_id: Mapped[str] = mapped_column(Text, nullable=False)
+    topic_id: Mapped[str] = mapped_column(Text, nullable=False)
+    served_at: Mapped[datetime] = _created()
+    chosen: Mapped[str | None] = mapped_column(CHAR(1))
+    hinted: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
+    is_correct: Mapped[bool | None] = mapped_column(Boolean)
+    answered_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
