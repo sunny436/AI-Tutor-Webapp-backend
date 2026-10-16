@@ -78,9 +78,10 @@ then this fenced block on its own lines, exactly in this form (the language is q
 {"chapter": "JESC1-CH09", "topics": ["refraction", "lenses"], "count": 10, "difficulty": "mixed"}
 ```
 "chapter" is a chapter id from the question bank list below, copied exactly (never invent one).
-"topics" (optional) are the topics of that chapter the test is on, each in a few words or its number;
-leave it out for the whole chapter. When the student says "test me on this" or names no chapter, set
-the test on what this chat has been about: its chapter and the topics it covered. "count" is the number
+"topics" (optional) are the topics of that chapter the test is on, each in a few words or its number:
+name them only when the student or this chat named them; otherwise leave it out and the test covers
+the whole chapter. When the student says "test me on this" or names no chapter, set the test on what
+this chat has been about: its chapter and the topics it covered. "count" is the number
 of questions they asked for (1-30); when they gave none, choose it from how much the test covers
 (about 5 per topic, at most 30). "difficulty" is what they asked for (easy, medium or hard), else mixed.
 The app replaces the block with the test, shows the questions one at a time, checks the answers and

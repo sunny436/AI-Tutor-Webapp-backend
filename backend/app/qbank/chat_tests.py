@@ -51,7 +51,11 @@ CHAPTER_ID = re.compile(r"[A-Z]{3,6}\d-CH\d{2}")  # qb_chapters ids, e.g. JESC1-
 # a chapter id; anything else stays as it was.
 LOOSE_FENCES = ("json", "jsonc", "")
 _INLINE = re.compile(r"(?:::)?question-bank\s*(?=\{)|(?=\{\s*\"chapter\"\s*:)")
-_OPEN = re.compile(r"^ {0,3}(`{3,}|~{3,})[ \t]*([^\s`]*)[^`]*$")  # any fence; its language is the first word
+# Any fence, as app/assessments/state.py finds them: after indentation, list markers or quote marks;
+# its language is the first word of its info.
+_OPEN = re.compile(
+    r"^(?P<prefix>[ \t>]*(?:(?:[-+*]|\d{1,9}[.)])[ \t]+[ \t>]*)*)(?P<fence>`{3,}|~{3,})[ \t]*(?P<info>[^\s`]*)[^`]*$"
+)
 _WORD = re.compile(r"\w{3,}")
 
 MENU = text(
@@ -247,12 +251,13 @@ def _segments(content: str) -> list[tuple[str, str, str]]:
         if prose:
             segments.append(("prose", "", "\n".join(prose)))
             prose = []
-        fence = opened[1]
-        close = re.compile(rf"^ {{0,3}}{re.escape(fence[0])}{{{len(fence)},}}[ \t]*$")
+        fence = opened["fence"]
+        close = re.compile(rf"^[ \t>]*{re.escape(fence[0])}{{{len(fence)},}}[ \t]*$")
         end = index + 1
         while end < len(lines) and not close.match(lines[end]):
             end += 1
-        segments.append((opened[2], "\n".join(lines[index + 1 : end]), "\n".join(lines[index : end + 1])))
+        body = "\n".join(line.lstrip(" \t>") for line in lines[index + 1 : end])  # inside a list or quote
+        segments.append((opened["info"], body, "\n".join(lines[index : end + 1])))
         index = end + 1
     if prose:
         segments.append(("prose", "", "\n".join(prose)))
@@ -280,7 +285,14 @@ async def fill(session: AsyncSession, content: str, seed: str) -> tuple[str, Ban
                     continue
                 if _request(spec) is None:
                     continue
-                pieces.append(raw[position : match.start()])
+                start = match.start()
+                before = raw[:start].rstrip(" \t")
+                if before.endswith(("```", "~~~")):  # fence marks around it on the same lines: replaced too
+                    start = max(position, len(before.rstrip("`~")))
+                tail = raw[stop:].lstrip(" \t\n")
+                if tail.startswith(("```", "~~~")):
+                    stop = len(raw) - len(tail.lstrip("`~"))
+                pieces.append(raw[position:start])
                 if not asked:
                     asked = True
                     test, block = await _set(session, spec, seed)
